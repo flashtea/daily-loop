@@ -10,8 +10,10 @@ rebuild the site, and commit. GitHub Pages serves `docs/`.
 1. **Figure out today's date** and use it as the edition id, e.g. `2026-06-13`.
    If an edition for today already exists, refresh it rather than duplicating.
 
-2. **Research each beat** with web search. Aim for news from the **last ~48
-   hours**. Beats (these are the section titles, in this order):
+2. **Research each beat** with web search. Strongly prefer news from the
+   **last 24 hours**, and never older than ~48 hours. Lead with what actually
+   *broke* (a shutdown, a launch, a ruling, a big move) — not "X exists" explainer
+   pieces. Beats (these are the section titles, in this order):
    - `AI for Software Development` — coding agents, copilots, IDE/tooling AI, AI
      in the SDLC, notable launches from Anthropic/OpenAI/Google/etc. that matter
      to developers.
@@ -22,14 +24,28 @@ rebuild the site, and commit. GitHub Pages serves `docs/`.
    - `Bitcoin` — price-moving news, protocol/L2 developments, regulation, ETFs,
      mining, notable on-chain events. Bitcoin-focused; not general altcoin noise.
 
-3. **Curate hard. This is the whole point.** Keep **3–6 items per section**.
-   - Drop ads, sponsored posts, SEO listicles, engagement-bait, and unsourced
-     rumors. Prefer primary sources and reputable outlets.
-   - Deduplicate: one item per story, link the best source.
+3. **Curate hard. This is the whole point.** Keep **2–5 items per section** —
+   fewer, sharper, genuinely-fresh items beat a padded list.
+   - **Source quality is non-negotiable.** Prefer the **primary source** (the
+     company's own blog/statement, the regulator's filing, the project's release
+     notes) and reputable outlets (Reuters, Bloomberg, CNBC, the FT, The Verge,
+     Ars Technica, TechCrunch, CoinDesk, The Defiant, official `*.gov` / `*.org`).
+     **Hard-block SEO farms, AI-generated roundups, listicles and "top N in 2026"
+     pages** — e.g. marktechpost, llm-stats, wavespeed, startuphub, buildfastwithai,
+     devflokers, aiapps, coingabbar, bitcoinfoundation, moneymagpie, and Medium
+     posts. Pass these to `blocked_domains` in your searches and verify the real
+     source before citing. If the only source is a content farm, drop the item.
+   - **Lead story:** flag the single most important item of the day with
+     `"lead": true`. The builder renders it as the front-page hero. Put it in
+     whichever section it belongs to; pick the genuinely biggest story.
+   - Deduplicate: one item per story, link the best source. Distinct *angles* on
+     a major story (the event vs. its consequences) are fine as separate items.
    - Each item: a clear `headline`, a neutral 1–2 sentence `summary`, the
      `source` name, the `url`, and optionally a one-line `why` (why it matters).
    - Never fabricate. If a beat is genuinely quiet, fewer items is fine — say so
      in `intro` if needed. Only include things you actually found via search.
+   - **Bitcoin** gets live short-term and long-term price charts automatically
+     (injected by `build.mjs`); you don't add chart data to the JSON.
 
 4. **Write the edition** to `editions/<date>.json` (schema below).
 
@@ -49,6 +65,7 @@ rebuild the site, and commit. GitHub Pages serves `docs/`.
       "title": "AI for Software Development",
       "items": [
         {
+          "lead": true,
           "headline": "Short, specific headline",
           "summary": "One or two neutral sentences explaining the story.",
           "source": "TechCrunch",
@@ -62,8 +79,10 @@ rebuild the site, and commit. GitHub Pages serves `docs/`.
 ```
 
 Section `title` values should match the four beats above (omit a section only if
-it has zero worthwhile items). `intro`, `why` are optional; everything else
-required. `build.mjs` handles all HTML/CSS — never hand-edit files in `docs/`.
+it has zero worthwhile items). `intro`, `why`, and `lead` are optional — set
+`"lead": true` on exactly one item (the day's biggest story) to feature it as the
+hero. Everything else is required. `build.mjs` handles all HTML/CSS, the lead
+hero, and the Bitcoin charts — never hand-edit files in `docs/`.
 
 ## Style / scope notes
 

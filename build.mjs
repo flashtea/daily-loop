@@ -12,7 +12,7 @@ const EDITIONS_DIR = join(ROOT, "editions");
 const OUT_DIR = join(ROOT, "docs");
 
 const SITE_TITLE = "Daily Loop";
-const SITE_TAGLINE = "AI, software, and bitcoin — curated, no noise.";
+const SITE_TAGLINE = "AI · Software · Bitcoin — curated, no noise";
 
 // ---------- helpers ----------
 
@@ -33,19 +33,20 @@ const hostOf = (url) => {
 };
 
 const longDate = (iso) =>
-  new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-GB", {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    timeZone: "UTC",
-  });
+  new Date(`${iso}T12:00:00Z`)
+    .toLocaleDateString("en-US", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      timeZone: "UTC",
+    })
+    .toUpperCase();
 
 const shortDate = (iso) =>
   new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-GB", {
     day: "2-digit",
     month: "short",
-    year: "numeric",
     timeZone: "UTC",
   });
 
@@ -63,78 +64,133 @@ function loadEditions() {
     data.date = data.date || f.replace(/\.json$/, "");
     return data;
   });
-  // newest first
-  editions.sort((a, b) => (a.date < b.date ? 1 : -1));
+  editions.sort((a, b) => (a.date < b.date ? 1 : -1)); // newest first
   return editions;
 }
 
-// ---------- render ----------
+// ---------- render pieces ----------
 
-function renderItem(item) {
-  const host = hostOf(item.url);
-  const source = item.source || host;
-  const sourceTag = item.url
-    ? `<a class="src" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(
-        source,
-      )} ↗</a>`
+function sourceTag(item) {
+  const source = item.source || hostOf(item.url);
+  if (!source) return "";
+  return item.url
+    ? `<a class="src" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(source)}</a>`
     : `<span class="src">${escapeHtml(source)}</span>`;
-  const why = item.why
-    ? `<p class="why"><span>Why it matters</span> ${escapeHtml(item.why)}</p>`
+}
+
+function whyBlock(item) {
+  return item.why
+    ? `<p class="why"><span>Why it matters —</span> ${escapeHtml(item.why)}</p>`
     : "";
-  const headline = item.url
-    ? `<a href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(
-        item.headline,
-      )}</a>`
-    : escapeHtml(item.headline);
-  return `<article class="card">
-        <h3>${headline}</h3>
-        <p class="summary">${escapeHtml(item.summary || "")}</p>
-        ${why}
-        <div class="meta">${sourceTag}</div>
+}
+
+function headlineLink(item, cls) {
+  const text = escapeHtml(item.headline);
+  return item.url
+    ? `<a class="${cls}" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${text}</a>`
+    : `<span class="${cls}">${text}</span>`;
+}
+
+function renderHero(item, kicker) {
+  return `<section class="lead">
+      <p class="kicker">${escapeHtml(kicker)}</p>
+      <h2 class="lead-hed">${headlineLink(item, "hed-a")}</h2>
+      <p class="lead-dek">${escapeHtml(item.summary || "")}</p>
+      ${whyBlock(item)}
+      <p class="byline">${sourceTag(item)}</p>
+    </section>`;
+}
+
+function renderStory(item) {
+  return `<article class="story">
+        <h3 class="hed">${headlineLink(item, "hed-a")}</h3>
+        <p class="dek">${escapeHtml(item.summary || "")}</p>
+        ${whyBlock(item)}
+        <p class="byline">${sourceTag(item)}</p>
       </article>`;
 }
 
-function renderSection(section) {
-  const items = (section.items || []).map(renderItem).join("\n");
-  if (!items.trim()) return "";
+// Live BTC charts (TradingView mini widgets — render client-side in the browser).
+function bitcoinCharts() {
+  const widget = (range, label) =>
+    `<figure class="chart">
+        <figcaption>${label}</figcaption>
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+          {"symbol":"BITSTAMP:BTCUSD","width":"100%","height":"240","locale":"en","dateRange":"${range}","colorTheme":"light","isTransparent":true,"autosize":false,"trendLineColor":"#c0151d","underLineColor":"rgba(192,21,29,0.08)"}
+          </script>
+        </div>
+      </figure>`;
+  return `<div class="charts">
+      ${widget("1M", "Short term · last 30 days")}
+      ${widget("ALL", "Long term · all time")}
+    </div>`;
+}
+
+function renderSection(section, lead) {
+  const items = (section.items || [])
+    .filter((it) => it !== lead)
+    .map(renderStory)
+    .join("\n");
+  const charts = /bitcoin/i.test(section.title) ? bitcoinCharts() : "";
+  if (!items.trim() && !charts) return "";
   return `<section class="beat">
-      <h2>${escapeHtml(section.title)}</h2>
-      <div class="grid">
+      <h2 class="beat-label">${escapeHtml(section.title)}</h2>
+      ${charts}
+      <div class="columns">
 ${items}
       </div>
     </section>`;
 }
 
-function renderArchiveStrip(editions, currentDate) {
-  const links = editions
+function archiveStrip(editions, currentDate) {
+  return editions
     .map((e) => {
       const href = e.date === editions[0].date ? "index.html" : `${e.date}.html`;
       const cls = e.date === currentDate ? "chip current" : "chip";
       return `<a class="${cls}" href="${href}">${escapeHtml(shortDate(e.date))}</a>`;
     })
-    .join("\n");
-  return `<nav class="archive" aria-label="Past editions">${links}</nav>`;
+    .join("");
 }
 
 function renderPage(edition, editions, isIndex) {
-  const sections = (edition.sections || []).map(renderSection).join("\n");
-  const intro = edition.intro
-    ? `<p class="intro">${escapeHtml(edition.intro)}</p>`
-    : "";
+  // Pick the lead: first item flagged { "lead": true }, else first item overall.
+  let lead = null;
+  let kicker = "";
+  for (const s of edition.sections || []) {
+    for (const it of s.items || []) {
+      if (it.lead) {
+        lead = it;
+        kicker = s.title;
+        break;
+      }
+    }
+    if (lead) break;
+  }
+  if (!lead && (edition.sections || [])[0]?.items?.[0]) {
+    lead = edition.sections[0].items[0];
+    kicker = edition.sections[0].title;
+  }
+
   const itemCount = (edition.sections || []).reduce(
     (n, s) => n + (s.items || []).length,
     0,
   );
-  const title = isIndex
-    ? SITE_TITLE
-    : `${SITE_TITLE} — ${shortDate(edition.date)}`;
+  const hero = lead ? renderHero(lead, kicker) : "";
+  const sections = (edition.sections || [])
+    .map((s) => renderSection(s, lead))
+    .join("\n");
+  const standfirst = edition.intro
+    ? `<p class="standfirst">${escapeHtml(edition.intro)}</p>`
+    : "";
+  const title = isIndex ? SITE_TITLE : `${SITE_TITLE} — ${shortDate(edition.date)}`;
 
   return `<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="light dark" />
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(SITE_TAGLINE)}" />
   <link rel="stylesheet" href="style.css" />
@@ -142,24 +198,33 @@ function renderPage(edition, editions, isIndex) {
 <body>
   <header class="masthead">
     <div class="wrap">
-      <a class="brand" href="index.html">
-        <span class="logo">◍</span>
-        <span class="name">${SITE_TITLE}</span>
-      </a>
+      <div class="hairline"></div>
+      <a class="nameplate" href="index.html">${SITE_TITLE}</a>
       <p class="tagline">${escapeHtml(SITE_TAGLINE)}</p>
-      <p class="dateline">${escapeHtml(longDate(edition.date))} · ${itemCount} stories</p>
-      ${intro}
-      ${renderArchiveStrip(editions, edition.date)}
+      <div class="dateline">
+        <span>${escapeHtml(longDate(edition.date))}</span>
+        <span>No. ${editions.length} · ${itemCount} stories</span>
+      </div>
+      <div class="rule"></div>
+      ${standfirst}
     </div>
   </header>
 
   <main class="wrap">
+    ${hero}
 ${sections}
   </main>
 
-  <footer class="wrap">
-    <p>Built ${new Date().toISOString().slice(0, 16).replace("T", " ")} UTC · curated by Claude, rendered by <code>build.mjs</code>.</p>
-    <p>${renderArchiveStrip(editions, edition.date)}</p>
+  <footer>
+    <div class="wrap">
+      <div class="rule"></div>
+      <p class="arch-label">Past editions</p>
+      <nav class="archive">${archiveStrip(editions, edition.date)}</nav>
+      <p class="colophon">Curated by Claude · rendered by <code>build.mjs</code> · built ${new Date()
+        .toISOString()
+        .slice(0, 16)
+        .replace("T", " ")} UTC</p>
+    </div>
   </footer>
 </body>
 </html>
@@ -167,89 +232,125 @@ ${sections}
 }
 
 const STYLE = `:root {
-  --bg: #f7f7f5;
-  --surface: #ffffff;
-  --text: #1a1a1a;
-  --muted: #6b6b6b;
-  --line: #e6e6e2;
-  --accent: #2f6fed;
-  --accent-soft: #eaf0fe;
-  --radius: 14px;
-  --maxw: 1100px;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0f1115;
-    --surface: #171a21;
-    --text: #e8e8ea;
-    --muted: #9aa0ac;
-    --line: #262a33;
-    --accent: #6c9bff;
-    --accent-soft: #1a2235;
-  }
+  --bg: #faf9f6;
+  --ink: #16181d;
+  --muted: #5c5f66;
+  --faint: #8a8d94;
+  --line: #d9d8d1;
+  --line-strong: #16181d;
+  --accent: #c0151d;
+  --maxw: 1180px;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
   background: var(--bg);
-  color: var(--text);
-  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
 }
-.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+a { color: inherit; }
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+.rule { height: 3px; background: var(--line-strong); margin: 14px 0; }
+.hairline { height: 1px; background: var(--line); }
 
-.masthead { border-bottom: 1px solid var(--line); padding: 36px 0 22px; }
-.brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
-.brand .logo { color: var(--accent); font-size: 26px; line-height: 1; }
-.brand .name { font-weight: 700; font-size: 26px; letter-spacing: -0.02em; }
-.tagline { margin: 6px 0 0; color: var(--muted); font-size: 14px; }
-.dateline { margin: 14px 0 0; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
-.intro { margin: 12px 0 0; font-size: 17px; max-width: 70ch; }
+/* Masthead */
+.masthead { padding-top: 18px; }
+.nameplate {
+  display: block; text-align: center; text-decoration: none;
+  font-family: var(--serif); font-weight: 700;
+  font-size: clamp(40px, 9vw, 84px); line-height: 1; letter-spacing: -0.02em;
+  margin: 14px 0 8px;
+}
+.tagline {
+  text-align: center; margin: 0; color: var(--muted);
+  font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase;
+}
+.dateline {
+  display: flex; justify-content: space-between; gap: 12px;
+  margin-top: 16px; padding-top: 10px; border-top: 1px solid var(--line);
+  font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+}
+.standfirst {
+  font-family: var(--serif); font-size: clamp(18px, 2.4vw, 23px);
+  line-height: 1.4; margin: 4px auto 0; max-width: 60ch; text-align: center; color: #2a2c31;
+}
 
-.archive { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+/* Lead story */
+.lead { padding: 30px 0 26px; border-bottom: 3px solid var(--line-strong); text-align: center; }
+.kicker {
+  margin: 0 0 10px; color: var(--accent);
+  font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+}
+.lead-hed {
+  font-family: var(--serif); font-weight: 700;
+  font-size: clamp(30px, 5.2vw, 52px); line-height: 1.04; letter-spacing: -0.015em;
+  margin: 0 auto; max-width: 18ch;
+}
+.lead-hed .hed-a { text-decoration: none; }
+.lead-hed .hed-a:hover { text-decoration: underline; text-decoration-thickness: 2px; }
+.lead-dek {
+  font-family: var(--serif); font-size: clamp(18px, 2.3vw, 22px); line-height: 1.45;
+  margin: 16px auto 0; max-width: 56ch; color: #2a2c31;
+}
+
+/* Sections */
+.beat { padding: 30px 0; border-bottom: 1px solid var(--line); }
+.beat-label {
+  font-family: var(--serif); font-weight: 700; font-size: 22px; letter-spacing: -0.01em;
+  margin: 0 0 18px; padding-bottom: 8px; border-bottom: 2px solid var(--line-strong);
+}
+.columns { columns: 3 280px; column-gap: 38px; }
+
+.story {
+  break-inside: avoid; -webkit-column-break-inside: avoid;
+  padding-top: 16px; margin-bottom: 26px; border-top: 1px solid var(--line);
+}
+.hed { font-family: var(--serif); font-weight: 700; font-size: 20px; line-height: 1.2; margin: 0 0 8px; }
+.hed .hed-a { text-decoration: none; }
+.hed .hed-a:hover { color: var(--accent); }
+.dek { margin: 0 0 10px; font-size: 14.5px; color: #2c2f35; }
+.why {
+  margin: 0 0 10px; font-size: 13px; line-height: 1.5; color: var(--muted);
+  border-left: 2px solid var(--accent); padding-left: 11px;
+}
+.why span { color: var(--accent); font-weight: 700; }
+.byline { margin: 0; }
+.src {
+  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600;
+  color: var(--faint); text-decoration: none;
+}
+.src:hover { color: var(--accent); }
+.src::after { content: " ↗"; }
+
+/* Bitcoin charts */
+.charts { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 4px 0 26px; }
+.chart { margin: 0; border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; background: #fff; }
+.chart figcaption {
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 8px; font-weight: 600;
+}
+
+/* Footer */
+footer { padding: 30px 0 70px; }
+.arch-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+.archive { display: flex; flex-wrap: wrap; gap: 7px; }
 .chip {
   font-size: 12px; text-decoration: none; color: var(--muted);
-  border: 1px solid var(--line); border-radius: 999px; padding: 4px 11px;
-  background: var(--surface); white-space: nowrap; transition: all .15s ease;
+  border: 1px solid var(--line); border-radius: 4px; padding: 4px 10px; background: #fff;
 }
-.chip:hover { color: var(--text); border-color: var(--accent); }
-.chip.current { background: var(--accent); color: #fff; border-color: var(--accent); }
+.chip:hover { border-color: var(--accent); color: var(--accent); }
+.chip.current { background: var(--ink); color: #fff; border-color: var(--ink); }
+.colophon { margin: 18px 0 0; font-size: 12px; color: var(--faint); }
+.colophon code { font-family: ui-monospace, Menlo, Consolas, monospace; background: #efeee9; padding: 1px 5px; border-radius: 4px; }
 
-main { padding: 8px 0 10px; }
-.beat { margin: 38px 0; }
-.beat > h2 {
-  font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em;
-  color: var(--accent); margin: 0 0 16px; padding-bottom: 8px;
-  border-bottom: 1px solid var(--line);
-}
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
-
-.card {
-  background: var(--surface); border: 1px solid var(--line);
-  border-radius: var(--radius); padding: 18px 18px 16px;
-  display: flex; flex-direction: column; transition: border-color .15s ease, transform .15s ease;
-}
-.card:hover { border-color: var(--accent); transform: translateY(-2px); }
-.card h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.3; letter-spacing: -0.01em; }
-.card h3 a { color: var(--text); text-decoration: none; }
-.card h3 a:hover { color: var(--accent); }
-.summary { margin: 0 0 12px; color: var(--text); font-size: 15px; }
-.why {
-  margin: 0 0 12px; font-size: 13.5px; color: var(--muted);
-  background: var(--accent-soft); border-radius: 10px; padding: 9px 11px;
-}
-.why span { font-weight: 600; color: var(--accent); margin-right: 4px; }
-.meta { margin-top: auto; }
-.src { font-size: 12.5px; color: var(--muted); text-decoration: none; }
-.src:hover { color: var(--accent); }
-
-footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 24px 0 60px; color: var(--muted); font-size: 13px; }
-footer code { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 1px 5px; }
-footer .archive { margin-top: 10px; }
-
-@media (max-width: 520px) {
-  .grid { grid-template-columns: 1fr; }
-  .brand .name { font-size: 22px; }
+@media (max-width: 720px) {
+  .dateline { font-size: 10px; }
+  .charts { grid-template-columns: 1fr; }
 }
 `;
 
@@ -264,21 +365,16 @@ function build() {
   if (editions.length === 0) {
     writeFileSync(
       join(OUT_DIR, "index.html"),
-      `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${SITE_TITLE}</title><link rel="stylesheet" href="style.css"></head><body><header class="masthead"><div class="wrap"><span class="brand"><span class="logo">◍</span><span class="name">${SITE_TITLE}</span></span><p class="tagline">No editions yet. Run the daily loop to publish one.</p></div></header></body></html>`,
+      `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${SITE_TITLE}</title><link rel="stylesheet" href="style.css"></head><body><header class="masthead"><div class="wrap"><span class="nameplate">${SITE_TITLE}</span><p class="tagline">No editions yet — run the daily loop.</p></div></header></body></html>`,
     );
     console.log("No editions found — wrote placeholder index.");
     return;
   }
 
-  // Latest -> index.html, every edition -> <date>.html
-  writeFileSync(
-    join(OUT_DIR, "index.html"),
-    renderPage(editions[0], editions, true),
-  );
+  writeFileSync(join(OUT_DIR, "index.html"), renderPage(editions[0], editions, true));
   for (const e of editions) {
     writeFileSync(join(OUT_DIR, `${e.date}.html`), renderPage(e, editions, false));
   }
-
   console.log(
     `Built ${editions.length} edition(s). Latest: ${editions[0].date} → docs/index.html`,
   );
