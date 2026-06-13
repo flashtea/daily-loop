@@ -193,6 +193,7 @@ function renderPage(edition, editions, isIndex) {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(SITE_TAGLINE)}" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -354,18 +355,27 @@ footer { padding: 30px 0 70px; }
 }
 `;
 
+// Favicon — a "loop" target mark in the masthead red on dark ink. Crisp at any size.
+const FAVICON = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#16181d"/>
+  <circle cx="32" cy="32" r="17" fill="none" stroke="#c0151d" stroke-width="6"/>
+  <circle cx="32" cy="32" r="6" fill="#faf9f6"/>
+</svg>
+`;
+
 // ---------- main ----------
 
 function build() {
   const editions = loadEditions();
   mkdirSync(OUT_DIR, { recursive: true });
   writeFileSync(join(OUT_DIR, "style.css"), STYLE);
+  writeFileSync(join(OUT_DIR, "favicon.svg"), FAVICON);
   writeFileSync(join(OUT_DIR, ".nojekyll"), "");
 
   if (editions.length === 0) {
     writeFileSync(
       join(OUT_DIR, "index.html"),
-      `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${SITE_TITLE}</title><link rel="stylesheet" href="style.css"></head><body><header class="masthead"><div class="wrap"><span class="nameplate">${SITE_TITLE}</span><p class="tagline">No editions yet — run the daily loop.</p></div></header></body></html>`,
+      `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${SITE_TITLE}</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"></head><body><header class="masthead"><div class="wrap"><span class="nameplate">${SITE_TITLE}</span><p class="tagline">No editions yet — run the daily loop.</p></div></header></body></html>`,
     );
     console.log("No editions found — wrote placeholder index.");
     return;
