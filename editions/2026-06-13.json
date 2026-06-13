@@ -1,24 +1,24 @@
 {
   "date": "2026-06-13",
-  "intro": "Washington just pulled two frontier models off the market overnight — the first use of export controls on a deployed AI system. Meanwhile bitcoin rebounds on a geopolitical thaw.",
+  "intro": "Washington's first use of export controls on a live AI model upended the frontier labs overnight — as Anthropic fights back, the industry watches for what comes next.",
   "sections": [
     {
       "title": "AI Research & Models",
       "items": [
         {
           "lead": true,
-          "headline": "US export controls force Anthropic to disable Claude Fable 5 and Mythos 5",
-          "summary": "A Commerce Department directive delivered June 12 at 5:21pm ET ordered Anthropic to suspend all access to Fable 5 and Mythos 5 for any foreign national, inside or outside the US — including its own non-citizen staff. Anthropic disabled both models globally; Opus 4.8 and other Claude models are unaffected.",
+          "headline": "US export controls force Anthropic to take Fable 5 and Mythos 5 offline globally",
+          "summary": "A Commerce Department directive delivered June 12 at 5:21 pm ET ordered Anthropic to cut access to Fable 5 and Mythos 5 for all foreign nationals — including its own non-citizen staff. Anthropic disabled both models globally; Claude Opus 4.8 and all other Claude models remain live.",
           "source": "Anthropic",
           "url": "https://www.anthropic.com/news/fable-mythos-access",
-          "why": "The first time US export controls have been applied to a live, deployed AI model — a precedent the whole industry will be watching."
+          "why": "The first time US export controls have been applied to a deployed AI model — every frontier lab now has a live precedent to plan around."
         },
         {
-          "headline": "Anthropic disputes the basis for the shutdown, warns of industry-wide chilling effect",
-          "summary": "The order followed a claimed jailbreak of Mythos. Anthropic says its review found only a few previously known minor vulnerabilities, that the same prompts elicit comparable behavior from public models like GPT-5.5, and that applying this standard broadly would halt new model deployments.",
+          "headline": "Anthropic contests the order, warns a single-jailbreak standard would freeze new deployments",
+          "summary": "The directive followed a claimed jailbreak of Mythos 5. Anthropic says its review found only previously known minor vulnerabilities and that identical prompts produce comparable outputs from public models including GPT-5.5, arguing that applying this standard industry-wide would halt frontier model launches.",
           "source": "CNBC",
           "url": "https://www.cnbc.com/2026/06/12/anthropic-disables-access-to-fable-5-and-mythos-5-to-comply-with-government-directive.html",
-          "why": "If a single demonstrated jailbreak can trigger a global suspension, every frontier lab's release calculus changes."
+          "why": "If a single demonstrated jailbreak can trigger global suspension, every lab's release calculus changes overnight."
         }
       ]
     },
@@ -26,18 +26,25 @@
       "title": "AI for Software Development",
       "items": [
         {
-          "headline": "OpenAI Codex Goal Mode reaches general availability",
-          "summary": "Codex's /goal graduated from beta to GA across the app, IDE extension and CLI on May 21. A goal sets a persistent completion condition, letting Codex run multi-hour plan-act-test loops — writing code, running tests and patching failures — without further prompting.",
-          "source": "OpenAI Developers",
-          "url": "https://developers.openai.com/codex/changelog",
-          "why": "Raises the floor for what enterprises expect from agentic coding; competitors now have to match autonomous, long-running task execution."
-        },
-        {
-          "headline": "Teams building on Fable 5 must fall back to Opus 4.8 after the shutdown",
-          "summary": "With Fable 5 and Mythos 5 suspended, developers who had moved agentic and long-context workloads onto them need a continuity plan; Anthropic confirmed Opus 4.8 and its other models remain fully available.",
+          "headline": "Fable 5 and Mythos 5 shutdown forces developers to fall back to Opus 4.8",
+          "summary": "With Fable 5 and Mythos 5 suspended, teams that had moved agentic, long-context, and coding workloads onto them need an immediate continuity plan; Anthropic confirmed Claude Opus 4.8 and the rest of its model lineup remain fully available.",
           "source": "9to5Mac",
           "url": "https://9to5mac.com/2026/06/12/anthropic-pulls-claude-mythos-5-and-claude-fable-5-following-us-government-directive/",
-          "why": "A live reminder that depending on a single frontier model is now a real availability risk, not just a pricing one."
+          "why": "A live reminder that single-model dependencies are now an availability risk, not just a pricing one."
+        },
+        {
+          "headline": "VS Code 1.124 enables Copilot Autopilot by default for all users",
+          "summary": "Released June 10, VS Code 1.124 turns Autopilot on globally and introduces Advanced Autopilot — a secondary utility model that evaluates whether a task is truly finished before the primary agent stops — plus background agent sessions and keyboard-driven session navigation.",
+          "source": "Visual Studio Magazine",
+          "url": "https://visualstudiomagazine.com/articles/2026/06/11/vsm-vs-code-1-124.aspx",
+          "why": "Most VS Code users are now running autonomous agent loops by default, whether or not they opted in."
+        },
+        {
+          "headline": "Cognition retires Windsurf brand, ships Devin Desktop with multi-agent coordination",
+          "summary": "Cognition relaunched the Windsurf IDE as Devin Desktop on June 7, introducing Spaces for grouping agent activity by project and native Agent Client Protocol (ACP) support that lets Codex, Claude Agent, OpenCode, and other third-party agents run inside the same environment alongside Devin.",
+          "source": "Cognition",
+          "url": "https://cognition.ai/blog/introducing-devin-desktop",
+          "why": "The first major IDE to treat agent coordination — not just code editing — as a first-class primitive."
         }
       ]
     },
@@ -45,11 +52,18 @@
       "title": "Dev Tools & Releases",
       "items": [
         {
-          "headline": "GitHub Copilot switches to usage-based billing",
-          "summary": "As of June 1, Copilot replaced Premium Request Units with token-metered AI Credits (1 credit = $0.01). Base prices are unchanged and code completions stay unlimited, but chat, agentic sessions and code review now consume credits — which do not roll over month to month.",
+          "headline": "Apple ships Foundation Models with cloud routing and open-source plans at WWDC 2026",
+          "summary": "Wrapping up WWDC this week, Apple announced Foundation Models now routes to third-party models — Claude, Gemini, GPT — through a unified Swift API, adds image input, and introduces Dynamic Profiles for multi-agent workflows. Free Private Cloud Compute access extends to apps under two million first-time downloads, and the framework will go open source later this summer.",
+          "source": "Apple Newsroom",
+          "url": "https://www.apple.com/newsroom/2026/06/apple-aids-app-development-with-new-intelligence-frameworks-and-advanced-tools/",
+          "why": "A unified on-device and cloud inference API — plus the open-source commitment — could significantly lower the barrier for iOS/macOS AI features."
+        },
+        {
+          "headline": "GitHub Copilot usage-based billing takes effect June 1",
+          "summary": "Copilot replaced Premium Request Units with token-metered AI Credits ($0.01 each). Code completions stay unlimited, but chat, agentic sessions, and code review now consume credits that do not roll over — with some heavy agentic users reporting monthly bills jumping from $39 to over $800.",
           "source": "The GitHub Blog",
           "url": "https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/",
-          "why": "Heavy agentic users may pay materially more for the same base subscription; worth auditing your team's token spend."
+          "why": "Worth auditing team token spend now; agentic coding at scale just became materially more expensive."
         }
       ]
     },
@@ -57,18 +71,25 @@
       "title": "Bitcoin",
       "items": [
         {
-          "headline": "Bitcoin rebounds toward $63.5K after Trump says the Iran war has ended",
-          "summary": "BTC opened June 12 around $63,553, up about 3.4% on the day, as stocks, silver and crypto rallied on Trump's claim that the war in Iran is over and hopes of a US-Iran peace deal eased inflation fears. The Fear & Greed Index stayed cautious at 12.",
-          "source": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-friday-june-12-2026-prices-rebound-this-morning-after-trump-claims-war-has-ended-115949042.html",
-          "why": "Bitcoin is trading as a macro risk asset right now — geopolitics, not crypto-native catalysts, is setting the tape."
+          "headline": "Bitcoin steadies near $63,800 as record ETF outflow streak shows signs of ending",
+          "summary": "BTC is trading around $63,858 on June 13, stabilizing after an 18% drop triggered by Strategy's first bitcoin sale since 2022 and $4.37 billion in spot ETF redemptions across 13 consecutive trading days through June 3. The Fear & Greed Index remains at 12.",
+          "source": "The Block",
+          "url": "https://www.theblock.co/amp/post/403659/the-rally-that-wasnt-bitcoin-slides-14-in-one-week-as-etf-outflows-strategy-sale-and-oil-prices-hit-sentiment",
+          "why": "BTC is trading as a macro risk asset; the ETF outflow streak ending matters more to the medium-term tape than any crypto-native catalyst."
         },
         {
-          "headline": "CFTC clears the first US-regulated bitcoin perpetual futures",
-          "summary": "The CFTC approved KalshiEX's bitcoin perpetual futures contract (BTCPERP) on May 29, the first perpetual listing on a US-regulated exchange. It keeps the funding-rate mechanism but adds margin and position-limit constraints absent from offshore venues.",
+          "headline": "CLARITY Act moves to Senate floor calendar with eight weeks before summer recess",
+          "summary": "The Digital Asset Market Clarity Act — which would grant the CFTC exclusive jurisdiction over digital commodity spot markets while maintaining SEC oversight of investment contract assets — was placed on the full Senate calendar June 2 after clearing the Banking Committee 15-9. The bill still needs 60 floor votes plus House reconciliation before any recess.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/news-analysis/2026/06/02/clarity-act-survival-depends-on-the-u-s-senate-getting-a-lot-of-non-crypto-work-done",
+          "why": "The clearest path to a US federal crypto market-structure law in years — but the clock is tight."
+        },
+        {
+          "headline": "CFTC approves first US-regulated bitcoin perpetual futures on KalshiEX",
+          "summary": "The CFTC greenlighted KalshiEX's BTCPERP contract on May 29 — the first perpetual futures listing on a US-regulated exchange. The contract retains the offshore funding-rate mechanism but adds US-standard margin requirements and position limits absent from offshore venues.",
           "source": "The Defiant",
           "url": "https://thedefiant.io/news/regulation/cftc-approves-first-us-regulated-bitcoin-perpetual-futures",
-          "why": "Described as the largest institutional-access expansion since the spot ETF approvals — it pulls perps trading onshore into a regulated framework."
+          "why": "Pulls one of crypto's largest trading instruments onshore into a regulated framework for the first time."
         }
       ]
     }
