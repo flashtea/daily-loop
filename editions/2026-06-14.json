@@ -1,0 +1,87 @@
+{
+  "date": "2026-06-14",
+  "intro": "A day after Washington's first AI model export ban, The Information reports the directive won't spread to other labs; Google ships a new text-generation architecture; and spot Bitcoin ETFs log their first all-green inflow day since May's sell-off.",
+  "sections": [
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "US signals Fable 5 export ban is Anthropic-specific; other frontier labs face no immediate controls",
+          "summary": "One day after forcing Anthropic to pull Fable 5 and Mythos 5, US government officials told The Information the export-control directive is targeted at those specific models and is unlikely to be extended to other frontier AI companies. The ban was triggered by a claimed jailbreak Anthropic publicly disputes as narrow and non-universal — noting the same prompts elicit comparable outputs from GPT-5.5.",
+          "source": "The Information",
+          "url": "https://www.theinformation.com/briefings/u-s-government-unlikely-extend-anthropic-export-control-ai-companies",
+          "why": "Confirms yesterday's ban is a targeted precedent, not a broader regulatory sweep — material for every frontier lab's deployment planning."
+        },
+        {
+          "headline": "Google releases DiffusionGemma: 26B open-weight model generating text 4× faster via parallel diffusion",
+          "summary": "Google DeepMind released DiffusionGemma on June 10 under Apache 2.0 — a 26B-parameter model that generates full paragraphs simultaneously, image-diffusion-style, rather than token-by-token. It reaches 700+ tokens/s on an RTX 5090 and 1,000+ on a single H100, with support already merged into vLLM, MLX, and Hugging Face Transformers.",
+          "source": "Google",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/",
+          "why": "First open-weight production diffusion text model: trades some benchmark accuracy for a 4× throughput multiplier, with day-one inference-stack support."
+        }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "OpenAI retires GPT-5.2 across ChatGPT and API; all users now on GPT-5.5",
+          "summary": "As of June 12, GPT-5.2 Instant, Thinking, and Pro were removed from ChatGPT; existing conversations auto-migrate to the corresponding GPT-5.5 variant. API users have a 90-day deprecation window from GPT-5.5's launch before endpoint access is cut.",
+          "source": "OpenAI",
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "why": "Developers with fine-tuned prompts, evals, or agentic pipelines targeting GPT-5.2 behavior should validate against GPT-5.5 before the API cutoff."
+        },
+        {
+          "headline": "Google ends free Gemini CLI and Code Assist access June 18; tools consolidate under Antigravity",
+          "summary": "Consumer and free-tier access to Gemini CLI and the Gemini Code Assist IDE extensions ends June 18, 2026. Google is consolidating its AI developer tooling under the Antigravity 2.0 agentic coding platform launched at Google I/O in May.",
+          "source": "Google",
+          "url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
+          "why": "Developers relying on free Gemini CLI or Code Assist integrations have four days to migrate or find alternatives."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub ships CodeQL 2.25.6: Swift 6.3.2, full C# 14 and .NET 10 language support",
+          "summary": "CodeQL 2.25.6 adds Swift 6.3.2 and complete C# 14 with .NET 10 coverage, smarter sensitive-data detection across multiple languages, and query updates that reduce false-positive security alerts.",
+          "source": "GitHub",
+          "url": "https://github.com/github/codeql/releases"
+        },
+        {
+          "headline": "GitHub CLI gains issue types, sub-issue tracking, and dependency resolution from the terminal",
+          "summary": "The latest GitHub CLI release exposes issue types, parent and sub-issue relationships, and issue dependencies directly in the terminal, allowing developers to structure and track work without leaving the CLI or writing raw gh api calls.",
+          "source": "GitHub",
+          "url": "https://github.blog/changelog/"
+        },
+        {
+          "headline": ".NET and .NET Framework receive June 2026 cumulative servicing updates",
+          "summary": "Microsoft released the June 2026 monthly servicing updates for .NET and .NET Framework on June 9, covering cumulative security and reliability patches across all supported runtime versions.",
+          "source": ".NET Blog",
+          "url": "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-june-2026-servicing-updates/"
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Spot Bitcoin ETFs log first all-green inflow day since May sell-off; BlackRock's IBIT leads at $57.7M",
+          "summary": "All 12 US spot Bitcoin ETF funds recorded net inflows on June 12 — the first clean sweep since the 13-day, $4.37B outflow streak that ended June 3. Total net inflows were $85.85M, with IBIT accounting for $57.7M. BTC is trading near $64,250, up roughly 1% on the week.",
+          "source": "Bitcoin.com News",
+          "url": "https://news.bitcoin.com/bitcoin-etf-inflows-ethereum-outflows-june-2026/",
+          "why": "A clean all-fund inflow day is the breadth signal analysts treat as confirmation that institutional selling has run its course."
+        },
+        {
+          "headline": "Bitcoin Core v31.0 discloses privacy bug: -privatebroadcast feature can expose node IP addresses",
+          "summary": "Bitcoin Core developers disclosed on June 6 that the optional -privatebroadcast feature in v31.0 — designed to route transactions privately via Tor — can reveal the originating node's IP address due to a BIP324 v2 handshake failure. A fix is targeted for v31.1; users who enabled the feature should disable it immediately.",
+          "source": "Crypto News",
+          "url": "https://cryptonews.net/news/bitcoin/33001705/",
+          "why": "Only v31.0 operators who opted into -privatebroadcast are at risk, but anyone relying on that feature for transaction anonymity should act before v31.1 ships."
+        }
+      ]
+    }
+  ]
+}
