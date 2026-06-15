@@ -6,6 +6,7 @@
 import { readFileSync, writeFileSync, readdirSync, mkdirSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { createHash } from "node:crypto";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const EDITIONS_DIR = join(ROOT, "editions");
@@ -194,7 +195,7 @@ function renderPage(edition, editions, isIndex) {
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(SITE_TAGLINE)}" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=${STYLE_HASH}" />
 </head>
 <body>
   <header class="masthead">
@@ -367,6 +368,10 @@ footer { padding: 30px 0 70px; }
   .dek { text-align: left; }
 }
 `;
+
+// Short content hash of the CSS, appended to the stylesheet URL so browsers and
+// the GitHub Pages CDN fetch the new file whenever the styles change.
+const STYLE_HASH = createHash("sha1").update(STYLE).digest("hex").slice(0, 8);
 
 // Favicon — a "loop" target mark in the masthead red on dark ink. Crisp at any size.
 const FAVICON = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
