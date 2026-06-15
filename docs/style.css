@@ -126,11 +126,12 @@ footer { padding: 30px 0 70px; }
 
 /* Desktop: lead becomes a full-width, left-aligned banner — wider and shorter. */
 @media (min-width: 721px) {
-  .lead { text-align: left; padding: 26px 0 22px; }
-  .lead-hed { font-size: clamp(32px, 3.6vw, 42px); line-height: 1.07; max-width: none; margin: 0; }
+  .lead { text-align: left; padding: 24px 0 22px; }
+  .lead-hed { font-size: clamp(25px, 2.7vw, 33px); line-height: 1.1; max-width: none; margin: 0; }
   .lead-dek {
-    text-align: left; max-width: 64ch; margin: 12px 0 0;
-    font-size: clamp(17px, 1.5vw, 19px);
+    text-align: justify; hyphens: auto; -webkit-hyphens: auto; max-width: none; margin: 14px 0 0;
+    font-size: clamp(15px, 1.25vw, 17px);
+    column-count: 2; column-gap: 38px; column-rule: 1px solid var(--line);
   }
   .kicker { margin-bottom: 10px; }
 }
