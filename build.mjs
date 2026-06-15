@@ -313,7 +313,7 @@ a { color: inherit; }
   margin: 0 0 20px; padding-bottom: 12px; border-bottom: 2px solid var(--line-strong);
 }
 .columns { column-count: 4; column-gap: 34px; column-rule: 1px solid var(--line); }
-.columns.single { max-width: 52ch; }
+.columns.single { column-count: 1; }
 
 .story {
   break-inside: avoid; -webkit-column-break-inside: avoid;
@@ -371,6 +371,11 @@ footer { padding: 30px 0 70px; }
     column-count: 2; column-gap: 38px; column-rule: 1px solid var(--line);
   }
   .kicker { margin-bottom: 10px; }
+  /* A lone story (e.g. its section's other item became the page lead) becomes a
+     full-width feature: headline spans, body flows in two columns to fill the row. */
+  .columns.single .hed { font-size: 21px; }
+  .columns.single .dek { column-count: 2; column-gap: 38px; column-rule: 1px solid var(--line); }
+  .columns.single .why { max-width: 64ch; }
 }
 
 @media (max-width: 720px) {

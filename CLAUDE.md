@@ -51,7 +51,13 @@ rebuild the site, and commit. GitHub Pages serves `docs/`.
 
 5. **Rebuild:** `node build.mjs` (no dependencies; regenerates all of `docs/`).
 
-6. **Commit & push** on the working branch:
+6. **Preview (optional but encouraged):** `node preview.mjs` renders the page to
+   `preview/*.png` at desktop and mobile widths so you can eyeball the layout
+   before pushing. Needs `npm install` + `npx playwright install chromium` once;
+   set `PLAYWRIGHT_BROWSERS_PATH` if the browser lives outside the default cache.
+   The live Bitcoin charts won't render here (no network) — that's expected.
+
+7. **Commit & push** on the working branch:
    `git add -A && git commit -m "edition: <date>" && git push`
 
 ## Edition JSON schema
@@ -88,5 +94,10 @@ hero, and the Bitcoin charts — never hand-edit files in `docs/`.
 
 - Voice: neutral, concise, factual. No hype, no emoji in copy.
 - The visual design lives entirely in `build.mjs` (`STYLE` constant). To restyle,
-  edit it there and re-run — don't touch generated `docs/` files.
+  edit it there and re-run — don't touch generated `docs/` files. The layout is
+  deterministic but content-adaptive: desktop sections size their column count to
+  the number of stories, and a lone story (e.g. when its section's other item is
+  the page lead) renders as a full-width feature so rows don't sit half-empty.
+- The stylesheet link is cache-busted with a content hash, so style changes show
+  up immediately on GitHub Pages without a manual refresh.
 - Keep editions; they form the archive automatically (newest = front page).
