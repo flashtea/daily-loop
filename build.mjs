@@ -317,21 +317,21 @@ a { color: inherit; }
 
 .story {
   break-inside: avoid; -webkit-column-break-inside: avoid;
-  padding-top: 15px; margin-bottom: 24px; border-top: 1px solid var(--line);
+  padding-top: 18px; margin-bottom: 30px; border-top: 1px solid var(--line);
 }
 .story:first-child { padding-top: 0; border-top: 0; }
-.hed { font-family: var(--serif); font-weight: 700; font-size: 19px; line-height: 1.18; margin: 0 0 8px; }
+.hed { font-family: var(--serif); font-weight: 700; font-size: 19px; line-height: 1.18; margin: 0 0 10px; }
 .hed .hed-a { text-decoration: none; }
 .hed .hed-a:hover { color: var(--accent); }
 .dek {
-  margin: 0 0 10px; font-size: 14.5px; color: #2c2f35;
+  margin: 0 0 12px; font-size: 14.5px; color: #2c2f35;
   text-align: justify; hyphens: auto; -webkit-hyphens: auto;
 }
 .why {
-  margin: 0 0 10px; font-size: 13px; line-height: 1.5; color: var(--muted);
-  border-left: 2px solid var(--accent); padding-left: 11px;
+  margin: 16px 0 14px; font-size: 13px; line-height: 1.6; color: var(--muted);
+  border-left: 2px solid var(--accent); padding: 3px 0 3px 13px;
 }
-.why span { color: var(--accent); font-weight: 700; }
+.why span { color: var(--accent); font-weight: 700; display: inline-block; margin-bottom: 1px; }
 .byline { margin: 0; }
 .src {
   font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600;
