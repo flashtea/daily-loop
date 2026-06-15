@@ -130,16 +130,18 @@ function bitcoinCharts() {
 }
 
 function renderSection(section, lead) {
-  const items = (section.items || [])
-    .filter((it) => it !== lead)
-    .map(renderStory)
-    .join("\n");
+  const visible = (section.items || []).filter((it) => it !== lead);
+  const items = visible.map(renderStory).join("\n");
   const charts = /bitcoin/i.test(section.title) ? bitcoinCharts() : "";
   if (!items.trim() && !charts) return "";
+  // Match the column count to the number of stories so short sections fill the
+  // row instead of leaving empty column tracks (capped at 4 for readability).
+  const cols = Math.min(Math.max(visible.length, 1), 4);
+  const cls = cols === 1 ? "columns single" : "columns";
   return `<section class="beat">
       <h2 class="beat-label">${escapeHtml(section.title)}</h2>
       ${charts}
-      <div class="columns">
+      <div class="${cls}" style="column-count:${cols}">
 ${items}
       </div>
     </section>`;
@@ -310,7 +312,8 @@ a { color: inherit; }
   letter-spacing: 0.18em; text-transform: uppercase; text-align: center;
   margin: 0 0 20px; padding-bottom: 12px; border-bottom: 2px solid var(--line-strong);
 }
-.columns { columns: 4 250px; column-gap: 34px; column-rule: 1px solid var(--line); }
+.columns { column-count: 4; column-gap: 34px; column-rule: 1px solid var(--line); }
+.columns.single { max-width: 52ch; }
 
 .story {
   break-inside: avoid; -webkit-column-break-inside: avoid;
@@ -372,7 +375,7 @@ footer { padding: 30px 0 70px; }
 @media (max-width: 720px) {
   .dateline { font-size: 10px; }
   .charts { grid-template-columns: 1fr; }
-  .columns { column-rule: none; }
+  .columns { column-rule: none; column-count: 1 !important; }
   .lead { padding: 22px 0 20px; }
   .lead-hed { font-size: clamp(23px, 6.4vw, 30px); max-width: none; }
   .lead-dek { font-size: 16px; margin-top: 12px; }

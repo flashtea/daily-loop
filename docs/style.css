@@ -75,7 +75,8 @@ a { color: inherit; }
   letter-spacing: 0.18em; text-transform: uppercase; text-align: center;
   margin: 0 0 20px; padding-bottom: 12px; border-bottom: 2px solid var(--line-strong);
 }
-.columns { columns: 4 250px; column-gap: 34px; column-rule: 1px solid var(--line); }
+.columns { column-count: 4; column-gap: 34px; column-rule: 1px solid var(--line); }
+.columns.single { max-width: 52ch; }
 
 .story {
   break-inside: avoid; -webkit-column-break-inside: avoid;
@@ -137,7 +138,7 @@ footer { padding: 30px 0 70px; }
 @media (max-width: 720px) {
   .dateline { font-size: 10px; }
   .charts { grid-template-columns: 1fr; }
-  .columns { column-rule: none; }
+  .columns { column-rule: none; column-count: 1 !important; }
   .lead { padding: 22px 0 20px; }
   .lead-hed { font-size: clamp(23px, 6.4vw, 30px); max-width: none; }
   .lead-dek { font-size: 16px; margin-top: 12px; }
