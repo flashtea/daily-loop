@@ -1,6 +1,6 @@
 {
   "date": "2026-06-16",
-  "intro": "BlackRock's BITA yield ETF launches on Nasdaq today. Anthropic's June 15 billing split and Claude Fable 5 dominate the AI side.",
+  "intro": "Day five of the Fable 5 blackout: Anthropic sent engineers to Commerce in Washington but left without a deal. Plus BlackRock's BITA yield ETF debuts on Nasdaq and Bitcoin holds $65K into the FOMC.",
   "sections": [
     {
       "title": "AI for Software Development",
@@ -31,11 +31,12 @@
       "title": "AI Research & Models",
       "items": [
         {
-          "headline": "Anthropic releases Claude Fable 5 — first Mythos-class model available to the public",
-          "summary": "Launched June 9, Claude Fable 5 establishes a new tier above Opus, leading on nearly every benchmark Anthropic tested across software engineering, scientific research, and vision. It ships alongside the restricted Claude Mythos 5 for government cybersecurity use, and is priced at $10/M input and $50/M output tokens — twice the cost of Opus 4.8. The original claude-sonnet-4-20250514 and claude-opus-4-20250514 API identifiers were retired on June 15 with no grace period.",
-          "source": "Anthropic",
-          "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
-          "why": "Sets the new capability ceiling; free on Pro/Max/Team plans through June 22 — and the old model IDs are already hard-broken."
+          "lead": true,
+          "headline": "Fable 5 stays dark into day five as Anthropic-Commerce crisis talks end without a deal",
+          "summary": "Anthropic dispatched senior technical staff to Washington on Monday to meet Commerce Department officials and try to lift the June 12 export-control directive that forced it to disable Fable 5 and Mythos 5 worldwide; no resolution was announced and both models remain offline for all users. Axios reports the narrow cybersecurity dispute has hardened into a personality clash with the Trump administration — one official said 'they screwed us' — while Chinese lab Zhipu AI seized on the outage to launch GLM-5.2 on June 13 and pitch US models as unreliable.",
+          "source": "Axios",
+          "url": "https://www.axios.com/2026/06/15/anthropic-white-house-fable-mythos",
+          "why": "The first formal de-escalation talks produced no public deal — each day offline cedes ground to rivals and shadows Anthropic's $965B October IPO."
         },
         {
           "headline": "OpenAI retires GPT-5.2 in ChatGPT, upgrades to GPT-5.5; GPT-4.5 sunsets June 27",
@@ -69,7 +70,6 @@
       "title": "Bitcoin",
       "items": [
         {
-          "lead": true,
           "headline": "BlackRock's BITA yield Bitcoin ETF begins trading on Nasdaq today",
           "summary": "BlackRock's iShares Bitcoin Premium Income ETF (ticker: BITA) launched on Nasdaq this morning — the first covered-call yield ETF on Bitcoin. BITA targets 15–25% annual yield by selling covered calls on IBIT, charges a 0.65% sponsor fee, and holds bitcoin exposure through direct BTC custody at Coinbase combined with IBIT shares. BlackRock filed the Form 8-A on June 11, beating Goldman Sachs to market by roughly a month.",
           "source": "Bitcoin.com News",
