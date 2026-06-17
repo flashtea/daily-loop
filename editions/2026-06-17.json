@@ -1,0 +1,83 @@
+{
+  "date": "2026-06-17",
+  "intro": "Warsh's first FOMC verdict drops this afternoon; all three rival AI lab CEOs wrap the G7 summit in France today; Google's Gemini CLI expires at midnight. Dev tools quiet.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Gemini CLI access ends June 18 — migrate to Antigravity CLI today",
+          "summary": "Google cuts off Gemini CLI and Gemini Code Assist IDE extensions for free, Pro, and Ultra accounts on Wednesday June 18. The replacement, Antigravity CLI, is a new Go-based multi-agent terminal that routes tasks through Google's unified Antigravity agent backend and supports parallel background sessions.",
+          "source": "Google Developers Blog",
+          "url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+          "why": "Any developer using Gemini CLI on a personal plan loses access tomorrow; Standard and Enterprise licensees are unaffected but should test the new CLI."
+        },
+        {
+          "headline": "Anthropic reverses the June 15 Agent SDK billing split",
+          "summary": "Anthropic confirmed it will not proceed with the planned change that would have billed claude -p, Agent SDK, and third-party app calls against a separate monthly credit pool outside subscription limits. Users stay on their existing billing setup; the reversal follows community pushback from developers running production agents.",
+          "source": "Enterprise DNA",
+          "url": "https://enterprisedna.co/resources/news/anthropic-claude-june-15-retirements-billing-2026/",
+          "why": "Any integrations restructured in anticipation of the split can revert; no new line item on the June billing cycle."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Altman, Amodei, and Hassabis appear together at G7 for the first time",
+          "summary": "OpenAI's Sam Altman, Anthropic's Dario Amodei, and Google DeepMind's Demis Hassabis all attended the 52nd G7 summit in Évian-les-Bains, France (June 15–17) — the first time all three rival frontier-lab chiefs have appeared jointly before heads of state. The agenda centred on AI infrastructure investment and voluntary safety commitments, with youth safety high on Altman's personal list.",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-06-12/anthropic-openai-google-executives-plan-to-attend-g7-summit",
+          "why": "Whatever voluntary framework emerges sets the baseline for how labs engage with governments globally heading into a crowded second half of 2026."
+        },
+        {
+          "headline": "G7 AI communiqué expected to soften governance language, lean on economic benefits",
+          "summary": "Analysts tracking the summit note that where the 2024 G7 produced concrete AI harm-reduction pledges, the 2026 session is expected to foreground economic upside. U.S. pressure to deregulate means governance references in the final communiqué are forecast to be substantially weaker than prior years.",
+          "source": "TechPolicy.Press",
+          "url": "https://www.techpolicy.press/g7-summit-set-to-kick-off-amidst-allies-widening-rift-over-ai-sovereignty/",
+          "why": "A deliberate retreat from hard multilateral AI oversight at the moment model capabilities are advancing fastest."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Linux kernel 7.1 ships with rewritten NTFS driver and Intel FRED as new default",
+          "summary": "Linus Torvalds released Linux 7.1 on June 14, featuring a new in-kernel NTFS driver with full read/write support, Intel FRED (Flexible Return and Event Delivery) replacing legacy interrupt delivery on x86, and removal of over 140,000 lines of obsolete 486-era sub-architecture code from more than 300 first-time contributors.",
+          "source": "Phoronix",
+          "url": "https://www.phoronix.com/news/Linux-7.1-Released",
+          "why": "Clears long-standing x86 cruft and improves Windows filesystem interoperability — solid groundwork for the next LTS cycle."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "BTC holds $65,800 as markets pause ahead of Warsh's FOMC dot plot",
+          "summary": "Bitcoin traded near $65,800 on June 17 as crypto markets held position ahead of the Fed's afternoon announcement. A rate hold at 3.50–3.75% carries 97%+ probability; the market-moving variable is Warsh's updated dot plot, which will signal the Fed's rate path through year-end. A dovish tilt could push BTC toward $70k; a hawkish surprise risks a retest of $58–60k support.",
+          "source": "CoinPedia",
+          "url": "https://coinpedia.org/price-analysis/bitcoin-traders-brace-for-kevin-warshs-first-fomc-meeting-what-history-suggests-for-btc-price/",
+          "why": "Warsh is the most crypto-aware Fed chair to date but a monetary hawk — his dot plot sets the liquidity narrative for crypto through Q3."
+        },
+        {
+          "headline": "Strategy buys another 1,587 BTC for $100M; total reaches 846,842 BTC",
+          "summary": "Strategy (formerly MicroStrategy) acquired 1,587 Bitcoin between June 8–14 at approximately $63,024 per coin, funded by selling 1.7 million Class A shares. Total holdings now stand at 846,842 BTC at a cumulative cost of $64.07 billion — an average price of $75,656 per coin, well above the current market.",
+          "source": "CryptoTimes",
+          "url": "https://www.cryptotimes.io/2026/06/15/strategy-adds-another-1587-bitcoin-to-its-treasury/",
+          "why": "Strategy is still accumulating at prices $10k+ below its average cost — a bet on substantially higher levels, not a tactical dip buy."
+        },
+        {
+          "headline": "U.S. spot Bitcoin ETF outflows pass $5B since mid-May, flipping 2026 flows negative",
+          "summary": "Spot Bitcoin ETFs recorded net outflows across 13 consecutive trading sessions through June 9, erasing all 2026 inflows for the first time since launch. Grayscale, BlackRock, and Fidelity accounted for more than 80% of withdrawals at the streak's peak.",
+          "source": "Investing.com",
+          "url": "https://www.investing.com/analysis/bitcoin-falls-as-record-etf-outflows-and-strategy-sale-hit-sentiment-200681446",
+          "why": "Institutional ETF sellers are dominating flows even as retail sentiment stays supportive — a split that historically precedes sharp directional moves."
+        }
+      ]
+    }
+  ]
+}
