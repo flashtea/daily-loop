@@ -1,0 +1,101 @@
+{
+  "date": "2026-06-23",
+  "intro": "Anthropic formalizes the Fable 5 restoration path — biometric ID via Persona, effective July 8 — while today also marks the day the subscription grace period expires for a model still offline.",
+  "sections": [
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Anthropic's July 8 privacy policy mandates biometric ID via Persona — the concrete Fable 5 restoration mechanism",
+          "summary": "Anthropic's updated privacy policy, effective July 8, formally adds a 'Verification Data' category under which the company may collect a government-issued identity document and facial geometry biometrics processed by third-party vendor Persona. The policy applies to consumer accounts (Free, Pro, Max) only, not enterprise or API customers. With verified US citizenship data, Anthropic could selectively restore Fable 5 to domestic users without the Commerce Department formally lifting its export-control directive.",
+          "source": "The Next Web",
+          "url": "https://thenextweb.com/news/anthropic-claude-id-verification-privacy-policy-persona-biometric",
+          "why": "July 8 is the first hard date in the Fable 5 saga since the June 12 suspension — if Anthropic executes on schedule, domestic restoration could follow within days, though biometric submission will be mandatory for access."
+        },
+        {
+          "headline": "GPT-5.5 edges Claude Fable 5 on UC Berkeley's Agents' Last Exam benchmark",
+          "summary": "OpenAI's GPT-5.5, operating through the Codex agent framework, scored a 24% pass rate on the Agents' Last Exam (ALE), beating Fable 5 at 22%. Built by UC Berkeley's Center for Responsible, Decentralized Intelligence with more than 300 domain experts, ALE tests real long-horizon professional workflows — 3D modeling in Siemens NX, scene setup in Unreal Engine, neuroimaging analysis in FSLeyes — rather than academic datasets. All frontier models scored below 25%.",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/surprise-upset-gpt-5-5-beats-claude-fable-5-on-brutal-new-agents-last-exam-benchmark",
+          "why": "ALE was designed to resist contamination; its sub-25% ceiling is the most honest current measure of where agentic AI actually stands on economically meaningful professional tasks."
+        },
+        {
+          "headline": "Epoch AI adds 9 new benchmarks to its hub, covering agentic tasks, cybersecurity, and research-level physics",
+          "summary": "Epoch AI expanded its benchmark hub on June 22 with nine external additions spanning agentic work, cybersecurity, algorithm engineering, forecasting, and research-level physics — the broadest single-week expansion since the hub launched. The additions extend coverage into the post-academic-exam frontier that models like Fable 5 and GPT-5.5 are now pushing against.",
+          "source": "Epoch AI",
+          "url": "https://epoch.ai/benchmarks"
+        }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Fable 5 double cutoff: day 11 of the government suspension, and the subscription grace period also ends today",
+          "summary": "June 23 marks two simultaneous Fable 5 milestones: the US export-control suspension enters its 11th day with no restoration date announced, and Anthropic's original free-access window for Pro, Max, Team, and Enterprise subscribers also closes today. Any future restoration — expected after the July 8 identity-verification rollout — will arrive behind usage-credit billing at API rates ($10/M input, $50/M output).",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/fable-mythos-access",
+          "why": "Enterprise teams that planned around free Fable 5 access now face both a government suspension and, once lifted, mandatory credit billing — a two-layer cost and compliance problem to solve before July 8."
+        },
+        {
+          "headline": "OpenRouter Fusion API matches Fable 5 benchmark quality at half the cost",
+          "summary": "OpenRouter launched Fusion on June 12: a server-side compound-model API that fans prompts to multiple models in parallel, then uses a judge and a synthesizer (Claude Opus 4.8 by default) to merge the best answers. A budget panel of Gemini 3 Flash, Kimi K2.6, and DeepSeek V4 Pro landed within 1% of Fable 5 on Perplexity's DRACO benchmark at roughly 50% of the cost. OpenRouter published results the day after Anthropic's suspension took effect.",
+          "source": "OpenRouter Blog",
+          "url": "https://openrouter.ai/blog/announcements/fusion-beats-frontier/",
+          "why": "Fusion is a viable Fable 5 stand-in for knowledge-work and evaluation tasks during the ban; the compound approach won't replicate Fable's long-horizon agentic performance, but it narrows the gap on most day-to-day use cases."
+        },
+        {
+          "headline": "VS Code 1.125 ships Copilot Budget Dashboard, 2-hour extension update delay, and enterprise MDM controls",
+          "summary": "Released June 17, VS Code 1.125 adds a Copilot budget meter in the status bar showing the percentage of AI credits consumed, a new extensions.autoUpdateDelay setting that holds extension updates for 2 hours by default (lockable via MDM), and native MDM delivery of Copilot compliance settings via Jamf and Intune. The integrated browser gains a working SSH tunnel proxy for remote development sessions.",
+          "source": "Visual Studio Code",
+          "url": "https://code.visualstudio.com/updates/v1_125",
+          "why": "The Copilot budget meter is the first native cost-visibility feature in VS Code — directly relevant for teams whose Fable 5 plans now require credits-based budgeting for Anthropic models."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub windows-latest runners now default to Visual Studio 2026 — migration complete",
+          "summary": "GitHub completed its windows-latest and windows-2025 runner migration to Visual Studio 2026 on June 15. Workflows that relied on the implicit Visual Studio 2025 toolchain now pick up VS 2026 automatically; teams should verify builds that depend on specific compiler or SDK versions. A parallel migration of macos-latest to macOS 26 is underway and expected to complete around mid-July.",
+          "source": "Byteiota",
+          "url": "https://byteiota.com/github-actions-windows-vs2026-migration/"
+        },
+        {
+          "headline": ".NET and .NET Framework June 2026 servicing updates ship",
+          "summary": "Microsoft released the June 2026 servicing update for all supported .NET and .NET Framework channels, covering security fixes, reliability improvements, and runtime patches across supported versions. The update follows the standard monthly cadence.",
+          "source": ".NET Blog",
+          "url": "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-june-2026-servicing-updates/",
+          "why": "Routine but worth applying promptly — the security-fix component is present in this cycle."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin ETF weekly outflows slow to $228M — but rising Fed rate-hike bets emerge as the new headwind",
+          "summary": "U.S. spot Bitcoin ETFs posted their sixth consecutive week of net outflows, shedding $228 million — down sharply from $315 million the prior week and well below the $1B+ weekly losses of May. However, the 2-year Treasury yield climbed to 4.21%, its highest since February 2025, as markets priced in potential rate hikes under new Fed Chair Kevin Warsh. The decoupling from oil prices suggests macro rate expectations have replaced ETF selling as the dominant weight on BTC near $65,000.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/daybook-us/2026/06/22/bitcoin-etf-outflow-pain-eases-just-as-another-headwind-strengthens",
+          "why": "Multi-week bitcoin price trends track macro rate expectations more reliably than short-term ETF flows; a hawkish Warsh Fed is a harder headwind to trade around than institutional profit-taking."
+        },
+        {
+          "headline": "1,200+ companies press Senate leaders for CLARITY Act floor vote before congressional deadline",
+          "summary": "The Consumer Technology Association delivered a June 17 letter signed by more than 1,200 tech companies to Senate Majority Leader Thune and Minority Leader Schumer, urging a floor vote on the CLARITY Act — the comprehensive US digital-asset market-structure bill that cleared Senate Banking Committee 15-9 in May and was placed on the Senate calendar June 1. No vote date has been set, and the 119th Congress recess schedule narrows the viable window.",
+          "source": "Bitcoin.com News",
+          "url": "https://news.bitcoin.com/1200-tech-companies-push-senate-to-pass-clarity-act-quickly-as-us-crypto-rules-face-global-pressure/",
+          "why": "CLARITY would establish the first federal market-structure framework for digital assets; another stall adds 1-2 years of regulatory ambiguity for Bitcoin ETF issuers and institutional traders."
+        },
+        {
+          "headline": "Investing.com analysis: the $3.4B bitcoin ETF bleed is cyclical profit-taking, not structural abandonment",
+          "summary": "An Investing.com market analysis argues that the sustained ETF outflow streak is consistent with historical cyclical rebalancing — institutional holders locking in gains after a run-up — rather than a structural breakdown of the ETF adoption thesis. Cited evidence includes stable medium-term holding periods and bitcoin's $65K price level still well above pre-ETF-launch baselines despite the outflow streak totaling nearly $6B over six weeks.",
+          "source": "Investing.com",
+          "url": "https://www.investing.com/analysis/bitcoins-34-billion-etf-bleed-looks-more-cyclical-than-structural-200681474"
+        }
+      ]
+    }
+  ]
+}
