@@ -1,0 +1,96 @@
+{
+  "date": "2026-06-24",
+  "intro": "The Fable 5 saga deepens: a government official confirms Mythos found real vulnerabilities in classified US systems — not a jailbreak — the same day an AI startup filed the first federal lawsuit over the export-control block.",
+  "sections": [
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Official confirms Anthropic's Mythos found vulnerabilities in classified US systems — not a jailbreak",
+          "summary": "A US government official told the AP on June 23 that Commerce Department export controls were applied to Fable 5 and Mythos 5 after Mythos demonstrated the ability to find real vulnerabilities in classified government systems — a more serious rationale than the previously reported jailbreak claim. The disclosure reframes the 12-day-old ban from a narrow consumer-safety measure into a genuine national-security capability concern.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/06/23/anthropics-mythos-model-found-vulnerabilities-in-classified-us-government-systems-official-says.html",
+          "why": "Changes the legal and policy landscape for the ongoing dispute: if the concern is model capability rather than a patchable jailbreak, restoration becomes significantly harder to negotiate."
+        },
+        {
+          "headline": "Legion sues US government over Fable 5 export-control block in first court challenge",
+          "summary": "Litigation-tech startup Legion filed suit in federal court in Washington on June 23, becoming the first Anthropic customer to challenge the Trump administration's export-control directive. Legion's case centers on its Canadian software engineers — located outside the US — who were cut off when Anthropic disabled Fable 5 and Mythos 5 globally on June 12 to ensure compliance.",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-06-23/anthropic-customer-sues-us-over-losing-access-to-fable-ai-model",
+          "why": "Sets up the first judicial test of whether export controls can bar domestic AI products from foreign employees; the outcome will shape how all frontier AI providers handle government access directives."
+        },
+        {
+          "headline": "Nobel laureate John Jumper leaves DeepMind for Anthropic; Alphabet posts worst stock day in a year",
+          "summary": "John Jumper, co-creator of AlphaFold and 2024 Nobel Prize in Chemistry co-winner, announced his departure from Google DeepMind to join Anthropic after nearly nine years at the lab. Alphabet shares fell to their steepest single-day drop in over a year on June 22 as markets reacted to what analysts called a compounding pattern of high-profile AI talent exits.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/06/22/alphabet-goog-stock-ai-departures.html",
+          "why": "Jumper is among the most credentialed scientists in applied AI; his move signals where leading researchers believe the frontier work is happening."
+        }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "GitHub Copilot adds Claude Code as selectable agent provider in JetBrains IDEs",
+          "summary": "A June 22 GitHub changelog update puts Claude Code CLI into public preview as a switchable agent in GitHub Copilot's JetBrains plugin. Developers install Claude Code CLI, point the plugin to the binary, and can then route Copilot Chat sessions through Claude rather than the default model. The release also adds organization-level agent publishing and a debug-log summary view.",
+          "source": "GitHub Blog",
+          "url": "https://github.blog/changelog/2026-06-22-new-features-and-claude-as-agent-provider-preview-in-jetbrains-ides/",
+          "why": "Gives JetBrains users — a large enterprise cohort — access to Claude's agentic coding capabilities without leaving their IDE or switching toolchains."
+        },
+        {
+          "headline": "GitHub Copilot Desktop App reaches general availability on Windows, macOS, and Linux",
+          "summary": "GitHub's standalone Copilot desktop workspace is now generally available. The app is built around a My Work view that surfaces active agent sessions, open pull requests, issues, and background automations tied to connected repositories — positioning agent supervision as a first-class native experience rather than an IDE sidebar.",
+          "source": "GitHub Blog",
+          "url": "https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience/",
+          "why": "Signals GitHub's intent to make the agentic coding loop a standalone platform, not just a plugin — relevant to any team evaluating where AI-assisted development infrastructure is heading."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Node.js issues June 2026 security releases across all active release lines",
+          "summary": "Node.js published security patches for its supported release lines on June 18. Users on all active Node.js versions are advised to upgrade promptly; the advisory covers multiple CVEs across the runtime.",
+          "source": "Node.js",
+          "url": "https://nodejs.org/en/blog/vulnerability/june-2026-security-releases",
+          "why": "Routine but action-required: security patches across all active lines means there is no supported version that can be safely skipped."
+        },
+        {
+          "headline": "Microsoft MSVC Build Tools Preview targets v14.52 with compiler, linker, and standard library updates",
+          "summary": "The June 2026 MSVC Build Tools preview targets the upcoming v14.52 release, with improvements spanning the compiler frontend, backend, linker, C++ Standard Library, and associated tooling. Teams on Windows CI pipelines should validate their builds against the preview before the stable release ships.",
+          "source": "C++ Team Blog",
+          "url": "https://devblogs.microsoft.com/cppblog/msvc-build-tools-preview-updates-june-2026/"
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin slips to $62,300 as $10.6B options expiry looms and ETF outflows hit a sixth straight week",
+          "summary": "Bitcoin fell to $62,300 on June 23 as US spot ETFs recorded their sixth consecutive week of net outflows and traders positioned ahead of a $10.6 billion Deribit options expiry on June 26. Max pain sits at $74,000 — roughly 14% above spot — with 80% of open interest currently out of the money, raising the prospect of heightened volatility into quarter-end.",
+          "source": "The Block",
+          "url": "https://theblock.co/post/405831/quarter-end-catalyst-consolidation-bitcoin-below-63000-etf-outflows-10-6-billion-options-expiry",
+          "why": "The June 26 quarterly expiry is the largest on the calendar this cycle; the lopsided positioning means the next 48 hours are pivotal for short-term price direction."
+        },
+        {
+          "headline": "Deutsche Bank: Bitcoin's June drop is about Fed expectations, AI capital rotation — not a broken market",
+          "summary": "In a June 23 research note, Deutsche Bank attributed Bitcoin's fall below $60,000 this month to hawkish Federal Reserve expectations under Chair Warsh, $6 billion in cumulative ETF outflows over six weeks, and institutional capital rotating into AI equities. Analyst Marion Laboure said Bitcoin is 'maturing into an institutional asset whose price is set by fund flows, Fed expectations, and competing risk themes.'",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/06/23/bitcoin-s-recent-drop-below-usd60-000-signals-fed-etf-and-ai-pressures-deutsche-bank",
+          "why": "Deutsche Bank's framing — structural maturation, not capitulation — suggests the sell-off is navigable for long-horizon holders, but the AI equity rotation is a durably competing theme."
+        },
+        {
+          "headline": "Clarity Act Senate floor vote uncertain with legislative calendar running thin",
+          "summary": "A June 22 CoinDesk analysis finds the Digital Asset Market Clarity Act — which cleared the Senate Banking Committee 15-9 in May — still faces unresolved disputes over DeFi developer liability, CFTC vs. SEC jurisdiction, and stablecoin yield as the Senate's window before summer recess narrows to weeks.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/news-analysis/2026/06/22/in-clarity-act-s-final-weeks-its-path-through-u-s-senate-not-getting-much-clearer",
+          "why": "A stall before recess pushes the first comprehensive US crypto market-structure law into a post-midterm, more uncertain environment — raising regulatory ambiguity risk for ETF issuers and institutional traders."
+        }
+      ]
+    }
+  ]
+}
