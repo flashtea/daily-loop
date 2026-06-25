@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daily Loop — 14 Jun</title>
+  <meta name="description" content="AI · Software · Bitcoin — curated, no noise" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css?v=3584b4b1" />
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap">
+      <div class="hairline"></div>
+      <a class="nameplate" href="index.html">Daily Loop</a>
+      <p class="tagline">AI · Software · Bitcoin — curated, no noise</p>
+      <div class="dateline">
+        <span>SUNDAY, JUNE 14, 2026</span>
+        <span>No. 13 · 9 stories</span>
+      </div>
+      <div class="rule"></div>
+      <p class="standfirst">A day after Washington&#39;s first AI model export ban, The Information reports the directive won&#39;t spread to other labs; Google ships a new text-generation architecture; and spot Bitcoin ETFs log their first all-green inflow day since May&#39;s sell-off.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="lead">
+      <p class="kicker">AI Research &amp; Models</p>
+      <h2 class="lead-hed"><a class="hed-a" href="https://www.theinformation.com/briefings/u-s-government-unlikely-extend-anthropic-export-control-ai-companies" target="_blank" rel="noopener">US signals Fable 5 export ban is Anthropic-specific; other frontier labs face no immediate controls</a></h2>
+      <p class="lead-dek">One day after forcing Anthropic to pull Fable 5 and Mythos 5, US government officials told The Information the export-control directive is targeted at those specific models and is unlikely to be extended to other frontier AI companies. The ban was triggered by a claimed jailbreak Anthropic publicly disputes as narrow and non-universal — noting the same prompts elicit comparable outputs from GPT-5.5.</p>
+      <p class="why"><span>Why it matters —</span> Confirms yesterday&#39;s ban is a targeted precedent, not a broader regulatory sweep — material for every frontier lab&#39;s deployment planning.</p>
+      <p class="byline"><a class="src" href="https://www.theinformation.com/briefings/u-s-government-unlikely-extend-anthropic-export-control-ai-companies" target="_blank" rel="noopener">The Information</a></p>
+    </section>
+<section class="beat">
+      <h2 class="beat-label">AI Research &amp; Models</h2>
+      
+      <div class="columns single" style="column-count:1">
+<article class="story">
+        <h3 class="hed"><a class="hed-a" href="https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/" target="_blank" rel="noopener">Google releases DiffusionGemma: 26B open-weight model generating text 4× faster via parallel diffusion</a></h3>
+        <p class="dek">Google DeepMind released DiffusionGemma on June 10 under Apache 2.0 — a 26B-parameter model that generates full paragraphs simultaneously, image-diffusion-style, rather than token-by-token. It reaches 700+ tokens/s on an RTX 5090 and 1,000+ on a single H100, with support already merged into vLLM, MLX, and Hugging Face Transformers.</p>
+        <p class="why"><span>Why it matters —</span> First open-weight production diffusion text model: trades some benchmark accuracy for a 4× throughput multiplier, with day-one inference-stack support.</p>
+        <p class="byline"><a class="src" href="https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/" target="_blank" rel="noopener">Google</a></p>
+      </article>
+      </div>
+    </section>
+<section class="beat">
+      <h2 class="beat-label">AI for Software Development</h2>
+      
+      <div class="columns" style="column-count:2">
+<article class="story">
+        <h3 class="hed"><a class="hed-a" href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">OpenAI retires GPT-5.2 across ChatGPT and API; all users now on GPT-5.5</a></h3>
+        <p class="dek">As of June 12, GPT-5.2 Instant, Thinking, and Pro were removed from ChatGPT; existing conversations auto-migrate to the corresponding GPT-5.5 variant. API users have a 90-day deprecation window from GPT-5.5&#39;s launch before endpoint access is cut.</p>
+        <p class="why"><span>Why it matters —</span> Developers with fine-tuned prompts, evals, or agentic pipelines targeting GPT-5.2 behavior should validate against GPT-5.5 before the API cutoff.</p>
+        <p class="byline"><a class="src" href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">OpenAI</a></p>
+      </article>
+<article class="story">
+        <h3 class="hed"><a class="hed-a" href="https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/" target="_blank" rel="noopener">Google ends free Gemini CLI and Code Assist access June 18; tools consolidate under Antigravity</a></h3>
+        <p class="dek">Consumer and free-tier access to Gemini CLI and the Gemini Code Assist IDE extensions ends June 18, 2026. Google is consolidating its AI developer tooling under the Antigravity 2.0 agentic coding platform launched at Google I/O in May.</p>
+        <p class="why"><span>Why it matters —</span> Developers relying on free Gemini CLI or Code Assist integrations have four days to migrate or find alternatives.</p>
+        <p class="byline"><a class="src" href="https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/" target="_blank" rel="noopener">Google</a></p>
+      </article>
+      </div>
+    </section>
+<section class="beat">
+      <h2 class="beat-label">Dev Tools &amp; Releases</h2>
+      
+      <div class="columns" style="column-count:3">
+<article class="story">
+        <h3 class="hed"><a class="hed-a" href="https://github.com/github/codeql/releases" target="_blank" rel="noopener">GitHub ships CodeQL 2.25.6: Swift 6.3.2, full C# 14 and .NET 10 language support</a></h3>
+        <p class="dek">CodeQL 2.25.6 adds Swift 6.3.2 and complete C# 14 with .NET 10 coverage, smarter sensitive-data detection across multiple languages, and query updates that reduce false-positive security alerts.</p>
+        
+        <p class="byline"><a class="src" href="https://github.com/github/codeql/releases" target="_blank" rel="noopener">GitHub</a></p>
+      </article>
+<article class="story">
+        <h3 class="hed"><a class="hed-a" href="https://github.blog/changelog/" target="_blank" rel="noopener">GitHub CLI gains issue types, sub-issue tracking, and dependency resolution from the terminal</a></h3>
+        <p class="dek">The latest GitHub CLI release exposes issue types, parent and sub-issue relationships, and issue dependencies directly in the terminal, allowing developers to structure and track work without leaving the CLI or writing raw gh api calls.</p>
+        
+        <p class="byline"><a class="src" href="https://github.blog/changelog/" target="_blank" rel="noopener">GitHub</a></p>
+      </article>
+<article class="story">
+        <h3 class="hed"><a class="hed-a" href="https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-june-2026-servicing-updates/" target="_blank" rel="noopener">.NET and .NET Framework receive June 2026 cumulative servicing updates</a></h3>
+        <p class="dek">Microsoft released the June 2026 monthly servicing updates for .NET and .NET Framework on June 9, covering cumulative security and reliability patches across all supported runtime versions.</p>
+        
+        <p class="byline"><a class="src" href="https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-june-2026-servicing-updates/" target="_blank" rel="noopener">.NET Blog</a></p>
+      </article>
+      </div>
+    </section>
+<section class="beat">
+      <h2 class="beat-label">Bitcoin</h2>
+      <div class="charts">
+      <figure class="chart">
+        <figcaption>Short term · last 30 days</figcaption>
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+          {"symbol":"BITSTAMP:BTCUSD","width":"100%","height":"240","locale":"en","dateRange":"1M","colorTheme":"light","isTransparent":true,"autosize":false,"trendLineColor":"#c0151d","underLineColor":"rgba(192,21,29,0.08)"}
+          </script>
+        </div>
+      </figure>
+      <figure class="chart">
+        <figcaption>Long term · all time</figcaption>
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+          {"symbol":"BITSTAMP:BTCUSD","width":"100%","height":"240","locale":"en","dateRange":"ALL","colorTheme":"light","isTransparent":true,"autosize":false,"trendLineColor":"#c0151d","underLineColor":"rgba(192,21,29,0.08)"}
+          </script>
+        </div>
+      </figure>
+    </div>
+      <div class="columns" style="column-count:2">
+<article class="story">
+        <h3 class="hed"><a class="hed-a" href="https://news.bitcoin.com/bitcoin-etf-inflows-ethereum-outflows-june-2026/" target="_blank" rel="noopener">Spot Bitcoin ETFs log first all-green inflow day since May sell-off; BlackRock&#39;s IBIT leads at $57.7M</a></h3>
+        <p class="dek">All 12 US spot Bitcoin ETF funds recorded net inflows on June 12 — the first clean sweep since the 13-day, $4.37B outflow streak that ended June 3. Total net inflows were $85.85M, with IBIT accounting for $57.7M. BTC is trading near $64,250, up roughly 1% on the week.</p>
+        <p class="why"><span>Why it matters —</span> A clean all-fund inflow day is the breadth signal analysts treat as confirmation that institutional selling has run its course.</p>
+        <p class="byline"><a class="src" href="https://news.bitcoin.com/bitcoin-etf-inflows-ethereum-outflows-june-2026/" target="_blank" rel="noopener">Bitcoin.com News</a></p>
+      </article>
+<article class="story">
+        <h3 class="hed"><a class="hed-a" href="https://cryptonews.net/news/bitcoin/33001705/" target="_blank" rel="noopener">Bitcoin Core v31.0 discloses privacy bug: -privatebroadcast feature can expose node IP addresses</a></h3>
+        <p class="dek">Bitcoin Core developers disclosed on June 6 that the optional -privatebroadcast feature in v31.0 — designed to route transactions privately via Tor — can reveal the originating node&#39;s IP address due to a BIP324 v2 handshake failure. A fix is targeted for v31.1; users who enabled the feature should disable it immediately.</p>
+        <p class="why"><span>Why it matters —</span> Only v31.0 operators who opted into -privatebroadcast are at risk, but anyone relying on that feature for transaction anonymity should act before v31.1 ships.</p>
+        <p class="byline"><a class="src" href="https://cryptonews.net/news/bitcoin/33001705/" target="_blank" rel="noopener">Crypto News</a></p>
+      </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="rule"></div>
+      <p class="arch-label">Past editions</p>
+      <nav class="archive"><a class="chip" href="index.html">25 Jun</a><a class="chip" href="2026-06-24.html">24 Jun</a><a class="chip" href="2026-06-23.html">23 Jun</a><a class="chip" href="2026-06-22.html">22 Jun</a><a class="chip" href="2026-06-21.html">21 Jun</a><a class="chip" href="2026-06-20.html">20 Jun</a><a class="chip" href="2026-06-19.html">19 Jun</a><a class="chip" href="2026-06-18.html">18 Jun</a><a class="chip" href="2026-06-17.html">17 Jun</a><a class="chip" href="2026-06-16.html">16 Jun</a><a class="chip" href="2026-06-15.html">15 Jun</a><a class="chip current" href="2026-06-14.html">14 Jun</a><a class="chip" href="2026-06-13.html">13 Jun</a></nav>
+      <p class="colophon">Curated by Claude · rendered by <code>build.mjs</code> · built 2026-06-25 04:11 UTC</p>
+    </div>
+  </footer>
+</body>
+</html>

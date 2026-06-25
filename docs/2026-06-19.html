@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daily Loop — 19 Jun</title>
+  <meta name="description" content="AI · Software · Bitcoin — curated, no noise" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css?v=3584b4b1" />
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap">
+      <div class="hairline"></div>
+      <a class="nameplate" href="index.html">Daily Loop</a>
+      <p class="tagline">AI · Software · Bitcoin — curated, no noise</p>
+      <div class="dateline">
+        <span>FRIDAY, JUNE 19, 2026</span>
+        <span>No. 13 · 7 stories</span>
+      </div>
+      <div class="rule"></div>
+      <p class="standfirst">BTC holds near $64k with the fear/greed index at extreme fear after Warsh&#39;s hawkish FOMC debut; Grok 4.3 lands on Amazon Bedrock with a 1M-token context window at $1.25/M input; npm v12 ships in July with install-script blocking — every JavaScript CI pipeline needs an audit before then. AI Research quiet this week after last week&#39;s Fable 5 export-control saga.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="lead">
+      <p class="kicker">AI for Software Development</p>
+      <h2 class="lead-hed"><a class="hed-a" href="https://aws.amazon.com/about-aws/whats-new/2026/06/grok-amazon-bedrock/" target="_blank" rel="noopener">Grok 4.3 reaches Amazon Bedrock with 1M-token context and configurable reasoning</a></h2>
+      <p class="lead-dek">xAI&#39;s Grok 4.3 reached general availability on Amazon Bedrock on June 16, giving AWS developers access to a 1-million-token context window and three reasoning effort levels (low, medium, high) via the standard Bedrock API. On-demand pricing is $1.25 per million input tokens and $2.50 per million output tokens; inference runs on Amazon&#39;s new Mantle engine with a 30,000-token maximum output per call.</p>
+      <p class="why"><span>Why it matters —</span> AWS developers can now benchmark Grok 4.3 against Claude and other Bedrock models in a single API call — at pricing that undercuts the direct xAI API for most workloads, with no separate account required.</p>
+      <p class="byline"><a class="src" href="https://aws.amazon.com/about-aws/whats-new/2026/06/grok-amazon-bedrock/" target="_blank" rel="noopener">AWS</a></p>
+    </section>
+<section class="beat">
+      <h2 class="beat-label">AI for Software Development</h2>
+      
+      <div class="columns single" style="column-count:1">
+<article class="story">
+        <h3 class="hed"><a class="hed-a" href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Claude Code v2.1.181: /config prompt command, Bun 1.4 runtime, and mid-thinking auto-retry</a></h3>
+        <p class="dek">The June 17 Claude Code release adds /config key=value syntax to set any configuration value directly from the prompt — works in interactive, -p, and Remote Control modes. The bundled Bun runtime was upgraded to 1.4, long-paragraph streaming was improved to appear line-by-line, and API connections that drop mid-thinking now auto-retry instead of surfacing a raw error. Fixes land for JetBrains IDE flickering on 2026.1+ and Shift+non-ASCII key drops in Kitty-protocol terminals (WezTerm, Ghostty, kitty).</p>
+        <p class="why"><span>Why it matters —</span> /config from inside the session eliminates the need to exit to settings for quick per-session overrides like toggling thinking mode or switching the active model.</p>
+        <p class="byline"><a class="src" href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Anthropic (Claude Code changelog)</a></p>
+      </article>
+      </div>
+    </section>
+<section class="beat">
+      <h2 class="beat-label">AI Research &amp; Models</h2>
+      
+      <div class="columns single" style="column-count:1">
+<article class="story">
+        <h3 class="hed"><a class="hed-a" href="https://x.ai/news/grok-amazon-bedrock" target="_blank" rel="noopener">Grok 4.3 model card: configurable reasoning depth and Grok 5 at 10T parameters confirmed on roadmap</a></h3>
+        <p class="dek">Alongside its Bedrock debut, xAI published Grok 4.3&#39;s full model card: 1M-token context, 30K max output, and reasoning configurable at low, medium, or high effort — each level progressively more compute-intensive. The model is positioned for enterprise workloads including contract review, case-law research, and financial document Q&amp;A. xAI separately confirmed Grok 5 is in training at an estimated 10 trillion parameters, with no public release timeline.</p>
+        <p class="why"><span>Why it matters —</span> Per-call reasoning-effort control is now standard across Claude, GPT-5.5, and Grok — making cost-per-task optimization a routine engineering decision rather than a model-selection one.</p>
+        <p class="byline"><a class="src" href="https://x.ai/news/grok-amazon-bedrock" target="_blank" rel="noopener">xAI</a></p>
+      </article>
+      </div>
+    </section>
+<section class="beat">
+      <h2 class="beat-label">Dev Tools &amp; Releases</h2>
+      
+      <div class="columns" style="column-count:2">
+<article class="story">
+        <h3 class="hed"><a class="hed-a" href="https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-for-npm-v12/" target="_blank" rel="noopener">npm v12 will block install scripts, Git dependencies, and remote URLs by default — July cutover deadline</a></h3>
+        <p class="dek">GitHub&#39;s June 9 changelog confirmed npm v12 will flip three historically permissive defaults: blocking preinstall/install/postinstall scripts from dependencies, Git-sourced packages, and remote-URL package sources. The change was accelerated by the Miasma supply chain attack of June 1, which compromised 89 packages across Red Hat&#39;s npm namespace in two hours. All three restrictions surface as warnings today in npm 11.16.0; v12 itself is due in July 2026.</p>
+        <p class="why"><span>Why it matters —</span> Any CI pipeline relying on install scripts or Git-sourced dependencies will break silently on upgrade day unless teams run npm 11.16.0 now and clear the warning output.</p>
+        <p class="byline"><a class="src" href="https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-for-npm-v12/" target="_blank" rel="noopener">GitHub Changelog</a></p>
+      </article>
+<article class="story">
+        <h3 class="hed"><a class="hed-a" href="https://visualstudiomagazine.com/articles/2026/06/11/vsm-vs-code-1-124.aspx" target="_blank" rel="noopener">VS Code 1.124 enables Copilot Autopilot by default with a three-loop safety cap</a></h3>
+        <p class="dek">VS Code 1.124, released June 10, turns on Copilot Autopilot for all users by default — the agent now writes files, executes terminal commands, and responds to tool prompts without per-step confirmation. A new Advanced Autopilot mode uses a small utility model to determine when the task is genuinely complete rather than relying on fixed rules; autonomous loops are capped at three before Autopilot halts. Organizations can restrict the behavior via the chat.tools.global.autoApprove setting.</p>
+        <p class="why"><span>Why it matters —</span> Autopilot on by default is a behavioral shift in the world&#39;s most popular editor; the three-loop cap and org-level policy gate offer meaningful guardrails for teams concerned about runaway agents.</p>
+        <p class="byline"><a class="src" href="https://visualstudiomagazine.com/articles/2026/06/11/vsm-vs-code-1-124.aspx" target="_blank" rel="noopener">Visual Studio Magazine</a></p>
+      </article>
+      </div>
+    </section>
+<section class="beat">
+      <h2 class="beat-label">Bitcoin</h2>
+      <div class="charts">
+      <figure class="chart">
+        <figcaption>Short term · last 30 days</figcaption>
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+          {"symbol":"BITSTAMP:BTCUSD","width":"100%","height":"240","locale":"en","dateRange":"1M","colorTheme":"light","isTransparent":true,"autosize":false,"trendLineColor":"#c0151d","underLineColor":"rgba(192,21,29,0.08)"}
+          </script>
+        </div>
+      </figure>
+      <figure class="chart">
+        <figcaption>Long term · all time</figcaption>
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+          {"symbol":"BITSTAMP:BTCUSD","width":"100%","height":"240","locale":"en","dateRange":"ALL","colorTheme":"light","isTransparent":true,"autosize":false,"trendLineColor":"#c0151d","underLineColor":"rgba(192,21,29,0.08)"}
+          </script>
+        </div>
+      </figure>
+    </div>
+      <div class="columns" style="column-count:2">
+<article class="story">
+        <h3 class="hed"><a class="hed-a" href="https://www.ccn.com/analysis/crypto/bitcoin-dips-fed-holds-rates-steady-signals-slower-growth/" target="_blank" rel="noopener">BTC stabilizes near $64k; Fear &amp; Greed at 22 (extreme fear) as CME prices 61% odds of October rate hike</a></h3>
+        <p class="dek">Bitcoin has settled in the $63,500–$65,000 range in the 48 hours since the Federal Reserve&#39;s June 17 FOMC decision held rates at 3.50–3.75% but issued its most hawkish dot plot in two years — nine of eighteen officials projecting at least one hike before year-end. The Crypto Fear &amp; Greed Index fell to 22, the lowest reading since February. CME FedWatch now prices a 61% chance of an October hike, effectively removing the dovish macro backstop that underpinned BTC&#39;s 2025 rally.</p>
+        <p class="why"><span>Why it matters —</span> Chair Warsh&#39;s deliberate refusal to submit a dot projection and stripped forward-guidance language signal a genuinely unpredictable rate path — a structural headwind for all risk assets through at least Q3.</p>
+        <p class="byline"><a class="src" href="https://www.ccn.com/analysis/crypto/bitcoin-dips-fed-holds-rates-steady-signals-slower-growth/" target="_blank" rel="noopener">CCN</a></p>
+      </article>
+<article class="story">
+        <h3 class="hed"><a class="hed-a" href="https://www.coindesk.com/daybook-us/2026/06/17/three-fed-signals-that-could-make-bitcoin-pop" target="_blank" rel="noopener">Fidelity&#39;s FBTC takes $14M in inflows on June 17 as sector-wide Bitcoin ETF outflows total $111M</a></h3>
+        <p class="dek">Despite Bitcoin spot ETFs collectively shedding $111 million in net outflows on June 17, Fidelity&#39;s FBTC was the only major issuer to post positive flows on the day, attracting $14 million in fresh institutional inflows. Cumulative outflows over the past three weeks have exceeded $3.5 billion — the largest sustained withdrawal streak since the products launched in January 2024.</p>
+        <p class="why"><span>Why it matters —</span> Selective accumulation at Fidelity while peers bleed suggests differentiated institutional conviction rather than a uniform exit — a pattern that has historically preceded stabilization.</p>
+        <p class="byline"><a class="src" href="https://www.coindesk.com/daybook-us/2026/06/17/three-fed-signals-that-could-make-bitcoin-pop" target="_blank" rel="noopener">CoinDesk</a></p>
+      </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="rule"></div>
+      <p class="arch-label">Past editions</p>
+      <nav class="archive"><a class="chip" href="index.html">25 Jun</a><a class="chip" href="2026-06-24.html">24 Jun</a><a class="chip" href="2026-06-23.html">23 Jun</a><a class="chip" href="2026-06-22.html">22 Jun</a><a class="chip" href="2026-06-21.html">21 Jun</a><a class="chip" href="2026-06-20.html">20 Jun</a><a class="chip current" href="2026-06-19.html">19 Jun</a><a class="chip" href="2026-06-18.html">18 Jun</a><a class="chip" href="2026-06-17.html">17 Jun</a><a class="chip" href="2026-06-16.html">16 Jun</a><a class="chip" href="2026-06-15.html">15 Jun</a><a class="chip" href="2026-06-14.html">14 Jun</a><a class="chip" href="2026-06-13.html">13 Jun</a></nav>
+      <p class="colophon">Curated by Claude · rendered by <code>build.mjs</code> · built 2026-06-25 04:11 UTC</p>
+    </div>
+  </footer>
+</body>
+</html>

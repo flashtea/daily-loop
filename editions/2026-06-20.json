@@ -1,0 +1,95 @@
+{
+  "date": "2026-06-20",
+  "intro": "Iran's Bürgenstock signing collapses after overnight Israeli airstrikes; BTC slides to $62,328 and is now 28% off its ATH. VS Code 1.125 ships with a built-in browser and AI model marketplace. Colorado's June 30 AI Act compliance deadline quietly shifts to January 2027.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "VS Code 1.125 ships built-in browser, AI model marketplace, and Copilot budget monitor",
+          "summary": "Released June 17, VS Code 1.125 adds a secure integrated browser for web searching and remote-connection browsing without leaving the editor, a model-provider marketplace for installing additional AI backends, and a Copilot status dashboard showing the percentage of AI-credit budget consumed so far in the billing cycle.",
+          "source": "Visual Studio Code",
+          "url": "https://code.visualstudio.com/updates/v1_125",
+          "why": "The budget monitor lands just as GitHub Copilot's token-based billing has gone live — teams can now see credit burn in real time before hitting overages."
+        },
+        {
+          "headline": "GitHub Copilot's June 1 token-billing switch draws nearly 900 downvotes in community thread",
+          "summary": "Three weeks into Copilot's move from unlimited access to AI-credit billing, the official community discussion thread has exceeded 400 comments and nearly 900 downvotes. Heavy users of agentic features report 5–10x cost increases over the flat-rate plan; teams are publicly evaluating OpenCode and other provider-agnostic alternatives.",
+          "source": "GitHub Blog",
+          "url": "https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/",
+          "why": "Token billing fundamentally changes the economics of autonomous agents — operations that were previously unlimited now accumulate measurable per-token costs for every code suggestion and tool call."
+        },
+        {
+          "headline": "ChatGPT adds pronunciation guidance in 60+ languages and a World Cup conversation mode",
+          "summary": "OpenAI's June 19 ChatGPT update delivers audio and text pronunciation help for words across more than 60 languages alongside a conversational mode for tracking the 2026 World Cup. The release also smooths iOS photo uploads, chat organization, note creation, and Android model-selection UX.",
+          "source": "OpenAI",
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Colorado amends its AI Act days before June 30 deadline — effective date pushed to January 2027",
+          "summary": "Governor Polis signed SB 189 on May 14, stripping out the original duty-of-care, algorithmic-discrimination risk-assessment, and AG-reporting requirements from Colorado's AI Act two months before its June 30 effective date. The revised law imposes targeted disclosure obligations, three-year record-keeping, and a 60-day attorney-general cure period — now effective January 1, 2027.",
+          "source": "Hunton Andrews Kurth",
+          "url": "https://www.hunton.com/privacy-and-cybersecurity-law-blog/colorado-ai-act-amended-and-effective-date-delayed",
+          "why": "Teams that were rushing for a June 30 sprint can stand down, but the disclosure and record-keeping obligations are real and the January deadline is firm."
+        },
+        {
+          "headline": "Epoch corrects and re-releases FrontierMath benchmark v2 after removing leaked items",
+          "summary": "Epoch AI published v2 of its FrontierMath mathematics benchmark on June 12, removing and correcting problems whose solutions had surfaced externally or proven ambiguous. FrontierMath remains one of the few evaluation suites that frontier models have not saturated — MMLU and MMLU-Pro are above 88% across all major labs — making v2 one of the cleaner remaining gauges of genuine reasoning progress.",
+          "source": "Epoch AI",
+          "url": "https://epochai.org/",
+          "why": "Benchmark hygiene matters more as evaluation sets saturate; a clean FrontierMath v2 is critical infrastructure for distinguishing real reasoning gains from contamination."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Salesforce Summer '26 ships Headless 360: every CRM capability now an API, MCP tool, or CLI command",
+          "summary": "Salesforce's Summer '26 production rollout completed mid-June, headlined by Headless 360, which exposes every major Salesforce function as a REST API endpoint, a Model Context Protocol tool, or a CLI command. AI agents can now drive CRM workflows — opportunity creation, case escalation, forecast updates — without a UI layer.",
+          "source": "Salesforce Developers Blog",
+          "url": "https://developer.salesforce.com/blogs/2026/06/the-salesforce-developers-guide-to-the-summer-26-release",
+          "why": "Headless 360 positions Salesforce as a first-class MCP data source for Claude, GPT, and other agent orchestrators without custom connector work."
+        },
+        {
+          "headline": "Microsoft ships June 2026 servicing patches for .NET and .NET Framework",
+          "summary": "Microsoft's June 2026 servicing release for supported .NET and .NET Framework channels covers security fixes and reliability improvements across active support tiers, delivered via standard NuGet and Windows Update channels on June 9.",
+          "source": ".NET Blog",
+          "url": "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-june-2026-servicing-updates/"
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "lead": true,
+          "headline": "BTC drops to $62,328 as Iran cancels Bürgenstock summit and Fed hawkishness compounds selloff",
+          "summary": "Bitcoin fell a further 3% on June 19 to $62,328 — now down roughly 28% from its October 2025 all-time high — after Israel launched overnight airstrikes in southern Lebanon, causing Iran to withdraw from the US-Iran memorandum signing scheduled at Bürgenstock resort in Switzerland. The geopolitical shock layered onto the Fed's June 17 hawkish dot plot, in which 9 of 18 officials pencilled in a rate hike before year-end. ETH dropped 3.3%, SOL fell 4.9%, and XRP lost 4.6% on the day.",
+          "source": "BlockchainReporter",
+          "url": "https://blockchainreporter.net/crypto-market-today-june-19-2026-bitcoin-62328-iran-signing-collapses/",
+          "why": "A simultaneous macro shock (hawkish Fed) and geopolitical shock (Middle East escalation) is textbook risk-off; next technical support sits around $60,000."
+        },
+        {
+          "headline": "Bitcoin has traded below its $78K all-in mining cost for five straight months, squeezing 20% of miners",
+          "summary": "JPMorgan's analysis, highlighted in CoinDesk's June 19 live markets update, places all-in bitcoin production cost at roughly $78,000, meaning the network has operated at a structural loss since January 2026. About 20% of miners are now unprofitable; public miners sold more than 32,000 BTC in Q1 to cover operating costs — more than in all of 2025. Mining difficulty fell 10% in early June as high-cost rigs powered down.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/06/19/live-markets-bitcoin-has-traded-below-its-mining-cost-for-five-months-squeezing-miners",
+          "why": "Sub-cost pricing compresses hashrate and resets difficulty downward, mechanically reducing issuance pressure — a potential structural support for price if demand stabilizes at these levels."
+        },
+        {
+          "headline": "Long-term Bitcoin holders absorb 125,000 BTC in June even as spot price slides",
+          "summary": "On-chain data shows wallets holding BTC for 155+ days — statistically unlikely to sell into short-term volatility — have accumulated roughly 125,000 BTC so far in June, one of the larger monthly accumulation events of the current cycle. Long-term holder supply has risen by more than 2 million BTC since BTC's October 2025 peak.",
+          "source": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-friday-june-19-2026-prices-keep-falling-post-fed-decision-123239380.html",
+          "why": "LTH accumulation at these levels matched the pattern in Q4 2022 and Q4 2023, both of which preceded recoveries — though timing remains uncertain."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daily Loop — 18 Jun</title>
+  <meta name="description" content="AI · Software · Bitcoin — curated, no noise" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css?v=3584b4b1" />
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap">
+      <div class="hairline"></div>
+      <a class="nameplate" href="index.html">Daily Loop</a>
+      <p class="tagline">AI · Software · Bitcoin — curated, no noise</p>
+      <div class="dateline">
+        <span>THURSDAY, JUNE 18, 2026</span>
+        <span>No. 13 · 7 stories</span>
+      </div>
+      <div class="rule"></div>
+      <p class="standfirst">Warsh&#39;s hawkish FOMC debut wiped rate-cut tailwinds and sent BTC below $63k; Gemini CLI died this morning amid an open-source backlash; Claude Design ships its biggest update yet. AI Research beat quiet today — no new releases since last week&#39;s Fable 5 coverage.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="lead">
+      <p class="kicker">Bitcoin</p>
+      <h2 class="lead-hed"><a class="hed-a" href="https://www.cnbc.com/2026/06/17/fed-interest-rate-decision-june-2026.html" target="_blank" rel="noopener">Warsh&#39;s hawkish FOMC debut withholds dot, majority project 2026 rate hike — BTC falls to $63k</a></h2>
+      <p class="lead-dek">The Fed held rates at 3.50–3.75% on June 17 but issued its most hawkish dot plot in two years: nine of eighteen officials now project at least one hike before year-end, while Chair Warsh declined to submit his own dot and stripped forward-guidance language from the statement entirely. Bitcoin fell from $65,800 to near $63,000 in the hours after the announcement; CME FedWatch now prices a 61% chance of an October hike.</p>
+      <p class="why"><span>Why it matters —</span> Warsh&#39;s deliberate ambiguity removes the &#39;rates-going-lower&#39; backstop that underpinned BTC&#39;s 2025–26 rally; the October meeting is now the key near-term catalyst for direction.</p>
+      <p class="byline"><a class="src" href="https://www.cnbc.com/2026/06/17/fed-interest-rate-decision-june-2026.html" target="_blank" rel="noopener">CNBC</a></p>
+    </section>
+<section class="beat">
+      <h2 class="beat-label">AI for Software Development</h2>
+      
+      <div class="columns" style="column-count:2">
+<article class="story">
+        <h3 class="hed"><a class="hed-a" href="https://claude.com/blog/claude-design-stays-on-brand-for-daily-work" target="_blank" rel="noopener">Claude Design overhauled: design system imports, token-burn fix, and bidirectional Claude Code handoff</a></h3>
+        <p class="dek">Anthropic shipped a major rebuild of Claude Design on June 17, adding the ability to import design systems from a GitHub repo, design files, or raw uploads — Claude then builds against those components and auto-corrects deviations before output. The update resolves the token-burn problem that burned through a Pro allowance in 25 minutes during the April launch, and closes a full design-to-code round-trip via a new /design command in Claude Code.</p>
+        <p class="why"><span>Why it matters —</span> Design-to-code teams can now enforce brand systems end-to-end without leaving the Anthropic toolchain; admin controls let orgs lock down a single approved design standard.</p>
+        <p class="byline"><a class="src" href="https://claude.com/blog/claude-design-stays-on-brand-for-daily-work" target="_blank" rel="noopener">Claude (Anthropic)</a></p>
+      </article>
+<article class="story">
+        <h3 class="hed"><a class="hed-a" href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Claude Code v1.11 patches WSL2 scrolling, Vim undo, and mid-stream connection drops</a></h3>
+        <p class="dek">The June 17 Claude Code release fixes mouse-wheel scrolling in WSL2 under Windows Terminal and VS Code, restores Vim-mode undo to step through commands one at a time instead of merging them, and prevents mid-stream disconnects from stranding the spinner at &#39;running tool&#39;. Plugin loading performance, remote session task states, and subagent viewing were also improved.</p>
+        <p class="why"><span>Why it matters —</span> WSL2 scrolling and Vim undo were the top-reported usability blockers from Windows and keyboard-driven users.</p>
+        <p class="byline"><a class="src" href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Anthropic (Claude Code changelog)</a></p>
+      </article>
+      </div>
+    </section>
+<section class="beat">
+      <h2 class="beat-label">Dev Tools &amp; Releases</h2>
+      
+      <div class="columns" style="column-count:2">
+<article class="story">
+        <h3 class="hed"><a class="hed-a" href="https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/" target="_blank" rel="noopener">Gemini CLI is dead as of today; developers blast Google over open-source bait-and-switch</a></h3>
+        <p class="dek">Google terminated Gemini CLI and Gemini Code Assist for all free, Pro, and Ultra users on June 18, directing them to Antigravity CLI — a closed-source replacement. Critics note Google accepted 6,000+ community pull requests over the tool&#39;s life then restricted its future to paying enterprise customers; early Antigravity users also report its compute cap is far tighter than Gemini CLI&#39;s 1,000 daily requests, with some exhausting it in two requests.</p>
+        <p class="why"><span>Why it matters —</span> Any solo developer or small team running Gemini CLI lost access this morning; Standard and Enterprise licensees are unaffected but should test the new tooling.</p>
+        <p class="byline"><a class="src" href="https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/" target="_blank" rel="noopener">Google Developers Blog</a></p>
+      </article>
+<article class="story">
+        <h3 class="hed"><a class="hed-a" href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Google AI Studio adds native Android app building via Gemini 3.5 Flash</a></h3>
+        <p class="dek">Starting June 17, developers can build native Android apps directly in AI Studio&#39;s Build tab using Gemini 3.5 Flash, without switching to Android Studio. The feature scaffolds, iterates, and debugs Android Kotlin projects from a single prompt interface using Gemini&#39;s agentic coding capabilities.</p>
+        <p class="why"><span>Why it matters —</span> Lowers the Android development barrier for web and AI-first teams that have traditionally avoided the Android Studio toolchain.</p>
+        <p class="byline"><a class="src" href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Google AI for Developers</a></p>
+      </article>
+      </div>
+    </section>
+<section class="beat">
+      <h2 class="beat-label">Bitcoin</h2>
+      <div class="charts">
+      <figure class="chart">
+        <figcaption>Short term · last 30 days</figcaption>
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+          {"symbol":"BITSTAMP:BTCUSD","width":"100%","height":"240","locale":"en","dateRange":"1M","colorTheme":"light","isTransparent":true,"autosize":false,"trendLineColor":"#c0151d","underLineColor":"rgba(192,21,29,0.08)"}
+          </script>
+        </div>
+      </figure>
+      <figure class="chart">
+        <figcaption>Long term · all time</figcaption>
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+          {"symbol":"BITSTAMP:BTCUSD","width":"100%","height":"240","locale":"en","dateRange":"ALL","colorTheme":"light","isTransparent":true,"autosize":false,"trendLineColor":"#c0151d","underLineColor":"rgba(192,21,29,0.08)"}
+          </script>
+        </div>
+      </figure>
+    </div>
+      <div class="columns" style="column-count:2">
+<article class="story">
+        <h3 class="hed"><a class="hed-a" href="https://www.coindesk.com/tech/2026/06/17/live-markets-a-bitcoin-bottom-signal-flashed-as-holders-absorbed-125-000-btc-in-june" target="_blank" rel="noopener">On-chain bottom signal: long-term holders absorbed 125,000 BTC in June — one of the cycle&#39;s largest accumulation months</a></h3>
+        <p class="dek">On-chain data published June 17 shows wallets holding BTC for more than 155 days absorbed roughly 125,000 coins in June — a historically significant accumulation rate that has coincided with cycle lows in prior bear phases. Bitcoin is currently sitting approximately 50% below its October all-time high.</p>
+        <p class="why"><span>Why it matters —</span> Long-term holder accumulation at this scale has historically preceded multi-month recoveries, though the newly hawkish Fed complicates the timing.</p>
+        <p class="byline"><a class="src" href="https://www.coindesk.com/tech/2026/06/17/live-markets-a-bitcoin-bottom-signal-flashed-as-holders-absorbed-125-000-btc-in-june" target="_blank" rel="noopener">CoinDesk</a></p>
+      </article>
+<article class="story">
+        <h3 class="hed"><a class="hed-a" href="https://blog.kraken.com/product/kraken-derivatives/announcing-cftc-regulated-us-perps" target="_blank" rel="noopener">Kraken launches CFTC-regulated bitcoin perpetual futures for US traders via Bitnomial</a></h3>
+        <p class="dek">Kraken enabled perpetual futures trading for eligible US clients through Bitnomial — a CFTC-licensed designated contract market it acquired earlier this year — making it the first major exchange to bring regulated crypto perps onshore. Nine assets are covered at launch including BTC and ETH; perpetuals globally generated over $60 trillion in volume in 2025.</p>
+        <p class="why"><span>Why it matters —</span> US traders can now access the world&#39;s highest-volume crypto derivative without routing through offshore venues — a structural market milestone that follows the CFTC&#39;s May framework.</p>
+        <p class="byline"><a class="src" href="https://blog.kraken.com/product/kraken-derivatives/announcing-cftc-regulated-us-perps" target="_blank" rel="noopener">Kraken Blog</a></p>
+      </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="rule"></div>
+      <p class="arch-label">Past editions</p>
+      <nav class="archive"><a class="chip" href="index.html">25 Jun</a><a class="chip" href="2026-06-24.html">24 Jun</a><a class="chip" href="2026-06-23.html">23 Jun</a><a class="chip" href="2026-06-22.html">22 Jun</a><a class="chip" href="2026-06-21.html">21 Jun</a><a class="chip" href="2026-06-20.html">20 Jun</a><a class="chip" href="2026-06-19.html">19 Jun</a><a class="chip current" href="2026-06-18.html">18 Jun</a><a class="chip" href="2026-06-17.html">17 Jun</a><a class="chip" href="2026-06-16.html">16 Jun</a><a class="chip" href="2026-06-15.html">15 Jun</a><a class="chip" href="2026-06-14.html">14 Jun</a><a class="chip" href="2026-06-13.html">13 Jun</a></nav>
+      <p class="colophon">Curated by Claude · rendered by <code>build.mjs</code> · built 2026-06-25 04:11 UTC</p>
+    </div>
+  </footer>
+</body>
+</html>

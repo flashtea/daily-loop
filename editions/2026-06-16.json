@@ -1,0 +1,96 @@
+{
+  "date": "2026-06-16",
+  "intro": "Day five of the Fable 5 blackout: Anthropic sent engineers to Commerce in Washington but left without a deal. Plus BlackRock's BITA yield ETF debuts on Nasdaq and Bitcoin holds $65K into the FOMC.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Anthropic meters Agent SDK usage, splits it from subscriptions",
+          "summary": "Starting June 15, programmatic and Agent SDK calls to Claude exit Pro, Max, Team, and Enterprise subscription pools and are billed separately at standard API rates with no rollover. Interactive use — Claude.ai, desktop app, and Claude Code in the terminal — still runs against regular subscription limits.",
+          "source": "InfoWorld",
+          "url": "https://www.infoworld.com/article/4171274/anthropic-puts-claude-agents-on-a-meter-across-its-subscriptions.html",
+          "why": "Any app or automation calling Claude programmatically is now a separate line item — audit integrations before the next billing cycle."
+        },
+        {
+          "headline": "OpenAI Codex rolls out Slack integration, developer SDK, and admin dashboards",
+          "summary": "OpenAI expanded Codex with a Slack integration that lets teams delegate coding tasks by @-mentioning @Codex in channels, a Codex SDK for embedding the agent in custom workflows, and new admin dashboards tracking usage across CLI, IDE, and web with code-review quality metrics.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/codex-now-generally-available/",
+          "why": "Teams can now route coding tasks from Slack without context-switching to the Codex web UI."
+        },
+        {
+          "headline": "VS Code 1.124 ships Autopilot on by default, adds background agent sessions",
+          "summary": "The June 2026 VS Code release turns Autopilot on for all users so agents can judge task completion autonomously, lets users queue a new session while one runs in the background, and adds keyboard navigation for searching and stepping through prior agent sessions.",
+          "source": "Visual Studio Code",
+          "url": "https://code.visualstudio.com/updates/v1_124"
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Fable 5 stays dark into day five as Anthropic-Commerce crisis talks end without a deal",
+          "summary": "Anthropic dispatched senior technical staff to Washington on Monday to meet Commerce Department officials and try to lift the June 12 export-control directive that forced it to disable Fable 5 and Mythos 5 worldwide; no resolution was announced and both models remain offline for all users. Axios reports the narrow cybersecurity dispute has hardened into a personality clash with the Trump administration — one official said 'they screwed us' — while Chinese lab Zhipu AI seized on the outage to launch GLM-5.2 on June 13 and pitch US models as unreliable.",
+          "source": "Axios",
+          "url": "https://www.axios.com/2026/06/15/anthropic-white-house-fable-mythos",
+          "why": "The first formal de-escalation talks produced no public deal — each day offline cedes ground to rivals and shadows Anthropic's $965B October IPO."
+        },
+        {
+          "headline": "OpenAI retires GPT-5.2 in ChatGPT, upgrades to GPT-5.5; GPT-4.5 sunsets June 27",
+          "summary": "As of June 12, GPT-5.2 is no longer available in ChatGPT — existing conversations migrated automatically to the equivalent GPT-5.5 model. OpenAI also announced GPT-4.5 will be removed from ChatGPT on June 27 after a 30-day sunset window, with GPT-5.5 Instant now the default across Free and Go tiers.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/gpt-5-5-instant/",
+          "why": "Developers and users still pinning GPT-4.5 or GPT-5.2 have less than two weeks before the June 27 hard cutoff."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub Actions previews Ubuntu 26.04 and Windows 11 arm64 + Visual Studio 2026 runners",
+          "summary": "GitHub put two new hosted runner images into public preview: Ubuntu 26.04 (Resolute) for x64 and arm64, and a Windows 11 arm64 image bundling Visual Studio 2026. The existing windows-11-arm label will migrate to the VS2026 image when the preview closes in early September.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-06-11-new-runner-images-in-public-preview/",
+          "why": "Good time to start testing CI pipelines against Ubuntu 26.04 before it becomes the default image."
+        },
+        {
+          "headline": "Microsoft ships .NET 10.0.9, 9.0.17, and 8.0.28 with two security CVE fixes",
+          "summary": "The June 2026 .NET servicing round addresses CVE-2026-45491 and CVE-2026-45490 across all three supported release tracks (.NET 10, 9, and 8), plus non-security fixes. No .NET Framework updates are included this cycle.",
+          "source": ".NET Blog",
+          "url": "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-june-2026-servicing-updates/",
+          "why": "Two CVEs patched across every supported .NET version — apply promptly."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "BlackRock's BITA yield Bitcoin ETF begins trading on Nasdaq today",
+          "summary": "BlackRock's iShares Bitcoin Premium Income ETF (ticker: BITA) launched on Nasdaq this morning — the first covered-call yield ETF on Bitcoin. BITA targets 15–25% annual yield by selling covered calls on IBIT, charges a 0.65% sponsor fee, and holds bitcoin exposure through direct BTC custody at Coinbase combined with IBIT shares. BlackRock filed the Form 8-A on June 11, beating Goldman Sachs to market by roughly a month.",
+          "source": "Bitcoin.com News",
+          "url": "https://news.bitcoin.com/blackrock-beats-goldman-to-market-with-bitcoin-income-etf-bita-launching-june-16/",
+          "why": "Yield-seeking institutions can now access BTC income without holding spot; expands the institutional investor base before Goldman's rival product arrives in July."
+        },
+        {
+          "headline": "Bitcoin reclaims $65K as US–Iran ceasefire removes geopolitical discount",
+          "summary": "Bitcoin surged above $65,500 on Monday after a reported 60-day US–Iran ceasefire framework surfaced, pulling oil's geopolitical premium lower and triggering a broad risk-on move. Spot Bitcoin ETF outflows, which exceeded $4 billion since mid-May, slowed sharply last week to $315 million — a deceleration that analysts caution is not yet a reversal.",
+          "source": "TheStreet Crypto",
+          "url": "https://www.thestreet.com/crypto/markets/bitcoin-climbs-as-traders-eye-fed-iran-deal",
+          "why": "Ceasefire optimism lifted BTC off its two-week slump; the durable signal will come from Wednesday's FOMC dot plot."
+        },
+        {
+          "headline": "FOMC meeting opens today; Kevin Warsh's dot plot debut is Bitcoin's key macro catalyst",
+          "summary": "The Federal Reserve's June 16–17 meeting carries a 98% probability of no rate change at 3.50–3.75%, per CME FedWatch. Markets are focused instead on new Fed Chair Kevin Warsh's first economic projections and dot plot — a dovish tilt could push Bitcoin toward $70K while a hawkish one risks a retest of $60K support.",
+          "source": "CryptoNews",
+          "url": "https://cryptonews.com/news/june-cpi-fomc-dots-reprice-bitcoin-2026/",
+          "why": "Warsh's debut signals the Fed's rate posture for the rest of 2026 — the dot plot lands Wednesday afternoon."
+        }
+      ]
+    }
+  ]
+}

@@ -6,6 +6,7 @@
 import { readFileSync, writeFileSync, readdirSync, mkdirSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { createHash } from "node:crypto";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const EDITIONS_DIR = join(ROOT, "editions");
@@ -129,16 +130,18 @@ function bitcoinCharts() {
 }
 
 function renderSection(section, lead) {
-  const items = (section.items || [])
-    .filter((it) => it !== lead)
-    .map(renderStory)
-    .join("\n");
+  const visible = (section.items || []).filter((it) => it !== lead);
+  const items = visible.map(renderStory).join("\n");
   const charts = /bitcoin/i.test(section.title) ? bitcoinCharts() : "";
   if (!items.trim() && !charts) return "";
+  // Match the column count to the number of stories so short sections fill the
+  // row instead of leaving empty column tracks (capped at 4 for readability).
+  const cols = Math.min(Math.max(visible.length, 1), 4);
+  const cls = cols === 1 ? "columns single" : "columns";
   return `<section class="beat">
       <h2 class="beat-label">${escapeHtml(section.title)}</h2>
       ${charts}
-      <div class="columns">
+      <div class="${cls}" style="column-count:${cols}">
 ${items}
       </div>
     </section>`;
@@ -193,7 +196,8 @@ function renderPage(edition, editions, isIndex) {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(SITE_TAGLINE)}" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css?v=${STYLE_HASH}" />
 </head>
 <body>
   <header class="masthead">
@@ -264,7 +268,7 @@ a { color: inherit; }
   display: block; text-align: center; text-decoration: none;
   font-family: var(--serif); font-weight: 700;
   font-size: clamp(40px, 9vw, 84px); line-height: 1; letter-spacing: -0.02em;
-  margin: 14px 0 8px;
+  margin: 14px 0 18px;
 }
 .tagline {
   text-align: center; margin: 0; color: var(--muted);
@@ -281,44 +285,53 @@ a { color: inherit; }
 }
 
 /* Lead story */
-.lead { padding: 30px 0 26px; border-bottom: 3px solid var(--line-strong); text-align: center; }
+.lead {
+  padding: 28px 0 26px; text-align: center;
+  border-top: 4px double var(--line-strong); border-bottom: 4px double var(--line-strong);
+}
 .kicker {
-  margin: 0 0 10px; color: var(--accent);
+  margin: 0 0 12px; color: var(--accent);
   font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
 }
 .lead-hed {
   font-family: var(--serif); font-weight: 700;
-  font-size: clamp(30px, 5.2vw, 52px); line-height: 1.04; letter-spacing: -0.015em;
-  margin: 0 auto; max-width: 18ch;
+  font-size: clamp(26px, 4.6vw, 50px); line-height: 1.05; letter-spacing: -0.015em;
+  margin: 0 auto; max-width: 20ch;
 }
 .lead-hed .hed-a { text-decoration: none; }
 .lead-hed .hed-a:hover { text-decoration: underline; text-decoration-thickness: 2px; }
 .lead-dek {
-  font-family: var(--serif); font-size: clamp(18px, 2.3vw, 22px); line-height: 1.45;
-  margin: 16px auto 0; max-width: 56ch; color: #2a2c31;
+  font-family: var(--serif); font-size: clamp(16px, 1.9vw, 21px); line-height: 1.45;
+  margin: 14px auto 0; max-width: 58ch; color: #2a2c31;
 }
 
 /* Sections */
-.beat { padding: 30px 0; border-bottom: 1px solid var(--line); }
+.beat { padding: 28px 0; border-bottom: 1px solid var(--line); }
 .beat-label {
-  font-family: var(--serif); font-weight: 700; font-size: 22px; letter-spacing: -0.01em;
-  margin: 0 0 18px; padding-bottom: 8px; border-bottom: 2px solid var(--line-strong);
+  font-family: var(--sans); font-weight: 700; font-size: 13px;
+  letter-spacing: 0.18em; text-transform: uppercase; text-align: center;
+  margin: 0 0 20px; padding-bottom: 12px; border-bottom: 2px solid var(--line-strong);
 }
-.columns { columns: 3 280px; column-gap: 38px; }
+.columns { column-count: 4; column-gap: 34px; column-rule: 1px solid var(--line); }
+.columns.single { column-count: 1; }
 
 .story {
   break-inside: avoid; -webkit-column-break-inside: avoid;
-  padding-top: 16px; margin-bottom: 26px; border-top: 1px solid var(--line);
+  padding-top: 18px; margin-bottom: 30px; border-top: 1px solid var(--line);
 }
-.hed { font-family: var(--serif); font-weight: 700; font-size: 20px; line-height: 1.2; margin: 0 0 8px; }
+.story:first-child { padding-top: 0; border-top: 0; }
+.hed { font-family: var(--serif); font-weight: 700; font-size: 19px; line-height: 1.18; margin: 0 0 10px; }
 .hed .hed-a { text-decoration: none; }
 .hed .hed-a:hover { color: var(--accent); }
-.dek { margin: 0 0 10px; font-size: 14.5px; color: #2c2f35; }
-.why {
-  margin: 0 0 10px; font-size: 13px; line-height: 1.5; color: var(--muted);
-  border-left: 2px solid var(--accent); padding-left: 11px;
+.dek {
+  margin: 0 0 12px; font-size: 14.5px; color: #2c2f35;
+  text-align: justify; hyphens: auto; -webkit-hyphens: auto;
 }
-.why span { color: var(--accent); font-weight: 700; }
+.why {
+  margin: 16px 0 14px; font-size: 13px; line-height: 1.6; color: var(--muted);
+  border-left: 2px solid var(--accent); padding: 3px 0 3px 13px;
+}
+.why span { color: var(--accent); font-weight: 700; display: inline-block; margin-bottom: 1px; }
 .byline { margin: 0; }
 .src {
   font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600;
@@ -348,10 +361,44 @@ footer { padding: 30px 0 70px; }
 .colophon { margin: 18px 0 0; font-size: 12px; color: var(--faint); }
 .colophon code { font-family: ui-monospace, Menlo, Consolas, monospace; background: #efeee9; padding: 1px 5px; border-radius: 4px; }
 
+/* Desktop: lead becomes a full-width, left-aligned banner — wider and shorter. */
+@media (min-width: 721px) {
+  .lead { text-align: left; padding: 24px 0 22px; }
+  .lead-hed { font-size: clamp(25px, 2.7vw, 33px); line-height: 1.1; max-width: none; margin: 0; }
+  .lead-dek {
+    text-align: justify; hyphens: auto; -webkit-hyphens: auto; max-width: none; margin: 14px 0 0;
+    font-size: clamp(15px, 1.25vw, 17px);
+    column-count: 2; column-gap: 38px; column-rule: 1px solid var(--line);
+  }
+  .kicker { margin-bottom: 10px; }
+  /* A lone story (e.g. its section's other item became the page lead) becomes a
+     full-width feature: headline spans, body flows in two columns to fill the row. */
+  .columns.single .hed { font-size: 21px; }
+  .columns.single .dek { column-count: 2; column-gap: 38px; column-rule: 1px solid var(--line); }
+  .columns.single .why { max-width: 64ch; }
+}
+
 @media (max-width: 720px) {
   .dateline { font-size: 10px; }
   .charts { grid-template-columns: 1fr; }
+  .columns { column-rule: none; column-count: 1 !important; }
+  .lead { padding: 22px 0 20px; }
+  .lead-hed { font-size: clamp(23px, 6.4vw, 30px); max-width: none; }
+  .lead-dek { font-size: 16px; margin-top: 12px; }
+  .dek { text-align: left; }
 }
+`;
+
+// Short content hash of the CSS, appended to the stylesheet URL so browsers and
+// the GitHub Pages CDN fetch the new file whenever the styles change.
+const STYLE_HASH = createHash("sha1").update(STYLE).digest("hex").slice(0, 8);
+
+// Favicon — a "loop" target mark in the masthead red on dark ink. Crisp at any size.
+const FAVICON = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#16181d"/>
+  <circle cx="32" cy="32" r="17" fill="none" stroke="#c0151d" stroke-width="6"/>
+  <circle cx="32" cy="32" r="6" fill="#faf9f6"/>
+</svg>
 `;
 
 // ---------- main ----------
@@ -360,12 +407,13 @@ function build() {
   const editions = loadEditions();
   mkdirSync(OUT_DIR, { recursive: true });
   writeFileSync(join(OUT_DIR, "style.css"), STYLE);
+  writeFileSync(join(OUT_DIR, "favicon.svg"), FAVICON);
   writeFileSync(join(OUT_DIR, ".nojekyll"), "");
 
   if (editions.length === 0) {
     writeFileSync(
       join(OUT_DIR, "index.html"),
-      `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${SITE_TITLE}</title><link rel="stylesheet" href="style.css"></head><body><header class="masthead"><div class="wrap"><span class="nameplate">${SITE_TITLE}</span><p class="tagline">No editions yet — run the daily loop.</p></div></header></body></html>`,
+      `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${SITE_TITLE}</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"></head><body><header class="masthead"><div class="wrap"><span class="nameplate">${SITE_TITLE}</span><p class="tagline">No editions yet — run the daily loop.</p></div></header></body></html>`,
     );
     console.log("No editions found — wrote placeholder index.");
     return;

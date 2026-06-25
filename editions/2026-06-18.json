@@ -1,0 +1,71 @@
+{
+  "date": "2026-06-18",
+  "intro": "Warsh's hawkish FOMC debut wiped rate-cut tailwinds and sent BTC below $63k; Gemini CLI died this morning amid an open-source backlash; Claude Design ships its biggest update yet. AI Research beat quiet today — no new releases since last week's Fable 5 coverage.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Claude Design overhauled: design system imports, token-burn fix, and bidirectional Claude Code handoff",
+          "summary": "Anthropic shipped a major rebuild of Claude Design on June 17, adding the ability to import design systems from a GitHub repo, design files, or raw uploads — Claude then builds against those components and auto-corrects deviations before output. The update resolves the token-burn problem that burned through a Pro allowance in 25 minutes during the April launch, and closes a full design-to-code round-trip via a new /design command in Claude Code.",
+          "source": "Claude (Anthropic)",
+          "url": "https://claude.com/blog/claude-design-stays-on-brand-for-daily-work",
+          "why": "Design-to-code teams can now enforce brand systems end-to-end without leaving the Anthropic toolchain; admin controls let orgs lock down a single approved design standard."
+        },
+        {
+          "headline": "Claude Code v1.11 patches WSL2 scrolling, Vim undo, and mid-stream connection drops",
+          "summary": "The June 17 Claude Code release fixes mouse-wheel scrolling in WSL2 under Windows Terminal and VS Code, restores Vim-mode undo to step through commands one at a time instead of merging them, and prevents mid-stream disconnects from stranding the spinner at 'running tool'. Plugin loading performance, remote session task states, and subagent viewing were also improved.",
+          "source": "Anthropic (Claude Code changelog)",
+          "url": "https://code.claude.com/docs/en/changelog",
+          "why": "WSL2 scrolling and Vim undo were the top-reported usability blockers from Windows and keyboard-driven users."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Gemini CLI is dead as of today; developers blast Google over open-source bait-and-switch",
+          "summary": "Google terminated Gemini CLI and Gemini Code Assist for all free, Pro, and Ultra users on June 18, directing them to Antigravity CLI — a closed-source replacement. Critics note Google accepted 6,000+ community pull requests over the tool's life then restricted its future to paying enterprise customers; early Antigravity users also report its compute cap is far tighter than Gemini CLI's 1,000 daily requests, with some exhausting it in two requests.",
+          "source": "Google Developers Blog",
+          "url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+          "why": "Any solo developer or small team running Gemini CLI lost access this morning; Standard and Enterprise licensees are unaffected but should test the new tooling."
+        },
+        {
+          "headline": "Google AI Studio adds native Android app building via Gemini 3.5 Flash",
+          "summary": "Starting June 17, developers can build native Android apps directly in AI Studio's Build tab using Gemini 3.5 Flash, without switching to Android Studio. The feature scaffolds, iterates, and debugs Android Kotlin projects from a single prompt interface using Gemini's agentic coding capabilities.",
+          "source": "Google AI for Developers",
+          "url": "https://ai.google.dev/gemini-api/docs/changelog",
+          "why": "Lowers the Android development barrier for web and AI-first teams that have traditionally avoided the Android Studio toolchain."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Warsh's hawkish FOMC debut withholds dot, majority project 2026 rate hike — BTC falls to $63k",
+          "summary": "The Fed held rates at 3.50–3.75% on June 17 but issued its most hawkish dot plot in two years: nine of eighteen officials now project at least one hike before year-end, while Chair Warsh declined to submit his own dot and stripped forward-guidance language from the statement entirely. Bitcoin fell from $65,800 to near $63,000 in the hours after the announcement; CME FedWatch now prices a 61% chance of an October hike.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/06/17/fed-interest-rate-decision-june-2026.html",
+          "why": "Warsh's deliberate ambiguity removes the 'rates-going-lower' backstop that underpinned BTC's 2025–26 rally; the October meeting is now the key near-term catalyst for direction."
+        },
+        {
+          "headline": "On-chain bottom signal: long-term holders absorbed 125,000 BTC in June — one of the cycle's largest accumulation months",
+          "summary": "On-chain data published June 17 shows wallets holding BTC for more than 155 days absorbed roughly 125,000 coins in June — a historically significant accumulation rate that has coincided with cycle lows in prior bear phases. Bitcoin is currently sitting approximately 50% below its October all-time high.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/06/17/live-markets-a-bitcoin-bottom-signal-flashed-as-holders-absorbed-125-000-btc-in-june",
+          "why": "Long-term holder accumulation at this scale has historically preceded multi-month recoveries, though the newly hawkish Fed complicates the timing."
+        },
+        {
+          "headline": "Kraken launches CFTC-regulated bitcoin perpetual futures for US traders via Bitnomial",
+          "summary": "Kraken enabled perpetual futures trading for eligible US clients through Bitnomial — a CFTC-licensed designated contract market it acquired earlier this year — making it the first major exchange to bring regulated crypto perps onshore. Nine assets are covered at launch including BTC and ETH; perpetuals globally generated over $60 trillion in volume in 2025.",
+          "source": "Kraken Blog",
+          "url": "https://blog.kraken.com/product/kraken-derivatives/announcing-cftc-regulated-us-perps",
+          "why": "US traders can now access the world's highest-volume crypto derivative without routing through offshore venues — a structural market milestone that follows the CFTC's May framework."
+        }
+      ]
+    }
+  ]
+}

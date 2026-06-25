@@ -1,0 +1,104 @@
+{
+  "date": "2026-06-22",
+  "intro": "The Fable 5 standoff sharpens: NSA testimony disclosed a classified-systems breach, raising the bar for Anthropic's most capable model to return.",
+  "sections": [
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "NSA Director's testimony that Mythos 5 breached classified systems in hours upends Fable 5 restoration talks",
+          "summary": "NSA Director Gen. Joshua Rudd told Congress on June 20 that Mythos 5 'autonomously breached nearly all classified systems in hours' during a government demonstration — significantly escalating the security concerns beyond the original jailbreak dispute. Fable 5 briefly reappeared in the Claude Android app's model selector on June 21, but Anthropic confirmed it was a UI artifact; the model remains offline globally, now 10 days after suspension. Trump told G7 reporters the talks are 'going fine' while diplomatic sources say allies have proposed a 'trusted partner' exemption framework with Commerce Secretary Lutnick.",
+          "source": "TechTimes",
+          "url": "https://www.techtimes.com/articles/318783/20260621/claude-fable-5-resurfaces-android-app-nsa-breach-testimony-reshapes-ban.htm",
+          "why": "What looked like a days-long technical hold has become a weeks-long geopolitical negotiation over whether the most capable AI model ever shipped can be made available at all."
+        },
+        {
+          "headline": "Amodei and DeepMind's Hassabis call for US-led AI coalition at G7 as Anthropic-Trump deal takes shape",
+          "summary": "Anthropic CEO Dario Amodei and Google DeepMind CEO Demis Hassabis jointly called on G7 governments to build a US-led AI coalition at the Evian-les-Bains summit. Separately, Globe and Mail reporting indicates Anthropic technical staff met Commerce Department officials in Washington this week to negotiate a solution; the most concrete proposal on the table is identity verification for international users, with a rollout starting July 8.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/06/17/anthropic-amodei-google-hassabis-us-ai-coalition-g7.html",
+          "why": "The joint call for a coalition frames AI export policy as an allied-nation issue rather than a pure US-China competition, potentially opening a path for Fable 5 restoration to G7 partners."
+        },
+        {
+          "headline": "Moonshot AI open-sources Kimi K2.7 Code — 1T-parameter MoE with 30% fewer reasoning tokens",
+          "summary": "Moonshot AI released Kimi K2.7 Code on June 12 under a Modified MIT license, putting weights on Hugging Face and offering API access at $0.95/$4.00 per million tokens. The 1-trillion-parameter MoE model activates 32B parameters per token, supports 256K context, and claims 30% lower thinking-token consumption versus K2.6 with significant gains across Kimi Code Bench v2 (+21.8%), Program Bench (+11.0%), and MLS Bench Lite (+31.5%).",
+          "source": "DevOps.com",
+          "url": "https://devops.com/moonshot-ais-kimi-k2-7-code-targets-token-efficiency-in-agentic-coding/",
+          "why": "With Fable 5 offline and GPT-5.6 not yet shipped, Kimi K2.7 Code is one of the most capable open-weight coding models currently available for agentic workflows."
+        }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "GitHub Copilot Desktop App reaches general availability on Win, Mac, and Linux",
+          "summary": "GitHub made the Copilot Desktop App generally available on June 17, giving developers a standalone client — separate from any IDE — for launching, supervising, and shipping AI-agent coding sessions tied to GitHub issues, branches, and pull requests. Agent Merge, the app's flagship feature, monitors CI checks, tracks required reviewers, addresses failing builds, and drives a PR through to merge; developers configure which steps Copilot is allowed to perform.",
+          "source": "Help Net Security",
+          "url": "https://www.helpnetsecurity.com/2026/06/08/github-copilot-app-ai-coding-agents/",
+          "why": "Agent Merge is the first generally available tool from a major vendor that closes the loop from issue to merged PR without requiring the developer to stay in the IDE."
+        },
+        {
+          "headline": "Anthropic's enterprise pipeline holds despite Fable 5 ban, Claude Code cited as key growth driver",
+          "summary": "Despite the suspension of its most capable models, Anthropic's commercial momentum has not stalled: its enterprise pipeline held and Claude Code — the terminal-based coding agent — is widely cited as the company's primary growth driver heading into its confidential IPO filing. Anthropic confirmed that Claude Opus 4.8, Sonnet 4.6, and Haiku 4.5 remain fully available to all API and platform customers while the Fable and Mythos lines are suspended.",
+          "source": "TechWire Asia",
+          "url": "https://techwireasia.com/2026/06/anthropic-claude-enterprise-ai-openai-google/",
+          "why": "Signals that developer adoption of Claude Code has created enough stickiness that a frontier-model outage does not immediately trigger churn."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub Code Quality sets July 20 general availability date — $10 per active committer per month",
+          "summary": "GitHub announced on June 16 that Code Quality, used by more than 10,000 enterprises in public preview, will move to general availability on July 20 as a purchasable product. Pricing is $10 per active committer per month, with additional usage-based costs for AI-powered features including Copilot code review, AI-assisted detection, and Copilot Autofix. Organization-level enablement controls shipped alongside the announcement.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-06-16-github-code-quality-generally-available-july-20-2026/",
+          "why": "Code Quality's AI-powered Autofix turns what was a reporting tool into an automated remediation product — a new cost center teams should plan for before July 20."
+        },
+        {
+          "headline": "DirectX Dump Files enter public preview — captures full GPU crash state for offline PIX analysis",
+          "summary": "Microsoft released DirectX Dump Files to public preview on June 18. The new .dxdmp format records a snapshot of GPU execution at crash time — hardware state, driver data, Direct3D runtime context, and application data — packaged into a file PIX can analyze without requiring a live repro. Retail support targeting a Windows release is expected Fall 2026.",
+          "source": "DirectX Developer Blog",
+          "url": "https://devblogs.microsoft.com/directx/dx-dump-files-preview/",
+          "why": "GPU crashes are notoriously difficult to reproduce reliably; crash dumps that include D3D state cut debugging cycles dramatically for game and graphics-application teams."
+        },
+        {
+          "headline": ".NET and .NET Framework June 2026 servicing updates ship",
+          "summary": "Microsoft released combined June 2026 servicing updates for .NET and .NET Framework on June 9, refreshing all supported .NET channels with the latest patches. The update follows the standard monthly cadence and covers security fixes, reliability improvements, and runtime updates across supported versions.",
+          "source": ".NET Blog",
+          "url": "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-june-2026-servicing-updates/",
+          "why": "Routine but worth applying promptly given the security-fix component included in this cycle."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "BTC stabilizes near $64K after record $6.35B in spot ETF outflows over 30 days",
+          "summary": "Bitcoin traded around $64,200 on June 21 — recovering from a June 3 intraday low below $62,000 — as crypto firmed following Friday's sell-off. US spot Bitcoin ETFs have recorded a record $6.35 billion in net outflows over the prior 30 days, driven by higher Treasury yields, renewed US dollar strength, and reduced Federal Reserve rate-cut expectations. The Fear and Greed Index sits at 23 (Extreme Fear).",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/06/04/bitcoin-drops-below-usd62-000-as-usd1-5-billion-in-crypto-longs-get-wiped-out",
+          "why": "The recovery is tentative: with the Fear index at Extreme Fear and ETF redemptions still elevated, the next macro catalyst could push prices in either direction sharply."
+        },
+        {
+          "headline": "Bitcoin mining difficulty drops 10.09% — second-biggest decline of 2026",
+          "summary": "Bitcoin confirmed its second-largest downward difficulty adjustment of 2026 — a 10.09% drop from 138.96T to 124.93T at block 953,568 on June 18. A roughly 15% price slide over the preceding epoch squeezed miner margins; the epoch ran 15.6 days versus the 14-day target as hashrate went offline. The next adjustment, estimated for June 27, is currently projected to recover to approximately 130T.",
+          "source": "Crowdfund Insider",
+          "url": "https://www.crowdfundinsider.com/2026/06/285654-bitcoin-mining-difficulty-drops-sharply-as-hashrate-exits-amid-june-btc-price-weakness/",
+          "why": "A 10% difficulty drop is a miner-capitulation signal; historically these have marked mid-cycle price floors, though the scale of ETF outflows makes the current setup less clean than prior cycles."
+        },
+        {
+          "headline": "Bitcoin miners' AI pivot faces $50B near-term funding gap, VanEck finds",
+          "summary": "A VanEck report published June 16 found that publicly listed Bitcoin miners pivoting to AI and HPC data centers have delivered only about 25% of the capacity they have contracted to customers, and face a $50 billion near-term capital shortfall — with long-term needs potentially reaching $221 billion. IREN, Core Scientific, Riot Platforms, and Cipher Mining are among the firms shifting energy and compute away from pure mining after 2024 halving economics tightened.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/06/16/bitcoin-miners-ai-pivot-faces-usd50-billion-reality-check-says-vaneck",
+          "why": "The $50B gap means miners cannot simply pivot their power assets into AI revenue without significant external financing — testing whether the thesis holds up in practice."
+        }
+      ]
+    }
+  ]
+}

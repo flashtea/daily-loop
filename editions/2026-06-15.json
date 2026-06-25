@@ -1,0 +1,89 @@
+{
+  "date": "2026-06-15",
+  "intro": "As Fable 5 enters its fourth day offline, reporting reveals Amazon CEO Andy Jassy personally called the White House the night before the export ban dropped — spotlighting a new kind of AI vendor conflict. Bitcoin holds $64K ahead of Wednesday's Fed decision.",
+  "sections": [
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Amazon CEO Andy Jassy called the White House the night before the Fable 5 export ban — models enter day four offline",
+          "summary": "Amazon security researchers identified what they described as a dangerous exploit in Claude Fable 5 and briefed CEO Andy Jassy, who then personally contacted Treasury Secretary Scott Bessent and other senior White House officials on the evening of June 11 — directly preceding the Commerce Department's export-control directive to Anthropic the following afternoon. Both Fable 5 and Mythos 5 remain suspended globally. Prediction markets give 78% odds US-only access returns by July 1. The timing is especially damaging for Anthropic, which filed an S-1 confidentially for an October listing at a $965B valuation on June 1.",
+          "source": "TechTimes",
+          "url": "https://www.techtimes.com/articles/318350/20260614/amazon-triggered-claude-fable-5-shutdown-investor-cloud-host-now-regulator.htm",
+          "why": "Amazon is simultaneously Anthropic's largest investor, primary cloud infrastructure, and now the entity that triggered a government shutdown of its most capable deployed model — a structural conflict enterprises should factor into AI vendor strategy."
+        },
+        {
+          "headline": "Anthropic's $965B IPO filing under pressure; pre-IPO shares fell 3.7% after export directive",
+          "summary": "Anthropic's confidentially-filed S-1 targets an October IPO at a $965 billion valuation, underpinned by $47 billion in annualized revenue run-rate reached in May. The Fable 5 export directive triggered a 3.7% drop in pre-IPO perpetual contracts on Hyperliquid, with investors questioning whether government export controls on frontier models represent a durable risk to the company's global addressable market.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/06/13/anthropic-s-pre-ipo-shares-fall-as-us-government-shuts-down-its-most-powerful-ai-model",
+          "why": "Sets a precedent that frontier AI model access is subject to regulatory risk — material for any investment thesis on AI lab valuations."
+        }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "JetBrains releases Koog 1.0: stable AI agent framework for Kotlin and Java with a 1-year breaking-change guarantee",
+          "summary": "Koog 1.0 ships a stable API (no breaking changes pledged for at least one year), type-safe workflow DSLs, persistence and recovery for long-running agents, multiplatform observability, and native integrations with Spring AI and Ktor. The open-source framework targets JVM backend services, Android, and in-browser environments via Kotlin Multiplatform.",
+          "source": "JetBrains AI Blog",
+          "url": "https://blog.jetbrains.com/ai/2026/05/koog-1-0-is-out-stable-core-better-interop-and-multiplatform-observability/",
+          "why": "The first JVM-native AI agent framework with enterprise stability guarantees — relevant for Java and Android teams evaluating where to build production agents."
+        },
+        {
+          "headline": "Google's WebMCP standard enables browser-native AI agent tool use; Chrome 149 origin trial opens",
+          "summary": "WebMCP is a proposed open web standard that exposes JavaScript functions, HTML forms, and web controls as structured tools that AI agents can discover and invoke directly, replacing fragile screenshot-based automation. Google opened a Chrome 149 origin trial and enabled Gemini-in-Chrome support; the API is designed to be model-agnostic.",
+          "source": "Chrome for Developers",
+          "url": "https://developer.chrome.com/blog/chrome-at-io26",
+          "why": "If adopted broadly, WebMCP could make reliable browser automation a first-class AI agent primitive — reducing dependence on brittle DOM scraping."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "npm v12 preview: install scripts off by default, git dependencies blocked — test your pipelines now",
+          "summary": "GitHub's npm team announced upcoming breaking changes for npm v12 (targeting July 2026) and made them available behind warnings in npm 11.17.0. Key changes: allowScripts defaults to false, blocking preinstall/postinstall scripts from any dependency without explicit opt-in; and --allow-git defaults to none, blocking git-URL dependencies. Teams can test both flags today in npm 11.17.0.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-for-npm-v12/",
+          "why": "Projects relying on package install scripts — common in AI SDK chains, native addons, and build tooling — need to audit and add explicit allow-lists before npm v12 ships."
+        },
+        {
+          "headline": "Xcode 27 announced: Apple-silicon only, 30% smaller, iCloud settings sync and per-project themes",
+          "summary": "Announced at WWDC 2026 (June 8–9), Xcode 27 drops Intel support entirely, reducing the install footprint by roughly 30%. New developer-experience features include iCloud-synced settings, per-project color themes, a customizable toolbar, and a new Device Hub that replaces the Simulator interface. General availability follows macOS Tahoe's fall release.",
+          "source": "MacRumors",
+          "url": "https://www.macrumors.com/2026/06/09/apple-outlines-major-ai-and-developer-tool-updates/",
+          "why": "Intel Mac developers need a migration path before Xcode 26 loses support — and Apple-silicon-only tooling simplifies the build matrix for everyone else."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin holds near $64K as traders price 98% odds of FOMC rate hold on June 16–17",
+          "summary": "BTC is trading around $63,800–$64,200 ahead of Wednesday's Federal Reserve decision, with CME FedWatch showing a 98.3% probability of rates holding at 3.50%–3.75%. The market focus has shifted to Chair Powell's post-decision press conference and any shift in the dot-plot projections, as BTC's tighter correlation with risk assets means monetary policy signals now function as near-term price catalysts.",
+          "source": "crypto.news",
+          "url": "https://crypto.news/bitcoin-traders-brace-for-federal-reserve-decision-as-hold-odds-hit-98/",
+          "why": "The FOMC decision and Powell's tone will likely set the directional frame for BTC through the end of June."
+        },
+        {
+          "headline": "Standard Chartered declares Bitcoin cycle low in at $59K; maintains $100K year-end target",
+          "summary": "Geoffrey Kendrick, Standard Chartered's global digital assets head, called the Bitcoin bear phase over after BTC's dip below $60K, framing the selloff as a 'perfect storm' of ETF outflows, Strategy's bitcoin sale, and oil-driven macro pressure rather than structural deterioration. The bank's $100K year-end target — cut from $300K in February and revised down again in April — remains unchanged.",
+          "source": "CryptoBriefing",
+          "url": "https://cryptobriefing.com/standard-chartered-bitcoin-bottom-59k/"
+        },
+        {
+          "headline": "Botanix Bitcoin L2 winds down July 9 after four years; TVL was $119K at announcement",
+          "summary": "Polychain-backed Botanix — a tokenless EVM layer-2 built on Bitcoin that launched mainnet in 2025 — announced it is shutting down after failing to generate sustainable fee revenue. At announcement, TVL stood at just $119,500. The post-mortem cited that most users treated Botanix as a quiet yield-earning vault rather than a high-frequency transaction layer, making fee income insufficient to cover operating costs. Users must withdraw all assets by July 9.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/06/10/a-bitcoin-defi-project-just-shut-down-with-a-brutal-post-mortem-users-just-didn-t-care",
+          "why": "A data point against the Bitcoin DeFi thesis: unless L2 activity shifts from yield farming to genuine high-frequency use, fee revenue cannot sustain these networks."
+        }
+      ]
+    }
+  ]
+}
