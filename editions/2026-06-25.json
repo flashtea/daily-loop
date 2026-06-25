@@ -1,0 +1,83 @@
+{
+  "date": "2026-06-25",
+  "intro": "Anthropic ships Claude as a shared Slack teammate; TypeScript 7.0's Go-native compiler lands as a release candidate; bitcoin slides on its sixth straight week of ETF outflows.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Anthropic launches Claude Tag, making @Claude a shared AI teammate inside Slack channels",
+          "summary": "Enterprise and Team customers can tag @Claude in any Slack channel to delegate tasks, query connected codebases and tools, and get async updates — with channel-level spend limits and audit logs for admins. Anthropic says 65% of its own product team's code is now written by their internal version of the integration.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/",
+          "why": "Shifts Claude from a one-on-one tool to a shared team resource — multiplayer AI at the org layer, with the audit trail enterprises require."
+        },
+        {
+          "headline": "GitHub Copilot ships a standalone desktop app for agentic coding workflows",
+          "summary": "GitHub's Copilot app reached general availability on June 17, giving developers a dedicated desktop home for multi-step agent sessions — outside the IDE. It exposes sandbox environments, multi-turn planning, and the same agent runtime as the Copilot extension, with support for MCP integrations.",
+          "source": "The GitHub Blog",
+          "url": "https://github.blog/changelog/2026-06-17-github-copilot-app-generally-available/",
+          "why": "Signals GitHub's push to own agent-first coding beyond IDE extensions — a direct answer to Claude Code and Cursor's terminal-native workflows."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "xAI launches Grok Imagine Video 1.5 to GA, tops the Image-to-Video Arena at 86% below Sora 2's price",
+          "summary": "Grok Imagine Video 1.5 went generally available on June 16 across the API, grok.com, and iOS/Android, scoring first on the Image-to-Video Arena leaderboard (+52 Elo over v1.0). It generates native synchronized audio in the same pass and produces 6-second 720p clips in ~25 seconds. At $4.20/min versus Sora 2 Pro's $30/min, the pricing gap is substantial.",
+          "source": "xAI",
+          "url": "https://x.ai/news/grok-imagine-video-1-5",
+          "why": "The largest single-step price compression in AI video generation — directly challenges OpenAI and Google Veo on cost while claiming top benchmark position."
+        },
+        {
+          "headline": "Google slips Gemini 3.5 Pro to July after missing the I/O promise",
+          "summary": "Sundar Pichai told the Google I/O audience on May 19 to 'give us until next month' for Gemini 3.5 Pro; the model is now in limited Vertex AI preview only, with general availability pushed to July. Gemini 3.5 Flash remains the sole GA member of the 3.5 family.",
+          "source": "CryptoBriefing",
+          "url": "https://cryptobriefing.com/google-delays-gemini-35-pro-launch-to-july-2026/",
+          "why": "Keeps Google one step behind on general-purpose frontier tasks for another month while developers already have Opus 4.8 and GPT-5.5."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "TypeScript 7.0 RC ships with a Go-native compiler delivering ~10× faster builds",
+          "summary": "Microsoft published the TypeScript 7.0 Release Candidate on June 18. The compiler is a port of the TypeScript codebase to Go — not a rewrite — so type-checking semantics are identical, but teams at Figma, Vercel, Linear, Notion and others report build times dropping by a majority. Stable GA is targeted roughly one month out.",
+          "source": "Microsoft TypeScript Blog",
+          "url": "https://devblogs.microsoft.com/typescript/announcing-typescript-7-0-rc/",
+          "why": "For any large TypeScript monorepo, a 10× type-check speedup is the biggest productivity improvement the language has offered in years."
+        },
+        {
+          "headline": "GitHub Copilot SDK hits GA across 6 languages with MCP and BYOK support",
+          "summary": "The Copilot SDK reached general availability on June 2 in Node/TypeScript, Python, Go, .NET, Rust, and Java, exposing the same agent runtime — planning, tool invocation, file edits, streaming — that powers the Copilot app. Developers can plug in their own LLM keys via BYOK and wire up any MCP server.",
+          "source": "The GitHub Blog",
+          "url": "https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/",
+          "why": "Lets teams embed Copilot's agentic engine directly into internal tools and pipelines without building their own orchestration layer."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin slides toward $60K as spot ETFs log sixth consecutive week of outflows totalling $5.94B",
+          "summary": "BTC traded as low as $60,669 on June 24, down more than 3% on the day, after confirming a bear flag breakdown on the daily chart. Spot Bitcoin ETFs have shed $5.94 billion over six straight weeks of net outflows — the largest cumulative drawdown since spot ETF approval — though June 23 saw a brief $39.2M inflow led by ARKB, too small to break the trend.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/06/24/live-markets-bitcoin-could-drop-to-usd59-000-in-the-short-term-as-liquidaity-dries-up",
+          "why": "Six weeks of institutional selling erases the 'ETF flows equal permanent bid' narrative that drove May's rally to $77K."
+        },
+        {
+          "headline": "CLARITY Act reaches Senate floor calendar; August recess is now the hard deadline",
+          "summary": "The Digital Asset Market Clarity Act — which would give the CFTC exclusive jurisdiction over digital commodity spot markets and resolve the SEC/CFTC turf war — was placed on the Senate Legislative Calendar on June 1, making it eligible for a full floor vote. Senate staff say it must clear the chamber before the August recess to have any realistic shot at becoming law this year; it still needs 60 votes and reconciliation with the House version.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/news-analysis/2026/06/02/clarity-act-survival-depends-on-the-u-s-senate-getting-a-lot-of-non-crypto-work-done",
+          "why": "The first comprehensive US crypto market structure law in years — passage would give Bitcoin spot markets a clear regulatory framework for the first time."
+        }
+      ]
+    }
+  ]
+}
