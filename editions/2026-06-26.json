@@ -1,0 +1,104 @@
+{
+  "date": "2026-06-26",
+  "intro": "Alibaba's alleged mass extraction of Claude's capabilities dominates the day; Bitcoin slides to multi-year lows on hot inflation data.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Claude Code 2.1.191 Ships /rewind Command and Cuts Streaming CPU Use by 37%",
+          "summary": "Anthropic released Claude Code 2.1.191 on June 25, adding /rewind to restore conversation context after a /clear, fixing background agents that restarted after being stopped, and coalescing streaming updates for roughly 37% CPU savings during long sessions.",
+          "source": "Claude Code Changelog",
+          "url": "https://code.claude.com/docs/en/changelog",
+          "why": "The /rewind command directly addresses a common pain point in long agentic sessions; the CPU savings matter for laptop-based development."
+        },
+        {
+          "headline": "Engineering Roles Prove Most Resilient to AI Displacement, Now 55% of Big-Tech New Hires",
+          "summary": "A SignalFire analysis tracking millions of employees found that while total hiring at major tech firms dropped 25% versus 2019, engineering fell only 11% and now comprises 55% of all new hires — up from 46% in 2019. Early-stage startups collectively hired 7% more engineers in 2025 than in 2019.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/06/24/ai-was-supposed-to-kill-engineering-jobs-but-new-data-suggests-theyre-the-most-resilient/",
+          "why": "The data counters the displacement narrative: AI coding tools appear to be expanding engineering demand rather than shrinking it."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Anthropic Accuses Alibaba of Running 28.8 Million-Query Distillation Attack Against Claude",
+          "summary": "Anthropic told Senators Tim Scott and Elizabeth Warren that Alibaba's Qwen lab conducted 'the largest known distillation attack' on its models — using nearly 25,000 fraudulent accounts to extract Claude's software engineering and agentic reasoning capabilities via 28.8 million exchanges between April and June 2026. Anthropic called it a systematic effort to undermine U.S. AI export controls by a company already on the Pentagon's Chinese military companies list.",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-06-24/anthropic-accuses-alibaba-of-illicitly-accessing-its-ai-models",
+          "why": "The largest publicly documented model-distillation attack against a U.S. AI lab, raising urgent questions about whether API access controls can meaningfully protect frontier model capabilities."
+        },
+        {
+          "headline": "U.S. Export Directive Forces Anthropic to Suspend Fable 5 and Mythos 5 Globally — Day 14",
+          "summary": "The Trump administration's June 12 export-control directive ordered Anthropic to cut off all foreign nationals from Fable 5 and Mythos 5, citing a jailbreak vulnerability in Mythos's cybersecurity capabilities. The suspension remains in force as of June 25, affecting all API customers; Anthropic publicly disputes the scope of the order.",
+          "source": "Fortune",
+          "url": "https://fortune.com/2026/06/13/anthropic-disables-fable-mythos-export-controls-national-security-threat/",
+          "why": "The first time a U.S. government directive has forced a commercial AI lab to suspend its flagship models mid-deployment — and it's still live with no resolution timeline."
+        },
+        {
+          "headline": "OpenAI Expands GPT-5.5-Cyber to Vetted Defenders with Automated Vulnerability Patching",
+          "summary": "OpenAI moved GPT-5.5-Cyber into broader availability for vetted critical-infrastructure defenders on June 22-23, pairing it with an upgraded Codex Security plugin and the open-source 'Patch the Planet' initiative with Trail of Bits. The model scores 85.6% on CyberGym and 69.8% on SEC-bench Pro.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/06/22/openai-rolls-out-new-gpt-5point5-cyber-to-vetted-cybersecurity-teams.html",
+          "why": "Signals the field's shift toward specialized high-capability models — with dual-use implications now front-of-mind after the Fable/Mythos export ban."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub Copilot CLI's Redesigned Terminal Interface Reaches General Availability",
+          "summary": "The new tabbed terminal UI for GitHub Copilot CLI — previewed at Microsoft Build 2026 — is now GA, adding a tabbed layout with Session, Gists, Issues, and Pull Requests panels, guided in-session tool configuration, and theme-aware accessible components. Update with `copilot update`.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-06-23-copilot-cli-new-terminal-interface-is-generally-available/",
+          "why": "A GA-stable agentic CLI that surfaces repo issues and PRs inline is a meaningful upgrade for developers living in the terminal."
+        },
+        {
+          "headline": "Visual Studio 2026 June Update Ships with Deep AI Platform Integration",
+          "summary": "Microsoft released the Visual Studio 2026 June update on June 23, describing it as a 'new era' for the IDE with deep AI platform integration, improved performance, and stronger core fundamentals across the .NET and C++ toolchain.",
+          "source": "Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes",
+          "why": "The annual refresh for the IDE ecosystem used by millions of .NET and C++ developers now puts AI-assisted workflows front and center."
+        },
+        {
+          "headline": "GitHub Adds Break-Glass Credential Revocation for Enterprise Incident Response",
+          "summary": "GitHub now lets enterprise owners instantly revoke SSO authorizations, personal access tokens, and SSH keys for any user — or across an entire enterprise — as a rapid incident-response measure, with self-service bulk revocation also available for individual members.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/month/06-2026/",
+          "why": "A long-requested security control; previously revoking credentials enterprise-wide required tedious per-account steps."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin Drops to $58,000 — Lowest Since September 2024 — as PCE Inflation Prints 4.1%",
+          "summary": "U.S. PCE inflation rose 4.1% year-over-year in May — highest since April 2023 — triggering $1.26 billion in crypto liquidations on June 25. Bitcoin fell to a fresh 2026 low of $58,000 as the data extinguished hopes for Federal Reserve rate cuts under Chair Kevin Warsh, who held the benchmark rate at 3.5–3.75%.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/06/25/bitcoin-plunges-to-new-multi-year-low-of-usd58-000-but-a-short-squeeze-setup-emerges",
+          "why": "A PCE print double the Fed's 2% target, paired with a Fed chair who has already ruled out cuts, is the clearest macro driver for this leg down."
+        },
+        {
+          "headline": "Bitcoin Supply in Loss Hits All-Time High at 10.83 Million BTC",
+          "summary": "Bitcoin's slide below $59,000 pushed a record 10.83 million BTC into unrealized loss on June 25, exceeding peaks seen at the bottoms of the 2019, 2020, and 2022 bear markets. Long-term holders controlling 14.8 million BTC are largely holding firm despite having more than a third of their stack underwater.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/06/25/bitcoin-supply-in-loss-reaches-record-high-10-83-million-btc",
+          "why": "This metric has historically clustered near cycle bottoms; a new all-time high in supply-in-loss is a closely watched on-chain capitulation signal."
+        },
+        {
+          "headline": "Bitcoin ETF Assets Slide to $77.6B with $469M Single-Day Outflow, Back to Post-Election Lows",
+          "summary": "U.S. spot Bitcoin ETFs shed $469 million in net outflows on June 24, led by BlackRock's IBIT at $239 million in redemptions. Total AUM has fallen from an October 2025 peak of $169.5 billion to $77.6 billion — erasing 19 months of gains and returning to levels seen just after Trump's November 2024 election victory.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/06/10/bitcoin-etfs-are-no-bigger-today-than-when-trump-won-the-election",
+          "why": "$9 billion in cumulative net-inflow reversal from the peak signals institutional selling, not retail panic, as the dominant force in this drawdown."
+        }
+      ]
+    }
+  ]
+}
