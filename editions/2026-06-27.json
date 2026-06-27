@@ -1,0 +1,90 @@
+{
+  "date": "2026-06-27",
+  "intro": "OpenAI's June 26 double-move — retiring GPT-4.5 while gating GPT-5.6 to 20 government-approved firms — sets a new template for US frontier-AI policy on the same day Fable 5 enters its 15th suspended day.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "OpenAI Retires GPT-4.5 from ChatGPT, Closing the GPT-4 Chapter",
+          "summary": "GPT-4.5 was removed from ChatGPT on June 26 after a 30-day sunset — the last GPT-4-family model available in the product. Custom GPTs that used it automatically default to GPT-5.5; the API is unaffected for now but a separate deprecation timeline is expected later this year.",
+          "source": "TechRadar",
+          "url": "https://www.techradar.com/ai-platforms-assistants/chatgpt/openai-just-quietly-retired-the-last-of-the-gpt-4-models-and-it-feels-like-the-end-of-an-ai-era",
+          "why": "Any product or custom GPT that relied on GPT-4.5 behavior — tone, formatting, specific refusal patterns — should be re-validated against GPT-5.5 immediately."
+        },
+        {
+          "headline": "VS Code 1.126 Adds Multi-Agent Chat and Session-Level Cost Tracking",
+          "summary": "Released June 24, VS Code 1.126 lets developers run several Copilot conversations simultaneously within a single workspace session and see cumulative token costs per session rather than per turn. A unified model picker now consolidates context-size and reasoning-effort controls into one control.",
+          "source": "Visual Studio Code",
+          "url": "https://code.visualstudio.com/updates/v1_126",
+          "why": "Parallel agent chats against the same workspace is a meaningful upgrade for multi-step refactoring or research workflows; cost-per-session makes budgeting AI usage far more legible."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "OpenAI Releases GPT-5.6 Under US Government-Supervised Rollout — A First",
+          "summary": "OpenAI previewed GPT-5.6 on June 26 as three model variants — Sol, Terra, and Luna — but restricted access to roughly 20 companies whose participation was pre-cleared by the Office of the National Cyber Director and the Office of Science and Technology Policy. CEO Sam Altman told staff the government will approve access customer-by-customer; broader rollout is weeks away if the limited release proceeds smoothly.",
+          "source": "Axios",
+          "url": "https://www.axios.com/2026/06/26/openai-gpt-sol-terra-luna-trump",
+          "why": "The first time the US government has preemptively asked a lab to gate a model at launch — a new regulatory template that emerged directly from the Fable 5/Mythos 5 suspension saga."
+        },
+        {
+          "headline": "Claude Fable 5 and Mythos 5 Remain Suspended on Day 15 — No Restoration Timeline",
+          "summary": "Fifteen days after the Trump administration's June 12 export-control directive forced Anthropic to disable Fable 5 and Mythos 5 globally, both models remain offline. Anthropic confirmed on June 25 that zero Fable/Mythos traffic is being served; the company publicly disputes the directive's scope but is complying. July 8 and August 1 are the next key procedural dates.",
+          "source": "The New Stack",
+          "url": "https://thenewstack.io/fable-5-and-mythos-5-remain-suspended-the-ball-is-in-anthropics-court/",
+          "why": "The longer the suspension drags, the stronger the argument for formal regulatory frameworks over ad-hoc directives — and the wider the competitive window for Chinese open-weight models like GLM-5.2."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Node.js 26.4.0 Ships with Temporal API Enabled by Default",
+          "summary": "Node.js 26.4.0, released June 24, is the first minor release on the v26 current line to ship V8 14.6 with Temporal enabled by default — ending years of the modern date/time API living behind a flag. The release also adds Map/WeakMap upsert methods and removes several long-deprecated legacy APIs.",
+          "source": "Node.js Blog",
+          "url": "https://nodejs.org/en/blog/release/v26.4.0",
+          "why": "Temporal as a runtime default means new projects can drop date-fns or moment.js for most use cases; existing code using the legacy Date object in critical paths should be audited."
+        },
+        {
+          "headline": "MSVC Build Tools Preview June 2026 Fixes ICE in CTAD + Designated Initializers",
+          "summary": "Microsoft's June 2026 MSVC Build Tools Preview, targeting v14.52, ships compiler front-end fixes including an internal compiler error triggered by CTAD combined with designated initializers and local lambdas, a constexpr bug inside nested struct lambdas, and a new warning for overriding non-pure deprecated virtual functions.",
+          "source": "Microsoft C++ Blog",
+          "url": "https://devblogs.microsoft.com/cppblog/msvc-build-tools-preview-updates-june-2026/",
+          "why": "The CTAD + designated-initializer ICE has been a common stumbling block in projects migrating to C++23 patterns; this fix unblocks several modern codebases on Windows."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Deribit Settles $10.6B Quarterly Options Expiry — BTC Holds ~$60K, Max Pain at $72K Missed",
+          "summary": "Bitcoin's largest quarterly options expiry of 2026 settled June 27 on Deribit with roughly $10.6 billion notional. BTC locked near $60,000 at settlement, leaving approximately 80% of contracts — about $8.6 billion — expiring worthless. The max-pain level of $72,000 went untouched as sustained ETF outflows overrode the traditional gravitational pull of open-interest concentrations.",
+          "source": "NewsBTC",
+          "url": "https://www.newsbtc.com/news/deribit-settles-10-billion-june-quarterly-options-expiry/",
+          "why": "Max pain failing to act as a price magnet signals that institutional ETF-driven flows now dominate over derivatives-market dynamics — a structural shift in how BTC price finds direction near major expiries."
+        },
+        {
+          "headline": "Bitcoin Ends H1 2026 Down 32% — Crypto Market Cap Back to Pre-Trump Election Levels",
+          "summary": "Bitcoin closed the first half of 2026 roughly 32% lower year-to-date, with Ether down 47% and total crypto market capitalization retreating to approximately $2 trillion — erasing gains accumulated since Trump's November 2024 election victory. Cumulative spot ETF outflows stand at nearly $6 billion over six consecutive weeks of net redemptions.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/daybook-us/2026/06/26/with-crypto-ending-the-first-half-in-the-red-bitcoin-s-solace-is-it-beat-strategy",
+          "why": "The H1 reset reframes the ETF-approval narrative: institutional demand has not held as a structural floor; the next directional catalyst will likely be a Fed policy shift or a major macro surprise."
+        },
+        {
+          "headline": "Bitcoin Hashrate Down 23% From Peak as Miners Pivot to AI Compute",
+          "summary": "Bitcoin's network hashrate is 23% below its October 2025 all-time high, with June alone seeing a 12% decline as sub-$60,000 prices pushed higher-cost miners offline. Several large operators are reallocating capacity to AI and high-performance computing. A mining difficulty adjustment expected June 27 is projected to be near-flat, suggesting the hashrate that went offline has stabilized.",
+          "source": "The Block",
+          "url": "https://www.theblock.co/post/404702/bitcoin-mining-difficulty-drops-10-in-second-largest-negative-adjustment-of-2026",
+          "why": "Miners defecting to AI/HPC is a structural supply dynamic: fewer miners means lower security spend and lower difficulty, but it also removes marginal sellers from the market — a mixed signal for near-term price."
+        }
+      ]
+    }
+  ]
+}
