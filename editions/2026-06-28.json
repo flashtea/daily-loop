@@ -1,0 +1,69 @@
+{
+  "date": "2026-06-28",
+  "intro": "OpenAI's new model family debuts under an unprecedented government-gated rollout; Bitcoin logs its worst ETF-outflow month ever as the EU's MiCA clock ticks to Tuesday's hard deadline.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "GitHub Copilot for Jira reaches general availability",
+          "summary": "GitHub's coding agent now streams live progress updates directly into Jira issues and accepts follow-up instructions from the ticket's chat panel without switching to GitHub. GA adds model selection, Confluence context via MCP, custom agents, per-space guidance, and a faster setup flow over the March public preview.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-06-25-github-copilot-for-jira-is-now-generally-available/",
+          "why": "Closes the loop between issue creation and pull-request delivery — the coding agent now lives entirely inside the project-management tool."
+        },
+        {
+          "headline": "OpenCode surpasses 160K GitHub stars and 7.5 million monthly developers",
+          "summary": "The open-source, terminal-native coding agent from the SST/Anomaly team has become the most-adopted open-source AI coding agent, connecting to 75+ model providers through a single CLI with full LSP integration and multi-agent support.",
+          "source": "OpenCode",
+          "url": "https://github.com/anomalyco/opencode",
+          "why": "Model-agnostic, self-hosted, MIT-licensed — its growth signals a large segment of developers moving away from proprietary IDE-coupled tools."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "OpenAI previews GPT-5.6 Sol, Terra, and Luna under US government-restricted access",
+          "summary": "OpenAI launched a three-tier GPT-5.6 family on June 26 — Sol (flagship, 1.5M-token context, max-reasoning and agentic ultra modes), Terra (GPT-5.5 quality at half the price), and Luna (fast, low-cost) — restricting initial API access to roughly 20 government-approved companies. General availability is expected in coming weeks.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/previewing-gpt-5-6-sol/",
+          "why": "The first frontier model launch gated by US government approval; Sol's gains in biology and cybersecurity appear to be the reason for the restriction."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Node.js moves to one major release per year starting with Node 27",
+          "summary": "The Node.js project is dropping its two-major-versions-per-year cadence: starting with Node 27 in October 2026, one major version ships each year and every release becomes LTS, eliminating the odd/even distinction. Node 26.4.0, the last under the old schedule, shipped June 24.",
+          "source": "InfoQ",
+          "url": "https://www.infoq.com/news/2026/06/nodejs-release-changes/",
+          "why": "Simpler upgrade planning for teams in production — every Node version now carries multi-year support from day one."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin near $60K as June spot-ETF outflows hit a record $3.6 billion",
+          "summary": "U.S. spot Bitcoin ETFs posted $3.6 billion in net outflows through June 26, the largest monthly withdrawal since launch, driven by a PCE inflation print of 4.1% — a three-year high — that pushed rate-cut expectations to late 2026. Strategy (formerly MicroStrategy) made its first net BTC sale since December 2022 (32 coins), adding to sentiment pressure.",
+          "source": "Investing.com",
+          "url": "https://www.investing.com/analysis/bitcoin-falls-as-record-etf-outflows-and-strategy-sale-hit-sentiment-200681446",
+          "why": "Macro headwinds are now clearly outweighing the structural ETF-inflow tailwind that drove BTC's 2025 rally."
+        },
+        {
+          "headline": "MiCA enforcement begins Tuesday: most EU-registered crypto firms still unauthorized",
+          "summary": "The EU's MiCA transitional period expires July 1 with no extension, per ESMA. Of 3,167 previously registered VASPs, only 216 have obtained CASP authorization; the rest must cease serving EU clients immediately or face national-regulator enforcement.",
+          "source": "Kraken Blog",
+          "url": "https://blog.kraken.com/product/kraken-institutional/mica-enforcement-begins-july-1",
+          "why": "Effective in days for 450 million EU residents — the biggest structural reshaping of European crypto markets since stablecoin rules took effect."
+        }
+      ]
+    }
+  ]
+}
