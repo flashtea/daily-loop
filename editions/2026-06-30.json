@@ -1,0 +1,69 @@
+{
+  "date": "2026-06-30",
+  "intro": "MiCA enforcement makes good today: Binance suspends EU services from midnight as the transitional period expires. Strategy pivots from passive Bitcoin accumulator to active capital manager. AI Research & Models beat is quiet; the news this week was made in prior editions.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Copilot's first usage-based billing month closes: agentic workflows confirmed at 5–10x flat-rate costs",
+          "summary": "June 30 marks the end of GitHub Copilot's inaugural token-metered billing cycle, which replaced unlimited access on June 1. Developers running agentic sessions — code review, multi-file edits, parallel agent loops — are seeing confirmed monthly charges of $750–$3,000, versus the $39 Pro+ flat rate. The official community thread accumulated 400-plus comments and nearly 900 downvotes when the switch went live.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/05/30/what-a-joke-github-copilots-new-token-based-billing-spurs-consternation-among-devs/",
+          "why": "The first full monthly bill landing today gives teams real data to decide whether to cap Copilot usage, switch to OpenCode or Cursor, or absorb the higher cost."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Qualcomm closes $3.9B Modular acquisition, giving AI developers Mojo and MAX on Snapdragon",
+          "summary": "Qualcomm confirmed the close of its all-stock acquisition of Modular for $3.92 billion on June 26, gaining roughly 150 engineers, the Mojo programming language (a Python superset built for AI/ML performance), and the MAX graph compiler and inference engine. The MAX stack already runs cross-vendor across Nvidia, AMD, Intel, and Arm hardware; Qualcomm's goal is making its Snapdragon and Dragonfly data-center chips viable AI inference targets without needing CUDA.",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-06-24/qualcomm-confirms-buying-modular-to-help-ai-market-push",
+          "why": "First credible full-stack CUDA alternative with major chip-vendor backing; could meaningfully expand the non-Nvidia hardware surface for AI model deployment."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub Copilot for Jira reaches general availability with real-time agent progress streaming",
+          "summary": "GitHub made its Copilot coding agent integration for Jira generally available on June 25, following a March public preview. The GA release adds real-time progress streaming to Jira tickets — status updates appear in the issue as the agent works — plus model selection, Confluence context via MCP, custom agents, and follow-up instruction delivery from the Jira chat panel after the agent opens a draft pull request.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-06-25-github-copilot-for-jira-is-now-generally-available/",
+          "why": "Closes the loop between issue tracking and autonomous code generation in a single workflow, without leaving the project management tool."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Binance suspends EU services as MiCA enforcement arrives: world's largest exchange locked out of Europe",
+          "summary": "Effective July 1, Binance is halting new orders, deposits, sign-ups, and staking products for EU residents after failing to secure a CASP license under the EU's Markets in Crypto-Assets regulation. The exchange withdrew its Greek application on June 24 ahead of an expected rejection citing fit-and-proper concerns around co-founder Changpeng Zhao and historical AML penalties; it now plans to seek authorization in France. Existing user funds remain safe and withdrawable.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/policy/2026/06/26/binance-tells-eu-users-it-will-no-longer-provide-services-after-failing-to-secure-mica-license",
+          "why": "The world's largest crypto exchange by volume is removed from the European market on MiCA's first enforcement day — the most significant regulatory market exit in crypto since the GDPR era."
+        },
+        {
+          "headline": "Strategy unveils Digital Credit Capital Framework, authorizes up to $1.25B in Bitcoin sales",
+          "summary": "MicroStrategy (now Strategy) announced a 'Digital Credit Capital Framework' on June 29, departing from its passive accumulation model. The framework authorizes $2 billion in stock repurchases and a Bitcoin monetization program allowing up to $1.25 billion in BTC sales to fund preferred dividends and debt repurchases. The company still holds approximately 843,738 BTC; it made its first Bitcoin sale in company history in late May (32 BTC).",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-06-29/strategy-says-it-may-sell-up-to-1-25-billlion-of-bitcoin",
+          "why": "Strategy treating its ~$50B BTC stack as a flexible capital resource — not a one-way accumulation trade — marks a structural shift in the single largest corporate Bitcoin holder's posture."
+        },
+        {
+          "headline": "White House sets July 22 deadline for US Strategic Bitcoin Reserve architecture",
+          "summary": "White House Digital Assets Advisory Council executive director Bo Hines confirmed the Trump administration will release the design for a US Strategic Bitcoin Reserve before a July 22 inter-agency regulatory report deadline. The US currently holds roughly 328,000 BTC (~$20B) via law-enforcement seizures. The reserve design will determine whether the government actively acquires additional Bitcoin or simply retains existing holdings under a formal custody framework.",
+          "source": "CoinTelegraph",
+          "url": "https://cointelegraph.com/news/us-bitcoin-reserve-plans-continue-donald-trump-bo-hines",
+          "why": "July 22 is the first concrete policy gate that could make the US a systematic Bitcoin buyer — outcome will materially affect long-term supply dynamics and institutional positioning."
+        }
+      ]
+    }
+  ]
+}
