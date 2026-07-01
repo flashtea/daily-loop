@@ -1,0 +1,104 @@
+{
+  "date": "2026-07-01",
+  "intro": "MiCA's grandfathering period ends with no extension today: Binance and dozens of unlicensed exchanges are cut off from EU customers, while Coinbase, Kraken and a dozen other licensed platforms inherit the volume. Anthropic shipped two products in one day yesterday — Claude Sonnet 5 as its new default agentic model, and Claude Science, its first dedicated research/pharma workbench.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Claude Sonnet 5 goes GA in GitHub Copilot on day one",
+          "summary": "GitHub made Claude Sonnet 5 generally available inside GitHub Copilot on June 30, the same day Anthropic launched the model — an unusually fast ecosystem turnaround. It joins the existing lineup alongside a new fast-mode preview of Claude Opus 4.8, giving Copilot users a cheaper, faster agentic model by default.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-06-30-claude-sonnet-5-is-generally-available-for-github-copilot",
+          "why": "Same-day availability in a rival's flagship coding assistant shows how commoditized frontier-model access has become for IDE tooling vendors."
+        },
+        {
+          "headline": "Cursor ships a mobile app to steer always-on coding agents from your phone",
+          "summary": "Cursor 3.9, released June 29, adds a public-beta iOS app available on all paid plans that lets developers launch and monitor long-running agent sessions remotely, with live activity notifications, push alerts, and review of diffs and source control directly from a phone.",
+          "source": "Cursor Changelog",
+          "url": "https://cursor.com/changelog",
+          "why": "Remote agent supervision is becoming table stakes across coding tools — Cursor now matches similar remote-control features shipped recently by GitHub Copilot and Codex."
+        },
+        {
+          "headline": "GitHub Copilot Agent lands natively inside JetBrains AI Assistant",
+          "summary": "GitHub shipped deeper integration on June 30 that brings the Copilot coding agent directly into JetBrains' own AI Assistant panel, rather than requiring a separate Copilot plugin workflow, for users of IntelliJ-based IDEs.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-06-30-copilot-agent-is-now-available-in-jetbrains-ai-assistant",
+          "why": "Closes a long-standing friction point for JetBrains users who had to juggle two separate AI panels inside the IDE."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Anthropic launches Claude Sonnet 5, its most agentic Sonnet-class model yet",
+          "summary": "Anthropic released Claude Sonnet 5 on June 30 as the new default model for Free and Pro plans and an option for Max, Team and Enterprise. It ships with a native 1M-token context window in Claude Code and introductory pricing of $2/$10 per million input/output tokens through August 31, after which it rises to $3/$15.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-sonnet-5",
+          "why": "Sonnet-class models are the default workhorse for most Claude Code and API users; a capability jump here moves the baseline for agentic coding tools broadly, not just Opus-tier deployments."
+        },
+        {
+          "headline": "Anthropic debuts Claude Science, an AI workbench for researchers and pharma",
+          "summary": "Also announced June 30, Claude Science is a new application in beta for Pro, Max, Team and Enterprise users that bundles the tools researchers commonly use — literature analysis, multi-step experiment execution, and manuscript/figure generation — with over 60 pre-configured skills for genomics, proteomics and structural biology, plus access to laptop, cluster, or on-demand GPU compute.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-science-ai-workbench",
+          "why": "Anthropic's first vertical product aimed squarely at biopharma R&D, alongside its own newly announced drug-discovery programs, signals a push beyond general-purpose chat and coding into scientific domain products."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Docker Desktop 4.80.0 patches a VM-panic kernel bug and bumps Kubernetes to 1.36.1",
+          "summary": "Released June 29, Docker Desktop 4.80.0 fixes CVE-2026-8936 — a VM panic caused by unbounded recursion in the grpcfuse kernel module when containers create deeply nested directories on bind-mounted host folders — and updates the bundled Kubernetes to v1.36.1 along with CNI plugins, cri-tools and cri-dockerd.",
+          "source": "Docker Docs",
+          "url": "https://docs.docker.com/desktop/release-notes/",
+          "why": "The grpcfuse bug could crash the Docker Desktop VM from inside an untrusted container; teams running Docker Desktop should update before hitting it in CI or local dev."
+        },
+        {
+          "headline": "GitHub adds code-coverage merge protection for pull requests",
+          "summary": "Shipped June 30, the new merge-protection rule lets repository admins block pull requests from merging when test coverage on changed lines falls below a configured threshold, enforced directly in branch protection settings.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-06-30-github-code-coverage-merge-protection-for-pull-requests",
+          "why": "Moves coverage gating from third-party CI scripts into a native, auditable branch-protection rule."
+        },
+        {
+          "headline": "GitHub opens public preview of open-source license compliance rulesets",
+          "summary": "Also released June 30, the new feature lets enterprises define ruleset-based checks on dependency licenses, flagging or blocking builds that pull in packages under disallowed licenses.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-06-30-open-source-license-compliance-is-in-public-preview",
+          "why": "Gives legal and platform teams an automated, policy-as-code way to enforce license compliance instead of manual dependency audits."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "lead": true,
+          "headline": "MiCA's grace period ends today: Binance locked out of the EU, ~14 licensed exchanges absorb the volume",
+          "summary": "The EU's Markets in Crypto-Assets transitional period expires July 1 with no extension. Binance, MEXC, HTX and Bitfinex have no MiCA authorization and must stop onboarding EU clients immediately; France alone had identified roughly 90 unlicensed operators ahead of the deadline. Around 14 exchanges — including Coinbase (Luxembourg), Kraken (Ireland), OKX, Crypto.com and Bybit — hold licenses and already handle an estimated 95% of EU crypto volume. Tether's USDT remains excluded from regulated EU markets.",
+          "source": "Finance Magnates",
+          "url": "https://www.financemagnates.com/cryptocurrency/regulation/europes-crypto-market-after-july-1-who-stays-who-leaves-and-what-changes-under-mica/",
+          "why": "The largest hard regulatory cutover in crypto history takes effect today, reshaping which exchanges can legally serve the EU's crypto users overnight."
+        },
+        {
+          "headline": "US spot Bitcoin ETFs close their worst month on record: $4.06B in June outflows",
+          "summary": "US spot Bitcoin ETFs logged about $4.06 billion in net outflows in June, the largest monthly redemption since the products launched in January 2024, exceeding the prior record of $3.56 billion set in February 2025. BlackRock's IBIT accounted for roughly $3.3 billion of the month's total, about 75% of the outflow from a single fund.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/06/29/usd4-billion-gone-spot-bitcoin-etfs-are-on-track-for-their-worst-month-on-record",
+          "why": "A record monthly redemption from the primary institutional access point for Bitcoin signals sustained, not one-off, institutional de-risking heading into July."
+        },
+        {
+          "headline": "Coinbase and Kraken positioned as the biggest winners of Europe's MiCA reset",
+          "summary": "With Binance and other unlicensed rivals exiting the EU market simultaneously, MiCA-licensed platforms are positioned to inherit displaced customers and trading volume as the region consolidates around a smaller set of authorized exchanges.",
+          "source": "Euronews",
+          "url": "https://www.euronews.com/business/2026/06/24/europes-crypto-reset-mica-creates-a-single-market-as-hundreds-of-firms-face-exit",
+          "why": "Regulatory compliance is now a direct competitive advantage in the EU crypto market, not just a legal cost center."
+        }
+      ]
+    }
+  ]
+}
