@@ -1,0 +1,97 @@
+{
+  "date": "2026-07-02",
+  "intro": "Claude Fable 5 and Mythos 5 return to service after a rare US export-control freeze was lifted — a first real test of the government's new voluntary AI-review framework. Bitcoin markets keep sliding: Citi guts its price target as spot ETFs close their worst month on record.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "GitHub Models set for full retirement on July 30",
+          "summary": "GitHub confirmed its in-platform model playground, catalog, inference API and bring-your-own-key access will shut down completely on July 30, with brownouts scheduled for July 16 and July 23 ahead of the cutoff.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-01-github-models-is-being-fully-retired-on-july-30-2026/",
+          "why": "Developers using GitHub Models for prototyping or BYOK inference need a migration plan before the deadline."
+        },
+        {
+          "headline": "VS Code 1.127 makes agent browser tools generally available",
+          "summary": "Visual Studio Code's July release takes the built-in browser tools for AI agents out of preview, letting agents open pages, take screenshots and click through to validate their own work, alongside new per-site permission prompts and a reorganized Agents window for managing multiple concurrent sessions.",
+          "source": "Visual Studio Code",
+          "url": "https://code.visualstudio.com/updates/v1_127",
+          "why": "Agentic browser control moving to GA status signals it's becoming a standard part of the editor rather than an experiment."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "US lifts export controls on Anthropic's Claude Fable 5 and Mythos 5",
+          "summary": "The Department of Commerce lifted a roughly 18-day export restriction placed on the two Claude models after a national-security review into a potential jailbreak vulnerability. Anthropic agreed to proactively flag security risks and malicious activity to the government, and began restoring foreign access across the Claude Platform, Claude.ai, Claude Code and Claude Cowork on July 1, with usage-limit accommodations through July 7.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/redeploying-fable-5",
+          "why": "The first real test of the new US voluntary pre-release AI review framework, and a preview of how national-security oversight of frontier models will work going forward."
+        },
+        {
+          "headline": "Google DeepMind debuts Gemini Omni, a multimodal video generation and editing model family",
+          "summary": "Gemini Omni Flash, the first model in DeepMind's new Omni family, takes text, image, audio and video as input and supports conversational, multi-turn video editing with persistent characters and locations. It's rolling out through the Gemini app, Google Flow, YouTube Shorts, AI Studio and the Gemini API.",
+          "source": "Google DeepMind",
+          "url": "https://deepmind.google/models/gemini-omni/",
+          "why": "A jump beyond one-shot text-to-video toward iterative, document-like video editing."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Deno 2.9 adds desktop apps, doubles startup speed, and locks down npm trust by default",
+          "summary": "Deno 2.9 introduces a `deno desktop` command for building native desktop apps from web tech, cuts cold-start time roughly in half (34ms to 17ms), and turns on an npm trust policy by default that delays newly published package versions for 24 hours to blunt stolen-token supply-chain attacks.",
+          "source": "Deno",
+          "url": "https://deno.com/blog/v2.9",
+          "why": "Pairs a real capability expansion with a concrete supply-chain security default other ecosystems may end up copying."
+        },
+        {
+          "headline": "Git 2.55 lands parallel hooks and a new fixup subcommand",
+          "summary": "Git 2.55 lets compatible configured hooks — like lint and test pre-commit hooks — run in parallel via `hook.<name>.parallel=true`, extends the experimental `git history` command with a `fixup` subcommand to apply staged changes to an earlier commit, and adds an experimental `git format-rev` command for pretty-printing revisions from stdin.",
+          "source": "The GitHub Blog",
+          "url": "https://github.blog/open-source/git/highlights-from-git-2-55/",
+          "why": "Concrete, incremental workflow speedups that most developers will hit directly."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Citi slashes 12-month Bitcoin target to $82,000, zeroes out ETF inflow forecast",
+          "summary": "Citi cut its 12-month Bitcoin price target to $82,000 from $112,000 (and Ether to $2,240 from $3,175), and now assumes zero net Bitcoin ETF inflows over the next 12 months, down from a prior $10 billion forecast, citing stalled US crypto legislation and weak investor demand.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/01/citi-slashes-12-month-bitcoin-ether-targets-as-etf-flows-dry-up",
+          "why": "A major bank going to zero on ETF inflow expectations signals institutional demand has stalled, a key pillar of the recent bull case."
+        },
+        {
+          "headline": "US spot Bitcoin ETFs post worst month ever: $4.5 billion in June outflows",
+          "summary": "US spot Bitcoin ETFs shed $4.51 billion net in June, their worst month since launch, beating the prior record by 29%. BlackRock's IBIT alone accounted for $3.55 billion of the total, and outflows extended to nine straight trading days through June 30.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/07/01/live-markets-u-s-spot-bitcoin-etfs-had-their-worst-month-ever-in-june-shedding-usd4-5-billion",
+          "why": "Record ETF redemptions are the direct driver behind Bitcoin's June selloff and set the tone for early-July price action."
+        },
+        {
+          "headline": "Strategy authorizes selling up to $1.25 billion of Bitcoin, its first monetization plan ever",
+          "summary": "Strategy (formerly MicroStrategy) rolled out a new 'Digital Credit Capital Framework' that for the first time authorizes selling up to $1.25 billion of its Bitcoin holdings to build a USD reserve, alongside up to $2 billion in stock and security buybacks. MSTR shares whipsawed, popping over 4% before tumbling about 8% the next session.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/06/29/strategy-opens-the-door-to-selling-bitcoin-under-new-capital-plan-here-s-what-it-means",
+          "why": "Strategy has never authorized selling BTC since its 2020 accumulation strategy began — a symbolic break from its 'never sell' stance amid financing pressure."
+        },
+        {
+          "headline": "SBI Crypto to shut down its Bitcoin mining pool by July 31",
+          "summary": "SBI Crypto announced it will wind down its Bitcoin mining pool, ceasing operations on July 31 (a 22:00 UTC July 30 cutoff). The pool represented about 2.2% of Bitcoin's network hashrate as of June 30.",
+          "source": "Blockspace Media",
+          "url": "https://blockspace.media/insight/sbi-crypto-shut-down-mining-pool-2026/",
+          "why": "A top-15 mining pool exiting shifts hashrate distribution and forces its customer base to migrate ahead of the deadline."
+        }
+      ]
+    }
+  ]
+}
