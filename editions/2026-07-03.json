@@ -1,0 +1,97 @@
+{
+  "date": "2026-07-03",
+  "intro": "A UN scientific panel co-chaired by Yoshua Bengio and Maria Ressa warns that safeguards can't keep pace with AI capabilities, ahead of this week's Geneva governance summit. Bitcoin rallies past $61,000 on dovish Fed comments and a weak jobs report, even as the CLARITY Act's July 4 deadline quietly slips.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Cognition launches Devin Security Swarm, an autonomous vulnerability-hunting agent",
+          "summary": "Cognition's new product deploys swarms of Devin agents to triage and fix security vulnerabilities at scale. In testing, it found 36 of 50 real-world GHSA vulnerabilities at roughly 30% lower cost per finding than the next most accurate alternative.",
+          "source": "Cognition",
+          "url": "https://cognition.com/blog/introducing-devin-security-swarm",
+          "why": "Pushes AI coding agents beyond writing code and into the unglamorous, backlog-heavy work of finding and patching vulnerabilities."
+        },
+        {
+          "headline": "Cascade hits hard end-of-life as Devin Desktop's Agent Command Center becomes the default",
+          "summary": "Windsurf's Python-based Cascade agent reached its scheduled end-of-life on July 1 with no grace period, fully replaced by the Rust-based Devin Local inside Devin Desktop's new Agent Command Center, a Kanban-style board for managing local and cloud coding agents that supports the open Agent Client Protocol.",
+          "source": "Devin (Cognition)",
+          "url": "https://devin.ai/blog/windsurf-is-now-devin-desktop/",
+          "why": "Any CI pipeline or script that called Cascade by name stopped working overnight; teams needed to repoint automation before the cutover."
+        },
+        {
+          "headline": "Kimi K2.7 Code becomes the first open-weight model in GitHub Copilot's picker",
+          "summary": "Moonshot AI's Kimi K2.7 Code, a 1-trillion-parameter open-weight coding model, is now generally available as a selectable model in GitHub Copilot, rolling out to Pro, Pro+ and Max plans.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-01-kimi-k2-7-is-now-available-in-github-copilot/",
+          "why": "The first time an open-weight coding model has sat alongside closed frontier models in Copilot's default picker."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "UN scientific panel warns AI safeguards can't keep pace with capabilities",
+          "summary": "The Independent International Scientific Panel on AI, co-chaired by Turing Award winner Yoshua Bengio and Nobel Peace laureate Maria Ressa, released its first preliminary report, concluding that science currently cannot guarantee advancing AI capabilities won't cause catastrophic harm. The findings feed into the inaugural UN Global Dialogue on AI Governance in Geneva on July 6–7.",
+          "source": "United Nations",
+          "url": "https://www.un.org/independent-international-scientific-panel-ai/en/preliminary-report",
+          "why": "The first independent, government-agnostic scientific assessment of frontier AI risk, timed to directly shape an intergovernmental governance summit."
+        },
+        {
+          "headline": "OpenAI's new biology benchmark exposes a wide AI research-judgment gap",
+          "summary": "OpenAI introduced GeneBench-Pro, a benchmark testing whether AI models can exercise research-level judgment on computational biology problems, such as distinguishing genuine signal from noise. Even top frontier models scored only around 32%.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/introducing-genebench-pro/",
+          "why": "A concrete, primary-source data point on how far current models are from genuine scientific judgment, not just fact recall."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub Issue fields reach general availability",
+          "summary": "GitHub's structured, typed metadata for issues (priority, effort, dates and custom fields) is now generally available for Free, Team, Enterprise and data-residency plans, and will ship in GitHub Enterprise Server 3.23. Field values now also show directly in the repository issue list.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-02-issue-fields-are-now-generally-available/",
+          "why": "Over 40,000 organizations adopted the feature during preview; GA makes searchable, reportable issue metadata a default part of GitHub project tracking."
+        },
+        {
+          "headline": "Dependency-confusion campaign publishes 25 malicious npm packages mimicking internal tooling",
+          "summary": "A newly created npm account, marketfront, batch-published 25 packages under the @marketfront scope in a roughly three-minute window on July 1, each carrying a postinstall credential harvester and a reused 'Internal package' README lure. Researchers linked the campaign, via naming patterns and payload structure, to a series of disposable accounts running the same playbook.",
+          "source": "SafeDep",
+          "url": "https://safedep.io/marketfront-dependency-confusion-campaign/",
+          "why": "Dependency-confusion attacks that mimic a specific company's private package names can silently compromise any build missing the real internal package."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin rallies past $61,000 as Fed's Warsh eases inflation talk and jobs data disappoints",
+          "summary": "Bitcoin climbed more than 4% to briefly reclaim $62,000 after Fed Chair Kevin Warsh told the ECB forum in Sintra that inflation risks have come down, and June's US jobs report showed only 57,000 jobs added versus the roughly 115,000 forecast. Wage growth accelerated to 3.5% year-on-year, though, leaving the rate-cut outlook mixed.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/02/bitcoin-zooms-above-usd61-000-as-inflation-fears-soften",
+          "why": "The first notably dovish signal from Warsh since a hawkish June dot plot triggered weeks of ETF outflows, reviving the 'debasement trade' narrative."
+        },
+        {
+          "headline": "Metaplanet buys 2,823 more Bitcoin, becomes world's third-largest corporate holder",
+          "summary": "The Tokyo-listed firm added 2,823 BTC for about $170.7 million, bringing its total to 43,000 BTC (worth roughly $2.6 billion) and moving it past other large holders into third place globally, behind Strategy and Twenty One Capital.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/02/metaplanet-buys-another-usd170-million-of-bitcoin-expanding-treasury-to-43-000-btc",
+          "why": "Corporate treasury accumulation continues even as US spot ETFs post record outflows, underscoring a split between institutional channels."
+        },
+        {
+          "headline": "CLARITY Act's July 4 deadline quietly slips as Senate heads into recess",
+          "summary": "The Senate adjourned until July 13 without resolving disputes over ethics rules tied to Trump's crypto holdings, DeFi oversight and anti-money-laundering provisions, pushing any floor vote on the crypto market-structure bill past its symbolic July 4 target toward the tighter pre-August-recess window.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/policy/2026/06/30/jefferies-warns-of-crypto-market-volatility-as-clarity-act-faces-senate-test",
+          "why": "The bill sets the CFTC/SEC jurisdictional split for digital assets; another missed deadline raises the odds it slips to 2027."
+        }
+      ]
+    }
+  ]
+}
