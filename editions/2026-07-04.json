@@ -1,0 +1,104 @@
+{
+  "date": "2026-07-04",
+  "intro": "A quiet holiday news cycle: the sharpest story of the day is on-chain, not in a keynote — bitcoin's supply has flipped to majority-loss for the first time this cycle.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "GitHub Copilot CLI drops personal access token requirement in Actions",
+          "summary": "GitHub Copilot CLI can now authenticate inside GitHub Actions using the built-in GITHUB_TOKEN, removing the need to provision and manage a personal access token for CI workflows.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-02-copilot-cli-no-longer-needs-a-personal-access-token-in-github-actions/",
+          "why": "Cuts a common setup and security headache for teams wiring Copilot's CLI agent into CI pipelines."
+        },
+        {
+          "headline": "GitHub lets enterprises default Copilot to automatic model selection",
+          "summary": "Enterprise administrators can now set Copilot's model choice to \"auto\" by default across an organization via managed-settings.json, letting Copilot pick the best model per request instead of a fixed one.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-01-enterprises-can-default-to-auto-model-selection/",
+          "why": "Signals GitHub pushing model-routing-by-default as the norm for large Copilot deployments, likely affecting cost and latency."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Anthropic ships Claude Sonnet 5, a cheaper agentic default model",
+          "summary": "Anthropic launched Claude Sonnet 5, its most agentic mid-size model yet, now the default for Free and Pro plans and priced at an introductory $2/$10 per million input/output tokens through August 31.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-sonnet-5",
+          "why": "A materially cheaper model that approaches Opus-class agentic performance changes the cost math for anyone running Claude-based agents at scale."
+        },
+        {
+          "headline": "Anthropic confirms export controls lifted on Claude Fable 5 and Mythos 5",
+          "summary": "Anthropic said the U.S. Commerce Department has lifted the export-control order that had taken its Fable 5 and Mythos 5 models offline for nearly three weeks, restoring access across Anthropic's products.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html",
+          "why": "Ends a standoff that briefly pulled Anthropic's most capable models from the market over national-security concerns."
+        },
+        {
+          "headline": "Europe's regulators warn AI is moving faster than financial rules can follow",
+          "summary": "Speaking at the ECB Forum, UK FCA chief Nikhil Rathi and ECB president Christine Lagarde said traditional rulemaking cycles can't keep pace with agentic AI, and floated market-wide \"kill switch\" style safeguards.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/07/03/ai-outpacing-rules-europe-top-bankers-regulators-warn.html",
+          "why": "A concrete signal that circuit-breaker-style AI safeguards for financial markets are moving from theory to policy discussion."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub Models will be fully retired July 30, 2026",
+          "summary": "GitHub confirmed that GitHub Models — including its playground, model catalog, inference API, and bring-your-own-key support — will be shut down for all customers at the end of the month.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-01-github-models-is-being-fully-retired-on-july-30-2026/",
+          "why": "Teams prototyping against GitHub's hosted model catalog have under a month to migrate before it disappears."
+        },
+        {
+          "headline": "GitHub Issue Fields reaches general availability",
+          "summary": "Structured, typed custom fields for GitHub Issues — for tracking priority, effort, dates, and other metadata — are now generally available across Free, Team, Enterprise, and data-residency plans.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-02-issue-fields-are-now-generally-available/",
+          "why": "Brings GitHub's native issue tracking closer to feature parity with dedicated project-management tools."
+        },
+        {
+          "headline": "GitHub adds free public-repo secret scanning monitoring for enterprises",
+          "summary": "GitHub Secret Protection customers can now enable public monitoring in preview at no extra cost, alerting enterprises when their secrets appear in public repositories anywhere on GitHub.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-01-secret-scanning-public-monitoring-for-enterprises/",
+          "why": "Closes a common leak vector — credentials pushed to public forks or personal repos outside the org's own scanning scope."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "lead": true,
+          "headline": "More bitcoin is now held at a loss than at a profit, in a first for this cycle",
+          "summary": "Roughly 10.83 million BTC are sitting at an unrealized loss versus 9.22 million in profit, the first time loss-making supply has overtaken profitable supply since the current cycle began — a crossover that has historically marked bear-market bottoms.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/07/03/live-updates-more-bitcoin-is-now-held-at-a-loss-than-at-a-profit",
+          "why": "This on-chain metric has flagged every major cycle bottom to date, making today's flip the most-watched bitcoin signal of the year so far."
+        },
+        {
+          "headline": "Bitcoin whales bought $16.7 billion even as ETFs bled a record $4 billion",
+          "summary": "Large holders added more than 270,000 BTC over two weeks while U.S. spot bitcoin ETFs suffered their worst month on record in June, a divergence between whale accumulation and institutional outflows that has preceded past cycle lows.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/03/bitcoin-whales-bought-270-000-btc-in-two-weeks-even-as-etfs-bled-a-record-usd4-billion",
+          "why": "Large, high-conviction buyers stepping in while institutions retreat is a pattern traders watch closely for bottom formation."
+        },
+        {
+          "headline": "Bitcoin ETFs post $221 million inflow, snapping a 10-day outflow streak",
+          "summary": "U.S.-listed spot bitcoin ETFs took in $221 million on Thursday, their strongest single-day intake in two months, ending ten straight days of net redemptions.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/03/finally-usd221-million-flow-into-bitcoin-etfs-ending-a-painful-10-day-outflow-streak",
+          "why": "First tentative sign that the institutional selling pressure of the past month may be easing."
+        }
+      ]
+    }
+  ]
+}
