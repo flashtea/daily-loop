@@ -1,0 +1,90 @@
+{
+  "date": "2026-07-05",
+  "intro": "A slow post-holiday news day: the biggest development isn't a launch but a governance move — Anthropic, Amazon, Microsoft and Google agreeing on a shared scale for how dangerous an AI jailbreak actually is.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Godot Engine bans nearly all AI-generated code from contributions",
+          "summary": "The Godot game engine's maintainers rewrote their contribution policy to prohibit AI-authored code beyond menial assistance like completion or regex, auto-banning contributors who submit autonomous-agent or \"vibe-coded\" pull requests without disclosure.",
+          "source": "Godot Engine",
+          "url": "https://godotengine.org/article/contribution-policy-2026/",
+          "why": "One of open source's most-used engines concluding that AI PRs are net-negative for maintainer time is a notable data point as more projects weigh the same tradeoff."
+        },
+        {
+          "headline": "Anthropic quietly strips hidden Claude Code tracking aimed at rival AI labs",
+          "summary": "Anthropic removed steganographic checks it had built into Claude Code in March that compared a user's hostname against a hidden list of Chinese AI labs and unauthorized resellers, put in place to curb account abuse and model distillation.",
+          "source": "The Register",
+          "url": "https://www.theregister.com/ai-and-ml/2026/07/01/anthropic-is-removing-its-covert-code-for-catching-chinese-competitors/5265366",
+          "why": "A reminder that widely-trusted developer tools can carry undisclosed telemetry, and that removing it only came after developers noticed."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Anthropic, Amazon, Microsoft and Google propose a shared scale for rating AI jailbreak severity",
+          "summary": "Anthropic published a five-tier \"Cyber Jailbreak Severity\" scale, developed with its Glasswing partners including Amazon, Microsoft and Google, that rates jailbreak techniques from informational to critical based on capability gain, ease of weaponization and discoverability.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework",
+          "why": "The first attempt at an industry-standard vocabulary for jailbreak risk, meant to let competing labs and governments compare notes on AI safety incidents consistently."
+        },
+        {
+          "headline": "Claude Fable 5's misuse classifiers held up through 1,000+ hours of bug-bounty testing",
+          "summary": "Anthropic detailed the classifier system behind Fable 5 that automatically reroutes risky cybersecurity, bio-chemical or distillation-related requests to Opus 4.8, saying an external bug bounty and red-teaming effort found no universal jailbreak.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework",
+          "why": "Concrete numbers behind a frontier model's safety architecture are rare; this is Anthropic's most detailed public accounting yet."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub Copilot agent session streaming reaches public preview",
+          "summary": "GitHub Enterprise Cloud customers can now stream Copilot agent session activity — prompts, responses, and tool calls — from cloud agents, CLI, VS Code and partner IDEs to their own SIEM or event collector, or pull the last 48 hours via a REST API.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-02-copilot-agent-session-streaming-is-now-in-public-preview/",
+          "why": "Gives security and compliance teams real visibility into what coding agents are actually doing across an organization, not just usage counts."
+        },
+        {
+          "headline": "Citrix ships XenServer 9, pitching a cheaper alternative amid VMware cost pressure",
+          "summary": "Citrix released XenServer 9, positioning it as a mainstream server-virtualization option for organizations reassessing their stack as licensing costs elsewhere have climbed.",
+          "source": "The Register",
+          "url": "https://www.theregister.com/virtualization/2026/07/01/citrix-says-its-back-as-a-mainstream-server-virtualization-player-that-wont-send-scary-bills/5264838",
+          "why": "Virtualization vendors are still actively competing for infrastructure teams looking to leave VMware."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin jumps above $63,000, reversing end-of-June losses",
+          "summary": "Bitcoin climbed above $63,000 for the first time in two weeks, extending a five-session rally that began below $60,000, helped by Fed Chair Kevin Warsh saying inflation risks have eased and a softer June jobs report.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/04/bitcoin-jumps-above-usd63-000-reversing-end-june-losses",
+          "why": "First clear reversal after a rough June that saw ETFs post their worst monthly outflows on record."
+        },
+        {
+          "headline": "Bitcoin experts split over a plan to freeze Satoshi's 1.1 million BTC against quantum theft",
+          "summary": "A proposal that would eventually freeze quantum-vulnerable addresses — including roughly 1.1 million bitcoin attributed to Satoshi Nakamoto — is dividing the developer community between preserving strict immutability and pre-emptively protecting dormant coins.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/business/2026/07/04/bitcoin-experts-split-over-plan-to-freeze-satoshi-s-1-1-million-bitcoin-as-quantum-threat-grows",
+          "why": "Any move to freeze addresses, even quantum-vulnerable ones, cuts against bitcoin's core neutrality premise and would be its most consequential protocol debate in years."
+        },
+        {
+          "headline": "Analysts: bitcoin's next parabolic run may need $1 trillion in fresh capital",
+          "summary": "This cycle's roughly $697 billion in new capital has produced about a 689% gain, far below the 2,000%-plus returns of earlier cycles; analysts say bitcoin's larger market size means matching past parabolic moves would now require over $1 trillion in new inflows that may not materialize.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/04/bitcoin-s-next-parabolic-run-may-need-usd1-trillion-in-fresh-capital",
+          "why": "A capital-efficiency lens on why this cycle has underwhelmed relative to prior ones, regardless of near-term price moves."
+        }
+      ]
+    }
+  ]
+}
