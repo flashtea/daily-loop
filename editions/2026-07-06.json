@@ -1,0 +1,104 @@
+{
+  "date": "2026-07-06",
+  "intro": "The AI world's biggest story today isn't a launch: unsealed court emails show exactly how Anthropic's Pentagon relationship broke down, right as the UN opens its first-ever global summit on AI governance in Geneva.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "GitHub Copilot adds Kimi K2.7 Code, its first open-weight model option",
+          "summary": "GitHub Copilot began rolling out Moonshot AI's Kimi K2.7 Code as a selectable model for Pro, Pro+ and Max plans, marking the first open-weight model in Copilot's model picker. It's hosted by GitHub on Azure and billed at provider list pricing.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-01-kimi-k2-7-is-now-available-in-github-copilot/",
+          "why": "Gives developers a cheaper, non-Western open-weight option alongside Claude, GPT and Gemini inside the same tool."
+        },
+        {
+          "headline": "GitHub Copilot Vision reaches general availability for all plans",
+          "summary": "Copilot can now take images and PDFs attached directly to chat prompts and reason about them alongside code, turned on by default for Free through Enterprise subscribers with no admin action required.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-01-copilot-vision-is-generally-available/",
+          "why": "Removes a policy-gate that previously limited image-based prompts to orgs with Editor Preview Features enabled."
+        },
+        {
+          "headline": "Copilot CLI in GitHub Actions no longer needs a personal access token",
+          "summary": "Copilot CLI can now authenticate in GitHub Actions using the workflow's built-in GITHUB_TOKEN instead of a stored PAT, with AI credit usage billed directly to the organization.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-02-copilot-cli-no-longer-needs-a-personal-access-token-in-github-actions/",
+          "why": "Cuts a real operational-security risk (long-lived PATs) for teams running coding agents in CI at scale."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Unsealed emails show Pentagon called Anthropic's weapons redlines \"not workable\"",
+          "summary": "Court documents unsealed this week reveal Anthropic CEO Dario Amodei held firm against Pentagon pressure to loosen Claude's bans on fully autonomous weapons and domestic surveillance; when he wouldn't budge, Pentagon official Emil Michael called the guardrails unworkable, and Defense Secretary Pete Hegseth designated Anthropic a supply-chain risk the next day.",
+          "source": "The Next Web",
+          "url": "https://thenextweb.com/news/anthropic-pentagon-emails-amodei-michael-guardrails",
+          "why": "The clearest documented case yet of a frontier AI lab's safety commitments colliding with a major government customer's demands."
+        },
+        {
+          "headline": "UN opens its first Global Dialogue on AI Governance in Geneva",
+          "summary": "All 193 UN member states, alongside industry and civil-society representatives, convened in Geneva for a two-day inaugural session on international AI governance, with Secretary-General António Guterres warning that AI is \"already\" transforming the world.",
+          "source": "UN News",
+          "url": "https://news.un.org/en/story/2026/07/1167862",
+          "why": "The first standing UN mechanism meant to give governments a shared forum for AI rules, rather than each bloc regulating in isolation."
+        },
+        {
+          "headline": "OpenAI proposes giving the U.S. government a 5% stake ahead of its IPO",
+          "summary": "OpenAI is in early talks to hand Washington a 5% equity stake, worth roughly $42.6 billion at its current valuation, as part of a plan modeled on Alaska's oil-revenue fund, ahead of a targeted September IPO at a $730 billion valuation.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/07/02/openai-proposes-us-government-own-5percent-stake-to-address-political-blowback.html",
+          "why": "An unusual bid to defuse political pressure over AI's economic impact before a landmark public listing."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub Models, GitHub's free AI playground, will fully shut down July 30",
+          "summary": "GitHub confirmed its Models playground, catalog, inference API and bring-your-own-key endpoints will be retired for all customers on July 30, 2026, with scheduled brownouts on July 16 and July 23 to help teams prepare.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-01-github-models-is-being-fully-retired-on-july-30-2026/",
+          "why": "Teams that wired GitHub Models into apps for free inference need a migration plan before the end of the month."
+        },
+        {
+          "headline": "Docker Compose 5.3.0 ships native init container support",
+          "summary": "The release adds pre-start init containers as a first-class Compose feature, alongside fixes to OCI token handling and event scoping.",
+          "source": "GitHub (docker/compose)",
+          "url": "https://github.com/docker/compose/releases/tag/v5.3.0",
+          "why": "A commonly-hacked-around pattern (run setup before the main container) becomes a supported primitive."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Citi slashes 12-month bitcoin target to $82,000, zeroes out ETF inflow forecast",
+          "summary": "Citi cut its bitcoin price target to $82,000 from $112,000 and now assumes zero net ETF inflows over the next year, down from a prior $10 billion estimate, citing weak investor appetite and stalled U.S. digital-asset legislation.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/01/citi-slashes-12-month-bitcoin-ether-targets-as-etf-flows-dry-up",
+          "why": "The bank's second downward revision this year, and a notably bearish break from the ETF-driven bull case that dominated 2025."
+        },
+        {
+          "headline": "Whales bought $16.7 billion in bitcoin even as ETFs bled a record $4 billion",
+          "summary": "Large holders accumulated roughly 270,000 BTC over two weeks in June, even as U.S. spot bitcoin ETFs posted their worst monthly outflow on record — a divergence analysts say has historically appeared near cycle lows.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/03/bitcoin-whales-bought-270-000-btc-in-two-weeks-even-as-etfs-bled-a-record-usd4-billion",
+          "why": "Institutional selling and large-holder accumulation moving in opposite directions is a signal worth watching regardless of which side is right."
+        },
+        {
+          "headline": "Bitcoin ETFs snap 10-day, $2.7 billion outflow streak with $221.7 million inflow",
+          "summary": "U.S. spot bitcoin ETFs took in $221.7 million on Thursday, their largest daily haul in two months, ending a painful stretch that had pulled $2.73 billion out of the funds; Fidelity's FBTC led with $166 million.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/03/finally-usd221-million-flow-into-bitcoin-etfs-ending-a-painful-10-day-outflow-streak",
+          "why": "Analysts caution one strong day doesn't confirm a trend reversal after the worst outflow month on record."
+        }
+      ]
+    }
+  ]
+}
