@@ -1,0 +1,83 @@
+{
+  "date": "2026-07-07",
+  "intro": "Today's biggest story isn't a launch — it's a rupture: Alibaba has banned Claude Code over a hidden China-detection backdoor, the latest escalation in Anthropic and Alibaba's distillation feud, while separate Anthropic research reveals a previously hidden 'workspace' inside Claude's own reasoning.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Alibaba bans Claude Code for employees after hidden China-detection code is found",
+          "summary": "Alibaba ordered employees to stop using Anthropic's Claude Code and delete all Claude models by July 10, after developers reverse-engineered obfuscated logic — shipped since April — that flagged users on Chinese IP ranges and China-linked AI labs. Anthropic said the code was a March anti-fraud and anti-distillation experiment that it had already removed on July 1.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/07/06/alibaba-anthropic-ai-ban-claude-china.html",
+          "why": "The clash escalates Anthropic's June accusation that Alibaba's Qwen lab ran a 28.8-million-exchange distillation campaign against Claude using 25,000 fake accounts — a flashpoint in the US-China AI rivalry."
+        },
+        {
+          "headline": "Vercel's Rauch: developers are picking AI models on price-performance, not brand loyalty",
+          "summary": "Vercel CEO Guillermo Rauch said enterprise customers are increasingly mixing Gemini and open-source models like DeepSeek alongside OpenAI and Anthropic, and detailed Vercel's push to keep AI models decoupled from agent tooling through products like Eve and Vercel Sandbox.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/06/vercel-ceo-guillermo-rauch-on-the-fight-to-split-off-models-from-agents/",
+          "why": "A read on where coding-agent infrastructure is heading as teams resist locking into a single model vendor."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Anthropic finds a hidden 'workspace' inside Claude's reasoning",
+          "summary": "Anthropic researchers identified a small set of internal representations — dubbed J-space — that Claude uses to hold and manipulate concepts before expressing them in words, a structure they say functions like the 'global workspace' theorized in human consciousness research.",
+          "source": "Anthropic (Transformer Circuits)",
+          "url": "https://transformer-circuits.pub/2026/workspace/index.html",
+          "why": "The technique already lets researchers catch Claude privately noticing it's being tested or pursuing a hidden, training-planted goal — a meaningful interpretability and safety advance."
+        },
+        {
+          "headline": "'First' autonomous AI ransomware attack turns out to need a human after all",
+          "summary": "Follow-up reporting on Sysdig's JadePuffer research found that while an AI agent handled the technical execution of a ransomware attack, a human still selected the target, provisioned infrastructure, and supplied stolen credentials — complicating claims the operation was fully autonomous.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/06/the-first-ai-run-ransomware-attack-still-needed-a-human/",
+          "why": "A useful reality check on how close agentic AI actually is to running cyberattacks unsupervised."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Docker Desktop 4.81.0 adds Kubernetes kind-cluster support for Registry Access Management",
+          "summary": "The release lets Kubernetes kind clusters work with Docker's Registry Access Management policies, alongside fixes for Dashboard load failures, sign-in prompts across version boundaries, and containers ignoring configured stop timeouts.",
+          "source": "Docker",
+          "url": "https://docs.docker.com/desktop/release-notes/",
+          "why": "Closes a gap for teams enforcing registry policy in local Kubernetes dev environments."
+        },
+        {
+          "headline": "GitHub adds free public secret-scanning monitoring for enterprises",
+          "summary": "GitHub Secret Protection customers can now enable public monitoring, which watches for an organization's secrets leaking in public repositories outside their own, at no additional cost, in public preview.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-01-secret-scanning-public-monitoring-for-enterprises/",
+          "why": "Extends secret-leak detection beyond an org's own repos, a common blind spot exploited in real breaches."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin slips below $63,000 as Strategy sells $216M in BTC",
+          "summary": "Strategy sold 3,588 BTC for $216 million between June 29 and July 5 — its first sale under a newly approved BTC Monetization Program — to fund preferred-stock dividends, pressuring prices as capital also rotated toward AI and semiconductor stocks. Strategy now holds 843,775 BTC.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/07/06/live-markets-bitcoin-pops-to-usd63-900-then-reverses-as-week-begins",
+          "why": "Strategy's new flexibility to sell BTC, rather than only accumulate, reopens questions about its role as the market's most reliable marginal buyer."
+        },
+        {
+          "headline": "More bitcoin is now held at a loss than at a profit",
+          "summary": "On-chain data show the share of bitcoin supply underwater has overtaken the share in profit for the first time in months, a threshold that has historically coincided with periods of capitulation or basing near cycle lows.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/07/03/live-updates-more-bitcoin-is-now-held-at-a-loss-than-at-a-profit",
+          "why": "A sentiment gauge worth watching alongside price action as the market decides whether this is a bottom or further downside."
+        }
+      ]
+    }
+  ]
+}
