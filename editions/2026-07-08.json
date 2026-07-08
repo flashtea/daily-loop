@@ -1,0 +1,97 @@
+{
+  "date": "2026-07-08",
+  "intro": "The day's biggest story is a report card, not a launch: the Future of Life Institute's latest AI Safety Index gives every major lab a C+ or worse, with three flunking outright, even as GitHub, Anthropic, and Meta kept shipping new agent and model features.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "GitHub Copilot's desktop app rolls out to every plan, including Free",
+          "summary": "GitHub made the standalone Copilot app generally available on macOS, Windows, and Linux for all Copilot plans, including Copilot Free and GitHub Education, having previously been limited to paid tiers.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-07-github-copilot-app-available-to-all/",
+          "why": "Removes the last paywall between casual developers and Copilot's agent-native desktop surface."
+        },
+        {
+          "headline": "Kimi K2.7 Code becomes the first open-weight model in Copilot's picker",
+          "summary": "GitHub made Moonshot AI's Kimi K2.7 Code generally available as a selectable model in Copilot, and extended it to Copilot Business and Enterprise plans, where administrators must opt in before employees can use it.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-07-kimi-k2-7-now-available-for-copilot-business-and-enterprise/",
+          "why": "The first non-proprietary model in Copilot's picker gives enterprises a lower-cost coding option alongside GPT and Claude models."
+        },
+        {
+          "headline": "Anthropic's Claude Cowork moves off the desktop, onto web and mobile",
+          "summary": "Claude Cowork, Anthropic's general knowledge-work agent, launched as a desktop-only app in January but is now available on web and mobile for Max subscribers, letting users start a task at a desk and check progress from a phone.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/",
+          "why": "Anthropic's own usage data shows software development is now just 8.7% of Cowork's workload, versus 33.4% for business-process tasks — a sign coding-agent vendors are chasing the rest of the office."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Every major AI lab still fails independent safety grading, new index finds",
+          "summary": "The Future of Life Institute's Summer 2026 AI Safety Index graded nine leading AI companies on 37 indicators; Anthropic topped the field with a C+, OpenAI and Google DeepMind got C's, and xAI, DeepSeek, and Mistral each received an F. No company scored above a C- on existential-safety planning.",
+          "source": "Future of Life Institute",
+          "url": "https://futureoflife.org/ai-safety-index-summer-2026/",
+          "why": "Panelist Stuart Russell said labs have walked back earlier pledges to gate releases on safety measures and are 'now planning releases even if demonstrably unsafe' — a warning sign as these same labs race to ship ever more capable coding and agentic models."
+        },
+        {
+          "headline": "Meta ships its first image and video generation models",
+          "summary": "Meta Superintelligence Labs launched Muse Image and Muse Video, its debut media-generation models, rolling out in the Meta AI app, on meta.ai, and in Instagram Stories in the US, with WhatsApp and Facebook support coming soon.",
+          "source": "Meta",
+          "url": "https://about.fb.com/news/2026/07/introducing-muse-image-meta-ai/",
+          "why": "Pairs with Meta's Muse Spark reasoning model to plan and generate images in one step, Meta's clearest bid yet to compete with OpenAI and Google on creative AI."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub Models will be fully retired on July 30",
+          "summary": "GitHub confirmed its GitHub Models playground, model catalog, inference API, and bring-your-own-key support will shut down entirely on July 30, 2026, giving developers three weeks to migrate off the service.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-01-github-models-is-being-fully-retired-on-july-30-2026/",
+          "why": "Teams prototyping against GitHub Models' free inference API need a migration plan before the hard cutoff."
+        },
+        {
+          "headline": "Copilot CLI in GitHub Actions no longer needs a personal access token",
+          "summary": "GitHub Copilot CLI can now authenticate in GitHub Actions using the workflow's built-in GITHUB_TOKEN instead of a stored personal access token, provided the workflow grants copilot-requests: write permission.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-02-copilot-cli-no-longer-needs-a-personal-access-token-in-github-actions/",
+          "why": "Cuts a common source of long-lived-credential risk in CI pipelines that call Copilot CLI."
+        },
+        {
+          "headline": "GitHub issue fields reach general availability",
+          "summary": "Custom issue fields, letting teams attach structured metadata to issues, are now generally available across GitHub Free, Team, Enterprise, and GitHub Enterprise Cloud with data residency plans.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-02-issue-fields-are-now-generally-available/",
+          "why": "Brings GitHub Issues closer to dedicated project-tracking tools without leaving the platform."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin shrugs off Strategy's $216M sale but futures positioning stays thin",
+          "summary": "Bitcoin touched $64,400 overnight before settling back near $63,170, ending roughly flat on the day but still up about 6% for the week; the market absorbed Strategy's $216 million bitcoin sale without disrupting the recovery, even as CME futures open interest sat at a 32-month low and downside options protection neared record highs.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/07/bitcoin-drops-after-a-run-at-usd64-000-shrugging-off-strategys-usd213-million-btc-sale",
+          "why": "Thin futures activity and elevated hedging demand suggest traders remain unconvinced the bounce off June's lows will hold."
+        },
+        {
+          "headline": "US Strategic Bitcoin Reserve stalls as Treasury and Commerce fight over control",
+          "summary": "Sixteen months after President Trump ordered the creation of a Strategic Bitcoin Reserve, the White House says it is still evaluating the 'best structure' for the reserve, as Treasury and Commerce both seek to oversee the roughly 300,000 BTC (about $21 billion) the government already holds. Congress has not passed the legislation officials say is needed to finalize it.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/policy/2026/07/06/bitcoin-s-u-s-reserve-still-a-work-in-progress-as-federal-agencies-hash-it-out",
+          "why": "An interagency turf war is holding up clarity on what the US government plans to do with its multibillion-dollar bitcoin holdings."
+        }
+      ]
+    }
+  ]
+}
