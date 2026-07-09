@@ -1,0 +1,90 @@
+{
+  "date": "2026-07-09",
+  "intro": "Today's headline is a first for AI policy: after the White House asked OpenAI to hold GPT-5.6 back for government review, the model went fully public today. Bitcoin, meanwhile, gave back its early-July bounce as the Iran ceasefire collapsed and oil spiked.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "GitHub ships agentic browser tools and a quarter's worth of Copilot upgrades in VS Code",
+          "summary": "GitHub's roundup of VS Code Copilot releases (v1.123-v1.127) confirms agentic browser tools — letting agents navigate pages, inspect content, and validate web apps directly in the editor — are now generally available, alongside clearer AI cost visibility and Marketplace model discovery.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-08-github-copilot-in-visual-studio-code-june-2026-releases/",
+          "why": "Gives coding agents a hands-on way to verify their own web-app changes instead of guessing from static code."
+        },
+        {
+          "headline": "Claude Code and Cowork enter public beta for government agencies",
+          "summary": "Anthropic launched a public beta of Claude Code and Claude Cowork through Claude for Government Desktop, running in a FedRAMP High authorized environment with admin spending controls and tamper-evident audit logs for the agency authorization process.",
+          "source": "Anthropic",
+          "url": "https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government",
+          "why": "Opens Anthropic's coding and knowledge-work agents to federal agencies handling sensitive unclassified work, a market OpenAI and Google are also chasing."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "OpenAI publicly releases GPT-5.6 after Trump administration lifts review restrictions",
+          "summary": "OpenAI began the full public rollout of its GPT-5.6 family — Sol, Terra, and Luna — on Thursday, roughly two weeks after the White House asked it to limit access to about 20 vetted partners while officials reviewed the model under a new AI cybersecurity order. Sol targets frontier coding and cybersecurity work; Terra matches GPT-5.5 at half the cost; Luna is the fastest, cheapest tier.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/07/08/openai-expanding-gpt-5point6-ai-model-release-ending-government-limits.html",
+          "why": "The first time the US government has preemptively restricted a frontier model's release before launch — a precedent for how future AI releases get reviewed."
+        },
+        {
+          "headline": "Mistral enters robotics with a camera-only navigation model",
+          "summary": "Mistral AI released Robostral Navigate, a robotics navigation model that lets robots move through complex environments using a single camera and plain-language prompts; the French startup trained it entirely in simulation and built it to be hardware-agnostic.",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-07-08/mistral-ai-releases-robotics-model-to-support-physical-ai-push",
+          "why": "Signals Mistral's move into 'physical AI' alongside its language models, a space OpenAI, Google DeepMind, and robotics startups are also racing into."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "VS Code 1.128 adds richer multi-chat agent sessions and GA image support in Chat",
+          "summary": "The latest VS Code release makes it easier to run and manage multiple concurrent agent chat sessions, moves image attachments in Chat to general availability, and adds OS-level keyboard shortcut support.",
+          "source": "Visual Studio Code",
+          "url": "https://code.visualstudio.com/updates/v1_128",
+          "why": "Editor-level support for juggling several agent sessions at once reflects how much AI-agent workflows have reshaped the core IDE."
+        },
+        {
+          "headline": "GitHub's Innersource security advisories reach general availability",
+          "summary": "GitHub Advanced Security enterprise customers can now use Innersource security advisories, which work like GitHub's public open-source advisories but keep visibility restricted to repositories the enterprise owns.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-08-innersource-security-advisories-are-generally-available/",
+          "why": "Lets large organizations track and disclose vulnerabilities in internal shared code with the same rigor as public CVEs."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin drops to $62,000 as the Iran ceasefire collapses and oil surges",
+          "summary": "Bitcoin fell about 2.4% to roughly $62,100 after President Trump said the ceasefire with Iran was 'over' and the US and Iran traded fresh airstrikes, sending WTI crude up 5% to above $74 a barrel; ether and XRP fell similarly, and crypto-linked stocks Strategy and Coinbase both declined.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/07/08/live-markets-japan-s-collapsing-yen-is-pushing-companies-into-bitcoin-and-xrp",
+          "why": "A reminder that bitcoin still trades as a risk asset in a geopolitical shock, not the uncorrelated hedge some investors want it to be."
+        },
+        {
+          "headline": "Spot bitcoin ETFs post their largest daily inflow in over a month",
+          "summary": "US spot bitcoin ETFs took in $265.69 million on Monday, led by BlackRock's IBIT with $209.40 million, marking a third straight day of net inflows after a stretch of outflows in late June.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/07/07/live-markets-bitcoin-and-ether-etfs-drew-inflows-on-monday",
+          "why": "A tentative sign institutional demand is turning back on even as the spot price stays choppy."
+        },
+        {
+          "headline": "SEC plans to propose 'Regulation Crypto' as soon as this month",
+          "summary": "The SEC's 2026 regulatory agenda lists a new 'Regulation Crypto' rule, still under White House review, that would grant temporary registration exemptions for developers issuing crypto investment contracts and set up a safe harbor for issuers who later step back from managerial control.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/policy/2026/07/07/u-s-sec-to-propose-crypto-rule-as-soon-as-this-month-to-ease-startups-fundraising",
+          "why": "Would be the clearest fundraising rulebook US crypto startups have had since the SEC's stance shifted this year."
+        }
+      ]
+    }
+  ]
+}
