@@ -1,0 +1,104 @@
+{
+  "date": "2026-07-10",
+  "intro": "SpaceXAI (formerly xAI) and Cursor shipped their first joint model, Grok 4.5, today, while Meta, Prime Intellect, and Google all pushed out competing coding and reasoning tools. Bitcoin held just above $62,000 as the US struck Iran again, even as ETF flows show investors quietly pulling back.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "lead": true,
+          "headline": "SpaceXAI and Cursor ship Grok 4.5, their first joint coding model",
+          "summary": "SpaceXAI (formerly xAI) released Grok 4.5, built for coding, agentic tasks, and knowledge work, as the first joint model developed with Cursor since SpaceXAI agreed to acquire the startup in a deal valuing it at $60 billion. It's live today in Cursor, Grok Build, and the SpaceXAI console at $2 per million input tokens and $6 per million output tokens.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/",
+          "why": "The first tangible product of the SpaceXAI-Cursor tie-up, and a direct shot at OpenAI's Codex and Anthropic's Claude Code in the coding-agent market."
+        },
+        {
+          "headline": "Meta launches Muse Spark 1.1, its answer to OpenAI and Anthropic's coding agents",
+          "summary": "Meta publicly released Muse Spark 1.1, a multimodal model built for agentic coding that can diagnose bugs, ship features in enterprise-grade codebases, and execute large migrations. It's priced at $1.25 per million input tokens and $4.25 per million output tokens.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/09/meta-enters-the-crowded-ai-coding-battle-with-muse-spark-1-1/",
+          "why": "Meta's most direct push yet into the crowded agentic-coding market OpenAI, Anthropic, Google, and now SpaceXAI are all fighting over."
+        },
+        {
+          "headline": "Prime Intellect raises $130M to let enterprises build their own AI agents",
+          "summary": "Prime Intellect closed a $130 million Series A at a $1 billion valuation, led by Radical Ventures, to expand its compute, reinforcement-learning, and evaluation stack for companies training agentic systems in-house instead of relying on frontier labs.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/08/prime-intellect-raises-130m-series-a-to-help-enterprises-build-their-own-ai-agents/",
+          "why": "A bet that enterprises will want to own their agent stack rather than rent it from OpenAI, Anthropic, or Google."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Google upgrades Gemini 3 Deep Think and opens it to the API for the first time",
+          "summary": "Google shipped a major upgrade to Gemini 3 Deep Think, its specialized reasoning mode for science and engineering work, and for the first time opened access via the Gemini API to select researchers, engineers, and enterprises rather than just Gemini app subscribers.",
+          "source": "Google DeepMind",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think/",
+          "why": "Moves Google's most capable reasoning model from a consumer subscription perk toward something outside researchers can actually build on."
+        },
+        {
+          "headline": "OpenAI launches GPT-Live, full-duplex voice models that listen and talk at once",
+          "summary": "OpenAI released GPT-Live-1 and GPT-Live-1 mini, voice models built on a full-duplex architecture that let ChatGPT listen and respond continuously instead of waiting for a clearly defined turn to end. GPT-Live-1 becomes the default voice model for paid users, with GPT-5.5 running behind the scenes for complex requests.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/introducing-gpt-live/",
+          "why": "A meaningfully more natural voice interface, and a reminder OpenAI is racing on multiple model fronts at once, not just text."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Node.js 26.5.0 ships streaming UTF-8 Blobs and quantum-resistant TLS reporting",
+          "summary": "The new Current release adds streaming UTF-8 support for Blobs and experimental text-file imports, and directly reports negotiated TLS groups including post-quantum variants, while tightening performance around TextEncoder.encode and WHATWG streams.",
+          "source": "Node.js",
+          "url": "https://nodejs.org/en/blog/release/v26.5.0",
+          "why": "Post-quantum TLS visibility is a small but concrete sign runtimes are starting to prep for the quantum-safe migration."
+        },
+        {
+          "headline": "Ollama raises $65M as its local-AI runtime hits nearly 9M monthly developers",
+          "summary": "Open-source AI tool Ollama raised a $65 million Series B led by Theory Ventures. The company says it's now used by more than 8.9 million developers a month and sits inside 85% of the Fortune 500.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/09/popular-open-source-ai-developer-tool-ollama-raises-65m-grows-to-nearly-9m-users/",
+          "why": "Local-model tooling keeps growing fast even as cloud frontier labs dominate the headlines."
+        },
+        {
+          "headline": "French startup ZML gives away an inference server that runs on any chip",
+          "summary": "ZML, backed by Yann LeCun, launched LLMD, a free (though not open-source) inference server that runs open-source LLMs across Nvidia, AMD, Google TPU, Apple Metal, and Intel Arc chips near each chip's top speed.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/08/hot-french-startup-zml-releases-free-product-to-speed-inference-across-lots-of-ai-chips/",
+          "why": "A bid to break chip-specific inference lock-in right as AMD, Google, and Intel all court developers away from Nvidia."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin holds near $62,000 as US-Iran tensions escalate again",
+          "summary": "Bitcoin traded near $62,300, down about 1.2% on the day, after the US carried out another round of strikes on Iran and both sides raised the prospect of closing the Strait of Hormuz. Oil climbed to $78.80 a barrel while gold slid for a fourth straight day, with traders watching whether bitcoin holds the $60,000 level.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/09/bitcoin-ether-steady-gold-slides-as-us-iran-tensions-escalate-again",
+          "why": "Bitcoin is trading more like a rates-sensitive risk asset than a geopolitical hedge, a pattern traders are watching closely."
+        },
+        {
+          "headline": "Spot bitcoin ETFs slip back into outflows as ether funds keep pulling in cash",
+          "summary": "US spot bitcoin ETFs lost a net $85 million, ending a three-day, roughly $509 million inflow run, with BlackRock's IBIT, Grayscale's GBTC, and Fidelity's FBTC all posting redemptions. Ether ETFs took in about $70 million for a fifth straight day of inflows.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/09/live-markets-bitcoin-etfs-slip-back-to-outflows-while-ether-funds-extend-their-streak",
+          "why": "Institutional flows are diverging sharply between bitcoin and ether for the first time in weeks."
+        },
+        {
+          "headline": "A faster Bank of Japan rate-hike path could pressure bitcoin's carry-trade rally",
+          "summary": "A former BOJ official warned Japan may need to push borrowing costs above 2%, faster than markets currently expect. A stronger yen and unwound yen carry trades have historically coincided with bitcoin sell-offs, including a slide from about $65,000 to $50,000 after the BOJ's July 2024 hike.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/09/bank-of-japan-may-speed-up-rate-hikes-pushing-borrowing-costs-above-2-ex-boj-official-warns",
+          "why": "A macro lever that's moved bitcoin sharply before and could again if the BOJ surprises markets."
+        }
+      ]
+    }
+  ]
+}
