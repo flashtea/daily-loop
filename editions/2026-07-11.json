@@ -1,0 +1,102 @@
+{
+  "date": "2026-07-11",
+  "intro": "OpenAI's GPT-5.6 headlines the day, a fresh symlink flaw shows six top coding agents can be tricked into writing outside the workspace, and bitcoin retests $64,400 even as ETF money keeps sitting on the sidelines.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "GhostApproval symlink flaw lets malicious repos escape the sandbox in six AI coding agents",
+          "summary": "Wiz disclosed GhostApproval, a pattern where a symlinked file in a cloned repository tricks Amazon Q Developer, Claude Code, Augment, Cursor, Google Antigravity, and Windsurf into writing outside the intended workspace — in one proof of concept, overwriting a victim's SSH authorized_keys file. In several cases the agent's own reasoning flagged the danger while the confirmation prompt shown to the user hid it. AWS, Cursor, and Google have shipped fixes; two vendors went quiet and one rejected the report as outside its threat model.",
+          "source": "Wiz",
+          "url": "https://www.wiz.io/blog/ghostapproval-a-trust-boundary-gap-in-ai-coding-assistants",
+          "why": "A reminder that agentic coding tools inherit decades-old Unix trust problems, and that \"are you sure?\" prompts can lie about what they're approving."
+        },
+        {
+          "headline": "GitHub's Copilot week: GPT-5.6 lands, Codex reaches JetBrains, desktop app goes free for all tiers",
+          "summary": "In quick succession GitHub added OpenAI's new GPT-5.6 family (Sol, Terra, Luna) as selectable Copilot models, brought Codex on as an agent provider inside JetBrains IDEs (IntelliJ, PyCharm, WebStorm) in public preview, and made the standalone Copilot desktop app free on every plan tier, including free and Education accounts.",
+          "source": "GitHub Blog",
+          "url": "https://github.blog/changelog/2026-07-09-openais-gpt-5-6-sol-terra-and-luna-are-now-available-in-github-copilot/",
+          "why": "Extends Copilot's reach into JetBrains' large enterprise Java/Kotlin/.NET base while lowering the floor for free-tier agentic coding."
+        },
+        {
+          "headline": "Claude Cowork expands beyond the desktop to web and mobile",
+          "summary": "Anthropic's Cowork, which launched as a desktop app in January, is now available on web and mobile for Max subscribers, letting people start a long-running agent task from a laptop, check status from a phone, and pick up results later even with the laptop closed.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/",
+          "why": "Coding-agent vendors are racing to turn agents into always-on background workers rather than tools tied to one machine."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "OpenAI ships GPT-5.6 to general availability, calls Sol its best coding model yet",
+          "summary": "OpenAI released the GPT-5.6 family — Sol, Terra, and Luna — to general availability across ChatGPT, Codex, and the API, ending a two-week restricted rollout the U.S. government had requested. OpenAI says Sol sets a new state of the art on the Artificial Analysis Coding Agent Index while using under half the output tokens of rival models, and it becomes the preferred model behind Microsoft 365 Copilot.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/gpt-5-6/",
+          "why": "The clearest signal yet of how central this model family is to both OpenAI's consumer product and its Microsoft partnership."
+        },
+        {
+          "headline": "No AI lab scores above a C+ in Future of Life Institute's summer safety index",
+          "summary": "FLI's Summer 2026 AI Safety Index graded nine leading developers on 37 indicators across risk assessment, current harms, and existential safety. Anthropic led with a C+, OpenAI and Google DeepMind received Cs, and xAI, DeepSeek, and Mistral failed outright. The panel found several labs have quietly weakened or dropped earlier pledges to pause development near dangerous capability thresholds.",
+          "source": "Future of Life Institute",
+          "url": "https://futureoflife.org/ai-safety-index-summer-2026/",
+          "why": "An independent check on whether safety commitments are keeping pace with this week's release cadence."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "TypeScript 7.0 ships with a Go-native compiler that's up to 10x faster",
+          "summary": "Microsoft released TypeScript 7.0, completing the port of the compiler from a TypeScript-on-JavaScript bootstrap to native Go. The team's own benchmarks show the VS Code codebase type-checking in 7.5 seconds versus 77.8 seconds on 6.0, and Playwright's checks dropping from 11.1s to 1.1s.",
+          "source": "Microsoft (TypeScript blog)",
+          "url": "https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/",
+          "why": "One of the largest performance jumps in the compiler's history, and for most projects a near drop-in upgrade."
+        },
+        {
+          "headline": "npm v12 goes GA, blocking install scripts and remote/git dependencies by default",
+          "summary": "npm v12 is now generally available and tagged latest. It turns on install-time security defaults — no longer auto-running preinstall/install/postinstall scripts, resolving git dependencies, or fetching remote tarballs unless explicitly allowed — and starts deprecating the riskiest 2FA-bypass granular access tokens.",
+          "source": "GitHub Blog",
+          "url": "https://github.blog/changelog/2026-07-08-npm-install-time-security-and-gat-bypass2fa-deprecation/",
+          "why": "A direct response to this year's npm supply-chain attacks; CI pipelines relying on lifecycle scripts may see silent build breaks until updated."
+        },
+        {
+          "headline": "GitHub's redesigned pull requests dashboard reaches general availability",
+          "summary": "The refreshed dashboard at github.com/pulls gives a single view to track, prioritize, and act on pull requests across repositories, moving out of preview after several months of testing.",
+          "source": "GitHub Blog",
+          "url": "https://github.blog/changelog/2026-07-09-new-pull-requests-dashboard-is-now-generally-available/"
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin retests $64,400 as a longer-term momentum signal turns bullish",
+          "summary": "Bitcoin climbed back toward $64,400 on Friday, retesting a level that had rejected it earlier in the week, as a longer-term MACD reading turned positive for the first time in weeks. The move extends a rebound from the roughly 21-month low bitcoin touched at the start of July.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/10/bitcoin-gets-a-green-light-from-a-reliable-momentum-gauge-here-are-key-levels-to-watch",
+          "why": "A break above $65,000 would open the path toward the June 15 peak near $67,250."
+        },
+        {
+          "headline": "Bitcoin's $60K–$70K range is now the third-longest consolidation in its history",
+          "summary": "Bitcoin has traded between $60,000 and $70,000 for 307 consecutive days, the third-longest stretch confined to any $10,000 band in the asset's history, even as price climbs back toward the top of that range.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/10/bitcoin-s-usd60k-to-usd70k-range-becomes-third-longest-consolidation-in-history"
+        },
+        {
+          "headline": "Spot bitcoin ETFs keep bleeding even as the price rallies",
+          "summary": "U.S. spot bitcoin ETFs lost roughly $95 million on Thursday even as bitcoin's price rallied toward $64,000, extending a month in which institutional flows have mostly sat out the range-bound market while ether funds snapped a five-day inflow streak.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/07/10/live-markets-bitcoin-etfs-bleed-again-while-ether-funds-snap-a-five-day-inflow-streak",
+          "why": "A price rally without ETF inflows behind it is a thinner, less durable signal."
+        }
+      ]
+    }
+  ]
+}
