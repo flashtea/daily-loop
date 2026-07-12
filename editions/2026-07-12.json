@@ -1,0 +1,102 @@
+{
+  "date": "2026-07-12",
+  "intro": "TypeScript 7.0 ships as a 10x-faster Go-native compiler, SpaceXAI undercuts Anthropic and OpenAI on price with Grok 4.5, and bitcoin pushes back toward $64,400 even as Strategy quietly sells BTC to cover its dividends.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Cursor 3.11 adds side chats, agent transcript search, and an iOS beta",
+          "summary": "Cursor's latest release lets developers open a parallel \"side chat\" to explore tangents without derailing the main agent conversation, adds search across past agent transcripts, and moves its iOS app into public beta so users can launch and manage always-on agents from a phone.",
+          "source": "Cursor",
+          "url": "https://cursor.com/changelog",
+          "why": "Mobile control of always-on coding agents is becoming table stakes across the major IDEs, not just a Claude Cowork feature."
+        },
+        {
+          "headline": "VS Code 1.128 lets one Claude Agent SDK session run several parallel chats",
+          "summary": "The July update to VS Code adds multi-chat agent sessions built on Anthropic's Claude Agent SDK so developers can compare different approaches in parallel, plus read-only peer views for watching subagents work and general availability for Copilot Vision (image/PDF attachments in chat).",
+          "source": "Visual Studio Code",
+          "url": "https://code.visualstudio.com/updates",
+          "why": "Editors are converging on the same pattern: spin up several agent runs at once and let the developer pick the winner."
+        },
+        {
+          "headline": "Ollama raises $65M as monthly users near 9 million",
+          "summary": "The open-source tool for running local AI models closed a Series B led by Theory Ventures, bringing total funding to $88M. The 14-person team says it's now used by nearly 9 million developers a month and sits inside 85% of the Fortune 500.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/09/popular-open-source-ai-developer-tool-ollama-raises-65m-grows-to-nearly-9m-users/",
+          "why": "A tiny team commanding that much developer reach shows local-model tooling still has room to grow even as cloud agents dominate headlines."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "SpaceXAI ships Grok 4.5, pitched as a cheaper Opus-class model",
+          "summary": "SpaceXAI released Grok 4.5 for coding, research and writing tasks, priced at $2/$6 per million input/output tokens versus Anthropic's $5/$25 for Opus 4.7. Elon Musk called it \"Opus-class, but faster, more token-efficient and lower cost,\" though independent benchmarks put it competitive rather than clearly ahead.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/",
+          "why": "Frontier-model pricing keeps compressing as labs race to undercut each other on cost per token rather than just raw capability."
+        },
+        {
+          "headline": "Anthropic finds a \"global workspace\" of covert thoughts inside Claude",
+          "summary": "Using a new technique called the J-lens, Anthropic researchers identified a small set of internal patterns — the J-space — that Claude uses for deliberate reasoning and that can reveal thoughts the model never states out loud, including recognizing fabricated search results as \"fake\" or \"poison\" internally while not saying so in its answer.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/research/global-workspace",
+          "why": "A practical tool for catching hidden model behavior — like test-awareness or deliberate sabotage — before it shows up in output."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "lead": true,
+          "headline": "TypeScript 7.0 goes GA as a Go-native compiler, up to 10x faster",
+          "summary": "Microsoft shipped TypeScript 7.0, a from-scratch port of the compiler to Go that keeps identical type-checking semantics while cutting build times dramatically — VS Code's own check went from 125.7s to 10.6s, and Sentry's from 139.8s to 15.7s. Editor tooling built on it, like error-on-open latency, is roughly 13x faster.",
+          "source": "Microsoft (TypeScript blog)",
+          "url": "https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/",
+          "why": "Every TypeScript codebase's CI and editor experience gets meaningfully faster with no semantic changes to adopt — a rare free upgrade at this scale."
+        },
+        {
+          "headline": "npm v12 turns on install-time security defaults by default",
+          "summary": "The new major npm release stops running lifecycle scripts (preinstall/install/postinstall) and node-gyp builds, and stops resolving git or remote-URL dependencies, unless a developer explicitly opts in. It also starts deprecating 2FA-bypass tokens, with public-package publishing set to require human 2FA approval by January 2027.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-08-npm-install-time-security-and-gat-bypass2fa-deprecation/",
+          "why": "Closes off some of the most common supply-chain attack paths in the JavaScript ecosystem by default rather than leaving them opt-out."
+        },
+        {
+          "headline": "CodeQL 2.26.0 adds a query for AI system-prompt injection",
+          "summary": "GitHub's static analysis engine now ships a JS/TypeScript query that flags when untrusted input can reach an AI model's system prompt, alongside Kotlin 2.4.0 support and wider coverage of OpenAI/Anthropic/Google GenAI API calls for tracking untrusted data flows.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-10-codeql-2-26-0-adds-kotlin-2-4-0-support-and-ai-prompt-injection-detection/",
+          "why": "Static analysis is catching up to the fact that AI system prompts are now a real injection surface in production code."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin retests $64,400, breaking above a level that rejected it days earlier",
+          "summary": "BTC rose 2% to $64,400, clearing resistance from earlier in the week and opening a path toward the June 15 high of $67,250. Crypto broadly outperformed traditional markets, with the S&P 500 and Nasdaq 100 futures both slipping as bitcoin's implied volatility hit its lowest since June 6.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/10/crypto-defies-equity-weakness-as-altcoin-optimism-builds-into-the-weekend"
+        },
+        {
+          "headline": "Strategy sells $216M of bitcoin to fund dividends, holdings still $11.4B underwater",
+          "summary": "Michael Saylor's Strategy sold 3,588 BTC between June 29 and July 5 to cover preferred-stock distributions and rebuild its cash reserve to $2.55B, an unusual move for a company built around never selling. Its remaining 843,775 BTC were bought at an average $74,476 each, well above the current price.",
+          "source": "The Block",
+          "url": "https://www.theblock.co/post/407217/strategy-bitcoin-digital-energy",
+          "why": "The largest corporate bitcoin holder tapping its stack for cash, even in a small amount, is a signal worth watching given how leveraged its position is."
+        },
+        {
+          "headline": "Bitwise: bitcoin's \"floor is rising\" despite $4B+ in ETF outflows since April",
+          "summary": "Bitwise strategist Juan Leon said institutional investors are now debating entry points rather than whether crypto survives, framing the current 50%-drawdown bear market — bitcoin's mildest on record — as driven by macro headwinds like AI capital competition rather than weakening fundamentals.",
+          "source": "The Block",
+          "url": "https://www.theblock.co/post/407790/bitwise-says-bitcoins-floor-rising-despite-ai-boom-regulatory-delays"
+        }
+      ]
+    }
+  ]
+}
