@@ -1,0 +1,90 @@
+{
+  "date": "2026-07-13",
+  "intro": "Apple sues OpenAI over alleged trade-secret theft in a blockbuster hardware-talent fight, a compromised npm package goes after AI dev-tool credentials, and bitcoin drifts toward a decade-old support line even as a fork fight over block data limits nears its deadline.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Claude Code makes Auto mode the default on Bedrock, Vertex AI and Foundry",
+          "summary": "Version 2.1.207 turns on Claude Code's Auto mode for enterprise cloud users without requiring the prior CLAUDE_CODE_ENABLE_AUTO_MODE opt-in, and switches Bedrock, Vertex and Claude Platform on AWS to Opus 4.8 by default. Admins can still disable it via a new disableAutoMode setting.",
+          "source": "GitHub (anthropics/claude-code)",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.207",
+          "why": "Auto mode's autonomous tool-approval behavior is now the out-of-the-box experience for the enterprise cloud deployments most likely to run it unattended."
+        },
+        {
+          "headline": "Meta enters the AI coding market with a paid Muse Spark 1.1 tier",
+          "summary": "Meta unveiled Muse Spark 1.1, calling it its strongest model yet for agentic and coding work, and opened its first-ever paid developer API for a Meta model at $1.25/$4.25 per million input/output tokens after $20 in free credits.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/07/09/meta-jumps-into-ai-coding-market-to-chase-anthropic-and-openai.html",
+          "why": "Meta charging for API access for the first time, aimed squarely at coding, adds a fourth serious price competitor to Claude Code, Codex and Gemini."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Apple sues OpenAI, alleges coordinated trade-secret theft for hardware projects",
+          "summary": "Apple filed suit against OpenAI in federal court in Northern California, accusing OpenAI's hardware chief Tang Tan and other former Apple employees of a scheme \"at every level\" to steal confidential hardware designs, including allegedly coaching candidates to bring physical Apple parts to interviews. OpenAI says it has \"no interest in other companies' trade secrets.\"",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-07-10/apple-sues-openai-for-trade-secret-theft-in-blockbuster-case",
+          "why": "A reversal of the two companies' high-profile ChatGPT-on-iPhone partnership into open litigation over an alleged AI hardware device is the biggest AI story of the week."
+        },
+        {
+          "headline": "OpenAI, Meta and SpaceXAI now compete mainly on cost per token",
+          "summary": "Bloomberg reports the latest round of frontier-model releases is being pitched primarily on efficiency rather than raw capability, with OpenAI emphasizing GPT-5.6's ability to do more work using fewer tokens alongside similar cost-cutting pitches from Meta's Muse Spark 1.1 and SpaceXAI's Grok 4.5.",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-07-12/openai-meta-spacexai-compete-for-more-cost-efficient-ai-models",
+          "why": "Once labs stop beating each other on benchmarks alone, price-per-token becomes the metric that determines which model wins production workloads."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Compromised jscrambler npm release drops malware, then evades install-script scanners",
+          "summary": "A malicious jscrambler 8.14.0 published July 11 added a hidden preinstall hook that drops platform-specific native binaries and enumerates AI dev-tooling config for API keys and MCP credentials; Socket detected it six minutes after publication. The same actor pushed four more malicious releases within hours, and starting with 8.18.0 moved the dropper into a self-executing function inside the package's main files so it fires even under `npm install --ignore-scripts`.",
+          "source": "Socket",
+          "url": "https://socket.dev/blog/jscrambler-supply-chain-attack",
+          "why": "Targeting AI coding-tool credentials specifically, and evolving past install-script scanners mid-attack, shows npm supply-chain attackers adapting faster than the defenses shipping this month."
+        },
+        {
+          "headline": "Rust 1.97.0 turns on Rust-specific symbol mangling and linker warnings by default",
+          "summary": "The stable release enables the Rust-specific (v0) symbol mangling scheme by default on stable for the first time, starts surfacing linker output as warnings instead of suppressing it silently, and lets Cargo control whether warnings fail a build without invalidating the build cache.",
+          "source": "Rust Blog",
+          "url": "https://blog.rust-lang.org/2026/07/09/Rust-1.97.0/",
+          "why": "Default-on symbol mangling is a multi-year migration reaching its final, most visible stage — expect it to surface in debuggers and profilers that hardcoded the legacy scheme."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "BIP-110 fork deadline approaches with miner support stuck near zero",
+          "summary": "The proposed soft fork to temporarily reimpose strict limits on non-financial data in Bitcoin transactions faces an early-August activation deadline, but signaling from miners and nodes remains in the low single digits. Adam Back and Michael Saylor both oppose the plan; Back argues it would only produce a small minority chain, not a network-wide change.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/07/12/bitcoin-s-bip-110-fork-deadline-nears-with-miner-support-at-zero",
+          "why": "A real fight over what Bitcoin block space is for, with near-zero miner buy-in, makes the proposal's failure look more likely than its adoption."
+        },
+        {
+          "headline": "Bitcoin drifts toward the $58,000 line that has marked every cycle bottom since 2015",
+          "summary": "Fidelity's Jurrien Timmer tracks bitcoin against a power-law model with a lower support line near $58,000; the gap between price and trendline has swung to -56%, a level the model calls the accumulation zone and that lined up with the 2018 and 2022 lows. Timmer stops short of calling a bottom, citing speculative capital rotating into gold and semiconductors.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/12/bitcoin-is-nearing-a-power-law-support-line-fidelity-has-tracked-since-2015",
+          "why": "A widely-tracked long-run valuation model flashing its historical bottom signal again gives bulls a concrete level to point to even as short-term sentiment stays weak."
+        },
+        {
+          "headline": "Bitcoin's $60,000–$70,000 range is now the third-longest $10,000-band consolidation on record",
+          "summary": "BTC has spent 307 days trading within the $60,000-$70,000 band, one of the longest stretches bitcoin has ever spent confined to a single $10,000 price range, even as it briefly retested $64,400 this week.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/10/bitcoin-s-usd60k-to-usd70k-range-becomes-third-longest-consolidation-in-history",
+          "why": "Extended sideways chop this deep into a halving cycle is unusual and raises the stakes for whichever direction eventually breaks it."
+        }
+      ]
+    }
+  ]
+}
