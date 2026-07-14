@@ -1,0 +1,104 @@
+{
+  "date": "2026-07-14",
+  "intro": "The UK's AI Security Institute finds hours-old jailbreaks that unlock autonomous hacking in OpenAI's GPT-5.6, Anthropic extends its Claude Code incentives against Codex for the second time in a week, and bitcoin slips as traders suddenly price in even odds of a July Fed hike.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Anthropic extends Claude Code's 50% higher weekly limits and free Fable 5 access through July 19",
+          "summary": "Anthropic pushed back the expiration of its 50% weekly usage-limit boost for Claude Code and free access to Claude Fable 5 for a second time, now through July 19, after an original July 7 cutoff. The promotion covers Pro, Max, Team and premium Enterprise plans and follows OpenAI's competing push to win over Claude Code users with free Codex access.",
+          "source": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/claude-fable-5-stays-free-for-paid-users-until-july-19-as-anthropic-buys-more-time/",
+          "why": "Two extensions in one week show how directly Anthropic is answering OpenAI's Codex capacity pitch rather than just running a routine promo."
+        },
+        {
+          "headline": "Claude Cowork expands to iPhone, Android and the web",
+          "summary": "Anthropic is rolling Cowork out beyond its desktop app to mobile and claude.ai in a gradual beta starting with Max-plan subscribers, letting tasks started on a laptop keep running in the background and get approved from a phone. Anthropic is extending its doubled Cowork usage limits through August 5 to mark the rollout.",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/07/13/anthropic-expanding-claude-cowork-to-mobile-and-web-details-here/",
+          "why": "Cross-device autonomous agents that run unattended and only interrupt for approvals are becoming standard across coding tools, not just a Claude Code feature."
+        },
+        {
+          "headline": "OpenAI admits ChatGPT Work's launch \"didn't get everything quite right\"",
+          "summary": "Days after merging Codex into a redesigned ChatGPT desktop app and launching ChatGPT Work, OpenAI's Thibault Sottiaux acknowledged billing confusion around GPT-5.6 Sol's high-compute mode, a disorienting UI overhaul, and messaging that left some users thinking Codex was being discontinued. OpenAI says a bigger fix restoring the sidebar and clarifying usage metrics is coming next week.",
+          "source": "The Decoder",
+          "url": "https://the-decoder.com/openai-admits-it-didnt-get-everything-quite-right-with-chatgpt-work-launch-and-scrambles-to-fix-ux-and-costs/",
+          "why": "A rushed answer to Claude Cowork that immediately needed damage control shows how fast the agent-platform race is moving on both sides."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "UK AI Security Institute finds \"universal jailbreaks\" in GPT-5.6's cyber safeguards",
+          "summary": "The UK's AI Security Institute says it built jailbreaks -- some within hours -- that strip away GPT-5.6's safeguards against cyberattacks, unlocking autonomous vulnerability discovery and exploit development rather than just information about flaws. AISI called the findings more severe than a comparable jailbreak found in Anthropic's Fable 5, and expects further red-teaming to surface similar bypasses despite OpenAI's mitigations.",
+          "source": "Fortune",
+          "url": "https://fortune.com/2026/07/10/openai-gpt-5-6-sol-jailbreaks-cyber-attacks-similar-to-security-flaw-that-led-u-s-government-to-force-anthropic-to-disable-fable-5/",
+          "why": "A government lab demonstrating hours-long jailbreaks to autonomous hacking capability, right after the model's cyber risk forced a government-vetted rollout, undercuts the premise of that gated launch."
+        },
+        {
+          "headline": "NYT and 16 other publishers seek sanctions against OpenAI over withheld evidence",
+          "summary": "The New York Times, the New York Daily News and 15 other news organizations asked a federal court to sanction OpenAI, alleging a deposition showed the company had already built and used a database of roughly 78 million de-identified ChatGPT conversations to gauge its own copyright exposure while claiming it couldn't search chat logs for infringement. OpenAI denies the allegations and says the Times is trying to access private user conversations as its case weakens.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/",
+          "why": "If the court agrees discovery was mishandled, the requested sanctions -- barring OpenAI's own chat-log evidence and deeming regurgitation proven -- would be a major blow to its copyright defense."
+        },
+        {
+          "headline": "Anthropic launches rupee pricing for Claude in India, its second-biggest market",
+          "summary": "Anthropic now offers local-currency pricing for Claude Pro (~₹2,000/month), Max (~₹11,999/month) and Team plans in India, which accounts for 5.8% of global Claude usage. UPI payment support, which OpenAI already offers for ChatGPT in India, is still missing.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/13/anthropic-starts-localizing-claude-pricing-for-india-its-biggest-market-after-the-us/",
+          "why": "Localized pricing plus enterprise deals with Infosys and TCS show Anthropic chasing volume in its largest market outside the US as competition with OpenAI globalizes."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Critical Gitea Docker auth-bypass under active exploitation, ~6,200 instances exposed",
+          "summary": "Attackers are exploiting CVE-2026-20896, a 9.8-severity flaw in Gitea's official Docker image that trusts an X-WEBAUTH-USER header from any source IP when reverse-proxy authentication is enabled, letting anyone who can reach the port log in as any user -- including admins -- with no password. Roughly 6,200 internet-facing instances remain vulnerable; Gitea 1.26.3+ fixes it by making that trust opt-in.",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html",
+          "why": "Self-hosted Gitea is a popular GitHub alternative for teams and open-source projects, and this flaw hands over full admin access with a single forged header."
+        },
+        {
+          "headline": "GitHub ships a redesigned pull requests dashboard, out of preview",
+          "summary": "GitHub's refreshed pull-request dashboard at github.com/pulls is now generally available after a public preview that began in March, adding an inbox for review requests and CI status, saved search views, and richer filtering with autocomplete.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-09-new-pull-requests-dashboard-is-now-generally-available/",
+          "why": "A faster way to triage review requests and CI failures across repos is a small but daily-use improvement for anyone living in GitHub's PR queue."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin slips as traders price in a July Fed rate hike ahead of Tuesday's CPI",
+          "summary": "Bitcoin fell 2% to about $62,380 as money markets lifted the odds of a July Fed rate hike to roughly 50%, up from 10% just days earlier, after Fed Governor Christopher Waller signaled rates may need to rise to control inflation. The two-year Treasury yield hit its highest level since early last year amid surging oil prices and U.S.-Iran tensions, with Tuesday's CPI report and testimony from Fed Chair Kevin Warsh now the next catalysts.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/14/bitcoin-slips-as-traders-lift-july-fed-rate-hike-bets-ahead-of-inflation-report",
+          "why": "A jump from 10% to 50% odds of a July hike in just days is a sharp repricing that explains bitcoin's pullback better than any crypto-specific news."
+        },
+        {
+          "headline": "Bitcoin and ether ETFs snap an eight-week, $9.46B outflow streak",
+          "summary": "US spot bitcoin and ether ETFs pulled in a combined $281.8M for the week ending July 11 -- $197.4M into bitcoin funds and $84.4M into ether funds -- ending the longest outflow streak since the products launched in January 2024. BlackRock's IBIT and ETHA led Friday's inflows while most other issuers saw no net flows; both asset classes remain deeply underwater for the year.",
+          "source": "The Block",
+          "url": "https://www.theblock.co/post/407957/bitcoin-ether-etfs-snap-eight-week-outflow-streaks-with-282-million-combined-inflow",
+          "why": "A single positive week recovers only about 3% of the prior outflows, so it's too early to call this a trend reversal rather than a pause."
+        },
+        {
+          "headline": "Senate returns to the CLARITY Act with passage odds \"near a coin flip\"",
+          "summary": "The Senate came back from recess on July 13 with Majority Leader Thune prioritizing defense authorization first, likely pushing floor consideration of the crypto market-structure bill to the week of July 20. Four disputes -- Trump's $1.4B crypto disclosure, developer protections, stablecoin yield, and SEC-CFTC vacancies -- still block Democratic support, with an August 7 recess deadline effectively ending this session's shot at passage if they aren't resolved.",
+          "source": "Tech Times",
+          "url": "https://www.techtimes.com/articles/320201/20260712/senate-returns-clarity-act-ethics-deadlock-puts-passage-odds-near-coin-flip.htm",
+          "why": "CLARITY Act passage would give bitcoin and crypto markets the clearest US regulatory framework yet -- its odds swinging on ethics disputes is a real near-term catalyst risk."
+        }
+      ]
+    }
+  ]
+}
