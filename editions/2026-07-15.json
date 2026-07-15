@@ -1,0 +1,90 @@
+{
+  "date": "2026-07-15",
+  "intro": "DeepMind's CEO calls for an independent US body to vet frontier models before release, Apple is evaluating a startup that squeezes 27-billion-parameter models onto an iPhone, and bitcoin's post-CPI relief rally collides with a $425M single-day ETF outflow.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "GitHub adds AI-driven security review to the Copilot app",
+          "summary": "GitHub launched a /security-review slash command in the GitHub Copilot app, in public preview, that scans in-flight code changes for vulnerability classes like injection flaws, XSS, path traversal and weak cryptography and returns severity-scored, actionable findings without leaving the app.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-14-security-reviews-now-available-in-the-github-copilot-app/",
+          "why": "Folds AI vulnerability scanning directly into everyday coding rather than leaving it as a separate CI step."
+        },
+        {
+          "headline": "Symlink flaws let malicious repos hijack six AI coding assistants",
+          "summary": "Wiz researchers disclosed 'GhostApproval,' where deceptive symlinks trick AI coding assistants -- including Amazon Q Developer, Cursor, Google Antigravity, Augment and Windsurf -- into approving writes to sensitive files like SSH keys because the approval dialog displays the wrong filename. Amazon Q Developer and Cursor have shipped CVEs and fixes; Augment and Windsurf remain unpatched, and Anthropic disputes that Claude Code's symlink handling is a bug.",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/07/ghostapproval-symlink-flaws-could-let.html",
+          "why": "An old Unix trick undermines the approval prompts that are supposed to be the safety net for autonomous coding agents."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "DeepMind's Hassabis calls for a FINRA-style body to vet frontier AI models",
+          "summary": "Google DeepMind CEO Demis Hassabis publicly proposed an independent, industry-funded standards body -- modeled on financial regulator FINRA -- that would have AI labs voluntarily submit frontier models for review up to 30 days before release, checking for dangerous cyber, biological and autonomous-agent capabilities, with compliance potentially becoming mandatory for US deployment later.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/",
+          "why": "It's a self-regulatory pitch designed to be more palatable to a Trump administration that has already rejected the idea of 'an FDA for AI.'"
+        },
+        {
+          "headline": "Apple evaluates iPhone-sized AI models from compression startup PrismML",
+          "summary": "Caltech spinout PrismML published compressed versions of Alibaba's Qwen model, shrinking it from roughly 54GB to under 4GB while keeping all 27 billion parameters runnable on an iPhone 15 or newer, and confirmed Apple is among the companies testing the technology's speed, energy use and accuracy -- though talks remain early.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/07/14/apple-prismml-ai-compression-iphone.html",
+          "why": "A viable path to running frontier-scale models locally would cut Apple's reliance on cloud AI partners for on-device intelligence."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Microsoft ships record 622-flaw Patch Tuesday with two exploited zero-days",
+          "summary": "July's Patch Tuesday fixed 622 vulnerabilities, the largest batch on record, including an actively exploited Active Directory Federation Services privilege-escalation bug (CVE-2026-56155) and an actively exploited, unauthenticated SharePoint Server flaw (CVE-2026-56164).",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/07/microsoft-patches-record-622-flaws.html",
+          "why": "Two of three zero-days are already under active attack, and the SharePoint bug needs no authentication to exploit over the network."
+        },
+        {
+          "headline": "GitHub previews Code Quality license costs ahead of July 20 general availability",
+          "summary": "GitHub rolled out per-enterprise license estimates showing how many active committers on a repository would count toward billing for GitHub Code Quality, ahead of the product going generally available on July 20 at $10 per active committer per month.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-13-github-code-quality-license-estimate-in-public-preview/",
+          "why": "Gives enterprises a concrete cost preview before a free-preview feature turns into a recurring per-seat charge."
+        },
+        {
+          "headline": "WordPress 7.1 enters beta, targeting an August 19 release",
+          "summary": "WordPress 7.1 Beta 1 shipped, opening weekly betas ahead of a release candidate on August 5 and a final release on August 19 at WordCamp US; the cycle centers on per-viewport responsive block styling, an Abilities API expansion for AI tooling, and updated component defaults.",
+          "source": "WordPress.org",
+          "url": "https://developer.wordpress.org/news/2026/07/whats-new-for-developers-july-2026/",
+          "why": "Marks the window for plugin and theme developers to test compatibility before 7.1's features lock in."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin holds near $64,500 as cool CPI offsets an Iran-driven oil spike",
+          "summary": "Bitcoin gained roughly 3-4% after June CPI came in cooler than expected, cutting odds of a July Fed rate hike from about 50% to 12%, even as President Trump reinstated a blockade on the Strait of Hormuz and oil jumped above $80 a barrel.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/business/2026/07/14/live-updates-bitcoin-holds-usd62-600-as-the-iran-conflict-reignites-and-cpi-looms",
+          "why": "Bitcoin is trading on the same rate-cut and geopolitical-risk crosscurrents moving broader markets right now."
+        },
+        {
+          "headline": "Bitcoin ETFs shed $425M in a single day, erasing the prior week's gains",
+          "summary": "US spot bitcoin ETFs posted $424.7 million in net outflows on July 13, more than double the $197.4 million they had attracted over the previous five trading days, led by redemptions from Fidelity's FBTC and BlackRock's IBIT.",
+          "source": "CryptoSlate",
+          "url": "https://cryptoslate.com/bitcoin-etfs-lose-over-424m-wiping-out-last-weeks-gains-as-recovery-fails-first-test/",
+          "why": "The reversal suggests last week's brief inflow streak was driven by one or two funds rather than a broad rebound in demand."
+        }
+      ]
+    }
+  ]
+}
