@@ -1,0 +1,104 @@
+{
+  "date": "2026-07-16",
+  "intro": "Anthropic's Bun team rewrote a million-line Zig codebase to Rust with 50 parallel Claude agents in 11 days, sparking an \"AI slop\" backlash; Thinking Machines Lab ships its first open-weight model; and bitcoin pushes toward $65,000 as Japan cuts its crypto tax rate to a flat 20%.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Bun's Zig-to-Rust rewrite, done by 50 parallel Claude agents in 11 days, draws an \"unreviewed slop\" backlash",
+          "summary": "Bun creator Jarred Sumner ran roughly 50 concurrent Claude Code workflows -- peaking at 1,300 lines of code per minute -- to port Bun's core from Zig to Rust, generating over a million lines of code for about $165,000 in API costs; the rewrite passed Bun's full test suite of a million-plus assertions, but a pull request removing 600,000 lines of Zig was auto-flagged by GitHub as \"AI slop,\" and Zig's creator publicly called the process unreviewed.",
+          "source": "The Register",
+          "url": "https://www.theregister.com/devops/2026/07/14/zig-creator-calls-buns-claude-rust-rewrite-unreviewed-slop/5270743",
+          "why": "It's one of the largest AI-driven rewrites of a widely used tool to date, and it's forcing an open argument about whether commits this size can be meaningfully reviewed by humans at all."
+        },
+        {
+          "headline": "Sophos: Claude Code, Cursor and Codex are triggering the same Windows detection rules built to catch attackers",
+          "summary": "Analyzing seven days of Windows endpoint telemetry, Sophos found that Claude Code, Cursor and Codex routinely trip behavioral rules for credential access, LOLBin downloads and persistence -- the same signals security tools use to flag intrusions -- because coding agents legitimately touch the same files and processes attackers do.",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/07/ai-coding-agents-found-triggering.html",
+          "why": "Security teams now have to distinguish a coding agent doing its job from an attacker doing reconnaissance, using the same telemetry for both."
+        },
+        {
+          "headline": "A Haskell shop drops the language for Python, blaming AI agents' need for fast compiles",
+          "summary": "Scarf founder Avi Press said the open-source analytics company is moving new development from Haskell to Python after seven years, arguing that when an LLM can write a working implementation in minutes, Haskell's comparatively slow compile times become a bottleneck for running multiple coding agents at once -- a post that set off a backlash in the Haskell community.",
+          "source": "The Register",
+          "url": "https://www.theregister.com/devops/2026/07/15/prominent-haskell-defector-pilloried-by-anti-ai-purists/5272124",
+          "why": "A concrete case of a language's tooling economics changing because the primary author is now often an agent rather than a human typing."
+        },
+        {
+          "headline": "OpenAI ships a $230 light-up keyboard built around managing Codex agents",
+          "summary": "OpenAI, with keyboard maker Work Louder, launched the limited-run Codex Micro: a keyboard with status-showing \"Agent Keys,\" programmable Command Keys for frequent Codex actions, a joystick for common workflows, and a dial that adjusts how much reasoning compute an agent uses on a task.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/15/amid-hardware-legal-battle-openai-releases-a-230-keyboard-for-codex/",
+          "why": "A physical \"command center for agentic work\" is a small but telling sign of how much of a developer's day labs now expect to be spent supervising fleets of agents rather than typing code."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Mira Murati's Thinking Machines Lab releases Inkling, its first open-weight model",
+          "summary": "Thinking Machines Lab released Inkling, a 975-billion-parameter mixture-of-experts model that activates about 41 billion parameters per task and was trained on 45 trillion tokens of text, image, audio and video, reasoning natively across all four -- unlike the closed flagship models from OpenAI, Anthropic and Google, its weights are downloadable and modifiable.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/",
+          "why": "It's a bet that open, natively multimodal weights beat one-size-fits-all proprietary models -- from a lab with the funding and pedigree to make that bet credible."
+        },
+        {
+          "headline": "Google opens Gemini 3.1 Deep Think's API to select researchers",
+          "summary": "Google's updated Deep Think reasoning mode is now available in the Gemini app for AI Ultra subscribers and, for the first time, via the Gemini API to a limited set of researchers, engineers and enterprises; early testers include a Rutgers mathematician who used it to catch a logical flaw in a paper that had passed human peer review.",
+          "source": "Google",
+          "url": "https://blog.google/products/gemini/gemini-3-deep-think/",
+          "why": "Moving Deep Think from a consumer feature to an API signals Google wants it used as a research tool, not just a chat mode."
+        },
+        {
+          "headline": "Chinese open-weight models now lead both Hugging Face downloads and OpenRouter usage",
+          "summary": "Chinese open-weight models accounted for 41% of Hugging Face downloads this spring, overtaking US models, and the six most-used models on OpenRouter are now all open-weight releases from Chinese firms including Tencent, Xiaomi, DeepSeek, MiniMax and Z.ai.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/14/the-real-ai-race-may-no-longer-be-at-the-frontier-open-models-hugging-face/",
+          "why": "The competitive frontier that matters to most developers may now be open-weight usage share, not closed-model benchmark scores."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "\"GhostLock,\" a 15-year-old Linux kernel bug, gets a public, 97%-reliable root exploit",
+          "summary": "GhostLock (CVE-2026-43499) is a use-after-free in code that has shipped in essentially every mainstream Linux distribution since 2011, letting any logged-in local user gain root and escape containers; it needs no special privileges or network access, was fixed upstream in April, and now has public, highly reliable exploit code as distributions roll out patches.",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/07/15-year-old-ghostlock-flaw-enables-root.html",
+          "why": "Container escape plus a decade-and-a-half of default exposure across nearly every distro makes unpatched hosts and multi-tenant containers an easy target now that exploit code is public."
+        },
+        {
+          "headline": "Indian AI-coding startup Emergent hits unicorn status with $130M Series C",
+          "summary": "Emergent raised $130 million led by Creaegis at a $1.5 billion valuation -- a five-fold jump in six months -- to build out its consumer-focused \"vibe coding\" platform, which handles deployment, hosting and debugging for non-technical users rather than targeting developers directly like Claude Code, Codex or Cursor.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/15/indian-ai-coding-startup-emergent-becomes-a-unicorn-just-over-a-year-after-launch/",
+          "why": "A five-fold valuation jump in half a year shows how much capital is still chasing the consumer end of AI coding, distinct from the developer-tool race."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin nears $65,000 as cooler-than-expected US inflation guts rate-hike odds",
+          "summary": "Bitcoin rose about 3.6% toward $65,000 after June headline CPI eased to 3.5% from 4.2% and PPI came in below forecast, cutting implied odds of a near-term Fed rate hike from 43% to 13%; Wintermute flagged $65,000 as a recurring resistance level with profit-taking already emerging.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/15/bitcoin-tops-usd64-000-as-cooling-u-s-inflation-guts-the-fed-rate-hike-trade",
+          "why": "The rally is being driven by macro rate expectations rather than crypto-specific catalysts, and it's running into a level that has repeatedly capped price before."
+        },
+        {
+          "headline": "Japan reclassifies crypto as a financial instrument, cutting the top tax rate to a flat 20%",
+          "summary": "Japan's amended financial and payments laws move crypto from a payments-focused regime into an investment framework taking effect in 2027, with the top tax rate on crypto income cut from as high as 55% to a flat 20% starting in 2028, split between national and regional authorities; the overhaul also opens the door to spot bitcoin ETFs and adds insider-trading and disclosure rules for issuers and exchanges.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/policy/2026/07/15/japan-reclassifies-crypto-as-a-financial-asset-paves-way-for-tax-cuts",
+          "why": "Cutting the tax rate from 55% to 20% and clearing a path to spot ETFs is the country's biggest crypto policy shift in years, in one of bitcoin's largest markets."
+        }
+      ]
+    }
+  ]
+}
