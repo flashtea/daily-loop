@@ -1,0 +1,104 @@
+{
+  "date": "2026-07-17",
+  "intro": "A wire-level analysis catches xAI's Grok Build CLI quietly shipping developers' full repositories and secrets to the cloud; Moonshot ships the largest open-weight model yet as the CEOs of the three top labs converge on calls to regulate frontier AI; and bitcoin gets pulled in opposite directions by a Seoul rate hike and money rotating out of AI stocks.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Wire-level proof: xAI's Grok Build CLI was uploading entire repos and secrets to the cloud",
+          "summary": "A security researcher's mitmproxy analysis of Grok Build v0.2.93 found the coding-agent CLI packaging developers' full tracked repositories -- git history and unredacted .env secrets included -- and uploading them to a Google Cloud Storage bucket at roughly 27,800 times the volume the actual coding task required; xAI silently disabled the upload path and added a disable_codebase_upload flag days later without any public advisory.",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/07/grok-build-uploads-entire-git.html",
+          "why": "Developers who pointed the tool at real codebases should treat any exposed API keys, database passwords or cloud tokens as compromised and rotate them -- and the silent, undisclosed fix raises its own questions about transparency."
+        },
+        {
+          "headline": "Anaconda buys Kilo Code, the open-source coding-agent platform routing 10 trillion tokens a month",
+          "summary": "Anaconda acquired Kilo Code, a model-agnostic agentic coding platform used by more than 3 million developers across VS Code, JetBrains, the browser and the command line with access to 500-plus AI models and no vendor lock-in; terms weren't disclosed, and Anaconda says early customers are seeing 30-50% lower token spend from Kilo's model routing.",
+          "source": "Anaconda",
+          "url": "https://www.anaconda.com/blog/anaconda-acquires-kilo-code",
+          "why": "It folds one of the largest independent, vendor-agnostic coding-agent platforms into an enterprise governance business, just as labs race to lock developers into their own agents."
+        },
+        {
+          "headline": "GitHub Copilot in Visual Studio starts checking MCP servers against a trusted baseline before they run",
+          "summary": "Visual Studio's latest Copilot update compares an MCP server's configuration and asset fingerprint against a known-good baseline at startup, prompting developers to review and approve any changes before the server is allowed to execute, alongside a real-time usage-and-billing window for usage-based plans.",
+          "source": "GitHub",
+          "url": "https://github.blog/changelog/2026-07-14-github-copilot-in-visual-studio-june-update/",
+          "why": "MCP servers can run arbitrary code inside a developer's IDE, and this is one of the first mainstream guardrails against a tampered or swapped-out server."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Hassabis, Amodei and Altman each publish their own blueprint for policing frontier AI",
+          "summary": "Within about five weeks, Google DeepMind's Demis Hassabis, Anthropic's Dario Amodei and OpenAI's Sam Altman each published proposals for outside oversight of the most capable AI models -- a FINRA-style industry-funded self-regulator, an FAA-style federal agency empowered to block deployments, and an IAEA-style international certification body, respectively -- the first time the three rivals have converged in writing on the same basic diagnosis.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/07/14/google-deepmind-demis-hassabis-us-led-ai-standards-body.html",
+          "why": "It's a rare, on-the-record agreement among the leaders of the three top labs that today's voluntary, self-reported safety testing is no longer enough."
+        },
+        {
+          "headline": "Moonshot AI's Kimi K3 becomes the largest open-weight model yet released",
+          "summary": "Chinese startup Moonshot AI launched Kimi K3, a roughly 2.7-trillion-parameter mixture-of-experts model with a 1-million-token context window, which the company says performs comparably to Anthropic's flagship Claude Fable 5 while pricing output at $15 per million tokens versus Fable's $50.",
+          "source": "Fortune",
+          "url": "https://fortune.com/2026/07/16/moonshots-kimi-k3-pushes-chinese-ai-into-fable-level-territory/",
+          "why": "A Chinese lab matching a top US closed model's benchmark scores, in the open, months ahead of analyst expectations, sharpens the debate over whether export controls are actually slowing China's frontier work."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Attackers hijack AsyncAPI's own CI pipeline to poison 5 npm packages with 3 million weekly downloads",
+          "summary": "A misconfigured GitHub Actions pull_request_target workflow let attackers run code through a pull request, steal the project's privileged bot token, and push malware into five @asyncapi npm packages within a 90-minute window; the payload executes at import time rather than install time -- so npm install --ignore-scripts doesn't help -- and steals browser passwords, SSH keys, npm/GitHub tokens, AWS credentials and crypto wallets, all while the poisoned releases still carry valid SLSA provenance signatures because the legitimate OIDC pipeline published them.",
+          "source": "Microsoft Security Blog",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/07/15/unpacking-asyncapi-npm-supply-chain-compromise-import-time-payload-delivery/",
+          "why": "Valid provenance attestations are supposed to prove a package is trustworthy -- this shows they only prove which workflow ran, not that the commit behind it was legitimate."
+        },
+        {
+          "headline": "Dependabot now waits 3 days before opening a version-update PR, by default",
+          "summary": "GitHub made a package \"cooldown\" the default behavior for all users: Dependabot now waits at least three days after a new release lands on its registry before opening a version-update pull request, giving the community time to flag a bad release before it gets auto-merged into dependents' builds; security-patch updates are unaffected and still deploy immediately.",
+          "source": "GitHub",
+          "url": "https://github.blog/changelog/2026-07-14-dependabot-version-updates-introduce-default-package-cooldown/",
+          "why": "It directly shrinks the window in which a freshly published malicious package -- like the AsyncAPI one above -- gets automatically pulled into downstream projects."
+        },
+        {
+          "headline": "GitHub secret scanning adds Resend and APIclub as detection partners",
+          "summary": "GitHub Advanced Security's secret scanning and public leak monitoring now recognize new token formats from email provider Resend and from APIclub, and push protection blocks VolcEngine secrets by default in repos with secret scanning enabled; the secret_scanning_alert webhook also gained a category field distinguishing provider/custom detections from generic, AI-detected ones.",
+          "source": "GitHub",
+          "url": "https://github.blog/changelog/2026-07-15-improvements-to-secret-scanning-and-public-monitoring/",
+          "why": "Small on its own, but it widens the set of leaked credentials GitHub can catch and auto-revoke before they're exploited."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin fails twice at $65,000 as a Seoul rate hike and an AI-stock unwind pull it in opposite directions",
+          "summary": "The Bank of Korea raised its policy rate 25 basis points to 2.75% on July 16 -- its first hike since January 2023 -- triggering forced liquidations across South Korean retail crypto accounts, even as bitcoin separately drew capital rotating out of AI stocks: the Semiconductor ETF (SOXX) has fallen 17.6% since July 1 while bitcoin's ETF (IBIT) gained 9.5% over the same stretch. BTC still failed twice this week to hold above $65,000, with Bitfinex analysts calling the rally \"borrowed strength\" given a negative Coinbase premium and thin spot volume.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/16/live-updates-zachxbt-calls-hardware-wallets-complete-garbage-btc-steady-near-usd65-000",
+          "why": "Two unrelated forces -- Asian rate-driven de-risking and a rotation out of AI-stock froth -- are pulling bitcoin in opposite directions in the same week, and neither reflects organic bitcoin-specific demand."
+        },
+        {
+          "headline": "Morgan Stanley's E*Trade rolls out spot bitcoin trading to its 8.6 million customers",
+          "summary": "E*Trade, using Zero Hash as its digital-asset infrastructure partner, completed its rollout of round-the-clock spot trading in bitcoin, ether and solana for eligible brokerage clients, charging a 50-basis-point fee and letting customers hold crypto alongside stocks and retirement accounts in the same platform.",
+          "source": "Decrypt",
+          "url": "https://decrypt.co/373681/morgan-stanley-launches-bitcoin-ethereum-solana-trading-etrade",
+          "why": "It's one of the largest traditional brokerages yet to fold spot bitcoin trading directly into a mainstream retail platform, at meaningful scale."
+        },
+        {
+          "headline": "White House to broker talks on the Clarity Act's stalled ethics provision ahead of a Senate floor vote",
+          "summary": "With the crypto market-structure bill formally eligible for a Senate floor vote but stalled over a Democratic-backed provision restricting senior officials' personal crypto holdings -- aimed squarely at Trump's own crypto business ties -- the White House is expected to meet with senators from both parties to try to resolve the impasse before the Senate's August recess.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/policy/2026/07/15/high-level-white-house-meeting-said-to-be-planned-to-hash-out-clarity-act-ethics-section",
+          "why": "The Clarity Act is the most significant pending U.S. crypto market-structure legislation, and this ethics fight is the last major obstacle before a floor vote."
+        }
+      ]
+    }
+  ]
+}
