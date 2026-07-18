@@ -1,0 +1,90 @@
+{
+  "date": "2026-07-18",
+  "intro": "Kimi K3's shockwaves keep spreading -- a global chip-stock selloff, a new Frontend Code Arena leader -- while Shanghai's WAIC opens with Xi Jinping's first-ever appearance and a 29-country AI governance pact, and bitcoin gets dragged into the same risk-off unwind alongside fresh Iran strikes.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Kimi K3 tops Arena's Frontend Code leaderboard, ahead of Claude Fable 5 and GPT-5.6",
+          "summary": "Within hours of its debut, Moonshot AI's open-weight Kimi K3 climbed to No. 1 on Arena.ai's Frontend Code Arena, scoring 1,679 versus Claude Fable 5's 1,631 and GPT-5.6 Sol's 1,618; Moonshot also shipped two point releases of its Kimi Code coding agent the same day.",
+          "source": "The New Stack",
+          "url": "https://thenewstack.io/kimi-k3-open-weight-coding/",
+          "why": "It's the first time an open-weight model has led a major real-world coding benchmark ahead of both leading closed US models."
+        },
+        {
+          "headline": "Claude Code adds background /fork sessions and runaway-loop limits",
+          "summary": "Anthropic's July 17 Claude Code update makes /fork copy a conversation into a new background session while you keep working (the in-session version is now /subtask), and adds default session caps of 200 WebSearch calls and 200 subagent spawns to stop runaway search or delegation loops; long-running MCP tool calls now move to the background automatically.",
+          "source": "Anthropic",
+          "url": "https://code.claude.com/docs/en/changelog",
+          "why": "The new caps directly target a class of bugs where unbounded subagent fan-out or search loops burn tokens without a developer noticing."
+        },
+        {
+          "headline": "GitHub Copilot usage metrics go repository-level",
+          "summary": "GitHub's Copilot usage metrics REST API now exposes two new endpoints returning a daily, per-repository breakdown of pull request activity for Copilot's coding agent and Copilot code review, on top of the org- and team-level views already available.",
+          "source": "GitHub",
+          "url": "https://github.blog/changelog/2026-07-17-repository-level-github-copilot-usage-metrics-generally-available/",
+          "why": "Engineering leaders can now see which specific repos are actually benefiting from Copilot, rather than relying on org-wide averages."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Kimi K3's launch triggers a global AI-valuation selloff in chip stocks",
+          "summary": "Moonshot AI's 2.8-trillion-parameter open-weight Kimi K3 -- released July 16 alongside a TSMC earnings report flagging higher-than-expected capex -- rekindled investor scrutiny of US AI infrastructure spending; the Philadelphia Semiconductor Index fell roughly 11% on the week, Nvidia dropped about 3.4%, and AMD and Applied Materials each fell 5% or more.",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/newsletters/2026-07-17/chip-stocks-lead-selloff-as-investors-question-ai-assumptions",
+          "why": "A Chinese lab matching top US models' benchmark scores, in the open, is now moving hundreds of billions of dollars in US tech market cap -- not just AI-industry sentiment."
+        },
+        {
+          "headline": "Xi Jinping opens Shanghai's WAIC, unveils a 29-nation AI governance body",
+          "summary": "The 2026 World Artificial Intelligence Conference opened in Shanghai on July 17 with President Xi Jinping's first-ever in-person appearance at the event; 29 countries signed an agreement establishing a new World Artificial Intelligence Cooperation Organization, and more than 300 products made their global premiere among 1,100-plus exhibiting companies.",
+          "source": "South China Morning Post",
+          "url": "https://www.scmp.com/tech/article/3360404/xi-jinping-attend-world-ai-conference-first-time-china-elevates-tech-push",
+          "why": "It's Beijing's most visible push yet to position itself as a co-author of global AI governance rules rather than just a fast-follower on models."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "PostgreSQL 19 Beta 2 released",
+          "summary": "The PostgreSQL Global Development Group shipped the second beta of PostgreSQL 19 on July 16, the latest feature preview ahead of a general-availability release expected around September or October 2026.",
+          "source": "PostgreSQL.org",
+          "url": "https://www.postgresql.org/about/news/postgresql-19-beta-2-released-3350/",
+          "why": "Beta 2 is the point where the project wants real application workloads tested, not just syntax checks, before the feature set locks."
+        },
+        {
+          "headline": "GitHub Projects ships advanced AND/OR search, now generally available",
+          "summary": "The filter bar in GitHub Projects views now supports advanced search expressions using AND and OR logic instead of requiring a separate saved view for every question, and pull request items can now be filtered by review state with a new reviews: qualifier.",
+          "source": "GitHub",
+          "url": "https://github.blog/changelog/2026-07-16-advanced-search-for-projects-is-generally-available/",
+          "why": "It closes a long-standing gap between GitHub Projects and dedicated project-tracking tools that have supported compound filters for years."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin slides below $63,000 as fresh Iran strikes and the AI selloff hit risk assets",
+          "summary": "Bitcoin fell below $63,000 on July 17 as new US airstrikes on Iran, a fresh US-China trade dispute, and the AI-valuation reassessment sweeping chip and tech stocks pushed investors out of risk assets broadly; the decline extended a 1.4% slide from the prior session and left BTC roughly 5% off its recent highs.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/17/risk-off-wave-drags-bitcoin-below-usd63-000-as-ai-selloff-spreads-from-stocks-to-crypto",
+          "why": "It shows bitcoin trading as a risk asset alongside tech stocks this week rather than decoupling from equity-market stress."
+        },
+        {
+          "headline": "Bitcoin ETFs post a third straight day of inflows, led by BlackRock's IBIT",
+          "summary": "US spot bitcoin ETFs pulled in $79.15 million on July 16, extending a three-day inflow streak to about $368 million and snapping an eight-week outflow run of more than $8 billion; BlackRock's IBIT led with $33.44 million, followed by Fidelity's FBTC at $30.73 million.",
+          "source": "Bitcoin.com News",
+          "url": "https://news.bitcoin.com/investors-push-79m-into-bitcoin-etfs-as-ether-funds-lose-28m/",
+          "why": "It's the clearest sign yet that institutional demand was stabilizing just before Friday's broader risk-off wave hit price."
+        }
+      ]
+    }
+  ]
+}
