@@ -1,0 +1,104 @@
+{
+  "date": "2026-07-19",
+  "intro": "A quieter Sunday after Kimi K3's shockwaves, but the fallout keeps surfacing: Washington moves to control who gets access to frontier AI models, Google's Gemini 3.5 Pro slips again over coding shortfalls, and bitcoin's Coinbase premium hits a record losing streak as Congress argues over crypto rules.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Google delays Gemini 3.5 Pro again after it misses internal coding targets",
+          "summary": "Google's flagship Gemini 3.5 Pro remains months behind its original schedule after the model fell short of internal expectations on coding and complex reasoning tasks; the company reset its training data in June to address the gap but results were reportedly still disappointing.",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-07-16/google-gemini-launch-delayed-as-tech-falls-short-of-internal-goals",
+          "why": "Google is now the one flagship lab visibly behind on coding capability, just as Anthropic, OpenAI and open-weight Chinese labs all ship competitive coding models."
+        },
+        {
+          "headline": "VS Code 1.129 ships a dedicated agent host and a new Agents editor panel",
+          "summary": "The July release of Visual Studio Code adds a dedicated background process for running agent sessions that multiple windows can connect to, a new experimental editor panel for reviewing agent-generated diffs, the ability to run terminal commands from chat with a \"!\" prefix, and a preview of a redesigned workbench UI.",
+          "source": "Visual Studio Code",
+          "url": "https://code.visualstudio.com/updates/v1_129",
+          "why": "It's Microsoft further restructuring the editor itself around long-running, multi-window agent sessions rather than single inline suggestions."
+        },
+        {
+          "headline": "Indian vibe-coding startup Emergent becomes a unicorn a year after launch",
+          "summary": "Emergent raised a $130 million Series C led by Creaegis at a $1.5 billion valuation, a five-fold jump in six months; the AI-agent app-building platform now has an annualized run rate of $120 million and more than 200,000 paying customers.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/15/indian-ai-coding-startup-emergent-becomes-a-unicorn-just-over-a-year-after-launch/",
+          "why": "It's one of the fastest unicorn runs of the year, and a sign investor appetite for AI app-building tools hasn't cooled despite a crowded field."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "The White House starts dictating who gets access to frontier AI models",
+          "summary": "The Trump administration has begun directly deciding which companies and government entities can access the most capable models from Anthropic and OpenAI, a decision that until now sat with the labs themselves; it follows a June executive order asking AI companies to give the government early access to models for testing.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/07/17/white-house-ai-access-anthropic-openai.html",
+          "why": "It's a real shift in leverage from the AI labs to the federal government over who can use the most powerful models, arriving the same week a Chinese open-weight model narrowed the capability gap."
+        },
+        {
+          "headline": "Thinking Machines ships Inkling, its first open-weight model",
+          "summary": "Mira Murati's Thinking Machines Lab released Inkling, a 975-billion-parameter mixture-of-experts model (41 billion active parameters) that reasons over text, images and audio with a 1-million-token context window, plus a smaller preview variant called Inkling-Small.",
+          "source": "Thinking Machines Lab",
+          "url": "https://thinkingmachines.ai/news/introducing-inkling/",
+          "why": "It's the company's first public model release and adds another credible open-weight frontier option alongside this month's Chinese releases."
+        },
+        {
+          "headline": "OpenAI says automated red-teaming model GPT-Red keeps cutting jailbreak success rates",
+          "summary": "OpenAI detailed GPT-Red, an internal-only automated red-teaming model trained at large compute scale that generates attacks during training to harden production models; the company says GPT-5.6 Sol now fails on only 0.05% of GPT-Red's direct prompt-injection attempts.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/unlocking-self-improvement-gpt-red/",
+          "why": "It's a concrete example of using models to find and close their own successors' safety gaps before release, rather than relying only on human red-teamers."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Microsoft's July Patch Tuesday fixes a record 570 flaws, including 3 zero-days",
+          "summary": "Microsoft's largest Patch Tuesday ever addressed 570 vulnerabilities, 59 of them critical, including three zero-days (two already exploited in the wild); Microsoft credited an internal AI-driven vulnerability-scanning system with helping surface the unusually high volume.",
+          "source": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-july-2026-patch-tuesday-fixes-massive-570-flaws-3-zero-days/",
+          "why": "Two of the zero-days are already under active attack, so unpatched Windows and SharePoint deployments are an immediate risk."
+        },
+        {
+          "headline": "GitHub's CodeQL 2.26 adds Kotlin 2.4 support and AI prompt-injection detection",
+          "summary": "GitHub shipped CodeQL 2.26.0 with support for Kotlin 2.4.0, a new JavaScript/TypeScript query that flags system-prompt injection vulnerabilities, and accuracy improvements across several languages; the update rolls out automatically to GitHub code scanning.",
+          "source": "GitHub",
+          "url": "https://github.blog/changelog/2026-07-10-codeql-2-26-0-adds-kotlin-2-4-0-support-and-ai-prompt-injection-detection/",
+          "why": "It's one of the first mainstream static-analysis checks aimed specifically at prompt-injection bugs in AI-integrated code."
+        },
+        {
+          "headline": "npm v12 turns off install scripts and remote/git dependencies by default",
+          "summary": "npm v12, now the default registry client, no longer runs preinstall, install or postinstall scripts (including implicit native builds) or resolves git and remote-URL dependencies unless a project explicitly allows them, closing off a technique used in numerous supply-chain attacks.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-08-npm-install-time-security-and-gat-bypass2fa-deprecation/",
+          "why": "Teams that haven't run `npm approve-scripts` yet will see builds start failing until they explicitly allowlist the scripts they trust."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Coinbase's bitcoin premium stays negative for a record 60 straight days",
+          "summary": "Bitcoin fell below $63,000 on July 17 as the Coinbase Bitcoin Premium Index extended its negative streak to 60 consecutive days, the longest on record and well past the prior 40-day streak from January-February, a signal analysts read as persistently weak U.S. institutional demand.",
+          "source": "The Block",
+          "url": "https://www.theblock.co/post/408793/bitcoin-slides-63000-coinbase-premium-stays-negative-record-60-days",
+          "why": "A record-long negative premium points to structurally soft U.S. buying pressure even as bitcoin's price has partly recovered from June's lows."
+        },
+        {
+          "headline": "House CLARITY Act hearing in New York pressures Senate ahead of August recess",
+          "summary": "The House Financial Services Committee held a field hearing at Federal Hall on July 17 pushing the Senate to pass the CLARITY Act, the bill that would split digital-asset oversight between the SEC and CFTC; the Senate still lacks the seven to nine Democratic votes needed to clear a filibuster, with disputes over insider-trading rules and stablecoin yield unresolved.",
+          "source": "crypto.news",
+          "url": "https://crypto.news/clarity-act-senate-showdown-why-the-july-17-hearing-decides-cryptos-2026/",
+          "why": "This is the last realistic window for crypto market-structure legislation before Congress leaves for August recess."
+        }
+      ]
+    }
+  ]
+}
