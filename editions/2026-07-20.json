@@ -1,0 +1,90 @@
+{
+  "date": "2026-07-20",
+  "intro": "A quiet Monday news-wise, but three slow-burn stories reach decision points at once: Anthropic permanently rations its top model while shopping for more compute, chip stocks confirm a bear market after last week's Kimi K3 scare, and the CLARITY Act's last realistic shot at passage runs into a Democratic ethics revolt.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Anthropic makes Claude Fable 5 a permanent, rationed feature — and pushes Pro users to pay-per-token",
+          "summary": "Starting today, Fable 5 is included in Max and Team Premium plans at 50% of already-reduced weekly limits, while Pro and Team Standard subscribers lose bundled access entirely, getting a one-time $100 credit before falling back to API pricing of $10 per million input tokens and $50 per million output tokens — the steepest rate of any Claude model.",
+          "source": "The Decoder",
+          "url": "https://the-decoder.com/anthropic-slashes-claude-fable-5-limits-in-max-and-team-premium-and-pushes-pro-users-toward-api-pricing/",
+          "why": "It ends five weeks of extend-and-relaunch churn on Anthropic's flagship model and effectively meters Claude Code's most capable model for everyone but Max/Team Premium subscribers."
+        },
+        {
+          "headline": "GitHub Code Quality exits free preview, starts charging $10 per active committer",
+          "summary": "GitHub's Code Quality product — quality gates, coverage enforcement, and AI-assisted detection layered on Copilot code review and Autofix — moves from public preview to a paid, generally available product today, after more than 10,000 enterprises used the free preview.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-06-16-github-code-quality-generally-available-july-20-2026/",
+          "why": "Teams that adopted it during preview now face a per-committer bill unless they explicitly disable it before usage-based charges kick in."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Anthropic in early talks to lease up to $10 billion in compute from Meta",
+          "summary": "Anthropic proposed the arrangement in June and Meta is now evaluating it; if finalized, Anthropic would pay Meta monthly across a two-year term, with either side able to walk away early. The deal would be smaller than Anthropic's $45 billion, three-year compute agreement with SpaceX signed in May.",
+          "source": "CNBC / Yahoo Finance",
+          "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-talks-lease-meta-computing-170931284.html",
+          "why": "It's a direct read on how compute-constrained Anthropic is right now — the same constraint behind this week's Fable 5 rationing — and a new revenue angle for Meta's AI infrastructure buildout."
+        },
+        {
+          "headline": "Chip stocks confirm a bear market as the AI rally unravels",
+          "summary": "The Philadelphia Semiconductor Index closed 20.2% below its late-June record on July 17, erasing roughly $3.3 trillion in global chip-stock value; Intel, Marvell and Arm are each down more than 30% from their highs, and Micron is down 30%. Moonshot AI's Kimi K3 release, which narrowed China's gap with US frontier models, is cited as the proximate trigger for renewed doubt about US AI capex returns.",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-07-17/chips-stocks-tumble-into-bear-market-as-105-ai-rally-fizzles",
+          "why": "The SOX had rallied 105% since March on AI-buildout optimism; a confirmed bear market is the market formally questioning whether that spending pays off, with Alphabet's July 22 earnings seen as the next test."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub Actions starts enforcing checkout protections against 'pwn request' attacks",
+          "summary": "Enforcement of a June security update to actions/checkout — which refuses to run when triggered by common pull_request_target 'pwn request' patterns — begins today for all supported backported versions, after the rollout was pushed back from July 16. Workflows pinned to a floating major tag pick up the change automatically; those pinned to a specific SHA or minor version need to upgrade manually.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-06-18-safer-pull_request_target-defaults-for-github-actions-checkout/",
+          "why": "pull_request_target is one of the most commonly abused GitHub Actions triggers; workflows that don't upgrade could start failing today, but ones left unpatched stay exposed to a well-known attacker-controlled-code pattern."
+        },
+        {
+          "headline": "Microsoft preps 'Project Perception,' an AI bug-fixing tool to rival Anthropic's Mythos",
+          "summary": "Microsoft is finishing an AI-powered cyber-defense product, internally codenamed Project Perception, that routes vulnerability-scanning and fix-suggestion tasks across models from Anthropic, OpenAI and Microsoft itself to keep costs well below Anthropic's Mythos-based offering. It's expected to launch as soon as this month.",
+          "source": "TechRepublic",
+          "url": "https://www.techrepublic.com/article/news-microsoft-project-perception-ai-security-tool/",
+          "why": "It's Microsoft entering the AI-driven vulnerability-remediation market Anthropic effectively created with Mythos, betting a cheaper multi-model router beats a single frontier model on cost."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "CLARITY Act's merged Senate draft drops the ethics provision Democrats demanded, threatening this week's floor vote",
+          "summary": "A merged Banking and Agriculture Committee draft released last week omits the Section 604 conflict-of-interest language barring senior officials from holding crypto interests while in office; Senators Murphy, Van Hollen and Merkley have formally come out against the bill without it. Majority Leader Thune still wants a floor vote the week of July 20, but without that language the bill likely can't clear the 60-vote threshold before the August recess.",
+          "source": "Axios",
+          "url": "https://www.axios.com/2026/07/17/clarity-act-delay-provision",
+          "why": "This is the last realistic window before Congress leaves for August recess; missing it likely pushes crypto market-structure legislation into 2027."
+        },
+        {
+          "headline": "Traders put $2.5 billion on bitcoin hitting $72,000 by month-end, timed to the Fed's July 29 decision",
+          "summary": "Large Deribit traders bought 20,000 bull call spreads (long the $70,000 strike, short the $72,000 strike) expiring July 31, betting the Fed's July 29 rate decision — where markets favor a hold at 3.5%-3.75% — will be the catalyst. Bitcoin was trading near $64,700 when the trades were placed.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/18/massive-bitcoin-call-spreads-target-usd72-000-by-month-end-right-when-the-fed-meets",
+          "why": "It's a concrete, sized bet that ties bitcoin's next leg to a specific macro catalyst rather than crypto-native news."
+        },
+        {
+          "headline": "Kraken launches USD-settled bitcoin and ether options with no crypto collateral required",
+          "summary": "Kraken began offering cash-settled BTC and ETH options via request-for-quote on Kraken Pro, letting institutional traders handle premiums, P&L and settlement entirely in dollars instead of managing crypto collateral; a public order book and European availability are planned next.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/business/2026/07/19/kraken-says-simpler-options-can-unlock-crypto-s-next-derivatives-market",
+          "why": "Kraken is betting that simpler product design, not weak demand, has kept crypto options a niche market compared to equities and FX."
+        }
+      ]
+    }
+  ]
+}
