@@ -1,0 +1,102 @@
+{
+  "date": "2026-07-21",
+  "intro": "A quieter news day: the biggest mover was Alibaba's Qwen3.8-Max preview, while GitHub shipped a cluster of AI-code-review and supply-chain-security updates.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "GitHub Code Quality reaches general availability, bundling AI code review into a paid product",
+          "summary": "GitHub Code Quality moved from preview to general availability on GitHub Enterprise Cloud and Team, pairing CodeQL's deterministic analysis with AI-assisted detection and Copilot Autofix, plus org-wide dashboards and coverage-based quality gates.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-20-github-code-quality-is-now-generally-available/",
+          "why": "It's priced at $10 per active committer/month plus usage-based AI charges — the clearest sign yet that GitHub is monetizing AI-assisted review at scale, no Copilot subscription required."
+        },
+        {
+          "headline": "Copilot code review now reads instructions from your feature branch, adds CLAUDE.md/GEMINI.md support",
+          "summary": "GitHub updated Copilot code review to pull custom instructions from a pull request's head branch instead of its base branch, and to automatically pick up REVIEW.md, GEMINI.md, and CLAUDE.md files alongside its own config format.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-17-copilot-code-review-customization-and-configurability-improvements/",
+          "why": "Lets teams iterate on review guidelines in a feature branch, and standardizes on the config files rival agent tools already use."
+        },
+        {
+          "headline": "Anaconda acquires Kilo Code, the open-source agentic coding platform used by 3M+ developers",
+          "summary": "Anaconda acquired Kilo Code, a model-agnostic agentic engineering platform that orchestrates roughly 10 trillion tokens a month across VS Code, JetBrains, web, and CLI, aiming to pair it with Anaconda's enterprise governance and cost-visibility tooling.",
+          "source": "Anaconda",
+          "url": "https://www.anaconda.com/blog/anaconda-acquires-kilo-code",
+          "why": "Consolidation move as enterprises struggle to track AI token spend scattered across tools and personal accounts."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Alibaba previews Qwen3.8-Max, a 2.4-trillion-parameter model it claims trails only Claude Fable 5",
+          "summary": "Alibaba unveiled a preview of Qwen3.8-Max, a 2.4T-parameter multimodal model handling text, images, video, and documents with a 1M-token context window, days after Moonshot AI's Kimi K3 launch. Alibaba shares rose as much as 5.4% on the announcement.",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-07-19/alibaba-s-qwen-unveils-preview-of-flagship-ai-model",
+          "why": "No independent benchmark (Artificial Analysis, LMArena) has scored it yet, but it underscores how fast Chinese frontier labs are closing the gap — and open weights are promised soon."
+        },
+        {
+          "headline": "China approves Apple Intelligence for launch, built on Alibaba's Qwen models",
+          "summary": "The Cyberspace Administration of China approved Apple Intelligence for release in the country, with Alibaba's Qwen models integrated into iOS, iPadOS, macOS, and visionOS to power on-device text and image understanding and generation.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/16/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/",
+          "why": "Ties Apple's AI rollout directly to a domestic Chinese model rather than a Western one, a regulatory condition unique to that market."
+        },
+        {
+          "headline": "Future of Life Institute's Summer 2026 AI Safety Index: no lab scores above a C+",
+          "summary": "FLI's latest safety index graded nine AI labs across 37 indicators; Anthropic led at C+ (2.66), followed by OpenAI and Google DeepMind at C, while xAI, DeepSeek, and Mistral scored F. Reviewers flagged a broad retreat from earlier safety pledges and a pivot toward military AI applications.",
+          "source": "Future of Life Institute",
+          "url": "https://futureoflife.org/ai-safety-index-summer-2026/",
+          "why": "Existential-safety scoring was the weakest domain industry-wide, with no company exceeding a C-."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub's 'pwn request' fix for actions/checkout now enforced on every supported major version",
+          "summary": "GitHub's backport blocking pull_request_target and workflow_run workflows from checking out unreviewed fork PR code — previously opt-in via actions/checkout v7 — became mandatory across v2 through v6 on July 20, closing a pattern behind multiple past supply-chain incidents.",
+          "source": "Tech Times",
+          "url": "https://www.techtimes.com/articles/321003/20260720/github-actions-gets-secure-default-ci-cd-backport-shuts-pwn-request-window.htm",
+          "why": "Workflows pinned to a floating tag like @v4 pick up the protection automatically; those pinned to a SHA or exact version need to upgrade manually."
+        },
+        {
+          "headline": "GitHub Projects ships advanced search with AND/OR filtering, generally available",
+          "summary": "GitHub Projects' filter bar now supports typed AND/OR search expressions for building custom views, along with a new reviews: filter for pull requests and a 90-day retention policy for deployment statuses.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-16-advanced-search-for-projects-is-generally-available/"
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin hits one-month high near $65,700, then pulls back with stocks",
+          "summary": "Bitcoin briefly rallied to $65,700 Monday after reports that Iranian mediators proposed a 10-day ceasefire easing oil prices, before giving back gains as 10-year Treasury yields rose to 4.59% and rate-hike expectations firmed, closing near $65,000.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/07/20/live-markets-oil-bounce-and-lingering-ai-selloff-pushes-bitcoin-under-usd64-000",
+          "why": "Shows bitcoin still trading as a macro-risk asset, moving with oil and rates rather than on crypto-specific news."
+        },
+        {
+          "headline": "Spot bitcoin ETFs pull in $273M over two weeks — a fraction of the prior $8B exodus",
+          "summary": "US spot bitcoin ETFs took in roughly $273 million over the past two weeks, following an eight-week stretch in which investors pulled more than $8 billion from the funds. Analysts note the recovery barely exceeds the smallest single-week outflow from that slump.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/20/bitcoin-etfs-see-new-money-again-but-inflows-remain-peanuts-relative-to-the-recent-exodus",
+          "why": "Too small to support claims of a institutional rotation back into bitcoin just yet."
+        },
+        {
+          "headline": "Standard Chartered reaffirms $100,000 bitcoin target, calls MicroStrategy selloff 'noise'",
+          "summary": "Standard Chartered's Geoff Kendrick renewed his year-end 2026 bitcoin price target of $100,000, dismissing recent Strategy (formerly MicroStrategy) stock sales as noise rather than a signal of weakening conviction.",
+          "source": "The Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/20/standard-chartered-renews-call-for-100000-bitcoin/"
+        }
+      ]
+    }
+  ]
+}
