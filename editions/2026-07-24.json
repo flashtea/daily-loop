@@ -1,0 +1,95 @@
+{
+  "date": "2026-07-24",
+  "intro": "The day's biggest move is a chip deal: AMD is putting up to $5 billion into Anthropic in exchange for a 2-gigawatt GPU order, landing the same week Alphabet raised its own AI capex guidance to as much as $205 billion. Coding-agent security also got concrete, with Claude Code shipping a dedicated vulnerability scanner. Bitcoin held a tight range as BitMEX, one of crypto's oldest derivatives exchanges, announced it is shutting down.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Anthropic launches Claude Security, a vulnerability scanner built into Claude Code",
+          "summary": "Anthropic released Claude Security in public beta for all Claude Code users, letting developers run terminal-based scans that trace data flows across files to catch multi-component vulnerabilities before code is committed, alongside patch suggestions.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-code-security",
+          "why": "Puts AI-powered vulnerability detection directly in the hands of the same developers using AI to write the code in the first place."
+        },
+        {
+          "headline": "VS Code 1.130 adds a dedicated agent host and faster multi-file review",
+          "summary": "The July release lets AI agent sessions run in a separate process reachable from multiple VS Code windows, adds compact diffs and worktree support to the Agents window, and lets the model pre-screen tool-call risk to cut down approval interruptions.",
+          "source": "Visual Studio Code",
+          "url": "https://code.visualstudio.com/updates/v1_130"
+        },
+        {
+          "headline": "GitHub's MCP server moves to the stateless MCP spec ahead of a protocol-wide cutover",
+          "summary": "GitHub updated its MCP server to support the next Model Context Protocol specification, which drops sessions and the initialize handshake; the protocol itself goes fully stateless on July 28.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-23-github-mcp-server-supports-the-next-mcp-specification/",
+          "why": "Simplifies scaling MCP-connected coding agents, which most major IDEs and CLIs now depend on for tool access."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "AMD to invest up to $5 billion in Anthropic in a 2-gigawatt chip deal",
+          "summary": "AMD and Anthropic announced a strategic partnership in which Anthropic will deploy up to 2 gigawatts of AMD Instinct MI450 GPU systems starting in the first half of 2027, with AMD's investment tied to Anthropic hitting deployment milestones. The companies are also jointly optimizing AMD's ROCm software for Claude.",
+          "source": "AMD",
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus",
+          "why": "AMD's largest-ever bet on a single model developer, and a sign Anthropic is diversifying compute supply beyond Nvidia."
+        },
+        {
+          "headline": "Alphabet raises 2026 AI capex guidance to as much as $205 billion",
+          "summary": "Alphabet beat Q2 revenue estimates as Google Cloud revenue surged 82%, but lifted its full-year capital expenditure forecast from $180-190 billion to $195-205 billion to keep up with AI infrastructure demand, sending the stock lower in after-hours trading.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/07/22/google-earnings-q2-goog-live-updates.html",
+          "why": "One of the clearest signals yet of how much the cloud providers think AI demand still requires spending on."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "AMD launches 6th Gen EPYC \"Venice\" server CPUs, the industry's first HPC chips on 2nm",
+          "summary": "AMD formally introduced its EPYC 9006 \"Venice\" processor family at its Advancing AI 2026 event, built on TSMC's 2nm process with up to 256 cores per chip, a new SP7 socket, and claimed 70%-plus performance gains over the prior generation.",
+          "source": "TechPowerUp",
+          "url": "https://www.techpowerup.com/351000/amd-announces-6th-gen-epyc-server-processors-powered-by-zen-6-microarchitecture",
+          "why": "Server CPU capacity underpins every cloud and AI data center developers deploy to."
+        },
+        {
+          "headline": "DeepSeek retires its legacy API model names today",
+          "summary": "DeepSeek's deepseek-chat and deepseek-reasoner API model aliases, which had been transparently routed to V4 Flash during a grace period, stop working entirely as of July 24, 2026, 15:59 UTC; callers must switch to explicit deepseek-v4-flash or deepseek-v4-pro model IDs.",
+          "source": "DeepSeek API Docs",
+          "url": "https://api-docs.deepseek.com/updates/",
+          "why": "Any integration still on the old model names breaks today with no fallback."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin consolidates below $66,000 as July's 13% recovery loses steam",
+          "summary": "Bitcoin has traded in a $64,000-$66,800 range for a third straight session after rallying more than 13% from its July 1 low near $57,750, with traders now looking to next week's Fed meeting for a fresh catalyst.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/23/crypto-catches-its-breath-as-bitcoin-settles-into-a-holding-pattern-after-its-best-month-since-january"
+        },
+        {
+          "headline": "BitMEX to shut down after 11 years, ending Sept. 23",
+          "summary": "BitMEX, the exchange that pioneered the 100x-leverage perpetual swap in 2014, told users it will wind down operations by September 23, forcibly closing remaining open positions starting August 26; the company says a proof-of-reserves check shows customer assets are fully covered.",
+          "source": "BitMEX",
+          "url": "https://www.bitmex.com/blog/bitmex-closure",
+          "why": "One of the products that defined crypto derivatives trading is exiting the market it created."
+        },
+        {
+          "headline": "Bridge hacks drain $35 million from Bitcoin- and Ethereum-linked protocols in six hours",
+          "summary": "Three separate exploits hit AFX Trade's Arbitrum bridge (~$24.15M), the Verus-Ethereum bridge (~$7.54M, the same bug class as a May hack), and Bitcoin-scaling network B² Network's staking contract (~$3.86M) within a single six-hour window.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/07/23/bitcoin-ethereum-linked-protocols-lose-usd35-million-in-multiple-attacks-hours-apart",
+          "why": "A reminder that bridges connecting bitcoin to other chains remain a recurring, unresolved attack surface."
+        }
+      ]
+    }
+  ]
+}
