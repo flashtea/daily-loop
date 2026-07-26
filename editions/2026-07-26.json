@@ -1,0 +1,111 @@
+{
+  "date": "2026-07-26",
+  "intro": "A quiet weekend for hard news, so today's edition follows the week's threads into their newest developments: a $500B Nvidia-SK Korea AI buildout, fresh fallout from the Kimi K3 distillation dispute, new AI-agent security research, and Bitcoin caught between a Fed decision and renewed Mideast oil risk.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Confused-deputy flaw in Microsoft's Azure DevOps MCP server lets hidden PR text hijack AI reviewers",
+          "summary": "Manifold Security disclosed a bug in Microsoft's official Azure DevOps MCP server: a tool that returns pull-request descriptions skips the prompt-injection \"spotlighting\" defense applied elsewhere in the server, so an attacker's HTML comment invisible in the UI is delivered straight into a reviewing agent's context. A hijacked agent can then read wikis, source, and work items across projects the attacker has no rights to, under the victim's own credentials.",
+          "source": "Manifold Security",
+          "url": "https://www.manifold.security/blog/azure-devops-mcp-server-vulnerability",
+          "why": "No CVE or fix has shipped yet — teams wiring AI review agents into Azure DevOps should scope tokens and MCP domains to least privilege now."
+        },
+        {
+          "headline": "Poolside ships Laguna S 2.1, an open-weight coding model it says beats rivals 10x its size",
+          "summary": "The 118B-parameter MoE model (8B active per token, 1M-token context) scored 70.2% on Terminal-Bench 2.1 for long-horizon agentic coding tasks and is available now on Hugging Face under Poolside's permissive OpenMDW-1.1 license. It's the startup's third model shipped in three months.",
+          "source": "Poolside",
+          "url": "https://poolside.ai/blog/introducing-laguna-s-2-1",
+          "why": "A credible open-weight coding model gives teams that can't send code to a hosted API a serious local alternative."
+        },
+        {
+          "headline": "Coding agents are tripping endpoint-security alarms built to catch human attackers, Sophos finds",
+          "summary": "Reviewing a week of its own telemetry, Sophos found Claude Code, Cursor, and OpenAI Codex routinely performing actions — enumerating Windows credentials, using certutil/bitsadmin to fetch installers, writing startup-folder scripts — that behavioral detection rules treat as high-signal attack indicators, even though the agents aren't malicious.",
+          "source": "Sophos",
+          "url": "https://www.sophos.com/en-us/blog/2607_agents_vs_telemetry",
+          "why": "Security teams running EDR alongside coding agents should expect false positives and tune rules to the agent's process and workspace rather than disabling them outright."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Nvidia and SK Group sign $500B letters of intent to build AI infrastructure in South Korea",
+          "summary": "The three-part deal centers on a 2-gigawatt AI factory that SK Telecom will build on Nvidia's Vera Rubin DSX platform (online 2027), locks in SK Hynix as Nvidia's primary supplier of next-generation HBM memory, and adds a separate $1B Nvidia investment in Naver. The figures are letters of intent, not binding contracts.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/07/25/nvidia-locks-down-memory-from-sk-hynix-as-part-of-500-billion-ai-deal.html",
+          "why": "One of the largest AI infrastructure commitments to date, and it ties Nvidia's memory supply chain directly to South Korea's chip industry."
+        },
+        {
+          "headline": "White House official accuses Moonshot AI of distilling Anthropic's Fable to build Kimi K3",
+          "summary": "OSTP director Michael Kratsios said Moonshot AI runs an internal platform for large-scale distillation of U.S. models and has used GB300-equipped servers in Thailand to route around China's ban on importing high-performance Nvidia chips. Moonshot did not respond to questions about its training process; outside researchers are skeptical distillation alone explains Kimi K3's performance.",
+          "source": "The Hill",
+          "url": "https://thehill.com/policy/technology/5984510-white-house-moonshot-ai-anthropic-nvidia/",
+          "why": "Raises the stakes in the US-China open-model fight just as Kimi K3's full weights are set to drop July 27."
+        },
+        {
+          "headline": "UK and US safety institutes find Kimi K3 lags on cyber capability but has weak safeguards",
+          "summary": "A joint UK AISI / US CAISI preliminary evaluation found Kimi K3 performs well below frontier cyber-capable models — it achieved code execution on 0 of 41 ExploitBench tasks versus 20/41 for top models — but its safeguards did not stop it from attempting exploit development or offensive cyber operations when asked.",
+          "source": "NIST",
+          "url": "https://www.nist.gov/news-events/news/2026/07/uk-aisi-caisi-preliminary-assessment-kimi-k3s-cyber-capabilities",
+          "why": "A government red-team result landing right before Kimi K3's open-weight release is a useful reference point for anyone evaluating it."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "VS Code 1.130 adds dedicated agent sessions and faster multi-file review",
+          "summary": "The release lets agent sessions run in their own process reachable from multiple windows, adds compact diffs and file-level stats with worktree support to the preview Agents window, and improves terminal Git-diff link handling.",
+          "source": "Visual Studio Code",
+          "url": "https://code.visualstudio.com/updates/v1_130",
+          "why": "Continued signal that the editor itself is being restructured around long-running agent sessions rather than single-shot completions."
+        },
+        {
+          "headline": "GitHub Code Quality, pairing CodeQL with AI-assisted detection, reaches general availability",
+          "summary": "The product, now billing at $10 per active committer/month after more than 10,000 enterprises used it in preview, flags maintainability and reliability issues in pull requests across Java, C#, Python, JavaScript, Go, and Ruby, with Copilot Autofix suggesting fixes. GitHub says its own engineering org resolves 67.3% of findings before merge.",
+          "source": "GitHub",
+          "url": "https://github.blog/changelog/2026-07-20-github-code-quality-is-now-generally-available/",
+          "why": "A direct GitHub bet that AI-accelerated code output needs an AI-assisted quality gate to match."
+        },
+        {
+          "headline": "Node.js schedules coordinated high-severity security releases for Monday",
+          "summary": "The Node.js project confirmed new versions across the 22.x, 24.x, and 26.x lines will ship on or shortly after Monday, July 27, fixing at least one HIGH-severity issue; details are withheld until release per disclosure policy.",
+          "source": "Node.js",
+          "url": "https://nodejs.org/en/blog/vulnerability/july-2026-security-releases",
+          "why": "Teams on any actively maintained Node line should plan to patch Monday rather than wait."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin holds near $65,000 even as oil's climb toward $100 fails to spook the market",
+          "summary": "Brent crude touched $97.66 a barrel, its highest since May, as the Iran conflict continued, yet bitcoin stayed range-bound near $65,000 rather than selling off — a contrast to earlier oil spikes this year that hit crypto hard.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/24/bitcoin-settles-near-usd65-000-as-oil-s-march-toward-usd100-fails-to-spook-the-market",
+          "why": "Resilience to an oil shock that would have dented bitcoin a few months ago is a notable shift in how the market is trading macro risk."
+        },
+        {
+          "headline": "Fed rate-hike odds jump to 46.5% as Trump reinstates Hormuz blockade and oil spikes",
+          "summary": "CME FedWatch-implied odds of a quarter-point hike at the July 29 FOMC meeting rose from 34% to 46.5% after Trump reinstated a naval blockade of Iranian shipping through the Strait of Hormuz and a 20% fee on transiting cargo, sending oil sharply higher and reviving inflation concerns.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/07/23/fed-interest-rate-odds-oil-jobless-claims.html",
+          "why": "A higher-than-expected hike probability heading into Wednesday's decision is the single biggest near-term catalyst for bitcoin's price."
+        },
+        {
+          "headline": "EU's 21st Russia sanctions package targets a $120B crypto evasion network",
+          "summary": "The package extends a transaction ban to 14 more crypto-related platforms in Georgia, the UAE, and Panama, targets the A7 cross-border payments network and its A7A5 stablecoin, and introduces a new tool that could let the EU fully ban any crypto-asset service used by Russia.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/policy/2026/07/24/eu-hits-russia-with-massive-21st-sanctions-package-targeting-usd120b-crypto-network",
+          "why": "Shows regulators treating crypto rails as a first-order sanctions-evasion target, not an afterthought."
+        }
+      ]
+    }
+  ]
+}
