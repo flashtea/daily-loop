@@ -1,0 +1,83 @@
+{
+  "date": "2026-07-27",
+  "intro": "The clearest \"broke today\" story is Moonshot AI's Kimi K3: its full 2.8-trillion-parameter weights are set to go public today, which would make it the largest open-weight model ever released. Beyond that it's a thin day for net-new model research, so the other beats lean on this week's freshest developments: AI agents on both sides of a Redis security scare, a Node.js patch Monday, and bitcoin holding steady as a CFTC comment window closes and the Fed's meeting looms.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Kimi K3 agents reportedly found 19 Redis zero-days and built a working RCE exploit in 27 minutes",
+          "summary": "Researcher Chaofan Shou said Kimi K3 agents surfaced 19 previously unknown Redis vulnerabilities in about 90 minutes and produced a full remote-code-execution exploit against Redis 8.8.0 in a separate 27-minute run. Redis shipped seven security releases on July 23 fixing the underlying RCE chains (patched versions include 6.2.23, 7.2.15, 7.4.10, 8.2.8, 8.4.5, 8.6.5, and 8.8.1); the claimed vulnerability count and degree of agent autonomy remain self-reported and unverified by Redis's own advisories.",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html",
+          "why": "Whatever the true autonomy level, the underlying Redis RCE chains are real and patched — anyone running Redis in production should update now."
+        },
+        {
+          "headline": "Critical ServiceNow AI Platform sandbox-escape flaw under active exploitation",
+          "summary": "Threat intelligence firms are observing in-the-wild exploitation of CVE-2026-6875, a CVSS 9.5 sandbox-escape vulnerability in ServiceNow's AI Platform that lets an unauthenticated attacker run arbitrary code by hitting a pre-auth endpoint, potentially fully compromising an instance and connected proxy servers. Patches shipped in June; ServiceNow is urging customers who haven't applied them to do so immediately.",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/07/critical-servicenow-ai-platform-flaw.html",
+          "why": "An unauthenticated RCE in a widely-deployed enterprise AI platform, now being actively exploited, is an emergency-patch situation for any unpatched instance."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Kimi K3's full weights go public today, becoming the largest open-weight model ever released",
+          "summary": "Moonshot AI committed to releasing the complete 2.8-trillion-parameter weights for Kimi K3 by July 27; as of writing, the model's Hugging Face page still showed a countdown to release rather than live download links. The MoE model activates roughly 16 of 896 experts per token, ships in a 4-bit MXFP4 format (about 594GB), and has vLLM day-0 support lined up. Independent benchmarks already place the hosted version around #3 on Artificial Analysis's Intelligence Index and #1 in the Frontend Code Arena, ahead of Claude Fable 5 on that specific eval.",
+          "source": "Moonshot AI",
+          "url": "https://huggingface.co/moonshotai/Kimi-K3",
+          "why": "A near-frontier 2.8T-parameter model with fully open weights changes the calculus for anyone weighing a hosted API against self-hosting at scale."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Node.js ships coordinated security releases across the 22.x, 24.x, and 26.x lines",
+          "summary": "The Node.js project's July 27 security releases fix at least one HIGH-severity issue across all three active lines; per its disclosure policy, specific vulnerability details are withheld until the releases are out.",
+          "source": "Node.js",
+          "url": "https://nodejs.org/en/blog/vulnerability/july-2026-security-releases",
+          "why": "Teams on any actively maintained Node line should patch today rather than wait for the details to leak out."
+        },
+        {
+          "headline": "GitHub's MCP Server adopts the next MCP spec ahead of the protocol going stateless July 28",
+          "summary": "The Model Context Protocol's next revision removes sessions and the initialize handshake step, letting clients connect faster and in parallel and removing per-call database reads/writes tied to session state. GitHub's own MCP Server has already adopted the new spec using the official Go SDK, ahead of the protocol's official stateless release tomorrow; all tier-1 SDKs have shipped backward-compatible beta support.",
+          "source": "GitHub",
+          "url": "https://github.blog/changelog/2026-07-23-github-mcp-server-supports-the-next-mcp-specification/",
+          "why": "MCP server operators should check their SDK version before the 28th — the protocol change is designed to be backward-compatible, but it's worth confirming rather than assuming."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "CFTC's comment window on 24/7 trading and bitcoin perpetual futures closes today",
+          "summary": "The Commodity Futures Trading Commission's public comment period on extending standard futures to round-the-clock trading and on listing perpetual contracts referencing spot bitcoin and other commodities closes July 27, three months after the agency cleared the first regulated bitcoin perpetual contract.",
+          "source": "CFTC",
+          "url": "https://www.cftc.gov/PressRoom/PressReleases/9259-26",
+          "why": "The rules that come out of this comment period will shape how U.S.-regulated bitcoin perpetuals and 24/7 futures markets actually operate."
+        },
+        {
+          "headline": "Bitcoin holds near $65,000, largely untouched by an $800 billion tech-stock selloff",
+          "summary": "Bitcoin stayed steady around $65,000 even as the 'Magnificent Seven' tech stocks had their worst day since 2025, a divergence from crypto's usual tendency to sell off alongside risk assets during equity drawdowns. As of today, BTC was trading around $65,000, little changed on the day.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/24/bitcoin-holds-near-usd65-000-as-usd800-billion-ai-selloff-leaves-crypto-largely-untouched",
+          "why": "Decoupling from a sharp equity selloff, rather than amplifying it, is the kind of shift in market behavior worth tracking heading into this week's Fed decision."
+        },
+        {
+          "headline": "CLARITY Act now expected to miss its window before Congress's summer recess",
+          "summary": "Senate Majority Leader John Thune said the crypto market-structure bill won't get floor time before the chamber's summer break, even as White House crypto adviser Patrick Witt argued the first week of August still has a path. A bipartisan ethics provision on officials' personal crypto trading remains the main sticking point with the Democrats whose votes the bill needs.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/policy/2026/07/23/clarity-act-expected-to-miss-its-window-before-congress-summer-break-leadership-says",
+          "why": "The regulatory-clarity bill markets have been pricing in for months keeps slipping, which matters for anything priced on the assumption it eventually passes."
+        }
+      ]
+    }
+  ]
+}
