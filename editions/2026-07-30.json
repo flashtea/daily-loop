@@ -1,0 +1,97 @@
+{
+  "date": "2026-07-30",
+  "intro": "OpenAI and Anthropic take a rare joint stance on pacing frontier AI development, MCP ships its biggest protocol overhaul yet, and bitcoin chops around the Fed's rate hold.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "MCP ships 2026-07-28 spec with a stateless core and versioned Apps/Tasks extensions",
+          "summary": "The Model Context Protocol published its 2026-07-28 specification, moving the core from a stateful, bidirectional protocol to a request/response model and spinning Apps and Tasks out as versioned extensions, so servers can deploy on serverless and edge infrastructure.",
+          "source": "Model Context Protocol Blog",
+          "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+          "why": "The biggest change to MCP since launch — it reshapes how AI coding tools and agents connect to external services."
+        },
+        {
+          "headline": "GitHub Copilot adds xAI's Grok 4.5",
+          "summary": "GitHub began rolling out Grok 4.5 in Copilot, offering up to a 500,000-token context window, image inputs, and adjustable reasoning effort, aimed at agentic and terminal-based coding tasks across Pro, Business, and Enterprise plans.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-28-grok-4-5-is-now-available-in-github-copilot/",
+          "why": "One more frontier model choice for Copilot users running multi-step agentic coding workflows."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "OpenAI and Anthropic formally back letter urging US to build AI-slowdown tools",
+          "summary": "OpenAI and Anthropic put corporate weight behind the \"Pacing the Frontier\" letter, now signed by more than 1,200 employees across major AI labs including both CEOs, asking the US government to help build the technical and governance tools needed to deliberately pace frontier AI development if it starts to outrun society's ability to control it.",
+          "source": "The Washington Post",
+          "url": "https://www.washingtonpost.com/technology/2026/07/29/openai-anthropic-endorse-call-government-pace-ai-progress/",
+          "why": "A rare joint policy stance from rival labs, signaling real internal concern about the pace of automated AI R&D."
+        },
+        {
+          "headline": "OpenAI launches ChatGPT for Academic Researchers, backed by $250M+",
+          "summary": "OpenAI unveiled a program giving up to 100,000 academic researchers free access to its frontier models, including GPT-5.6 Sol Pro, starting with 10,000 researchers this summer and backed by more than $250 million in support through 2027.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/chatgpt-for-academic-researchers/",
+          "why": "A large-scale bet on AI accelerating scientific research, and a recruiting pitch to academia."
+        },
+        {
+          "headline": "Google DeepMind disbands its AlphaFold team, shifts researchers to Gemini",
+          "summary": "Google DeepMind has broken up the team behind its Nobel Prize-winning AlphaFold protein-folding project, reassigning most members to Gemini and other priority areas as the company concentrates resources on its flagship model line.",
+          "source": "Engadget",
+          "url": "https://www.engadget.com/2225849/google-shuts-down-alphafold/",
+          "why": "A signal of how hard Google is prioritizing Gemini, even over one of DeepMind's most celebrated scientific breakthroughs."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Node.js ships emergency security release fixing 10 CVEs across all active lines",
+          "summary": "The Node.js project shipped 22.23.2, 24.18.1, and 26.5.1, patching 10 CVEs including HTTP/2 memory-exhaustion and heap-use-after-free bugs, plus a flaw letting the --permission sandbox over-grant filesystem access.",
+          "source": "Node.js",
+          "url": "https://nodejs.org/en/blog/vulnerability/july-2026-security-releases",
+          "why": "High-severity, remotely triggerable bugs — worth patching promptly on any active LTS line."
+        },
+        {
+          "headline": "GitHub Actions now holds \"potentially malicious\" workflows for manual approval",
+          "summary": "GitHub Actions will automatically flag and hold workflow runs it judges potentially malicious, requiring a maintainer to manually approve before they execute, aimed at curbing supply-chain attacks launched via malicious pull requests.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-28-github-actions-holds-potentially-malicious-workflows-for-approval/",
+          "why": "Closes a common supply-chain attack path where a malicious PR triggers secrets-exposing CI workflows."
+        },
+        {
+          "headline": "GitHub ships CodeQL 2.26.1 with broader framework coverage",
+          "summary": "CodeQL 2.26.1 improves static-analysis coverage for Go, Java/Kotlin, and JavaScript/TypeScript and reduces false positives in Rust analysis, rolling out automatically to GitHub code scanning.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-29-codeql-2-26-1-improves-analysis-accuracy-and-framework-coverage/",
+          "why": "Incremental but concrete accuracy gains for teams relying on GitHub's code scanning."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin whipsaws as Fed holds rates steady on a divided 9-3 vote",
+          "summary": "The Federal Reserve held its benchmark rate at 3.50%-3.75% for a sixth straight meeting, with three governors dissenting in favor of a hike; bitcoin briefly popped above $64,400 before giving back the move as the hawkish dissent tempered rate-cut hopes.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/29/fomc-hold-fed-holds-rates-steady-extending-pause-as-markets-await-warsh-s-policy-roadmap",
+          "why": "Rate-path expectations are currently the dominant near-term driver of bitcoin's price."
+        },
+        {
+          "headline": "Spot bitcoin ETFs extend outflow streak to four days, IBIT leads selling",
+          "summary": "US spot bitcoin ETFs posted a fourth consecutive day of net outflows on July 28, roughly $526 million over the stretch, with BlackRock's IBIT accounting for the bulk of the selling as BTC dipped under $65,000.",
+          "source": "Cointribune",
+          "url": "https://www.cointribune.com/en/bitcoin-etfs-hemorrhage-526-million-in-four-days-as-demand-crumbles/",
+          "why": "A reminder that institutional ETF flows can reverse quickly even mid-rally."
+        }
+      ]
+    }
+  ]
+}
