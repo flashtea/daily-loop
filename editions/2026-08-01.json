@@ -1,0 +1,85 @@
+{
+  "date": "2026-08-01",
+  "intro": "A five-year-old Coldcard firmware bug drains $38M in bitcoin in a 25-minute sweep, DeepSeek and Google DeepMind ship new models, and GitHub keeps pushing agentic features into Copilot and code review.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "GitHub Copilot in VS Code redesigns its Agents window, adds git-worktree multi-session support",
+          "summary": "GitHub's July 2026 Copilot update for VS Code overhauls the Agents window with a shared tab bar, per-file change counts, and a more compact diff view, and lets Copilot, Claude, or Codex sessions each run in an isolated Git worktree. Copilot vision, for adding images and PDFs to chat, also reached general availability.",
+          "source": "GitHub",
+          "url": "https://github.blog/changelog/2026-07-30-github-copilot-in-visual-studio-code-july-2026-releases/",
+          "why": "Running several agent sessions in parallel, isolated worktrees is becoming a baseline expectation for coding agents rather than a power-user trick."
+        },
+        {
+          "headline": "GitHub Copilot code review's agent skills and MCP support reach general availability",
+          "summary": "Copilot code review can now invoke a team's own SKILL.md-defined tools and standards, and pull live context from MCP servers such as issue trackers or documentation systems; all MCP calls are read-only. The feature moved from public preview to GA for Pro, Pro+, Business, and Enterprise users.",
+          "source": "GitHub",
+          "url": "https://github.blog/changelog/2026-07-29-copilot-code-review-agent-skills-and-mcp-now-generally-available/"
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "DeepSeek ships V4-Flash-0731, beating its own larger Pro model on nine agent benchmarks",
+          "summary": "DeepSeek put the official V4-Flash API into public beta under build 0731. The re-post-trained model keeps the same architecture as the earlier preview but now outscores DeepSeek's bigger V4-Pro-Preview on every published agent and coding benchmark, including a jump to 82.7 on Terminal-Bench 2.1, while pricing stays well below the Pro tier.",
+          "source": "TechNode",
+          "url": "https://technode.com/2026/07/31/deepseek-puts-v4-flash-api-into-public-beta/",
+          "why": "A cheap, fast model beating its own flagship on agent benchmarks keeps pressure on Western labs' pricing."
+        },
+        {
+          "headline": "Google DeepMind launches Gemini Robotics 2 for whole-body humanoid control",
+          "summary": "Gemini Robotics 2 extends Google DeepMind's robotics models beyond upper-body manipulation to full whole-body control — walking, crouching, bending — demonstrated on Apptronik's Apollo 2 humanoid. A companion on-device model can adapt to new dual-arm robot platforms from fewer than 200 training examples.",
+          "source": "Google DeepMind",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/"
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "pip 26.2 ships --only-deps, letting developers install a package's dependencies without the package itself",
+          "summary": "The new pip release adds an --only-deps flag to install a package's runtime dependencies without the package, plus --no-require-hashes for mixed hashed/unhashed requirements, experimental venv-based build isolation, and Python 3.15 support.",
+          "source": "Python.org",
+          "url": "https://discuss.python.org/t/announcement-pip-26-2/108319",
+          "why": "Closes a 16-year-old gap that developers have been working around with manual requirements-file hacks for container builds and testing environments."
+        },
+        {
+          "headline": "GitHub Actions starts enforcing minimum runner versions for Enterprise Cloud with Data Residency",
+          "summary": "As of July 31, self-hosted runners older than the minimum supported version (older than 2.329) can no longer register or reregister with GitHub Enterprise Cloud with Data Residency; the same enforcement lands for standard GitHub Enterprise Cloud on September 25.",
+          "source": "GitHub",
+          "url": "https://github.blog/changelog/2026-06-12-github-actions-minimum-version-enforcement-timeline-for-self-hosted-runners/"
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Coldcard wallet flaw drains 594 BTC ($38M) from 500 wallets in a 25-minute sweep",
+          "summary": "A firmware bug introduced in Coldcard Mk3 devices in March 2021 caused seed generation to fall back from the hardware random-number generator to a predictable software substitute seeded by non-secret chip data. An attacker exploited the five-year-old flaw between 01:31 and 01:56 UTC Thursday, sweeping about 594 BTC from roughly 500 wallets; Coinkite says Mk4, Q, and Mk5 devices are unaffected.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/07/31/major-bitcoin-wallet-flaw-drains-594-btc-in-25-minute-sweep",
+          "why": "One of the largest self-custody hardware-wallet losses on record, and a reminder that 'not your keys, not your coins' cuts both ways."
+        },
+        {
+          "headline": "Bitcoin holds its July gain despite the Coldcard fallout",
+          "summary": "Bitcoin is on pace to end July up roughly 7.5% even after a hawkish Fed, a broader AI-stock selloff, and the Coldcard theft. Analysts say heavy leveraged positioning was already flushed out in June, which limited forced selling through this latest bout of volatility.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/07/31/bitcoin-holds-onto-july-gain-as-forced-selling-fuel-was-already-spent-analysts-say"
+        },
+        {
+          "headline": "Traders load up on $60K puts as sentiment turns bearish for August",
+          "summary": "The $60,000 bitcoin put is now the most popular position on Deribit, the largest crypto options exchange, as traders hedge against a seasonal August pullback — a month that has historically followed a green July with a median return of roughly -7.5%.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/daybook-us/2026/07/31/bitcoin-usd60-000-put-leads-the-pack-as-mood-swings-bearish-for-august"
+        }
+      ]
+    }
+  ]
+}
