@@ -1,0 +1,94 @@
+{
+  "date": "2026-08-04",
+  "intro": "OpenAI slips its next model, Astra, into a blog post about ten solved math problems rather than a launch event; the EU's AI Act enters its enforcement phase with a live benchmark showing most models can already be talked into producing disinformation; and crypto's CLARITY Act clock runs down to a handful of days before the Senate leaves for recess.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "GitHub Copilot cloud agent gains configurable reasoning levels",
+          "summary": "Developers can now pick a reasoning depth alongside the model when handing a task to Copilot's cloud agent, across VS Code, Copilot CLI, and the GitHub Copilot app on all paid plans. Higher levels improve answers on complex problems but burn more credits per task.",
+          "source": "GitHub",
+          "url": "https://github.blog/changelog/2026-08-03-customize-the-reasoning-level-for-copilot-cloud-agent/",
+          "why": "Gives teams a lever to trade cost against depth on hard architectural and debugging work instead of a one-size-fits-all setting."
+        },
+        {
+          "headline": "Copilot automations can now trigger from PR and issue comments",
+          "summary": "GitHub Copilot's cloud agent automations can be configured to fire when a specific comment appears on an issue or pull request, with built-in templates for generating docs, investigating error logs, and spinning up follow-up refactor tickets.",
+          "source": "GitHub",
+          "url": "https://github.blog/changelog/2026-08-03-trigger-copilot-automations-with-comments/"
+        },
+        {
+          "headline": "OpenAI cuts GPT-5.6 Luna and Terra prices, adds a faster Sol tier",
+          "summary": "Luna's API price drops 80% and Terra's 20%, following OpenAI's claim that GPT-5.6 optimized its own serving efficiency. A new Fast mode for Sol runs up to 2.5x quicker than Standard at double the price, replacing the old Priority Processing option.",
+          "source": "OpenAI",
+          "url": "https://community.openai.com/t/announcing-a-major-price-drop-for-5-6-terra-and-luna-and-fast-mode-for-5-6-sol/1388484",
+          "why": "Codex and other coding agents run on the GPT-5.6 family, so this directly cuts the per-token cost of AI-assisted coding."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "OpenAI teases its next model, Astra, by having it solve ten open math problems",
+          "summary": "Rather than a product launch, OpenAI published proofs and Lean-verified certificates for ten long-standing problems in geometry, coding theory, group theory, operator algebras, and complexity theory, all produced by an internal build of Astra, described as OpenAI's next major model. OpenAI says it prepared the manuscripts but that the mathematical arguments themselves came from the system.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/ten-advances-in-mathematics/",
+          "why": "It's the first concrete signal of what OpenAI's next frontier model can do, delivered as a research result rather than a benchmark chart."
+        },
+        {
+          "headline": "EU AI Act's high-risk and transparency rules become enforceable",
+          "summary": "As of August 2, obligations under the AI Act's Article 50 kick in: chatbot disclosure, synthetic-content labeling, and deepfake marking are now required, and many high-risk system requirements move from roadmap to enforcement, backed by fines up to €15 million or 3% of global revenue. Some sensitive-domain and product-embedded systems get extended compliance windows into 2027 and 2028.",
+          "source": "European Commission",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+          "why": "The first hard enforcement date for general-purpose and high-risk AI obligations in the EU, with real financial penalties attached."
+        },
+        {
+          "headline": "Oxford benchmark finds most LLMs can be pushed into generating disinformation",
+          "summary": "InfoOpsBench, a new live benchmark drawing on over 2,100 real information-operation samples from Russian, Chinese, and Iranian state-linked media assets, tested 17 models from 8 providers and found refusal rates for influence-campaign content ranging from just 8.8% to 94.5%, since this content often doesn't trigger standard safety refusals.",
+          "source": "arXiv",
+          "url": "https://arxiv.org/html/2607.28503v1",
+          "why": "Lands right as the EU's synthetic-content transparency rules take effect, underscoring how uneven model safety still is on this specific risk."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub Enterprise Importer reaches GA for GitLab-to-GitHub migrations",
+          "summary": "Self-serve migration from gitlab.com and GitLab Self-Managed to GitHub Enterprise Cloud is now generally available, via the gh gl2gh CLI extension, supporting both single-repo and scripted bulk migrations with staging in GitHub-owned or self-hosted blob storage.",
+          "source": "GitHub",
+          "url": "https://github.blog/changelog/2026-08-03-migrate-from-gitlab-to-github-with-github-enterprise-importer/"
+        },
+        {
+          "headline": "GitHub lets enterprises delegate Copilot settings to individual teams",
+          "summary": "A new managed-settings capability lets admins mark specific Copilot configuration keys as overridable, so teams can customize their own settings via team-mappings.json files while compliance-critical keys stay locked at the enterprise level, spanning VS Code, Copilot CLI, the Copilot app, and cloud agent.",
+          "source": "GitHub",
+          "url": "https://github.blog/changelog/2026-08-03-enterprise-team-specialization-for-managed-settings/"
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "CLARITY Act down to its last days before Senate recess stalls it into 2027",
+          "summary": "With the Senate's August recess days away, the crypto market-structure bill still lacks the 60 votes needed for cloture; two Democrats are withholding support pending an ethics provision barring officials' crypto business ties, and prediction markets put 2026 passage odds around 30%. Bitcoin was trading roughly flat near $62,500-$65,000, a muted reaction analysts read as investors not positioning heavily either way.",
+          "source": "CryptoBriefing",
+          "url": "https://cryptobriefing.com/senate-crypto-clarity-act-recess-deadline/",
+          "why": "A miss this week pushes comprehensive US crypto market-structure rules off the table until next year."
+        },
+        {
+          "headline": "Hashdex to liquidate its Bitcoin ETF after two years of thin demand",
+          "summary": "Hashdex is closing the Hashdex Bitcoin ETF (NYSE Arca: DEFI), which held just $14.7 million versus tens of billions in larger rivals like BlackRock's IBIT. Trading ends August 17, with a cash liquidating distribution to remaining shareholders expected around August 28.",
+          "source": "GlobeNewswire",
+          "url": "https://www.globenewswire.com/news-release/2026/08/03/3337650/0/en/Hashdex-Announces-Closure-of-Hashdex-Bitcoin-ETF.html",
+          "why": "The first closure among the spot bitcoin ETF cohort shows how sharply demand has concentrated in a handful of the largest issuers."
+        }
+      ]
+    }
+  ]
+}
