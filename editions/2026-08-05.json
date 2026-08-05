@@ -1,0 +1,90 @@
+{
+  "date": "2026-08-05",
+  "intro": "A credential-stealing worm ripped through npm's most-downloaded caching packages, planting hooks aimed at Claude Code and VS Code, while a five-year-old Coldcard firmware bug kept draining Bitcoin from wallets their owners thought were safely offline.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "GitHub Copilot CLI 1.0.78 adds live tool-timing and instant worktrees",
+          "summary": "The update shows how long each tool call is taking in real time, auto-updates first-party plugins at session start, and adds an experimental /new-worktree command that spins up a fresh git worktree and conversation in one step.",
+          "source": "GitHub",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.78-2",
+          "why": "Small but practical workflow fixes for anyone running Copilot CLI day to day, including a login flow fix for IDE integrations."
+        },
+        {
+          "headline": "Sinch ships an MCP server and IDE plugins for its communications APIs",
+          "summary": "Sinch's new Agent Tools bring its messaging, voice, and verification APIs into VS Code, JetBrains, GitHub Copilot, Claude Code, and Cursor, with a simulator mode that lets developers test integrations before creating an account.",
+          "source": "PR Newswire",
+          "url": "https://www.prnewswire.com/news-releases/sinch-launches-agent-tools-for-developers-and-ai-coding-assistants-302842663.html",
+          "why": "One more sign that vendors are now shipping MCP servers as a default way to reach AI coding assistants, not an afterthought."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Alibaba releases Qwen3.8-Max, claims scores near Claude Fable 5 and GPT-5.6 Sol",
+          "summary": "The 2.4-trillion-parameter model (95B active per request) posts a 93.0 on PaperBench, ahead of GPT-5.6 Sol and Fable 5 on that benchmark, though no independent evaluations existed as of release.",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-08-03/alibaba-drops-another-china-ai-model-with-breakthrough-performance",
+          "why": "Another frontier-class open release from China landing within days of Alibaba's own Kimi K3 rival, underscoring how fast the gap to US labs is closing on paper."
+        },
+        {
+          "headline": "Anthropic names its first Chief Global Affairs Officer",
+          "summary": "Former California Supreme Court Justice Mariano-Florentino (Tino) Cuéllar, most recently president of the Carnegie Endowment, joins to lead policy and government relations after serving as a trustee of Anthropic's Long-Term Benefit Trust.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/tino-cuellar",
+          "why": "Comes as Anthropic works to smooth relations with the Trump administration after export-control fights over its models earlier this year."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "lead": true,
+          "headline": "npm worm hijacks keyv and 400+ packages, plants Claude Code and VS Code hooks",
+          "summary": "Attackers compromised the maintainer behind keyv (127M weekly downloads) and its sibling caching packages, pushing a preinstall script that harvests GitHub, npm, cloud, and private-key credentials across a family with billions of monthly installs. The poisoned releases carried valid GitHub OIDC and SLSA provenance, and the keyv repo itself contained Claude Code and VS Code hooks that could trigger the payload when a workspace was opened.",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/08/keyv-linked-npm-worm-poisons-hundreds.html",
+          "why": "Valid provenance signing meant standard supply-chain defenses didn't catch it, and the AI-tool hooks show attackers are now specifically targeting coding-agent workflows."
+        },
+        {
+          "headline": "GitHub retires Spark, pushes vibe-coders toward Copilot's agent tools",
+          "summary": "GitHub Spark stops accepting new users and new apps as of August 4, with existing users able to export their apps through August 31. GitHub says builders have shifted to Copilot's agentic workflows in VS Code, the CLI, and the Copilot app instead.",
+          "source": "GitHub",
+          "url": "https://github.blog/changelog/2026-08-04-upcoming-deprecation-of-github-spark-on-github-com/",
+          "why": "Follows GitHub Models' full retirement on July 30, consolidating GitHub's AI app-building story onto Copilot rather than standalone tools."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Coldcard firmware bug has now drained $116M in a fourth wave of thefts",
+          "summary": "A 2021 firmware error routed seed generation on some Coldcard hardware wallets to a weak software PRNG instead of the hardware RNG, cutting effective entropy as low as 40 bits. Attackers have swept 1,800+ BTC from over 5,200 exposed addresses since July 30; Coinkite's CEO has urged all affected users to generate new seeds and move funds immediately.",
+          "source": "Bitcoin.com News",
+          "url": "https://news.bitcoin.com/security/coldcard-hack-116-million-fourth-wave/",
+          "why": "A hardware-wallet flaw hitting cold storage undercuts the core pitch of self-custody, and researchers say a fourth sweep is still in progress."
+        },
+        {
+          "headline": "Strategy sold $105M in Bitcoin below its average cost basis",
+          "summary": "Strategy (formerly MicroStrategy) sold 1,638 BTC between July 27 and August 2 at an average price of $63,957, below its $75,419 acquisition cost, to fund dividends and buybacks on its STRC preferred stock. It's the company's third sale of 2026.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/08/04/bitcoin-rises-toward-usd64-000-as-coldcard-exploit-strategy-sales-recede-ada-advances",
+          "why": "The largest corporate Bitcoin holder selling at a loss to cover preferred-stock obligations is a notable crack in the buy-and-hold treasury playbook."
+        },
+        {
+          "headline": "SEC freezes Nasdaq's Bitcoin index options after CME jurisdiction challenge",
+          "summary": "The SEC has stayed its own approval of Nasdaq PHLX's cash-settled Bitcoin index options (QBTC) after CME Group argued Bitcoin derivatives belong under CFTC jurisdiction, not the SEC's. Public comments are due August 24, with no timetable set for a final decision.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/policy/2026/08/01/sec-to-review-nasdaq-bitcoin-options-approval-after-cme-challenge",
+          "why": "A jurisdictional turf fight between regulators could set precedent for who oversees Bitcoin derivatives products going forward."
+        }
+      ]
+    }
+  ]
+}
