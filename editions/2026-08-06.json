@@ -1,0 +1,90 @@
+{
+  "date": "2026-08-06",
+  "intro": "Meta enters the AI coding-agent race with Muse Code, Rust's core team draws a hard line on LLM-generated contributions, and Bitcoin sits 49% below its record even as the S&P 500 prints new highs.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Meta launches Muse Code, a terminal coding agent for large codebases",
+          "summary": "Meta's first standalone coding agent, released in beta and built on its Muse Spark model, plans and writes code across large repos and can fan out into sub-agents that work in parallel inside isolated git worktrees. In testing, Meta had it build six game features simultaneously with no collisions.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/",
+          "why": "Meta joins OpenAI's Codex and Anthropic's Claude Code in the coding-agent race, betting isolated-worktree parallelism is its differentiator."
+        },
+        {
+          "headline": "Rust's core team adopts a formal policy on LLM-generated contributions",
+          "summary": "Five rust-lang/rust teams adopted a policy, after over a month of internal debate, that LLMs may be used to read, analyze, and review code but not to author it, with a narrow experimental exception for reviewer-solicited LLM-authored PRs outside safety-critical components like the trait system.",
+          "source": "Rust Blog",
+          "url": "https://blog.rust-lang.org/inside-rust/2026/08/05/rust-langrust-is-adopting-an-llm-policy/",
+          "why": "One of the largest open-source projects is now formally restricting how AI tools touch its codebase, a template other major projects may follow."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Alibaba ships Qwen3.8-Max, a 2.4-trillion-parameter flagship model",
+          "summary": "Qwen3.8-Max launched with standard API pricing of $2/$6 per million input/output tokens, a 1-million-token context window, and native multimodal input; Alibaba says open weights are coming within about a week, making it the first Max-class Qwen model to be open-sourced.",
+          "source": "Alibaba Cloud",
+          "url": "https://www.alibabacloud.com/blog/alibaba-unveils-qwen3-8-max-its-largest-and-most-capable-flagship-model-to-date_603420",
+          "why": "Another frontier-scale Chinese model landing with a commitment to open weights keeps pressure on Western labs' pricing and openness."
+        },
+        {
+          "headline": "Mistral open-sources Shieldstral, a 3B multimodal safety classifier",
+          "summary": "Released under Apache 2.0, Shieldstral treats content moderation as a policy-adaptive question-answering task rather than fixed-taxonomy classification, accepting plain-language rules at inference time and running on a single 16GB GPU while matching or beating guard models up to 7x its size.",
+          "source": "Mistral AI",
+          "url": "https://mistral.ai/news/shieldstral/",
+          "why": "A small, open, policy-adaptive guard model that developers can self-host lowers the cost of adding safety filtering to their own products."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Node.js 26.6.0 ships with FFI and dependency updates",
+          "summary": "The latest Current release of Node.js 26 adds FFI enhancements including getCurrentEventLoop, bumps bundled npm to 11.18.0, and includes a range of infrastructure and cross-platform test fixes.",
+          "source": "Node.js (GitHub)",
+          "url": "https://github.com/nodejs/node/releases/tag/v26.6.0",
+          "why": "Routine but relevant for anyone tracking the Node 26 release line."
+        },
+        {
+          "headline": "GitHub lets teams customize CodeQL config for default-setup code scanning",
+          "summary": "A new github-codeql-config-file repository property lets teams merge their own CodeQL settings, such as extra queries, excluded paths, or threat models, with code scanning's built-in defaults, at either the repository or organization level.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-08-04-customize-code-scanning-default-setup-at-scale/",
+          "why": "Gives security teams more control over automated scanning without giving up default setup's low-maintenance appeal."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin sits 49% below its record as the S&P 500 hits new highs",
+          "summary": "Bitcoin was little changed near $64,000 even as U.S. equities climbed to fresh records on AI-driven enthusiasm and easing Hormuz tensions, extending a stretch where crypto has failed to track the broader risk-on rally.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/08/05/bitcoin-flat-at-usd64-000-as-stocks-print-records-and-hormuz-deal-nears",
+          "why": "A widening gap between bitcoin and equities undercuts the 'digital gold rides the AI boom' narrative some bulls have leaned on this year."
+        },
+        {
+          "headline": "Volunteer 'Bitcoin Red Team' flags nearly 5,000 security issues in a day-long audit",
+          "summary": "A 16-person volunteer group, funded partly by OpenSats and using AI-assisted analysis, filed 4,962 findings, including 85 critical and 635 high-severity flaws, across 390 open-source Bitcoin projects in 27.5 hours, following responsible-disclosure practices with maintainers.",
+          "source": "Bitcoin Magazine",
+          "url": "https://bitcoinmagazine.com/business/bitcoin-red-team-finds-85-critical-flaws-across-390-open-source-repos-after-coldcard-exploit",
+          "why": "A grassroots, AI-assisted audit at this scale is a direct response to the Coldcard firmware flaw and could reset expectations for how Bitcoin infrastructure gets vetted."
+        },
+        {
+          "headline": "Thune forces a CLARITY Act floor vote before the Senate's August recess",
+          "summary": "Senate Majority Leader John Thune confirmed the crypto market-structure bill will get a floor vote before senators leave for recess around August 10, even though it remains roughly seven Democratic votes short of the 60 needed, largely over ethics provisions.",
+          "source": "Bitcoin.com News",
+          "url": "https://news.bitcoin.com/regulation-and-legal/thune-clarity-act-vote-senate-recess/",
+          "why": "A failed or skipped vote this week likely pushes comprehensive U.S. crypto market-structure rules into 2027."
+        }
+      ]
+    }
+  ]
+}
