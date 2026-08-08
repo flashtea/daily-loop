@@ -1,0 +1,111 @@
+{
+  "date": "2026-08-08",
+  "intro": "Google DeepMind loses its CEO and chief scientist in one announcement, GitHub Actions goes down for nine hours, and Bitcoin ETFs snap back into inflows as a near-dead soft fork proposal hits its signaling deadline.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Meta launches Muse Code, a coding agent for large codebases",
+          "summary": "Meta released Muse Code in beta, an agent CEO Mark Zuckerberg says can handle \"complete software engineering tasks across large repos\" by fanning out into parallel sub-agents working in isolated worktrees on big jobs. It runs on Meta's Muse Spark 1.2 model, with a discounted \"contributor\" pricing tier in exchange for Meta training on user prompts and completions.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/",
+          "why": "Meta's first real entrant in the coding-agent market, directly challenging Claude Code and Codex."
+        },
+        {
+          "headline": "Anthropic opens public beta of self-hosted environments for Claude Code",
+          "summary": "Claude Code sessions can now run entirely on infrastructure an organization controls, keeping repository checkouts, build artifacts, and secrets inside its own network. The beta is available to Team and Enterprise plans and is off by default.",
+          "source": "Anthropic",
+          "url": "https://claude.com/blog/run-claude-code-sessions-on-your-own-compute",
+          "why": "Addresses a common enterprise blocker: compliance teams wary of agent sessions touching code outside their network."
+        },
+        {
+          "headline": "Cloudflare launches Kitesurf, a browser built for AI agents",
+          "summary": "Cloudflare introduced Kitesurf, a lightweight browser written in Rust that runs entirely inside Workers' V8 isolates, using 3-7x less CPU and memory than Chromium for agentic tasks like screenshots and page extraction. It's free in beta as part of Cloudflare's Agents Week.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/07/cloudflare-launches-kitesurf-a-browser-built-for-ai-agents/",
+          "why": "A cheaper, purpose-built browsing primitive for the growing number of coding and web agents that don't need full Chromium overhead."
+        },
+        {
+          "headline": "Cloudflare ships a developer preview of WebMCP",
+          "summary": "Cloudflare's new WebMCP preview lets any site on its network expose structured tools to browser AI agents, with no code changes at the origin, toggled on per domain from the dashboard.",
+          "source": "Cloudflare Blog",
+          "url": "https://blog.cloudflare.com/webmcp/",
+          "why": "Lowers the bar for making existing sites usable by agents, part of a broader push toward an agentic web."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Google DeepMind's top two AI leaders step back as Jeff Dean exits to launch a startup",
+          "summary": "Google chief scientist Jeff Dean is leaving after 27 years to co-found Discovery Loop with fellow Google veterans Sanjay Ghemawat, Oriol Vinyals, and Quoc Le, with Google as an investor and cloud provider. DeepMind CEO Demis Hassabis is stepping back to chairman and taking over as chief scientist, while Koray Kavukcuoglu becomes SVP of DeepMind reporting to Sundar Pichai. Alphabet shares fell about 4% on the news.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/08/05/google-chief-scientist-jeff-dean-leaving-company-after-27-years.html",
+          "why": "Two of Alphabet's most senior technical leaders departing their top roles simultaneously is a striking signal about where AI talent is heading next."
+        },
+        {
+          "headline": "OpenAI cuts ChatGPT factual errors and unlocks unlimited free chats",
+          "summary": "OpenAI rolled out updates that cut factual errors by up to 68% compared with GPT-5.5 Instant, gave free and Go users unlimited text chats with GPT-5.6 Luna, and added a new Think button for harder questions. OpenAI also touted GPT-5.6 Sol as its most capable model yet for cybersecurity research, with roughly 10x stronger safeguards against harmful use.",
+          "source": "Help Net Security",
+          "url": "https://www.helpnetsecurity.com/2026/08/07/openai-gpt-5-6-sol-luna-chatgpt-free-limits/",
+          "why": "A notable reliability jump plus a major access expansion for free users, alongside a cybersecurity capability bump worth watching for dual-use risk."
+        },
+        {
+          "headline": "White House finalizes voluntary AI safety-testing framework with frontier labs",
+          "summary": "Representatives from roughly a dozen AI companies, including OpenAI, Anthropic, Google, and Meta, met with White House officials to review a completed voluntary framework giving the U.S. government early access to review frontier models' cybersecurity capabilities up to 30 days before public release.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/08/03/white-house-ai-companies-voluntary-framework-meeting.html",
+          "why": "The first concrete mechanism from Trump's June executive order on frontier-model evaluation, though it excludes open-weight models and won't be made public."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub Actions, Pages, and Copilot knocked out for nine hours",
+          "summary": "A GitHub Actions incident starting 15:22 UTC on August 6 caused workflow runs to fail, queue, or time out, and degraded Copilot code review, Copilot coding agent, Pages, webhooks, and hosted and self-hosted runners before resolving at 02:04 UTC on August 7. GitHub traced the disruption to invalid job assignments to runners but has not published a full root-cause analysis.",
+          "source": "The Register",
+          "url": "https://www.theregister.com/devops/2026/08/06/latest-github-outage-squeezes-actions-pages-to-death/5284297",
+          "why": "A reminder of how much CI/CD and AI coding-agent workflows now depend on a single provider's uptime."
+        },
+        {
+          "headline": "VS Code 1.132 adds integrated-browser feedback and multilingual dictation",
+          "summary": "The August VS Code release lets users comment directly on elements in the integrated browser to give agents precise feedback, adds on-device multilingual dictation, introduces side chats for asking contextual questions mid-agent-turn, and previews Markdown diffs in the hybrid editor.",
+          "source": "Visual Studio Code",
+          "url": "https://code.visualstudio.com/updates/v1_132",
+          "why": "Continues VS Code's push toward tighter agent-in-the-loop workflows."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin holds near $65,300 high as weak jobs data fuels rate-cut bets",
+          "summary": "Bitcoin traded around $64,900-$65,300 after a much-weaker-than-expected July jobs report reshaped bets on the Federal Reserve's next move, with futures markets pricing roughly 56% odds the Fed pauses at its September 16 meeting.",
+          "source": "TheStreet Crypto",
+          "url": "https://www.thestreet.com/crypto/investing/bitcoin-price-today-august-7-2026",
+          "why": "Macro data, not crypto-native news, is currently the dominant driver of Bitcoin's short-term price action."
+        },
+        {
+          "headline": "Bitcoin ETFs snap back with $626M three-day inflow streak",
+          "summary": "US spot Bitcoin ETFs pulled in $244.4 million on Wednesday, capping three straight days of inflows worth $626 million combined, with BlackRock's IBIT alone adding $479 million. The rebound follows a summer stretch of net outflows.",
+          "source": "TheStreet Crypto",
+          "url": "https://www.thestreet.com/crypto/markets/bitcoin-etfs-rebound-with-626-million-in-three-days-blackrock-alone-adds-479-million",
+          "why": "Renewed institutional buying is one of the stronger bullish signals of the past month."
+        },
+        {
+          "headline": "BIP-110's mandatory signaling window opens with almost no miner support",
+          "summary": "Bitcoin's contested BIP-110 soft fork, which would temporarily restrict non-payment data in transactions, enters its mandatory signaling period around block 961,632 (roughly August 9) with public miner support still under 3%, making activation all but impossible.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/08/06/why-bitcoin-s-bip-110-refuses-to-die-despite-near-zero-miner-support",
+          "why": "A live test of Bitcoin's governance process, even though the proposal looks set to fail."
+        }
+      ]
+    }
+  ]
+}
