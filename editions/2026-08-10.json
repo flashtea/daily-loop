@@ -1,0 +1,98 @@
+{
+  "date": "2026-08-10",
+  "intro": "A quieter news day: the big story is Bitcoin's own protocol drama, with the BIP-110 breakaway chain stalling out after two blocks.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Nvidia-led security alliance ships first proposals, open-sources an AI agent-harness project",
+          "summary": "A week after forming with 120+ members, the Nvidia-spearheaded Open Secure AI Alliance published its first working proposals for confidential incident reporting on AI agents and open-sourced NOOA, an agent-harness project meant to make agent behavior easier to test, trace, and govern.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/04/nvidia-doesnt-mess-around-a-week-after-open-ai-industry-group-formed-its-already-showing-progress/",
+          "why": "Concrete standards and tooling for auditing agent behavior are still rare; this is one of the first industry-wide attempts."
+        },
+        {
+          "headline": "Security researchers find a supply-chain flaw in Google's Agent Development Kit",
+          "summary": "Pillar Security disclosed an exploit in Google's Python Agent Development Kit that could let a malicious tool or sub-agent compromise other agents and their dependency chain within the same harness.",
+          "source": "The Register",
+          "url": "https://www.theregister.com/security/2026/08/03/google-dev-kit-spurs-first-ever-agent-on-agent-violence/5282496",
+          "why": "A reminder that multi-agent frameworks widen the attack surface beyond single-model prompt injection."
+        },
+        {
+          "headline": "GitHub Copilot's weekly update adds session management and model transparency",
+          "summary": "This week's Copilot release lets developers manage multiple concurrent sessions from a sidebar, shows which model handled each completed Auto request along with credit and cache details, and adds a /side command to explore a parallel question without losing context.",
+          "source": "GitHub Blog",
+          "url": "https://github.blog/changelog/2026-08-07-github-copilot-weekly-releases-august-3/"
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "DeepSeek ships V4-Flash-0731, an MIT-licensed coding and agent model",
+          "summary": "DeepSeek's official V4-Flash-0731 release keeps the 284B-parameter, 13B-active mixture-of-experts architecture from its April preview but adds a fine-tuning pass that lifted its agentic and coding scores past the larger V4-Pro, at a fraction of the cost of comparable proprietary models.",
+          "source": "DeepSeek",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
+          "why": "A free, open-weight model now beats DeepSeek's own flagship on coding and tool-use benchmarks."
+        },
+        {
+          "headline": "Mistral open-sources Shieldstral, a compact multimodal safety classifier",
+          "summary": "Shieldstral is a 3B-parameter, Apache 2.0-licensed moderation model that accepts plain-language policies at inference time to judge prompts, responses, and images for safety, without retraining, and runs on a single 16GB GPU.",
+          "source": "Mistral AI",
+          "url": "https://mistral.ai/news/shieldstral/"
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Node.js 26.7.0 adds an HSM-backed key loader and updates its cert store",
+          "summary": "The latest Current release adds a STORE loader interface for loading private keys directly from hardware security modules, updates the bundled root certificate store to NSS 3.125, and bumps npm to 11.19.0.",
+          "source": "Node.js",
+          "url": "https://nodejs.org/en/blog/release/v26.7.0"
+        },
+        {
+          "headline": "pnpm 11.5 adds hoisting limits and fixes a peer-resolution hang",
+          "summary": "The release adds a hoistingLimits setting to control how far dependencies hoist under nodeLinker: hoisted, replaces its interactive-prompt library to fix a scrolling bug, and fixes pnpm hanging when aliased installs pull in transitive packages with mutual peer cycles.",
+          "source": "pnpm",
+          "url": "https://pnpm.io/blog/releases/11.5"
+        },
+        {
+          "headline": "Garbage SQLite CVEs expose cracks in the vulnerability-reporting pipeline",
+          "summary": "Six SQLite vulnerabilities published as a batch turned out to be baseless, yet still landed in the National Vulnerability Database with CISA enrichment, underscoring how AI-assisted vulnerability reports are straining an already backlogged CVE pipeline.",
+          "source": "The Register",
+          "url": "https://www.theregister.com/security/2026/08/03/ai-slop-pollutes-the-cve-pipeline-with-fake-vulns/5282462",
+          "why": "Teams that auto-triage on CVE severity risk chasing phantom vulnerabilities."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Bitcoin's BIP-110 breakaway chain stalls after mining just two blocks",
+          "summary": "The minority chain created by BIP-110 supporters, who wanted to temporarily curb non-financial data in transactions, ground to a halt roughly eight hours after its mandatory-signaling launch, mining only two blocks while the main chain advanced by 48. Support among miners never exceeded 2.53%, far short of the 55% needed to activate without a split.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/08/09/controversial-bitcoin-fork-bip-110-mines-two-blocks-then-stops",
+          "why": "One of the most consequential Bitcoin soft-fork attempts in years has effectively failed at launch."
+        },
+        {
+          "headline": "Developer warns holders who sell BIP-110 fork coins risk losing real bitcoin",
+          "summary": "A Bitcoin developer cautioned that people who received coins on the stalled BIP-110 chain could lose their actual BTC if they sell those fork coins carelessly, since transactions on the minority chain can be replayed on the main chain without proper safeguards.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/08/08/bitcoin-holders-risk-losing-real-btc-if-they-sell-coins-from-bip-110-fork-says-developer"
+        },
+        {
+          "headline": "Whales accumulate $1.2 billion in bitcoin as price holds near $65,000",
+          "summary": "Wallets holding between 10 and 10,000 BTC have added more than 20,000 BTC since July 29, even as bitcoin's price stayed range-bound below $65,000.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/08/07/bitcoin-whales-load-up-on-usd1-2-billion-in-btc-as-etfs-attract-usd750-million"
+        }
+      ]
+    }
+  ]
+}
