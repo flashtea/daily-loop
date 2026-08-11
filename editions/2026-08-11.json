@@ -1,0 +1,67 @@
+{
+  "date": "2026-08-11",
+  "intro": "OpenAI's newest cyber model found real Chrome zero-days and crossed a new AI capability threshold, while Anthropic quietly flips Claude Code to run autonomously by default starting next week. Dev-tool releases were unusually quiet in the last two days, so that section sits out today. Bitcoin holds near $65K heading into a CPI-heavy week, even as Strategy trims its stack.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Anthropic makes Claude Code's auto mode the default",
+          "summary": "Starting August 14, Claude Code will run in auto mode by default for Pro, Max, and Team plans, proceeding without per-step approval unless an action is judged irreversible, destructive, or aimed outside the user's environment.",
+          "source": "Anthropic",
+          "url": "https://claude.com/blog/auto-mode-default-in-claude-code",
+          "why": "Anthropic says a study of 1,053 paid testers found auto mode caught 89% of harmful actions versus 13.6% for manual human review, the case it's making for flipping the default."
+        },
+        {
+          "headline": "GitHub Copilot Chat on the web adds minimize, history, and spend tracking",
+          "summary": "GitHub shipped updates to Copilot Chat on github.com: minimizing an in-progress conversation to keep browsing, faster access to recent chats, and per-session and per-message token-spend indicators.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-08-10-copilot-on-web-expands-conversation-controls/"
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "OpenAI's new cyber model finds real Chrome zero-days, crosses a safety threshold",
+          "summary": "OpenAI expanded its Daybreak security initiative and launched GPT-5.6-Cyber, which discovered two previously unknown V8 vulnerabilities that could be chained to corrupt memory and escape Chrome's sandbox; Google has patched them as CVE-2026-15903. OpenAI says it's the first model to hit the 'High' cyber capability threshold under its Preparedness Framework.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/",
+          "why": "OpenAI is making hardware security keys mandatory for all Daybreak accounts by September 1, a sign it sees real offensive risk in a model it's still rolling out."
+        },
+        {
+          "headline": "Meta open-sources Muse Glimmer, a 30B model built to run on a single GPU",
+          "summary": "Meta released Muse Glimmer, a distilled, Apache 2.0-licensed 30-billion-parameter version of its Muse Spark model, built for multi-step agentic tasks, coding, and tool use entirely on-device, with or without a network connection.",
+          "source": "Meta AI Research",
+          "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
+          "why": "Meta's more capable Muse Spark stays closed; Zuckerberg framed Glimmer's release as a bet on distributing capable AI widely rather than centralizing it."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Strategy sells 1,690 BTC, raises $653M in a share sale",
+          "summary": "Michael Saylor's Strategy sold 1,690 bitcoin for about $108.6 million at an average price of $64,262, and separately raised $653.1 million selling 6.59 million MSTR shares, using the proceeds for STRC preferred-share buybacks and to grow its cash reserve to $4.65 billion. Holdings fell to 840,447 BTC.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/08/10/strategy-sells-1-690-bitcoin-raises-usd653-million-from-mstr-shares"
+        },
+        {
+          "headline": "Bitcoin and ether ETFs pull in $853M in a week, BlackRock dominant",
+          "summary": "US spot bitcoin and ether ETFs logged their best inflow week since April, drawing roughly $853.5 million over five sessions, with BlackRock's IBIT taking the bulk of it. BlackRock's digital assets head said bitcoin is showing signs of decoupling from equities.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/08/09/bitcoin-investors-pour-usd853-million-into-spot-etfs-blackrock-s-ibit-claims-the-bulk"
+        },
+        {
+          "headline": "Bitcoin holds above $65,000 with US inflation data due this week",
+          "summary": "Bitcoin traded above $65,000, its firmest level in about a week, as traders positioned ahead of upcoming US CPI data that could shape the Fed's next rate move.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/08/10/bitcoin-tops-usd65-000-with-us-inflation-data-due-this-week"
+        }
+      ]
+    }
+  ]
+}
