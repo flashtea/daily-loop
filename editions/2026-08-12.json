@@ -1,0 +1,64 @@
+{
+  "date": "2026-08-12",
+  "intro": "Anthropic becomes the first frontier lab to watermark all Claude output worldwide under EU transparency rules, and Nvidia ships a single-GPU open model built for local agents. Dev-tool releases are quiet again in the last 48 hours, so that section sits out today. Bitcoin holds near $63,500 as traders wait on today's US CPI print, with the SEC set to vote Friday on its first formal crypto rulemaking.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Microsoft ships MAI-Code-1.1-Flash in GitHub Copilot at a 73% lower price",
+          "summary": "GitHub Copilot rolled out MAI-Code-1.1-Flash, Microsoft's small-tier coding model, adding native vision support and gains in coding quality, instruction-following, and tool use over its predecessor while cutting list price 73%.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot/",
+          "why": "Annual Copilot subscribers get it at a 0.25x premium-request multiplier, making it a cheap default for lightweight agentic coding tasks."
+        },
+        {
+          "headline": "OpenAI brings ChatGPT desktop, including a dedicated Codex workspace, to Linux",
+          "summary": "OpenAI released an official ChatGPT desktop app for Linux in preview, covering Ubuntu, Debian, and Fedora, with a separate Codex workspace for editing files, running tests, and working with local Git repositories.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/11/openai-launches-chatgpt-desktop-app-for-linux/",
+          "why": "Closes the last major desktop gap for Codex, putting OpenAI's coding agent directly on developers' primary server/dev OS."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Anthropic to watermark all Claude-generated text and files, worldwide",
+          "summary": "Anthropic said new Claude models will embed invisible watermarks in generated text and signed C2PA provenance data in supported files, applying the marks globally rather than only in the EU, in response to transparency duties under Article 50 of the EU AI Act that took effect August 2.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/11/anthropic-says-it-will-watermark-text-generated-by-its-ai-models/",
+          "why": "Non-compliance with Article 50 can trigger fines up to €15 million or 3% of global turnover; Anthropic says the marks persist through copy-paste and some editing."
+        },
+        {
+          "headline": "Nvidia releases Nemotron 3.5 Lightning, an open-weight model for single-GPU agents",
+          "summary": "Nvidia open-sourced Nemotron 3.5 Lightning, a distilled model built to run on one consumer GPU, alongside NeMo Switchyard software that routes tasks to the cheapest suitable model.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/08/11/nvidia-releases-nemotron-3point5-lightning-open-source-ai-model-.html",
+          "why": "Aimed squarely at local, always-on background agents rather than chat, and lands days after Jensen Huang's public defense of open-weight models."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "SEC schedules August 14 vote on first formal crypto rulemaking, 'Regulation Crypto'",
+          "summary": "The SEC set an open meeting for August 14 to vote on proposing Regulation Crypto, a tailored offering regime for investment contracts involving crypto assets, building on the Digital Commodities framework that treats Bitcoin, Ether, and 14 other assets as exempt from securities law.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/policy/2026/08/11/u-s-sec-sets-meeting-to-propose-reg-crypto-to-support-certain-digital-assets-offerings",
+          "why": "It's the first formal crypto rulemaking of Chairman Paul Atkins' tenure; a yes vote opens a public comment period rather than finalizing the rule."
+        },
+        {
+          "headline": "Bitcoin slips to $63,500 as corporate treasury enthusiasm shifts toward AI data centers",
+          "summary": "Bitcoin fell toward $63,500 ahead of Wednesday's US CPI report, with CoinDesk noting companies that once championed corporate BTC holdings, like CoreWeave, are increasingly redirecting capital toward AI infrastructure, whose backlog topped $100 billion.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/08/11/live-updates-bitcoin-slips-as-corporate-btc-enthusiasm-moves-to-ai",
+          "why": "Economists expect July headline CPI at 3.4% year-over-year; a softer print would be the most bullish outcome for BTC, a hotter one the most bearish."
+        }
+      ]
+    }
+  ]
+}
