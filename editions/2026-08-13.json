@@ -1,0 +1,71 @@
+{
+  "date": "2026-08-13",
+  "intro": "Google's Gemini app crosses 1 billion monthly users, matching ChatGPT's growth pace, while Lovable and Cognition both make fresh moves in the AI-coding funding race. Dev-tool releases are quiet again in the last 48 hours, so that section sits out today. Bitcoin holds near $63,500 as traders look past an in-line CPI print toward the Fed, and Japan's Metaplanet stirs concern with a $247M inter-wallet BTC shuffle.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Lovable raises $400M at a $13.3B valuation, doubling in six months",
+          "summary": "AI app-building platform Lovable closed a $400M Series C led by Menlo Ventures and the EU's Scaleup Europe Fund, taking its valuation to $13.3B just six months after a $6.6B Series B, with Tencent among the new backers.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/12/lovable-confirms-new-13-3b-valuation-raises-400m/",
+          "why": "Lovable says it now hosts 60 million projects and hit $500M in annualized revenue in June, a sign 'vibe coding' platforms are scaling as fast as dedicated coding agents."
+        },
+        {
+          "headline": "Cognition reportedly in talks to raise at a $40B valuation",
+          "summary": "Cognition, maker of the Devin coding agent, is reportedly in early talks for a new funding round that could value the company at $40B or more, up from the $26B valuation it set in a $1B raise this past May, according to Bloomberg.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/12/ai-coding-startup-cognition-reportedly-already-in-talks-to-raise-at-40b-valuation/",
+          "why": "Cognition says enterprise usage of Devin has grown 50% month-over-month for six straight months, on a track toward $1B in annualized revenue."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Google's Gemini app hits 1 billion monthly users",
+          "summary": "Google said the Gemini app now has more than 1 billion monthly active users, up from 950 million in July, making it the company's fastest-growing product ever and the 14th Google product to cross the billion-user mark.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/11/googles-gemini-app-surges-to-one-billion-users/",
+          "why": "Gemini is now growing about as fast as ChatGPT, which crossed the same threshold in June, sharpening the race for default-AI-assistant status."
+        },
+        {
+          "headline": "Meta releases Muse Glimmer, a 30B open-weight model built for local agents",
+          "summary": "Meta's Superintelligence Labs open-sourced Muse Glimmer under an Apache 2.0 license: a 30-billion-parameter model tuned for tool use and long-horizon agent tasks that runs quantized on a single consumer GPU or Mac, with no cloud dependency.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/10/metas-new-glimmer-ai-model-offers-a-hint-at-zuckerbergs-personal-intelligence-vision/",
+          "why": "It's Meta's most concrete open-weight release since the Llama line stalled, targeting the always-on local-agent niche that labs like Nvidia are also chasing."
+        },
+        {
+          "headline": "OpenAI launches GPT-5.6-Cyber and splits its Daybreak program into two access tiers",
+          "summary": "OpenAI released GPT-5.6-Cyber, built on GPT-5.6 Sol for exploit validation and vulnerability research, and expanded its Daybreak security-partner program into a guardrail-reduced 'Blue' tier and a 'Red' tier with full model access for vetted defenders like CrowdStrike and Cisco.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/",
+          "why": "The model reached the 'High' cyber-capability threshold under OpenAI's Preparedness Framework; access requires identity verification and mandatory hardware security keys starting September 1."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin slips toward $63,500 as traders look past in-line CPI to the Fed's next tests",
+          "summary": "Bitcoin eased to about $63,500 after July's US inflation print matched forecasts, trimming futures-market odds of a September Fed rate cut to roughly 38% from 46% and failing to spark the rally some traders had hoped for.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/08/13/bitcoin-slips-near-usd63-500-as-traders-look-past-cpi-s-fed-s-next-tests",
+          "why": "The muted reaction confirms Bitcoin's price is currently tracking Fed-rate expectations more closely than crypto-specific catalysts."
+        },
+        {
+          "headline": "Metaplanet moves 3,881 BTC between wallets as its paper loss nears $1.4B",
+          "summary": "Japanese treasury firm Metaplanet shifted about $247M worth of Bitcoin between wallets it controls over a three-hour window; blockchain data shows the funds did not move to an exchange, so it isn't a confirmed sale, but it comes as the firm sits on a roughly 34% unrealized loss on its 43,000 BTC holdings.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/08/12/live-updates-bitcoin-at-usd63-600-as-japan-s-metaplanet-moves-3-881-btc-between-wallets",
+          "why": "Metaplanet is one of the largest corporate BTC holders outside the US; a transfer this size, even between its own wallets, is being watched closely given its mounting paper losses."
+        }
+      ]
+    }
+  ]
+}
