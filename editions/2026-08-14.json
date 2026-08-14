@@ -1,0 +1,111 @@
+{
+  "date": "2026-08-14",
+  "intro": "Anthropic is reportedly closing in on its largest-ever acquisition, a $6B deal for video-generation startup Decart. A cross-vendor coding-agent standard backed by AWS, Microsoft, OpenAI, Google and Vercel goes GA. And in Bitcoin, the SEC abruptly postpones its long-awaited 'Regulation Crypto' vote just hours before it was due to happen.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "GitHub's Agent Plugins 1.0 goes GA, backed by AWS, Microsoft, OpenAI, Vercel and Google",
+          "summary": "Agent Plugins 1.0, an open standard for packaging agent skills and MCP servers into a single installable, vendor-independent plugin, is now generally available in VS Code, Copilot CLI, the Copilot SDK and the Copilot app. GitHub published the spec on August 6 with AWS, Anysphere, Microsoft, OpenAI and Vercel; Google joined as a core maintainer the same day.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-08-12-agent-plugins-1-0-in-vs-code-copilot-cli-and-the-copilot-app/",
+          "why": "A shared plugin format means a skill-plus-MCP-server bundle can now ship once instead of needing a separate manifest and layout for every agent client."
+        },
+        {
+          "headline": "VS Code 1.133 lets Claude sessions switch providers mid-conversation",
+          "summary": "The August VS Code release lets a Claude-powered agent session switch between a Copilot subscription and a direct Anthropic API key between turns without reconfiguring the agent host, adds chat sticky scroll to keep long conversations anchored, and reloads local HTML previews automatically on save.",
+          "source": "Visual Studio Code",
+          "url": "https://code.visualstudio.com/updates/v1_133",
+          "why": "Removes a rigid lock-in point for teams mixing Copilot seats with direct Anthropic billing on the same editor."
+        },
+        {
+          "headline": "GitHub Copilot for JetBrains adds persistent memory and local Ollama models",
+          "summary": "Copilot for JetBrains IDEs now supports memory that persists across sessions and bring-your-own-key access to local models via Ollama, alongside new server-based admin controls and reliability fixes across terminals, agents and MCP.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-08-11-copilot-memory-and-ollama-in-github-copilot-for-jetbrains/",
+          "why": "Local-model support via Ollama gives JetBrains users an offline/BYO-compute path that VS Code's Copilot extension has lacked."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Anthropic in talks to buy video-AI startup Decart for $6B",
+          "summary": "Anthropic is negotiating to acquire Israeli startup Decart, which builds real-time generative-video models and GPU/chip-optimization software, in a deal valued around $6B, according to Bloomberg. It would be Anthropic's largest acquisition to date and comes three months after Decart was valued at $4B.",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-08-13/anthropic-said-in-talks-to-buy-ai-startup-decart-for-6-billion",
+          "why": "Decart's chip-optimization tech is aimed at squeezing more throughput from Anthropic's existing compute as demand for Claude keeps outrunning capacity."
+        },
+        {
+          "headline": "xAI ships Grok 4.6, tuned for long-running coding and research agents",
+          "summary": "SpaceXAI released Grok 4.6, five weeks after Grok 4.5, focused on long-running agentic coding, research and visual tasks. It scores 61 on the Artificial Analysis Intelligence Index — matching GPT-5.6 Sol — while holding API pricing flat at $2/$6 per million tokens.",
+          "source": "x.ai",
+          "url": "https://x.ai/news/grok-4-6",
+          "why": "A frontier-tier score at unchanged pricing keeps pressure on OpenAI and Anthropic's per-token rates for agentic workloads."
+        },
+        {
+          "headline": "OpenAI previews Ultrafast mode: GPT-5.6 Sol at up to 14x the speed",
+          "summary": "OpenAI is previewing an Ultrafast API tier that runs GPT-5.6 Sol on Cerebras hardware at up to 750 output tokens per second, roughly 14 times its normal speed, with a limited group of customers testing it on coding, commerce and incident-response workloads.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/previewing-ultrafast/",
+          "why": "Removes the usual trade-off between model intelligence and real-time responsiveness for latency-sensitive agent use cases."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Jetpack Compose 1.12 goes stable with mesh gradients and wide color gamut",
+          "summary": "The August '26 Jetpack Compose release is stable at version 1.12 across core modules, adding Mesh Gradients and Wide Color Gamut rendering, named grid areas for layout, tighter Credential Manager integration, and startup performance now on par with Views.",
+          "source": "Android Developers Blog",
+          "url": "https://android-developers.googleblog.com/2026/08/jetpack-compose-august-2026-release.html",
+          "why": "Startup-time parity with the legacy Views system removes one of the last performance objections to full Compose adoption."
+        },
+        {
+          "headline": "GitHub Enterprise Server 3.22 release candidate ships Enterprise Teams GA",
+          "summary": "GHES 3.22's release candidate makes Enterprise Teams generally available for centralized, org-spanning user management, adds technical-preview support for running Copilot CLI in disconnected/air-gapped installs, and lets admins grant individual bypass access to repository rulesets.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-08-11-github-enterprise-server-3-22-release-candidate/",
+          "why": "Air-gapped Copilot CLI support opens agentic coding tools to regulated and classified environments that can't reach GitHub Cloud."
+        },
+        {
+          "headline": ".NET and .NET Framework ship August 2026 servicing updates",
+          "summary": "Microsoft released the combined .NET and .NET Framework servicing updates for August 2026, bundling security and non-security fixes across supported versions.",
+          "source": ".NET Blog",
+          "url": "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-august-2026-servicing-updates/",
+          "why": "Routine but worth a look for the CVE fixes if you run .NET Framework in production."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "SEC abruptly postpones vote on proposed 'Regulation Crypto' rule",
+          "summary": "The SEC canceled Friday's open meeting at which it planned to propose 'Regulation Crypto,' a rule creating a registration-free capital-raising path for crypto firms, citing an 'unforeseen scheduling issue.' No new date has been set.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/policy/2026/08/13/sec-cancels-long-awaited-proposal-of-reg-crypto-postponing-meeting-without-new-date",
+          "why": "Chair Paul Atkins had made Reg Crypto a centerpiece of his deregulatory agenda; an unexplained last-minute pull adds fresh uncertainty to the timeline."
+        },
+        {
+          "headline": "Goldman Sachs to buy NEOS Investments for up to $2.25B, landing a $1B bitcoin income ETF",
+          "summary": "Goldman Sachs agreed to acquire NEOS Investments, manager of the roughly $1.1B BTCI bitcoin synthetic-yield ETF, in a cash-and-equity deal valuing NEOS at up to $2.25B, with closing expected in early 2027 pending regulatory approval.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/business/2026/08/12/goldman-sachs-leaps-into-bitcoin-income-etfs-with-usd2-25-billion-neos-buyout",
+          "why": "Rather than launch a competing covered-call fund from scratch, Goldman bought an established one outright — a sign of how contested the bitcoin-income-ETF niche has become."
+        },
+        {
+          "headline": "Bitcoin holds near $63,500 as softer-than-forecast July PPI fails to move the market",
+          "summary": "US producer prices came in flat for July against a forecast 0.2% rise, and bitcoin barely reacted, continuing to trade in the same tight range it has held for weeks as September rate-cut odds ticked up slightly.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/08/13/live-markets-u-s-inflation-is-stickier-than-july-s-mild-cpi-suggests",
+          "why": "A second consecutive soft inflation print still isn't enough to break bitcoin out of its multi-week trading range."
+        }
+      ]
+    }
+  ]
+}
