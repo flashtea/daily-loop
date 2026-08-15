@@ -1,0 +1,97 @@
+{
+  "date": "2026-08-15",
+  "intro": "DeepSeek open-sources an MIT-licensed rival to Claude Code and racks up 27,500 GitHub stars on day one. Z.ai holds back GLM-5.3's open weights after its own post-training produced exploit-chain reasoning nobody planned for. And Bitcoin gives back last week's post-CPI gains as Strategy keeps selling below its cost basis.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "lead": true,
+          "headline": "DeepSeek open-sources Harness, an MIT-licensed rival to Claude Code",
+          "summary": "DeepSeek released Harness v0.1, an open-source agent harness built on a plugin-based framework called Cordis, positioning it as a model-agnostic alternative to the agent infrastructure behind Claude Code and Codex. It can inspect repositories, edit files, run shell commands, delegate to subagents and enforce approval policies, and supports providers including DeepSeek, Anthropic, OpenAI and the major clouds.",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/deepseek-harness-launches-as-open-source-rival-to-claude-code-alongside-v4-pro-on-api-with-higher-prices",
+          "why": "It's not a stable production replacement yet, but a free, MIT-licensed, model-agnostic harness pulled 27,500 stars and 2,000 forks on launch day — real competitive pressure on paid coding-agent products."
+        },
+        {
+          "headline": "Gemini 3.7 Flash rolls out in GitHub Copilot",
+          "summary": "GitHub is rolling out Google's newly launched Gemini 3.7 Flash across Copilot, with the company citing gains in agentic coding, code quality, codebase research and verification during multi-step tasks. It's available to Copilot Pro, Pro+, Max, Business and Enterprise users.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-08-13-gemini-3-7-flash-is-now-available-in-github-copilot/",
+          "why": "Same-day availability keeps Copilot's model roster current with the frontier and gives Google's cheaper coding model an immediate distribution channel."
+        },
+        {
+          "headline": "Microsoft's MAI-Code-1.1-Flash lands in Copilot at 73% lower list price",
+          "summary": "MAI-Code-1.1-Flash is rolling out in GitHub Copilot with native image understanding and improvements to coding quality, instruction following and tool use, at a list price 73% below its predecessor. It'll be available by default to Free and Student users, with manual selection for paid tiers.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot/",
+          "why": "A steep price cut on a Microsoft-built coding model undercuts the cost of running lightweight agentic tasks inside Copilot."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Google ships Gemini 3.7 Flash, its 'most intelligent workhorse' model, at half the price",
+          "summary": "Google released Gemini 3.7 Flash just three weeks after 3.6 Flash, reporting sizable coding gains (43.6% vs. 34.4% on FrontierCode 1.1 Main; 65.3% vs. 49.0% on DeepSWE v1.1) alongside introductory pricing of $0.75/$3.75 per million tokens — half of 3.6 Flash's launch price, through the end of 2026.",
+          "source": "Google",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+          "why": "Google is now shipping meaningful Flash-tier upgrades on a three-week cadence, compressing the release cycle the rest of the field has to match."
+        },
+        {
+          "headline": "Z.ai withholds GLM-5.3's open weights after it found capabilities nobody trained for",
+          "summary": "Z.ai launched GLM-5.3, a coding-focused model built on extended post-training of its GLM-5.2 base, but is delaying the open-weight release by roughly two weeks. The company says post-training produced multi-step exploit-chain reasoning it hadn't intended, which the model then used to surface 1,097 critical and high-severity vulnerabilities in real deployed software.",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-08-14/z-ai-aims-to-catch-anthropic-openai-in-coding-with-new-ai-model",
+          "why": "An open-weight lab choosing to sit on a model over emergent offensive-security capability is a notable first for the current release cadence."
+        },
+        {
+          "headline": "DeepSeek ships V4-Pro on its API alongside Harness, at higher prices",
+          "summary": "DeepSeek released V4-Pro on its API the same day as its open-source Harness agent framework, with the new model priced above its predecessors as part of a broader push into agentic coding workloads.",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/technology/deepseek-harness-launches-as-open-source-rival-to-claude-code-alongside-v4-pro-on-api-with-higher-prices",
+          "why": "A price increase from DeepSeek, historically the low-cost option, suggests its economics for frontier-tier inference are tightening."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "PostgreSQL patches 28 CVEs across every supported version",
+          "summary": "PostgreSQL shipped 18.6, 17.11, 16.15, 15.19, 14.24 and a 19 Beta 3, fixing 28 security vulnerabilities and over 110 bugs. Notable fixes include CVSS 8.8 heap buffer overflows in regexp handling and to_char, plus an integer-wraparound issue in tsvector/tsquery allocation.",
+          "source": "PostgreSQL",
+          "url": "https://www.postgresql.org/about/news/postgresql-186-1711-1615-1519-1424-and-19-beta-3-released-3365/",
+          "why": "Three CVSS 8.8 code-execution bugs across every supported branch makes this a same-week patch for anyone running Postgres in production."
+        },
+        {
+          "headline": "Docker Desktop fixes a VM-panic kernel bug in its AI Agent update",
+          "summary": "Docker Desktop's AI Agent v1.115.0 update patches CVE-2026-8936, a VM panic caused by unbounded recursion in the grpcfuse kernel module when deeply nested directories on a bind-mounted host folder trigger a dentry invalidation event, alongside broader stability and Gordon plan-mode fixes.",
+          "source": "Docker",
+          "url": "https://docs.docker.com/desktop/release-notes/",
+          "why": "A crash triggerable by ordinary bind-mount directory structures is the kind of bug that shows up as mysterious VM restarts in CI before anyone traces it to Docker Desktop."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin slips toward $62,800 as post-CPI rally fails to hold",
+          "summary": "Bitcoin extended its pullback into the weekend, trading down toward $62,800, with softer-than-forecast inflation data failing to spark sustained buying. U.S. spot Bitcoin ETFs posted their first back-to-back outflow days of August, including roughly $131 million in net outflows on August 13.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/08/14/bitcoin-slips-as-u-s-inflation-fails-to-spark-gains-etfs-see-august-s-first-two-day-drawdown",
+          "why": "Cooling inflation used to be a reliable bitcoin catalyst; ETF demand no longer following through on good macro news is a sentiment shift worth watching."
+        },
+        {
+          "headline": "Strategy sells another 1,690 BTC, extending its run as a net seller",
+          "summary": "Strategy (formerly MicroStrategy) sold 1,690 BTC for about $108.6 million, bringing holdings down to roughly 840,447 BTC and year-to-date sales to nearly 7,000 BTC — proceeds went toward STRC preferred-stock dividends and buybacks. The sale continues a departure from the firm's years-long buy-and-hold-only playbook.",
+          "source": "The Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/14/michael-saylors-strategy-is-selling-bitcoin-again/",
+          "why": "The market's largest corporate bitcoin holder repeatedly selling below its own cost basis removes a buyer that long propped up sentiment during dips."
+        }
+      ]
+    }
+  ]
+}
