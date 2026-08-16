@@ -1,0 +1,90 @@
+{
+  "date": "2026-08-16",
+  "intro": "SpaceX closes its record $60B all-stock acquisition of Cursor maker Anysphere, folding the coding tool into a new SpaceXAI division alongside Grok. GitHub ships Grok 4.6 in Copilot and adds token refresh for OAuth apps, while an unpatched GeoServer zero-day sees active exploitation. And in Bitcoin, Cboe files for the first US 3x-leveraged BTC/ETH ETFs as Trump prepares to meet crypto executives and regulators at the White House.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "lead": true,
+          "headline": "SpaceX finalizes $60 billion acquisition of Cursor maker Anysphere",
+          "summary": "SpaceX closed its all-stock purchase of Anysphere, the startup behind the widely used Cursor code editor, folding it into a new SpaceXAI division alongside xAI's Grok. It's the largest startup acquisition on record.",
+          "source": "CBS News",
+          "url": "https://www.cbsnews.com/news/spacex-cursor-60-billion-ai-acquisition/",
+          "why": "Consolidates one of the most popular AI coding tools inside SpaceX/xAI, reshaping the competitive map against Anthropic, OpenAI and Microsoft-backed rivals."
+        },
+        {
+          "headline": "Grok Bot goes live in Cursor as developers flag vendor lock-in",
+          "summary": "Days after the deal closed, SpaceXAI's always-on 'Grok Bot' agents — which sign into a user's own apps and keep working in the background — rolled out to Cursor's paying tiers. Commentators note the acquisition leaves few independent, privacy-neutral AI coding tools above hobbyist scale.",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/orchestration/spacexais-grok-bot-turns-agents-into-persistent-digital-coworkers-that-can-operate-your-apps-for-120-per-month",
+          "why": "Code written in Cursor now feeds a model stack owned by SpaceX — a real shift in who controls the data behind one of the most-used coding tools."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Alibaba's Qwen releases open-weight Qwen3.8-27B under Apache 2.0",
+          "summary": "The 27-billion-parameter multimodal dense model ships with a 262K native context window (extendable to 1M) and, per Qwen, beats the larger Qwen3.7-Plus on coding and office tasks while running on a single consumer GPU.",
+          "source": "The Decoder",
+          "url": "https://the-decoder.com/alibabas-qwen-team-releases-qwen-3-8-models-with-open-weights-under-the-apache-2-0-license/",
+          "why": "Another capable, permissively licensed open-weight model keeps pricing pressure on proprietary labs, extending a strong run of releases from Chinese labs this month."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Unpatched GeoServer zero-day under active exploitation",
+          "summary": "A SQL-injection flaw in GeoServer's PostGIS datastore filter handling (CVSS 9.8) can lead to remote code execution; attackers began probing within hours of public disclosure. Fixed versions — 3.0.1, 2.28.5 and 2.27.6 — are now available.",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html",
+          "why": "GeoServer has a history of being exploited at scale once a flaw goes public — teams running it should patch now."
+        },
+        {
+          "headline": "Grok 4.6 rolls out in GitHub Copilot",
+          "summary": "xAI's latest reasoning model is now available across Copilot's Pro, Pro+, Max, Business and Enterprise tiers, positioned for agentic coding and complex multi-step workflows.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-08-14-grok-4-6-is-now-available-in-github-copilot/",
+          "why": "Widens model choice inside the most widely used coding assistant, days after Grok 4.6's standalone launch."
+        },
+        {
+          "headline": "GitHub adds multiple redirect URIs and token refresh for OAuth and GitHub Apps",
+          "summary": "App developers can now register multiple or wildcard redirect URIs and opt into expiring access tokens paired with six-month refresh tokens, replacing indefinitely valid tokens for apps that adopt the new flow.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-08-14-multiple-redirect-uris-and-token-refresh-for-oauth-apps/",
+          "why": "Expiring tokens close off a long-standing weak point for any integration whose long-lived token leaks."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Cboe files for the first US 3x-leveraged Bitcoin and Ether ETFs",
+          "summary": "Cboe BZX submitted a rule-change application, sponsored by Volatility Shares, for triple-leveraged BTC and ETH products structured as CFTC-regulated commodity pools holding CME/COMEX futures rather than spot assets. The SEC opened the filing for public comment on August 14.",
+          "source": "The Block",
+          "url": "https://www.theblock.co/news/regulation/2026-08-14-cboe-seeks-sec-nod-for-first-us-3x-bitcoin-and-ether-etfs-411879",
+          "why": "Would be the most leveraged regulated bitcoin exposure available in the US if approved, though no listing date has been set."
+        },
+        {
+          "headline": "Trump expected at White House meeting with crypto CEOs and SEC, CFTC chiefs",
+          "summary": "Trump is expected to attend a session with executives from Coinbase, Ripple, Robinhood, Gemini, Polymarket and Kalshi alongside CFTC chair Michael Selig and SEC chair Paul Atkins, kicking off the CFTC's new Innovation Advisory Committee.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/policy/2026/08/14/trump-expected-to-attend-white-house-meeting-with-crypto-ceos-sources-say",
+          "why": "Sets the stage for possible regulatory movement after the SEC abruptly postponed its Reg Crypto vote and the CLARITY Act stalled in the Senate."
+        },
+        {
+          "headline": "Binance to block HTX and 10 other platforms over EU Russia sanctions",
+          "summary": "Binance began winding down transaction processing with 16 platforms in a phased schedule, with HTX, EXMO and nine others cut off from August 23 to comply with the EU's Russia sanctions package. It's not a delisting, but transfers to or from the affected platforms trigger a compliance hold.",
+          "source": "The Block",
+          "url": "https://www.theblock.co/news/regulation/2026-08-14-binance-block-transactions-htx-10-other-exchanges-eu-russia-sanctions-411858",
+          "why": "HTX is a major exchange; liquidity providers are already pulling back from its books ahead of the cutoff, a sign of the disruption sanctions enforcement can cause even short of a formal delisting."
+        }
+      ]
+    }
+  ]
+}
