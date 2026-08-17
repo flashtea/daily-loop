@@ -14,9 +14,15 @@ rebuild the site, and commit. GitHub Pages serves `docs/`.
    **last 24 hours**, and never older than ~48 hours. Lead with what actually
    *broke* (a shutdown, a launch, a ruling, a big move) — not "X exists" explainer
    pieces. Beats (these are the section titles, in this order):
-   - `AI for Software Development` — coding agents, copilots, IDE/tooling AI, AI
-     in the SDLC, notable launches from Anthropic/OpenAI/Google/etc. that matter
-     to developers.
+   - `AI for Software Development` — bleeding-edge coding agents and dev tooling:
+     Claude Code, Codex/OpenAI's coding tools, Cursor, Devin/Cognition, Gemini CLI,
+     and similar agentic/frontier tools, plus notable launches from
+     Anthropic/OpenAI/Google/etc. that matter to developers. **De-prioritize
+     GitHub Copilot** — treat it as a legacy/incumbent product and skip its
+     routine weekly-release and "model X now available in Copilot" changelog
+     items; only include Copilot news if it's a genuinely major shift (e.g. a
+     new product line, a pricing overhaul, a landmark acquisition), not routine
+     model-availability churn.
    - `AI Research & Models` — new model releases, capability/benchmark news,
      notable papers, safety/policy items worth knowing.
    - `Dev Tools & Releases` — language/framework/runtime releases, major library
