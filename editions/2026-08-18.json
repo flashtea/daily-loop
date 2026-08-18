@@ -1,0 +1,90 @@
+{
+  "date": "2026-08-18",
+  "intro": "Anthropic tells investors its annualized revenue run rate hit $65B in July — a sevenfold jump from a year ago — as it lines up IPO meetings. Cursor ships Origin, a native GitHub rival, days after SpaceX's $60B buyout and the same day GitHub suffers a multi-hour worldwide outage. Z.ai holds back GLM-5.3's public weights after its hacking capability outgrew expectations in training. In Bitcoin, Goldman calls a September rate hike \"very unlikely\" as Coldcard breach losses pass $115M and Hashdex begins the first US spot-BTC ETF liquidation.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Cursor launches Origin, a native GitHub rival built for AI-agent-scale coding",
+          "summary": "Cursor rolled out Origin in beta to paid plans — a Git-compatible code-hosting platform with repos, pull requests, reviews and CI built into the editor, designed for many AI agents committing to a repo at once rather than human-paced development. It landed three days after Bloomberg confirmed SpaceX completed its $60B all-stock acquisition of Cursor, and the same morning GitHub suffered a multi-hour worldwide outage.",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/infrastructure/cursor-launches-origin-code-hosting-platform-as-github-outage-exposes-opening-in-ai-coding-race",
+          "why": "The first serious attempt by a major coding-agent vendor to own the hosting layer itself, not just sit on top of GitHub — with the timing turning a coincidence into a pointed statement."
+        },
+        {
+          "headline": "DeepSeek Harness becomes the fastest-growing repo in GitHub's history",
+          "summary": "DeepSeek's open-source, plugin-based agent runtime passed 135,000 stars and 13,500 forks within four days of its release — reportedly the fastest a GitHub repository has ever reached that mark, surpassing 20,000 stars in just over an hour on day one.",
+          "source": "GitHub / VentureBeat",
+          "url": "https://github.com/deepseek-ai/deepseek-harness",
+          "why": "A concrete signal of how much developer demand exists for an open, swappable alternative to closed coding-agent harnesses like Claude Code."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Anthropic's annualized revenue run rate hits $65B in July, up sevenfold in a year",
+          "summary": "Anthropic told investors over the weekend that its annualized revenue run rate reached $65 billion at the end of July, up from roughly $10B in run rate a year earlier, alongside a preliminary Q2 revenue figure of $11.5B — a 14-fold jump from Q2 2025. The update comes as CFO Krishna Rao holds early IPO meetings with investors ahead of a confidentially filed prospectus.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/08/17/anthropic-says-annualized-revenue-climbed-to-65-billion-in-july.html",
+          "why": "One of the clearest data points yet on how fast enterprise Claude adoption is scaling, and a marker on the road to what's expected to be a blockbuster IPO."
+        },
+        {
+          "headline": "Z.ai holds back GLM-5.3's public weights after its hacking capability outgrew expectations",
+          "summary": "Z.ai said GLM-5.3 scored 84.5% on CyberGym — a benchmark for finding known security vulnerabilities — beating Anthropic's Fable 5 and OpenAI's GPT-5.6 Sol, and that capability grew faster than anticipated during routine post-training. The company is delaying the public release of the model's weights by about two weeks while it hardens safety controls, giving only vetted security partners controlled access in the meantime.",
+          "source": "Axios",
+          "url": "https://www.axios.com/2026/08/14/china-open-source-ai-glm-53",
+          "why": "A rare case of a lab voluntarily slow-walking an open-weight release specifically over offensive-cyber capability, not general capability."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub suffers major worldwide outage, degrading PRs, Actions, Issues and Copilot",
+          "summary": "GitHub confirmed a widespread outage starting around 13:40 UTC on August 17, with error rates near 20% for web and API traffic and roughly 50% for archive and raw content downloads. Actions, Pull Requests, Issues, Webhooks and Copilot were all affected; core services were reported mitigated by 17:00 UTC, though Copilot and Git Operations degraded again intermittently through the evening. No root cause has been disclosed yet.",
+          "source": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-github-is-down-worldwide/",
+          "why": "A multi-hour disruption to the platform most CI/CD pipelines and AI coding agents depend on — and a live illustration of the single-point-of-failure risk competitors like Cursor's Origin are pitching against."
+        },
+        {
+          "headline": "Cloudflare ships automatic MCP traffic detection and policy enforcement in Gateway",
+          "summary": "Cloudflare Gateway now detects Model Context Protocol traffic by inspecting request headers and traffic patterns, and adds an `is_mcp` policy selector so admins can allow, block or isolate AI-agent tool traffic. A baseline rule blocks MCP traffic that didn't come through a sanctioned Portal, plus a new AI security dashboard reports MCP request volume, users and servers in use.",
+          "source": "Cloudflare Blog",
+          "url": "https://blog.cloudflare.com/mcp-security-updates/",
+          "why": "As MCP becomes the default way agents reach tools and data, unmanaged MCP traffic is turning into its own shadow-IT problem — this is one of the first mainstream network-layer controls for it."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Goldman Sachs calls a September Fed rate hike \"very unlikely\" as bitcoin flows turn positive",
+          "summary": "Bitcoin has been trading flat near $63,500, capped below $64,000 for over a month, but Goldman Sachs' view that a September rate increase is very unlikely removes a near-term overhang. US spot ETF flows, which had turned negative earlier in the month, have quietly flipped back toward inflows even as oil stays elevated on the stalled Strait of Hormuz truce.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/08/17/september-fed-interest-rate-increase-is-very-unlikely-goldman-sachs-says",
+          "why": "Macro policy expectations, not crypto-specific news, remain the dominant driver of short-term bitcoin price action."
+        },
+        {
+          "headline": "Coldcard breach losses climb past $115 million as a fifth wave of thefts emerges",
+          "summary": "Galaxy Research estimates total losses tied to the Coldcard hardware-wallet firmware flaw now exceed $115 million, based on data through August 13. The five-year-old bug routed seed generation to a predictable software PRNG instead of the device's hardware RNG; wallets created before the fix remain vulnerable even after updating firmware, and Coinkite has now spoken with more than 200 victims.",
+          "source": "PYMNTS",
+          "url": "https://www.pymnts.com/cryptocurrency/2026/coldcard-breach-losses-now-exceed-115-million/",
+          "why": "Among the largest hardware-wallet exploits on record, and a reminder that self-custody security depends entirely on implementation, not just the concept."
+        },
+        {
+          "headline": "Hashdex begins liquidating DEFI, the first US spot bitcoin ETF closure",
+          "summary": "Hashdex's $14.7M DEFI fund traded its final day on August 17 and will now sell its remaining bitcoin and distribute cash to shareholders. The fund charged the same 0.25% expense ratio as BlackRock's and Fidelity's much larger offerings, leaving investors no incentive to pick the smaller, less liquid product as inflows concentrated in IBIT and FBTC.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/business/2026/08/04/first-u-s-spot-bitcoin-etf-to-close-as-inflows-dwindle-investors-chase-ai-returns",
+          "why": "The first shakeout among the crowded field of US spot bitcoin ETFs, showing fee parity alone isn't enough to survive against the biggest issuers."
+        }
+      ]
+    }
+  ]
+}
