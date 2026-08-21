@@ -1,0 +1,104 @@
+{
+  "date": "2026-08-21",
+  "intro": "Bitcoin extended its Treasury-buyback rally past $75,000 in Asia trading, its biggest weekly gain since March. Anthropic and OpenAI both moved on enterprise data retention within a day of each other, Anthropic shipped GA browser- and computer-use tools for the Claude API, and Anthropic published a wet-lab-validated result showing Claude designing functional protein binders that beat human experts. Go 1.27 shipped with generic methods, and GitHub published its postmortem on last week's 8-hour outage.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Claude API ships computer use and browser use tools as generally available",
+          "summary": "Anthropic moved its computer-use toolset out of beta on the Claude API (as `computer_toolset_20260801`, no beta header required) and launched a new browser-use tool for driving a browser inside an application's own viewport, reading the accessibility tree, elements, forms and tabs rather than relying only on screenshots. Both are available for Claude Fable 5, Mythos 5, Opus 5, Sonnet 5 and Opus 4.8.",
+          "source": "Anthropic",
+          "url": "https://platform.claude.com/docs/en/release-notes/overview",
+          "why": "General availability (versus beta) is the signal that matters for teams building production coding and computer-using agents on Claude."
+        },
+        {
+          "headline": "Anthropic to let enterprise customers keep required safety data on their own infrastructure",
+          "summary": "Anthropic plans to roll out a system later this year that still requires 30-day data retention for its most capable models but lets regulated enterprise customers hold that data on their own cloud infrastructure instead of Anthropic's, after coordinating the option with more than 100 customers.",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-08-20/anthropic-plans-to-change-data-retention-policy-for-advanced-ai",
+          "why": "Data retention has become a genuine competitive wedge for winning regulated enterprise developers onto Claude versus rivals offering zero retention."
+        },
+        {
+          "headline": "OpenAI previews \"Private Safety Processing\" to keep zero data retention while still catching misuse",
+          "summary": "OpenAI is testing a system with early customers that flags misuse patterns across related API interactions without giving OpenAI staff access to the underlying content, designed to stay compatible with Zero Data Retention deployments. A wider rollout and technical paper are planned for September.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models/",
+          "why": "A direct competitive answer to Anthropic's retention requirement, aimed at the same regulated-enterprise developers building agents on either platform."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Anthropic says Claude designed functional protein binders, beating human experts in a design contest",
+          "summary": "In a wet-lab-validated campaign with Adaptyv Bio and Twist Bioscience, Claude (Mythos Preview and Opus 4.8) autonomously researched targets, selected binding sites and designed candidate protein binders, producing functional binders for 14 of 15 targets at a 22-35% hit rate versus the field's typical 10-15%. Against one target, Claude's best design beat the winning human entry in an Adaptyv Bio competition (40% success versus 3.7%).",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/research/Claude-accelerates-protein-design",
+          "why": "One of the more concrete, independently-validated demonstrations yet of an LLM outperforming domain experts on a real scientific design task rather than a benchmark."
+        },
+        {
+          "headline": "Researchers show Grok's web chat can be tricked by encrypted prompt injection",
+          "summary": "Security researchers at Adversa AI found that Grok's guardrail scanner cannot read encrypted instructions embedded in a web page alongside their own decryption key, but passes the ciphertext to the model anyway, which then decrypts and follows the hidden instructions. As of August 19 the technique still worked against Grok.com.",
+          "source": "The Register",
+          "url": "https://www.theregister.com/ai-and-ml/2026/08/20/grok-chat-duped-into-swallowing-injected-instructions/5290019",
+          "why": "A novel bypass of AI guardrail scanning that other vendors' web-browsing agents may share, not just an xAI-specific bug."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Go 1.27 ships with generic methods",
+          "summary": "The Go team released version 1.27, which lets a method declaration carry its own type parameters for the first time, so generic logic can now be organized as a method on a type rather than only as a package-level function. The release also generalizes struct-literal field keys and function type inference.",
+          "source": "The Go Programming Language",
+          "url": "https://go.dev/blog/go1.27",
+          "why": "Closes one of the last major gaps left from Go's 2022 generics introduction, a change developers have been asking for since generics shipped."
+        },
+        {
+          "headline": "GitHub publishes postmortem on last week's 7h47m outage: autoscaling gap plus a VS Code retry storm",
+          "summary": "GitHub's postmortem on the August 17 outage found its Central US capacity monitoring didn't track an Istio sidecar's concurrency limit, so autoscaling never kicked in as traffic hit a new peak; a latent VS Code retry bug then amplified load on the Copilot Token Service by roughly 10x once it started failing, delaying full recovery to 21:02 UTC.",
+          "source": "GitHub",
+          "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
+          "why": "A rare level of detail on how a client-side retry bug in a widely-used editor can turn a backend capacity miss into an 8-hour, multi-service outage."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Bitcoin leaps past $75,000, up almost 20% on the week",
+          "summary": "Bitcoin climbed as high as $75,740 in early Asia trading on August 21, its strongest run since March, extending a rally that began August 19 after the U.S. Treasury said it would at least double long-term bond buybacks. Short liquidations hit roughly $3 billion over 24 hours, the largest short-liquidation event since at least 2021.",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-08-21/bitcoin-leaps-past-75-000-as-crypto-rally-continues-in-asia",
+          "why": "The clearest single-day move of the month and a sign the rally is broadening beyond the initial Treasury/SEC catalysts."
+        },
+        {
+          "headline": "Trump urges Congress to pass crypto Clarity Act as bitcoin and ether surge",
+          "summary": "President Trump pushed Congress to pass the Clarity Act, the bill defining whether digital assets are regulated as securities or commodities, and floated the idea of sizable U.S. bitcoin purchases, adding a political tailwind to the Treasury-buyback-driven rally already underway.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/08/20/cryptocurrencies-trump-bitcoin-ethereum.html",
+          "why": "Direct presidential pressure on the stalled Senate bill is a new input into a debate that had been stuck in procedural limbo since early August."
+        },
+        {
+          "headline": "Bitcoin breaks out of its six-week range, wiping out $3B in short positions",
+          "summary": "Bitcoin broke above $71,000 on August 20 after six weeks trading in a tight range, triggering roughly $3 billion in liquidated short positions against just $263.5 million on the long side.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/08/20/bitcoin-breaks-out-of-six-week-range-tops-usd71-000-as-usd3-billion-in-shorts-get-wiped-out",
+          "why": "A short squeeze of this size is a mechanical amplifier on top of the fundamental catalysts, and helps explain the speed of the move to $75K."
+        },
+        {
+          "headline": "Spot bitcoin ETFs pull in $517M, the largest daily inflow in over three months",
+          "summary": "U.S. spot bitcoin ETFs recorded $517.19 million in net inflows on August 20, led by BlackRock's IBIT with $284.7 million, pushing August's net inflows to $1.47 billion as the Treasury buyback announcement reignited institutional risk appetite.",
+          "source": "The Block",
+          "url": "https://www.theblock.co/news/markets/2026-08-20-us-bitcoin-etf-517-million-inflows-412291",
+          "why": "Institutional ETF flows, not just spot-market short covering, are backing this leg of the rally."
+        }
+      ]
+    }
+  ]
+}
