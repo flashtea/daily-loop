@@ -1,0 +1,75 @@
+{
+  "date": "2026-08-23",
+  "intro": "A quiet weekend for coding-tool launches, but the bigger story is Anthropic itself: reporting suggests the Claude maker could file for an IPO as soon as this month at a valuation that would top SpaceX's record debut. Bitcoin's rally keeps compounding, with ETF inflows just posting their strongest week since October.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Google adds enterprise security and governance controls to Antigravity",
+          "summary": "Google integrated its agentic coding assistant Antigravity with Gemini Enterprise subscriptions, adding configurable file-access restrictions, terminal command policies, browser limits, centralized audit logging, and token-budget caps in response to enterprise customer demand.",
+          "source": "The Register",
+          "url": "https://www.theregister.com/ai-and-ml/2026/08/21/google-tethers-antigravity-to-enterprise-controls-amid-ai-shakeup/5290730",
+          "why": "Governance and audit controls, not raw capability, are becoming the gating factor for enterprise rollout of coding agents."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Anthropic reportedly eyeing an IPO that could top SpaceX's record-setting debut",
+          "summary": "Bloomberg and CNBC report Anthropic expects to match or exceed the size of SpaceX's record IPO, with some investors' analyses putting a potential valuation around $2 trillion; a public filing could land as soon as the end of August. CNBC separately reports the prospectus will list AI backlash as a named risk factor.",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-08-20/anthropic-expects-to-match-spacex-s-record-ipo-size-or-top-it",
+          "why": "Would be one of the largest IPOs ever, and the first real public-market test of frontier AI economics."
+        },
+        {
+          "headline": "DeepSeek releases an experimental multimodal model that beats Anthropic's Opus 4.8 on one key agentic benchmark",
+          "summary": "DeepSeek-V4-Flash-Vision-Exp adds image and screenshot understanding to DeepSeek's V4 Flash line. It scored 27.3 on Agents Last Exam versus Opus 4.8's 25.7, though it trails on most of eleven other benchmarks tested, and is priced well below US competitors on the DeepSeek API.",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-08-21/deepseek-unveils-test-model-to-rival-anthropic-s-opus-4-8",
+          "why": "Another data point in China's frontier labs closing the gap on agentic capability at a fraction of the cost."
+        },
+        {
+          "headline": "Study: frontier AI labs still won't say how they'd contain a rogue model",
+          "summary": "A new assessment found that few leading AI labs have published or demonstrated concrete containment plans for a model that starts behaving unexpectedly. OpenAI scored best of those evaluated; Anthropic and Meta scored lowest.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/",
+          "why": "A concrete, comparable gap in safety preparedness right as these labs push more autonomous, longer-running agents."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub publishes its postmortem on the August 17 outage, pledges fixes",
+          "summary": "GitHub's own writeup traces the roughly 8-hour outage to a Central US data center component that failed to scale as traffic hit a new peak, triggering cascading authentication and service failures. Fixes include consistent retry limits/budgets across service calls and a review of lower-priority capacity alerts.",
+          "source": "GitHub Blog",
+          "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
+          "why": "The technical root-cause detail behind an outage that hit Actions, Pages, auth and Copilot for millions of developers."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin and ether ETFs post their strongest inflow week since October, $2.6B combined",
+          "summary": "US bitcoin and ether ETFs drew a combined $2.6 billion for the week ending August 22, reversing the prior week's $392 million outflow. Bitcoin ETFs alone took in $1.9 billion, their best week since October, with trading volume up more than 200% to $22.1 billion.",
+          "source": "The Block",
+          "url": "https://www.theblock.co/news/markets/2026-08-22-bitcoin-and-ether-etfs-draw-2-6-billion-in-strongest-inflow-week-since-october-tripling-volume-412531",
+          "why": "Institutional flow data, not just price action, confirms this rally has real demand behind it."
+        },
+        {
+          "headline": "Bitcoin holds near $77K after topping $78K, capping its strongest week since 2024",
+          "summary": "Bitcoin settled around $77,000-$78,000 through the weekend after a Friday close near $78,335, up roughly 22% on the week on Treasury bond-buyback optimism and a short squeeze that liquidated billions in short positions.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/08/21/bitcoin-gain-cryptocurrency-investors-optimistic.html"
+        }
+      ]
+    }
+  ]
+}
