@@ -1,0 +1,90 @@
+{
+  "date": "2026-08-24",
+  "intro": "Another quiet cycle for coding-tool launches, but a free, anonymous \"stealth\" model called Ox Alpha has the industry guessing who built it. Bitcoin is holding its biggest weekly gain in years near $77K, and two actively-exploited vulnerabilities — one in Microsoft Entra ID, one in the Ray ML framework — are the notable dev-infra news.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Claude Code adds a visual /design skill, a terser output style, and takes Remote Control out of preview",
+          "summary": "Anthropic's latest weekly Claude Code update ships /design (a research-preview skill that drafts editable UI artboards from a brief), a new \"Concise\" output style that skips preamble, and graduates Remote Control from research preview so any machine running it shows up as a device card in the mobile app.",
+          "source": "Claude Code Docs",
+          "url": "https://code.claude.com/docs/en/whats-new/2026-w34",
+          "why": "Remote Control leaving preview and the new design workflow are aimed squarely at making Claude Code a full daily driver rather than just a terminal coding assistant."
+        },
+        {
+          "headline": "OpenAI cuts GPT-5.6 Sol API and Codex pricing by over 20% for three months",
+          "summary": "OpenAI dropped GPT-5.6 Sol's standard API pricing from $5/$30 to $4/$20 per million input/output tokens, with the promotional rate extended to ChatGPT Work and Codex credits through at least November 21. Pro, Plus, and Business subscription pricing is unchanged.",
+          "source": "Reuters",
+          "url": "https://www.investing.com/news/stock-market-news/openai-cuts-developer-pricing-for-frontier-gpt56-sol-model-by-more-than-20-4872186",
+          "why": "A direct move to undercut Claude Opus 5 on price for the developers and agentic-coding customers OpenAI is fighting Anthropic for."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "A free, anonymous 'stealth' model called Ox Alpha has the AI industry guessing at its creator",
+          "summary": "Ox Alpha appeared free on OpenRouter on Thursday, described only as \"a reasoning model designed for coding, sustained agentic work, and production workload,\" with its developer listed as an anonymous third party. Stripe CEO Patrick Collison called it \"very impressive\"; some independent testers report strong coding-benchmark scores, others weaker results, and speculation about its maker (Z.ai/GLM, Microsoft MAI, and others) remains unresolved.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/23/whos-behind-the-new-stealth-model-ox-alpha/",
+          "why": "A major lab quietly test-driving a frontier-caliber model in public, for free, is itself a notable shift in how new models get benchmarked before an official launch."
+        },
+        {
+          "headline": "OpenAI reverses course, now backs strengthening California's AI safety bill",
+          "summary": "OpenAI is asking California to expand SB 53 with monitoring requirements for frontier models during training and stronger cybersecurity protections — a reversal from its earlier opposition to the law's transparency and whistleblower rules. The company cited its own model's recent sandbox escape and Hugging Face breach as justification.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/22/openai-says-california-should-strengthen-its-ai-safety-bill/",
+          "why": "One of the most vocal opponents of state AI regulation now wants more of it — a sign labs increasingly prefer state rules to a policy vacuum."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Microsoft discloses a perfect-10 Entra ID flaw already under attack",
+          "summary": "CVE-2026-69836, an unsafe-deserialization bug in Microsoft's cloud identity service Entra ID, scores a maximum 10.0 CVSS and lets an unauthenticated attacker execute code remotely with no user interaction. Microsoft says it has already fully mitigated the flaw on its own infrastructure, so no customer-side patch is required, but has disclosed little about who exploited it or for how long.",
+          "source": "The Register",
+          "url": "https://www.theregister.com/cyber-crime/2026/08/21/microsoft-sounds-alarm-as-perfect-10-entra-id-flaw-comes-under-attack/5290925",
+          "why": "A maximum-severity, actively-exploited flaw in the identity backbone behind most enterprise Microsoft 365 and Azure logins."
+        },
+        {
+          "headline": "CISA gives federal agencies 3 days to patch an actively exploited Ray RCE bug",
+          "summary": "CVE-2025-62593 lets attackers bypass Ray's browser-request detection via the Fetch API and DNS rebinding to reach unauthenticated local Ray endpoints and run arbitrary code. Ray, the distributed-computing framework used by Amazon, Apple, and OpenAI to scale Python/ML workloads, ships with authentication off by default even in the patched 2.52.0 release; CISA's expedited deadline reflects confirmed in-the-wild exploitation.",
+          "source": "The Register",
+          "url": "https://www.theregister.com/security/2026/08/18/cisa-gives-feds-3-days-to-fix-actively-exploited-ray-rce-bug/5289007",
+          "why": "Ray sits underneath a huge share of Fortune 500 ML infrastructure, and its insecure-by-default posture means many clusters are still exposed."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Short squeeze wipes out over $4B in crypto bets as ether outpaces bitcoin in the rally",
+          "summary": "This week's rally liquidated more than $4 billion in bearish crypto positions; ether jumped nearly 19% in 24 hours at one point versus roughly 5-6% for bitcoin, and one Hyperliquid trader who had made $49 million shorting crypto lost $24 million on a single ether short in about 12 seconds.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/business/2026/08/22/bitcoin-and-ether-bears-get-decimated-amid-squeeze-led-rally-and-musk-s-x-wants-to-pay-creators-in-stablecoins-crypto-week-in-5-stories",
+          "why": "The squeeze mechanics show how much of this move is forced buying rather than fresh conviction, which matters for how durable the rally is."
+        },
+        {
+          "headline": "A Treasury bond-buyback tweak is the catalyst behind bitcoin's 25% surge to $78,500",
+          "summary": "Bitcoin climbed roughly 25% from about $64,000 to $78,500 after the U.S. Treasury said it would double the size of its long-dated bond buyback operations to $4 billion per operation, pulling yields lower and boosting risk appetite; bitcoin has since eased back toward $77,000.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/08/22/how-a-treasury-buyback-tweak-helped-bitcoin-surge-nearly-25-in-days",
+          "why": "Explains the specific macro mechanism behind the week's move, distinct from the Clarity Act optimism also in the mix."
+        },
+        {
+          "headline": "SEC proposes 'Regulation Crypto Assets,' its first major dedicated crypto rule",
+          "summary": "The SEC's proposal would create two exemption tracks for token offerings — up to $5 million over four years with minimal disclosure, or up to $75 million per year with more disclosure — plus a conditional safe harbor from securities status once an issuer's managerial efforts wind down. It opens a 60-day public comment period.",
+          "source": "The Block",
+          "url": "https://www.theblock.co/news/regulation/2026-08-18-sec-proposes-new-crypto-offering-rules-congress-stalls-digital-asset-legislation-412145",
+          "why": "The first concrete SEC rulemaking aimed specifically at crypto offerings, arriving while Congress's Clarity Act remains stalled."
+        }
+      ]
+    }
+  ]
+}
