@@ -1,0 +1,90 @@
+{
+  "date": "2026-08-26",
+  "intro": "OpenAI and Nvidia both push new inference silicon into production the same week, Anthropic and Slack rework how coding agents fit into daily workflows, and bitcoin's ETF-fueled rally clears $81,000.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Claude's memory now follows you between chat and Cowork",
+          "summary": "Anthropic merged Claude's memory system so context learned on one surface, chat or the Cowork agent, carries over to the other, replacing the old end-of-conversation summary with continuously updated, categorized entries.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/25/claude-cowork-finally-remembers-what-you-told-the-app-in-chat/",
+          "why": "Cuts the repeated re-briefing that made switching between Claude surfaces annoying for teams running long projects."
+        },
+        {
+          "headline": "Slack launches dedicated channels for coding agents",
+          "summary": "Slack Code gives teams project-specific channels where Claude Code, Devin, GitHub Copilot and Vercel's agent work alongside humans, proposing diffs and live previews and waiting for sign-off before anything ships.",
+          "source": "Slack",
+          "url": "https://slack.com/blog/news/slack-code-channels-for-agents",
+          "why": "Pushes agentic coding out of solo terminal sessions and into a reviewable, team-visible workflow."
+        },
+        {
+          "headline": "Shopify's CEO threatens to ban Claude Code over AGENTS.md",
+          "summary": "Tobi Lutke said he's considering banning Claude Code at Shopify because it still won't natively read AGENTS.md, the cross-tool agent-instructions file now used by more than 60,000 open-source projects; Anthropic has so far declined the feature request.",
+          "source": "The New Stack",
+          "url": "https://thenewstack.io/shopify-claude-code-agentsmd/",
+          "why": "A live flashpoint in the fight over which agent-config standard becomes the default."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "OpenAI's first custom chip posts inference numbers that beat Nvidia's best",
+          "summary": "OpenAI and Broadcom's Jalapeno inference chip topped SemiAnalysis' InferenceX benchmark on both tokens-per-user and throughput-per-kilowatt, the first hard data point behind OpenAI's push to cut its dependence on Nvidia GPUs.",
+          "source": "OpenAI / TechCrunch",
+          "url": "https://techcrunch.com/2026/08/25/openais-jalapeno-chip-is-built-for-fast-inference-at-scale-benchmarks-show/",
+          "why": "If the numbers hold up at scale, it's a real crack in Nvidia's inference monopoly, not just a chip announcement."
+        },
+        {
+          "headline": "Nvidia's Groq 3 LPX inference chip enters full production",
+          "summary": "Nvidia's purpose-built inference accelerator, an extension of the Vera Rubin platform, is now shipping with Nebius as the first cloud to deploy it; Nvidia says it hit the fastest token-generation speeds ever recorded running Gemma 4 31B.",
+          "source": "Nvidia",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-groq-3-lpx-now-in-full-production-with-world-class-speed-for-agentic-ai",
+          "why": "Nvidia's direct answer to the custom-silicon moves from OpenAI/Broadcom and Google/Anthropic; the inference-chip race is now a multi-way fight."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Jetpack Compose 1.12 ships with mesh gradients, Views-level startup speed",
+          "summary": "Google's Compose 1.12 release bumps compileSdk to API 37, adds a MeshGradientPainter for organic multi-point gradients, and closes the gap on Time to Initial Display versus the older Android Views system.",
+          "source": "Android Developers Blog",
+          "url": "https://android-developers.googleblog.com/2026/08/jetpack-compose-august-2026-release.html",
+          "why": "Startup-time parity with Views removes one of the last reasons teams delay a Compose migration."
+        },
+        {
+          "headline": "SvelteKit 3 preview lands with reorganized $app modules",
+          "summary": "The SvelteKit 3 preview reorganizes the framework's $app modules and ships zero-config error props and a refreshAll helper, alongside smaller releases adding submitted-state tracking for remote forms.",
+          "source": "svelte.dev",
+          "url": "https://svelte.dev/blog/whats-new-in-svelte-august-2026",
+          "why": "Signals where the framework is headed as it moves toward a major version."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin briefly tops $81,000 as ETF inflows hit a seventh straight day",
+          "summary": "Bitcoin extended its rally to briefly clear $81,000 on August 25 as U.S. spot bitcoin ETFs logged a seventh consecutive day of net inflows, holding the broader move above $80,000.",
+          "source": "CNBC / CoinDesk",
+          "url": "https://www.cnbc.com/2026/08/25/bitcoin-price-near-80000-cryptocurrency-ether-us-treasuries.html",
+          "why": "Sustained ETF buying, not just spot speculation, is what's underpinning the move."
+        },
+        {
+          "headline": "Bitcoin and ether ETFs pull in $2.6B in their strongest week since October",
+          "summary": "Combined spot bitcoin and ether ETF inflows hit $2.6 billion for the week, the category's best since October, with trading volume more than tripling to $29 billion as the rally accelerated.",
+          "source": "The Block",
+          "url": "https://www.theblock.co/news/markets/2026-08-22-bitcoin-and-ether-etfs-draw-2-6-billion-in-strongest-inflow-week-since-october-tripling-volume-412531",
+          "why": "Confirms the rally is being driven by real institutional flow, not just thin-volume speculation."
+        }
+      ]
+    }
+  ]
+}
