@@ -1,0 +1,83 @@
+{
+  "date": "2026-08-27",
+  "intro": "The anonymous \"Ox Alpha\" model that had quietly colonized coding agents for weeks turns out to be Z.ai's GLM-5.3-Flash, GitHub Actions goes down for the third time in three weeks, and bitcoin cools off from its $81,000 high as OpenAI formally retires o3.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Claude Code ships Auto Mode permission controls and session fixes",
+          "summary": "Anthropic's August 25 Claude Code release adds an Auto Mode tab to /permissions for reviewing and editing the classifier's rules, warns when a Bash allow-rule uses a wildcard before the subcommand, and improves background-session and resume reliability.",
+          "source": "Anthropic",
+          "url": "https://docs.anthropic.com/en/release-notes/claude-code",
+          "why": "Gives teams running Claude Code in auto mode a way to actually see and tune what it's allowed to do unattended."
+        },
+        {
+          "headline": "The stealth model already inside Zed and Claude Code turns out to be Z.ai's GLM-5.3-Flash",
+          "summary": "\"Ox Alpha,\" an anonymous model that appeared on OpenRouter and was integrated into Zed and Nous Research's Hermes Agent within a day, was revealed by Z.ai as GLM-5.3-Flash, running free during its stealth preview before Z.ai attached its name and pricing.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/26/surprise-z-ai-is-the-ai-lab-behind-the-mysterious-ox-alpha-model/",
+          "why": "Coding tools wired up an unbranded model sight unseen because the benchmarks were good enough — a preview of how fast agent tooling now adopts unverified models."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Z.ai unmasks Ox Alpha as GLM-5.3-Flash, a 320B open-weight model priced at a tenth of GLM-5.2",
+          "summary": "Z.ai's GLM-5.3-Flash is a 320B-parameter, 18B-active mixture-of-experts model with native multimodality and a 1M-token context window, released under the MIT license and trained to run on Chinese AI chips. Z.ai says it approaches Claude Opus 4.8 on its internal coding benchmark at roughly one-tenth the price.",
+          "source": "Z.ai / TechCrunch",
+          "url": "https://z.ai/blog/glm-5.3-flash",
+          "why": "An open-weight model claiming near-frontier coding performance at a fraction of the cost pressures the economics of every closed model above it."
+        },
+        {
+          "headline": "OpenAI retires o3 from ChatGPT after a 90-day sunset",
+          "summary": "o3 left ChatGPT's model picker on August 26, three months after OpenAI announced the sunset on May 28; o3-pro remains available for Pro, Team, Enterprise and Edu subscribers, and the API retirement date is still unset.",
+          "source": "OpenAI",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "why": "Marks the formal end of OpenAI's reasoning-model line that kicked off the current wave of test-time-compute models."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub Actions goes down again, its third major outage in three weeks",
+          "summary": "GitHub Actions failed starting at 15:11 UTC on August 26 after an issue with a database primary; failing over to a replica didn't fully mitigate the problem. It's the third significant GitHub disruption since August 6, days after GitHub's CTO publicly apologized for the August 17 outage.",
+          "source": "The Register",
+          "url": "https://www.theregister.com/devops/2026/08/26/github-actions-was-down-yet-again/5292679",
+          "why": "A pattern of repeat outages right after a public reliability pledge is a bigger story than any single incident."
+        },
+        {
+          "headline": "Kubernetes 1.37 ships with three breaking changes",
+          "summary": "Kubernetes 1.37 requires containerd 2.0+ (dropping containerd 1.x support), refuses kubelet startup on cgroup v1 nodes without failCgroupV1: false explicitly set, and graduates the gitRepo volume plugin's removal to GA alongside 16 other enhancements reaching stable.",
+          "source": "Kubernetes",
+          "url": "https://kubernetes.io/releases/notes/",
+          "why": "The containerd and cgroup v1 changes can break upgrades if cluster operators don't check compatibility first."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin pulls back from its $81,000 high as August's rally cools",
+          "summary": "Bitcoin slipped to the high-$77,000s to low-$78,000s on August 26-27, down from the $81,235 high hit two days earlier, as the treasury-buyback-and-ETF-inflow rally that pushed it through $80,000 for the first time in three months lost some steam.",
+          "source": "Yahoo Finance / CNBC",
+          "url": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-wednesday-august-26-2026-bitcoin-is-having-a-price-gusher-to-close-out-august-124254461.html",
+          "why": "A pullback after a fast run to a three-month high is the first real test of whether the rally has staying power."
+        },
+        {
+          "headline": "August spot bitcoin ETF inflows hit $2.38B, the strongest month of 2026",
+          "summary": "U.S. spot bitcoin ETFs took in about $2.38 billion in net inflows in August, their best month of the year, including a $1.92 billion week that was the largest since October, following the U.S. Treasury's move to double its long-bond buyback program.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/08/20/live-updates-bitcoin-etfs-draw-usd517-million-ether-pulls-usd189-million-in-biggest-inflows-in-months",
+          "why": "Sustained institutional buying, not just retail momentum, is what carried bitcoin through $80,000."
+        }
+      ]
+    }
+  ]
+}
