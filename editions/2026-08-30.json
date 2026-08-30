@@ -1,0 +1,90 @@
+{
+  "date": "2026-08-30",
+  "intro": "OpenAI moves to cut SpaceX's newly acquired Cursor off its models, and Anthropic steps into the gap; Google quietly relocates its Gemini safety team into its lobbying arm; Bitcoin's Fed-driven pullback deepens as its ETF inflow streak finally breaks.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "lead": true,
+          "headline": "OpenAI moves to cut Cursor off its models after SpaceX acquisition",
+          "summary": "OpenAI notified SpaceX it will wind down the contract giving Cursor access to OpenAI models, with a proposed shutoff date of November 12, saying it cannot trust SpaceX to honor its terms of service given Elon Musk's history of contract disputes. Anthropic co-founder Tom Brown said Anthropic will keep increasing Claude compute for Cursor instead.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/08/29/openai-cursor-spacex-model-access.html",
+          "why": "OpenAI models made up only about 5% of Cursor's traffic, but the move turns model access into a competitive weapon right as SpaceX's AI arm and Anthropic jockey for position in coding tools."
+        },
+        {
+          "headline": "Claude Code patches symlink bugs that could bypass permission checks",
+          "summary": "Anthropic shipped Claude Code 2.1.251, fixing bugs where file tools, plugin commands, Grep/Glob searches and the Workflow tool could follow symlinks to read or write outside approved locations after permission checks had already passed.",
+          "source": "Claude Code Changelog",
+          "url": "https://code.claude.com/docs/en/changelog",
+          "why": "A concrete fix for the class of sandbox-escape bug that matters most as agentic coding tools get broader file-system access."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Google moves its Gemini AI safety team into its lobbying division",
+          "summary": "Google is relocating its roughly 90-person AI responsibility unit, which evaluates Gemini for chemical, biological, radiological and nuclear risks, from DeepMind to report to Kent Walker's global-affairs organization starting September 1. Several team members who sought transfers to stay inside DeepMind had those requests denied.",
+          "source": "Quartz",
+          "url": "https://qz.com/google-ai-responsibility-team-deepmind-global-affairs-082726",
+          "why": "Placing the team that flags dangerous-capability findings inside the division that manages Google's relationships with regulators raises an obvious independence question."
+        },
+        {
+          "headline": "Z.ai releases GLM-5.3-Flash, a 320B open-weight model under MIT license",
+          "summary": "Z.ai launched GLM-5.3-Flash, a natively multimodal 320-billion-parameter mixture-of-experts model with 18 billion active parameters and a 1-million-token context window, publishing the weights on Hugging Face under the MIT license at roughly a tenth of its predecessor's price.",
+          "source": "Z.ai",
+          "url": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+          "why": "Day-one open weights scoring close to Claude Opus 4.8 on coding benchmarks keep pushing the price of capable models toward zero."
+        },
+        {
+          "headline": "OpenAI's first custom inference chip beats Nvidia's Blackwell in published benchmarks",
+          "summary": "OpenAI and Broadcom showed the first benchmarks for Jalapeno, OpenAI's in-house inference chip, claiming 1.5x-1.9x more AI work per watt and up to 3.6x lower latency than Nvidia's Blackwell systems while drawing 700W versus 1,200-1,400W, with results partly verified on-site by SemiAnalysis on its public InferenceX benchmark.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/08/26/openai-jalapeno-ai-chip-nvidia.html",
+          "why": "The first credible outside evidence that a hyperscaler's custom silicon can beat Nvidia on inference efficiency, not just cost."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "VS Code 1.135 lets you continue Copilot or Claude agent sessions started elsewhere",
+          "summary": "The release adds external agent sessions so developers can pick up Copilot or Claude Code runs started in other apps, an experimental 'Rubber Duck' feature that gets a second model's opinion on your work, and a streamlined agents window with per-model token usage breakdowns.",
+          "source": "Visual Studio Code",
+          "url": "https://code.visualstudio.com/updates/v1_135",
+          "why": "Microsoft is building VS Code into a control surface for multiple competing coding agents rather than betting on just one."
+        },
+        {
+          "headline": "Amazon to shut down Mechanical Turk and SageMaker Ground Truth on September 30",
+          "summary": "Amazon confirmed it will close Mechanical Turk, the crowdsourced task marketplace it launched in 2005, along with SageMaker Ground Truth and Augmented AI, on September 30, ending Amazon's human-data-labeling infrastructure as newer AI-training-data startups have taken over the market.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/08/25/amazon-service-that-jeff-bezos-called-artificial-ai-is-shutting-down.html",
+          "why": "The platform Bezos once called 'artificial artificial intelligence' outlasted the joke by two decades before AI itself made it redundant."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin extends slide to $77,678 as Fed rate-hike odds climb to 68%",
+          "summary": "Bitcoin fell a further 3.3% to $77,678 on August 29, continuing Friday's drop from above $80,000, as markets kept repricing Fed Chair Kevin Warsh's hawkish Jackson Hole remarks, pushing the odds of a September rate hike to 68% from roughly 40% before the speech.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/business/2026/08/28/live-updates-bitcoin-options-worth-usd6-4-billion-just-expired-as-prices-hover-near-usd80-000",
+          "why": "A second straight day of Fed-driven selling shows the rate-cut hopes behind bitcoin's summer rally are still unwinding."
+        },
+        {
+          "headline": "Spot Bitcoin ETFs post $202M outflow, ending nine-day inflow streak",
+          "summary": "U.S. spot Bitcoin ETFs saw $201.8 million in net outflows on Friday, breaking a nine-session run that had pulled in roughly $3 billion since August 17, with ARKB leading redemptions at $114.9 million while BlackRock's IBIT saw a comparatively modest $33.4 million withdrawn.",
+          "source": "Cointelegraph",
+          "url": "https://cointelegraph.com/markets/bitcoin-etf-end-9-day-inflow-streak-btc-below-78k",
+          "why": "The first outflow day in two and a half weeks tests whether institutional demand can keep absorbing bitcoin's pullback."
+        }
+      ]
+    }
+  ]
+}
