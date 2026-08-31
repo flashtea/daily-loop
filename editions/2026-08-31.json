@@ -1,0 +1,83 @@
+{
+  "date": "2026-08-31",
+  "intro": "A federal judge rules the Pentagon's blacklisting of Anthropic unconstitutional just as Sony and Warner sue the company for mass copyright infringement, Claude Code's usage-limit math sparks developer backlash, and Michael Saylor signals Strategy's return to bitcoin buying as BTC nears $79,000.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Claude Code's \"25% increase\" turns out to be a 17% cut from today's limits",
+          "summary": "Anthropic said it will permanently raise Claude Code's standard weekly limits by 25% above baseline starting September 14, but that replaces a temporary 50% boost that's been in place since spring, meaning active users will actually see about 17% less capacity than they have right now. Anthropic deleted its initial announcement post and reissued it admitting the reduction after developer backlash.",
+          "source": "Bleeping Computer",
+          "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-is-cutting-claude-codes-current-weekly-limits-by-17-percent/",
+          "why": "Anyone budgeting Claude Code usage around the current temporary boost needs to plan for less headroom after September 14, not more."
+        },
+        {
+          "headline": "Cursor's cloud agents now run unattended end-to-end, from pickup to merged PR",
+          "summary": "Cursor's latest cloud-agent updates let agents automatically pick up work in response to events, hold a goal across long-running sessions, and stay subscribed to the pull requests they open to fix CI failures and address bot comments without a human re-prompting them.",
+          "source": "Cursor",
+          "url": "https://cursor.com/changelog",
+          "why": "Moves Cursor from a prompt-and-wait tool toward agents that operate as a standing part of the team's workflow."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Judge rules Pentagon's blacklisting of Anthropic was unconstitutional",
+          "summary": "U.S. District Judge Rita Lin ruled that the Defense Department's designation of Anthropic as a supply-chain risk, imposed after the company refused to drop contract limits barring its models from autonomous weapons and domestic mass surveillance, violated the First and Fifth Amendments. She ordered the government to rescind all directives issued against the company, calling the security rationale \"illegal and baseless.\"",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/08/28/judge-blocks-pentagon-blacklist--anthropic-.html",
+          "why": "A rare, sharply worded court check on the government using contracting power to retaliate against an AI lab's safety commitments; the Pentagon is expected to appeal."
+        },
+        {
+          "headline": "Sony Music and Warner Chappell sue Anthropic for mass copyright infringement",
+          "summary": "Sony Music Publishing and Warner Chappell sued Anthropic and co-founders Dario Amodei and Benjamin Mann, alleging the company illegally torrented and scraped tens of thousands of copyrighted songs to train Claude, and are seeking statutory damages of up to $150,000 per work.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/",
+          "why": "Comes less than a year after Anthropic's $1.5 billion settlement with authors and publishers, and could dwarf it if damages are awarded at the statutory maximum."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Go 1.27 adds generic methods and a goroutine-leak profiler",
+          "summary": "Go 1.27 lets method declarations carry their own type parameters (generic methods), improves type inference and struct literal field promotion, expands the go fix tool with new modernizers, and adds a runtime profile for catching goroutine leaks alongside encoding/json/v2 and native UUID support.",
+          "source": "The Go Programming Language",
+          "url": "https://go.dev/blog/go1.27",
+          "why": "Generic methods close a long-standing gap in Go's generics, and the leak profiler gives teams a built-in way to catch a notoriously hard class of bug."
+        },
+        {
+          "headline": "Rust 1.98.0 stabilizes algebraic float methods and a faster integer formatter",
+          "summary": "Rust 1.98.0 adds \"algebraic\" arithmetic methods on f32/f64 that permit real-number-style optimizations, a standard-library format_into method and NumBuffer for integer serialization performing on par with the itoa crate, and allows shortening a &mut reference's lifetime when unsize-coercing.",
+          "source": "Rust Blog",
+          "url": "https://blog.rust-lang.org/2026/08/20/Rust-1.98.0/",
+          "why": "Brings fast integer formatting into std, removing a common reason projects reach for a third-party crate."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Saylor's \"We're Back\" post signals Strategy's return to bitcoin buying as BTC nears $79,000",
+          "summary": "Michael Saylor posted \"We're Back\" on X, widely read as a signal that Strategy resumed bitcoin purchases for the first time in two months after pausing to build up cash reserves; bitcoin traded near $79,000 on the news. Strategy held 840,447 BTC heading into the announcement.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/08/30/bitcoin-nears-usd79-000-as-michael-saylor-hints-at-first-bitcoin-purchase-in-two-months",
+          "why": "Strategy's weekly buying has been a reliable demand signal for bitcoin all year, so a resumption after a two-month pause matters to price watchers."
+        },
+        {
+          "headline": "Market makers are cashing in on bitcoin's rally without betting on price direction",
+          "summary": "Sophisticated trading firms are running cash-and-carry trades, holding spot bitcoin while shorting an equal amount via perpetual futures, to collect positive funding-rate payments rather than take directional risk, with funding rates running around 0.01% per 8 hours across major exchanges.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/08/28/crypto-market-makers-are-cashing-in-on-bitcoin-s-rally-without-betting-on-direction",
+          "why": "Elevated funding rates and heavy basis-trade activity are a sign of how much leveraged, bullish positioning has built up underneath the rally."
+        }
+      ]
+    }
+  ]
+}
