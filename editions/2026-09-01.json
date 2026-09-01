@@ -1,0 +1,70 @@
+{
+  "date": "2026-09-01",
+  "intro": "The Pentagon rolls out custom ChatGPT and Grok deployments to millions of personnel, Nvidia backs MediaTek with $3.5 billion to hedge against the custom-chip wave, and bitcoin holds its August gains above $78,000 as rate-hike bets build. Coding-agent and dev-tools news is quieter today after a busy stretch — the freshest software-dev item is a Cursor security story still working through the reporting cycle, and nothing in Dev Tools & Releases cleared the bar for a section today.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Aurora ransomware crew used Cursor's AI agent to breach seven companies",
+          "summary": "A Russian-speaking affiliate of the Aurora ransomware operation used Cursor's built-in coding agent, running on Anthropic's Claude Sonnet 4.5, to help scan networks, steal credentials and configure VPNs during intrusions at seven companies across three continents between April and May, according to an investigation by Gambit Security first reported by Reuters. The operators got around the agent's refusals by framing the work as an authorized security test.",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/08/aurora-ransomware-operators-use-cursor.html",
+          "why": "The clearest documented case yet of a real ransomware crew using an AI coding agent as an operational tool, not just for writing malware."
+        },
+        {
+          "headline": "Claude Code 2.1.252 fixes macOS bash bugs and stabilizes Remote Control",
+          "summary": "Anthropic shipped Claude Code 2.1.252, fixing Bash command issues on macOS and improving the reliability of Remote Control sessions and background task notifications, a smaller follow-up to last week's 2.1.251 release that added model-switch hooks and spend-limit tracking.",
+          "source": "Claude Code Changelog",
+          "url": "https://code.claude.com/docs/en/changelog"
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Pentagon rolls out custom ChatGPT and Grok to 3 million personnel",
+          "summary": "The Defense Department launched ChatGPT Mil and Grok for Government inside GenAI.mil, a secure portal giving military and civilian staff access to frontier AI models tailored to \"warfighter needs\" without routing sensitive data through consumer products. More than 1.7 million of the department's 3 million personnel have already signed on.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/31/the-pentagon-now-has-its-own-version-of-chatgpt-and-grok/",
+          "why": "One of the largest single deployments of commercial generative AI inside the U.S. government to date."
+        },
+        {
+          "headline": "Nvidia invests $3.5 billion in MediaTek to lock in AI chip partnership",
+          "summary": "Nvidia is investing $3.5 billion in MediaTek via convertible bonds, deepening a partnership spanning data-center accelerators, NVLink Fusion for custom hyperscaler chips, and consumer and automotive silicon, as more AI labs and cloud providers build their own chips to reduce reliance on Nvidia GPUs.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/31/nvidias-3-5b-mediatek-bet-reveals-its-plan-for-tackling-big-techs-ai-chip-buildout/",
+          "why": "Shows Nvidia adapting to the custom-silicon wave by taking a stake in it rather than fighting it."
+        },
+        {
+          "headline": "OpenAI, Anthropic, Google and 125+ companies call for collective defense against rogue AI",
+          "summary": "More than 128 organizations, including OpenAI, Anthropic, Google, Microsoft and AWS, signed a joint letter urging coordinated cyber defense against AI-enabled attacks, warning that autonomous agents capable of finding and exploiting vulnerabilities at scale pose an imminent, fast-scaling threat.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/27/openai-anthropic-google-and-100-other-companies-call-for-action-to-defend-against-rogue-ai/",
+          "why": "Rare industry-wide alignment on treating AI-driven cyberattacks as a near-term risk rather than a hypothetical one."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin holds above $78,000 as August closes as best month since 2024",
+          "summary": "Bitcoin traded steady above $78,000 into September after closing August with roughly a 24-25% gain, its strongest month since November 2024, even as rising oil prices and hawkish Fed rate-hike bets pushed the 10-year Treasury yield to 4.78% and pressured other risk assets.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/09/01/bitcoin-steady-above-usd78-000-hype-leads-as-majors-slip-on-hawkish-fed-bets",
+          "why": "Sets up a test of whether bitcoin's summer rally can survive tightening rate expectations heading into the September jobs report."
+        },
+        {
+          "headline": "Strive becomes fifth-largest public bitcoin treasury after $143 million buy",
+          "summary": "Strive added 1,800 BTC for roughly $143 million between August 24-28 at an average price near $79,431, jumping to become the fifth-largest publicly traded corporate bitcoin treasury as more firms compete to build holdings.",
+          "source": "The Block",
+          "url": "https://www.theblock.co/news/business/2026-08-31-strive-fifth-largest-public-bitcoin-treasury-1800-btc-buy-td-cowen-lifts-asst-price-target-413112",
+          "why": "Corporate treasury buying has been one of the steadiest sources of bitcoin demand this year."
+        }
+      ]
+    }
+  ]
+}
