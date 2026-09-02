@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-02",
+  "intro": "Anthropic had a big 24 hours: a new flagship model that immediately became Claude Code's default, plus a reversal of its controversial enterprise data-retention policy. Dev Tools & Releases was thin today, so it runs with a single item rather than padding.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Claude Code makes Fable 5.1 the default model, adds new agent-containment guardrail",
+          "summary": "Claude Code 2.1.257 set Claude Fable 5.1 (1M context) as the default Fable model and added a \"Containment Escape\" rule to auto mode, so cloud metadata-credential fetches, egress evasion and cross-tenant reach are no longer auto-approved unless an environment explicitly marks them expected.",
+          "source": "Claude Code Changelog",
+          "url": "https://code.claude.com/docs/en/changelog",
+          "why": "Tightens agent autonomy safety right as the tool's default model gets more capable."
+        },
+        {
+          "headline": "OpenAI cuts Cursor's model access after SpaceX buyout; Anthropic steps in with more compute",
+          "summary": "OpenAI notified SpaceX it will end Cursor's direct access to its models on November 12, saying it can't be confident SpaceX will honor its terms of service. Within 24 hours, Anthropic said it would keep supplying Claude to Cursor and add compute, plus raise usage limits.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/08/29/openai-cursor-spacex-model-access.html",
+          "why": "Reshapes which frontier labs power one of the most widely used AI coding tools, days after SpaceX's $60B acquisition closed."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Anthropic launches Claude Fable 5.1 and Mythos 5.1",
+          "summary": "Anthropic released Fable 5.1 and Mythos 5.1 — the same model at different safeguard tiers — calling them its most advanced yet for coding, knowledge work and long-running problem-solving. Fable 5.1 costs roughly 25% less than Fable 5 for typical workloads thanks to cheaper cache reads, and is available on all platforms today; Mythos 5.1 is limited to trusted-access programs.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+          "why": "A new flagship release that became Claude Code's default model within hours."
+        },
+        {
+          "headline": "Anthropic reverses enterprise data-retention policy after customer pushback",
+          "summary": "Anthropic introduced Enterprise Frontier Safeguards, letting business customers control how their data is stored and reviewed in infrastructure they control, at no extra cost, rolling out in phases this fall. It replaces a mandatory 30-day retention policy for frontier models that Anthropic introduced in June and walked back after complaints from enterprise customers.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/09/01/anthropic-data-retention.html",
+          "why": "Removes a significant adoption blocker for enterprise Claude customers in finance, healthcare and law."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub CLI adds media support to issues, pull requests and comments",
+          "summary": "GitHub shipped a repeatable --attach flag for the gh CLI that uploads a local image or video and references it inline in an issue, pull request or comment body, closing a long-standing gap with the web UI.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-09-01-github-cli-media-in-issues-pull-requests-and-comments/"
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin holds gains after best August since 2017 as Fed rate-hike odds climb",
+          "summary": "Bitcoin traded around $77,000-78,000 after closing out roughly a 23% August gain, its strongest since 2017, even as a rising oil price and Fed Chair Kevin Warsh's Jackson Hole comments pushed September rate-hike odds from about 35% to near 58-66% on CME FedWatch.",
+          "source": "The Block",
+          "url": "https://www.theblock.co/news/markets/2026-09-01-bitcoin-defies-oil-price-spike-and-rising-fed-hike-bets-after-best-august-since-2017-413218",
+          "why": "Tests whether bitcoin's summer rally can survive tightening rate expectations heading into September's Fed decision."
+        },
+        {
+          "headline": "US spot bitcoin ETFs post $3.5 billion August, strongest month since October",
+          "summary": "US-listed spot bitcoin ETFs pulled in roughly $3.5 billion in net inflows during August, their best month in almost a year, with BlackRock's IBIT absorbing the bulk of the demand as institutional buyers returned near the $80,000 level.",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-09-01/bitcoin-etf-buyers-return-as-80-000-level-tests-market-rally",
+          "why": "A clear signal of renewed institutional demand after a soft spring and summer for ETF flows."
+        }
+      ]
+    }
+  ]
+}
