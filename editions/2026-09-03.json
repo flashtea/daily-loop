@@ -1,0 +1,69 @@
+{
+  "date": "2026-09-03",
+  "intro": "OpenAI drew the sharpest line yet between capability and risk, rating its unreleased Astra model the first to cross its 'Critical' cybersecurity threshold. AI for Software Development and Dev Tools & Releases both run lean today — most of what surfaced in search either broke yesterday's edition already or was too stale to include.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "\"GitSpawn\" flaw lets malicious repos silently run code in Claude Code, Cursor, Codex and more",
+          "summary": "Manifold Security disclosed eight vulnerabilities across seven CLI coding agents, dubbed GitSpawn: a repo's own git configuration (via the core.fsmonitor hook) can execute attacker-controlled code the instant an agent runs a routine git status or diff — no prompt, no approval, sometimes before authentication. Claude Code and Cursor have shipped fixes; Hermes Agent, Qwen Code and Grok Build were still exploitable on Manifold's September 1 retest.",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html",
+          "why": "Opening an untrusted repo with any of these tools can hand over code execution before you've typed a single prompt."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "OpenAI says Astra is the first model to cross its \"Critical\" cyber-capability threshold",
+          "summary": "OpenAI disclosed that its unreleased Astra model meets the Preparedness Framework's Critical cybersecurity bar: in expert-led evaluations it built a full browser-sandbox-escape exploit chain and chained multiple OS vulnerabilities into a local-to-root privilege escalation, without a human directing each step. Its most advanced cyber capabilities will initially be limited to vetted testers.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/",
+          "why": "The first model OpenAI has ever rated capable of finding and chaining zero-days largely on its own — a marker of how offense-capable frontier models have become."
+        },
+        {
+          "headline": "Google ships Gemini 3.8 Flash and a cybersecurity-focused \"Cyber\" variant",
+          "summary": "Google released Gemini 3.8 Flash — its third Flash release in six weeks — alongside Gemini 3.8 Flash Cyber, a defender-oriented model that Chrome's security team says produced 2.6x more correct vulnerability patches than larger commercial models in internal testing. Both are priced the same as 3.7 Flash through the end of the year.",
+          "source": "Google",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+          "why": "Google is now shipping roughly monthly, with defensive-security tooling emerging as its own model category."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "VS Code 1.136 adds \"Agent Merge\" to autonomously clear PR feedback and conflicts",
+          "summary": "Visual Studio Code's September release lets an agent resolve review comments, fix failing checks and untangle merge conflicts until a pull request is ready to merge, plus experimental multi-root workspace support for running Copilot and Claude agent sessions across every folder in a workspace at once.",
+          "source": "Visual Studio Code",
+          "url": "https://code.visualstudio.com/updates/v1_136",
+          "why": "Pushes agentic coding further into the mechanics of actually shipping a PR, not just writing the diff."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin holds near $78K as renewed US-Iran strikes send oil to three-month highs",
+          "summary": "Bitcoin slipped toward $77,000 before steadying near $78,000 after the US struck Iranian targets near the Strait of Hormuz, sending WTI crude above $90 and Brent above $94 a barrel and pressuring broader risk assets alongside rising Fed rate-hike odds.",
+          "source": "Investing.com",
+          "url": "https://www.investing.com/news/cryptocurrency-news/bitcoin-falls-below-78k-as-rate-jitters-iran-escalation-weigh-4882178",
+          "why": "Tests whether bitcoin's recent resilience to geopolitical shocks holds if the conflict escalates further."
+        },
+        {
+          "headline": "Bitcoin ETFs resume buying after single-day pause, capping best month of 2026",
+          "summary": "US spot bitcoin ETFs took in roughly $217 million on September 1, resuming inflows after the prior session's outflow, following an August in which BTC's ETF complex posted its strongest month so far this year.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/business/2026/09/01/live-updates-bitcoin-etfs-resume-buying-as-ether-funds-stretch-streak-to-11-days",
+          "why": "Signals institutional demand snapping back quickly even amid Iran-driven volatility."
+        }
+      ]
+    }
+  ]
+}
