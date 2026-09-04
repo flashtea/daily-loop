@@ -1,0 +1,76 @@
+{
+  "date": "2026-09-04",
+  "intro": "OpenAI's GPT-6 Astra dominates the day, arriving with the company's first 'critical' cybersecurity risk rating and a persistent-memory upgrade for Codex, while a Git-config exploit puts nearly every AI coding agent on notice.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Malicious Git Configs Let Attackers Hijack Claude Code, Cursor, and Codex",
+          "summary": "Researchers disclosed 'GitSpawn,' a flaw where a repository's .git/config abuses Git's core.fsmonitor setting to run attacker code outside an AI coding agent's sandbox with no permission prompt. Anthropic, OpenAI, Block (goose), and Cursor have shipped fixes and CVEs, but Hermes Agent, Qwen Code, and Grok Build remain unpatched, and a second Claude Code path (via 'claude ultrareview') was still open as of testing.",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html",
+          "why": "If you point an agentic coding tool at an untrusted repo, confirm you're on a patched build first."
+        },
+        {
+          "headline": "GPT-6 Astra Gives Codex Persistent Memory Across Coding Sessions",
+          "summary": "OpenAI's newly launched GPT-6 Astra adds a Codex feature that keeps searchable notes across context windows instead of compressing earlier work into summaries, aiming to preserve requirements and test results through long-running coding sessions. OpenAI is calling Astra its best model yet for software engineering.",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/09/03/openai-releasing-major-upgrade-to-chatgpt-and-codex-with-gpt-6-astra-details-here/",
+          "why": "Context loss on long agentic runs has been a persistent pain point; this is OpenAI's first real fix for it."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "OpenAI Launches GPT-6 Astra, Its First Model Rated 'Critical' Risk for Cyber Capability",
+          "summary": "OpenAI began rolling out GPT-6 Astra, which it says is state-of-the-art in computer use, software engineering, and science, scoring 97.6% on FrontierMath Tier 4 v2 and 100% on ExploitBench. It's the first OpenAI model to cross the company's 'critical' cybersecurity threshold, meaning it can find and exploit unknown vulnerabilities without step-by-step human guidance; that capability is initially restricted to vetted organizations.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/09/03/open-ai-astra-gpt-6-cyber.html",
+          "why": "The first frontier model OpenAI itself classifies as capable of unassisted cyberattacks is a real policy threshold, not marketing."
+        },
+        {
+          "headline": "Google Ships Gemini 3.8 Flash and a Gated 'Cyber' Variant for Vulnerability Hunting",
+          "summary": "Google DeepMind released Gemini 3.8 Flash, its third Flash update in six weeks, with gains on long-horizon software-engineering benchmarks at the same price as its predecessor. A separate Gemini 3.8 Flash Cyber variant, built for automated vulnerability detection and patching, is being restricted to vetted defenders through Google's new Fairwind Program.",
+          "source": "Google DeepMind",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+          "why": "Matches the pattern set by Astra: a general model paired with a permission-gated offensive/defensive security tier."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "VS Code 1.136 Adds 'Agent Merge' to Clean Up Pull Requests Automatically",
+          "summary": "Visual Studio Code's September release ships an experimental Agent Merge mode that resolves review feedback, failed CI checks, and merge conflicts on a pull request until it's ready to merge, plus support for running Copilot and Claude agent sessions across every folder in a multi-root workspace.",
+          "source": "Visual Studio Code",
+          "url": "https://code.visualstudio.com/updates/v1_136",
+          "why": "Pushes agent autonomy further into the actual merge and review loop, not just code generation."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin Rallies to $81K as Fed's Waller Backs Holding Rates and Strategy Resumes Buying",
+          "summary": "Bitcoin climbed roughly 4.8% to around $81,000, clearing resistance near its 50-week moving average, after Fed Governor Chris Waller signaled he favors holding policy steady this month. Michael Saylor's Strategy also ended a two-month buying pause, purchasing 4,603 BTC for $369.7 million at an average price of $80,318.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/business/2026/09/03/live-updates-crypto-majors-bounce-while-global-funds-run-their-lowest-dollar-hedges-since-2015",
+          "why": "A clear reversal after a quiet stretch, tied to concrete institutional buying rather than just sentiment."
+        },
+        {
+          "headline": "Spot Bitcoin ETFs Post Biggest Outflow Since July After a Record August",
+          "summary": "US spot Bitcoin ETFs saw a combined $236.5 million net outflow on September 1 — the largest single-day withdrawal since July 31 — with BlackRock's IBIT accounting for about 85% of the selling. It follows a record August in which the funds pulled in $3.52 billion in net inflows.",
+          "source": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-etf-news-demand-faces-142217788.html",
+          "why": "Worth watching whether this is a one-day blip or the start of a September pullback in ETF demand."
+        }
+      ]
+    }
+  ]
+}
