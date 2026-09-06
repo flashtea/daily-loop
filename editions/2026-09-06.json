@@ -1,0 +1,83 @@
+{
+  "date": "2026-09-06",
+  "intro": "The day's biggest story isn't a product launch: Anthropic says Claude autonomously produced the first complete, computer-checked proof of Fermat's Last Theorem. Elsewhere it's a quieter news cycle — GPT-6 Astra's Codex rollout wraps up, last week's GitSpawn flaw gets formal CVEs, and Bitcoin's ETF inflows cool off after Thursday's record haul.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "GPT-6 Astra Tops Terminal-Bench 4.0 via Codex at Half the Cost of the Runner-Up",
+          "summary": "OpenAI's Codex lead said GPT-6 Astra, launched September 3, finished #1 on the Terminal-Bench 4.0 agentic benchmark when run through the Codex harness, at roughly half the inference cost of the second-place model, as Astra's rollout to all ChatGPT Plus, Pro, and Business users wrapped up ahead of OpenAI's own multi-day estimate.",
+          "source": "X (Thibault Sottiaux, OpenAI)",
+          "url": "https://x.com/thsottiaux/status/2095995318471168397",
+          "why": "A concrete coding-benchmark result for Codex specifically, distinct from Astra's general-purpose launch."
+        },
+        {
+          "headline": "\"GitSpawn\" Git-Config Flaw Gets Formal CVEs as Patch Gaps Persist",
+          "summary": "A week after Manifold Security disclosed GitSpawn — malicious repository git configs that run attacker commands in Claude Code, Codex, Cursor, and other coding agents before any trust prompt — GitHub formally assigned CVE-2026-72718 to the flaw in Goose (now patched) and CVE-2026-71963 to Hermes Agent, whose vendor never responded to disclosure attempts; a second attack path in Claude Code, reached via the `claude ultrareview` command, was still unfixed as of Manifold's last retest.",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html",
+          "why": "Shows which of the seven affected agents are actually fixed a week on — and that Claude Code still has an open path."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Claude Produces First Complete, Machine-Checked Proof of Fermat's Last Theorem",
+          "summary": "Anthropic says dozens of Claude agents working largely autonomously over 11 days on the open Prove2Me platform produced the first end-to-end, computer-verified proof of Fermat's Last Theorem in the Lean 4 proof language, writing about 13 million lines of Lean and proving roughly 29,500 supporting theorems while consuming about six billion output tokens.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
+          "why": "It's the last of Freek Wiedijk's famous 100 formalization challenges to fall, arriving far sooner than mathematicians expected — though Anthropic's own repository credits substantial prior work from Imperial College London's FLT project and Mathlib, tempering the fully-autonomous framing."
+        },
+        {
+          "headline": "Google DeepMind Ships WeatherNext 3, Cutting Forecast Grids From 25km to 5km",
+          "summary": "Google DeepMind and Google Research introduced WeatherNext 3, a weather model that ingests real-time satellite data to issue a new global forecast every hour instead of every six, with roughly 5x sharper spatial resolution and up to 50% lower precipitation-forecast error than WeatherNext 2; it now powers forecasts in Search, the Gemini app, and Google Maps.",
+          "source": "Google",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/",
+          "why": "A concrete, independently-evaluated capability jump that ships straight into products billions of people already use."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub CLI's Linux Package Signing Key Expired September 5",
+          "summary": "The PGP key GitHub has used to sign `gh`'s APT and RPM Linux repositories expired Saturday; systems that picked up the updated keyring GitHub published back in April are unaffected, but anyone who set up the repository earlier, or who uses a custom image or automation path, needs to manually trust the replacement key or package updates will start failing signature verification.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-09-03-github-cli-linux-package-signing-key-expires-september-5/",
+          "why": "A quiet key-rotation deadline that can silently break CI images and `apt upgrade`/`dnf update` on dev machines that missed it."
+        },
+        {
+          "headline": "Astro 7.3 Lets You Run Multiple Preview Servers at Once",
+          "summary": "Astro 7.3.0 shipped September 3 with an `--ignore-lock` flag for `astro preview` so more than one preview server can run simultaneously, a runtime logger now passed into custom image services and cache providers, and a new `finalize()` helper for Cloudflare custom worker entrypoints.",
+          "source": "Astro Blog",
+          "url": "https://astro.build/blog/astro-730/",
+          "why": "Small, concrete fixes for anyone testing multiple Astro builds side by side."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin ETF Inflows Cool to $175M Friday After Record $731M Thursday Haul",
+          "summary": "U.S. spot Bitcoin ETFs pulled in $174.6 million on Friday, a sharp slowdown from Thursday's $730.9 million — the largest single-day inflow since mid-January — as BTC's price settled near $79,600-$80,000, still off its recent high above $82,000 after the hot August jobs report revived Fed rate-hike expectations.",
+          "source": "The Block",
+          "url": "https://www.theblock.co/news/markets/2026-09-04-us-bitcoin-etfs-largest-inflow-day-since-january-413515",
+          "why": "Demand hasn't dried up, but the pace of buying is normalizing after Thursday's spike."
+        },
+        {
+          "headline": "On-Chain Data Shows Holders Cashed Out 110,000 BTC in Profits After the August Rally",
+          "summary": "CryptoQuant on-chain data shows Bitcoin holders realized profits on roughly 110,000 BTC in the weeks following August's rally from under $65,000 to near $80,000, including 23,000 BTC in net realized profit on August 21 alone — the heaviest single-day realization of 2026.",
+          "source": "CryptoPotato (CryptoQuant data)",
+          "url": "https://cryptopotato.com/bitcoin-holders-just-cashed-out-110000-btc-in-profits-is-a-bigger-price-drop-coming/",
+          "why": "Concentrated profit-taking after a sharp rally has historically preceded corrections, though CryptoQuant's own Bull Score still reads above the threshold associated with sustainable bull markets."
+        }
+      ]
+    }
+  ]
+}
