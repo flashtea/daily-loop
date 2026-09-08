@@ -1,0 +1,97 @@
+{
+  "date": "2026-09-08",
+  "intro": "A quiet post-Labor Day news cycle for product launches, but OpenAI chief scientist Jakub Pachocki's essay is the story that matters: a direct, on-the-record statement that no lab, including his own, has solved alignment and monitoring well enough to keep scaling at full speed. Elsewhere: Astra takes the top coding-benchmark spot, a Coldcard hacker keeps draining stolen vaults, and bitcoin's correlation with gold is the highest since 2020.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "GPT-6 Astra Becomes the Default Model in OpenAI's Codex CLI",
+          "summary": "OpenAI shipped Codex CLI 0.153.4, making GPT-6 Astra the default model in the bundled picker and refining its guidance on when to ask asynchronous clarifying questions, following a string of Astra-focused Codex point releases earlier in the week.",
+          "source": "OpenAI",
+          "url": "https://developers.openai.com/codex/changelog",
+          "why": "Developers who haven't explicitly pinned a model will start getting Astra's coding output by default the next time they update."
+        },
+        {
+          "headline": "Claude Code 2.1.263 Ships Reliability Fixes",
+          "summary": "Anthropic released Claude Code 2.1.263, a maintenance update focused on bug fixes and reliability improvements, following the larger 2.1.261 release earlier in the week that added organization-policy diagnostics and higher inline output limits.",
+          "source": "Anthropic",
+          "url": "https://code.claude.com/docs/en/changelog",
+          "why": "Routine, but worth knowing if you've hit any of the stability issues from the prior couple of builds."
+        },
+        {
+          "headline": "VS Code 1.136 Lets Agents Finish Their Own Pull Requests",
+          "summary": "Visual Studio Code 1.136 added an experimental 'Agent Merge' feature that lets Copilot and other coding agents resolve review feedback, failed checks and merge conflicts on a PR themselves, plus multi-root workspace support for running agent sessions across several folders at once.",
+          "source": "Microsoft",
+          "url": "https://code.visualstudio.com/updates/v1_136",
+          "why": "Pushes agentic coding a step further down the pipeline, from writing the PR to actually getting it merged."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "OpenAI's Chief Scientist Says No Lab Has Solved Alignment, Calls for Voluntary Slowdowns",
+          "summary": "In an essay titled 'An Alien Mind,' OpenAI chief scientist Jakub Pachocki wrote that no AI lab, including his own, has solved alignment and monitoring well enough to keep scaling at maximum speed, singled out chain-of-thought monitoring as an eroding safety net, and called for voluntary industry slowdowns and mandatory outside-audited safety standards.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/an-alien-mind/",
+          "why": "This is OpenAI's own chief scientist, not a critic, saying the industry's main tool for catching a misbehaving model before it acts is getting less reliable as capability rises."
+        },
+        {
+          "headline": "GPT-6 Astra Takes the Top Spot on LMArena's Code Arena: WebDev Leaderboard",
+          "summary": "Two days after its September 3 launch, GPT-6 Astra (Max) topped LMArena's Code Arena: WebDev leaderboard with 1,797 points, a 35-point lead over Claude Fable 5.1 (Max) at 1,762, while matching Fable's $40-per-million-token pricing.",
+          "source": "Arena.ai (LMArena)",
+          "url": "https://x.com/arena/status/2096290434700247250",
+          "why": "First head-to-head, crowdsourced signal on how Astra actually performs on real front-end coding tasks rather than lab-reported benchmarks."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Bun 1.4.2 Fixes Elysia Build Regression and AsyncLocalStorage Leak",
+          "summary": "Bun 1.4.2 patches two regressions introduced in 1.4.1 — a bundler bug that broke Elysia apps and an AsyncLocalStorage memory leak — along with a worker_threads ordering bug, JIT and musl GC crashes, and CMYK/YCCK JPEG decoding in Bun.Image.",
+          "source": "Bun",
+          "url": "https://bun.com/blog/bun-v1.4.2",
+          "why": "A fast follow-up for anyone who hit the 1.4.1 regressions after last month's Rust rewrite."
+        },
+        {
+          "headline": "Starlette/LiteLLM Auth-Bypass Chain Still Under Active Ransomware Exploitation",
+          "summary": "CISA's addition of Starlette (CVE-2026-48710) and LiteLLM (CVE-2026-59822) to its Known Exploited Vulnerabilities catalog is still driving active attacks: Qilin ransomware operators are chaining the two flaws for unauthenticated remote code execution, deploying XMRig miners and harvesting API keys, with a federal patch deadline of September 16.",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/09/cisa-adds-seven-exploited-flaws-as.html",
+          "why": "Any team running LiteLLM as an AI gateway on unpatched Starlette should treat this as urgent, not a routine CVE."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Coldcard Hacker Moves $7.7M More in Stolen BTC Through THORChain and CoinJoin",
+          "summary": "The attacker behind the third wave of Coldcard hardware-wallet thefts moved 97.09 BTC (~$7.7M), 45% of that wave's haul, out through THORChain on September 2 and into CoinJoin rounds over the weekend, methodically draining the largest of 293 compromised vaults first.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/business/2026/09/07/coldcard-hacker-moves-45-of-bitcoin-stolen-in-third-attack-wave",
+          "why": "The exploit stems from a Coldcard firmware flaw disclosed in late July; Coinkite has patched it, but affected users still need to move funds to new seeds."
+        },
+        {
+          "headline": "Bitcoin Hashrate Nears 1 Zettahash as Hashprice Jumps 22%",
+          "summary": "Bitcoin's network hashrate held near 934 EH/s, just under the 1 ZH/s threshold, while difficulty rose 1.31% to 127.45T and hashprice jumped 22% from $32.42 to $39.63 alongside bitcoin's price gains, with fees contributing under 0.5% of miner rewards.",
+          "source": "Bitcoin.com News",
+          "url": "https://news.bitcoin.com/mining/difficulty-rises-hashprice-rips-22-as-bitcoin-hashrate-stalls/",
+          "why": "Miner profitability is still almost entirely a bet on price, not transaction fees, even as the network approaches a hashrate milestone."
+        },
+        {
+          "headline": "Bitcoin's Correlation With Gold Hits Highest Level Since 2020 as $83K Resistance Holds",
+          "summary": "As rising government bond yields rattled markets, bitcoin's 90-day correlation with gold's daily returns climbed to 0.59, the highest since the pandemic-era money-printing period, while BTC buyers turned to net selling for the first time since early June after failing to clear $83,000 resistance.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/daybook-us/2026/09/07/bitcoin-blinks-less-than-gold-when-treasury-yields-move",
+          "why": "A rising gold correlation is often read as a sign bitcoin is trading more like a macro hedge and less like a pure risk asset."
+        }
+      ]
+    }
+  ]
+}
