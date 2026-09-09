@@ -1,0 +1,90 @@
+{
+  "date": "2026-09-09",
+  "intro": "A funding frenzy in AI coding tools: Cognition's Devin nearly doubles to a $48B valuation days after Mistral closed the largest equity round any European tech company has ever raised. Meanwhile the infrastructure underneath all of it looked shakier than usual — a critical, unauthenticated Magento RCE was under real-time attack for three days before Adobe shipped a fix, and Microsoft's Patch Tuesday set a new record for CVE volume. In bitcoin, a self-described \"white hat\" drained $340M from Blockstream's Liquid Network and gave most of it back.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Cognition Raises Over $2B at $48B Valuation to Scale Devin",
+          "summary": "Cognition closed a Series E co-led by Andreessen Horowitz and Accel at a $48 billion valuation, nearly double the $25 billion figure it was reportedly seeking as recently as April, with run-rate revenue growing from $492M in May to almost $900M. The round funds new Devin capabilities including Auto-Triage, Security Swarm, and event-driven Automations.",
+          "source": "Cognition",
+          "url": "https://cognition.com/blog/series-e",
+          "why": "A near-doubling of valuation in about four months is one of the clearest signals yet of how much capital is chasing autonomous coding agents specifically, not just general-purpose LLMs."
+        },
+        {
+          "headline": "Claude Code 2.1.265 Adds Fullscreen Diff Panel and 40+ Fixes, 2.1.266 Patches a Gateway Regression",
+          "summary": "Anthropic shipped Claude Code 2.1.265 with a fullscreen diff view, support for multi-plugin directories, new PreModelSwitch/PostModelSwitch hook events, and over 40 bug fixes; a same-day 2.1.266 release fixed a regression that had broken sign-in for LLM-gateway and proxy setups using CLAUDE_CODE_USE_GATEWAY.",
+          "source": "Anthropic",
+          "url": "https://code.claude.com/docs/en/changelog",
+          "why": "Teams running Claude Code behind a proxy or gateway should update past 2.1.265 directly to 2.1.266 to avoid the sign-in regression."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Mistral AI Raises Record €3B Series D, Becomes Europe's Best-Funded AI Startup",
+          "summary": "Mistral AI closed a €3 billion ($3.5B) Series D led by Samsung Electronics at a post-money valuation above €21 billion — nearly double last year's €11.7B Series C and the largest equity round ever raised by a European tech company. The company plans to use the capital to build and own data centers, including a second European facility in Sweden.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/08/mistral-raises-e3b-as-sovereign-ai-becomes-big-business/",
+          "why": "The round is as much a bet on European 'sovereign AI' independence from US and Chinese labs as it is on Mistral's models."
+        },
+        {
+          "headline": "Anthropic Walks Away From $6B Decart Acquisition After Due Diligence",
+          "summary": "Anthropic ended talks to acquire Israeli AI infrastructure startup Decart for roughly $6 billion after completing due diligence; Decart's founders had turned down a reportedly higher all-cash offer from Nvidia in favor of Anthropic's stock-based bid before the deal collapsed. Neither company has said publicly why negotiations fell apart.",
+          "source": "Bloomberg (via Yahoo Finance)",
+          "url": "https://www.bloomberg.com/news/articles/2026-09-08/anthropic-said-to-walk-away-from-6-billion-decart-acquisition",
+          "why": "Decart's chip-efficiency software was seen as a way for Anthropic to cut training and inference costs, so the collapsed deal leaves that gap unresolved ahead of a widely expected IPO."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Adobe Patches Critical Magento Zero-Day After Three Days of Active Exploitation",
+          "summary": "Adobe shipped an emergency hotfix (APSB26-146) for 'StyleSmuggler' (CVE-2026-75650, CVSS 10.0), an unauthenticated remote-code-execution flaw in Magento Open Source and Adobe Commerce versions 2.4.4 through 2.4.9 that attackers had been exploiting since September 4 to plant backdoors. Adobe is telling merchants to apply the composer patch and rotate every credential their encryption key protected.",
+          "source": "Sansec / BleepingComputer",
+          "url": "https://sansec.io/research/stylesmuggler-0day",
+          "why": "A maximum-severity, pre-auth RCE that was actively exploited for three days before a fix existed is about as bad as e-commerce vulnerabilities get."
+        },
+        {
+          "headline": "Microsoft's September Patch Tuesday Fixes 973 Flaws, Including Two Exploited Zero-Days",
+          "summary": "Microsoft's September 2026 Patch Tuesday addressed 973 vulnerabilities, a new record, including 113 rated Critical and two actively exploited zero-days: a Windows Update Stack privilege-escalation bug (CVE-2026-81963) and a Windows ALPC flaw (CVE-2026-85880), both letting attackers reach SYSTEM.",
+          "source": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-september-2026-patch-tuesday-fixes-966-flaws-2-zero-days/",
+          "why": "Two SYSTEM-level zero-days already in the wild make this a patch-now month, not a patch-eventually one."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Hacker Drains $340M From Bitcoin's Liquid Network, Returns Most of It After Bug Fix",
+          "summary": "An attacker exploited a range-proof verification bug in Blockstream's Liquid Network to withdraw roughly 4,000 BTC (~$340M) from the network's federation wallet, halting the sidechain, then returned about 3,400 BTC after Blockstream patched the flaw — keeping roughly 598 BTC (~$47M) as a self-declared 'bounty' while communicating with Blockstream via on-chain OP_RETURN messages.",
+          "source": "CoinDesk / TechCrunch",
+          "url": "https://techcrunch.com/2026/09/08/a-hacker-stole-340m-in-a-crypto-heist-then-returned-most-of-it/",
+          "why": "It's a rare case of an attacker unilaterally keeping a 'bounty' rather than negotiating one, and it exposes a real bug in infrastructure several exchanges settle through."
+        },
+        {
+          "headline": "Bitcoin Short-Term Whale Profits Hit Record $9.07B, Raising Sell-Off Risk",
+          "summary": "Unrealized gains held by short-term-holder whales — wallets under six months old — hit a record $9.07 billion on September 4 per CryptoQuant data, a cohort historically quick to sell into strength, while Binance's BTC reserves simultaneously climbed to their highest level since November 2024.",
+          "source": "Cointelegraph",
+          "url": "https://cointelegraph.com/markets/new-bitcoin-whales-spark-sell-side-risk-as-unrealized-gains-hit-9b",
+          "why": "Large unrealized gains sitting on exchange-adjacent wallets are a classic setup for a sharp, profit-taking-driven pullback if price stalls."
+        },
+        {
+          "headline": "Spot Bitcoin ETFs Still $1B Shy of Breaking Even for 2026 Despite Inflow Streak",
+          "summary": "US spot bitcoin ETFs have pulled in roughly $770M so far in September on top of a $3.52B August, yet remain down about $1 billion in net investor money for the year, underscoring how sharply flows reversed during the year's earlier drawdowns.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/daybook-us/2026/09/08/bitcoin-etfs-are-still-usd1-billion-shy-of-breaking-even-in-2026",
+          "why": "Even a multi-week inflow streak hasn't been enough to erase the damage from earlier in the year, a reminder that ETF flow momentum and full-year returns can tell very different stories."
+        }
+      ]
+    }
+  ]
+}
