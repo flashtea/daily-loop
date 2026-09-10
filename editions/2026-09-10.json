@@ -1,0 +1,85 @@
+{
+  "date": "2026-09-10",
+  "intro": "Washington accuses six Chinese AI labs of systematic model theft, OpenAI pushes GPT-6 Astra into the workplace, and Bitcoin swings on Iran-linked oil strikes.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "GPT-6 Astra Lands in ChatGPT Work and Codex, OpenAI Claims Edge Over Claude on Coding",
+          "summary": "OpenAI extended GPT-6 Astra into ChatGPT Work and Codex, saying it scores 57.9% on its internal coding benchmark versus 55.8% for Claude Fable 5.1, while also operating inside business applications that lack APIs.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/gpt-6-astra-next-generation-work/",
+          "why": "A direct, self-reported benchmark shot at Anthropic's flagship model sharpens the competition for enterprise coding and agent work."
+        },
+        {
+          "headline": "Claude Code 2.1.267 Adds Per-Model Effort Caps and a Raw System-Prompt Mode",
+          "summary": "Anthropic shipped Claude Code 2.1.267 with a maxEffortLevel setting to cap reasoning effort across Bedrock, Vertex, and Foundry, a --system-prompt-snapshot off flag for prompt iteration, and fixes for resumed sessions and mobile rendering.",
+          "source": "Anthropic",
+          "url": "https://code.claude.com/docs/en/changelog"
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "US Agencies Accuse Six Chinese AI Firms of Industrial-Scale Model Theft",
+          "summary": "CISA, the NSA, and the FBI issued a joint advisory alleging DeepSeek, Alibaba, Moonshot AI, MiniMax, StepFun, and Z.AI ran systematic distillation campaigns since late 2024, extracting billions of tokens from US frontier models including Claude, GPT, Gemini, and Grok.",
+          "source": "CISA",
+          "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-251a",
+          "why": "A named, multi-agency government accusation against major Chinese AI labs could reshape API terms-of-service enforcement and the export-control debate."
+        },
+        {
+          "headline": "DeepMind's AlphaGenome Atlas Maps the Effect of Every Possible Human DNA Variant",
+          "summary": "Google DeepMind released a 1-petabyte dataset predicting the molecular effects of all roughly 9 billion possible single-nucleotide changes in the human genome, free via a web portal and API.",
+          "source": "Google DeepMind",
+          "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
+          "why": "Early users at the Broad Institute and UK Biobank have already used it to surface new rare-disease variants."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub Enterprise Server 3.22 Ships Offline Copilot CLI and Required-Reviewer Rules",
+          "summary": "GitHub's latest self-hosted release adds Copilot CLI configuration for disconnected environments, enterprise teams for centralized access management, required reviewer rules for pull requests, and finer-grained ruleset bypass permissions.",
+          "source": "GitHub",
+          "url": "https://github.blog/changelog/2026-09-08-github-enterprise-server-3-22-is-now-generally-available/"
+        },
+        {
+          "headline": "GitHub Details August Reliability Push After Five Service Incidents",
+          "summary": "GitHub's August availability report says new Git overload protection now handles 6.4% more traffic with 24% better p95 latency, and a system combining support signals with telemetry now catches high-impact incidents faster.",
+          "source": "GitHub",
+          "url": "https://github.blog/news-insights/company-news/github-availability-report-august-2026/"
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin Climbs as Iran Strikes Push Oil Above $100 a Barrel",
+          "summary": "Bitcoin rose as much as 1.6% to about $79,700 after US Central Command said it destroyed five Iranian oil tankers and Tehran responded with strikes, sending Brent crude above $100 for the first time since July.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/09/09/bitcoin-climbs-as-oil-tops-usd100-equities-drop-after-iran-strikes",
+          "why": "Bitcoin traded with oil and gold rather than equities, underscoring its growing role as a geopolitical-risk hedge."
+        },
+        {
+          "headline": "Bitcoin Miners Are Sitting Out the Rally",
+          "summary": "Even as Bitcoin has climbed roughly 22% since mid-August, the ten remaining public bitcoin-mining and mining-adjacent stocks have returned a median of just 1.8% over the same stretch, breaking from their usual lockstep with BTC's price.",
+          "source": "The Block",
+          "url": "https://www.theblock.co/news/markets/2026-09-09-bitcoin-miners-are-missing-the-crypto-rally-as-exchanges-stablecoins-surge-413848"
+        },
+        {
+          "headline": "Bitcoin Holds Near $78,000 as Traders Look to the Fed's September Rate Decision",
+          "summary": "Bitcoin briefly dipped below $78,000 before recovering, with markets more focused on inflation data and the Federal Reserve's September 15-16 meeting than on any single crypto-specific catalyst.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/09/09/bitcoin-recovers-toward-usd79-000-as-zcash-records-a-usd500-million-etf-haul"
+        }
+      ]
+    }
+  ]
+}
