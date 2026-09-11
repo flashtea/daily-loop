@@ -1,0 +1,96 @@
+{
+  "date": "2026-09-11",
+  "intro": "Anthropic discloses it disrupted attempts to misuse Claude for bio-weapons research and cyber operations, Cognition's SWE-2 undercuts frontier coding-agent pricing, and Bitcoin heads into CPI day on the back foot.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Cognition Launches SWE-2, Claims Near-Frontier Coding at a Quarter of the Cost",
+          "summary": "Cognition released SWE-2 for Devin Desktop, CLI, Web, and Fusion, saying the model — post-trained from Kimi K33 — scores within a point of Claude Fable 5.1 on real-world coding benchmarks while costing up to 70% less to run, and comes within a few points of GPT-6 Astra at roughly a quarter of its price.",
+          "source": "Cognition",
+          "url": "https://cognition.com/blog/swe-2",
+          "why": "A serious price/performance challenge to the frontier labs' coding models from the maker of Devin and Windsurf."
+        },
+        {
+          "headline": "OpenAI Opens Its Codex Agent Harness to Developers via a New Agents API",
+          "summary": "OpenAI launched a public beta of the Agents API, exposing the same session, orchestration, sandboxing, and context-compaction infrastructure that powers Codex so developers can build custom coding and computer-use agents by supplying only tools and instructions.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/introducing-the-agents-api/",
+          "why": "Turns OpenAI's internal agent harness into reusable infrastructure, competing directly with Claude's Agent SDK and similar Anthropic tooling."
+        },
+        {
+          "headline": "Shopify Ditches React Native for Native Swift and Kotlin, Crediting Coding Agents",
+          "summary": "Shopify Engineering said it is moving its mobile apps back to native Swift and Kotlin after six years on React Native, having used AI coding agents to port the Shop app from React Native to SwiftUI in about 12 weeks — work that previously would have been prohibitively expensive to duplicate across platforms.",
+          "source": "Shopify Engineering",
+          "url": "https://shopify.engineering/back-to-native",
+          "why": "A concrete, large-scale example of coding agents changing a major engineering org's build-vs-share calculus, not just speeding up existing workflows."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Anthropic Says It Disrupted Claude Misuse Attempts Tied to Bio-Weapons Research and State-Backed Cyber Ops",
+          "summary": "Anthropic's September threat intelligence report details operations it detected and shut down between December 2025 and August 2026 across seven harm categories — including a case that could have supported biological weapons development, plus state-sponsored cyberattacks, surveillance, and influence operations — saying every disclosed operation was disrupted before causing harm.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
+          "why": "The most detailed public accounting yet of how a frontier lab is catching real-world catastrophic-risk misuse of its own models."
+        },
+        {
+          "headline": "DeepSeek Ships V4.1-Flash, Says It Beats Its Own Flagship V4-Pro",
+          "summary": "DeepSeek formally released V4.1-Flash, a 552B-parameter mixture-of-experts model with a new encoder-decoder architecture and native image understanding, claiming it outperforms V4-Pro on quality, cost, and speed; V4-Pro API traffic will be rerouted to V4.1-Flash pricing starting September 14.",
+          "source": "DeepSeek",
+          "url": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/",
+          "why": "A smaller, cheaper open model beating its own flagship keeps pressure on frontier-lab pricing worldwide."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Rust Becomes a Tier-1 Language Inside Microsoft",
+          "summary": "The Rust Foundation published a guest post from Microsoft detailing that Rust now has tier-1 engineering status internally, giving teams a supported path from local development to production with secure toolchains, tooling, and compliance on par with C# and C++.",
+          "source": "Rust Foundation",
+          "url": "https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/",
+          "why": "Formalizes years of growing Rust investment at Microsoft (Azure, Windows) into an official internal standard."
+        },
+        {
+          "headline": "Forgejo Patches Critical Remote-Code-Execution Flaw in Template Repositories",
+          "summary": "Forgejo shipped 16.0.4 and 15.0.8 to fix a critical vulnerability where a malicious template repository could smuggle in a .git folder during repo generation, letting an attacker read arbitrary data from and execute code on the Forgejo host; versions 16.0.3 and earlier are affected.",
+          "source": "LWN.net",
+          "url": "https://lwn.net/Articles/1093671/",
+          "why": "Self-hosted Git forges are a popular GitHub alternative; unpatched instances are remotely exploitable."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin Traders Dial Down Bullish Bets Ahead of Friday's US CPI Print",
+          "summary": "Bitcoin held near $77,000-$78,000 with options traders piling into downside hedges, including heavy volume on a $76,000 put expiring the same day as the August CPI report, which lands hours before the Fed's September 15-16 meeting.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/daybook-us/2026/09/10/bitcoin-traders-dial-down-bullish-plays-ahead-of-u-s-inflation-data",
+          "why": "Today's CPI print is the swing factor between a push back toward $80,000 and a deeper slide."
+        },
+        {
+          "headline": "Bitcoin ETFs Post a Second Straight Outflow as Oil and Bond Yields Surge",
+          "summary": "US spot Bitcoin ETFs recorded back-to-back daily net outflows even as most other crypto fund categories turned positive, coinciding with oil pushing above $105 a barrel and the 10-year Treasury yield climbing to fresh highs.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/business/2026/09/10/live-updates-bitcoin-etfs-post-a-second-straight-outflow-while-every-other-fund-turns-green"
+        },
+        {
+          "headline": "Fed Rate-Hike Odds Jump to 70% After Hot Wholesale-Inflation Report",
+          "summary": "Futures markets pushed the probability of a 25-basis-point Fed rate hike at the September 15-16 meeting to roughly 70% after producer prices came in hotter than expected and oil climbed past $100 a barrel on Iran-related supply fears.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/09/10/the-likelihood-of-a-fed-interest-rate-hike-next-week-just-got-a-lot-higher.html",
+          "why": "Rising hike odds are the main headwind pressuring Bitcoin into today's CPI release."
+        }
+      ]
+    }
+  ]
+}
