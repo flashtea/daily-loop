@@ -1,0 +1,88 @@
+{
+  "date": "2026-09-12",
+  "intro": "AI's safety fight spills into Congress as two more researchers walk out, DeepSeek undercuts its own flagship model, and Blockstream digs in against an extortion demand.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Claude Code ships plugin eval command and mid-run output-style switching",
+          "summary": "Anthropic's latest Claude Code release adds a `claude plugin eval` command that scores a plugin's test suite and returns reproducible JSON/HTML reports, plus `/output-style` for switching styles mid-session across CLI, VS Code, web, and Slack.",
+          "source": "Anthropic",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+          "why": "Plugin authors get a real test harness instead of manual spot-checks."
+        },
+        {
+          "headline": "OpenAI's Codex CLI adds GPT-6 Astra and a new 'ultra' reasoning-effort tier",
+          "summary": "Codex's model picker and Amazon Bedrock catalog now include GPT-6 Astra, while the Codex Python SDK (0.154.0) adds 'max' and 'ultra' reasoning-effort values and better session-resume history controls.",
+          "source": "OpenAI",
+          "url": "https://github.com/openai/codex/releases",
+          "why": "Signals OpenAI is pushing its frontier model deeper into enterprise cloud deployments of Codex."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Two more AI safety researchers quit Anthropic and Google DeepMind, warn 'no one is coming to save us'",
+          "summary": "Joe Benton, who led a safety research team at Anthropic, and Josh Engels, formerly of Google DeepMind, left their posts and are joining AI-incident nonprofit METR, days after ex-Anthropic researcher Jacob Coxon's viral resignation post reignited Washington's AI-safety debate.",
+          "source": "NBC News",
+          "url": "https://www.nbcnews.com/tech/security/two-ai-researchers-leave-anthropic-google-safety-concerns-rcna597086",
+          "why": "The exodus is already fueling two new bills in Congress, the FRONTIER Act and the Ban Artificial Superintelligence Act."
+        },
+        {
+          "headline": "DeepSeek launches V4.1-Flash, says it beats its own larger V4-Pro flagship",
+          "summary": "DeepSeek's new 552B-parameter mixture-of-experts model adds native multimodal vision and a redesigned encoder-decoder architecture; the company says independent tests put it ahead of V4-Pro on performance, cost and speed, and will reroute all V4-Pro API traffic to it starting September 14.",
+          "source": "DeepSeek",
+          "url": "https://deepseek.com/en/news/deepseek-v4-1-flash/",
+          "why": "A smaller model beating its own flagship undercuts the assumption that bigger is always better."
+        },
+        {
+          "headline": "Sakana AI ships Fugu Ultra v2.0, pointedly excludes Claude and GPT-6 Astra from its model pool",
+          "summary": "Sakana's multi-agent orchestration model routes queries across a pool of underlying models behind one API; version 2.0 drops Claude Fable 5/5.1 and GPT-6 Astra from that pool while still leading published benchmarks like Chartography and DeepSWE.",
+          "source": "Sakana AI",
+          "url": "https://sakana.ai/fugu-max-release/",
+          "why": "Sakana is betting customers care more about not depending on one proprietary frontier model than about using the single best one."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Docker Desktop patches container-escape flaw, adds Kubernetes cluster controls via Docker Offload",
+          "summary": "The latest Docker Desktop release fixes CVE-2026-17106, a destination-escape bug in `docker container cp`, and adds the ability to start and stop Kubernetes cloud clusters directly from Docker Offload.",
+          "source": "Docker",
+          "url": "https://docs.docker.com/desktop/release-notes/",
+          "why": "The CVE affects anyone copying files out of untrusted containers."
+        },
+        {
+          "headline": "Node.js ships v26.8.2 and v24.21.0 LTS with OpenSSL 3.5.8 and a new HSM key-store loader",
+          "summary": "Both releases pull in the OpenSSL 3.5.8 security upgrade; the LTS line adds a STORE loader for hardware security modules, refreshed NSS root certificates, and speedups to URL parsing and HTTP responses.",
+          "source": "Node.js",
+          "url": "https://nodejs.org/en/blog/announcements"
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Blockstream refuses ransom for the last 600 BTC stolen in the Liquid Network exploit",
+          "summary": "After a bug in Liquid's Elements software let an attacker mint roughly 4,000 BTC of unbacked LBTC and peg it out on September 6, the attacker returned about 3,400 BTC but is holding the remaining ~598.5 BTC (~$47M) for a 10% bounty. Blockstream says it won't pay, calling the demand theft, and plans to work with law enforcement and forensic firms to trace the funds.",
+          "source": "The Block",
+          "url": "https://www.theblock.co/news/ecosystems/2026-09-11-return-the-bitcoin-blockstream-refuses-ransom-demand-for-remaining-600-btc-from-liquid-exploit-414247",
+          "why": "A hard line against paying hackers could set precedent for how other protocols handle post-hack extortion."
+        },
+        {
+          "headline": "Bitcoin ETFs post worst single-day outflow since July as three-day pullback hits $449M",
+          "summary": "US spot Bitcoin ETFs shed $282.6M on Thursday, led by ARK 21Shares' ARKB ($164M), Grayscale's GBTC ($36M) and Fidelity's FBTC ($33.6M), bringing the three-day outflow total to $449M even as cumulative net inflows remain above $55B.",
+          "source": "Cointelegraph",
+          "url": "https://cointelegraph.com/markets/bitcoin-etfs-282m-biggest-outflow-july"
+        }
+      ]
+    }
+  ]
+}
