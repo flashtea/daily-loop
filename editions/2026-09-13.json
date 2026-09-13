@@ -1,0 +1,97 @@
+{
+  "date": "2026-09-13",
+  "intro": "A first-of-its-kind AI-orchestrated hacking campaign, a cheaper frontier coding model, and bitcoin bracing for a possible Fed hike lead today's edition.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "OpenAI Opens Agents API in Public Beta, Exposing the Codex Harness",
+          "summary": "OpenAI moved its Agents API into public beta on September 10, giving developers a single API call into the same session orchestration, sandboxing, and multi-agent delegation infrastructure that powers Codex.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/introducing-the-agents-api/",
+          "why": "Turns Codex's internal harness into general-purpose agent infrastructure other tools can build on."
+        },
+        {
+          "headline": "Cognition Ships SWE-2, Undercutting Fable 5.1 on Cost",
+          "summary": "Cognition released SWE-2, a coding model post-trained from Moonshot AI's Kimi K3, scoring 50.0% on FrontierCode 1.1 (within a point of Claude Fable 5.1) at roughly 64% lower cost; it shipped free in Devin for a month.",
+          "source": "Cognition",
+          "url": "https://cognition.com/blog/swe-2",
+          "why": "Frontier-level coding performance is getting commoditized outside the largest labs."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Hundreds of AI Agents Built on Codex and DeepSeek Ran a Real-World Hacking Campaign",
+          "summary": "GreyNoise documented a campaign in which a Russian-speaking actor used hundreds of autonomous AI agents, built on OpenAI's Codex harness and a DeepSeek model, to compromise at least 440 PaperCut NG/MF print servers across 395 organizations in 48 countries, reaching first remote code execution in under four hours.",
+          "source": "GreyNoise",
+          "url": "https://www.greynoise.io/blog/ai-orchestrated-campaign-against-papercut-ng-mf",
+          "why": "One of the first documented mass cyberattacks orchestrated end-to-end by autonomous AI agents rather than humans."
+        },
+        {
+          "headline": "Sakana AI Splits Fugu Into Max and Ultra v2 Orchestration Models",
+          "summary": "Sakana AI released Fugu Max and Fugu Ultra v2, models that route each task across a pool of other models rather than acting as a single network; Ultra v2 uses a 1M-token-context coordinator to match or beat frontier labs on several benchmarks.",
+          "source": "Sakana AI",
+          "url": "https://sakana.ai/fugu-max-release/",
+          "why": "Suggests orchestrating existing models can rival training ever-larger single ones."
+        },
+        {
+          "headline": "OpenAI Pauses ChatGPT Pro Sign-Ups as Astra Demand Outstrips Capacity",
+          "summary": "OpenAI temporarily halted new sign-ups for its $200/month ChatGPT Pro tier, citing unprecedented demand for its Astra model, which the company has separately classified as its first to cross a 'Critical' cybersecurity capability threshold.",
+          "source": "Fortune",
+          "url": "https://fortune.com/2026/09/11/openai-astra-chatgpt-pro-pause/",
+          "why": "Ties commercial demand directly to a model OpenAI itself flags as its riskiest yet."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Microsoft Makes Rust a Tier-1 Language Internally",
+          "summary": "Microsoft classified Rust as a tier-1 engineering language on September 11, putting it alongside C++, C#, and TypeScript with a paved path to production, MSVC-backend interoperability, and the same hardening and compliance tooling as its C++ stack.",
+          "source": "The Register",
+          "url": "https://www.theregister.com/devops/2026/09/11/microsoft-annoints-rust-as-a-tier-1-internal-language/",
+          "why": "Signals a bet on Rust to cut memory-safety bugs, which Microsoft says cause roughly 70% of Windows CVEs."
+        },
+        {
+          "headline": "JDK 27 Locks Feature Set Ahead of September 15 Release",
+          "summary": "JDK 27 entered its final rampdown with nine JEPs frozen, making G1 the default garbage collector everywhere, adding post-quantum hybrid key exchange for TLS 1.3, and turning on compact object headers by default; general availability is set for September 15.",
+          "source": "InfoQ",
+          "url": "https://www.infoq.com/news/2026/08/java-27-so-far/",
+          "why": "First JDK release to ship post-quantum TLS support by default."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin Holds Near $77K as Fed Rate-Hike Odds Jump to Roughly 87%",
+          "summary": "Bitcoin traded around $77,000 as markets priced in a roughly 87% chance the Federal Reserve raises rates at its September 16 meeting, up sharply from about 70% before this week's hotter-than-expected August CPI print.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/business/2026/09/11/live-updates-bitcoin-sinks-to-usd77-000-as-cpi-lands-with-hike-odds-near-70",
+          "why": "A hike, not a cut, would reverse earlier-2026 rate expectations and is the main overhang on price into next week."
+        },
+        {
+          "headline": "Bitcoin ETFs Extend Outflow Streak to Four Days as Capital Rotates to Ether",
+          "summary": "US spot Bitcoin ETFs recorded a fourth consecutive day of net outflows on September 11, a reversal from the roughly $987 million they took in the prior week, while spot Ether ETFs pulled in $216 million the same day.",
+          "source": "Bitcoin.com News",
+          "url": "https://news.bitcoin.com/bitcoin-etf/ether-etfs-gain-216m-as-bitcoin-etfs-extend-4-day-outflow-streak/",
+          "why": "A four-day reversal from near-billion-dollar buying is a notable shift in institutional positioning."
+        },
+        {
+          "headline": "Nasdaq Invests $100M in Kraken Parent Payward at $21B Valuation",
+          "summary": "Nasdaq's venture arm invested $100 million in Payward, the parent company of crypto exchange Kraken, valuing it at $21 billion and expanding a partnership to bring tokenized Nasdaq-listed stocks to Kraken users by 2027.",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-09-10/nasdaq-invests-in-kraken-parent-payward-at-21-billion-valuation",
+          "why": "One of the largest strategic bets yet linking a legacy exchange operator to a crypto platform."
+        }
+      ]
+    }
+  ]
+}
