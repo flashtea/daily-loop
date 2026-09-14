@@ -1,0 +1,97 @@
+{
+  "date": "2026-09-14",
+  "intro": "Anthropic's CEO calls for the industry to slow down AI capability gains and gets quick backing from Altman and Musk, three coding-agent CLIs ship security fixes in the same week, and the Senate's make-or-break crypto vote lands tomorrow.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Claude Code's temporary 50% limit boost expires today, permanent bump nets a 17% cut",
+          "summary": "Anthropic's promotional 50% increase to Claude Code's weekly usage limits ended September 13; the permanent replacement raising standard limits by 25% for Pro, Max, Team and Enterprise plans took effect today, which the company itself acknowledges works out to roughly 17% less weekly usage than subscribers had during the promo.",
+          "source": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-is-cutting-claude-codes-current-weekly-limits-by-17-percent/",
+          "why": "Every paying Claude Code user wakes up today with a smaller weekly budget than yesterday, regardless of how Anthropic frames the change."
+        },
+        {
+          "headline": "Gemini CLI 0.59.0 closes an SSRF hole and enforces fail-closed workspace trust",
+          "summary": "Google's Gemini CLI shipped version 0.59.0 this week with two security fixes: it now prevents server-side request forgery during MCP OAuth metadata discovery, and restricted mode enforces a fail-closed workspace-trust policy that filters which MCP servers can run.",
+          "source": "Gemini CLI",
+          "url": "https://geminicli.com/docs/changelogs/latest/",
+          "why": "Closes a real remote-exploit path in how the CLI talks to MCP servers, not just a UX bug."
+        },
+        {
+          "headline": "Codex CLI 0.154.0 adds worktree support, drops the deprecated mcp-server entry point",
+          "summary": "OpenAI's Codex CLI 0.154.0 adds experimental --worktree support for isolated session checkouts and lets users answer inline questions while Codex keeps working, but it also removes the deprecated codex mcp-server entry point as a breaking change.",
+          "source": "OpenAI (GitHub)",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.154.0",
+          "why": "Teams that scripted against the old mcp-server entrypoint need to update before upgrading."
+        },
+        {
+          "headline": "Claude Code 2.1.268 closes two more permission-check bypasses",
+          "summary": "The latest Claude Code release fixes deny/ask rules that failed to apply on symlinked directories and on commands wrapped in env -C or eval, and stops the /mcp and claude mcp list commands from printing secrets resolved from ${VAR} placeholders.",
+          "source": "Anthropic",
+          "url": "https://code.claude.com/docs/en/changelog",
+          "why": "Deny-rule bypasses have been a recurring theme in Claude Code security reports; this closes two more concrete gaps."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Amodei calls for AI labs to slow capability gains; Altman and Musk quickly back him",
+          "summary": "Anthropic CEO Dario Amodei published an essay urging AI companies to deliberately slow the pace at which they improve frontier model capabilities, warning that within 6-12 months a swarm of rogue AI agents could be capable of taking over the internet with a persistent botnet. OpenAI's Sam Altman and xAI's Elon Musk both endorsed the call within hours, and OpenAI separately ruled out an IPO this year, citing safety concerns.",
+          "source": "Axios",
+          "url": "https://www.axios.com/2026/09/12/anthropic-ai-amodei-pacing",
+          "why": "Three fiercely competing CEOs publicly agreeing to slow down is a rare, concrete signal that the labs see acute near-term risk, not just PR."
+        },
+        {
+          "headline": "Second Anthropic safety researcher quits in a week, demands mandatory incident disclosure",
+          "summary": "Joe Benton, who led Anthropic's Scalable Oversight team, resigned to work independently on AI-safety advocacy and is joining evaluation nonprofit METR. He argued that AI labs currently disclose safety incidents and near-misses voluntarily, with no external requirement forcing transparency, and called for mandatory reporting standards.",
+          "source": "Business Standard",
+          "url": "https://www.business-standard.com/technology/tech-news/another-anthropic-researcher-warns-of-ai-race-risks-after-quitting-126091200407_1.html",
+          "why": "A second high-profile departure in the same week keeps pressure on Congress, which is already drafting AI-safety bills in response."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "iOS 27 ships today with Gemini-powered Siri and a new Xcode release candidate",
+          "summary": "Apple's iOS 27 became available today, September 14, headlined by a revamped, AI-powered Siri built in part on Google's Gemini models with more conversational responses and on-screen awareness. Developers can submit apps built against the Xcode 27 release candidate and the latest SDKs starting today.",
+          "source": "9to5Mac",
+          "url": "https://9to5mac.com/2026/09/09/apple-confirms-ios-27-release-date-september-14/",
+          "why": "A Google model quietly powering part of Siri is a notable shift in Apple's AI strategy, and it's a hard ship date for every iOS developer."
+        },
+        {
+          "headline": "Salesforce adds seven named Agentforce agents ahead of Dreamforce",
+          "summary": "Salesforce introduced seven purpose-built Agentforce agents (Casey, Paige, Carter, Hunter, Marshall, Piper and Fin) covering service, IT/HR, commerce, sales and supply-chain work; six are generally available now, while outbound-sales agent Hunter is in pilot on a new long-horizon runtime designed to pursue goals over weeks rather than single chat sessions.",
+          "source": "Salesforce",
+          "url": "https://www.salesforce.com/news/stories/agentforce-job-ready-ai-agents/",
+          "why": "Long-horizon, multi-week agent runtimes are a step beyond the single-session agents most enterprise platforms ship today."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Senate's cloture vote on the crypto market-structure bill lands tomorrow",
+          "summary": "The U.S. Senate is scheduled to hold a cloture vote on the Digital Asset Market Clarity Act on Tuesday, September 15, needing 60 votes to advance the bill past unresolved fights over stablecoin rewards and an ethics provision covering senior officials, including the president. Analysts say passage odds remain genuinely uncertain.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/policy/2026/09/13/is-clarity-dead-a-vibes-based-analysis-state-of-crypto",
+          "why": "This is the closest the U.S. has come to comprehensive crypto market-structure legislation, and the outcome is a genuine coin flip."
+        },
+        {
+          "headline": "Symbiosis recovers 15 BTC after Bitcoin Bridge exploit, offers attacker a bounty",
+          "summary": "Cross-chain protocol Symbiosis said an attacker exploited a vulnerability in its Bitcoin Bridge on September 11; the protocol recovered roughly 15 BTC and offered the attacker a 20% white-hat bounty to return the rest, with the offer open through September 13.",
+          "source": "The Block",
+          "url": "https://www.theblock.co/news/defi/2026-09-13-symbiosis-says-it-recovered-15-btc-after-bitcoin-bridge-exploit-offers-attacker-20-bounty-414568",
+          "why": "Another bridge exploit adds to a rough month for cross-chain infrastructure, though the fast partial recovery limits the damage."
+        }
+      ]
+    }
+  ]
+}
