@@ -1,0 +1,111 @@
+{
+  "date": "2026-09-15",
+  "intro": "The AI-pacing debate escalated to a live phone call between President Trump and Nvidia's Jensen Huang, Claude Code and Cursor both shipped notable updates, and the Senate takes up its make-or-break crypto bill today.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Claude Code's latest release adds Remote fast mode and tightens enterprise controls",
+          "summary": "Claude Code 2.1.271 adds a fast mode for Remote sessions, per-command allowed_domains restrictions for Bash, PowerShell, and Monitor in auto mode, and a claude self-hosted-runner --drain-marker-file option for host draining, alongside fixes for stale cached org policy, enterprise managed-mcp.json being ignored, and cloud sessions rejecting subagent tool calls.",
+          "source": "Anthropic (Claude Code changelog)",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+          "why": "The auto-mode domain restrictions and the enterprise MCP fix close real gaps for teams running Claude Code at scale."
+        },
+        {
+          "headline": "Cursor rolls out Projects, a coordinator-and-subagents mode for cloud-run, multi-day work",
+          "summary": "Cursor's new Projects feature runs a coordinator agent that delegates to multiple subagents rather than writing code itself, executing on its own machine in the cloud so work continues after the laptop closes. It can also be configured to watch Slack channels, follow pull requests, or run on a schedule without a manual prompt.",
+          "source": "Cursor",
+          "url": "https://cursor.com/changelog",
+          "why": "Persistent, event-triggered cloud agents push Cursor further from an IDE plugin toward an always-on background worker."
+        },
+        {
+          "headline": "Git config flaw still lets several AI coding agents run attacker commands",
+          "summary": "Manifold Security disclosed eight flaws across seven command-line coding agents in which a repository's own .git/config can specify a command that runs on the developer's machine outside the agent's sandbox and without an approval prompt. Claude Code, Cursor, Codex, and Goose have shipped fixes, but Hermes Agent, Qwen Code, Grok Build, and a second path in Claude Code remained exploitable as of the researchers' September 1 retest.",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html",
+          "why": "Teams that handle repos as file copies rather than git clone (shared drives, zip files, USB) should check their agent's patch status now."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Trump tells Nvidia's Huang \"we're not going to let\" an AI slowdown happen",
+          "summary": "In a live call during an on-stage panel at the All-In Summit, President Trump pushed back on Anthropic CEO Dario Amodei's call to slow AI capability gains, telling Nvidia CEO Jensen Huang that a slowdown \"plays right into the hands\" of China and unnamed political actors. Huang replied on stage that Nvidia won't let that happen.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/14/nvidia-ceo-jensen-huang-tells-trump-were-not-going-to-let-an-ai-slowdown-happen/",
+          "why": "A sitting president intervening directly in the AI-pacing debate raises the political stakes for any voluntary industry slowdown."
+        },
+        {
+          "headline": "Amodei outlines a plan to \"pace the frontier\" of AI capability growth; Altman says OpenAI will follow",
+          "summary": "Anthropic CEO Dario Amodei proposed inviting third-party evaluators such as METR to embed inside the company with badges and near-internal access to verify safety and pacing commitments, calling it something Anthropic is \"unilaterally committing to.\" OpenAI's Sam Altman said OpenAI would adopt a similar approach.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/12/anthropic-ceo-outlines-plan-to-pace-the-frontier/",
+          "why": "Two competing labs publicly committing to the same external-oversight mechanism goes beyond prior one-off pledges."
+        },
+        {
+          "headline": "Anthropic's alignment lead says the company believes AI \"could kill all humans,\" estimates over 10% odds this decade",
+          "summary": "Days after AI researcher Jacob Coxon resigned from Anthropic warning that leading labs are \"gambling with our lives\" on self-improving AI, Anthropic's alignment lead posted that the company earnestly believes AI could kill everyone, putting his personal odds above 10% within the next decade.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/13/whats-behind-the-ai-industrys-latest-warnings-of-doom/",
+          "why": "A number that stark, from a safety lead rather than an outside critic, is unusual even by this year's standards."
+        },
+        {
+          "headline": "Microsoft publishes an AI \"code of conduct\" barring its models from hacking or evading human oversight",
+          "summary": "Microsoft laid out \"absolute constraints\" for its MAI models forbidding cyberattacks, weapons development, and deepfakes, and barring models from using deceptive, collusive, or self-reinforcing tactics to evade being directed, modified, or shut down by authorized people.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/14/microsofts-new-ai-code-of-conduct-tells-models-not-to-hack-systems-or-trick-humans/",
+          "why": "One of the more concrete, publicly documented AI-safety commitments from a major lab this week."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "JDK 27 reaches general availability",
+          "summary": "Oracle shipped JDK 27, the second non-LTS release since JDK 25, making G1 the default garbage collector in all environments, enabling compact object headers by default, and adding post-quantum hybrid key exchange for TLS 1.3.",
+          "source": "OpenJDK",
+          "url": "https://openjdk.org/projects/jdk/27/",
+          "why": "A fresh six-month release worth planning an upgrade around for any JVM shop."
+        },
+        {
+          "headline": "pnpm 12 rewrites the package manager's core in Rust",
+          "summary": "pnpm 12 replaces its TypeScript/Node.js implementation with a native Rust core while preserving pnpm 11's commands, flags, lockfile format, and node_modules layout. Independent testing by Socket at Vercel found median install-time reductions of 64% to 90% across common scenarios.",
+          "source": "InfoQ",
+          "url": "https://www.infoq.com/news/2026/09/pnpm-12-rust/",
+          "why": "A rare case where a low-level rewrite delivers a large, user-visible speedup without breaking existing workflows."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin slips to $77,800 as Senate's Clarity Act vote nears and oil prices climb",
+          "summary": "Bitcoin pulled back from Monday's highs above $79,000 to trade near $77,800 as the Senate's Tuesday cloture vote on crypto market-structure legislation approaches and West Texas Intermediate crude rebounded to around $103 a barrel, stoking inflation concerns ahead of the Fed's expected Wednesday rate move.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/09/15/bitcoin-slips-to-usd77-800-as-senate-clarity-act-vote-nears-and-oil-prices-climb",
+          "why": "Bitcoin is trading on two macro catalysts at once: crypto-specific legislation and broader rate expectations."
+        },
+        {
+          "headline": "Trump agrees to ethics restrictions in the Clarity Act as GOP courts Democratic votes",
+          "summary": "President Trump agreed to new ethics requirements covering his own crypto interests in the Digital Asset Market Clarity Act, as Senate Republicans try to win over the seven Democratic votes needed to clear a filibuster. Democratic Sen. Mark Warner said the new language still isn't enough.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/09/14/clarity-act-senate-vote-crypto-regulation.html",
+          "why": "The ethics fight has been the single biggest obstacle to the bill for months."
+        },
+        {
+          "headline": "SEC's Atkins backs the Clarity Act but says the agency will keep writing crypto rules regardless",
+          "summary": "SEC Chair Paul Atkins voiced support for the Clarity Act ahead of Tuesday's Senate vote but said the agency will continue pursuing its own crypto rulemaking whether or not the bill passes.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/policy/2026/09/14/sec-s-atkins-backs-clarity-act-but-says-agency-will-keep-pushing-crypto-rules-without-it",
+          "why": "Signals that regulatory clarity is coming one way or another, softening the stakes of today's vote."
+        }
+      ]
+    }
+  ]
+}
