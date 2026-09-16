@@ -1,0 +1,83 @@
+{
+  "date": "2026-09-16",
+  "intro": "The Senate's Clarity Act vote failed and took bitcoin down with it, a major GitHub outage rattled developers worldwide, and pure model-research news stayed quiet for a second day.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Claude Code 2.1.273 adds session forking and MCP reconnection alerts",
+          "summary": "Anthropic's latest Claude Code release lets a running session fork into a parallel branch, adds gateway request headers and reconnection notifications for MCP servers, and fixes several permission-checker bugs.",
+          "source": "Anthropic (Claude Code changelog)",
+          "url": "https://code.claude.com/docs/en/changelog",
+          "why": "Session forking and clearer MCP reconnection state target people running longer, more complex agent sessions."
+        },
+        {
+          "headline": "Researchers: hundreds of AI agents built on Codex and DeepSeek breached 440+ PaperCut servers",
+          "summary": "Security researchers reported that a Russian-speaking actor orchestrated hundreds of autonomous AI agents, built on OpenAI Codex and a DeepSeek model, to exploit two PaperCut NG/MF vulnerabilities, compromising over 440 print-server instances across 395 organizations in 48 countries, with the fastest breach taking under four hours from a standing start.",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/09/papercut-attacker-uses-hundreds-of-ai.html",
+          "why": "One of the starkest public examples yet of coding agents being repurposed for automated, large-scale exploitation rather than development."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "DeepSeek ships V4.1-Flash, a cheaper model built around lighter agent memory",
+          "summary": "DeepSeek released V4.1-Flash, a 552B-parameter MoE model with only 8B active parameters, cutting KV-cache requirements to a quarter of its predecessor's and beating its own flagship V4-Pro on coding and agent tasks at a lower API price.",
+          "source": "DeepSeek",
+          "url": "https://deepseek.com/en/news/deepseek-v4-1-flash/",
+          "why": "Cheaper context memory lowers the cost of the tool-calling loops that agentic coding tools depend on."
+        },
+        {
+          "headline": "Shanghai AI Lab quietly drops a 744B open-weight agentic model",
+          "summary": "Shanghai Artificial Intelligence Laboratory published Atria Dawn Preview, a 744B-parameter MoE model built on the GLM-5.2 base with a 256K context window, releasing the MIT-licensed weights on GitHub and Hugging Face days before publishing any paper or announcement.",
+          "source": "GitHub (atria-asi/Atria-Dawn-Preview)",
+          "url": "https://github.com/atria-asi/Atria-Dawn-Preview",
+          "why": "An open-weight model this size, aimed at long-horizon tool-use tasks, narrows the gap with closed frontier agents."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub outage disrupts Actions, Copilot, and enterprise auth for hours",
+          "summary": "GitHub suffered a major outage starting around 9:40 a.m. EDT Monday, with error rates near 20% across the web UI and API and close to 50% on repository downloads; Actions, Copilot, and enterprise SAML/OIDC/SCIM authentication were all affected before the company declared recovery that afternoon.",
+          "source": "DevOps.com",
+          "url": "https://devops.com/github-hit-by-widespread-outage-halting-work-for-global-developers/",
+          "why": "A multi-hour outage of this breadth stalls CI pipelines and coding-agent workflows for a large share of the industry at once."
+        },
+        {
+          "headline": "Cloudflare starts blocking mixed-use AI crawlers on ad-supported pages by default",
+          "summary": "As of September 15, Cloudflare defaults now block crawlers that combine search indexing, AI-agent fetching, and model-training scraping in one user agent when a site owner has opted to block training, treating combined-purpose bots like Googlebot or Applebot by their most restrictive flag.",
+          "source": "Cloudflare Blog",
+          "url": "https://blog.cloudflare.com/content-independence-day-ai-options/",
+          "why": "RAG and agent pipelines that rely on generic crawlers should expect more blocked fetches unless they adopt dedicated user agents."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Bitcoin drops below $76,000 as Senate fails to advance the Clarity Act",
+          "summary": "The Senate fell short of the 60 votes needed on a Tuesday cloture vote to advance the Digital Asset Market Clarity Act, with more than 40 senators opposed. Bitcoin slid from near $80,000 to about $75,850, a 4.2% drop, dragging crypto-linked stocks Coinbase and Circle down 6.7% and 8% respectively.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/business/2026/09/15/live-updates-bitcoin-slides-from-nearly-usd80-000-as-senate-votes-on-clarity-act",
+          "why": "Ends, for now, the year's best chance at a federal crypto market-structure law and removes a catalyst markets had partly priced in."
+        },
+        {
+          "headline": "With the Clarity Act dead for the year, crypto's path to clarity shifts to regulators",
+          "summary": "With roughly three weeks of Senate working days left before midterm campaigning takes over, the crypto industry's best remaining route to regulatory certainty in 2026 runs through SEC and CFTC rulemaking rather than new legislation.",
+          "source": "Decrypt",
+          "url": "https://decrypt.co/378286/crypto-clarity-act-fails-clear-senate-bitcoin-slides",
+          "why": "Without a statute, how tokens get classified now depends on agency rulemaking rather than a settled legal framework."
+        }
+      ]
+    }
+  ]
+}
