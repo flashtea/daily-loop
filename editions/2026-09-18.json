@@ -1,0 +1,97 @@
+{
+  "date": "2026-09-18",
+  "intro": "Google DeepMind opens a public AGI-debate institute a day after OpenAI's policy chief confirmed cross-lab safety coordination; Devin picks up GPT-5.2-Codex and Gemini 3 Flash; bitcoin ETFs keep bleeding even as price holds above $76k in the wake of the failed Clarity Act vote.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Claude Code Workflows Enter Research Preview, Max Plan Defaults to Fast Mode",
+          "summary": "Anthropic's Claude Platform release notes show Claude Code Workflows, a feature for defining and running multistep agentic plans, now available as a research preview, while Max plan users default to fast mode on Claude Opus 4.8.",
+          "source": "Anthropic",
+          "url": "https://platform.claude.com/docs/en/release-notes/overview",
+          "why": "Workflows push Claude Code further from a single-shot coding assistant toward a planner for multi-step agentic jobs."
+        },
+        {
+          "headline": "Devin Adds GPT-5.2-Codex and Gemini 3 Flash",
+          "summary": "Cognition's Devin now supports OpenAI's GPT-5.2-Codex across four reasoning efforts for long, large-codebase agentic sessions, and has rolled out Google's Gemini 3 Flash to all users for faster agentic coding tasks.",
+          "source": "Devin (Cognition)",
+          "url": "https://docs.devin.ai/desktop/changelog",
+          "why": "Multi-model support lets an agentic coding product hedge against any single lab's model regressions or price changes."
+        },
+        {
+          "headline": "Gemini CLI Ships Security Hardening in v0.60.0",
+          "summary": "Google's Gemini CLI reached v0.60.0 with stricter destination validation and connection routing for web-fetch calls, RFC 9207 issuer checks in its MCP OAuth flow, and hardened path resolution in the extension loader.",
+          "source": "Google (Gemini CLI changelog)",
+          "url": "https://geminicli.com/docs/changelogs/",
+          "why": "Extension-loading and OAuth flaws are the same class of bug that has burned other terminal coding agents this year."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Google DeepMind Launches Institute to Debate AGI Risks",
+          "summary": "Google DeepMind opened the DeepMind Institute, a public platform led by co-founder Shane Legg alongside Demis Hassabis and Google's James Manyika, to publish research and host open debate on AGI safety, governance and economic impact. It launched with essays on safety, reasoning transparency and global access.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate/",
+          "why": "It's Google DeepMind formalizing a public safety forum days after Anthropic's Dario Amodei publicly called on the industry to slow down."
+        },
+        {
+          "headline": "OpenAI: No Antitrust Waiver Needed for Safety Talks With Anthropic, Google",
+          "summary": "OpenAI policy chief Chris Lehane told reporters in Washington that OpenAI doesn't need a government waiver to keep coordinating with Anthropic and Google DeepMind on AI safety, and said OpenAI backs a FRONTIER Act provision letting independent evaluators into frontier labs.",
+          "source": "Quartz",
+          "url": "https://qz.com/openai-anthropic-google-deepmind-ai-safety-talks-091626",
+          "why": "Rival labs coordinating while explicitly disclaiming any need for antitrust cover is an unusual public stance."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Anthropic Ships Python SDK v1.0",
+          "summary": "Anthropic released version 1.0 of its Python SDK, switching from httpx to httpx2, requiring Python 3.10 or later, and dropping the deprecated legacy Text Completions API.",
+          "source": "Anthropic",
+          "url": "https://platform.claude.com/docs/en/release-notes/overview",
+          "why": "A major-version SDK bump with a Python floor bump and removed legacy API will break pinned dependencies for some integrations."
+        },
+        {
+          "headline": "Claude's Messages API Adds On-Demand Conversation Compaction",
+          "summary": "The Messages API can now compact a long conversation on demand in beta: sending a compaction parameter returns a signed summary block that can stand in for the original messages on later requests.",
+          "source": "Anthropic",
+          "url": "https://platform.claude.com/docs/en/release-notes/overview",
+          "why": "Native compaction cuts one of the more common pieces of custom infrastructure teams build to keep long agent sessions under context limits."
+        },
+        {
+          "headline": "Docker Desktop 4.92 Ships Stability and WSL Fixes",
+          "summary": "Docker Desktop's latest release refreshes engine and tooling, speeds up startup, and fixes a batch of bugs spanning volumes, PATH handling, Docker Scout hints, Kubernetes, Compose, and Windows/WSL installs.",
+          "source": "Docker",
+          "url": "https://docs.docker.com/desktop/release-notes/",
+          "why": ""
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin ETFs Post Second Straight Outflow Day Even as Price Holds Above $76K",
+          "summary": "US spot bitcoin ETFs recorded a $296 million net outflow on September 16, led by BlackRock's IBIT at $144 million, marking a second consecutive down day following $450 million in outflows on September 15 — even as bitcoin's price held up after the Fed's rate hike.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/09/17/live-updates-zcash-jumps-17-as-usd345-million-of-liquidations-hit-crypto-traders",
+          "why": "Outflows persisting despite a steady price suggest institutional buyers are more cautious than the spot market right now."
+        },
+        {
+          "headline": "Senate Fails to Advance Clarity Act, Stalling Crypto Market-Structure Bill",
+          "summary": "A Senate cloture vote on the Clarity Act, which would have split digital-asset oversight between the SEC and CFTC, fell short 49-50, with bipartisan objections over ethics provisions and stablecoin-yield treatment. The bill is unlikely to be revived before the next Congress.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/09/15/senate-cloture-vote-on-clarity-act-fails-dealing-regulatory-setback-to-crypto-industry.html",
+          "why": "Ends the main push for federal crypto market-structure legislation this Congress, leaving the SEC/CFTC split unresolved."
+        }
+      ]
+    }
+  ]
+}
