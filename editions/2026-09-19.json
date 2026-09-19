@@ -1,0 +1,90 @@
+{
+  "date": "2026-09-19",
+  "intro": "Four consumers sued Anthropic, OpenAI, Google and SpaceXAI over Dario Amodei's call to \"pace the frontier,\" arguing a coordinated capability slowdown is illegal collusion; bitcoin broke $81K in a short squeeze the same day ETFs snapped a two-day, $746M outflow streak.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Claude Code Moves Auto Mode Classification Server-Side",
+          "summary": "Claude Code 2.1.278 changed auto mode for API, Enterprise, Bedrock, Vertex, Foundry and gateway users to default to a server-side classifier that isn't billed for classifier overhead, with an opt-out env var and a warning on billed fallback.",
+          "source": "Claude Code changelog",
+          "url": "https://code.claude.com/docs/en/changelog",
+          "why": "Removes a hidden cost line for teams running Claude Code's auto model-selection at scale."
+        },
+        {
+          "headline": "OpenAI Ships Codex CLI 0.155.0 With Voice Mode and Touch ID for MCP",
+          "summary": "Codex CLI 0.155.0 adds an experimental /voice mode with live transcripts over WebRTC, plus Touch ID verification for MCP tool calls in local TUI sessions on supported Macs, alongside live reasoning summaries and worktree management in the agents overview.",
+          "source": "OpenAI (GitHub release)",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.155.0",
+          "why": "A hardware confirmation step for MCP calls is a direct response to the sandbox-escape findings that have dogged CLI coding agents this year."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Consumers Sue Anthropic, OpenAI, Google and SpaceXAI Over Alleged Pact to Slow AI",
+          "summary": "Four consumers filed a federal antitrust suit in California accusing Anthropic, OpenAI, Google and SpaceXAI of illegally colluding to slow frontier model improvements, pointing to Dario Amodei's September 12 essay \"We Must Pace the Frontier\" and the public endorsements it drew from Sam Altman, Elon Musk and Demis Hassabis as evidence of a Sherman Act violation.",
+          "source": "Bloomberg Law",
+          "url": "https://news.bloomberglaw.com/litigation/openai-anthropic-google-spacexai-hit-with-antitrust-lawsuit",
+          "why": "A novel legal theory that a safety pledge can itself be an antitrust violation could chill how labs publicly coordinate on slowing capability races."
+        },
+        {
+          "headline": "OpenAI Launches Astra for Law, a GPT-6 Astra Build for Legal Work",
+          "summary": "OpenAI introduced Astra for Law, combining GPT-6 Astra with a legal search index spanning more than 230 million case law, statute and regulatory sources plus 26 partner plugins from firms like Thomson Reuters and Harvey; it's initially limited to selected US law firms through Trusted Access.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/astra-for-law/",
+          "why": "Shows frontier labs increasingly shipping vertical, domain-tuned products instead of just general chat models."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub Actions' Ubuntu 26.04 Runner Image Reaches General Availability",
+          "summary": "The Ubuntu 26.04 runner image for GitHub Actions is now GA for production workflows on x64 and arm64; the ubuntu-latest label will migrate from 24.04 to 26.04 between October 19 and November 19, and the new image drops or updates some preinstalled tool versions.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-09-17-ubuntu-26-generally-available-and-latest-migration/",
+          "why": "Workflows pinned to specific preinstalled tool versions can break once ubuntu-latest migrates in October."
+        },
+        {
+          "headline": "GitHub Actions' Workflow Execution Protections Go GA",
+          "summary": "Workflow execution protections, previously in preview, are now generally available across GitHub Enterprise, organizations and repositories, adding allowlists for who and what can trigger a workflow, per-file targeting, audit insights and a REST API; public repos without an existing policy now default to disabling pull_request_target.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-09-17-workflow-execution-protections-in-github-actions-generally-available/",
+          "why": "A default pull_request_target restriction closes a trigger that's been repeatedly abused in CI supply-chain attacks."
+        },
+        {
+          "headline": "npm Adds Stage-Only Tokens to Curb Automated Publish Risk",
+          "summary": "npm granular access tokens now support a 'Read and write (stage only)' permission that lets CI stage a package version without the token being able to publish it directly; a maintainer must approve the staged version with 2FA before it goes live, ahead of npm's planned removal of bypass-2FA publish tokens.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-09-18-stage-only-npm-tokens-for-safer-automation/",
+          "why": "Cuts the blast radius of a leaked CI token, a recurring root cause in this year's npm supply-chain compromises."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin Breaks $81K in Short Squeeze, Shaking Off Clarity Act Failure and Rate Hikes",
+          "summary": "Bitcoin climbed to $81,152 on Friday, up nearly 6% on the day, as roughly $470 million in crypto shorts were liquidated over 24 hours ($238 million of it bitcoin shorts); the rally came despite the Senate's failed Clarity Act vote and back-to-back rate hikes from the Fed and Bank of Japan, with altcoins like Solana (+12.7%) and XRP (+8.9%) rallying alongside it.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/09/18/live-updates-hype-leads-altcoin-rally-as-bitcoin-recovers-toward-usd78-000",
+          "why": "A rally that accelerates alongside rising long-term yields breaks from bitcoin's usual rate-sensitive playbook."
+        },
+        {
+          "headline": "Bitcoin ETFs Snap Two-Day, $746M Outflow Streak",
+          "summary": "US spot bitcoin ETFs bled $746 million over Tuesday and Wednesday before flipping to roughly $159 million in net inflows on September 17, a rebound driven almost entirely by BlackRock's IBIT ($184 million in) while Fidelity's FBTC and VanEck's HODL kept seeing redemptions.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/daybook-us/2026/09/17/optimism-creeps-back-into-crypto-with-the-2022-test-still-to-come",
+          "why": "A single-fund rebound is a weaker signal than broad-based demand, worth watching for follow-through."
+        }
+      ]
+    }
+  ]
+}
