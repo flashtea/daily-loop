@@ -1,0 +1,104 @@
+{
+  "date": "2026-09-20",
+  "intro": "A security team's use of Claude Opus 5 to breach OpenAI's own network stole the day in AI; bitcoin's regulatory track split between a landmark SEC tokenization exemption and a CFTC proposal still stuck at the White House.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Anthropic Launches Claude Code Projects for Coordinating Long-Running Dev Work",
+          "summary": "Claude Code Projects gives developers an always-on AI coordinator that splits an ongoing initiative into parallel execution threads while keeping shared memory of decisions and context across them. The beta is rolling out to Claude Pro and Max subscribers using cloud sessions, with wider access expected over the coming week.",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/orchestration/anthropic-launches-claude-code-projects-an-always-on-conversation-that-remembers-and-delegates-your-long-running-dev-work",
+          "why": "A shift from single coding sessions toward persistent, multi-threaded project management inside Claude Code."
+        },
+        {
+          "headline": "A Non-LLM Model From an Ex-OpenAI Researcher Is Winning Over Developers",
+          "summary": "TypeSafe AI, founded by former OpenAI researcher Diogo Almeida, shipped Jev, a transformer model that outputs calibrated probability decisions instead of text and is aimed at automation rather than chat. Vercel says swapping OpenAI's model for Jev on a safety-classification task returned results 5-18x faster with better accuracy, and demand briefly outstripped TypeSafe's API capacity.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/18/a-new-kind-of-ai-model-from-a-chatgpt-inventor-is-thrilling-developers/",
+          "why": "A signal that narrow, non-chat models still have real developer pull even in an LLM-dominated market."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Security Researchers Used Claude to Break Into OpenAI's Internal Systems",
+          "summary": "A three-person team at Hacktron AI chained two vulnerabilities, starting with a malicious HEIC image upload to the Discourse software powering OpenAI's community forum, to gain access to employee ChatGPT accounts and an internal code repository, reporting it through OpenAI's bug bounty for a $6,500 award. The team said Claude Opus 4.8 repeatedly failed to build a working exploit, but Claude Opus 5 succeeded within hours of its release.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/",
+          "why": "A concrete before/after data point on how far offensive-security capability jumped between Opus 4.8 and Opus 5."
+        },
+        {
+          "headline": "Anthropic and Accenture Commit $1B+ to Embed Independent Evaluators Inside Anthropic",
+          "summary": "Accenture's Faculty AI unit will place evaluators inside Anthropic with employee-level access to red-team models, review deployment decisions, and verify safety commitments. Both companies plan to invest at least $1 billion each over five years, and Anthropic says the arrangement is non-exclusive, with more evaluator partners to be announced.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/accenture-embedded-evaluation",
+          "why": "One of the more concrete attempts yet at giving outside auditors real access to a frontier lab's model pipeline."
+        },
+        {
+          "headline": "Google's Dream-RSI Cuts AI Agent Search Costs Up to 162x",
+          "summary": "Google researchers published Dream-RSI, a system that lets AI agents learn from previously accumulated search and discovery attempts instead of re-running expensive live queries, cutting discovery-agent call volume by as much as 162x in testing. The paper, project site, and code are all public.",
+          "source": "VentureBeat",
+          "url": "https://venturebeat.com/data-infrastructure/googles-dream-rsi-cuts-discovery-agent-calls-up-to-162x-by-replaying-searches-it-already-ran",
+          "why": "A meaningful efficiency lever for the agent workloads driving up inference costs industry-wide."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "AWS Lambda Pushes Serverless Toward Long-Running Workloads",
+          "summary": "AWS now lets asynchronous and event-source-mapping Lambda functions on Lambda Managed Instances run for up to 90 minutes, six times the previous 15-minute cap, at no extra charge. AWS points to media processing, ETL, and AI inference as the workloads this unblocks; the limit for traditional synchronous invocations is unchanged.",
+          "source": "AWS",
+          "url": "https://aws.amazon.com/blogs/compute/announcing-90-minute-function-timeout-on-aws-lambda-managed-instances/",
+          "why": "Further blurs the line between a Lambda invocation and a conventional long-lived server process."
+        },
+        {
+          "headline": "SolidStart 2 Drops Vinxi for Vite 8, Then Enters Maintenance Mode",
+          "summary": "SolidStart's stable 2.0 release rebuilds the meta-framework directly on Vite 8's Environment API instead of Vinxi, improving compatibility with plugins like Tailwind CSS v4 and deployment targets like Cloudflare and Netlify; it requires Node 24+. Days after shipping, the team folded most of its functionality into Solid core and moved SolidStart itself into maintenance mode.",
+          "source": "InfoQ",
+          "url": "https://www.infoq.com/news/2026/09/solid-start-v2/",
+          "why": "Migrating app.config.ts to vite.config.ts is the biggest breaking change for teams on SolidStart 1."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "SEC Grants Five-Year Exemption for Trading Tokenized U.S. Stocks",
+          "summary": "The SEC issued an 'Innovation Exemption' letting qualifying tokenized-securities venues trade tokenized NMS stocks through permissioned automated market makers without registering as a national exchange, for up to five years. Tokenized shares must carry the same dividend and voting rights as the underlying stock, and synthetics are excluded.",
+          "source": "SEC.gov",
+          "url": "https://www.sec.gov/newsroom/press-releases/2026-90-sec-issues-innovation-exemption-facilitate-trading-tokenized-nms-stock-request-comment",
+          "why": "One of the biggest US regulatory openings yet for onchain equities trading, arriving days after the Clarity Act died in the Senate."
+        },
+        {
+          "headline": "CFTC Sends Its Own Crypto Rules to the White House as Clarity Act Stalls",
+          "summary": "With the Clarity Act stuck after a failed Senate procedural vote, the CFTC submitted a crypto market structure proposal to the White House's OMB for review and separately issued a no-action letter letting certain software providers route users to regulated derivatives markets without registering as introducing brokers.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/policy/2026/09/18/cftc-sends-crypto-rules-to-white-house-to-review-as-congress-stalls-on-clarity-act",
+          "why": "Shows regulators moving under existing authority rather than waiting on Congress to pass comprehensive market-structure legislation."
+        },
+        {
+          "headline": "Treasury Sanctions Iranian Exchange BitBank Over Bitcoin-Funded Hormuz Strait Tolls",
+          "summary": "OFAC sanctioned Tehran-based BitBank, accusing it of moving hundreds of millions of dollars in bitcoin to Iran's Revolutionary Guards and processing fees that the Hormuz Safe Marine Services Authority charged tankers for 'safe passage' through the Strait of Hormuz since June. The action also names BitBank's developer and associates of businessman Babak Zanjani.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/policy/2026/09/18/iran-s-strait-of-hormuz-toll-booth-ran-through-a-bitcoin-exchange-u-s-says",
+          "why": "Bitcoin playing both sides of a sanctions story: evasion tool and enforcement target in an active geopolitical flashpoint."
+        },
+        {
+          "headline": "Bitcoin Core 32 Enters Final Testing With a Fixed Remote-Command Flaw",
+          "summary": "Bitcoin Core 32.0 entered final testing on September 14 ahead of an October 10 release, improving fee estimation and block processing and making PSBT version 2 the default for several wallet commands without touching consensus rules. It also fixes a bug present since Core 24.0 where a specially crafted wallet name could, under certain conditions, get commands executed on the host machine.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/tech/2026/09/16/bitcoin-core-32-enters-final-testing-with-faster-validation-fee-changes-and-security-fixes",
+          "why": "A wallet-name remote-command bug is the kind of flaw that matters far beyond price action."
+        }
+      ]
+    }
+  ]
+}
