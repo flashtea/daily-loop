@@ -1,0 +1,97 @@
+{
+  "date": "2026-09-21",
+  "intro": "A single design flaw quietly showed up independently in four different AI coding agents' plugin systems; bitcoin, meanwhile, just cleared a technical level it hasn't closed above in 45 weeks.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Plugin4Shell Zero-Click RCE Hits Claude Code, Codex, Copilot and Gemini CLI",
+          "summary": "AIR Security disclosed Plugin4Shell, a flaw that lets an attacker swap the code behind a plugin's pinned commit hash with a same-named branch, so the agent runs unreviewed code without any user action. The same SHA-pinning design error was found independently across four separate coding-agent codebases, and plugins typically inherit full access to a developer's source code, cloud credentials, and SSH keys.",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/09/plugin4shell-lets-repository-owners.html",
+          "why": "The first supply-chain vulnerability class shown to hit the whole AI coding-agent ecosystem at once, not just one vendor."
+        },
+        {
+          "headline": "Two of Four Vendors Are Leaving Their Agents Unpatched",
+          "summary": "Anthropic patched Claude Code in version 2.1.179 and OpenAI fixed Codex in 0.146.0, but GitHub has not shipped a Copilot fix, and Google is not patching Gemini CLI at all — it had already deprecated the tool in favor of its newer Antigravity agent, which the flaw does not reach, leaving existing Gemini CLI installs exposed indefinitely.",
+          "source": "Help Net Security",
+          "url": "https://www.helpnetsecurity.com/2026/09/18/plugin4shell-ai-coding-agents-vulnerability/",
+          "why": "Knowing which of your tools actually got fixed matters more than the vulnerability disclosure itself."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Google, Anthropic and OpenAI Roll Out Dedicated Cybersecurity AI Models",
+          "summary": "Google shipped Gemini 3.8 Flash Cyber for its Fairwind defender program, Anthropic released Claude Mythos 5.1 with tiered access for cybersecurity and life-sciences work, and OpenAI said its upcoming Astra model meets the 'Critical' cybersecurity threshold under its Preparedness Framework, reserving its most advanced features for testers in a program called Daybreak Blue.",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/09/google-anthropic-and-openai-unveil.html",
+          "why": "Three frontier labs simultaneously classifying models as capable of finding and exploiting real vulnerabilities raises the stakes for defenders."
+        },
+        {
+          "headline": "Alibaba Ships Qwen3.8-Omni-Flash, a 1M-Context Omnimodal Model at 98% Lower Audio Pricing",
+          "summary": "Qwen3.8-Omni-Flash natively processes text, images, audio and video in one model with a 1-million-token context window, cutting audio API pricing more than 98% while beating its predecessor across 30 benchmarks. Unlike earlier Qwen releases, it ships API-only through Alibaba's cloud platforms with no open weights.",
+          "source": "TechNode",
+          "url": "https://technode.com/2026/09/18/alibabas-qwen-releases-qwen3-8-omni-flash-with-1m-token-context/",
+          "why": "A major capability and pricing jump from China's leading open-weight lab family, minus the open weights this time."
+        },
+        {
+          "headline": "Google DeepMind Launches an Institute to Air Internal Disagreement Over AGI",
+          "summary": "DeepMind opened a new institute publishing essays that surface differing views among Google, DeepMind and outside researchers on AGI, starting with pieces on managing economic disruption, preserving human-readable model reasoning, and evaluation frameworks for frontier models.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate/",
+          "why": "A rare case of a frontier lab publishing internal disagreement rather than a unified party line."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "JDK 27 Reaches General Availability With Post-Quantum TLS",
+          "summary": "Oracle shipped JDK 27 with nine JEPs, headlined by post-quantum hybrid key exchange for TLS 1.3, G1 as the default garbage collector, and compact object headers enabled by default.",
+          "source": "Oracle",
+          "url": "https://www.oracle.com/news/announcement/oracle-releases-java-27-and-strengthens-post-quantum-cryptography-support-2026-09-15/",
+          "why": "Post-quantum TLS landing in the default JDK pushes quantum-resistant crypto into mainstream enterprise Java."
+        },
+        {
+          "headline": "Multi-Cluster Project Karmada Reaches CNCF Graduation",
+          "summary": "Karmada, a multi-cluster and multi-cloud Kubernetes orchestration project used in production at Bloomberg and Trip.com, reached the CNCF's Graduated maturity tier, its highest level reserved for stable, widely adopted projects. It has grown to more than 1,200 contributors from nearly 300 organizations since entering the CNCF Sandbox in 2021.",
+          "source": "CNCF",
+          "url": "https://www.cncf.io/announcements/2026/09/07/cloud-native-computing-foundation-announces-karmada-graduation/",
+          "why": "Another sign that multi-cluster Kubernetes orchestration is moving from niche to standard enterprise practice."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin Clears 50-Week Moving Average for First Time in 45 Weeks",
+          "summary": "Bitcoin closed the week ended September 20 above its 50-week moving average for the first time in 45 weeks, trading near $81,000. Galaxy Research's Alex Thorn called it a potentially important confirmation that the market's bear phase has run its course, with bitcoin largely shrugging off the Clarity Act's Senate defeat and this month's rate-hike concerns.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/09/21/bitcoin-s-price-has-cleared-a-key-hurdle-that-has-historically-preceded-major-bull-runs",
+          "why": "A technical level with a strong historical track record of preceding sustained bull runs."
+        },
+        {
+          "headline": "ECB's Lagarde Reportedly Blocked Binance's EU MiCA License in Greece",
+          "summary": "The Wall Street Journal reported that ECB President Christine Lagarde personally called Greece's prime minister to stop Binance's near-complete MiCA license application, reportedly over concern that Binance's dollar-based stablecoins could undermine the digital euro. The ECB has no formal MiCA licensing authority — that rests with national regulators.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/policy/2026/09/18/ecb-president-christine-lagarde-intervened-to-block-binance-s-eu-mica-license-wsj",
+          "why": "An unelected central banker reportedly exercising informal veto power over crypto market access to the entire EU."
+        },
+        {
+          "headline": "CFTC Sends Its Own Crypto Market-Structure Rules to the White House as Clarity Act Stalls",
+          "summary": "With the Clarity Act dead in the Senate for 2026, the CFTC submitted its own crypto market-structure rulemaking to the White House's Office of Management and Budget, and separately issued a no-action letter letting certain software providers route users to regulated derivatives markets without registering as introducing brokers.",
+          "source": "The Block",
+          "url": "https://www.theblock.co/news/regulation/2026-09-18-cftc-files-crypto-asset-rulemaking-with-white-house-pressing-ahead-without-congress-415510",
+          "why": "Regulators moving under existing authority instead of waiting on a Congress that just killed comprehensive crypto legislation."
+        }
+      ]
+    }
+  ]
+}
