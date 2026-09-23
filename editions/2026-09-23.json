@@ -1,0 +1,83 @@
+{
+  "date": "2026-09-23",
+  "intro": "Anthropic's Opus 5.5 lands as the new default in Claude Code a day after OpenAI countered with cheaper GPT-6 Sol and Luna, while bitcoin's rally gets an institutional stamp from a record ETF inflow day.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Anthropic Ships Claude Opus 5.5, Now the Default Model in Claude Code",
+          "summary": "Anthropic released Claude Opus 5.5, the first model in its 5.5 family, cutting typical workload costs by about 40% versus Opus 5 while boosting output speed over 30%. It's now the default model in Claude Code with a 1M-token context window; an early tester used it to audit and fix a 200,000-line codebase in under three hours, versus over 20 hours for Opus 5.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/claude-opus-5-5",
+          "why": "A sharp jump in cost and speed changes the economics of long-running coding agents, not just their benchmark scores."
+        },
+        {
+          "headline": "OpenAI Launches GPT-6 Sol and Luna, Roughly Halving API Prices",
+          "summary": "OpenAI expanded its GPT-6 family with Sol, built for coding and agentic tasks, and Luna, a lightweight model for high-volume clerical work, cutting API prices by about half versus their GPT-5.6 predecessors. Both are rolling out now in Codex, the API, and ChatGPT, with OpenAI claiming Sol makes about half as many mistakes as its predecessor at Astra-level reliability.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/",
+          "why": "A coding-tuned model at half the price directly undercuts rivals' agentic-coding pricing a day after Anthropic's own cost cut."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Amodei and Altman Set to Brief UN Security Council on AI Risks",
+          "summary": "Anthropic's Dario Amodei and OpenAI's Sam Altman are scheduled to address the UN Security Council on AI on Wednesday, alongside Hugging Face CEO Clément Delangue and AI-safety researcher Yoshua Bengio, in a session covering the risks posed by advancing AI systems.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/09/22/altman-amodei-unga-ai-safety.html",
+          "why": "A rare joint appearance by rival lab CEOs before the Security Council signals AI safety is now treated as international security policy, not just industry self-regulation."
+        },
+        {
+          "headline": "OpenAI Forms Math Advisory Group After Model Resolves 100+ Open Problems",
+          "summary": "OpenAI said an internal model has resolved more than 100 previously open problems across mathematics and formed an independent nine-mathematician Advisory Group on Mathematics and Artificial Intelligence, hosted at Princeton's Institute for Advanced Study, to vet and help communicate the results.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/advisory-group-on-mathematics-and-ai/",
+          "why": "A concrete, third-party-checked claim of new math results is a higher bar than the usual benchmark-score announcement."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub's Refreshed Pull Requests Page Reaches General Availability",
+          "summary": "GitHub shipped its redesigned repository-level pull requests page to all users, adding advanced AND/OR search, a compact presentation mode, and bulk actions like closing, labeling, and changing milestones across multiple pull requests at once.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-09-21-refreshed-repository-pull-requests-page-generally-available/",
+          "why": "A daily-use surface for most teams; better filtering and bulk actions cut real review overhead."
+        },
+        {
+          "headline": "Chrome 154 Ships Under Google's New Two-Week Release Cadence",
+          "summary": "Google released Chrome 154 to stable on September 22, the second release under its new two-week major-version cycle, down from four weeks, which began with Chrome 153 on September 8. Extended Stable keeps its slower eight-week cycle for enterprises that need longer testing windows.",
+          "source": "Chrome for Developers",
+          "url": "https://developer.chrome.com/blog/chrome-two-week-release",
+          "why": "Faster browser releases shrink the lag between a web-platform feature shipping and it being safe to rely on in production."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Spot Bitcoin ETFs Pull In Nearly $1 Billion in a Single Day",
+          "summary": "U.S. spot bitcoin ETFs attracted $998.95 million in net inflows on Monday, the largest single-day haul in nearly a year and the ninth-largest since the funds launched, led by BlackRock's IBIT with $381.37 million. Bitcoin briefly touched about $87,300 the same day, its highest level since January.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/09/22/spot-bitcoin-etfs-attracted-nearly-usd1-billion-on-monday-the-9th-largest-inflow-ever",
+          "why": "Confirms the current rally is backed by real institutional buying rather than just leverage and spot-market momentum."
+        },
+        {
+          "headline": "Regulators Race to Write Crypto Rules After Clarity Act Stalls in Senate",
+          "summary": "With the Clarity Act's comprehensive crypto framework stuck after a failed Senate procedural vote, the SEC and CFTC are moving under their existing authority to fill the gap, including an SEC 'innovation exemption' for tokenized-securities trading and a CFTC crypto rulemaking sent to the White House for review.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/09/22/clarity-act-crypto-rules-regulators.html",
+          "why": "Sets the near-term rulebook bitcoin exchanges, custodians, and issuers will operate under while Congress remains stalled."
+        }
+      ]
+    }
+  ]
+}
