@@ -1,0 +1,90 @@
+{
+  "date": "2026-09-24",
+  "intro": "Altman and Amodei took AI safety to the UN Security Council and ran into a wall of US resistance, Xiaomi open-sourced a trillion-parameter model, and bitcoin took its sharpest hit in weeks as Treasury yields spiked to a 19-year high.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "OpenAI Makes GPT-6 Sol the Default Model in Codex CLI",
+          "summary": "OpenAI shipped Codex CLI v0.156.1, adding GPT-6 Sol and GPT-6 Luna to the model picker; Sol becomes Codex's new default \"daily driver\" for complex coding and agentic workflows, with Luna recommended when rate limits force a switch.",
+          "source": "OpenAI Codex (GitHub)",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.156.1",
+          "why": "The default model a CLI ships with shapes millions of daily coding sessions more than any benchmark chart."
+        },
+        {
+          "headline": "Claude Code Adds Enterprise Gateway Controls, Fixes Auto-Mode rm Bug",
+          "summary": "Claude Code 2.1.281 added Bedrock IAM role assumption, Amazon Bedrock guardrail support, and new policy blocks that can restrict file reads to the working directory, alongside a fix for a bug that let recursive `rm` commands run unprompted in auto mode.",
+          "source": "Claude Code Changelog",
+          "url": "https://code.claude.com/docs/en/changelog",
+          "why": "A bug that let a destructive command skip its permission prompt is exactly the kind of thing agentic-coding users need to know got fixed."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Altman and Amodei Urge UN Security Council to Adopt Shared AI Safety Rules",
+          "summary": "OpenAI's Sam Altman and Anthropic's Dario Amodei addressed the UN Security Council on Wednesday, with Altman asking members to align how they measure AI capabilities and report failures, and Amodei proposing narrower pacts such as a ban on using AI for bioweapons and mutual verification systems. The White House's Michael Kratsios rejected new global governance structures, while the UK's Ed Miliband backed shared standards.",
+          "source": "CNN",
+          "url": "https://www.cnn.com/2026/09/23/tech/altman-amodei-ai-safety-un-security-council",
+          "why": "Rival lab CEOs jointly asking for international rules, and a US rebuff on the record, is a rare concrete marker of where AI governance actually stands."
+        },
+        {
+          "headline": "Xiaomi Open-Sources Trillion-Parameter MiMo-V2.6, Tops Open-Weight Rankings",
+          "summary": "Xiaomi released MiMo-V2.6-Pro, a 1.02-trillion-parameter omnimodal mixture-of-experts model with a 1M-token context window, under an MIT license with checkpoints on Hugging Face. It scored 46 on Artificial Analysis's Intelligence Index, the highest yet for an open-weights model, with training reported at roughly $2.62 million.",
+          "source": "Xiaomi MiMo",
+          "url": "https://mimo.mi.com/docs/en-US/updates/model",
+          "why": "A commercially-licensed, top-ranked open-weight model at that size and price undercuts the case for staying on closed frontier APIs."
+        },
+        {
+          "headline": "Anthropic Says Claude Autonomously Found a Novel CRISPR-Like Enzyme System",
+          "summary": "Anthropic said Claude agents in its new life-sciences research lab identified a previously uncharacterized enzyme system, built around a reverse transcriptase and flanked by a DNA-repeat array reminiscent of CRISPR, with only high-level direction from scientists; the system's function is still unknown.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+          "why": "A genuine, if early, autonomous discovery is a different class of claim than another benchmark score."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub Retires SHA-1 SSH Signatures, Adds Post-Quantum Key Exchange",
+          "summary": "GitHub is removing the ssh-rsa signature type and the diffie-hellman-group-exchange-sha256 key exchange, requiring new RSA SSH keys uploaded after October 14 to be at least 3072 bits, and rolling out the post-quantum mlkem768x25519-sha256 exchange on github.com and GitHub Enterprise Cloud.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-09-22-security-improvements-for-ssh/",
+          "why": "Anyone pushing to GitHub over SSH with an old key or client needs to check compliance before the brownout windows in November and December."
+        },
+        {
+          "headline": "Critical Fluent Bit Flaw Lets a Rogue Server Run Code on Client Agents",
+          "summary": "A stack buffer overflow in Fluent Bit's out_forward Secure-Forward PONG handler, tracked as CVE-2026-61674 (CVSS 9.2), lets a malicious upstream server achieve remote code execution on connected clients; the flaw and proof-of-concept code were published on September 23, with no confirmed in-the-wild exploitation yet.",
+          "source": "Fluent Bit Security Advisories (GitHub)",
+          "url": "https://github.com/fluent/fluent-bit/security",
+          "why": "Fluent Bit sits in front of logs and metrics pipelines across countless production clusters, making this worth patching immediately."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin Slides Toward $84K as Treasury Yields Hit a 19-Year High",
+          "summary": "Bitcoin fell about 2.8% to roughly $84,000 on Wednesday after the 10-year Treasury yield jumped 18 basis points to 5.13%, its highest since 2007, on stronger-than-expected September PMI data; it was the largest single-day yield move since April 2025's tariff announcements.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/business/2026/09/23/live-updates-bitcoin-slips-under-usd86-000-as-money-rotates-into-bch-and-zec",
+          "why": "A macro rates shock, not crypto-specific news, is what actually moved the price, a reminder bitcoin still trades as a risk asset."
+        },
+        {
+          "headline": "Spot Bitcoin ETF Flows Turn Net Positive for 2026 on $4.6B Rebound",
+          "summary": "US spot bitcoin ETFs have pulled in about $4.6 billion since August 19, when the Treasury said it would step up long-dated bond buybacks, flipping the funds' 2026 net flows positive at roughly $320 million after earlier-year outflows.",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-09-23/bitcoin-etf-flows-turn-positive-after-4-6-billion-rebound",
+          "why": "Sustained institutional buying through a rate-driven price dip suggests conviction beyond short-term momentum trading."
+        }
+      ]
+    }
+  ]
+}
