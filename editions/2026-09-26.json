@@ -1,0 +1,90 @@
+{
+  "date": "2026-09-26",
+  "intro": "A quiet news day across the beats: Anthropic's biggest move was a research paper, not a product launch, and Bitcoin drifted sideways on Middle East de-escalation headlines rather than anything crypto-native.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Claude Code Ships v2.1.283 with Gateway Hints and Stricter Model Controls",
+          "summary": "Anthropic's latest Claude Code release adds a prompt-id header for LLM gateways to group multi-step requests, a new \"exact\" mode for locking down which model versions are allowed, and a /doctor prompt-audit command that flags CLAUDE.md files and prompts written for older models.",
+          "source": "Anthropic",
+          "url": "https://code.claude.com/docs/en/changelog",
+          "why": "Teams running Claude Code behind a gateway or with strict model-pinning policies get finer-grained control over what actually executes."
+        },
+        {
+          "headline": "Vibe-Coding Startup Lovable Crosses $600M in Annualized Revenue",
+          "summary": "Lovable co-founder Fabian Hedin said the prompt-to-app platform's annualized revenue has passed $600 million, up from $500 million in June, with two-thirds of Fortune 500 companies now using the product.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/24/lovables-annualized-revenue-crosses-600m-as-vibe-coding-takes-off/",
+          "why": "A concrete revenue signal for how fast natural-language app-building is being adopted inside large enterprises, not just by hobbyists."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Claude Computes a Previously Unsolved Nine-Loop Physics Amplitude",
+          "summary": "Anthropic researchers used Claude (via the Claude Science harness) to compute a nine-loop scattering amplitude in N=4 super-Yang-Mills theory, a calculation in theoretical particle physics that had been considered out of reach without far greater dedicated compute, at a cost of roughly $1,000–$2,000.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/research/yes-claude-can-do-nine-loops",
+          "why": "A rare case of an LLM extending the frontier of a hard theoretical-physics problem rather than just replicating known results, at a tiny fraction of the compute cost researchers expected to need."
+        },
+        {
+          "headline": "Anthropic's \"Project Swap\" Has Claude Agents Barter on Employees' Behalf",
+          "summary": "In a controlled experiment, 201 Anthropic employees each briefed a Claude agent on their reading tastes, then let the agents negotiate book trades with each other; agents matched their owner's actual preferences on 61% of pairwise comparisons after just a five-minute conversation.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/research/project-swap",
+          "why": "An early, concrete look at what rules and safeguards markets will need once autonomous agents start negotiating on people's behalf."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Cloudflare Fixes Flaw That Let a Customer Read Another's Leftover Container Data",
+          "summary": "Cloudflare disclosed and fixed a bug in its Containers service where disk blocks weren't always wiped between allocations, allowing one paying customer to read data left behind by another customer's container on the same server; Cloudflare re-enabled block wiping and retired all existing container disks.",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/09/cloudflare-fixes-flaw-that-let-one.html",
+          "why": "A tenant-isolation failure on shared compute infrastructure is one of the more serious classes of cloud bugs, even when caught before wide exploitation."
+        },
+        {
+          "headline": "CISA Warns Ransomware Gangs Are Actively Exploiting a Critical TeamCity Flaw",
+          "summary": "CISA added CVE-2026-63077, a critical authentication-bypass bug in JetBrains TeamCity On-Premises patched in July, to its Known Exploited Vulnerabilities catalog after confirming ransomware groups are using it to compromise CI/CD servers.",
+          "source": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/cisa-ransomware-gangs-now-exploiting-critical-teamcity-flaw/",
+          "why": "An unpatched CI/CD server is a direct path to poisoning build artifacts and downstream software supply chains — teams still on affected versions should patch now."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin Steadies Near $84,000 as Iran-Brokered Strait of Hormuz Deal Eases Oil Prices",
+          "summary": "Bitcoin held around $84,000 after reports that Iran submitted terms via Qatari mediators for reopening the Strait of Hormuz, sending oil prices lower and pausing a broader bond-market selloff that had been weighing on risk assets.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/09/25/live-updates-bitcoin-steadies-near-usd84-000-as-the-bond-selloff-pauses",
+          "why": "A reminder that Bitcoin's short-term price action is currently tracking macro and geopolitical headlines more than crypto-native news."
+        },
+        {
+          "headline": "Strategy Proposes Moving Its Preferred Stocks to Daily Dividends",
+          "summary": "Michael Saylor's Strategy is asking shareholders to approve daily dividend record dates for its STRC, STRD, STRF and STRK preferred shares, starting with STRC in November, in a bid to restore STRC's price toward $100 without changing total payout obligations.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/09/25/strategy-proposes-daily-dividends-to-bring-strc-back-toward-usd100",
+          "why": "Strategy's preferred stocks are a widely watched proxy for confidence in its bitcoin-backed balance sheet."
+        },
+        {
+          "headline": "SEC and CFTC Issue Joint Guidance Easing Rules on Crypto Buybacks and Network Upgrades",
+          "summary": "The SEC's Division of Corporation Finance updated its crypto FAQ to say that token buybacks and routine network upgrades don't by themselves turn a crypto asset into a security, while the CFTC separately updated its own guidance on blockchain-based recordkeeping.",
+          "source": "The Block",
+          "url": "https://www.theblock.co/news/regulation/2026-09-25-sec-crypto-faq-addresses-token-buybacks-network-upgrades-promises-profit-416914",
+          "why": "Clearer securities-law guidance reduces legal risk for protocol treasuries and issuers running buyback programs, a persistent source of uncertainty in the industry."
+        }
+      ]
+    }
+  ]
+}
