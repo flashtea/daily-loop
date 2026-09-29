@@ -1,0 +1,90 @@
+{
+  "date": "2026-09-29",
+  "intro": "Sonnet 5.5 lands a day after Opus 5.5 and GPT-6 Sol/Luna reset model pricing; Bitcoin drifts near $83,000 on Iran-driven macro pressure. Dev Tools is a security-heavy day.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Anthropic ships Claude Sonnet 5.5, with Terminal-Bench 4.0 at 70.6%",
+          "summary": "Sonnet 5.5 keeps Sonnet 5 pricing ($2/$10 per million tokens) while generating output more than 30% faster and, per Anthropic, costing up to 30% less per task. Claude Code users running Sonnet with thinking disabled must move to the new between_tools setting before upgrading.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/claude-sonnet-5-5",
+          "why": "Near-Opus agentic-coding scores at Sonnet prices change the default model calculus for coding agents."
+        },
+        {
+          "headline": "Cursor launches Rollouts and Security Review bots for Teams and Enterprise",
+          "summary": "Rollouts monitors changes as they deploy across environments, while Security Review flags exploitable vulnerabilities such as injection issues in pull requests and proposes fixes.",
+          "source": "Cursor",
+          "url": "https://cursor.com/changelog/rollouts-and-security-reviewer",
+          "why": "Agent vendors are moving from writing code to policing deployment and security."
+        },
+        {
+          "headline": "Opus 5.5 brings Fable 5.1-level performance at $4/$20 per million tokens",
+          "summary": "Anthropic reports 66.4% on Terminal-Bench 4.0 and 81.8% on OSWorld 2.1, with output over 30% faster than Opus 5 and a 1M-token context window.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/claude-opus-5-5",
+          "why": "Cheaper top-tier agentic coding, released Sept 22 and now the default Opus in Claude Code."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "OpenAI launches GPT-6 Sol and Luna at roughly half the prior price",
+          "summary": "Sol is priced at $2/$10 and Luna at $0.10/$0.50 per million tokens, bringing Astra-generation capability and alignment gains to faster, cheaper models in the API, Codex and ChatGPT.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+          "why": "Sets a new price floor for capable models, following Anthropic's Opus 5.5 release about 90 minutes earlier."
+        },
+        {
+          "headline": "Anthropic Sonnet 5.5 benchmarks: near-Opus knowledge-work scores",
+          "summary": "Anthropic says Sonnet 5.5 scores nearly level with Opus 5.5 on GDPval-AA and reaches 55.5% on CursorBench, within about two points of Opus 5.5.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/claude-sonnet-5-5",
+          "why": "Mid-tier models are closing the gap with flagships, which affects cost/quality tradeoffs."
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub Actions workflow execution protections reach general availability",
+          "summary": "Owners can allowlist who may trigger workflows and which events can start them, scoped to specific workflow files, with audit insights and a REST API. Public repositories now default to having pull_request_target disabled.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-09-17-workflow-execution-protections-in-github-actions-generally-available",
+          "why": "A direct hardening step against CI supply-chain attacks."
+        },
+        {
+          "headline": "GitHub adds proof of presence for high-impact actions",
+          "summary": "Enterprise members must re-authenticate or pass a multi-factor challenge before sensitive actions. It is currently available for managed-user enterprises using Microsoft Entra ID.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-09-24-require-proof-of-presence-for-high-impact-actions",
+          "why": "Limits the blast radius of stolen credentials in enterprise orgs."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin slips to about $83,000 as Trump rejects Iran's 7-day plan",
+          "summary": "BTC traded near $82,958 on Monday, a strong dollar, higher yields and Brent crude above $100 weighing on crypto. It is up 4.1% on the week but down 23% year over year.",
+          "source": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-monday-september-28-2026-bitcoin-loses-ground-after-trump-rejects-irans-7-day-plan-113444329.html",
+          "why": "Geopolitics and oil-driven rate expectations are the main near-term price drivers."
+        },
+        {
+          "headline": "US spot Bitcoin ETFs turn net positive for 2026",
+          "summary": "Cumulative inflows recovered from a $5.8 billion deficit in July to about $800 million net for the year, still far below the $35.2 billion of 2024 and $21.4 billion of 2025.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/09/25/bitcoin-etfs-have-erased-a-usd5-8-billion-hole",
+          "why": "Institutional demand has returned, though at a much smaller scale than prior years."
+        }
+      ]
+    }
+  ]
+}
