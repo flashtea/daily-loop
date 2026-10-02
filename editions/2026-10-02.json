@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-02",
+  "intro": "Google ships Gemini 4 Argon to cyber-defense partners first; Dev Tools had nothing fresh enough to verify today, and Bitcoin ETF demand cools.",
+  "sections": [
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "OpenClaw Foundation launches free enterprise control plane for persistent AI agents",
+          "summary": "OpenClaw Enterprise is an MIT-licensed control plane adding multi-tenancy, security boundaries, role-based access and audit trails for always-on agents. The project began inside OpenAI, moved to the independent OpenClaw Foundation, and was developed with Red Hat and NVIDIA. It targets internal pilots, with a 1.0 release planned later in 2026.",
+          "source": "The New Stack",
+          "url": "https://thenewstack.io/openclaw-enterprise-kubernetes-agents",
+          "why": "Governance and isolation for coding agents are the main blockers to running them in production."
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Google releases Gemini 4 Argon, starting with cyber-defense partners",
+          "summary": "Google says Argon excels at debugging and codebase migrations, and that it can autonomously find, validate and patch critical vulnerabilities. It is rolling out first to the Fairwind Program for governments and trusted partners, with broader access to follow. Google claims it scores significantly above OpenAI's GPT-6 Astra and Anthropic's Fable on multiple benchmarks.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/30/google-releases-gemini-4-argon-called-its-most-powerful-model-yet/",
+          "why": "Another frontier lab is gating its strongest model behind cyber-risk review; the benchmark claims are Google's own."
+        }
+      ]
+    },
+    {
+      "title": "Bitcoin",
+      "items": [
+        {
+          "headline": "Bitcoin stalls below $85K as spot ETF inflow streak ends and yields stay elevated",
+          "summary": "US spot bitcoin ETFs recorded a $148.69 million outflow on September 30, ending a nine-day inflow streak, and inflows have faded since September 21. The 10-year Treasury yield is above 5.2%, at multi-year highs, and bitcoin has failed to close above the $85,000 resistance zone.",
+          "source": "FXStreet",
+          "url": "https://www.fxstreet.com/cryptocurrencies/news/bitcoin-price-forecast-btc-struggles-below-85-000-as-etf-outflows-rising-us-treasury-yields-weigh-202610010832",
+          "why": "Institutional demand, not just macro, is now a question mark going into Friday's jobs data."
+        }
+      ]
+    }
+  ]
+}
