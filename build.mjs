@@ -24,6 +24,7 @@ const TRACKS = [
   {
     slug: "mental-models",
     label: "Mental Models",
+    shortLabel: "Models",
     kicker: "Mental model of the day",
     unit: "lesson",
     groupLabel: "Discipline",
@@ -33,6 +34,7 @@ const TRACKS = [
   {
     slug: "history",
     label: "History of Civilization",
+    shortLabel: "History",
     kicker: "History, one chapter a day",
     unit: "chapter",
     groupLabel: "Era",
@@ -160,11 +162,21 @@ function loadLessons(track) {
 function masthead({ base, dateline, standfirst, activeNav }) {
   const nav = [
     { href: `${base}index.html`, label: "Today", key: "today" },
-    ...TRACKS.map((t) => ({ href: `${base}${t.slug}/index.html`, label: t.label, key: t.slug })),
+    ...TRACKS.map((t) => ({
+      href: `${base}${t.slug}/index.html`,
+      label: t.label,
+      short: t.shortLabel,
+      key: t.slug,
+    })),
+    { href: `${base}archive.html`, label: "Archive", key: "archive" },
   ]
     .map(
       (n) =>
-        `<a class="${n.key === activeNav ? "nav-a current" : "nav-a"}" href="${n.href}">${escapeHtml(n.label)}</a>`,
+        `<a class="${n.key === activeNav ? "nav-a current" : "nav-a"}" href="${n.href}">${
+          n.short
+            ? `<span class="full">${escapeHtml(n.label)}</span><span class="short">${escapeHtml(n.short)}</span>`
+            : escapeHtml(n.label)
+        }</a>`,
     )
     .join("");
   return `<header class="masthead">
@@ -180,12 +192,22 @@ function masthead({ base, dateline, standfirst, activeNav }) {
   </header>`;
 }
 
+const RECENT_IN_FOOTER = 10;
+
 function footer({ base, editions, currentDate }) {
+  const recent = editions.slice(0, RECENT_IN_FOOTER);
+  const more = editions.length - recent.length;
   return `<footer>
     <div class="wrap">
       <div class="rule"></div>
-      <p class="arch-label">Past editions</p>
-      <nav class="archive">${archiveStrip(editions, currentDate, base)}</nav>
+      <div class="arch-row">
+        <p class="arch-label">Recent editions</p>
+        <nav class="archive">${archiveStrip(recent, currentDate, base)}${
+          more > 0
+            ? `<a class="chip all" href="${base}archive.html">All ${editions.length} editions →</a>`
+            : ""
+        }</nav>
+      </div>
       <p class="colophon">Curated by Claude · rendered by <code>build.mjs</code> · built ${new Date()
         .toISOString()
         .slice(0, 16)
@@ -518,6 +540,75 @@ ${upcomingHtml}`;
   });
 }
 
+// ---------- archive page ----------
+
+function leadOf(edition) {
+  for (const s of edition.sections || []) {
+    for (const it of s.items || []) if (it.lead) return it;
+  }
+  return (edition.sections || [])[0]?.items?.[0] || null;
+}
+
+function renderArchive(editions) {
+  const months = new Map();
+  for (const e of editions) {
+    const key = e.date.slice(0, 7);
+    if (!months.has(key)) months.set(key, []);
+    months.get(key).push(e);
+  }
+  const monthLabel = (ym) =>
+    new Date(`${ym}-15T12:00:00Z`).toLocaleDateString("en-GB", {
+      month: "long",
+      year: "numeric",
+      timeZone: "UTC",
+    });
+  const groups = [...months.entries()]
+    .map(
+      ([ym, es]) => `<section class="cat-group">
+        <h2 class="cat-part">${escapeHtml(monthLabel(ym))}</h2>
+        <ol class="cat-list">
+${es
+  .map((e) => {
+    const href = e.date === editions[0].date ? "index.html" : `${e.date}.html`;
+    const lead = leadOf(e);
+    const count = (e.sections || []).reduce((n, s) => n + (s.items || []).length, 0);
+    return `          <li class="cat-row">
+            <span class="cat-n">${escapeHtml(shortDate(e.date))}</span>
+            <div class="cat-main">
+              <a class="cat-title" href="${href}">${escapeHtml(lead?.headline || "Edition")}</a>
+              ${e.intro ? `<p class="cat-dek">${escapeHtml(e.intro)}</p>` : ""}
+            </div>
+            <span class="cat-date">${count} stories</span>
+          </li>`;
+  })
+  .join("\n")}
+        </ol>
+      </section>`,
+    )
+    .join("\n");
+
+  const main = `<section class="cat-head">
+      <p class="kicker">Every edition since the first</p>
+      <h1 class="cat-title-big">Archive</h1>
+      <p class="cat-blurb">${editions.length} editions, newest first, each listed by its lead story.</p>
+    </section>
+${groups}`;
+
+  return shell({
+    title: `Archive · ${SITE_TITLE}`,
+    description: "Every Daily Loop edition.",
+    base: "",
+    bodyClass: "page-archive",
+    head: masthead({
+      base: "",
+      activeNav: "archive",
+      dateline: `<span>Archive</span><span>${editions.length} editions</span>`,
+    }),
+    main,
+    foot: footer({ base: "", editions, currentDate: null }),
+  });
+}
+
 // ---------- edition page ----------
 
 function renderPage(edition, editions, isIndex, lessonsByTrack) {
@@ -629,6 +720,7 @@ a { color: inherit; }
 }
 .nav-a:hover { color: var(--ink); }
 .nav-a.current { color: var(--ink); border-bottom-color: var(--accent); }
+.nav-a .short { display: none; }
 .dateline {
   display: flex; justify-content: space-between; gap: 12px;
   margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line);
@@ -675,6 +767,7 @@ a { color: inherit; }
   padding-top: 18px; margin-bottom: 30px; border-top: 1px solid var(--line);
 }
 .story:first-child { padding-top: 0; border-top: 0; }
+.story:last-child { margin-bottom: 0; }
 .hed { font-family: var(--serif); font-weight: 700; font-size: 19px; line-height: 1.18; margin: 0 0 10px; }
 .hed .hed-a { text-decoration: none; }
 .hed .hed-a:hover { color: var(--accent); }
@@ -787,9 +880,11 @@ a { color: inherit; }
 .empty-note { font-family: var(--serif); text-align: center; color: var(--muted); padding: 40px 0; }
 
 /* Footer */
-footer { padding: 30px 0 70px; }
-.arch-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+footer { padding: 22px 0 60px; }
+.arch-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.arch-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0; white-space: nowrap; }
 .archive { display: flex; flex-wrap: wrap; gap: 7px; }
+.chip.all { border-style: dashed; color: var(--ink); }
 .chip {
   font-size: 12px; text-decoration: none; color: var(--muted);
   border: 1px solid var(--line); border-radius: 4px; padding: 4px 10px; background: #fff;
@@ -817,9 +912,11 @@ footer { padding: 30px 0 70px; }
 }
 
 @media (max-width: 720px) {
-  .dateline { font-size: 10px; }
+  .dateline { font-size: 10px; flex-direction: column; gap: 2px; }
   .nav { gap: 2px 18px; }
   .nav-a { font-size: 11px; }
+  .nav-a .full { display: none; }
+  .nav-a .short { display: inline; }
   .charts { grid-template-columns: 1fr; }
   .columns { column-rule: none; column-count: 1 !important; }
   .lead { padding: 22px 0 20px; }
@@ -893,6 +990,7 @@ function build() {
       renderPage(e, editions, false, lessonsByTrack),
     );
   }
+  writeFileSync(join(OUT_DIR, "archive.html"), renderArchive(editions));
   const lessonCount = TRACKS.map(
     (t) => `${lessonsByTrack[t.slug].lessons.length} ${t.slug}`,
   ).join(", ");
