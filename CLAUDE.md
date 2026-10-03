@@ -116,7 +116,7 @@ rule and the wants conflict, the wants win.
   the headline. The calendar belongs in `ahead`, which this section should
   nearly always have.
 
-The builder adds one all-time Bitcoin chart to this section; do not add chart data.
+The builder adds one chart to this section: Bitcoin weekly close against its 200-week moving average, log scale, last eight years, drawn from `data/btc-weekly.json`. Do not add chart data to the edition.
 
 ## Writing an item
 
@@ -196,13 +196,16 @@ worth keeping, and optionally a one-line pointer to tomorrow's topic.
 3. Research each beat (three or more searches per beat), apply the three
    tests, and write `editions/<date>.json`.
 4. Write today's lesson in each track.
-5. `node build.mjs` (no dependencies; regenerates all of `docs/`).
-6. Optional: `node preview.mjs` renders desktop and mobile screenshots into
+5. `node fetch-btc.mjs` refreshes `data/btc-weekly.json` for the chart. It
+   needs network; if it fails, the previous file is kept and the build still
+   works. Commit the refreshed file with the edition.
+6. `node build.mjs` (no dependencies; regenerates all of `docs/`).
+7. Optional: `node preview.mjs` renders desktop and mobile screenshots into
    `preview/`. Needs `npm install` and a Chromium (`npx playwright install
    chromium`, or set `CHROMIUM_PATH` to an existing binary). The live charts
    do not render offline; that is expected.
-7. `git add -A && git commit -m "edition: <date>" && git push`.
-8. Report the section-by-section headline list and the two lesson titles.
+8. `git add -A && git commit -m "edition: <date>" && git push`.
+9. Report the section-by-section headline list and the two lesson titles.
 
 ## Edition JSON schema
 
@@ -234,7 +237,8 @@ worth keeping, and optionally a one-line pointer to tomorrow's topic.
 Section `title` values match the five beats above; omit a section that has no
 items and no `ahead` entries. `lead`, `follow_up` and `ahead` are optional;
 everything else is required. `build.mjs` handles all HTML, the featured lead,
-the Ahead strips, follow-up markers and the Bitcoin chart. Never hand-edit
+the Ahead strips, follow-up markers and the Bitcoin chart (an inline SVG,
+no third-party script). Never hand-edit
 `docs/`.
 
 ## Lesson JSON schema
@@ -275,7 +279,9 @@ editions/<date>.json                  the curated news for a day
 lessons/mental-models/NNN-slug.json   one mental-model lesson per day
 lessons/history/NNN-slug.json         one history chapter per day
 curriculum/<track>.md                 the ordered syllabus each track follows
+data/btc-weekly.json                  weekly Bitcoin closes for the chart (fetch-btc.mjs)
 build.mjs                             renders everything into docs/ (zero deps)
+fetch-btc.mjs                         refreshes the price data (needs network)
 preview.mjs                           dev-only screenshots
 ```
 

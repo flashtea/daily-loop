@@ -21,6 +21,6 @@ In short:
 4. Write the next lesson in each study track per the syllabus
    (`curriculum/*.md`), extending a syllabus first if fewer than 30 entries
    remain.
-5. `node build.mjs`.
+5. `node fetch-btc.mjs` (tolerates failure), then `node build.mjs`.
 6. Commit as `edition: <today>` and push to `main`.
 7. Report the section-by-section headline list and the two lesson titles.
