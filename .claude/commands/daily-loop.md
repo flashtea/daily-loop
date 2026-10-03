@@ -22,8 +22,10 @@ Produce today's **Daily Loop** edition, following the routine in `CLAUDE.md` exa
    exists; pass the content-farm/listicle domains listed in `CLAUDE.md` to
    `blocked_domains` and verify the real source. Drop anything you can only find
    on an SEO farm or a market-recap aggregator.
-5. Curate to **2–5 items per section**. Flag the single biggest story with
-   `"lead": true`. Add verified upcoming events to each section's `ahead`
+5. Curate to **0–4 items per section**; there is no minimum and a quiet
+   section stays short or empty. Every item must pass the so-what test in
+   `CLAUDE.md` (a one-sentence `why` that is not a stretch). Flag the single
+   biggest story with `"lead": true`. Add verified upcoming events to each section's `ahead`
    array where there are any (Macroeconomics nearly always). Bitcoin charts are
    auto-injected — don't add chart data.
 6. Write `editions/<today>.json`.

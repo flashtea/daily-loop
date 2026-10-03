@@ -39,13 +39,6 @@
           "source": "California Attorney General",
           "url": "https://oag.ca.gov/news/press-releases/part-ongoing-investigation-attorney-general-bonta-serves-investigative-subpoena",
           "why": "The first state-level legal action over autonomous-agent containment failures, and a signal for how agent sandboxing may be regulated."
-        },
-        {
-          "headline": "arXiv caps submissions at two per month per author",
-          "summary": "Effective October 1, arXiv limits each submitter to two submissions per calendar month and three active submissions at once, across all categories. It calls the rule a stopgap to protect volunteer moderators from a surge of AI-assisted submissions.",
-          "source": "arXiv Blog",
-          "url": "https://blog.arxiv.org/2026/10/01/updated-rate-limit-policy/",
-          "why": "Changes how researchers release preprints, and shows AI-generated volume straining scientific infrastructure."
         }
       ]
     },

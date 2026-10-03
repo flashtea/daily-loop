@@ -66,8 +66,15 @@ build.mjs                       renders everything into docs/ (zero deps)
      items; only include Copilot news if it's a genuinely major shift (e.g. a
      new product line, a pricing overhaul, a landmark acquisition), not routine
      model-availability churn.
-   - `AI Research & Models` — new model releases, capability/benchmark news,
-     notable papers, safety/policy items worth knowing.
+   - `AI Research & Models` — new frontier or notable open-weight model
+     releases; capability results that move a frontier (a benchmark jump, a
+     model producing a genuine scientific or mathematical result); safety
+     incidents and regulation with teeth (a subpoena, a law, a binding rule);
+     compute or infrastructure deals large enough to change capacity. **Out:**
+     institutional housekeeping (journal and arXiv policies, conference
+     logistics, org charts, hiring), funding rounds without a shipped thing,
+     surveys and opinion polls about AI, "report says X plans to", and
+     partnerships without a product.
    - `Dev Tools & Releases` — language/framework/runtime releases, major library
      versions, GitHub/infra/devex news, trending OSS. **A release qualifies only
      if it changes what a developer can do** (a new capability, a breaking
@@ -96,8 +103,17 @@ build.mjs                       renders everything into docs/ (zero deps)
      Bitcoin event, and then the cause is the headline. Analyst price targets
      are not stories either.
 
-4. **Curate hard. This is the whole point.** Keep **2–5 items per section** —
-   fewer, sharper, genuinely-fresh items beat a padded list.
+4. **Curate hard. This is the whole point.** Keep **0–4 items per section**.
+   There is no minimum: a section with one item, or none, is a correct result
+   on a quiet day, and the builder handles an empty section (it is omitted, or
+   shows only its charts and `ahead` strip). Never add an item to reach a
+   count.
+   - **The so-what test.** Before including anything, write its `why`. If you
+     cannot say in one plain sentence what the reader would do, believe, or
+     plan differently after reading it, the item is out. A `why` that is a
+     stretch ("changes how researchers release preprints") is the signal to
+     drop, not to publish. Fewer, sharper, genuinely-fresh items beat a padded
+     list.
    - **Source quality is non-negotiable.** Prefer the **primary source** (the
      company's own blog/statement, the regulator's filing, the project's release
      notes) and reputable outlets (Reuters, Bloomberg, CNBC, the FT, The Verge,
