@@ -39,7 +39,7 @@ rule and the wants conflict, the wants win.
   researching. A story they covered comes back only with a genuinely new
   development, and then carries `follow_up` pointing at the edition that first
   ran it. Distinct angles on one story (the event in `World`, the market
-  reaction in `Macroeconomics`) are fine; a restated headline is not.
+  reaction in `Money`) are fine; a restated headline is not.
 - **Primary sources.** Cite the thing itself when it exists: the company's
   post, the regulator's filing, the statistics release, the project's release
   notes, the court's order. A reputable outlet (Bloomberg, CNBC, the FT, the
@@ -54,8 +54,8 @@ rule and the wants conflict, the wants win.
 - **Ahead beats news.** Dated, verified upcoming events (a rate decision, a
   data release, an election, a court date, a launch, a protocol activation) go
   in a section's `ahead` array, up to four, within about six weeks. They are
-  the highest-value, lowest-noise thing in the paper. Macroeconomics should
-  nearly always have one.
+  the highest-value, lowest-noise thing in the paper. Money should nearly
+  always have one.
 - **Never fabricate.** Only things you actually found. Verify the date before
   citing. No invented quotations anywhere in the paper.
 - **Search properly.** At least three distinct searches per beat before you
@@ -99,21 +99,24 @@ rule and the wants conflict, the wants win.
   changelog items, and vulnerabilities, unless a CVE is actively exploited
   *and* in tooling most developers run daily (npm, Git, Docker, a top-five
   runtime, GitHub itself).
-- **`Macroeconomics`** — central-bank decisions and clear signals (Fed, ECB,
-  BoJ, BoE, PBoC); inflation, jobs and GDP prints; rate and bond-market moves
-  when the move itself is the story; currency, energy and commodity shocks;
-  fiscal and trade policy; sovereign-debt and banking stress. Primary sources
-  first: the bank's statement, the statistics office (BLS, BEA, Eurostat, ONS),
-  the ministry. *Out:* daily market recaps, analyst forecasts, "stocks rose".
-- **`Bitcoin`** — protocol and L2 developments, mining, regulation and legal
-  rulings, ETF and treasury-company moves of real size, notable on-chain
-  events, hacks that matter. Bitcoin only, not altcoins. *Out:* routine price
-  items (the live charts already show the price) and analyst targets. A price
-  move is a story only when exceptional (roughly a 7%+ day, an all-time high,
-  a liquidation cascade) or caused by a specific Bitcoin event, and then the
-  cause is the headline.
+- **`Money`** — macro and Bitcoin in one section, because both are thin on
+  real news most days and neither should be padded. *In:* central-bank
+  decisions and explicit signals (Fed, ECB, BoJ, BoE, PBoC); inflation, jobs
+  and GDP prints **when they change the expected path** (a surprise, a
+  revision that matters), not every print; energy, commodity, currency and
+  sovereign-debt shocks; fiscal and trade policy with teeth; banking stress.
+  Bitcoin protocol and L2 developments, mining, regulation and legal rulings,
+  ETF and treasury-company moves of real size, notable on-chain events, hacks
+  that matter. Primary sources first: the bank's statement, the statistics
+  office (BLS, BEA, Eurostat, ONS), the ministry, the filing. *Out:* daily
+  market recaps ("yields rose", "stocks fell", "BTC holds near"), analyst
+  forecasts and price targets, altcoins. A price or yield move is a story only
+  when exceptional (a multi-decade high, a 7%+ day, an all-time high, a
+  liquidation cascade) or caused by a specific event, and then the cause is
+  the headline. The calendar belongs in `ahead`, which this section should
+  nearly always have.
 
-The builder injects live Bitcoin charts; do not add chart data.
+The builder adds one all-time Bitcoin chart to this section; do not add chart data.
 
 ## Writing an item
 
@@ -228,10 +231,10 @@ worth keeping, and optionally a one-line pointer to tomorrow's topic.
 }
 ```
 
-Section `title` values match the six beats above; omit a section that has no
+Section `title` values match the five beats above; omit a section that has no
 items and no `ahead` entries. `lead`, `follow_up` and `ahead` are optional;
 everything else is required. `build.mjs` handles all HTML, the featured lead,
-the Ahead strips, follow-up markers and the Bitcoin charts. Never hand-edit
+the Ahead strips, follow-up markers and the Bitcoin chart. Never hand-edit
 `docs/`.
 
 ## Lesson JSON schema

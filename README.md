@@ -1,7 +1,7 @@
 # Daily Loop
 
-A personal daily newspaper for **AI · software development · macroeconomics ·
-bitcoin** — curated, no ads, no spam — plus two daily study tracks: a **mental
+A personal daily newspaper for **world events · AI · software development ·
+money (macro and bitcoin)** — curated, no ads, no spam — plus two daily study tracks: a **mental
 model a day** (Munger's latticework) and a **chapter of the history of
 civilization a day** (technology-first, Durant in scope but not in length). Each
 track is also browsable as a catalogue. Hosted on GitHub Pages.

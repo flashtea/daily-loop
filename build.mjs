@@ -15,7 +15,7 @@ const CURRICULUM_DIR = join(ROOT, "curriculum");
 const OUT_DIR = join(ROOT, "docs");
 
 const SITE_TITLE = "Daily Loop";
-const SITE_TAGLINE = "World · AI · Software · Macro · Bitcoin — plus a daily lesson";
+const SITE_TAGLINE = "World · AI · Software · Money — plus a daily lesson";
 
 // The two study tracks. Each has its own lessons/<slug>/ directory of daily
 // lesson files, a curriculum/<slug>.md syllabus, and a catalogue page at
@@ -300,22 +300,19 @@ function aheadLine(section) {
   return `<p class="ahead"><span class="ahead-label">Ahead</span>${parts}</p>`;
 }
 
-// Live BTC charts (TradingView mini widgets — render client-side in the browser).
-function bitcoinCharts() {
-  const widget = (range, label) =>
-    `<figure class="chart">
-        <figcaption>${label}</figcaption>
+// One live Bitcoin chart, all-time, rendered client-side by a TradingView
+// mini widget. Deliberately no short-term chart: the paper is not for
+// watching the price.
+function bitcoinChart() {
+  return `<figure class="chart">
+        <figcaption>Bitcoin · all time</figcaption>
         <div class="tradingview-widget-container">
           <div class="tradingview-widget-container__widget"></div>
           <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
-          {"symbol":"BITSTAMP:BTCUSD","width":"100%","height":"240","locale":"en","dateRange":"${range}","colorTheme":"light","isTransparent":true,"autosize":false,"trendLineColor":"#c0151d","underLineColor":"rgba(192,21,29,0.08)"}
+          {"symbol":"BITSTAMP:BTCUSD","width":"100%","height":"180","locale":"en","dateRange":"ALL","colorTheme":"light","isTransparent":true,"autosize":false,"trendLineColor":"#c0151d","underLineColor":"rgba(192,21,29,0.08)"}
           </script>
         </div>
       </figure>`;
-  return `<div class="charts">
-      ${widget("1M", "Short term · last 30 days")}
-      ${widget("ALL", "Long term · all time")}
-    </div>`;
 }
 
 function renderSection(section, lead, editions) {
@@ -326,9 +323,9 @@ function renderSection(section, lead, editions) {
   const featured = hasLead ? renderStory(lead, editions, true) : "";
   const visible = all.filter((it) => it !== lead);
   const items = visible.map((it) => renderStory(it, editions)).join("\n");
-  const charts = /bitcoin/i.test(section.title) ? bitcoinCharts() : "";
+  const chart = /^(bitcoin|money)$/i.test(section.title.trim()) ? bitcoinChart() : "";
   const ahead = aheadLine(section);
-  if (!featured && !items.trim() && !charts && !ahead) return "";
+  if (!featured && !items.trim() && !chart && !ahead) return "";
   // Match the column count to the number of stories so short sections fill the
   // row instead of leaving empty column tracks (capped at 4 for readability).
   const cols = Math.min(Math.max(visible.length, 1), 4);
@@ -340,9 +337,9 @@ ${items}
     : "";
   return `<section class="beat${hasLead ? " has-lead" : ""}">
       <h2 class="beat-label">${escapeHtml(section.title)}</h2>
-      ${charts}
       ${featured}
       ${columns}
+      ${chart}
       ${ahead}
     </section>`;
 }
@@ -792,9 +789,8 @@ a { color: inherit; }
 .ahead-item b { color: var(--ink); font-weight: 700; }
 .ahead-item a { color: inherit; }
 
-/* Bitcoin charts */
-.charts { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 4px 0 26px; }
-.chart { margin: 0; border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; background: #fff; }
+/* Bitcoin chart */
+.chart { margin: 22px 0 0; border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; background: #fff; max-width: 640px; }
 .chart figcaption {
   font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--muted); margin-bottom: 8px; font-weight: 600;
@@ -914,7 +910,6 @@ footer { padding: 22px 0 60px; }
   .nav-a { font-size: 11px; }
   .nav-a .full { display: none; }
   .nav-a .short { display: inline; }
-  .charts { grid-template-columns: 1fr; }
   .columns { column-rule: none; column-count: 1 !important; }
   .story.featured .hed { font-size: 25px; }
   .dek { text-align: left; }

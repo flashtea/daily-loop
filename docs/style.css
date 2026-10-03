@@ -113,9 +113,8 @@ a { color: inherit; }
 .ahead-item b { color: var(--ink); font-weight: 700; }
 .ahead-item a { color: inherit; }
 
-/* Bitcoin charts */
-.charts { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 4px 0 26px; }
-.chart { margin: 0; border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; background: #fff; }
+/* Bitcoin chart */
+.chart { margin: 22px 0 0; border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; background: #fff; max-width: 640px; }
 .chart figcaption {
   font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--muted); margin-bottom: 8px; font-weight: 600;
@@ -235,7 +234,6 @@ footer { padding: 22px 0 60px; }
   .nav-a { font-size: 11px; }
   .nav-a .full { display: none; }
   .nav-a .short { display: inline; }
-  .charts { grid-template-columns: 1fr; }
   .columns { column-rule: none; column-count: 1 !important; }
   .story.featured .hed { font-size: 25px; }
   .dek { text-align: left; }

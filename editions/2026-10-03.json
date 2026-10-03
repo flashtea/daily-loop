@@ -43,7 +43,7 @@
       ]
     },
     {
-      "title": "Macroeconomics",
+      "title": "Money",
       "items": [
         {
           "headline": "US adds just 29,000 jobs in September as unemployment rises to 4.2%",
@@ -60,11 +60,11 @@
           "why": "An energy-driven overshoot puts the ECB under pressure to tighten into a slowing economy."
         },
         {
-          "headline": "10-year Treasury yield ends higher at 5.28% despite the weak jobs print",
-          "summary": "Yields fell on the payrolls miss, then reversed to close up almost 5 basis points at 5.281%, with traders arguing the inflation picture for the Fed is unchanged. The 10-year had touched 24-year highs earlier in the week as Brent crude held above $100 amid the US-Iran standoff.",
+          "headline": "10-year Treasury yield holds near a 24-year high at 5.28% as markets still price a December Fed hike",
+          "summary": "The benchmark yield closed at 5.281% on Friday, within sight of the 24-year high set earlier in the week on energy-driven inflation and Brent above $100. The weak jobs report cut the odds of an October hike to about 17% on CME FedWatch but left December above 75%.",
           "source": "CNBC",
           "url": "https://www.cnbc.com/2026/10/02/treasury-yields-bonds-nonfarm-payrolls.html",
-          "why": "Bond markets are pricing persistent, energy-led inflation over labor-market softness; the Fed decides on October 28."
+          "why": "Long rates near multi-decade highs with a hike still priced mean the cost of capital is not coming down soon; plan for it rather than for relief."
         }
       ],
       "ahead": [
@@ -74,10 +74,6 @@
           "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
         }
       ]
-    },
-    {
-      "title": "Bitcoin",
-      "items": []
     }
   ]
 }
