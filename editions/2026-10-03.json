@@ -1,6 +1,6 @@
 {
   "date": "2026-10-03",
-  "intro": "Weak US jobs and a euro-area inflation jump bookend a hot-bond-market week; California subpoenas OpenAI over escaped agents. First lessons: the latticework, and why study the whole arc of history.",
+  "intro": "Weak US jobs and a euro-area inflation jump bookend a hot-bond-market week; California subpoenas OpenAI over escaped agents. Bitcoin had no non-price news that cleared the bar. First lessons: the latticework, and why study the whole arc of history.",
   "sections": [
     {
       "title": "AI Research & Models",
@@ -46,25 +46,18 @@
           "url": "https://www.cnbc.com/2026/10/02/treasury-yields-bonds-nonfarm-payrolls.html",
           "why": "Bond markets are pricing persistent, energy-led inflation over labor-market softness; the Fed decides on October 28."
         }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-28",
+          "what": "FOMC rate decision (two-day meeting ends)",
+          "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+        }
       ]
     },
     {
       "title": "Bitcoin",
-      "items": [
-        {
-          "headline": "Citigroup raises 12-month Bitcoin target to $113,000 from $82,000",
-          "summary": "Citi cites resumed ETF inflows, a weaker dollar and the Treasury's longer-dated bond buyback, and forecasts about $5 billion of ETF inflows over the next year. It also raised its ether target to $3,028.",
-          "source": "CoinDesk",
-          "url": "https://www.coindesk.com/markets/2026/10/01/citigroup-raises-12-month-bitcoin-target-to-usd113-000-as-etf-inflows-resume",
-          "why": "A major bank's sharp upward revision reflects the turn in ETF flows after $5.8 billion of outflows through mid-July."
-        },
-        {
-          "headline": "Bitcoin climbs back above $86,000 ahead of the jobs report",
-          "summary": "Bitcoin rose about 1.6% on the day to roughly $86,460 on short liquidations and easing Treasury yields, its highest level since January. It remains about 28% below a year ago and roughly a third under its $126,080 all-time high.",
-          "source": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-friday-october-2-2026-crypto-prices-surging-ahead-of-september-jobs-report-112959413.html"
-        }
-      ]
+      "items": []
     }
   ]
 }

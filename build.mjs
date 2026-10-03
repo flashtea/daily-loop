@@ -256,6 +256,17 @@ function whyBlock(item) {
     : "";
 }
 
+// Items that continue an earlier story carry follow_up: "<date>" and get a
+// small marker linking back to that edition.
+function followUpTag(item, editions) {
+  if (!item.follow_up) return "";
+  const prev = editions.find((e) => e.date === item.follow_up);
+  const label = `Follow-up · since ${escapeHtml(shortDate(item.follow_up))}`;
+  if (!prev) return `<span class="followup">${label}</span>`;
+  const href = prev.date === editions[0].date ? "index.html" : `${prev.date}.html`;
+  return `<a class="followup" href="${href}">${label}</a>`;
+}
+
 function headlineLink(item, cls) {
   const text = escapeHtml(item.headline);
   return item.url
@@ -263,23 +274,41 @@ function headlineLink(item, cls) {
     : `<span class="${cls}">${text}</span>`;
 }
 
-function renderHero(item, kicker) {
+function renderHero(item, kicker, editions) {
   return `<section class="lead">
       <p class="kicker">${escapeHtml(kicker)}</p>
       <h2 class="lead-hed">${headlineLink(item, "hed-a")}</h2>
       <p class="lead-dek">${escapeHtml(item.summary || "")}</p>
       ${whyBlock(item)}
-      <p class="byline">${sourceTag(item)}</p>
+      <p class="byline">${sourceTag(item)}${followUpTag(item, editions)}</p>
     </section>`;
 }
 
-function renderStory(item) {
+function renderStory(item, editions) {
   return `<article class="story">
         <h3 class="hed">${headlineLink(item, "hed-a")}</h3>
         <p class="dek">${escapeHtml(item.summary || "")}</p>
         ${whyBlock(item)}
-        <p class="byline">${sourceTag(item)}</p>
+        <p class="byline">${sourceTag(item)}${followUpTag(item, editions)}</p>
       </article>`;
+}
+
+// Scheduled events worth knowing about: section.ahead = [{ date, what, url? }].
+function aheadLine(section) {
+  const ahead = (section.ahead || []).filter((a) => a && a.what);
+  if (!ahead.length) return "";
+  const parts = ahead
+    .slice()
+    .sort((a, b) => String(a.date || "").localeCompare(String(b.date || "")))
+    .map((a) => {
+      const when = a.date ? `<b>${escapeHtml(/^\d{4}-\d{2}-\d{2}$/.test(a.date) ? shortDate(a.date) : a.date)}</b> ` : "";
+      const what = a.url
+        ? `<a href="${escapeHtml(a.url)}" target="_blank" rel="noopener">${escapeHtml(a.what)}</a>`
+        : escapeHtml(a.what);
+      return `<span class="ahead-item">${when}${what}</span>`;
+    })
+    .join("");
+  return `<p class="ahead"><span class="ahead-label">Ahead</span>${parts}</p>`;
 }
 
 // Live BTC charts (TradingView mini widgets — render client-side in the browser).
@@ -300,11 +329,12 @@ function bitcoinCharts() {
     </div>`;
 }
 
-function renderSection(section, lead) {
+function renderSection(section, lead, editions) {
   const visible = (section.items || []).filter((it) => it !== lead);
-  const items = visible.map(renderStory).join("\n");
+  const items = visible.map((it) => renderStory(it, editions)).join("\n");
   const charts = /bitcoin/i.test(section.title) ? bitcoinCharts() : "";
-  if (!items.trim() && !charts) return "";
+  const ahead = aheadLine(section);
+  if (!items.trim() && !charts && !ahead) return "";
   // Match the column count to the number of stories so short sections fill the
   // row instead of leaving empty column tracks (capped at 4 for readability).
   const cols = Math.min(Math.max(visible.length, 1), 4);
@@ -315,6 +345,7 @@ function renderSection(section, lead) {
       <div class="${cls}" style="column-count:${cols}">
 ${items}
       </div>
+      ${ahead}
     </section>`;
 }
 
@@ -641,9 +672,9 @@ function renderPage(edition, editions, isIndex, lessonsByTrack) {
     return lesson ? [{ track, lesson }] : [];
   });
 
-  const hero = lead ? renderHero(lead, kicker) : "";
+  const hero = lead ? renderHero(lead, kicker, editions) : "";
   const sections = (edition.sections || [])
-    .map((s) => renderSection(s, lead))
+    .map((s) => renderSection(s, lead, editions))
     .join("\n");
   const standfirst = edition.intro
     ? `<p class="standfirst">${escapeHtml(edition.intro)}</p>`
@@ -787,6 +818,18 @@ a { color: inherit; }
 }
 .src:hover { color: var(--accent); }
 .src::after { content: " ↗"; }
+.followup {
+  margin-left: 12px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600;
+  color: var(--study); text-decoration: none;
+}
+.followup:hover { text-decoration: underline; }
+.ahead {
+  margin: 22px 0 0; padding-top: 12px; border-top: 1px dashed var(--line);
+  font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 22px; align-items: baseline;
+}
+.ahead-label { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); }
+.ahead-item b { color: var(--ink); font-weight: 700; }
+.ahead-item a { color: inherit; }
 
 /* Bitcoin charts */
 .charts { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 4px 0 26px; }

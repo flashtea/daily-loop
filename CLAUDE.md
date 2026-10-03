@@ -22,7 +22,17 @@ build.mjs                       renders everything into docs/ (zero deps)
 1. **Figure out today's date** and use it as the edition id, e.g. `2026-06-13`.
    If an edition for today already exists, refresh it rather than duplicating.
 
-2. **Research each beat** with web search. Strongly prefer news from the
+2. **Read the last three editions first** (`editions/`, newest three). Anything
+   they already covered is off the table unless there is a genuinely new
+   development; in that case write the new development and set
+   `"follow_up": "<date of the earlier item>"` so the builder links the arc.
+   Restating yesterday's story with a fresh headline is the most common failure
+   mode of this loop — check deliberately.
+
+3. **Research each beat** with web search. **Run at least three distinct
+   searches per beat** (different angles, different source types) before
+   concluding a beat is quiet; a two-minute run across five beats is
+   under-searched, not a quiet day. Strongly prefer news from the
    **last 24 hours**, and never older than ~48 hours. Lead with what actually
    *broke* (a shutdown, a launch, a ruling, a big move) — not "X exists" explainer
    pieces. Beats (these are the section titles, in this order):
@@ -38,7 +48,14 @@ build.mjs                       renders everything into docs/ (zero deps)
    - `AI Research & Models` — new model releases, capability/benchmark news,
      notable papers, safety/policy items worth knowing.
    - `Dev Tools & Releases` — language/framework/runtime releases, major library
-     versions, GitHub/infra/devex news, trending OSS.
+     versions, GitHub/infra/devex news, trending OSS. **A release qualifies only
+     if it changes what a developer can do** (a new capability, a breaking
+     change, a major version) — not point releases, changelog entries, or
+     "v2.1.x adds a flag". **Vulnerabilities are not this beat.** Include a
+     CVE only if it is actively exploited *and* sits in tooling most developers
+     run daily (npm, Git, Docker, a top-5 language runtime, GitHub itself);
+     everything else from BleepingComputer, The Hacker News, and CISA KEV
+     notices is out.
    - `Macroeconomics` — what moved the big picture: central-bank decisions and
      signals (Fed, ECB, BoJ, BoE, PBoC), inflation and jobs prints, GDP, rates
      and bond-market moves, currencies, energy and commodity shocks, fiscal and
@@ -48,10 +65,17 @@ build.mjs                       renders everything into docs/ (zero deps)
      WSJ, Reuters (note: reuters.com, ft.com, wsj.com and apnews.com block the
      search tool, so cite them via the primary source or CNBC/Bloomberg). Skip
      daily market-noise recaps unless the move itself is the story.
-   - `Bitcoin` — price-moving news, protocol/L2 developments, regulation, ETFs,
-     mining, notable on-chain events. Bitcoin-focused; not general altcoin noise.
+   - `Bitcoin` — protocol and L2 developments, mining, regulation and legal
+     rulings, ETF and treasury-company moves with real size, notable on-chain
+     events, hacks that matter. Bitcoin-focused; not general altcoin noise.
+     **No routine price items.** The live charts already show the price; "BTC
+     slides toward $84K", "holds near", "stalls below" are noise and must not
+     appear. A price move is a story only if it is exceptional (roughly a 7%+
+     day, a new all-time high, a liquidation cascade) or caused by a specific
+     Bitcoin event, and then the cause is the headline. Analyst price targets
+     are not stories either.
 
-3. **Curate hard. This is the whole point.** Keep **2–5 items per section** —
+4. **Curate hard. This is the whole point.** Keep **2–5 items per section** —
    fewer, sharper, genuinely-fresh items beat a padded list.
    - **Source quality is non-negotiable.** Prefer the **primary source** (the
      company's own blog/statement, the regulator's filing, the project's release
@@ -62,6 +86,13 @@ build.mjs                       renders everything into docs/ (zero deps)
      devflokers, aiapps, coingabbar, bitcoinfoundation, moneymagpie, and Medium
      posts. Pass these to `blocked_domains` in your searches and verify the real
      source before citing. If the only source is a content farm, drop the item.
+   - **Cite the primary source whenever one exists.** If an outlet is reporting
+     on a release, a filing, or a data print, link the release, the filing, or
+     the data print, and name that as `source`. Secondary aggregators and
+     market-recap sites — Yahoo Finance, FXStreet, Investing.com, Blockhead,
+     The Decoder, SiliconANGLE, TechTimes, Bitcoin.com News, BankInfoSecurity
+     and similar — are not acceptable as the cited source; find what they are
+     citing or drop the item.
    - **Lead story:** flag the single most important item of the day with
      `"lead": true`. The builder renders it as the front-page hero. Put it in
      whichever section it belongs to; pick the genuinely biggest story.
@@ -73,23 +104,30 @@ build.mjs                       renders everything into docs/ (zero deps)
      in `intro` if needed. Only include things you actually found via search.
    - **Bitcoin** gets live short-term and long-term price charts automatically
      (injected by `build.mjs`); you don't add chart data to the JSON.
+   - **Ahead.** Scheduled events are high value and zero noise. Where a beat
+     has dated upcoming events worth knowing — a central-bank decision, a CPI or
+     jobs release, a court date, a developer conference or announced launch, a
+     protocol activation — list them in the section's `ahead` array (1–4
+     entries, dates verified, within roughly the next six weeks). The builder
+     renders them as a one-line "Ahead" strip under the section. Macroeconomics
+     should almost always have one; AI and Bitcoin often will.
 
-4. **Write the edition** to `editions/<date>.json` (schema below).
+5. **Write the edition** to `editions/<date>.json` (schema below).
 
-5. **Write today's lesson in each study track** (see "The study tracks" below).
+6. **Write today's lesson in each study track** (see "The study tracks" below).
    Two files: `lessons/mental-models/NNN-slug.json` and
    `lessons/history/NNN-slug.json`, both dated today. If today's lessons already
    exist, leave them alone unless asked to revise.
 
-6. **Rebuild:** `node build.mjs` (no dependencies; regenerates all of `docs/`).
+7. **Rebuild:** `node build.mjs` (no dependencies; regenerates all of `docs/`).
 
-7. **Preview (optional but encouraged):** `node preview.mjs` renders the page to
+8. **Preview (optional but encouraged):** `node preview.mjs` renders the page to
    `preview/*.png` at desktop and mobile widths so you can eyeball the layout
    before pushing. Needs `npm install` + `npx playwright install chromium` once;
    set `PLAYWRIGHT_BROWSERS_PATH` if the browser lives outside the default cache.
    The live Bitcoin charts won't render here (no network) — that's expected.
 
-8. **Commit & push** on the working branch:
+9. **Commit & push** on the working branch:
    `git add -A && git commit -m "edition: <date>" && git push`
 
 ## Edition JSON schema
@@ -108,8 +146,12 @@ build.mjs                       renders everything into docs/ (zero deps)
           "summary": "One or two neutral sentences explaining the story.",
           "source": "TechCrunch",
           "url": "https://example.com/article",
-          "why": "Optional: one line on why a dev/investor should care."
+          "why": "Optional: one line on why a dev/investor should care.",
+          "follow_up": "2026-06-11"
         }
+      ],
+      "ahead": [
+        { "date": "2026-06-24", "what": "FOMC rate decision", "url": "https://optional.example" }
       ]
     }
   ]
@@ -117,9 +159,11 @@ build.mjs                       renders everything into docs/ (zero deps)
 ```
 
 Section `title` values should match the five beats above (omit a section only if
-it has zero worthwhile items). `intro`, `why`, and `lead` are optional — set
-`"lead": true` on exactly one item (the day's biggest story) to feature it as the
-hero. Everything else is required. `build.mjs` handles all HTML/CSS, the lead
+it has zero worthwhile items). `intro`, `why`, `lead`, `follow_up` and `ahead`
+are optional — set `"lead": true` on exactly one item (the day's biggest story)
+to feature it as the hero; set `follow_up` to the date of the edition that first
+carried the story when an item is a new development in an ongoing one; use
+`ahead` for verified scheduled events. Everything else is required. `build.mjs` handles all HTML/CSS, the lead
 hero, and the Bitcoin charts — never hand-edit files in `docs/`.
 
 ## The study tracks

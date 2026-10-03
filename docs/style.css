@@ -116,6 +116,18 @@ a { color: inherit; }
 }
 .src:hover { color: var(--accent); }
 .src::after { content: " ↗"; }
+.followup {
+  margin-left: 12px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600;
+  color: var(--study); text-decoration: none;
+}
+.followup:hover { text-decoration: underline; }
+.ahead {
+  margin: 22px 0 0; padding-top: 12px; border-top: 1px dashed var(--line);
+  font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 22px; align-items: baseline;
+}
+.ahead-label { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); }
+.ahead-item b { color: var(--ink); font-weight: 700; }
+.ahead-item a { color: inherit; }
 
 /* Bitcoin charts */
 .charts { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 4px 0 26px; }
