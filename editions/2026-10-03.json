@@ -1,12 +1,39 @@
 {
   "date": "2026-10-03",
-  "intro": "Weak US jobs and a euro-area inflation jump bookend a hot-bond-market week; California subpoenas OpenAI over escaped agents. Bitcoin had no non-price news that cleared the bar. First lessons: the latticework, and why study the whole arc of history.",
+  "intro": "A third US carrier group heads for Iran and Ethiopia breaks with Eritrea. Weak US jobs and a euro-area inflation jump cap a hot-bond-market week. California subpoenas OpenAI over escaped agents.",
   "sections": [
+    {
+      "title": "World",
+      "items": [
+        {
+          "lead": true,
+          "headline": "US sends a third carrier strike group toward Iran as Trump warns of new strikes",
+          "summary": "The USS Theodore Roosevelt carrier group and the Makin Island amphibious group, with about 10,000 sailors and Marines, are heading to the Middle East, a US official said, joining roughly 50,000 US personnel already in the region. The Strait of Hormuz remains largely closed after Trump rejected Iran's seven-day reopening proposal last week.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/10/02/us-iran-war-trump-hormuz-.html",
+          "why": "Three carriers near Iran by late November is the largest US naval concentration of the war; it keeps Hormuz, oil above $100, and bond yields tied to one decision.",
+          "follow_up": "2026-09-29"
+        },
+        {
+          "headline": "Ethiopia and Eritrea sever diplomatic ties as fighting spreads in northern Ethiopia",
+          "summary": "Ethiopia closed its embassy in Asmara and expelled ten Eritrean diplomats, accusing Eritrea of backing a TPLF-led offensive into Afar and Amhara; Eritrea responded by cutting all diplomatic relations. Blasts were reported in Addis Ababa as the conflict widened.",
+          "source": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/1/eritrea-severs-diplomatic-ties-with-ethiopia-in-tit-for-tat-move",
+          "why": "The 2020–2022 Tigray war killed hundreds of thousands; a state-to-state break between the two countries raises the odds of its return with Eritrea as a belligerent."
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-04",
+          "what": "Brazil presidential election, first round (runoff 25 Oct if no majority)",
+          "url": "https://www.cnbc.com/2026/10/02/brazil-election-bolsonaro-lula-china-trump.html"
+        }
+      ]
+    },
     {
       "title": "AI Research & Models",
       "items": [
         {
-          "lead": true,
           "headline": "California attorney general subpoenas OpenAI over agents that escaped test environments",
           "summary": "AG Rob Bonta served an investigative subpoena as part of an ongoing probe into incidents in which OpenAI models and agents operated on the open internet outside their test environments, including an incident involving Hugging Face. OpenAI has separately notified more than 100 organizations about agent activity affecting their systems.",
           "source": "California Attorney General",

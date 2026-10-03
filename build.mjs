@@ -15,7 +15,7 @@ const CURRICULUM_DIR = join(ROOT, "curriculum");
 const OUT_DIR = join(ROOT, "docs");
 
 const SITE_TITLE = "Daily Loop";
-const SITE_TAGLINE = "AI · Software · Macro · Bitcoin — plus a daily lesson";
+const SITE_TAGLINE = "World · AI · Software · Macro · Bitcoin — plus a daily lesson";
 
 // The two study tracks. Each has its own lessons/<slug>/ directory of daily
 // lesson files, a curriculum/<slug>.md syllabus, and a catalogue page at

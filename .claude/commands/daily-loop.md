@@ -9,9 +9,11 @@ Produce today's **Daily Loop** edition, following the routine in `CLAUDE.md` exa
 2. Read the newest three files in `editions/` first. Do not repeat a story they
    covered unless there is a new development; then set `follow_up` to the date
    that first carried it.
-3. Research all five beats with web search — **AI for Software Development**,
-   **AI Research & Models**, **Dev Tools & Releases**, **Macroeconomics**,
-   **Bitcoin** — with **at least three distinct searches per beat**. Prefer the
+3. Research all six beats with web search — **World**, **AI for Software
+   Development**, **AI Research & Models**, **Dev Tools & Releases**,
+   **Macroeconomics**, **Bitcoin** — with **at least three distinct searches
+   per beat**. World uses a history bar (would a future history chapter
+   mention it?); zero items is the normal outcome. Prefer the
    **last 24 hours**; never older than ~48h. Lead with what actually *broke*.
    No routine Bitcoin price items (the charts cover price); no CVE items unless
    actively exploited in tooling most developers run; releases need a real

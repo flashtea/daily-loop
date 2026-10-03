@@ -36,6 +36,27 @@ build.mjs                       renders everything into docs/ (zero deps)
    **last 24 hours**, and never older than ~48 hours. Lead with what actually
    *broke* (a shutdown, a launch, a ruling, a big move) — not "X exists" explainer
    pieces. Beats (these are the section titles, in this order):
+   - `World` — large world events, judged by a **history bar, not a news bar**:
+     would a future chapter of the history track mention it? Qualifies: a war
+     starting, ending, or escalating in a new way (new front, new belligerent,
+     major deployment); a government falling or a decisive election result; a
+     treaty, sanctions regime, or trade deal signed; a disaster or epidemic
+     measured in thousands; a court ruling that binds a whole country; an
+     infrastructure event with cross-border consequences (a strait, a grid, a
+     cable, a dam). The history track's five threads — energy, tools,
+     information, money, force — are the filter. **Does not qualify:** polls,
+     speeches, campaign events, statements about what might happen, protests
+     without an outcome, individual crimes, celebrity, sport, and daily updates
+     on a running story with no new fact. **0–3 items, and zero is the normal
+     outcome on most days.** Voice is strictly neutral and factual: no framing,
+     no "critics say", no adjectives of judgment. One item per story, placed
+     where its primary effect is: the escalation itself is World, the oil and
+     bond reaction is Macroeconomics; connect them with `follow_up`. Sources:
+     official statements, UN and government sites, Bloomberg, CNBC, Al Jazeera,
+     France 24, Africanews (Reuters, AP, BBC, the Guardian, DW, the NYT and
+     Politico block the search tool; cite them only through a source that
+     carries the same fact). Scheduled elections, summits, court decisions, and
+     ceasefire deadlines go in `ahead`.
    - `AI for Software Development` — bleeding-edge coding agents and dev tooling:
      Claude Code, Codex/OpenAI's coding tools, Cursor, Devin/Cognition, Gemini CLI,
      and similar agentic/frontier tools, plus notable launches from
@@ -158,7 +179,7 @@ build.mjs                       renders everything into docs/ (zero deps)
 }
 ```
 
-Section `title` values should match the five beats above (omit a section only if
+Section `title` values should match the six beats above (omit a section only if
 it has zero worthwhile items). `intro`, `why`, `lead`, `follow_up` and `ahead`
 are optional — set `"lead": true` on exactly one item (the day's biggest story)
 to feature it as the hero; set `follow_up` to the date of the edition that first
