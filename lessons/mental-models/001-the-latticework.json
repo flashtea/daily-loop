@@ -1,0 +1,37 @@
+{
+  "track": "mental-models",
+  "n": 1,
+  "date": "2026-10-03",
+  "title": "The latticework",
+  "subtitle": "Why isolated facts don't stick, and what to build instead",
+  "part": "Part I — Tools for thinking",
+  "summary": "Charlie Munger's central idea: knowledge only becomes usable when the big models from many disciplines are hung on a single mental frame and checked against each other. A person with one model forces every problem into it. A person with eighty sees which model actually fits.",
+  "body": [
+    "In 1994 Charlie Munger gave a talk at the USC business school that he called \"A Lesson on Elementary, Worldly Wisdom.\" Its core claim was simple and a little rude: most educated people are not very wise, because they carry facts around without a structure to hang them on. \"If the facts don't hang together on a latticework of theory, you don't have them in a usable form.\"",
+    "The word he chose matters. A lattice is not a list. It is a frame where every strut connects to others, so that pressure on one point is carried by the whole. Munger's proposal was that a thinking person should hold roughly eighty to ninety models, drawn from the disciplines that have actually figured things out: mathematics, physics, biology, psychology, engineering, economics. Not the whole discipline. The handful of ideas in each that carry almost all of the weight.",
+    "## The man with a hammer",
+    "The failure mode this guards against has a name in Munger's talks: the man-with-a-hammer tendency. \"To the man with only a hammer, every problem looks pretty much like a nail.\" An economist explains a divorce with incentives. A psychologist explains a market crash with emotion. A programmer sees every organizational problem as a missing abstraction. Each is sometimes right, and each is unable to tell when they are wrong, because they have nothing to compare the answer against.",
+    "The trap is worse for experts than for novices. The expert has a hammer that works often enough to earn trust, and that trust extends past the hammer's range. Munger's cure is not to discard the hammer but to own a toolbox, so that when you reach for one tool you notice the others you are not using and can ask why.",
+    "## Why cross-disciplinary models are the point",
+    "Each discipline teaches the models that work inside it and quietly skips the ones from next door. Business schools taught Munger almost no psychology, which is why he had to assemble his list of twenty-five psychological tendencies himself. Economics departments assume rational agents because psychology is someone else's building. Engineering teaches margin of safety; finance in 2007 had never heard of it.",
+    "The latticework is valuable precisely because the most useful models are the ones that cross boundaries. Compounding is a mathematical idea that explains fortunes, forests, and expertise. Feedback loops are an engineering idea that explains thermostats, bank runs, and addiction. Natural selection explains biology, and also why bad companies persist for a while and then suddenly do not. When one model from physics and one from psychology both predict the same outcome, you can act with far more confidence than either would justify alone.",
+    "## How to build one",
+    "Three habits turn a pile of models into a lattice. First, learn each model with at least two examples from unrelated fields, so that it is stored as a pattern rather than as a fact about its home discipline. Second, when you meet a new problem, deliberately run it past several models and notice which ones have something to say; the ones that stay silent are as informative as the ones that speak. Third, look for lollapaloozas, Munger's term for situations where several models point the same way. Those are where the big effects live, and where single-model thinkers are most badly surprised.",
+    "This series follows that recipe. The first twenty lessons are tools for thinking in general. Then come the psychological tendencies, one per day, because misjudgment is where most expensive mistakes come from. Then mathematics and the hard sciences, which supply the most general models. Then economics, systems, and engineering. Finally, decision-making under uncertainty and case studies where many models combine. Each lesson is short on purpose. The lattice is built by connecting, not by collecting.",
+    "## The standard to aim for",
+    "Munger's own test for whether you hold a model is blunt: can you state the strongest case against your own position better than the people who hold it? \"I never allow myself to have an opinion on anything that I don't know the other side's argument better than they do.\" A model you cannot argue against is a slogan. A model you can argue against, and still find useful, is a strut in the lattice."
+  ],
+  "takeaways": [
+    "Facts without a structure are not usable knowledge. Models from many disciplines, hung together, are the structure.",
+    "Owning one model makes you force-fit every problem to it. The cure is a toolbox, not a better hammer.",
+    "The most valuable models are the ones that cross disciplines. When several independent models agree, confidence is justified.",
+    "Learn each model with examples from two unrelated fields, and run new problems past several models deliberately."
+  ],
+  "names": [
+    { "name": "Charlie Munger", "note": "Vice chairman of Berkshire Hathaway; the 1994 USC talk and the 1995 Harvard talk on misjudgment are the source of this series' framing." }
+  ],
+  "reading": [
+    { "title": "A Lesson on Elementary, Worldly Wisdom", "by": "Charlie Munger, USC Business School, 1994" },
+    { "title": "Poor Charlie's Almanack", "by": "Peter Kaufman (ed.)" }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "track": "history",
+  "n": 1,
+  "date": "2026-10-03",
+  "title": "Why study the whole arc",
+  "subtitle": "Five threads from the first stone tool to the first software agent",
+  "part": "Part I — Before civilization",
+  "summary": "History read as a sequence of kings is mostly noise. Read as the story of how humans captured energy, built tools, stored information, organized money, and projected force, it becomes a single compounding process with a few rules that still hold. This chapter sets out those five threads and the lens this series will use.",
+  "body": [
+    "Will Durant spent forty years writing eleven volumes on the story of civilization and still stopped at Napoleon. Nobody is going to read that on a phone over coffee. But Durant's instinct was right: the parts of history worth carrying around are not the dates. They are the handful of changes that altered what a human being could do, and the ways people organized themselves once they could do it.",
+    "This series follows five threads. They were chosen because each one is a capability, something that compounds when it improves, and because almost every event that mattered touched at least one of them.",
+    "## Energy",
+    "Everything a society does is bounded by the energy it can capture. For most of human existence that meant food, converted by muscle. Fire added heat. Domesticated animals multiplied muscle. Water and wind turned mills. Then coal, oil, and electricity broke the ceiling entirely, and the modern world is the result. When you see a civilization expand, look for the new energy source. When you see one stall, look for the old one running out.",
+    "## Tools",
+    "A tool is stored knowledge in physical form. The hand-axe stayed essentially unchanged for a million years. Bronze took a few thousand. Iron, a few hundred. The steam engine was improved within decades, the transistor within years, and the software you used this morning was updated last night. The interval between improvements is the clearest single measure of a civilization's capacity to learn.",
+    "## Information",
+    "Speech let knowledge outlive its holder. Writing let it outlive its village. The alphabet, paper, printing, the telegraph, and the network each dropped the cost of copying and moving a thought by a large factor, and each time the drop was followed by upheaval: new religions, new sciences, new politics. Whoever controls the cheapest channel of information holds real power, and that control never lasts, because the next channel is always cheaper.",
+    "## Money",
+    "Money is the information technology of trade: a way to store value across time and move it across space without trust between the parties. Barley, silver by weight, stamped coins, paper notes, bank ledgers, and digital tokens are all attempts to solve the same problem, and each has been tested by the same temptation, which is that whoever issues money can make more of it. The history of money is largely the history of that temptation and of the institutions built to resist or exploit it. This is the thread that the Saylor series, which inspired this one, follows most closely.",
+    "## Force",
+    "Who can hurt whom, and at what cost, determines who rules. The chariot, the composite bow, iron weapons, the stirrup, the cannon, the machine gun, and the atomic bomb each redistributed power, usually away from one group and toward whoever could afford and organize the new thing. Force is the thread most historians foreground. Here it is one of five, because it is downstream of the other four more often than it is upstream.",
+    "## Two rules that hold throughout",
+    "First, technology compounds and human nature does not. The tools of 2026 would be unrecognizable to a Sumerian scribe. The envy, status-seeking, tribal loyalty, and short-sightedness recorded on his clay tablets would not. This is why a series on mental models runs alongside this one: the models are about the constant, the history is about the variable.",
+    "Second, every advance in one thread puts pressure on the others. Agriculture produced surplus, which required record-keeping, which produced writing, which enabled taxation, which funded armies. The printing press made Luther possible. The telegraph made continental railways manageable, which made national markets, which made national money. Watching these cascades is most of what understanding history consists of.",
+    "## What this series will and won't do",
+    "It will move roughly chronologically from the first stone tools to the present, in about two hundred chapters, spending more time where the threads changed fastest. It will name people when the person was the hinge, and skip them when they were merely present. It will prefer explaining how a thing worked, a plough, a bill of exchange, a bombard, over listing who used it. And it will keep asking the same question of every era: which of the five threads moved, and what did that movement force everyone else to do?",
+    "Tomorrow: the first tools, and why one design lasted a million years."
+  ],
+  "takeaways": [
+    "Five threads organize the whole story: energy, tools, information, money, force. Almost every turning point moved at least one of them.",
+    "Technology compounds; human nature does not. Mental models address the constant, history the variable.",
+    "An advance in one thread forces change in the others. Surplus leads to writing, writing to taxation, taxation to armies.",
+    "The interval between tool improvements is the best single measure of a civilization's learning capacity."
+  ],
+  "names": [
+    { "name": "Will Durant", "note": "Author, with Ariel Durant, of the eleven-volume Story of Civilization (1935–1975); the model for scope, not for length." }
+  ],
+  "reading": [
+    { "title": "The Lessons of History", "by": "Will and Ariel Durant (the 100-page distillation of the series)" },
+    { "title": "The Saylor Series", "by": "Robert Breedlove with Michael Saylor, What Is Money? podcast, 2020" }
+  ]
+}

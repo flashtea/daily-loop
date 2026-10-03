@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Daily Loop — static site builder.
-// Reads every editions/*.json and renders the site into docs/.
-// Zero dependencies; run with: node build.mjs
+// Reads every editions/*.json and lessons/<track>/*.json and renders the site
+// into docs/. Zero dependencies; run with: node build.mjs
 
 import { readFileSync, writeFileSync, readdirSync, mkdirSync } from "node:fs";
 import { join, dirname } from "node:path";
@@ -10,10 +10,36 @@ import { createHash } from "node:crypto";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const EDITIONS_DIR = join(ROOT, "editions");
+const LESSONS_DIR = join(ROOT, "lessons");
+const CURRICULUM_DIR = join(ROOT, "curriculum");
 const OUT_DIR = join(ROOT, "docs");
 
 const SITE_TITLE = "Daily Loop";
-const SITE_TAGLINE = "AI · Software · Bitcoin — curated, no noise";
+const SITE_TAGLINE = "AI · Software · Macro · Bitcoin — plus a daily lesson";
+
+// The two study tracks. Each has its own lessons/<slug>/ directory of daily
+// lesson files, a curriculum/<slug>.md syllabus, and a catalogue page at
+// docs/<slug>/index.html.
+const TRACKS = [
+  {
+    slug: "mental-models",
+    label: "Mental Models",
+    kicker: "Mental model of the day",
+    unit: "lesson",
+    groupLabel: "Discipline",
+    blurb:
+      "A latticework of the big ideas from the big disciplines, built one model per day in the spirit of Charlie Munger. Read in order or dip in by discipline.",
+  },
+  {
+    slug: "history",
+    label: "History of Civilization",
+    kicker: "History, one chapter a day",
+    unit: "chapter",
+    groupLabel: "Era",
+    blurb:
+      "From the first stone tools to the present, told through five threads: energy, tools, information, money, and force. Less detail than Durant, more technology than a textbook.",
+  },
+];
 
 // ---------- helpers ----------
 
@@ -24,6 +50,12 @@ const escapeHtml = (s = "") =>
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
+
+// Minimal inline markup for lesson text: **bold** and *italic* only.
+const inline = (s = "") =>
+  escapeHtml(s)
+    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+    .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, "$1<em>$2</em>");
 
 const hostOf = (url) => {
   try {
@@ -51,6 +83,16 @@ const shortDate = (iso) =>
     timeZone: "UTC",
   });
 
+const mediumDate = (iso) =>
+  new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+
+const pad3 = (n) => String(n).padStart(3, "0");
+
 // ---------- load ----------
 
 function loadEditions() {
@@ -69,7 +111,114 @@ function loadEditions() {
   return editions;
 }
 
-// ---------- render pieces ----------
+// Parse curriculum/<slug>.md: "## Part ..." headings and "N. **Title** — scope" lines.
+function loadCurriculum(track) {
+  let text;
+  try {
+    text = readFileSync(join(CURRICULUM_DIR, `${track.slug}.md`), "utf8");
+  } catch {
+    return [];
+  }
+  const entries = [];
+  let part = "";
+  for (const line of text.split("\n")) {
+    const h = line.match(/^##\s+(.+?)\s*$/);
+    if (h) {
+      part = h[1];
+      continue;
+    }
+    const m = line.match(/^(\d+)\.\s+\*\*(.+?)\*\*\s+—\s+(.+?)\s*$/);
+    if (m) entries.push({ n: Number(m[1]), title: m[2], scope: m[3], part });
+  }
+  return entries;
+}
+
+function loadLessons(track) {
+  const dir = join(LESSONS_DIR, track.slug);
+  let files;
+  try {
+    files = readdirSync(dir).filter((f) => f.endsWith(".json"));
+  } catch {
+    files = [];
+  }
+  const curriculum = loadCurriculum(track);
+  const lessons = files.map((f) => {
+    const data = JSON.parse(readFileSync(join(dir, f), "utf8"));
+    const slug = f.replace(/\.json$/, "");
+    data.slug = slug;
+    data.href = `${slug}.html`;
+    data.n = Number(data.n ?? parseInt(slug, 10));
+    if (!data.part) data.part = curriculum.find((c) => c.n === data.n)?.part || "";
+    return data;
+  });
+  lessons.sort((a, b) => a.n - b.n);
+  return { lessons, curriculum };
+}
+
+// ---------- shared page chrome ----------
+
+function masthead({ base, dateline, standfirst, activeNav }) {
+  const nav = [
+    { href: `${base}index.html`, label: "Today", key: "today" },
+    ...TRACKS.map((t) => ({ href: `${base}${t.slug}/index.html`, label: t.label, key: t.slug })),
+  ]
+    .map(
+      (n) =>
+        `<a class="${n.key === activeNav ? "nav-a current" : "nav-a"}" href="${n.href}">${escapeHtml(n.label)}</a>`,
+    )
+    .join("");
+  return `<header class="masthead">
+    <div class="wrap">
+      <div class="hairline"></div>
+      <a class="nameplate" href="${base}index.html">${SITE_TITLE}</a>
+      <p class="tagline">${escapeHtml(SITE_TAGLINE)}</p>
+      <nav class="nav">${nav}</nav>
+      <div class="dateline">${dateline}</div>
+      <div class="rule"></div>
+      ${standfirst || ""}
+    </div>
+  </header>`;
+}
+
+function footer({ base, editions, currentDate }) {
+  return `<footer>
+    <div class="wrap">
+      <div class="rule"></div>
+      <p class="arch-label">Past editions</p>
+      <nav class="archive">${archiveStrip(editions, currentDate, base)}</nav>
+      <p class="colophon">Curated by Claude · rendered by <code>build.mjs</code> · built ${new Date()
+        .toISOString()
+        .slice(0, 16)
+        .replace("T", " ")} UTC</p>
+    </div>
+  </footer>`;
+}
+
+function shell({ title, description, base, bodyClass, head, main, foot }) {
+  return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>${escapeHtml(title)}</title>
+  <meta name="description" content="${escapeHtml(description || SITE_TAGLINE)}" />
+  <link rel="icon" href="${base}favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="${base}style.css?v=${STYLE_HASH}" />
+</head>
+<body class="${bodyClass || ""}">
+  ${head}
+
+  <main class="wrap">
+${main}
+  </main>
+
+  ${foot}
+</body>
+</html>
+`;
+}
+
+// ---------- news pieces ----------
 
 function sourceTag(item) {
   const source = item.source || hostOf(item.url);
@@ -147,17 +296,236 @@ ${items}
     </section>`;
 }
 
-function archiveStrip(editions, currentDate) {
+function archiveStrip(editions, currentDate, base = "") {
   return editions
     .map((e) => {
-      const href = e.date === editions[0].date ? "index.html" : `${e.date}.html`;
+      const href = e.date === editions[0].date ? `${base}index.html` : `${base}${e.date}.html`;
       const cls = e.date === currentDate ? "chip current" : "chip";
       return `<a class="${cls}" href="${href}">${escapeHtml(shortDate(e.date))}</a>`;
     })
     .join("");
 }
 
-function renderPage(edition, editions, isIndex) {
+// ---------- lesson pieces ----------
+
+function trackOf(slug) {
+  return TRACKS.find((t) => t.slug === slug);
+}
+
+function lessonKicker(track, lesson) {
+  const unit = track.unit === "chapter" ? "Chapter" : "No.";
+  const part = lesson.part ? ` · ${lesson.part.replace(/^Part\s+[IVXLC]+\s+—\s+/, "")}` : "";
+  return `${track.label} · ${unit} ${lesson.n}${part}`;
+}
+
+// The band on an edition page showing that day's lesson from each track.
+function renderLessonCard(track, lesson) {
+  const takeaways = (lesson.takeaways || [])
+    .slice(0, 3)
+    .map((t) => `<li>${inline(t)}</li>`)
+    .join("");
+  const href = `${track.slug}/${lesson.href}`;
+  return `<article class="lesson-card">
+        <p class="kicker">${escapeHtml(lessonKicker(track, lesson))}</p>
+        <h3 class="lesson-card-hed"><a class="hed-a" href="${href}">${escapeHtml(lesson.title)}</a></h3>
+        ${lesson.subtitle ? `<p class="lesson-card-sub">${inline(lesson.subtitle)}</p>` : ""}
+        <p class="lesson-card-dek">${inline(lesson.summary || "")}</p>
+        ${takeaways ? `<ul class="lesson-card-keep">${takeaways}</ul>` : ""}
+        <p class="lesson-card-links"><a class="more" href="${href}">Read the ${track.unit}</a><a class="more muted" href="${track.slug}/index.html">All ${track.label.toLowerCase()}</a></p>
+      </article>`;
+}
+
+function renderLessonBand(dayLessons) {
+  if (!dayLessons.length) return "";
+  return `<section class="study">
+      <h2 class="beat-label">Lessons of the day</h2>
+      <div class="study-grid cols-${dayLessons.length}">
+${dayLessons.map(({ track, lesson }) => renderLessonCard(track, lesson)).join("\n")}
+      </div>
+    </section>`;
+}
+
+// Body paragraphs: "## " = subhead, "- " lines = list, "> " = quote, else paragraph.
+function renderBody(body = []) {
+  return body
+    .map((raw) => {
+      const s = String(raw).trim();
+      if (!s) return "";
+      if (s.startsWith("## ")) return `<h2>${inline(s.slice(3))}</h2>`;
+      if (s.startsWith("### ")) return `<h3>${inline(s.slice(4))}</h3>`;
+      if (s.startsWith("> ")) return `<blockquote><p>${inline(s.slice(2))}</p></blockquote>`;
+      if (s.startsWith("- ")) {
+        const items = s
+          .split("\n")
+          .map((l) => l.replace(/^-\s+/, "").trim())
+          .filter(Boolean)
+          .map((l) => `<li>${inline(l)}</li>`)
+          .join("");
+        return `<ul>${items}</ul>`;
+      }
+      return `<p>${inline(s)}</p>`;
+    })
+    .join("\n");
+}
+
+function renderLessonPage(track, lesson, prev, next, editions) {
+  const base = "../";
+  const takeaways = (lesson.takeaways || []).map((t) => `<li>${inline(t)}</li>`).join("");
+  const names = (lesson.names || [])
+    .map(
+      (p) =>
+        `<li><strong>${escapeHtml(p.name)}</strong>${p.note ? ` — ${inline(p.note)}` : ""}</li>`,
+    )
+    .join("");
+  const reading = (lesson.reading || [])
+    .map((r) => {
+      const t = r.url
+        ? `<a href="${escapeHtml(r.url)}" target="_blank" rel="noopener">${escapeHtml(r.title)}</a>`
+        : `<em>${escapeHtml(r.title)}</em>`;
+      return `<li>${t}${r.by ? `, ${escapeHtml(r.by)}` : ""}</li>`;
+    })
+    .join("");
+  const editionHref = editions.find((e) => e.date === lesson.date)
+    ? lesson.date === editions[0]?.date
+      ? `${base}index.html`
+      : `${base}${lesson.date}.html`
+    : null;
+
+  const unitCap = track.unit === "chapter" ? "Chapter" : "Lesson";
+  const navLink = (l, cls, label) =>
+    l
+      ? `<a class="pager-a ${cls}" href="${l.href}"><span class="pager-label">${label}</span><span class="pager-title">${escapeHtml(l.title)}</span></a>`
+      : `<span class="pager-a ${cls} empty"></span>`;
+
+  const main = `<article class="lesson">
+      <header class="lesson-head">
+        <p class="kicker">${escapeHtml(lessonKicker(track, lesson))}</p>
+        <h1 class="lesson-title">${escapeHtml(lesson.title)}</h1>
+        ${lesson.subtitle ? `<p class="lesson-sub">${inline(lesson.subtitle)}</p>` : ""}
+        <p class="lesson-meta">${escapeHtml(mediumDate(lesson.date))}${
+          editionHref ? ` · <a href="${editionHref}">that day's edition</a>` : ""
+        } · <a href="index.html">all ${escapeHtml(track.label.toLowerCase())}</a></p>
+      </header>
+      ${lesson.summary ? `<p class="lesson-summary">${inline(lesson.summary)}</p>` : ""}
+      <div class="lesson-body">
+${renderBody(lesson.body)}
+      </div>
+      ${
+        takeaways
+          ? `<aside class="box keep"><h2>Keep</h2><ul>${takeaways}</ul></aside>`
+          : ""
+      }
+      ${names ? `<aside class="box names"><h2>Names worth knowing</h2><ul>${names}</ul></aside>` : ""}
+      ${reading ? `<aside class="box reading"><h2>Further reading</h2><ul>${reading}</ul></aside>` : ""}
+      <nav class="pager">
+        ${navLink(prev, "prev", `← Previous ${track.unit}`)}
+        ${navLink(next, "next", `Next ${track.unit} →`)}
+      </nav>
+    </article>`;
+
+  return shell({
+    title: `${lesson.title} — ${track.label} · ${SITE_TITLE}`,
+    description: lesson.summary,
+    base,
+    bodyClass: "page-lesson",
+    head: masthead({
+      base,
+      activeNav: track.slug,
+      dateline: `<span>${escapeHtml(track.label)}</span><span>${unitCap} ${lesson.n}</span>`,
+    }),
+    main,
+    foot: footer({ base, editions, currentDate: lesson.date }),
+  });
+}
+
+function renderCatalogue(track, lessons, curriculum, editions) {
+  const base = "../";
+  const total = curriculum.length ? Math.max(curriculum.length, lessons.length) : lessons.length;
+  const written = lessons.length;
+  const pct = total ? Math.round((written / total) * 100) : 0;
+  const latest = lessons[lessons.length - 1];
+
+  // Group written lessons by part, preserving first-seen order.
+  const groups = new Map();
+  for (const l of lessons) {
+    const key = l.part || "Lessons";
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(l);
+  }
+  const unitCap = track.unit === "chapter" ? "Ch." : "No.";
+  const groupsHtml = [...groups.entries()]
+    .map(
+      ([part, ls]) => `<section class="cat-group">
+        <h2 class="cat-part">${escapeHtml(part)}</h2>
+        <ol class="cat-list">
+${ls
+  .map(
+    (l) => `          <li class="cat-row">
+            <span class="cat-n">${unitCap} ${l.n}</span>
+            <div class="cat-main">
+              <a class="cat-title" href="${l.href}">${escapeHtml(l.title)}</a>
+              ${l.subtitle ? `<span class="cat-sub">${inline(l.subtitle)}</span>` : ""}
+              <p class="cat-dek">${inline(l.summary || "")}</p>
+            </div>
+            <span class="cat-date">${escapeHtml(shortDate(l.date))}</span>
+          </li>`,
+  )
+  .join("\n")}
+        </ol>
+      </section>`,
+    )
+    .join("\n");
+
+  const upcoming = curriculum.filter((c) => c.n > (latest?.n || 0)).slice(0, 5);
+  const upcomingHtml = upcoming.length
+    ? `<section class="cat-group upcoming">
+        <h2 class="cat-part">Coming up</h2>
+        <ol class="cat-list">
+${upcoming
+  .map(
+    (c) => `          <li class="cat-row">
+            <span class="cat-n">${unitCap} ${c.n}</span>
+            <div class="cat-main"><span class="cat-title plain">${escapeHtml(c.title)}</span><p class="cat-dek">${inline(c.scope)}</p></div>
+            <span class="cat-date"></span>
+          </li>`,
+  )
+  .join("\n")}
+        </ol>
+      </section>`
+    : "";
+
+  const main = `<section class="cat-head">
+      <p class="kicker">${escapeHtml(track.kicker)}</p>
+      <h1 class="cat-title-big">${escapeHtml(track.label)}</h1>
+      <p class="cat-blurb">${escapeHtml(track.blurb)}</p>
+      <div class="progress" role="img" aria-label="${written} of ${total} written">
+        <div class="progress-bar" style="width:${pct}%"></div>
+      </div>
+      <p class="progress-label">${written} of ${total} ${track.unit}s written${
+        latest ? ` · latest: <a href="${latest.href}">${escapeHtml(latest.title)}</a>` : ""
+      }</p>
+    </section>
+${written ? groupsHtml : `<p class="empty-note">No ${track.unit}s yet. The next daily loop writes the first one.</p>`}
+${upcomingHtml}`;
+
+  return shell({
+    title: `${track.label} · ${SITE_TITLE}`,
+    description: track.blurb,
+    base,
+    bodyClass: "page-catalogue",
+    head: masthead({
+      base,
+      activeNav: track.slug,
+      dateline: `<span>${escapeHtml(track.label)}</span><span>${written} ${track.unit}${written === 1 ? "" : "s"}</span>`,
+    }),
+    main,
+    foot: footer({ base, editions, currentDate: null }),
+  });
+}
+
+// ---------- edition page ----------
+
+function renderPage(edition, editions, isIndex, lessonsByTrack) {
   // Pick the lead: first item flagged { "lead": true }, else first item overall.
   let lead = null;
   let kicker = "";
@@ -180,6 +548,13 @@ function renderPage(edition, editions, isIndex) {
     (n, s) => n + (s.items || []).length,
     0,
   );
+  const dayLessons = TRACKS.flatMap((track) => {
+    const lesson = (lessonsByTrack[track.slug]?.lessons || []).find(
+      (l) => l.date === edition.date,
+    );
+    return lesson ? [{ track, lesson }] : [];
+  });
+
   const hero = lead ? renderHero(lead, kicker) : "";
   const sections = (edition.sections || [])
     .map((s) => renderSection(s, lead))
@@ -188,51 +563,24 @@ function renderPage(edition, editions, isIndex) {
     ? `<p class="standfirst">${escapeHtml(edition.intro)}</p>`
     : "";
   const title = isIndex ? SITE_TITLE : `${SITE_TITLE} — ${shortDate(edition.date)}`;
+  const counts = [`${itemCount} stories`];
+  if (dayLessons.length) counts.push(`${dayLessons.length} lesson${dayLessons.length === 1 ? "" : "s"}`);
 
-  return `<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>${escapeHtml(title)}</title>
-  <meta name="description" content="${escapeHtml(SITE_TAGLINE)}" />
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="style.css?v=${STYLE_HASH}" />
-</head>
-<body>
-  <header class="masthead">
-    <div class="wrap">
-      <div class="hairline"></div>
-      <a class="nameplate" href="index.html">${SITE_TITLE}</a>
-      <p class="tagline">${escapeHtml(SITE_TAGLINE)}</p>
-      <div class="dateline">
-        <span>${escapeHtml(longDate(edition.date))}</span>
-        <span>No. ${editions.length} · ${itemCount} stories</span>
-      </div>
-      <div class="rule"></div>
-      ${standfirst}
-    </div>
-  </header>
-
-  <main class="wrap">
-    ${hero}
-${sections}
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <div class="rule"></div>
-      <p class="arch-label">Past editions</p>
-      <nav class="archive">${archiveStrip(editions, edition.date)}</nav>
-      <p class="colophon">Curated by Claude · rendered by <code>build.mjs</code> · built ${new Date()
-        .toISOString()
-        .slice(0, 16)
-        .replace("T", " ")} UTC</p>
-    </div>
-  </footer>
-</body>
-</html>
-`;
+  return shell({
+    title,
+    base: "",
+    bodyClass: "page-edition",
+    head: masthead({
+      base: "",
+      activeNav: isIndex ? "today" : "",
+      dateline: `<span>${escapeHtml(longDate(edition.date))}</span><span>No. ${editions.length} · ${counts.join(" · ")}</span>`,
+      standfirst,
+    }),
+    main: `    ${hero}
+${renderLessonBand(dayLessons)}
+${sections}`,
+    foot: footer({ base: "", editions, currentDate: edition.date }),
+  });
 }
 
 const STYLE = `:root {
@@ -243,6 +591,7 @@ const STYLE = `:root {
   --line: #d9d8d1;
   --line-strong: #16181d;
   --accent: #c0151d;
+  --study: #1f4e79;
   --maxw: 1180px;
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -274,9 +623,20 @@ a { color: inherit; }
   text-align: center; margin: 0; color: var(--muted);
   font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase;
 }
+.nav {
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 4px 26px;
+  margin-top: 14px;
+}
+.nav-a {
+  text-decoration: none; color: var(--muted);
+  font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 4px 0; border-bottom: 2px solid transparent;
+}
+.nav-a:hover { color: var(--ink); }
+.nav-a.current { color: var(--ink); border-bottom-color: var(--accent); }
 .dateline {
   display: flex; justify-content: space-between; gap: 12px;
-  margin-top: 16px; padding-top: 10px; border-top: 1px solid var(--line);
+  margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line);
   font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
 }
 .standfirst {
@@ -348,6 +708,95 @@ a { color: inherit; }
   color: var(--muted); margin-bottom: 8px; font-weight: 600;
 }
 
+/* Lessons of the day (edition page band) */
+.study { padding: 28px 0; border-bottom: 1px solid var(--line); }
+.study .beat-label { border-bottom-color: var(--study); }
+.study-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.study-grid.cols-1 { grid-template-columns: 1fr; }
+.lesson-card {
+  background: #fff; border: 1px solid var(--line); border-top: 3px solid var(--study);
+  border-radius: 10px; padding: 22px 24px 18px;
+}
+.lesson-card .kicker { color: var(--study); margin-bottom: 8px; }
+.lesson-card-hed { font-family: var(--serif); font-weight: 700; font-size: 26px; line-height: 1.12; margin: 0 0 4px; }
+.lesson-card-hed .hed-a { text-decoration: none; }
+.lesson-card-hed .hed-a:hover { color: var(--study); }
+.lesson-card-sub { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--muted); margin: 0 0 12px; }
+.lesson-card-dek { font-family: var(--serif); font-size: 16px; line-height: 1.5; color: #2a2c31; margin: 0 0 14px; }
+.lesson-card-keep { margin: 0 0 16px; padding: 12px 0 0 18px; border-top: 1px solid var(--line); font-size: 14px; color: #2c2f35; }
+.lesson-card-keep li { margin: 4px 0; }
+.lesson-card-links { margin: 0; display: flex; gap: 18px; flex-wrap: wrap; }
+.more {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  text-decoration: none; color: var(--study);
+}
+.more::after { content: " →"; }
+.more.muted { color: var(--faint); }
+.more:hover { text-decoration: underline; }
+
+/* Lesson page */
+.lesson { max-width: 72ch; margin: 0 auto; padding: 26px 0 10px; }
+.lesson-head { text-align: center; padding-bottom: 22px; border-bottom: 4px double var(--line-strong); }
+.lesson-head .kicker { color: var(--study); }
+.lesson-title {
+  font-family: var(--serif); font-weight: 700; letter-spacing: -0.015em;
+  font-size: clamp(30px, 5vw, 46px); line-height: 1.05; margin: 0;
+}
+.lesson-sub { font-family: var(--serif); font-style: italic; font-size: clamp(17px, 2vw, 21px); color: var(--muted); margin: 12px 0 0; }
+.lesson-meta { margin: 14px 0 0; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.lesson-meta a { color: var(--muted); }
+.lesson-summary {
+  font-family: var(--serif); font-size: clamp(17px, 2vw, 20px); line-height: 1.5; color: #2a2c31;
+  margin: 24px 0 8px; padding-left: 16px; border-left: 3px solid var(--study);
+}
+.lesson-body { font-family: var(--serif); font-size: 18px; line-height: 1.65; color: #1d1f24; }
+.lesson-body p { margin: 0 0 1.1em; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.lesson-body h2 {
+  font-family: var(--sans); font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--ink); margin: 2em 0 0.8em; padding-top: 0.8em; border-top: 1px solid var(--line);
+}
+.lesson-body h3 { font-size: 20px; margin: 1.6em 0 0.5em; }
+.lesson-body blockquote { margin: 1.2em 0; padding: 0 0 0 18px; border-left: 3px solid var(--line-strong); color: var(--muted); font-style: italic; }
+.lesson-body ul { padding-left: 1.3em; margin: 0 0 1.1em; }
+.lesson-body li { margin: 0.3em 0; }
+.box { margin: 28px 0 0; padding: 18px 22px; background: #fff; border: 1px solid var(--line); border-radius: 10px; }
+.box h2 { margin: 0 0 10px; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--study); }
+.box ul { margin: 0; padding-left: 1.2em; font-size: 15px; line-height: 1.55; color: #2c2f35; }
+.box li { margin: 6px 0; }
+.box.keep { border-top: 3px solid var(--study); }
+.pager { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 34px 0 20px; padding-top: 18px; border-top: 1px solid var(--line); }
+.pager-a { text-decoration: none; display: flex; flex-direction: column; gap: 4px; }
+.pager-a.next { text-align: right; }
+.pager-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.pager-title { font-family: var(--serif); font-weight: 700; font-size: 17px; line-height: 1.2; }
+.pager-a:hover .pager-title { color: var(--study); }
+
+/* Catalogue page */
+.cat-head { text-align: center; padding: 26px 0 22px; border-bottom: 4px double var(--line-strong); }
+.cat-head .kicker { color: var(--study); }
+.cat-title-big { font-family: var(--serif); font-weight: 700; letter-spacing: -0.015em; font-size: clamp(32px, 5vw, 50px); line-height: 1.05; margin: 0; }
+.cat-blurb { font-family: var(--serif); font-size: clamp(16px, 2vw, 19px); color: #2a2c31; max-width: 62ch; margin: 14px auto 0; line-height: 1.45; }
+.progress { height: 6px; background: #e9e8e2; border-radius: 3px; max-width: 420px; margin: 22px auto 0; overflow: hidden; }
+.progress-bar { height: 100%; background: var(--study); }
+.progress-label { margin: 8px 0 0; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.progress-label a { color: var(--ink); }
+.cat-group { padding: 26px 0 8px; border-bottom: 1px solid var(--line); }
+.cat-part { font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin: 0 0 14px; color: var(--ink); }
+.cat-list { list-style: none; margin: 0; padding: 0; }
+.cat-row {
+  display: grid; grid-template-columns: 80px 1fr 64px; gap: 16px; align-items: baseline;
+  padding: 14px 0; border-top: 1px solid var(--line);
+}
+.cat-n { font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--study); font-weight: 700; }
+.cat-title { font-family: var(--serif); font-weight: 700; font-size: 20px; line-height: 1.2; text-decoration: none; }
+.cat-title:hover { color: var(--study); }
+.cat-title.plain { color: var(--muted); }
+.cat-sub { display: block; font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--muted); margin-top: 2px; }
+.cat-dek { margin: 6px 0 0; font-size: 14.5px; color: #2c2f35; line-height: 1.5; }
+.cat-date { font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); text-align: right; }
+.upcoming .cat-row { opacity: 0.85; }
+.empty-note { font-family: var(--serif); text-align: center; color: var(--muted); padding: 40px 0; }
+
 /* Footer */
 footer { padding: 30px 0 70px; }
 .arch-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
@@ -380,12 +829,23 @@ footer { padding: 30px 0 70px; }
 
 @media (max-width: 720px) {
   .dateline { font-size: 10px; }
+  .nav { gap: 2px 18px; }
+  .nav-a { font-size: 11px; }
   .charts { grid-template-columns: 1fr; }
   .columns { column-rule: none; column-count: 1 !important; }
   .lead { padding: 22px 0 20px; }
   .lead-hed { font-size: clamp(23px, 6.4vw, 30px); max-width: none; }
   .lead-dek { font-size: 16px; margin-top: 12px; }
   .dek { text-align: left; }
+  .study-grid { grid-template-columns: 1fr; gap: 18px; }
+  .lesson-card { padding: 18px 18px 16px; }
+  .lesson-card-hed { font-size: 23px; }
+  .lesson-body { font-size: 17px; }
+  .lesson-body p { text-align: left; }
+  .pager { grid-template-columns: 1fr; }
+  .pager-a.next { text-align: left; }
+  .cat-row { grid-template-columns: 1fr; gap: 4px; }
+  .cat-date { text-align: left; }
 }
 `;
 
@@ -405,10 +865,26 @@ const FAVICON = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
 
 function build() {
   const editions = loadEditions();
+  const lessonsByTrack = Object.fromEntries(TRACKS.map((t) => [t.slug, loadLessons(t)]));
+
   mkdirSync(OUT_DIR, { recursive: true });
   writeFileSync(join(OUT_DIR, "style.css"), STYLE);
   writeFileSync(join(OUT_DIR, "favicon.svg"), FAVICON);
   writeFileSync(join(OUT_DIR, ".nojekyll"), "");
+
+  // Lesson pages and catalogues (independent of whether any edition exists).
+  for (const track of TRACKS) {
+    const { lessons, curriculum } = lessonsByTrack[track.slug];
+    const dir = join(OUT_DIR, track.slug);
+    mkdirSync(dir, { recursive: true });
+    lessons.forEach((lesson, i) => {
+      writeFileSync(
+        join(dir, lesson.href),
+        renderLessonPage(track, lesson, lessons[i - 1] || null, lessons[i + 1] || null, editions),
+      );
+    });
+    writeFileSync(join(dir, "index.html"), renderCatalogue(track, lessons, curriculum, editions));
+  }
 
   if (editions.length === 0) {
     writeFileSync(
@@ -419,12 +895,21 @@ function build() {
     return;
   }
 
-  writeFileSync(join(OUT_DIR, "index.html"), renderPage(editions[0], editions, true));
+  writeFileSync(
+    join(OUT_DIR, "index.html"),
+    renderPage(editions[0], editions, true, lessonsByTrack),
+  );
   for (const e of editions) {
-    writeFileSync(join(OUT_DIR, `${e.date}.html`), renderPage(e, editions, false));
+    writeFileSync(
+      join(OUT_DIR, `${e.date}.html`),
+      renderPage(e, editions, false, lessonsByTrack),
+    );
   }
+  const lessonCount = TRACKS.map(
+    (t) => `${lessonsByTrack[t.slug].lessons.length} ${t.slug}`,
+  ).join(", ");
   console.log(
-    `Built ${editions.length} edition(s). Latest: ${editions[0].date} → docs/index.html`,
+    `Built ${editions.length} edition(s) and lessons (${lessonCount}). Latest: ${editions[0].date} → docs/index.html`,
   );
 }
 

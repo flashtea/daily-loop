@@ -31,7 +31,11 @@ async function main() {
   mkdirSync(OUT, { recursive: true });
 
   const url = pathToFileURL(join(DOCS, page)).href;
-  const browser = await chromium.launch();
+  // CHROMIUM_PATH lets a pre-installed browser be used when the pinned Playwright
+  // build isn't in the cache (e.g. cloud sandboxes).
+  const browser = await chromium.launch(
+    process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {},
+  );
   try {
     for (const vp of viewports) {
       const ctx = await browser.newContext({
