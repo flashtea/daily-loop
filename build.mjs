@@ -318,21 +318,16 @@ function lessonKicker(track, lesson) {
   return `${track.label} · ${unit} ${lesson.n}${part}`;
 }
 
-// The band on an edition page showing that day's lesson from each track.
+// The band on an edition page pointing to that day's lesson from each track.
+// Deliberately compact: title and subtitle only, the lesson page has the rest.
 function renderLessonCard(track, lesson) {
-  const takeaways = (lesson.takeaways || [])
-    .slice(0, 3)
-    .map((t) => `<li>${inline(t)}</li>`)
-    .join("");
   const href = `${track.slug}/${lesson.href}`;
-  return `<article class="lesson-card">
-        <p class="kicker">${escapeHtml(lessonKicker(track, lesson))}</p>
-        <h3 class="lesson-card-hed"><a class="hed-a" href="${href}">${escapeHtml(lesson.title)}</a></h3>
-        ${lesson.subtitle ? `<p class="lesson-card-sub">${inline(lesson.subtitle)}</p>` : ""}
-        <p class="lesson-card-dek">${inline(lesson.summary || "")}</p>
-        ${takeaways ? `<ul class="lesson-card-keep">${takeaways}</ul>` : ""}
-        <p class="lesson-card-links"><a class="more" href="${href}">Read the ${track.unit}</a><a class="more muted" href="${track.slug}/index.html">All ${track.label.toLowerCase()}</a></p>
-      </article>`;
+  return `<a class="lesson-card" href="${href}">
+        <span class="kicker">${escapeHtml(lessonKicker(track, lesson))}</span>
+        <span class="lesson-card-hed">${escapeHtml(lesson.title)}</span>
+        ${lesson.subtitle ? `<span class="lesson-card-sub">${inline(lesson.subtitle)}</span>` : ""}
+        <span class="more">Read the ${track.unit}</span>
+      </a>`;
 }
 
 function renderLessonBand(dayLessons) {
@@ -709,30 +704,24 @@ a { color: inherit; }
 }
 
 /* Lessons of the day (edition page band) */
-.study { padding: 28px 0; border-bottom: 1px solid var(--line); }
-.study .beat-label { border-bottom-color: var(--study); }
-.study-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.study { padding: 20px 0; border-bottom: 1px solid var(--line); }
+.study .beat-label { border-bottom-color: var(--study); margin-bottom: 16px; }
+.study-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .study-grid.cols-1 { grid-template-columns: 1fr; }
 .lesson-card {
-  background: #fff; border: 1px solid var(--line); border-top: 3px solid var(--study);
-  border-radius: 10px; padding: 22px 24px 18px;
+  display: flex; flex-direction: column; gap: 4px; text-decoration: none;
+  background: #fff; border: 1px solid var(--line); border-left: 3px solid var(--study);
+  border-radius: 8px; padding: 14px 18px 12px;
 }
-.lesson-card .kicker { color: var(--study); margin-bottom: 8px; }
-.lesson-card-hed { font-family: var(--serif); font-weight: 700; font-size: 26px; line-height: 1.12; margin: 0 0 4px; }
-.lesson-card-hed .hed-a { text-decoration: none; }
-.lesson-card-hed .hed-a:hover { color: var(--study); }
-.lesson-card-sub { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--muted); margin: 0 0 12px; }
-.lesson-card-dek { font-family: var(--serif); font-size: 16px; line-height: 1.5; color: #2a2c31; margin: 0 0 14px; }
-.lesson-card-keep { margin: 0 0 16px; padding: 12px 0 0 18px; border-top: 1px solid var(--line); font-size: 14px; color: #2c2f35; }
-.lesson-card-keep li { margin: 4px 0; }
-.lesson-card-links { margin: 0; display: flex; gap: 18px; flex-wrap: wrap; }
+.lesson-card .kicker { color: var(--study); margin-bottom: 2px; font-size: 11px; }
+.lesson-card-hed { font-family: var(--serif); font-weight: 700; font-size: 22px; line-height: 1.12; }
+.lesson-card:hover .lesson-card-hed { color: var(--study); }
+.lesson-card-sub { font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--muted); }
 .more {
-  font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  margin-top: 6px; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
   text-decoration: none; color: var(--study);
 }
-.more::after { content: " →"; }
-.more.muted { color: var(--faint); }
-.more:hover { text-decoration: underline; }
+.more::after { content: " \u2192"; }
 
 /* Lesson page */
 .lesson { max-width: 72ch; margin: 0 auto; padding: 26px 0 10px; }
@@ -838,8 +827,7 @@ footer { padding: 30px 0 70px; }
   .lead-dek { font-size: 16px; margin-top: 12px; }
   .dek { text-align: left; }
   .study-grid { grid-template-columns: 1fr; gap: 18px; }
-  .lesson-card { padding: 18px 18px 16px; }
-  .lesson-card-hed { font-size: 23px; }
+  .lesson-card-hed { font-size: 20px; }
   .lesson-body { font-size: 17px; }
   .lesson-body p { text-align: left; }
   .pager { grid-template-columns: 1fr; }
