@@ -2,40 +2,25 @@
 description: Research, curate, and publish today's Daily Loop edition plus the day's two lessons
 ---
 
-Produce today's **Daily Loop** edition, following the routine in `CLAUDE.md` exactly.
+Produce today's **Daily Loop** edition by following `CLAUDE.md` exactly. It is
+the complete editorial policy: who the reader is, the three tests every news
+item must pass, the six beats and what is out of scope for each, how to write
+an item, how to write the two daily lessons, and the routine.
 
-1. Use today's date (UTC) as the edition id, e.g. `2026-06-13`. If an edition for
-   today already exists, refresh it rather than duplicating.
-2. Read the newest three files in `editions/` first. Do not repeat a story they
-   covered unless there is a new development; then set `follow_up` to the date
-   that first carried it.
-3. Research all six beats with web search — **World**, **AI for Software
-   Development**, **AI Research & Models**, **Dev Tools & Releases**,
-   **Macroeconomics**, **Bitcoin** — with **at least three distinct searches
-   per beat**. World uses a history bar (would a future history chapter
-   mention it?); zero items is the normal outcome. Prefer the
-   **last 24 hours**; never older than ~48h. Lead with what actually *broke*.
-   No routine Bitcoin price items (the charts cover price); no CVE items unless
-   actively exploited in tooling most developers run; releases need a real
-   capability change.
-4. **Source quality is non-negotiable.** Cite the primary source whenever one
-   exists; pass the content-farm/listicle domains listed in `CLAUDE.md` to
-   `blocked_domains` and verify the real source. Drop anything you can only find
-   on an SEO farm or a market-recap aggregator.
-5. Curate to **0–4 items per section**; there is no minimum and a quiet
-   section stays short or empty. Every item must pass the so-what test in
-   `CLAUDE.md` (a one-sentence `why` that is not a stretch). Flag the single
-   biggest story with `"lead": true`. Add verified upcoming events to each section's `ahead`
-   array where there are any (Macroeconomics nearly always). Bitcoin charts are
-   auto-injected — don't add chart data.
-6. Write `editions/<today>.json`.
-7. Write the day's two lessons, following the "study tracks" section of
-   `CLAUDE.md`: the next unwritten entry of `curriculum/mental-models.md` into
-   `lessons/mental-models/NNN-slug.json`, and the next unwritten entry of
-   `curriculum/history.md` into `lessons/history/NNN-slug.json`, both dated
-   today. If fewer than 30 syllabus entries remain in a track, extend that
-   curriculum first. Skip a track only if its lesson for today already exists.
-8. Run `node build.mjs`.
-9. Commit (`edition: <today>`) and push to `main`.
-10. Report the final headline list (section → headlines) and the two lesson
-   titles so the run is auditable.
+In short:
+
+1. Today's date (UTC) is the edition id; refresh rather than duplicate.
+2. Read the newest three editions so nothing is repeated without a new
+   development.
+3. Research all six beats (three or more searches each): World, AI for
+   Software Development, AI Research & Models, Dev Tools & Releases,
+   Macroeconomics, Bitcoin. Apply the three tests (it happened, it matters to
+   this reader, it lasts). 0–4 items per section; zero is fine. Mandatory
+   one-sentence `why`. Primary sources. `ahead` entries for verified upcoming
+   events. Exactly one `lead`.
+4. Write the next lesson in each study track per the syllabus
+   (`curriculum/*.md`), extending a syllabus first if fewer than 30 entries
+   remain.
+5. `node build.mjs`.
+6. Commit as `edition: <today>` and push to `main`.
+7. Report the section-by-section headline list and the two lesson titles.
