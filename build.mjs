@@ -159,7 +159,7 @@ function loadLessons(track) {
 
 // ---------- shared page chrome ----------
 
-function masthead({ base, dateline, standfirst, activeNav }) {
+function masthead({ base, dateline, activeNav }) {
   const nav = [
     { href: `${base}index.html`, label: "Today", key: "today" },
     ...TRACKS.map((t) => ({
@@ -187,7 +187,6 @@ function masthead({ base, dateline, standfirst, activeNav }) {
       <nav class="nav">${nav}</nav>
       <div class="dateline">${dateline}</div>
       <div class="rule"></div>
-      ${standfirst || ""}
     </div>
   </header>`;
 }
@@ -274,18 +273,8 @@ function headlineLink(item, cls) {
     : `<span class="${cls}">${text}</span>`;
 }
 
-function renderHero(item, kicker, editions) {
-  return `<section class="lead">
-      <p class="kicker">${escapeHtml(kicker)}</p>
-      <h2 class="lead-hed">${headlineLink(item, "hed-a")}</h2>
-      <p class="lead-dek">${escapeHtml(item.summary || "")}</p>
-      ${whyBlock(item)}
-      <p class="byline">${sourceTag(item)}${followUpTag(item, editions)}</p>
-    </section>`;
-}
-
-function renderStory(item, editions) {
-  return `<article class="story">
+function renderStory(item, editions, featured = false) {
+  return `<article class="${featured ? "story featured" : "story"}">
         <h3 class="hed">${headlineLink(item, "hed-a")}</h3>
         <p class="dek">${escapeHtml(item.summary || "")}</p>
         ${whyBlock(item)}
@@ -330,21 +319,30 @@ function bitcoinCharts() {
 }
 
 function renderSection(section, lead, editions) {
-  const visible = (section.items || []).filter((it) => it !== lead);
+  const all = section.items || [];
+  const hasLead = all.includes(lead);
+  // The lead story runs full-width at the top of its own section; the rest
+  // flow in columns beneath it.
+  const featured = hasLead ? renderStory(lead, editions, true) : "";
+  const visible = all.filter((it) => it !== lead);
   const items = visible.map((it) => renderStory(it, editions)).join("\n");
   const charts = /bitcoin/i.test(section.title) ? bitcoinCharts() : "";
   const ahead = aheadLine(section);
-  if (!items.trim() && !charts && !ahead) return "";
+  if (!featured && !items.trim() && !charts && !ahead) return "";
   // Match the column count to the number of stories so short sections fill the
   // row instead of leaving empty column tracks (capped at 4 for readability).
   const cols = Math.min(Math.max(visible.length, 1), 4);
   const cls = cols === 1 ? "columns single" : "columns";
-  return `<section class="beat">
+  const columns = items.trim()
+    ? `<div class="${cls}" style="column-count:${cols}">
+${items}
+      </div>`
+    : "";
+  return `<section class="beat${hasLead ? " has-lead" : ""}">
       <h2 class="beat-label">${escapeHtml(section.title)}</h2>
       ${charts}
-      <div class="${cls}" style="column-count:${cols}">
-${items}
-      </div>
+      ${featured}
+      ${columns}
       ${ahead}
     </section>`;
 }
@@ -644,22 +642,7 @@ ${groups}`;
 
 function renderPage(edition, editions, isIndex, lessonsByTrack) {
   // Pick the lead: first item flagged { "lead": true }, else first item overall.
-  let lead = null;
-  let kicker = "";
-  for (const s of edition.sections || []) {
-    for (const it of s.items || []) {
-      if (it.lead) {
-        lead = it;
-        kicker = s.title;
-        break;
-      }
-    }
-    if (lead) break;
-  }
-  if (!lead && (edition.sections || [])[0]?.items?.[0]) {
-    lead = edition.sections[0].items[0];
-    kicker = edition.sections[0].title;
-  }
+  const lead = leadOf(edition);
 
   const itemCount = (edition.sections || []).reduce(
     (n, s) => n + (s.items || []).length,
@@ -672,13 +655,9 @@ function renderPage(edition, editions, isIndex, lessonsByTrack) {
     return lesson ? [{ track, lesson }] : [];
   });
 
-  const hero = lead ? renderHero(lead, kicker, editions) : "";
   const sections = (edition.sections || [])
     .map((s) => renderSection(s, lead, editions))
     .join("\n");
-  const standfirst = edition.intro
-    ? `<p class="standfirst">${escapeHtml(edition.intro)}</p>`
-    : "";
   const title = isIndex ? SITE_TITLE : `${SITE_TITLE} — ${shortDate(edition.date)}`;
   const counts = [`${itemCount} stories`];
   if (dayLessons.length) counts.push(`${dayLessons.length} lesson${dayLessons.length === 1 ? "" : "s"}`);
@@ -691,10 +670,8 @@ function renderPage(edition, editions, isIndex, lessonsByTrack) {
       base: "",
       activeNav: isIndex ? "today" : "",
       dateline: `<span>${escapeHtml(longDate(edition.date))}</span><span>No. ${editions.length} · ${counts.join(" · ")}</span>`,
-      standfirst,
     }),
-    main: `    ${hero}
-${renderLessonBand(dayLessons)}
+    main: `${renderLessonBand(dayLessons)}
 ${sections}`,
     foot: footer({ base: "", editions, currentDate: edition.date }),
   });
@@ -725,7 +702,7 @@ body {
 }
 a { color: inherit; }
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
-.rule { height: 3px; background: var(--line-strong); margin: 14px 0; }
+.rule { height: 3px; background: var(--line-strong); margin: 14px 0 0; }
 .hairline { height: 1px; background: var(--line); }
 
 /* Masthead */
@@ -757,30 +734,14 @@ a { color: inherit; }
   margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line);
   font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
 }
-.standfirst {
-  font-family: var(--serif); font-size: clamp(18px, 2.4vw, 23px);
-  line-height: 1.4; margin: 4px auto 0; max-width: 60ch; text-align: center; color: #2a2c31;
-}
 
-/* Lead story */
-.lead {
-  padding: 28px 0 26px; text-align: center;
-  border-top: 4px double var(--line-strong); border-bottom: 4px double var(--line-strong);
-}
+/* Featured (lead) story: full width at the top of its section */
+.story.featured { padding: 0 0 22px; margin: 0 0 22px; border-top: 0; border-bottom: 1px solid var(--line); }
+.story.featured .hed { font-size: clamp(24px, 3.2vw, 34px); line-height: 1.1; letter-spacing: -0.01em; margin-bottom: 12px; }
+.story.featured .dek { font-family: var(--serif); font-size: clamp(15px, 1.4vw, 17px); line-height: 1.5; }
 .kicker {
   margin: 0 0 12px; color: var(--accent);
   font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
-}
-.lead-hed {
-  font-family: var(--serif); font-weight: 700;
-  font-size: clamp(26px, 4.6vw, 50px); line-height: 1.05; letter-spacing: -0.015em;
-  margin: 0 auto; max-width: 20ch;
-}
-.lead-hed .hed-a { text-decoration: none; }
-.lead-hed .hed-a:hover { text-decoration: underline; text-decoration-thickness: 2px; }
-.lead-dek {
-  font-family: var(--serif); font-size: clamp(16px, 1.9vw, 21px); line-height: 1.45;
-  margin: 14px auto 0; max-width: 58ch; color: #2a2c31;
 }
 
 /* Sections */
@@ -937,16 +898,9 @@ footer { padding: 22px 0 60px; }
 .colophon { margin: 18px 0 0; font-size: 12px; color: var(--faint); }
 .colophon code { font-family: ui-monospace, Menlo, Consolas, monospace; background: #efeee9; padding: 1px 5px; border-radius: 4px; }
 
-/* Desktop: lead becomes a full-width, left-aligned banner — wider and shorter. */
 @media (min-width: 721px) {
-  .lead { text-align: left; padding: 24px 0 22px; }
-  .lead-hed { font-size: clamp(25px, 2.7vw, 33px); line-height: 1.1; max-width: none; margin: 0; }
-  .lead-dek {
-    text-align: justify; hyphens: auto; -webkit-hyphens: auto; max-width: none; margin: 14px 0 0;
-    font-size: clamp(15px, 1.25vw, 17px);
-    column-count: 2; column-gap: 38px; column-rule: 1px solid var(--line);
-  }
-  .kicker { margin-bottom: 10px; }
+  .story.featured .dek { column-count: 2; column-gap: 38px; column-rule: 1px solid var(--line); }
+  .story.featured .why { max-width: 70ch; }
   /* A lone story (e.g. its section's other item became the page lead) becomes a
      full-width feature: headline spans, body flows in two columns to fill the row. */
   .columns.single .hed { font-size: 21px; }
@@ -962,9 +916,7 @@ footer { padding: 22px 0 60px; }
   .nav-a .short { display: inline; }
   .charts { grid-template-columns: 1fr; }
   .columns { column-rule: none; column-count: 1 !important; }
-  .lead { padding: 22px 0 20px; }
-  .lead-hed { font-size: clamp(23px, 6.4vw, 30px); max-width: none; }
-  .lead-dek { font-size: 16px; margin-top: 12px; }
+  .story.featured .hed { font-size: 25px; }
   .dek { text-align: left; }
   .study-grid { grid-template-columns: 1fr; gap: 18px; }
   .lesson-card-hed { font-size: 20px; }

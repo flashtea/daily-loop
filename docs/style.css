@@ -23,7 +23,7 @@ body {
 }
 a { color: inherit; }
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
-.rule { height: 3px; background: var(--line-strong); margin: 14px 0; }
+.rule { height: 3px; background: var(--line-strong); margin: 14px 0 0; }
 .hairline { height: 1px; background: var(--line); }
 
 /* Masthead */
@@ -55,30 +55,14 @@ a { color: inherit; }
   margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line);
   font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
 }
-.standfirst {
-  font-family: var(--serif); font-size: clamp(18px, 2.4vw, 23px);
-  line-height: 1.4; margin: 4px auto 0; max-width: 60ch; text-align: center; color: #2a2c31;
-}
 
-/* Lead story */
-.lead {
-  padding: 28px 0 26px; text-align: center;
-  border-top: 4px double var(--line-strong); border-bottom: 4px double var(--line-strong);
-}
+/* Featured (lead) story: full width at the top of its section */
+.story.featured { padding: 0 0 22px; margin: 0 0 22px; border-top: 0; border-bottom: 1px solid var(--line); }
+.story.featured .hed { font-size: clamp(24px, 3.2vw, 34px); line-height: 1.1; letter-spacing: -0.01em; margin-bottom: 12px; }
+.story.featured .dek { font-family: var(--serif); font-size: clamp(15px, 1.4vw, 17px); line-height: 1.5; }
 .kicker {
   margin: 0 0 12px; color: var(--accent);
   font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
-}
-.lead-hed {
-  font-family: var(--serif); font-weight: 700;
-  font-size: clamp(26px, 4.6vw, 50px); line-height: 1.05; letter-spacing: -0.015em;
-  margin: 0 auto; max-width: 20ch;
-}
-.lead-hed .hed-a { text-decoration: none; }
-.lead-hed .hed-a:hover { text-decoration: underline; text-decoration-thickness: 2px; }
-.lead-dek {
-  font-family: var(--serif); font-size: clamp(16px, 1.9vw, 21px); line-height: 1.45;
-  margin: 14px auto 0; max-width: 58ch; color: #2a2c31;
 }
 
 /* Sections */
@@ -235,16 +219,9 @@ footer { padding: 22px 0 60px; }
 .colophon { margin: 18px 0 0; font-size: 12px; color: var(--faint); }
 .colophon code { font-family: ui-monospace, Menlo, Consolas, monospace; background: #efeee9; padding: 1px 5px; border-radius: 4px; }
 
-/* Desktop: lead becomes a full-width, left-aligned banner — wider and shorter. */
 @media (min-width: 721px) {
-  .lead { text-align: left; padding: 24px 0 22px; }
-  .lead-hed { font-size: clamp(25px, 2.7vw, 33px); line-height: 1.1; max-width: none; margin: 0; }
-  .lead-dek {
-    text-align: justify; hyphens: auto; -webkit-hyphens: auto; max-width: none; margin: 14px 0 0;
-    font-size: clamp(15px, 1.25vw, 17px);
-    column-count: 2; column-gap: 38px; column-rule: 1px solid var(--line);
-  }
-  .kicker { margin-bottom: 10px; }
+  .story.featured .dek { column-count: 2; column-gap: 38px; column-rule: 1px solid var(--line); }
+  .story.featured .why { max-width: 70ch; }
   /* A lone story (e.g. its section's other item became the page lead) becomes a
      full-width feature: headline spans, body flows in two columns to fill the row. */
   .columns.single .hed { font-size: 21px; }
@@ -260,9 +237,7 @@ footer { padding: 22px 0 60px; }
   .nav-a .short { display: inline; }
   .charts { grid-template-columns: 1fr; }
   .columns { column-rule: none; column-count: 1 !important; }
-  .lead { padding: 22px 0 20px; }
-  .lead-hed { font-size: clamp(23px, 6.4vw, 30px); max-width: none; }
-  .lead-dek { font-size: 16px; margin-top: 12px; }
+  .story.featured .hed { font-size: 25px; }
   .dek { text-align: left; }
   .study-grid { grid-template-columns: 1fr; gap: 18px; }
   .lesson-card-hed { font-size: 20px; }

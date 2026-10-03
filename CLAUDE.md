@@ -32,7 +32,7 @@ rule and the wants conflict, the wants win.
   bar is higher: would a future chapter of the history track mention it?
 - **No padding.** Sections hold 0–4 items. Zero is a correct result on a quiet
   day, and a thin paper is better than a filled one. Never add an item to reach
-  a count. If every beat is quiet, say so in `intro` and move on.
+  a count. If every beat is quiet, the paper is short that day.
 - **Fresh.** Last 24 hours preferred, never older than about 48. Lead with what
   broke, not with explainers about things that exist.
 - **One item per story, with arcs.** Read the newest three editions before
@@ -125,7 +125,8 @@ The builder injects live Bitcoin charts; do not add chart data.
   believe, or plan differently. If you cannot write it honestly, drop the item.
 - `source` and `url`: the primary source where one exists (see above).
 - `lead`: exactly one item per edition, the genuinely biggest story of the
-  day, in whichever section it belongs to. The builder renders it as the hero.
+  day. It stays in its own section; the builder runs it full width at the top
+  of that section.
 - `follow_up`: the date of the edition that first carried the story, when this
   item is a new development in it.
 - Voice everywhere: neutral, concise, concrete. No hype, no emoji, no
@@ -205,7 +206,6 @@ worth keeping, and optionally a one-line pointer to tomorrow's topic.
 ```json
 {
   "date": "2026-06-13",
-  "intro": "One-line editor's note for the day (optional).",
   "sections": [
     {
       "title": "AI for Software Development",
@@ -229,8 +229,8 @@ worth keeping, and optionally a one-line pointer to tomorrow's topic.
 ```
 
 Section `title` values match the six beats above; omit a section that has no
-items and no `ahead` entries. `intro`, `lead`, `follow_up` and `ahead` are
-optional; everything else is required. `build.mjs` handles all HTML, the hero,
+items and no `ahead` entries. `lead`, `follow_up` and `ahead` are optional;
+everything else is required. `build.mjs` handles all HTML, the featured lead,
 the Ahead strips, follow-up markers and the Bitcoin charts. Never hand-edit
 `docs/`.
 
