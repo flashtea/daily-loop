@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-04",
+  "sections": [
+    {
+      "title": "World",
+      "items": [
+        {
+          "lead": true,
+          "headline": "G7 agreed to release 100 million barrels of diesel and crude from reserves over four months",
+          "summary": "After a video conference chaired by Emmanuel Macron on Friday, G7 leaders said they would implement a coordinated release of 100 million barrels through the International Energy Agency, starting immediately and front-loaded with a substantial diesel release in the first 20 days. The statement also committed members to no energy export restrictions between G7 countries and to coordinating refinery maintenance; the release comes on top of the 400-million-barrel IEA collective action agreed in March. Brent fell about 1.5% to around $100.80 on the announcement.",
+          "why": "Reserve releases buy weeks, not a reopened strait; treat oil near $100 and the inflation path behind the Fed's hike pricing as unchanged until Hormuz traffic resumes.",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-10-02/g7-to-release-up-to-100-millions-of-barrels-of-diesel-and-oil"
+        },
+        {
+          "headline": "Houthis claimed a missile and drone strike on an Aramco facility in Riyadh; Saudi-led coalition struck Sanaa and Saada",
+          "summary": "Houthi spokesman Yahya Saree said ballistic missiles and drones hit an Aramco site in the Saudi capital on Saturday and started fires; a large smoke plume was seen near the facility, and neither Saudi authorities nor Aramco commented. The Houthi-run Al-Masirah channel reported 26 Saudi strikes on Sanaa, and Yemen's internationally recognised government confirmed strikes on Houthi targets in Sanaa and Saada. The 2022 truce collapsed in July, and the Houthis took the port of Mocha and islands in the Bab al-Mandab strait in mid-September.",
+          "why": "A second Gulf energy front on the Red Sea side means oil supply risk no longer rests on the Strait of Hormuz alone, and the Bab al-Mandab route that bypasses it is now contested too.",
+          "source": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/4/houthis-claim-strike-on-saudi-energy-facility-as-yemen-fighting-intensifies"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-04",
+          "what": "Brazil presidential election, first round (runoff 25 Oct if no majority)",
+          "url": "https://www.cnbc.com/2026/10/02/brazil-election-bolsonaro-lula-china-trump.html"
+        },
+        {
+          "date": "2026-11-03",
+          "what": "US midterm elections: all 435 House seats, 35 Senate seats, 39 governorships",
+          "url": "https://bipartisanpolicy.org/article/the-2026-midterms-key-dates-and-events/"
+        }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Anthropic added mods to Claude Code, TypeScript hooks that rewrite prompts, gate tool calls and replace built-in features",
+          "summary": "Mods are small TypeScript functions that run on Claude Code's internal events: they can rewrite a prompt before it reaches the model, block or retry a tool call, approve or deny a permission request, redact secrets from tool output, and add or replace interface elements in the terminal and desktop app. They ship inside plugins, are not sandboxed and run with the same machine access as Claude Code; Anthropic converted its own /diff pane into a mod, and Team and Enterprise plans load a sec-default mod first to prevent risky overrides.",
+          "why": "Permission policy, secret redaction and tool-call rewriting can now be enforced in code rather than in prompts, and an installed mod has full machine access, so vet plugins the way you vet dependencies.",
+          "source": "Anthropic",
+          "url": "https://claude.com/blog/claude-code-mods"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-28",
+          "what": "GitHub Universe 2026, San Francisco (28–29 Oct)",
+          "url": "https://github.blog/news-insights/company-news/your-guide-to-github-universe-2026-is-here-the-schedule-just-launched/"
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Meta published six mathematics papers written with Muse Spark, five of which it says answer previously open questions",
+          "summary": "Mathematicians used Muse Spark 1.1 and 1.2 in Thinking Mode through the ordinary meta.ai chat interface, with no research scaffold, on problems in probability, PDEs, group theory, optimization, arithmetic physics and non-associative algebra; a second team of mathematicians reviewed each paper and the papers mark which passages were drafted by the model. Meta notes that other groups independently announced solutions to some of the problems by different routes.",
+          "why": "Open research problems are now being closed with an off-the-shelf chat model plus a human reviewer, so the limiting factor for the models you already use is a well-posed problem, not special tooling.",
+          "source": "Meta",
+          "url": "https://research.meta.ai/blog/solving-open-research-problems-together"
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Zig 0.17.0 moved package management out of the compiler and broke @bitCast, @cImport and ** syntax",
+          "summary": "The release, five months of work from 206 contributors, moves all fetching, HTTP, TLS, git and compression code from the compiler into the build system, splits builds into separate configurer and maker processes, and adds a Build Server Protocol for third-party tooling. Breaking changes include endian-agnostic @bitCast semantics that can change behaviour without a compile error, removal of @cImport to an external package, removal of the ** array-multiplication operator in favour of @splat, and incremental compilation now usable for most x86_64-linux projects.",
+          "why": "If Zig is anywhere in your toolchain, 0.17 breaks builds loudly in some places and silently in others, so budget a migration and grep for @bitCast before upgrading.",
+          "source": "Zig release notes",
+          "url": "https://ziglang.org/download/0.17.0/release-notes.html"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-09",
+          "what": "Python 3.15.0 final release (PEP 790 schedule)",
+          "url": "https://peps.python.org/pep-0790/"
+        }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [
+        {
+          "headline": "SEC approved the listing of the first 3x leveraged bitcoin and ether ETPs in the US",
+          "summary": "In an order dated October 2, the Commission approved Cboe BZX's rule change to list six Volatility Shares VS Trust funds that target three times the daily move of gold, silver, bitcoin, ether, crude oil and natural gas, measured on first- and second-month futures; no comments were received on the proposal. Trading cannot start until the trust's separate S-1 registration becomes effective.",
+          "why": "Triple-leveraged daily funds must buy after up days and sell after down days, so expect larger end-of-day swings in CME bitcoin futures once they trade; nothing changes for holding spot.",
+          "source": "US Securities and Exchange Commission",
+          "url": "https://www.sec.gov/files/rules/sro/cboebzx/2026/34-106577.pdf"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-14",
+          "what": "US CPI for September (BLS, 08:30 ET)",
+          "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+        },
+        {
+          "date": "2026-10-23",
+          "what": "Moody's scheduled review of France's Aa3 rating (negative outlook)"
+        },
+        {
+          "date": "2026-10-28",
+          "what": "FOMC rate decision (two-day meeting ends)",
+          "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+        },
+        {
+          "date": "2026-10-29",
+          "what": "ECB Governing Council rate decision",
+          "url": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html"
+        }
+      ]
+    }
+  ]
+}

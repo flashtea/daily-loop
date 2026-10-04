@@ -1,0 +1,39 @@
+{
+  "track": "history",
+  "n": 2,
+  "date": "2026-10-04",
+  "title": "The first tools",
+  "subtitle": "Oldowan choppers, Acheulean hand-axes, and a million years of one design",
+  "part": "Part I — Before civilization",
+  "summary": "Around 2.6 million years ago hominins in East Africa learned to strike one stone against another and get a sharp edge. The trick, controlled fracture, gave them access to meat and marrow their teeth could not reach, and that calorie surplus is the first move in the energy thread. The second design, the hand-axe, then stayed essentially the same for over a million years, which tells us as much about early minds as the tool itself.",
+  "body": [
+    "The tools thread begins with a fracture. Fine-grained stone such as flint, chert, quartzite and basalt breaks in a predictable way: hit it hard near an edge, at an angle of less than ninety degrees to the surface, and the force spreads through the rock in a cone, like the mark a BB leaves in a window. A flake pops off along the cone's edge, and that edge is sharper than any steel knife, often only a few atoms wide at its tip. This is called conchoidal fracture, from the shell-like ripples it leaves on the flake. Every stone tool for the next two and a half million years is a variation on controlling it.",
+    "The oldest widely accepted tools of this kind come from Gona in Ethiopia and are about 2.6 million years old. Older, cruder flaked stones from Lomekwi in Kenya have been dated to 3.3 million years, before our own genus existed, and are still argued over. Either way, the first toolmakers were not us. They were small-brained hominins who nonetheless understood something precise about how rocks behave.",
+    "## The Oldowan: a core and its flakes",
+    "The first industry is named Oldowan after Olduvai Gorge in Tanzania, where Mary and Louis Leakey excavated it from the 1930s onward. The method is simple to describe and hard to do. Hold a fist-sized cobble, the core, in one hand. Hold a harder, rounder hammerstone in the other. Strike the core near its edge. A flake detaches; strike again next to the scar, and another comes off. After a few blows the core has a jagged edge and can be used as a chopper, and the flakes, which many archaeologists now think were the real product, can slice hide, cut meat from bone and shave wood.",
+    "What the Oldowan unlocked was carcasses. Hominin teeth and nails cannot open a zebra. A sharp flake can, and a hammerstone can crack a long bone for marrow, the fattiest food on the savanna and one that other scavengers could not reach without a hyena's jaws. Cut-marked animal bones appear in the record alongside the first tools. The tool was, in effect, a way to borrow calories that the body could not otherwise collect: an energy technology before fire, which is where the next chapter goes.",
+    "That surplus had consequences. Brains are expensive, consuming about a fifth of a resting human's energy, and the fossil record shows brain size climbing from roughly 600 cubic centimetres in early Homo toward 900 and more in Homo erectus over the following million years. One well-known hypothesis holds that richer food allowed a smaller gut and freed energy for a bigger brain. The causation is debated; the correlation between better tools, more meat and larger brains is not.",
+    "## The Acheulean: the hand-axe and the idea of a shape",
+    "Around 1.76 million years ago, at Kokiselei in Kenya and soon across Africa, a new tool appeared: the hand-axe. Named Acheulean after Saint-Acheul in France, where it was first recognised in the nineteenth century, it is a teardrop or almond-shaped stone, flaked on both faces, with a continuous edge all the way round and a point at one end. Making one takes dozens of deliberate removals and, in later examples, a soft hammer of antler or wood to thin the piece without shattering it. Experiments show an hour or more of work for a skilled knapper and years of practice to become one.",
+    "The hand-axe is different in kind from a chopper. A chopper is whatever is left when you have taken enough flakes. A hand-axe is a shape that existed in the maker's head before the first blow, imposed on the stone through a sequence of planned steps. The symmetry is often better than the job required. Whatever it was used for, and butchery, digging and woodworking are all supported by wear traces, it was also the first object in the record that was made to look a particular way.",
+    "Then nothing much changed. Hand-axes from 1.5 million years ago and from 300,000 years ago are recognisably the same tool, made the same way, from Africa to India to Britain. For more than a million years, through several species of Homo, the design was transmitted faithfully and improved barely at all. The previous chapter proposed that the interval between tool improvements is the best single measure of a civilization's learning capacity. By that measure, the Acheulean world was learning very slowly indeed.",
+    "## What the stasis says about information",
+    "The slowness is the most important fact in this chapter, because it points at the information thread. A hand-axe cannot be made by watching once. It has to be taught, probably by demonstration over years, and the knowledge has to survive the death of the teacher. Early Homo clearly could do that. What they apparently could not do was build on it: take a good design and make it better, then pass the better one on, so that improvements accumulate. That ratchet, where each generation starts from the last one's best, is what later chapters will call cumulative culture, and it depends on something the hand-axe makers seem to have lacked. The strongest candidate is full language, which is the subject of chapter four.",
+    "The other threads barely move yet. There is no money, because there is nothing to store and no one to trade with beyond the band. Force is personal and immediate; a hand-axe makes a poor weapon and there is little sign the design was ever optimised for one. Energy has shifted, modestly, through diet. Tools and information are the live threads, and they are tied together: the tool is only as good as the method for passing it on.",
+    "Tomorrow: fire, the first true energy technology, and how a cooked diet changed the body that ate it."
+  ],
+  "takeaways": [
+    "Stone tools work by conchoidal fracture: strike fine-grained rock near an edge and a flake with an edge sharper than steel comes off. Everything for 2.5 million years is a variation on controlling that.",
+    "The first tools, about 2.6 million years ago, were an energy technology before fire: they opened carcasses and marrow that teeth could not, and bigger brains followed the richer diet.",
+    "The hand-axe, from about 1.76 million years ago, was the first object made to a shape held in the mind, requiring planning and years of practice to produce.",
+    "That design then stayed almost unchanged for over a million years. Early Homo could transmit knowledge but not accumulate improvements; the missing piece was probably language.",
+    "Tools and information are inseparable: a technique is only as powerful as the method for passing it on."
+  ],
+  "names": [
+    { "name": "Mary Leakey", "note": "Archaeologist whose excavations at Olduvai Gorge from the 1930s to the 1970s defined the Oldowan industry and established the sequence from choppers to hand-axes." }
+  ],
+  "reading": [
+    { "title": "Masters of the Planet", "by": "Ian Tattersall, 2012" },
+    { "title": "Catching Fire: How Cooking Made Us Human", "by": "Richard Wrangham, 2009 (for tomorrow's chapter too)" }
+  ]
+}
