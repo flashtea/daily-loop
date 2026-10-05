@@ -7,6 +7,7 @@ import { readFileSync, writeFileSync, readdirSync, mkdirSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
+import { buildEpub } from "./kindle.mjs";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const EDITIONS_DIR = join(ROOT, "editions");
@@ -1170,6 +1171,20 @@ function build() {
     );
   }
   writeFileSync(join(OUT_DIR, "archive.html"), renderArchive(editions));
+
+  // Kindle edition of the latest paper (docs/kindle/<date>.epub + latest.epub).
+  const latest = editions[0];
+  const latestLessons = TRACKS.flatMap((track) => {
+    const lesson = (lessonsByTrack[track.slug]?.lessons || []).find((l) => l.date === latest.date);
+    return lesson ? [{ track, lesson }] : [];
+  });
+  const epub = buildEpub({
+    edition: latest,
+    dayLessons: latestLessons,
+    outDir: join(OUT_DIR, "kindle"),
+    helpers: { escapeHtml, inline, renderBody, mediumDate, lessonKicker },
+  });
+  console.log(`Kindle edition: docs/kindle/${latest.date}.epub (${epub.chapters} chapters, ${Math.round(epub.bytes / 1024)} KB)`);
   const lessonCount = TRACKS.map(
     (t) => `${lessonsByTrack[t.slug].lessons.length} ${t.slug}`,
   ).join(", ");
