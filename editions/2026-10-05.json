@@ -1,0 +1,113 @@
+{
+  "date": "2026-10-05",
+  "sections": [
+    {
+      "title": "World",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Flávio Bolsonaro finished ahead of Lula in Brazil's first round, about 47% to 45%, forcing an October 25 runoff",
+          "summary": "With more than 99% of votes counted on Sunday, Flávio Bolsonaro of the Liberal Party led President Luiz Inácio Lula da Silva by roughly two percentage points, and neither reached the majority of valid votes needed to win outright. Most polls before the vote had put Lula first. Brazilians also elected all 513 federal deputies, 54 of 81 senators and state governors on the same day.",
+          "why": "Latin America's largest economy now has a three-week runoff in which the challenger starts ahead, so treat the Brazilian real, Petrobras and Brazil's China and US trade stance as unsettled until October 25.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/10/04/brazil-presidential-election-lula-bolsonaro.html"
+        },
+        {
+          "headline": "Yemen's government ordered a military operation to retake all Houthi-held territory, with Saudi-led coalition strikes",
+          "summary": "Rashad al-Alimi, chairman of Yemen's Presidential Leadership Council, said on Sunday he had instructed the armed forces to carry out an approved plan \"until the country is liberated from the Houthis\", who have held Sanaa since 2014. Government forces reported 257 operations on Saturday and claimed about 700 Houthi casualties, and the coalition said it conducted 97 further operations on Sunday; the 2022 truce collapsed in July.",
+          "why": "A declared ground campaign against the Houthis, a day after their strike on Riyadh, turns the Red Sea front from exchanges of fire into a war for territory, so plan for the Bab al-Mandab route to stay contested for months.",
+          "source": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/4/yemens-leader-announces-military-operation-to-retake-houthi-held-territory",
+          "follow_up": "2026-10-04"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-25",
+          "what": "Brazil presidential runoff, Lula vs Flávio Bolsonaro",
+          "url": "https://www.cnbc.com/2026/10/04/brazil-presidential-election-lula-bolsonaro.html"
+        },
+        {
+          "date": "2026-10-27",
+          "what": "Israel Knesset election (120 seats, 3.25% threshold)",
+          "url": "https://www.aljazeera.com/news/2026/7/12/israel-to-hold-national-elections-on-october-27-parliament-says"
+        },
+        {
+          "date": "2026-11-03",
+          "what": "US midterm elections: all 435 House seats, 35 Senate seats, 39 governorships",
+          "url": "https://bipartisanpolicy.org/article/the-2026-midterms-key-dates-and-events/"
+        }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [],
+      "ahead": [
+        {
+          "date": "2026-10-28",
+          "what": "GitHub Universe 2026, San Francisco (28–29 Oct)",
+          "url": "https://github.blog/news-insights/company-news/your-guide-to-github-universe-2026-is-here-the-schedule-just-launched/"
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Google stopped accepting vulnerability reports to its open-source bug bounty, citing a surge of invalid automated submissions",
+          "summary": "The Open Source Software Vulnerability Reward Program stopped taking product-vulnerability reports on October 1 and will not reopen them before the first quarter of 2027. Google said it had seen a significant rise in automated submissions, the vast majority of them invalid, including AI-generated reports that misdescribe how a bug is triggered or flag coding errors with no reachable security impact; it had already removed cash rewards for the lower project tiers earlier this year.",
+          "why": "AI-written bug reports have now overwhelmed one of the largest open-source security programs, so if you maintain a project expect fewer bounty-driven disclosures and build your own triage filter for machine-generated reports.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions/"
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [],
+      "ahead": [
+        {
+          "date": "2026-10-09",
+          "what": "Python 3.15.0 final release (PEP 790 schedule)",
+          "url": "https://peps.python.org/pep-0790/"
+        },
+        {
+          "date": "2026-10-28",
+          "what": "Node.js 26 enters LTS; Node.js 27 alpha opens under the new one-release-a-year schedule",
+          "url": "https://nodejs.org/en/blog/announcements/evolving-the-nodejs-release-schedule"
+        },
+        {
+          "date": "2026-10-29",
+          "what": "PostgreSQL 19 general availability (RC1 on 15 Oct)",
+          "url": "https://www.mail-archive.com/pgsql-hackers@lists.postgresql.org/msg240353.html"
+        }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [],
+      "ahead": [
+        {
+          "date": "2026-10-10",
+          "what": "Bitcoin Core 32.0 scheduled release: new mempool-aware fee estimator, parallel block validation, PSBT v2 default",
+          "url": "https://www.coindesk.com/tech/2026/09/16/bitcoin-core-32-enters-final-testing-with-faster-validation-fee-changes-and-security-fixes"
+        },
+        {
+          "date": "2026-10-14",
+          "what": "US CPI for September (BLS, 08:30 ET)",
+          "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+        },
+        {
+          "date": "2026-10-28",
+          "what": "FOMC rate decision (two-day meeting ends)",
+          "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+        },
+        {
+          "date": "2026-10-29",
+          "what": "ECB rate decision; Bank of Japan meeting runs 29–30 Oct with Outlook Report",
+          "url": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "track": "history",
+  "n": 3,
+  "date": "2026-10-05",
+  "title": "Fire",
+  "subtitle": "Cooked food, the bigger brain, the longer day, and the first energy technology",
+  "part": "Part I — Before civilization",
+  "summary": "Stone tools let hominins borrow calories from carcasses. Fire let them borrow calories from chemistry itself, by doing half of digestion outside the body. Controlled fire is the first time humans captured an energy source other than their own muscles, and the consequences ran through every one of this series' threads: a smaller gut and larger brain, a day that did not end at dusk, a hearth that made a group, and eventually the kilns and furnaces that turn clay and ore into civilization.",
+  "body": [
+    "Every living thing runs on energy, and until fire every animal got it one way: by eating, and letting its own gut break the food down. Fire changed the accounting. A hominin who puts a root or a piece of meat on the coals is outsourcing part of digestion to a chemical reaction running at several hundred degrees, and gets back more usable energy per hour of chewing than any gut could extract raw. That is the first energy technology, and the energy thread of this series begins here.",
+    "The evidence is contested at its early end. Burnt bones at Swartkrans in South Africa and Koobi Fora in Kenya have been argued to show fire use around 1.5 million years ago, but wildfire leaves the same traces. The earliest widely accepted hearth, a place where fire was kept deliberately and repeatedly, is at Wonderwerk Cave in South Africa, about a million years old, with ash and burnt bone deep inside a cave where lightning cannot reach. By 400,000 years ago, at Qesem Cave in Israel and Beeches Pit in England, hearths are common and clearly habitual. Somewhere in that span Homo erectus and its descendants went from tolerating fire to using it, and from using it to making it.",
+    "## How fire works, and why it was hard",
+    "Fire is a chain reaction. Heat wood above roughly 300 degrees Celsius and its long cellulose and lignin molecules break into flammable gases; those gases mix with oxygen and burn, which releases more heat, which breaks down more wood. The flame is the gas burning; the glow is the charcoal left behind oxidizing slowly. Keeping a fire going means managing fuel, air and heat: too little air and it smokes out, too much and it burns through its fuel, and if the heat drops below the threshold the chain breaks.",
+    "Keeping fire was the first skill, and it is a social one. A band that captured a lightning-struck tree had to feed the ember, carry it between camps in a bundle of smouldering fungus or dung, and shelter it from rain. Making fire came later, in two main ways. Friction methods such as the hand drill and bow drill spin a hardwood spindle in a notch of softer wood until the hot sawdust forms a coal, which is tipped into tinder and blown into flame. Percussion methods strike pyrite or, later, steel against flint to shave off fragments that oxidize so fast they glow. Both need dry tinder and patience, which is why keeping fire came so long before making it.",
+    "## The cooking hypothesis",
+    "The anthropologist Richard Wrangham argued in 2009 that cooking, not meat alone, explains the sharpest change in the human lineage. Cooking gelatinizes starch and denatures protein, so a cooked tuber or steak yields substantially more absorbable energy than the same food raw, in a fraction of the chewing time: chimpanzees chew for around six hours a day, humans for about one. Cooking also kills parasites and detoxifies many plants, which widens the menu.",
+    "The body shows the result. Compared with other apes of our size, humans have small teeth, weak jaws, a short gut and a very large brain. Both brain and gut are expensive tissue, and the biologists Leslie Aiello and Peter Wheeler proposed in 1995 that the two traded off, a smaller digestive system paying for a larger brain. Cooking is the technology that makes the trade possible. Brain size roughly doubled between early Homo erectus and modern humans, and the biggest increase comes after hearths become common. Whether fire caused the growth or merely allowed it, the lineage that cooked is the one that ended up with the brain.",
+    "## The longer day and the hearth",
+    "The second consequence was time. On the savanna the sun sets around six, and for every other primate the dark half of the day is spent asleep in a tree, out of reach of leopards. Fire pushed predators back and lit a circle of ground, adding several hours of safe waking time every night. Those hours could not be used for foraging, so they went to toolmaking, repairing and talking. The anthropologist Polly Wiessner, studying the Ju/'hoansi of the Kalahari, found that daytime talk is mostly practical and about the present, while firelight talk is mostly stories about people elsewhere and in the past. The hearth is the first place where information was stored in a group's shared memory rather than in individual heads. It also fixed a group in space: food had to come back to the fire to be cooked, which means a home base, sharing, and the first arguments about who got what.",
+    "## What fire forced in the other threads",
+    "Fire and tools fed each other. Hardening a wooden spear tip in embers, seen at Schöningen in Germany around 300,000 years ago, is the first heat treatment. Heating stone before flaking, which makes it fracture more predictably, appears by 160,000 years ago at Pinnacle Point in South Africa. Birch-bark tar, the first synthetic adhesive, used to fix stone points to shafts, requires controlled heating without oxygen. Each is a step toward the big ones later in this series: pottery, which is clay fired to about 800 degrees; copper smelting near 1,100; iron hotter still. Every furnace in the history of civilization is a hearth with better airflow.",
+    "Fire was also the first tool of force applied to a landscape. Hunter-gatherers on every continent burned grassland to drive game and encourage the regrowth herbivores prefer; Aboriginal Australians shaped a continent's ecology this way over tens of thousands of years. Changing a region's vegetation at will is a power no other animal has held, and it is the ancestor of the plough and the irrigation ditch.",
+    "## The pattern to carry forward",
+    "Fire established the template every later energy transition repeats. A new source is captured; the body or economy that uses it is reshaped around it; the time and surplus it frees go to things the old regime could not afford; and control of the source becomes a social fact that groups organize around and sometimes fight over. Coal, oil and electricity follow the same four steps."
+  ],
+  "takeaways": [
+    "Fire is the first energy source humans captured beyond their own muscles, and cooking is digestion moved outside the body.",
+    "The cooked-food surplus paid for a smaller gut and a brain that roughly doubled in size; the lineage that cooked is the one that got the brain.",
+    "Firelight added hours of safe waking time that went to toolmaking and talk, and the hearth is where shared memory began.",
+    "Heat-treated spears, heat-treated stone and birch tar are the first steps on a road that leads to kilns and furnaces.",
+    "Every later energy transition repeats fire's pattern: capture, reshape, spend the surplus, then organize around who controls the source."
+  ],
+  "names": [
+    {
+      "name": "Richard Wrangham",
+      "note": "Harvard primatologist whose 2009 book Catching Fire argued that cooking, not raw meat, drove the human lineage's small gut and large brain."
+    },
+    {
+      "name": "Leslie Aiello and Peter Wheeler",
+      "note": "Proposed the expensive-tissue hypothesis in 1995: a smaller gut paid the energy bill for a larger brain."
+    }
+  ],
+  "reading": [
+    {
+      "title": "Catching Fire: How Cooking Made Us Human",
+      "by": "Richard Wrangham"
+    },
+    {
+      "title": "The Story of Civilization, Vol. I: Our Oriental Heritage",
+      "by": "Will Durant"
+    }
+  ]
+}
