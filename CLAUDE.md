@@ -12,9 +12,10 @@ on a phone, for about ten minutes, and wants two things:
 
 1. **To know what actually changed** in the world, in AI and developer tooling,
    and in money, without wading through everything that merely happened.
-2. **To get a little wiser every day**: one mental model and one chapter of the
-   history of civilization, delivered in order, so that after a year or two the
-   pieces add up to two books they have actually read.
+2. **To get a little wiser every day**: one lesson a day, alternating between
+   a mental model and a chapter of the history of civilization, delivered in
+   order, so that over a few years the pieces add up to two books they have
+   actually read (or listened to).
 
 Not a trader, not a security team, not a journalist, not a researcher who
 needs completeness. Every rule below exists to serve those two wants. When a
@@ -138,8 +139,11 @@ The builder adds one chart to this section: Bitcoin weekly close against its 200
 
 ## The study tracks
 
-Two books delivered one piece per day, in order, that the reader can also
-browse later as a catalogue. The goal is to get a little wiser every day.
+Two books delivered **one piece per day, alternating between the tracks**,
+in order, that the reader can also browse later as a catalogue. The goal is to
+get a little wiser every day without the daily dose growing past what one
+person with little time will actually read. Lessons keep their full length;
+the pacing is what makes them sustainable.
 These are **not news**: write them from your own knowledge, following the
 syllabus. Web search is optional, for verifying a date, figure, or quotation.
 Never invent a quotation; if you cannot verify its wording, paraphrase and say
@@ -175,12 +179,15 @@ never the biography. Each chapter:
   they stick;
 - connects back to the previous chapter and sets up the next.
 
-**Picking the next lesson.** Count the files in the track's directory; the next
-lesson is syllabus entry N+1. Keep its number and title (sharpen the title if
-useful). File name `NNN-slug.json`, zero-padded, lowercase kebab-case. When
-fewer than 30 syllabus entries remain unwritten, append a new part to the
-curriculum file in the same style before writing the day's lesson. If today's
-lessons already exist, leave them alone unless asked to revise.
+**Picking today's track and lesson.** Write exactly one lesson per day. The
+track is the one with fewer lessons written so far; on a tie, Mental Models.
+(So the tracks alternate, and a missed day never breaks the pattern.) Within
+the track, count the files in its directory; the next lesson is syllabus entry
+N+1. Keep its number and title (sharpen the title if useful). File name
+`NNN-slug.json`, zero-padded, lowercase kebab-case. When fewer than 30
+syllabus entries remain unwritten, append a new part to the curriculum file in
+the same style before writing the day's lesson. If a lesson dated today
+already exists in either track, leave it alone unless asked to revise.
 
 **Length and voice.** 600–1000 words of body. Plain, concrete, neutral, the
 tone of a knowledgeable friend rather than a textbook. Short paragraphs; a `## `
@@ -195,7 +202,7 @@ worth keeping, and optionally a one-line pointer to tomorrow's topic.
 2. Read the newest three editions.
 3. Research each beat (three or more searches per beat), apply the three
    tests, and write `editions/<date>.json`.
-4. Write today's lesson in each track.
+4. Write today's lesson (one track, see above).
 5. `node fetch-btc.mjs` refreshes `data/btc-weekly.json` for the chart. It
    needs network; if it fails, the previous file is kept and the build still
    works. Commit the refreshed file with the edition.
@@ -205,7 +212,7 @@ worth keeping, and optionally a one-line pointer to tomorrow's topic.
    chromium`, or set `CHROMIUM_PATH` to an existing binary). The live charts
    do not render offline; that is expected.
 8. `git add -A && git commit -m "edition: <date>" && git push`.
-9. Report the section-by-section headline list and the two lesson titles.
+9. Report the section-by-section headline list and the lesson title.
 
 ## Edition JSON schema
 
@@ -267,10 +274,18 @@ no third-party script). Never hand-edit
 
 `track`, `n`, `date`, `title`, `part`, `summary`, `body` and `takeaways` are
 required. `part` must match the `## ` heading of the syllabus part the entry
-sits in. The builder puts the day's lessons in a compact "Lessons of the day"
+sits in. The builder puts the day's lesson in a compact "Lesson of the day"
 band on that day's edition, gives each lesson its own page under
 `docs/<track>/`, and keeps a catalogue at `docs/<track>/index.html` grouped by
 part with progress against the syllabus and the next five titles.
+
+**Audio.** Narration is not part of the routine. A GitHub Actions workflow
+(`.github/workflows/audio.yml`) runs after each push that adds a lesson,
+generates an MP3 per new lesson with a text-to-speech API, stores the files as
+assets of the `audio` GitHub release, and commits `data/audio.json`. The
+builder reads that manifest to add a player to lesson pages and to publish a
+podcast feed at `docs/podcast.xml`. The workflow needs the `OPENAI_API_KEY`
+repository secret; without it, it skips.
 
 ## Repo layout and technical notes
 

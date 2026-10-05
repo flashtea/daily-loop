@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Daily Loop · Lessons</title>
+    <link>https://flashtea.github.io/daily-loop/</link>
+    <atom:link href="https://flashtea.github.io/daily-loop/podcast.xml" rel="self" type="application/rss+xml"/>
+    <language>en</language>
+    <description>One lesson a day, narrated: mental models and the history of civilization.</description>
+    <itunes:author>Daily Loop</itunes:author>
+    <itunes:explicit>false</itunes:explicit>
+
+  </channel>
+</rss>

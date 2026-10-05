@@ -1,0 +1,116 @@
+name: Narrate new lessons
+
+# After each push that adds or changes a lesson, narrate every lesson that
+# has no MP3 yet, store the MP3s as assets of the "audio" release (keeps the
+# repository small), update data/audio.json, rebuild the site (player +
+# podcast feed) and commit. Skips entirely if OPENAI_API_KEY is not set.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "lessons/**"
+      - ".github/workflows/audio.yml"
+      - "tts.mjs"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: audio
+  cancel-in-progress: false
+
+jobs:
+  narrate:
+    runs-on: ubuntu-latest
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      TTS_VOICE: ${{ vars.TTS_VOICE || 'onyx' }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Check for API key
+        id: key
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "No OPENAI_API_KEY secret; skipping narration."
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.key.outputs.enabled == 'true'
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        if: steps.key.outputs.enabled == 'true'
+        with:
+          node-version: "22"
+
+      - name: Ensure the audio release exists
+        if: steps.key.outputs.enabled == 'true'
+        run: |
+          gh release view audio >/dev/null 2>&1 || \
+            gh release create audio --title "Lesson audio" --notes "Narrated lessons. Files are added automatically by the audio workflow." --latest=false
+
+      - name: Find lessons without audio
+        if: steps.key.outputs.enabled == 'true'
+        id: find
+        run: |
+          node - <<'EOF' >> "$GITHUB_OUTPUT"
+          const fs = require("fs");
+          let manifest = {};
+          try { manifest = JSON.parse(fs.readFileSync("data/audio.json", "utf8")); } catch {}
+          const missing = [];
+          for (const track of ["mental-models", "history"]) {
+            for (const f of fs.readdirSync(`lessons/${track}`).filter((f) => f.endsWith(".json")).sort()) {
+              const key = `${track}/${f.replace(/\.json$/, "")}`;
+              if (!manifest[key]) missing.push(`lessons/${track}/${f}`);
+            }
+          }
+          console.log(`missing=${missing.join(" ")}`);
+          console.log(`count=${missing.length}`);
+          EOF
+
+      - name: Narrate
+        if: steps.key.outputs.enabled == 'true' && steps.find.outputs.count != '0'
+        run: node tts.mjs audio-out ${{ steps.find.outputs.missing }}
+
+      - name: Upload to the audio release
+        if: steps.key.outputs.enabled == 'true' && steps.find.outputs.count != '0'
+        run: |
+          for f in audio-out/*.mp3; do
+            gh release upload audio "$f" --clobber
+          done
+
+      - name: Update manifest, rebuild site
+        if: steps.key.outputs.enabled == 'true' && steps.find.outputs.count != '0'
+        run: |
+          node - <<'EOF'
+          const fs = require("fs");
+          const repo = process.env.GITHUB_REPOSITORY;
+          let manifest = {};
+          try { manifest = JSON.parse(fs.readFileSync("data/audio.json", "utf8")); } catch {}
+          for (const r of JSON.parse(fs.readFileSync("audio-out/narrated.json", "utf8"))) {
+            const name = r.file.split("/").pop();
+            manifest[r.key] = {
+              url: `https://github.com/${repo}/releases/download/audio/${name}`,
+              bytes: fs.statSync(r.file).size,
+              seconds: r.seconds || undefined,
+            };
+          }
+          fs.mkdirSync("data", { recursive: true });
+          fs.writeFileSync("data/audio.json", JSON.stringify(manifest, null, 2) + "\n");
+          EOF
+          node build.mjs
+
+      - name: Commit
+        if: steps.key.outputs.enabled == 'true' && steps.find.outputs.count != '0'
+        run: |
+          git config user.name "daily-loop audio"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/audio.json docs
+          git diff --cached --quiet || git commit -m "audio: narrate ${{ steps.find.outputs.count }} lesson(s)"
+          git push

@@ -1,10 +1,12 @@
 # Daily Loop
 
 A personal daily newspaper for **world events · AI · software development ·
-money (macro and bitcoin)** — curated, no ads, no spam — plus two daily study tracks: a **mental
-model a day** (Munger's latticework) and a **chapter of the history of
-civilization a day** (technology-first, Durant in scope but not in length). Each
-track is also browsable as a catalogue. Hosted on GitHub Pages.
+money (macro and bitcoin)** — curated, no ads, no spam — plus one lesson a day,
+alternating between two study tracks: **mental models** (Munger's latticework)
+and the **history of civilization** (technology-first, Durant in scope but not
+in length). Each track is browsable as a catalogue, every edition is also an
+EPUB for Kindle, and lessons are narrated into a podcast feed. Hosted on GitHub
+Pages.
 
 It's a Claude "loop": you trigger Claude, Claude researches the day's news with
 web search, curates it down to what matters, writes it as structured data, and

@@ -26,17 +26,17 @@ const TRACKS = [
     slug: "mental-models",
     label: "Mental Models",
     shortLabel: "Models",
-    kicker: "Mental model of the day",
+    kicker: "Mental models, one at a time",
     unit: "lesson",
     groupLabel: "Discipline",
     blurb:
-      "A latticework of the big ideas from the big disciplines, built one model per day in the spirit of Charlie Munger. Read in order or dip in by discipline.",
+      "A latticework of the big ideas from the big disciplines, built one model at a time in the spirit of Charlie Munger. Read in order or dip in by discipline.",
   },
   {
     slug: "history",
     label: "History of Civilization",
     shortLabel: "History",
-    kicker: "History, one chapter a day",
+    kicker: "History, one chapter at a time",
     unit: "chapter",
     groupLabel: "Era",
     blurb:
@@ -136,6 +136,16 @@ function loadCurriculum(track) {
   return entries;
 }
 
+// Audio manifest written by .github/workflows/audio.yml: { "<track>/<slug>": { url, bytes, seconds? } }.
+function loadAudio() {
+  try {
+    return JSON.parse(readFileSync(join(ROOT, "data", "audio.json"), "utf8"));
+  } catch {
+    return {};
+  }
+}
+const AUDIO = loadAudio();
+
 function loadLessons(track) {
   const dir = join(LESSONS_DIR, track.slug);
   let files;
@@ -152,6 +162,7 @@ function loadLessons(track) {
     data.href = `${slug}.html`;
     data.n = Number(data.n ?? parseInt(slug, 10));
     if (!data.part) data.part = curriculum.find((c) => c.n === data.n)?.part || "";
+    data.audio = AUDIO[`${track.slug}/${slug}`] || null;
     return data;
   });
   lessons.sort((a, b) => a.n - b.n);
@@ -543,14 +554,14 @@ function renderLessonCard(track, lesson) {
         <span class="kicker">${escapeHtml(lessonKicker(track, lesson))}</span>
         <span class="lesson-card-hed">${escapeHtml(lesson.title)}</span>
         ${lesson.subtitle ? `<span class="lesson-card-sub">${inline(lesson.subtitle)}</span>` : ""}
-        <span class="more">Read the ${track.unit}</span>
+        <span class="more">Read${lesson.audio ? " or listen to" : ""} the ${track.unit}</span>
       </a>`;
 }
 
 function renderLessonBand(dayLessons) {
   if (!dayLessons.length) return "";
   return `<section class="study">
-      <h2 class="beat-label">Lessons of the day</h2>
+      <h2 class="beat-label">${dayLessons.length === 1 ? "Lesson of the day" : "Lessons of the day"}</h2>
       <div class="study-grid cols-${dayLessons.length}">
 ${dayLessons.map(({ track, lesson }) => renderLessonCard(track, lesson)).join("\n")}
       </div>
@@ -618,6 +629,11 @@ function renderLessonPage(track, lesson, prev, next, editions) {
           editionHref ? ` · <a href="${editionHref}">that day's edition</a>` : ""
         } · <a href="index.html">all ${escapeHtml(track.label.toLowerCase())}</a></p>
       </header>
+      ${
+        lesson.audio
+          ? `<figure class="listen"><figcaption>Listen</figcaption><audio controls preload="none" src="${escapeHtml(lesson.audio.url)}"></audio></figure>`
+          : ""
+      }
       ${lesson.summary ? `<p class="lesson-summary">${inline(lesson.summary)}</p>` : ""}
       <div class="lesson-body">
 ${renderBody(lesson.body)}
@@ -733,6 +749,51 @@ ${upcomingHtml}`;
     main,
     foot: footer({ base, editions, currentDate: null }),
   });
+}
+
+// ---------- podcast feed ----------
+
+const SITE_URL = "https://flashtea.github.io/daily-loop/";
+
+function renderPodcast(lessonsByTrack) {
+  const episodes = [];
+  for (const track of TRACKS) {
+    for (const l of lessonsByTrack[track.slug].lessons) {
+      if (l.audio) episodes.push({ track, lesson: l });
+    }
+  }
+  episodes.sort((a, b) => (a.lesson.date < b.lesson.date ? 1 : a.lesson.date > b.lesson.date ? -1 : b.lesson.n - a.lesson.n));
+  const items = episodes
+    .map(({ track, lesson }) => {
+      const title = `${track.label} ${lesson.n}: ${lesson.title}`;
+      const page = `${SITE_URL}${track.slug}/${lesson.href}`;
+      const pub = new Date(`${lesson.date}T06:00:00Z`).toUTCString();
+      const dur = lesson.audio.seconds ? `<itunes:duration>${Math.round(lesson.audio.seconds)}</itunes:duration>` : "";
+      return `    <item>
+      <title>${escapeHtml(title)}</title>
+      <link>${page}</link>
+      <guid isPermaLink="false">daily-loop:${track.slug}:${lesson.n}</guid>
+      <pubDate>${pub}</pubDate>
+      <description>${escapeHtml(lesson.summary || "")}</description>
+      <enclosure url="${escapeHtml(lesson.audio.url)}" length="${lesson.audio.bytes || 0}" type="audio/mpeg"/>
+      ${dur}
+    </item>`;
+    })
+    .join("\n");
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>${SITE_TITLE} · Lessons</title>
+    <link>${SITE_URL}</link>
+    <atom:link href="${SITE_URL}podcast.xml" rel="self" type="application/rss+xml"/>
+    <language>en</language>
+    <description>One lesson a day, narrated: mental models and the history of civilization.</description>
+    <itunes:author>Daily Loop</itunes:author>
+    <itunes:explicit>false</itunes:explicit>
+${items}
+  </channel>
+</rss>
+`;
 }
 
 // ---------- archive page ----------
@@ -1015,6 +1076,9 @@ a { color: inherit; }
 .lesson-sub { font-family: var(--serif); font-style: italic; font-size: clamp(17px, 2vw, 21px); color: var(--muted); margin: 12px 0 0; }
 .lesson-meta { margin: 14px 0 0; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 .lesson-meta a { color: var(--muted); }
+.listen { margin: 20px 0 0; }
+.listen figcaption { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--study); margin-bottom: 6px; }
+.listen audio { width: 100%; }
 .lesson-summary {
   font-family: var(--serif); font-size: clamp(17px, 2vw, 20px); line-height: 1.5; color: #2a2c31;
   margin: 24px 0 8px; padding-left: 16px; border-left: 3px solid var(--study);
@@ -1171,6 +1235,7 @@ function build() {
     );
   }
   writeFileSync(join(OUT_DIR, "archive.html"), renderArchive(editions));
+  writeFileSync(join(OUT_DIR, "podcast.xml"), renderPodcast(lessonsByTrack));
 
   // Kindle edition of the latest paper (docs/kindle/<date>.epub + latest.epub).
   const latest = editions[0];

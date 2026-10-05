@@ -1,5 +1,5 @@
 ---
-description: Research, curate, and publish today's Daily Loop edition plus the day's two lessons
+description: Research, curate, and publish today's Daily Loop edition plus the day's lesson
 ---
 
 Produce today's **Daily Loop** edition by following `CLAUDE.md` exactly. It is
@@ -18,9 +18,9 @@ In short:
    this reader, it lasts). 0–4 items per section; zero is fine. Mandatory
    one-sentence `why`. Primary sources. `ahead` entries for verified upcoming
    events. Exactly one `lead`.
-4. Write the next lesson in each study track per the syllabus
-   (`curriculum/*.md`), extending a syllabus first if fewer than 30 entries
-   remain.
+4. Write one lesson: in the track with fewer lessons written (tie: Mental
+   Models), the next syllabus entry (`curriculum/*.md`), extending the
+   syllabus first if fewer than 30 entries remain.
 5. `node fetch-btc.mjs` (tolerates failure), then `node build.mjs`.
 6. Commit as `edition: <today>` and push to `main`.
-7. Report the section-by-section headline list and the two lesson titles.
+7. Report the section-by-section headline list and the lesson title.
