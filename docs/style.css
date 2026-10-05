@@ -159,6 +159,19 @@ a { color: inherit; }
 }
 .more::after { content: " →"; }
 
+.tick { color: #2e7d32; font-weight: 700; letter-spacing: 0.06em; }
+.lesson-card.is-read { border-left-color: #2e7d32; opacity: 0.85; }
+.catchup {
+  margin: 14px 0 0; font-size: 13px; color: var(--muted);
+  display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: baseline;
+}
+.catchup-label { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--study); }
+.catchup a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
+.catchup a:hover { color: var(--study); border-bottom-color: var(--study); }
+.catchup-more { color: var(--faint); }
+.cat-row.is-read .cat-title { color: var(--muted); }
+.continue { color: var(--ink); font-weight: 700; }
+
 /* Lesson page */
 .lesson { max-width: 72ch; margin: 0 auto; padding: 26px 0 10px; }
 .lesson-head { text-align: center; padding-bottom: 22px; border-bottom: 4px double var(--line-strong); }

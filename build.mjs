@@ -146,6 +146,18 @@ function loadAudio() {
 }
 const AUDIO = loadAudio();
 
+// Reading progress, kept in the repo (data/progress.json) and updated when the
+// reader says what they have read: { "read": ["<track>/<slug>", ...] }.
+function loadProgress() {
+  try {
+    const d = JSON.parse(readFileSync(join(ROOT, "data", "progress.json"), "utf8"));
+    return new Set(Array.isArray(d.read) ? d.read : []);
+  } catch {
+    return new Set();
+  }
+}
+const READ = loadProgress();
+
 function loadLessons(track) {
   const dir = join(LESSONS_DIR, track.slug);
   let files;
@@ -163,6 +175,7 @@ function loadLessons(track) {
     data.n = Number(data.n ?? parseInt(slug, 10));
     if (!data.part) data.part = curriculum.find((c) => c.n === data.n)?.part || "";
     data.audio = AUDIO[`${track.slug}/${slug}`] || null;
+    data.read = READ.has(`${track.slug}/${slug}`);
     return data;
   });
   lessons.sort((a, b) => a.n - b.n);
@@ -550,21 +563,41 @@ function lessonKicker(track, lesson) {
 // Deliberately compact: title and subtitle only, the lesson page has the rest.
 function renderLessonCard(track, lesson) {
   const href = `${track.slug}/${lesson.href}`;
-  return `<a class="lesson-card" href="${href}">
-        <span class="kicker">${escapeHtml(lessonKicker(track, lesson))}</span>
+  return `<a class="lesson-card${lesson.read ? " is-read" : ""}" href="${href}">
+        <span class="kicker">${escapeHtml(lessonKicker(track, lesson))}${lesson.read ? ' <span class="tick">✓ read</span>' : ""}</span>
         <span class="lesson-card-hed">${escapeHtml(lesson.title)}</span>
         ${lesson.subtitle ? `<span class="lesson-card-sub">${inline(lesson.subtitle)}</span>` : ""}
         <span class="more">Read${lesson.audio ? " or listen to" : ""} the ${track.unit}</span>
       </a>`;
 }
 
-function renderLessonBand(dayLessons) {
+function renderLessonBand(dayLessons, lessonsByTrack, isIndex) {
   if (!dayLessons.length) return "";
+  const todayKeys = new Set(dayLessons.map(({ track, lesson }) => `${track.slug}/${lesson.slug}`));
+  // On the front page, list what is still unread (oldest first), so a missed
+  // day is one tap away instead of lost in the catalogue.
+  const unread = isIndex
+    ? TRACKS.flatMap((track) =>
+        (lessonsByTrack[track.slug]?.lessons || [])
+          .filter((l) => !l.read && !todayKeys.has(`${track.slug}/${l.slug}`))
+          .map((l) => ({ track, lesson: l })),
+      ).sort((a, b) => (a.lesson.date < b.lesson.date ? -1 : a.lesson.date > b.lesson.date ? 1 : 0))
+    : [];
+  const unreadHtml = unread.length
+    ? `<p class="catchup"><span class="catchup-label">Still unread</span>${unread
+        .slice(0, 6)
+        .map(
+          ({ track, lesson }) =>
+            `<a href="${track.slug}/${lesson.href}">${escapeHtml(track.unit === "chapter" ? "Ch." : "No.")} ${lesson.n} · ${escapeHtml(lesson.title)}</a>`,
+        )
+        .join("")}${unread.length > 6 ? `<span class="catchup-more">and ${unread.length - 6} more</span>` : ""}</p>`
+    : "";
   return `<section class="study">
       <h2 class="beat-label">${dayLessons.length === 1 ? "Lesson of the day" : "Lessons of the day"}</h2>
       <div class="study-grid cols-${dayLessons.length}">
 ${dayLessons.map(({ track, lesson }) => renderLessonCard(track, lesson)).join("\n")}
       </div>
+      ${unreadHtml}
     </section>`;
 }
 
@@ -625,7 +658,7 @@ function renderLessonPage(track, lesson, prev, next, editions) {
         <p class="kicker">${escapeHtml(lessonKicker(track, lesson))}</p>
         <h1 class="lesson-title">${escapeHtml(lesson.title)}</h1>
         ${lesson.subtitle ? `<p class="lesson-sub">${inline(lesson.subtitle)}</p>` : ""}
-        <p class="lesson-meta">${escapeHtml(mediumDate(lesson.date))}${
+        <p class="lesson-meta">${lesson.read ? '<span class="tick">✓ read</span> · ' : ""}${escapeHtml(mediumDate(lesson.date))}${
           editionHref ? ` · <a href="${editionHref}">that day's edition</a>` : ""
         } · <a href="index.html">all ${escapeHtml(track.label.toLowerCase())}</a></p>
       </header>
@@ -670,8 +703,10 @@ function renderCatalogue(track, lessons, curriculum, editions) {
   const base = "../";
   const total = curriculum.length ? Math.max(curriculum.length, lessons.length) : lessons.length;
   const written = lessons.length;
-  const pct = total ? Math.round((written / total) * 100) : 0;
+  const readCount = lessons.filter((l) => l.read).length;
+  const pct = total ? Math.round((readCount / total) * 100) : 0;
   const latest = lessons[lessons.length - 1];
+  const nextUnread = lessons.find((l) => !l.read);
 
   // Group written lessons by part, preserving first-seen order.
   const groups = new Map();
@@ -688,8 +723,8 @@ function renderCatalogue(track, lessons, curriculum, editions) {
         <ol class="cat-list">
 ${ls
   .map(
-    (l) => `          <li class="cat-row">
-            <span class="cat-n">${unitCap} ${l.n}</span>
+    (l) => `          <li class="cat-row${l.read ? " is-read" : ""}">
+            <span class="cat-n">${unitCap} ${l.n}${l.read ? ' <span class="tick">✓</span>' : ""}</span>
             <div class="cat-main">
               <a class="cat-title" href="${l.href}">${escapeHtml(l.title)}</a>
               ${l.subtitle ? `<span class="cat-sub">${inline(l.subtitle)}</span>` : ""}
@@ -726,11 +761,15 @@ ${upcoming
       <p class="kicker">${escapeHtml(track.kicker)}</p>
       <h1 class="cat-title-big">${escapeHtml(track.label)}</h1>
       <p class="cat-blurb">${escapeHtml(track.blurb)}</p>
-      <div class="progress" role="img" aria-label="${written} of ${total} written">
+      <div class="progress" role="img" aria-label="${readCount} of ${total} read">
         <div class="progress-bar" style="width:${pct}%"></div>
       </div>
-      <p class="progress-label">${written} of ${total} ${track.unit}s written${
-        latest ? ` · latest: <a href="${latest.href}">${escapeHtml(latest.title)}</a>` : ""
+      <p class="progress-label">${readCount} read · ${written} written · ${total} planned${
+        nextUnread
+          ? ` · <a class="continue" href="${nextUnread.href}">continue: ${unitCap} ${nextUnread.n}, ${escapeHtml(nextUnread.title)}</a>`
+          : latest
+            ? ` · all read, next ${track.unit} arrives with the loop`
+            : ""
       }</p>
     </section>
 ${written ? groupsHtml : `<p class="empty-note">No ${track.unit}s yet. The next daily loop writes the first one.</p>`}
@@ -744,7 +783,7 @@ ${upcomingHtml}`;
     head: masthead({
       base,
       activeNav: track.slug,
-      dateline: `<span>${escapeHtml(track.label)}</span><span>${written} ${track.unit}${written === 1 ? "" : "s"}</span>`,
+      dateline: `<span>${escapeHtml(track.label)}</span><span>${readCount} of ${written} ${track.unit}${written === 1 ? "" : "s"} read</span>`,
     }),
     main,
     foot: footer({ base, editions, currentDate: null }),
@@ -898,7 +937,7 @@ function renderPage(edition, editions, isIndex, lessonsByTrack) {
       activeNav: isIndex ? "today" : "",
       dateline: `<span>${escapeHtml(longDate(edition.date))}</span><span>No. ${editions.length} · ${counts.join(" · ")}</span>`,
     }),
-    main: `${renderLessonBand(dayLessons)}
+    main: `${renderLessonBand(dayLessons, lessonsByTrack, isIndex)}
 ${sections}`,
     foot: footer({ base: "", editions, currentDate: edition.date }),
   });
@@ -1064,6 +1103,19 @@ a { color: inherit; }
   text-decoration: none; color: var(--study);
 }
 .more::after { content: " \u2192"; }
+
+.tick { color: #2e7d32; font-weight: 700; letter-spacing: 0.06em; }
+.lesson-card.is-read { border-left-color: #2e7d32; opacity: 0.85; }
+.catchup {
+  margin: 14px 0 0; font-size: 13px; color: var(--muted);
+  display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: baseline;
+}
+.catchup-label { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--study); }
+.catchup a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
+.catchup a:hover { color: var(--study); border-bottom-color: var(--study); }
+.catchup-more { color: var(--faint); }
+.cat-row.is-read .cat-title { color: var(--muted); }
+.continue { color: var(--ink); font-weight: 700; }
 
 /* Lesson page */
 .lesson { max-width: 72ch; margin: 0 auto; padding: 26px 0 10px; }

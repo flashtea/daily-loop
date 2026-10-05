@@ -279,6 +279,14 @@ band on that day's edition, gives each lesson its own page under
 `docs/<track>/`, and keeps a catalogue at `docs/<track>/index.html` grouped by
 part with progress against the syllabus and the next five titles.
 
+**Reading progress.** `data/progress.json` lists the lessons the reader has
+finished, as `"<track>/<slug>"` keys. The builder marks them in the catalogues
+(tick, read counter, a "continue" link to the first unread), and the front page
+lists what is still unread. **The daily routine never touches this file.** It
+changes only when the reader says what they have read ("I read the map is not
+the territory but not the first tools"): then add or remove the keys, rebuild,
+and push.
+
 **Audio.** Narration is not part of the routine. A GitHub Actions workflow
 (`.github/workflows/audio.yml`) runs after each push that adds a lesson,
 generates an MP3 per new lesson with a text-to-speech API, stores the files as
@@ -295,6 +303,8 @@ lessons/mental-models/NNN-slug.json   one mental-model lesson per day
 lessons/history/NNN-slug.json         one history chapter per day
 curriculum/<track>.md                 the ordered syllabus each track follows
 data/btc-weekly.json                  weekly Bitcoin closes for the chart (fetch-btc.mjs)
+data/progress.json                    lessons the reader has finished (edited on request)
+data/audio.json                       narration manifest (written by the audio workflow)
 build.mjs                             renders everything into docs/ (zero deps)
 fetch-btc.mjs                         refreshes the price data (needs network)
 preview.mjs                           dev-only screenshots
