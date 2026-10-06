@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-06",
+  "sections": [
+    {
+      "title": "World",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Saudi Arabia, Turkey and Pakistan invoked the Mecca defence pact for the first time and agreed to deploy forces to Saudi Arabia",
+          "summary": "After an emergency meeting of the three countries' defence and foreign ministers in Riyadh on Monday, Saudi Defence Minister Khalid bin Salman said the committee had agreed to activate collective deterrence measures in response to Houthi attacks on Saudi cities and energy installations. A joint statement published by Pakistan's foreign ministry said the three would provide the agreed military forces and capabilities and ensure their rapid deployment to Saudi Arabia; it gave no numbers or timetable. The Mecca Alliance for Defence was signed on August 7 and treats an attack on any member as an attack on all.",
+          "why": "A NATO-style clause has now been triggered on the Red Sea front and brings in a NATO member and a nuclear-armed state, so treat the Yemen war as a multi-country war, not a Saudi-Houthi exchange.",
+          "source": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/5/mecca-alliance-agrees-to-activate-collective-deterrence-measures"
+        },
+        {
+          "headline": "Yemen's government forces reported retaking Mocha and positions on the Bab al-Mandeb Strait from the Houthis",
+          "summary": "The internationally recognised government's military said on Monday that the Giants Brigades and National Shield Forces had regained the port city of Mocha, the Dhubab district and key positions overlooking the strait, which the Houthis had seized in mid-September. Coalition spokesman Major General Turki al-Maliki said 100 fighter jets were supporting the offensive and had destroyed hundreds of Houthi targets; Al Jazeera could not independently verify the battlefield claims.",
+          "why": "If the gains hold, the shipping route that bypasses Hormuz has changed hands back within three weeks, so the Red Sea risk premium rests on whether the coalition can keep the coast, not on Houthi control of it.",
+          "source": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/5/yemen-forces-claim-to-seize-dhubab-sites-near-bab-al-mandeb-from-houthis",
+          "follow_up": "2026-10-05"
+        },
+        {
+          "headline": "Spain's Pedro Sánchez called a snap general election for November 29 after parliament rejected his housing measures",
+          "summary": "Sánchez announced the early vote on Monday after his minority government lost a parliamentary vote on housing-relief decrees, following nationwide protests over housing costs. He has governed for eight years across three terms without a majority; polls put a coalition of the conservative People's Party and Vox ahead, which would be the first time a far-right party entered Spain's central government since Franco.",
+          "why": "The euro area's fourth-largest economy now faces an eight-week campaign at the same time as France's debt strain, so expect euro and periphery-bond volatility to persist through November rather than fade.",
+          "source": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/5/spanish-prime-minister-pedro-sanchez-announces-snap-election"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-25",
+          "what": "Brazil presidential runoff, Lula vs Flávio Bolsonaro",
+          "url": "https://www.cnbc.com/2026/10/04/brazil-presidential-election-lula-bolsonaro.html"
+        },
+        {
+          "date": "2026-10-27",
+          "what": "Israel Knesset election (120 seats, 3.25% threshold)",
+          "url": "https://www.aljazeera.com/news/2026/7/12/israel-to-hold-national-elections-on-october-27-parliament-says"
+        },
+        {
+          "date": "2026-11-03",
+          "what": "US midterm elections: all 435 House seats, 35 Senate seats, 39 governorships",
+          "url": "https://bipartisanpolicy.org/article/the-2026-midterms-key-dates-and-events/"
+        },
+        {
+          "date": "2026-11-29",
+          "what": "Spain snap general election",
+          "url": "https://www.aljazeera.com/news/2026/10/5/spanish-prime-minister-pedro-sanchez-announces-snap-election"
+        }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [],
+      "ahead": [
+        {
+          "date": "2026-10-28",
+          "what": "GitHub Universe 2026, San Francisco (28–29 Oct)",
+          "url": "https://github.blog/news-insights/company-news/your-guide-to-github-universe-2026-is-here-the-schedule-just-launched/"
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [],
+      "ahead": [
+        {
+          "date": "2026-10-09",
+          "what": "Python 3.15.0 final release (PEP 790 schedule)",
+          "url": "https://peps.python.org/pep-0790/"
+        },
+        {
+          "date": "2026-10-28",
+          "what": "Node.js 26 enters LTS; Node.js 27 alpha opens under the new one-release-a-year schedule",
+          "url": "https://nodejs.org/en/blog/announcements/evolving-the-nodejs-release-schedule"
+        },
+        {
+          "date": "2026-10-29",
+          "what": "PostgreSQL 19 general availability (RC1 on 15 Oct)",
+          "url": "https://www.mail-archive.com/pgsql-hackers@lists.postgresql.org/msg240353.html"
+        }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [
+        {
+          "headline": "The euro fell to a 17-month low of $1.116 as the French-German 10-year spread reached its widest since the 2011 debt crisis",
+          "summary": "The euro dropped as much as 0.8% on Monday to its weakest level since May 2025, after French 10-year yields hit their highest since 2002 on Friday and the gap over German Bunds widened to nearly 160 basis points, the largest since 2011; the spread's 34-basis-point weekly rise was the biggest in 17 years. Investors cited doubts that France can cut its deficit before the 2027 presidential election, and Spain's snap election added a second political risk on the same day.",
+          "why": "A euro-area sovereign spread at 2011 levels makes a French downgrade on October 23 or an ECB intervention a live scenario, so size any euro or European bond exposure for that rather than for a quiet quarter.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/10/05/euro-dollar-spain-france-risk.html"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-10",
+          "what": "Bitcoin Core 32.0 scheduled release: new mempool-aware fee estimator, parallel block validation, PSBT v2 default",
+          "url": "https://www.coindesk.com/tech/2026/09/16/bitcoin-core-32-enters-final-testing-with-faster-validation-fee-changes-and-security-fixes"
+        },
+        {
+          "date": "2026-10-14",
+          "what": "US CPI for September (BLS, 08:30 ET)",
+          "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+        },
+        {
+          "date": "2026-10-23",
+          "what": "Moody's scheduled review of France's Aa3 rating (negative outlook)"
+        },
+        {
+          "date": "2026-10-28",
+          "what": "FOMC rate decision (two-day meeting ends)",
+          "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+        }
+      ]
+    }
+  ]
+}
