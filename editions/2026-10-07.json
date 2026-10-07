@@ -1,0 +1,126 @@
+{
+  "date": "2026-10-07",
+  "sections": [
+    {
+      "title": "World",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Kenya confirmed its first Ebola case as the DR Congo Bundibugyo outbreak passed 8,600 cases and 4,100 deaths",
+          "summary": "Health Secretary Aden Duale said on Monday that a Kenyan who had lived in the Democratic Republic of the Congo for seven years, had been ill for about a month, travelled by road to Kampala and flew to Nairobi on Saturday tested positive and died overnight; 28 contacts and 27 people from the flight are being traced and isolated for 21 days. The outbreak, declared on May 15 and caused by the Bundibugyo species, for which no licensed vaccine exists, stood at 8,603 confirmed cases and 4,148 deaths in the DRC as of October 4, the second-largest Ebola outbreak on record, and the WHO says it is on track to surpass the 2014–16 West Africa epidemic.",
+          "why": "A 48%-fatality virus with no vaccine has now reached a hub airport city by commercial flight, so expect travel screening, airline and East African trade disruptions to run into 2027 rather than fade with the rainy season.",
+          "source": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/6/kenya-confirms-first-ebola-case-after-patient-from-dr-congo-dies-in-nairobi"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-25",
+          "what": "Brazil presidential runoff, Lula vs Flávio Bolsonaro",
+          "url": "https://www.cnbc.com/2026/10/04/brazil-presidential-election-lula-bolsonaro.html"
+        },
+        {
+          "date": "2026-10-27",
+          "what": "Israel Knesset election (120 seats, 3.25% threshold)",
+          "url": "https://www.aljazeera.com/news/2026/7/12/israel-to-hold-national-elections-on-october-27-parliament-says"
+        },
+        {
+          "date": "2026-11-03",
+          "what": "US midterm elections: all 435 House seats, 35 Senate seats, 39 governorships",
+          "url": "https://bipartisanpolicy.org/article/the-2026-midterms-key-dates-and-events/"
+        },
+        {
+          "date": "2026-11-29",
+          "what": "Spain snap general election",
+          "url": "https://www.aljazeera.com/news/2026/10/5/spanish-prime-minister-pedro-sanchez-announces-snap-election"
+        }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [],
+      "ahead": [
+        {
+          "date": "2026-10-28",
+          "what": "GitHub Universe 2026, San Francisco (28–29 Oct)",
+          "url": "https://github.blog/news-insights/company-news/your-guide-to-github-universe-2026-is-here-the-schedule-just-launched/"
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Mistral opened API access to Mistral Large 4, a 1-trillion-parameter model with 49 billion active, and set an open-weights release for the end of October",
+          "summary": "The mixture-of-experts model, trained from scratch in about two months on roughly 4,000 Nvidia Grace Blackwell GPUs in Mistral's European data centres, is multimodal for text and images and is priced at $1.36 per million input tokens and $4.18 per million output tokens in preview through Mistral Studio. Mistral reports 61.7% on DeepSWE v1.1 and 59.4% on SWE-Atlas-QnA and calls it the best open-weight model from the US or Europe on aggregated benchmarks; a less restricted build goes to vetted cybersecurity firms and government agencies. Reflection AI announced its own 501-billion-parameter open-weight model, Beam, the day before, also with weights due this month.",
+          "why": "By November there should be two Western trillion-class open-weight models you can run on your own hardware at a fraction of frontier API prices, so the self-hosting case for agent backends is worth re-costing now rather than next year.",
+          "source": "Mistral AI",
+          "url": "https://mistral.ai/news/mistral-large-4"
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "mold 3.0.0 shipped as a complete rewrite of the linker in Rust, a drop-in replacement for the last C++ release",
+          "summary": "Rui Ueyama released the first Rust version of the high-speed ELF linker on October 5, built with Cargo instead of CMake, dropping the oneTBB dependency and statically linking mimalloc by default. It accepts the same command-line options and targets as 2.42.1 at the same speed, was tested against Gentoo's package set with no regressions reported, and replaces segmentation faults on corrupted inputs with bounds-checked panics; the stated goal of the rewrite is full GNU ld linker-script compatibility so distributions can make mold their default linker.",
+          "why": "If mold is your linker, 3.0 should be a transparent upgrade, but it is a new codebase, so test it in CI before pinning and expect the first point releases to be fixes.",
+          "source": "mold release notes",
+          "url": "https://github.com/rui314/mold/releases/tag/v3.0.0"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-09",
+          "what": "Python 3.15.0 final release (PEP 790 schedule)",
+          "url": "https://peps.python.org/pep-0790/"
+        },
+        {
+          "date": "2026-10-28",
+          "what": "Node.js 26 enters LTS; Node.js 27 alpha opens under the new one-release-a-year schedule",
+          "url": "https://nodejs.org/en/blog/announcements/evolving-the-nodejs-release-schedule"
+        },
+        {
+          "date": "2026-10-29",
+          "what": "PostgreSQL 19 general availability (RC1 on 15 Oct)",
+          "url": "https://www.mail-archive.com/pgsql-hackers@lists.postgresql.org/msg240353.html"
+        }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [
+        {
+          "headline": "The 10-year Treasury yield rose to 5.349%, its highest since April 2002, and the 30-year to 5.7%",
+          "summary": "Long-dated yields jumped about 7 basis points on Monday ahead of Wednesday's release of the minutes of the Federal Reserve's September meeting, after Friday's weak jobs report had briefly pulled them lower; the 10-year is up more than 110 basis points this year on federal deficit supply, heavy corporate issuance and the risk of a further Fed hike. Yields eased a few basis points on Tuesday as oil fell.",
+          "why": "A 5.35% ten-year is a new 24-year high reached while the Fed is on hold, so treat long-duration bonds and rate-sensitive equities as still repricing to a higher term premium rather than bottoming.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/10/05/treasury-yields-bonds-fed-rates.html",
+          "follow_up": "2026-10-03"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-10",
+          "what": "Bitcoin Core 32.0 scheduled release: new mempool-aware fee estimator, parallel block validation, PSBT v2 default",
+          "url": "https://www.coindesk.com/tech/2026/09/16/bitcoin-core-32-enters-final-testing-with-faster-validation-fee-changes-and-security-fixes"
+        },
+        {
+          "date": "2026-10-14",
+          "what": "US CPI for September (BLS, 08:30 ET)",
+          "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+        },
+        {
+          "date": "2026-10-23",
+          "what": "Moody's scheduled review of France's Aa3 rating (negative outlook)"
+        },
+        {
+          "date": "2026-10-28",
+          "what": "FOMC rate decision (two-day meeting ends)",
+          "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+        }
+      ]
+    }
+  ]
+}
