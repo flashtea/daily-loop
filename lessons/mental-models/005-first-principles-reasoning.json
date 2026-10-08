@@ -1,0 +1,60 @@
+{
+  "track": "mental-models",
+  "n": 5,
+  "date": "2026-10-08",
+  "title": "First-principles reasoning",
+  "subtitle": "Reason from what you know to be true, not from what everyone else does, and know when borrowing is the smarter move",
+  "part": "Part I — Tools for thinking",
+  "summary": "First-principles reasoning means taking a problem apart until you reach facts you actually know to be true, then building the answer up from those, instead of copying what similar things cost or how similar things are done. It is the tool that finds ten-fold improvements, and it is expensive, so most of the skill is knowing when analogy is the better bet.",
+  "body": [
+    "Most of what we believe about how things should be done, we believe by analogy. A rocket costs what rockets have cost. A feature ships in a quarter because features ship in quarters. Reasoning by analogy is fast and usually right, which is why we do it all day. First-principles reasoning is the deliberate refusal to do it for a while: you take the question apart until you reach things you know to be true on their own, physical constants, prices of raw inputs, what a customer actually said, what the law actually states, and then rebuild the answer from those parts only.",
+    "The name is old. Aristotle called them *archai*, the first things: the premises from which a subject is demonstrated and which cannot be derived from anything more basic. In physics they are conservation laws and material properties; in a business, input costs and what people will pay; in a software system, latency, bandwidth, memory and what the computation actually requires. The phrase's modern popularity owes much to Elon Musk, who has described the method in interviews as boiling a problem down to its fundamental truths and reasoning up from there, and who credits it for the cost estimates behind SpaceX and Tesla.",
+    "## Two cases",
+    "The rocket is the famous one. In the early 2000s a launch to orbit cost tens of millions of dollars, and the analogy said that was simply what rockets cost. Musk's team instead priced the raw materials, aerospace-grade aluminium, titanium, copper, carbon fibre, and found they came to a small fraction of the finished price, by his account around two percent. The gap was not physics; it was how rockets were built, bought and thrown away. That one piece of arithmetic is the whole argument for building them differently and landing them. The same move produced his battery estimate: not \"packs cost $600 a kilowatt-hour\" but \"what do lithium, cobalt, nickel and aluminium cost on the metals exchange per kilowatt-hour of cell?\", a number several times lower and a target to drive towards.",
+    "Software gives a quieter example. A team decides their reporting job is slow and that the fix is a cluster, because that is what large data jobs run on. A first-principles pass asks how much data there is (a few gigabytes), how fast one machine reads it from disk (gigabytes a second), and how much arithmetic the report needs (trivial). The job should take seconds on a laptop; the slowness is in the code. Engineers who estimate from bytes and nanoseconds rather than from what the last project used find the order-of-magnitude wins; the others buy the cluster and get a slightly faster slow job.",
+    "## How to actually do it",
+    "Three steps. First, write down the assumption you are about to inherit (\"this costs X\", \"this needs a database\"). Second, ask what it is made of, and keep asking until you hit something you can verify directly: a price list, a measurement, a law of nature, a statement from the person who will pay. Third, rebuild from those pieces and compare with the inherited number. A small gap means the analogy was fine and you lost an hour. A large gap is the finding, and the next question is what, specifically, consumes the difference.",
+    "The second step is where people stop early. \"The vendor charges this\" is not a first principle; it is someone else's analogy, and so is \"the benchmark says\". You are at bedrock when the premise cannot be reduced further without leaving your competence.",
+    "## The failure mode",
+    "First-principles reasoning fails in two directions. The first is cost. Deriving everything from scratch is slow, and most of the time analogy would have given the same answer. A company that insists on it for every decision never ships. Analogy is how a civilisation stores answers so that individuals need not recompute them; refusing the store entirely is not rigour, it is waste.",
+    "The second is more dangerous: reasoning confidently from the wrong fundamentals. The rocket arithmetic worked because material cost really is the floor for a mass-produced object. The same arithmetic applied to drug development, where the floor is set by biology and by how many candidates fail, produces a fantasy. Over-application has a sound: an elegant chain of logic from premises that are not true, contempt for precedent as the thinking of people who never questioned anything, and repeated surprise at failure modes any practitioner could have named. Chesterton's fence, later in this series, is the corrective: the thing everybody does is often there for a reason you have not found yet.",
+    "So when is analogy the better tool? When the reference class is large and the thing you are doing is ordinary. For a kitchen renovation, the hundred renovations that overran are better evidence than your bottom-up plan, because your plan omits exactly what made them overrun. Use first principles where the gap between inherited cost and physical floor is suspiciously large, or where you intend something nobody has done; use analogy where the activity is routine and the record is long.",
+    "## A habit for tomorrow",
+    "Pick one number you are about to accept this week, a quote, an estimate, a budget line, and spend ten minutes asking what it is made of. Write the components and the cost of each from a source you trust, then compare the total with the quote. Usually they roughly match and you stop; the habit pays for itself on the one time in ten they differ by a factor of five.",
+    "## Connections",
+    "This is the map-and-territory lesson applied to inherited answers: an analogy is a map someone else drew, and first principles is walking the ground yourself. It depends on the circle of competence, because premises are only first principles if you can verify them. It pairs with inversion: having built the number up, ask what would have to be false for it to be wrong. And it opens a tension that runs through the whole latticework, between bottom-up reasoning that finds the exceptional case and base-rate reasoning that protects you in the ordinary one; later lessons on probabilistic thinking, the outside view and Chesterton's fence are about managing it.",
+    "Tomorrow: second-order thinking, or the habit of asking \"and then what?\""
+  ],
+  "takeaways": [
+    "Analogy copies what similar things cost or how they are done; first principles takes the question apart until it reaches facts you can verify yourself, then rebuilds from those.",
+    "The method's value is in the gap: when the rebuilt number is far below the inherited one, what consumes the difference is the opportunity.",
+    "You are at bedrock only when the premise cannot be reduced further without leaving your competence; a vendor's price and a benchmark are someone else's analogies.",
+    "Over-application looks like elegant logic from false premises and contempt for precedent; the activity being routine, with a long record, is the signal to use analogy instead.",
+    "Habit: once a week, take one number you are about to accept and spend ten minutes pricing its components from sources you trust."
+  ],
+  "names": [
+    {
+      "name": "Aristotle",
+      "note": "Greek philosopher (384–322 BC) who defined first principles, archai, as the premises from which a subject is demonstrated and which cannot be derived from anything more basic."
+    },
+    {
+      "name": "Elon Musk",
+      "note": "Made the phrase current by describing the method in interviews as reasoning up from fundamental truths rather than by analogy, and applying it to the material cost of rockets and battery packs."
+    }
+  ],
+  "reading": [
+    {
+      "title": "Metaphysics, Book I, and Posterior Analytics",
+      "by": "Aristotle"
+    },
+    {
+      "title": "The Cook and the Chef: Musk's Secret Sauce",
+      "by": "Tim Urban, Wait But Why, 2015",
+      "url": "https://waitbutwhy.com/2015/11/the-cook-and-the-chef-musks-secret-sauce.html"
+    },
+    {
+      "title": "Poor Charlie's Almanack",
+      "by": "Peter Kaufman (ed.)"
+    }
+  ]
+}

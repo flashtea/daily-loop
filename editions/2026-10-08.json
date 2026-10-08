@@ -1,0 +1,154 @@
+{
+  "date": "2026-10-08",
+  "sections": [
+    {
+      "title": "World",
+      "items": [
+        {
+          "headline": "Drones sank a cargo ship and set a second ablaze inside Bulgaria's Black Sea economic zone, and Bulgaria ended the search for 10 missing crew",
+          "summary": "The Togo-flagged, Turkish-owned Alfa Watan was struck at about 3am on Tuesday roughly 70 nautical miles east of Byala, on its way to the Romanian port of Sulina, and sank; rescuers found three life rafts and an overturned lifeboat but none of its 10 crew, and the search was called off at 5pm. A second Turkish-owned ship, the grain carrier Able, was hit by a sea drone in the stern and caught fire; all 18 of its crew were rescued. Prime Minister Rumen Radev said it was not yet known whether the drones were Russian or Ukrainian, and President Iliana Iotova convened the national security council; officials described it as the first attack on shipping in Bulgaria's exclusive economic zone.",
+          "why": "Merchant ships have now been sunk in the waters of an EU and NATO member for the first time in the Ukraine war, so treat Black Sea grain and fuel routes out of Romania and Bulgaria as carrying a war-risk premium rather than a safe western corridor.",
+          "source": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/7/bulgaria-ends-search-for-missing-crew-after-drone-strike-sinks-cargo-ship"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-25",
+          "what": "Brazil presidential runoff, Lula vs Flávio Bolsonaro",
+          "url": "https://www.cnbc.com/2026/10/04/brazil-presidential-election-lula-bolsonaro.html"
+        },
+        {
+          "date": "2026-10-27",
+          "what": "Israel Knesset election (120 seats, 3.25% threshold)",
+          "url": "https://www.aljazeera.com/news/2026/7/12/israel-to-hold-national-elections-on-october-27-parliament-says"
+        },
+        {
+          "date": "2026-11-03",
+          "what": "US midterm elections: all 435 House seats, 35 Senate seats, 39 governorships",
+          "url": "https://bipartisanpolicy.org/article/the-2026-midterms-key-dates-and-events/"
+        },
+        {
+          "date": "2026-11-29",
+          "what": "Spain snap general election",
+          "url": "https://www.aljazeera.com/news/2026/10/5/spanish-prime-minister-pedro-sanchez-announces-snap-election"
+        }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Anthropic released Claude Haiku 5.5 at $0.10 per million input tokens, about 75% cheaper to run than Haiku 4.5",
+          "summary": "Prompts up to 100,000 tokens cost $0.10 per million input and $0.50 per million output tokens, against $1 and $5 for Haiku 4.5; longer prompts cost $0.50 and $2.50. Anthropic reports 39.2% on Terminal-Bench 4.0 (Haiku 4.5 scored 0.0%), 72.4% on the OSWorld 2.1 computer-use subset (15.7%) and 46.4% on FrontierCode 1.1, says it is the first Haiku with an adjustable effort setting, and recommends it for compaction, summarisation, classification and subagent work alongside Opus 5.5 and Sonnet 5.5, which it still recommends for complex agentic coding. A new tokenizer uses slightly more tokens per task; the model is on the Claude Platform, AWS, Google Cloud and Microsoft Foundry, and GitHub added it to Copilot the same day.",
+          "why": "A small model that can finish agentic terminal tasks at a tenth of the old price changes the arithmetic for subagents and bulk code chores, so point your cheap-tier calls at it and re-measure cost per task rather than per token.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/claude-haiku-5-5"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-28",
+          "what": "GitHub Universe 2026, San Francisco (28–29 Oct)",
+          "url": "https://github.blog/news-insights/company-news/your-guide-to-github-universe-2026-is-here-the-schedule-just-launched/"
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "South Korea said AI agents were likely used in breaches of at least seven financial firms that exposed data on 68,000 people",
+          "summary": "President Lee Jae Myung said on Tuesday that signs had emerged of AI agents being used in at least some of the intrusions, first detected on September 30, at institutions including Hana Bank, KB Kookmin Bank and Shinhan Bank, which said about 25,000 of its customers were affected; the exposed data includes names, phone numbers, incomes and borrowing histories. Investigators believe the attackers used Artex AI, an open-source Chinese vulnerability-finding tool that runs on existing models, traced 33 IP addresses across at least 12 countries, and formed a 28-person team; the attackers have not been identified and no theft of funds has been reported.",
+          "why": "After OpenAI's own agents breached Australia's Medicare portal, this is the first reported case of third parties turning agents on banks, so assume any public endpoint you run is now probed by tireless automated attackers and budget for rate limits, anomaly detection and log review accordingly.",
+          "source": "The Record",
+          "url": "https://therecord.media/south-korean-bank-hacks-ai-agents"
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub made stacked pull requests generally available on all github.com plans",
+          "summary": "A stack splits a large change into dependent pull requests that are reviewed separately and merged together. At general availability a 'Rebase stack' keeps approvals on code that has not changed even in repositories that dismiss stale approvals, replacement commits are signed when rules require it, a stack moves through the merge queue as one group, a deleted base branch retargets the stack instead of closing it, the pull_request webhook gains a 'stacked' action and the gh stack CLI extension supports Git worktrees; GitHub says preview repositories using stacks merged 9% more code. GitHub Enterprise Server support is promised for a later release.",
+          "why": "If your team has been faking stacks with chained branches or a third-party tool, the native version now survives rebases and merge queues, so try it on the next change that is too big for one review.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-10-06-stacked-pull-requests-generally-available"
+        },
+        {
+          "headline": "Google adopted Meta's Pyrefly as its Python type checker, retiring Pytype after more than a decade",
+          "summary": "Google's Python team said on Monday that Pyrefly, Meta's open-source checker written in Rust, now checks its monorepo of hundreds of thousands of Python files, replacing the in-house Pytype, which analysed bytecode and whose last supported version was Python 3.12. Google cited roughly ten times the speed in internal benchmarks, about 97% conformance with the typing specification, up to 98% lower latency in incremental edit-and-rebuild loops and more than an 80% cut in daily peak compute for type checking.",
+          "why": "The two largest Python monorepos now run the same type checker, so Pyrefly is a safe default for a new Python project and worth benchmarking against mypy or Pyright on an existing one.",
+          "source": "Google Open Source Blog",
+          "url": "https://opensource.googleblog.com/2026/10/adopting-pyrefly-as-the-python-type-checker-at-google.html"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-09",
+          "what": "Python 3.15.0 final release (PEP 790 schedule)",
+          "url": "https://peps.python.org/pep-0790/"
+        },
+        {
+          "date": "2026-10-28",
+          "what": "Node.js 26 enters LTS; Node.js 27 alpha opens under the new one-release-a-year schedule",
+          "url": "https://nodejs.org/en/blog/announcements/evolving-the-nodejs-release-schedule"
+        },
+        {
+          "date": "2026-10-29",
+          "what": "PostgreSQL 19 general availability (RC1 on 15 Oct)",
+          "url": "https://www.mail-archive.com/pgsql-hackers@lists.postgresql.org/msg240353.html"
+        }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Fed minutes showed most officials expect another rate hike by year end after the unanimous September increase to 3.75–4%",
+          "summary": "The minutes of the September 15–16 meeting, released on Wednesday, record a 12–0 vote to raise the federal funds target range by a quarter point and say that most participants judged another increase would likely be appropriate by year end; many cited risk management, several said the current rate was not restrictive or only mildly so, and the staff put August PCE inflation at 3.8% and core at 3.4%. Participants generally viewed the labour market as close to maximum employment. The minutes predate Friday's report of 29,000 jobs added in September.",
+          "why": "The committee entered October united behind a hiking bias with inflation near 4%, so price loans and long bonds for a 4–4.25% policy rate into 2027 and treat a hike on October 28 as the base case rather than a pause.",
+          "source": "Federal Reserve",
+          "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260916.htm"
+        },
+        {
+          "headline": "IEA members agreed to accelerate the roughly 100 million barrels left in their March stock release and to put diesel first",
+          "summary": "At a meeting of member governments on Wednesday, the International Energy Agency said members supported speeding up the releases announced in the March 2026 collective action, of which about 325 million barrels have reached the market, and prioritising diesel 'to the extent possible, given the current tightness in diesel markets'. Members still hold about 1.1 billion barrels of public emergency stocks, including more than 200 million barrels of diesel, and the agency said it stands ready to release more if required. US diesel has been above $6 a gallon and European diesel hit a record €2.24 a litre; Brent settled at $100.20 after the announcement.",
+          "why": "Diesel rather than crude is the shortage and governments are now spending the last of a one-off buffer on it, so plan for freight, farming and generator costs to stay high through the winter rather than ease with the headline oil price.",
+          "source": "IEA",
+          "url": "https://www.iea.org/news/statement-by-iea-executive-director-on-meeting-of-iea-member-governments-on-7-october-2026"
+        },
+        {
+          "headline": "The Bank of Russia licensed Sberbank, VTB and three others as the country's first crypto custodians under its new digital-currency law",
+          "summary": "Registers published on Monday name Sberbank, VTB, Voltari, Oblachnaya Infrastruktura and Atomayz as digital depositories, allowed to hold and transfer digital currencies, and VTB, Zefir, Sistema-Krypto and T-Invest Lab as crypto exchangers, allowed to buy and sell for their own account, under the law on digital currencies in force since September 1. Non-qualified investors may buy only Bitcoin, Ether and USDT up to 300,000 roubles a year through one intermediary; VTB has settled its first stablecoin deals for corporate clients and plans retail access in November, Sberbank targets December 1, crypto payments inside Russia remain banned and exporters may settle cross-border without limits.",
+          "why": "Russia's largest state banks are now licensed to custody bitcoin and clear cross-border crypto settlement, so expect sanctions enforcement to focus on the on-chain flows of these firms and Russian demand to become a visible factor in stablecoin and bitcoin markets.",
+          "source": "Interfax",
+          "url": "https://www.interfax.ru/business/1120700"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-10",
+          "what": "Bitcoin Core 32.0 scheduled release: new mempool-aware fee estimator, parallel block validation, PSBT v2 default",
+          "url": "https://www.coindesk.com/tech/2026/09/16/bitcoin-core-32-enters-final-testing-with-faster-validation-fee-changes-and-security-fixes"
+        },
+        {
+          "date": "2026-10-14",
+          "what": "US CPI for September (BLS, 08:30 ET)",
+          "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+        },
+        {
+          "date": "2026-10-23",
+          "what": "Moody's scheduled review of France's Aa3 rating (negative outlook)"
+        },
+        {
+          "date": "2026-10-28",
+          "what": "FOMC rate decision (two-day meeting ends)",
+          "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+        }
+      ]
+    }
+  ]
+}
