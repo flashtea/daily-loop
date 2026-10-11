@@ -1,0 +1,70 @@
+{
+  "track": "history",
+  "n": 5,
+  "date": "2026-10-11",
+  "title": "The hunter-gatherer economy",
+  "subtitle": "Band size, Dunbar's number, egalitarianism, mobility, and why wealth could not accumulate",
+  "part": "Part I — Before civilization",
+  "summary": "For more than 95 percent of our species' existence, every human lived in a small mobile band that owned almost nothing, shared almost everything and tolerated no boss. This was not a failure to invent property or hierarchy. It was an economy tuned to its energy source: wild food that spoils, moves and cannot be stored. Understanding why wealth could not accumulate in that world explains why everything changed the moment it could.",
+  "body": [
+    "Tools, fire and language were in place by 100,000 years ago, and for the next ninety thousand years almost nothing that we would call an economy appeared: no stores of wealth, no rulers, no cities, no money. That is not because people were stupid or content. It is because the way they captured energy made accumulation impossible, and the social rules of the band were built to keep it that way.",
+    "## The energy budget of a band",
+    "A hunter-gatherer's energy came from wild plants and animals spread thinly across a landscape. Any one spot gave up its food quickly: the nuts were picked, the game learned to avoid the camp, the roots within a morning's walk were dug. So the band moved, typically every few weeks, following the season from one patch to the next. Mobility was not a lifestyle choice; it was how the energy supply was kept flowing.",
+    "Mobility set a hard ceiling on possessions. Everything a family owned had to be carried, usually by the women while the men carried weapons and infants. Ethnographers who weighed the kit of twentieth-century foragers such as the Ju/'hoansi of the Kalahari found a whole household's property came to a few kilograms: digging stick, bow, quiver, fire drill, ostrich-egg water containers, a kaross to carry it in. A heavier life was a slower, hungrier life.",
+    "Food could not be stored either. Meat rots within days in a warm climate, most gathered plants within a week, and a cache left behind was a cache for someone else. The only durable store of surplus was other people: give away your meat today and you have a claim on theirs when your own hunt fails. Anthropologists call this an immediate-return system. Energy comes in and goes out within days, and the social debts that result are the real savings account.",
+    "## Band size and the Dunbar ceiling",
+    "The typical band was 20 to 50 people, a handful of related families, and bands clustered into networks of a few hundred that met seasonally, intermarried and shared a language. Joseph Birdsell found these numbers recurring across Australian groups so regularly that he treated them as a structural feature of the way of life.",
+    "The upper figure is the one we met in the chapter on language. Robin Dunbar's work on primate brains predicts that a human can keep track of about 150 relationships closely enough to know who owes whom, and the seasonal aggregations of foragers sit right around that size. Below it, reputation does the work of law. Everyone knows who shares and who hoards, and a stingy hunter finds that nobody happens to be around when he needs help. Above it, cheating becomes possible, and the band splits.",
+    "That ceiling matters for what comes later. A society that wants to be larger than 150 people, and still cooperate, needs some technology to substitute for personal acquaintance: shared gods, written records, money, or a ruler with the force to compel. Every one of those is a later chapter in this series, and every one of them exists to solve the problem the band solved by staying small.",
+    "## Enforced equality",
+    "Hunter-gatherer bands were egalitarian by active, constant effort, not by temperament. Christopher Boehm, who surveyed dozens of forager societies, called the mechanism a reverse dominance hierarchy: the group as a whole dominates any individual who tries to dominate it, using ridicule, gossip, refusal to share, ostracism and, for the persistent, exile or killing.",
+    "Richard Lee's fieldwork among the Ju/'hoansi recorded the best-known example. A hunter who brought in a large animal was expected to speak of it dismissively, and his companions mocked the kill as thin and worthless. Lee's informants explained the custom in plain terms, paraphrased here: a man who thinks of himself as a chief will one day treat the rest as his servants, so his heart must be cooled. Sharing rules gave the hunter no special portion; in many groups the owner of the arrow, not the man who shot it, nominally owned the carcass.",
+    "There was a practical logic under the ethics. In an immediate-return economy, no one can convert a good day into lasting power, because nothing lasts. The only route to dominance is personal: being stronger, more aggressive, more persuasive. The band's weapons, projectile tools that let a small person kill a large one at a distance, made that route dangerous for the would-be chief. A bully in a world of bows does not sleep well.",
+    "## How well did it work?",
+    "Lee's time-allocation study at Dobe in the 1960s produced a figure that reshaped the field: adults spent on average somewhat over two days a week acquiring food, with a diet around two thousand calories and ample protein, in a semi-desert during a drought year when neighbouring farmers were on famine relief. Marshall Sahlins built this into his argument for the original affluent society: foragers were affluent not because they had much but because they wanted little, and the wanting was kept low by the impossibility of keeping anything.",
+    "Later work tempered the picture: the Dobe figures left out processing, firewood and water, and perhaps four in ten children did not reach adulthood. But the broad finding held. A healthy forager population ate reasonably well for modest work, and the first farmers almost certainly worked harder and ate worse than their foraging grandparents. We will see why they did it anyway.",
+    "## What could not happen",
+    "Pull the threads together and the shape of the pre-agricultural world becomes clear. Without storable food there is no surplus. Without surplus there is nothing to tax, nothing to steal in quantity, no way to feed a specialist who does not forage. Without specialists there are no full-time priests, soldiers, scribes or kings. Without something durable to count, there is little use for counting and none for writing. And without a reason to stay put, nobody builds anything larger than a shelter.",
+    "Every one of those absences follows from the energy source. The band lacked a state not because nobody had thought of one, but because wild food cannot be piled up and guarded, and a society whose wealth cannot be piled up gives no one a foundation to stand above the rest.",
+    "The next chapters follow this economy as it spreads across the whole planet, picks up the bow, the needle and the boat, and begins to trade over long distances. Then, in Part II, a change in climate puts a storable grain in reach of people in the Fertile Crescent, and every constraint in this chapter comes off at once."
+  ],
+  "takeaways": [
+    "Foragers moved because wild food is spread thin and cannot be stored, and mobility capped possessions at what a family could carry.",
+    "Surplus was stored in people, not pantries: sharing today bought a claim on others' food tomorrow, an immediate-return economy.",
+    "Bands of 20 to 50, in networks of about 150, let reputation replace law; above that size cooperation needs gods, records, money or force.",
+    "Equality was enforced, not natural: ridicule, meat-sharing rules and the threat of exile cut down anyone who tried to rise.",
+    "With nothing storable there is no surplus, so no taxes, specialists, kings or writing; the agricultural revolution is the story of those constraints coming off."
+  ],
+  "names": [
+    {
+      "name": "Richard B. Lee",
+      "note": "Canadian anthropologist whose 1960s fieldwork among the Ju/'hoansi (!Kung) of the Kalahari measured foragers' work hours and diet and documented how bands cut down would-be leaders."
+    },
+    {
+      "name": "Marshall Sahlins",
+      "note": "American anthropologist who turned the forager evidence into the argument for the original affluent society: few wants, modest work, and no way to accumulate."
+    },
+    {
+      "name": "Christopher Boehm",
+      "note": "Anthropologist who named the reverse dominance hierarchy, the mechanism by which forager bands collectively suppress anyone who tries to dominate them."
+    }
+  ],
+  "reading": [
+    {
+      "title": "Stone Age Economics",
+      "by": "Marshall Sahlins"
+    },
+    {
+      "title": "The !Kung San: Men, Women, and Work in a Foraging Society",
+      "by": "Richard B. Lee"
+    },
+    {
+      "title": "Hierarchy in the Forest: The Evolution of Egalitarian Behavior",
+      "by": "Christopher Boehm"
+    },
+    {
+      "title": "The Story of Civilization, Vol. I: Our Oriental Heritage",
+      "by": "Will Durant"
+    }
+  ]
+}
