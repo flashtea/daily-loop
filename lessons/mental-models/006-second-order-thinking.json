@@ -1,0 +1,58 @@
+{
+  "track": "mental-models",
+  "n": 6,
+  "date": "2026-10-12",
+  "title": "Second-order thinking",
+  "subtitle": "And then what? Following consequences past the first step, and knowing when to stop",
+  "part": "Part I — Tools for thinking",
+  "summary": "Second-order thinking is the habit of asking \"and then what?\" about the effects of a decision, and then asking it again about those effects. First-order thinking stops at the obvious result; second-order thinking follows the chain through the reactions of other people and systems to the result. It is the difference between a policy that works on paper and one that works on people.",
+  "body": [
+    "Every action has an immediate effect, and that effect has effects of its own. First-order thinking considers only the first link: cut the price and sell more, add a bonus and get more effort, ban the thing and have less of it. Second-order thinking asks what happens next, after customers, competitors, employees, markets and the system you touched have had time to respond to the first effect. The question is always the same, and Howard Marks phrased it plainly in his memos: *and then what?*",
+    "The idea is old enough to have been a complaint before it was a method. Frédéric Bastiat, a French economist writing in 1850, divided economists into the bad ones who see only the visible effect and the good ones who also take account of the effects that must be foreseen. His example was a shopkeeper's broken window: the glazier gains, which everyone sees, but the shopkeeper would otherwise have bought shoes, which nobody sees. The glazier's trade is the first-order effect; the shoes that were never bought are the second.",
+    "## Two cases",
+    "Colonial India gives the textbook case, usually told as the cobra effect. The British administration in Delhi, troubled by venomous snakes, is said to have paid a bounty per dead cobra. The first-order effect was dead cobras. The second-order effect was a breeding industry: people raised cobras to collect the bounty, and when the government noticed and cancelled it, the breeders released their now-worthless stock, leaving more cobras than before. The details of the Delhi story are poorly documented, but a well-recorded version happened in Hanoi in 1902, where a bounty on rat tails produced rats running tailless through the sewers, released to breed more tails. Whenever you pay for a proxy, ask what someone will do to manufacture the proxy.",
+    "Software has its own version in rate limits and retries. A service is overloaded, so the team adds a rule: if a request fails, the client retries immediately. The first-order effect is that transient errors heal themselves. The second-order effect, which operators meet during an outage, is that a struggling server now receives several times its normal traffic, every client hammering it at once, and the brief wobble becomes a collapse. The fix, exponential backoff with jitter, exists because somebody followed the chain one step further: what do a million clients do when they all get the same error at the same second?",
+    "The same shape appears in interest rates. A central bank raises rates to slow inflation; that is the first order. Second order: floating-rate borrowers have less to spend, governments pay more on their debt, banks holding long bonds sit on losses, currencies move, and emerging markets that borrowed in dollars face a squeeze. A US bank failure in 2023 was, in part, a second-order effect of 2022's rate rises on a balance sheet full of long-dated bonds. The people who saw it coming were not forecasting inflation; they were asking what a fast rise in rates would do to who was holding what.",
+    "## How to actually do it",
+    "The mechanics are simple and the discipline is the hard part. First, write down the immediate effect you are aiming for. Second, list who or what reacts to that effect: customers, competitors, employees, regulators, the system's own feedback loops. Third, for each reactor, ask what they would do in response if they were acting in their own interest, and write it down. Fourth, ask the question once more about the most important of those responses. Stop at the point where your answers become guesses rather than reasoning; two steps is usually where the signal ends.",
+    "A useful variant is to think over time rather than across actors. Marks's first-level thinker says a company is good, so buy the stock; his second-level thinker says it is good, but everyone already thinks so, so the price reflects it and the stock is no bargain. In markets the second-order effect of good news is that it is priced in. The same holds for a career move, a hire or an architectural choice: the obvious benefit is the one everyone else also saw and acted on.",
+    "## Where it misleads",
+    "The failure mode is paralysis dressed as rigour. Every chain of consequences can be extended indefinitely, and each additional step is less certain than the one before. Someone over-applying second-order thinking never ships the price cut because a fifth-order effect might, conceivably, hurt; they block a hire because of a hypothetical reorganisation two years out. The tell is a long argument against a simple action whose later steps rest on nothing you could check. When that happens, you have left reasoning and entered storytelling, and the right move is to run a cheap, reversible version of the action and watch what the system actually does.",
+    "A second trap is assuming the second-order effect always cancels the first. It often does not. Vaccination programmes, compound interest and well-designed incentives all have second-order effects that reinforce the first. The tool is for seeing the whole chain, not for finding reasons to do nothing.",
+    "## Connections",
+    "Second-order thinking is inversion with the clock running forward: inversion asks what would make this fail, and second-order thinking asks what this will cause, and the answers usually overlap. It leans on the map and the territory, because your mental model of how the system responds is the map, and the second-order effect is where the territory tends to differ from it. It depends on circle of competence to tell you when to stop following the chain: beyond the edge of what you know, the next link is a guess. And it is the gateway to the incentives tendency and the systems models later in this series, which are second-order thinking made specific.",
+    "Habit for tomorrow: before any decision that affects other people, say the intended effect aloud, then say \"and then what?\" twice and write down the two answers. If the second answer is bad and the first is only convenient, you have your decision."
+  ],
+  "takeaways": [
+    "First-order thinking stops at the immediate effect; second-order thinking asks what everyone affected does next, and what that causes.",
+    "Pay for a proxy and people will manufacture the proxy: the cobra bounty, the rat-tail bounty and the metric gamed by a team.",
+    "In markets and careers the second-order effect of good news is that others saw it too, so the obvious benefit is usually already priced in.",
+    "Stop following the chain where reasoning turns into guessing, typically after two steps; beyond that, run a cheap reversible test instead.",
+    "Over-application looks like a long argument against a simple action whose later steps you could not check; the tool is for seeing the chain, not for avoiding action."
+  ],
+  "names": [
+    {
+      "name": "Frédéric Bastiat",
+      "note": "French economist (1801–1850) whose essay \"That Which Is Seen, and That Which Is Not Seen\" made the distinction between visible first effects and the unseen effects that follow them."
+    },
+    {
+      "name": "Howard Marks",
+      "note": "Co-founder of Oaktree Capital whose memos popularised \"second-level thinking\" in investing: the market has already acted on the obvious view, so the edge lies in what comes after it."
+    }
+  ],
+  "reading": [
+    {
+      "title": "That Which Is Seen, and That Which Is Not Seen",
+      "by": "Frédéric Bastiat, 1850",
+      "url": "https://www.econlib.org/library/Bastiat/basEss.html"
+    },
+    {
+      "title": "The Most Important Thing",
+      "by": "Howard Marks, 2011"
+    },
+    {
+      "title": "Poor Charlie's Almanack",
+      "by": "Peter Kaufman (ed.)"
+    }
+  ]
+}
