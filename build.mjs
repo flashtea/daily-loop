@@ -626,13 +626,6 @@ function renderBody(body = []) {
 
 function renderLessonPage(track, lesson, prev, next, editions) {
   const base = "../";
-  const takeaways = (lesson.takeaways || []).map((t) => `<li>${inline(t)}</li>`).join("");
-  const names = (lesson.names || [])
-    .map(
-      (p) =>
-        `<li><strong>${escapeHtml(p.name)}</strong>${p.note ? ` — ${inline(p.note)}` : ""}</li>`,
-    )
-    .join("");
   const reading = (lesson.reading || [])
     .map((r) => {
       const t = r.url
@@ -671,12 +664,6 @@ function renderLessonPage(track, lesson, prev, next, editions) {
       <div class="lesson-body">
 ${renderBody(lesson.body)}
       </div>
-      ${
-        takeaways
-          ? `<aside class="box keep"><h2>Keep</h2><ul>${takeaways}</ul></aside>`
-          : ""
-      }
-      ${names ? `<aside class="box names"><h2>Names worth knowing</h2><ul>${names}</ul></aside>` : ""}
       ${reading ? `<aside class="box reading"><h2>Further reading</h2><ul>${reading}</ul></aside>` : ""}
       <nav class="pager">
         ${navLink(prev, "prev", `← Previous ${track.unit}`)}

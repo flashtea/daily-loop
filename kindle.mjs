@@ -126,10 +126,6 @@ export function buildEpub({ edition, dayLessons, outDir, helpers }) {
 
   // Lessons, in full.
   for (const { track, lesson } of dayLessons) {
-    const takeaways = (lesson.takeaways || []).map((t) => `<li>${inline(t)}</li>`).join("");
-    const names = (lesson.names || [])
-      .map((p) => `<li><b>${escapeHtml(p.name)}</b>${p.note ? ` — ${inline(p.note)}` : ""}</li>`)
-      .join("");
     const reading = (lesson.reading || [])
       .map((r) => `<li><i>${escapeHtml(r.title)}</i>${r.by ? `, ${escapeHtml(r.by)}` : ""}</li>`)
       .join("");
@@ -141,8 +137,6 @@ export function buildEpub({ edition, dayLessons, outDir, helpers }) {
 ${lesson.subtitle ? `<p class="sub">${inline(lesson.subtitle)}</p>` : ""}
 ${lesson.summary ? `<p class="summary">${inline(lesson.summary)}</p>` : ""}
 ${renderBody(lesson.body)}
-${takeaways ? `<div class="box"><h3>Keep</h3><ul>${takeaways}</ul></div>` : ""}
-${names ? `<div class="box"><h3>Names worth knowing</h3><ul>${names}</ul></div>` : ""}
 ${reading ? `<div class="box"><h3>Further reading</h3><ul>${reading}</ul></div>` : ""}`,
     });
   }

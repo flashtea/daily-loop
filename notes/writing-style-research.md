@@ -163,3 +163,10 @@ Human style references
 - Munger, "The Psychology of Human Misjudgment" (fs.blog transcript): https://fs.blog/great-talks/psychology-human-misjudgment/
 - Munger, "A Lesson on Elementary, Worldly Wisdom" (James Clear transcript): https://jamesclear.com/great-speeches/a-lesson-on-elementary-worldly-wisdom-by-charlie-munger
 - The Saylor Series synopsis and transcript excerpts (Breedlove, WiM221 / episodes 1–17): https://btctouchpoint.com/synopsis-of-the-saylor-series-with-michael-saylor-robert-breedlove-wim221/
+
+## Decisions (2026-10-13)
+
+- No first person anywhere in the lessons. "You" only where the reader is handed something to do.
+- Written prose, never spoken cadence. Saylor supplies lens and method only; Munger supplies named cases, bluntness and honest hedges only.
+- The "Keep" (takeaways) and "Names worth knowing" sections are retired from the builder, the Kindle export, the narration script and the schema. `reading` stays.
+- All twelve lessons were rewritten under the new rules in CLAUDE.md and pass `node lint-prose.mjs --all` with no hard flags.

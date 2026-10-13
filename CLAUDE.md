@@ -175,8 +175,8 @@ never the biography. Each chapter:
   exchange, the bombard, well enough that the reader could explain it;
 - traces what it forced in the other threads (surplus to writing to taxation
   to armies);
-- names a person only when they were the hinge, and puts them in `names` so
-  they stick;
+- names a person only when they were the hinge, in the body, with the year
+  and what they did;
 - connects back to the previous chapter and sets up the next.
 
 **Picking today's track and lesson.** Write exactly one lesson per day. The
@@ -189,11 +189,56 @@ syllabus entries remain unwritten, append a new part to the curriculum file in
 the same style before writing the day's lesson. If a lesson dated today
 already exists in either track, leave it alone unless asked to revise.
 
-**Length and voice.** 600–1000 words of body. Plain, concrete, neutral, the
-tone of a knowledgeable friend rather than a textbook. Short paragraphs; a `## `
-subhead every few paragraphs; no hype, no emoji, no moralizing. Written for an
-intelligent generalist reading on a phone over coffee. End with 3–5 takeaways
-worth keeping, and optionally a one-line pointer to tomorrow's topic.
+**Length.** 700–1000 words of body. A `## ` subhead every few paragraphs.
+Paragraph lengths vary; one may be a single sentence, another eight. No bullet
+lists in the body unless the content is a genuine list (the parts of a
+mechanism, the steps of a procedure). No takeaways list, no "names worth
+knowing" list; the lesson ends with its last paragraph, which may point in one
+plain sentence at the next lesson.
+
+**Prose rules.** The lessons are written prose, read on a phone or heard as
+narration, by someone who knows the subject and is explaining it to an
+intelligent friend. The explanation is the content; nothing performs. In
+particular:
+
+- *Third person.* No "I", "we", "our", "us". "You" is allowed where the
+  reader is being handed something to do or check.
+- *Written, not spoken.* No talk cadence: no one-line declarations for
+  effect, no "here is the thing", no rhetorical questions, no questions as
+  subheads.
+- *Banned shapes.* These are the marks of machine prose whatever the words,
+  and none of them may appear: negative parallelism in any form ("not X but
+  Y", "not just X", "X was never the problem; Y was", "is not quite the
+  word"); a short sentence or fragment used as a hook or a payoff (a short
+  sentence may state a fact or a judgment, never a beat); triads and parallel
+  lists built for rhythm (count the real items; two or five is fine); a
+  paragraph or section that ends on an aphorism, a moral, a "that is why", or
+  a colon followed by an epiphany; restating the summary or the series' thesis
+  inside the body; synonym cycling (repeat the plain noun); "serves as",
+  "stands as", "represents" for "is"; significance words ("pivotal",
+  "transformative", "a testament to", "crucial"); -ing tails that attach
+  meaning to a fact ("..., highlighting the importance of").
+- *Required texture.* At least one detail per lesson that is specific past
+  the point of usefulness: a weight, a place, who found the thing and in what
+  year. Name the person or institution that did the thing when known. Where
+  the evidence is contested, say so and leave it contested; do not resolve a
+  disagreement into a tidy trade-off. Plain verbs: wrote, died, built, sold.
+  A paragraph may end flat, on the fact.
+- *Mechanism before consequence.* In History the physics or procedure of the
+  thing comes first, with quantities, and only then what it forced in the
+  other threads. The Saylor series supplies the lens (energy, money as a
+  technology) and the method (how did it physically work, how much, how fast);
+  its spoken cadence and one-line slogans do not transfer to the page. In
+  Mental Models one case per lesson is as concrete as Munger's: a named
+  company or person, a figure, a date, and the detail that does not fit the
+  model. Munger's bluntness, named cases and honest hedges transfer; his talk
+  rhythm does not.
+- *Judgments* are allowed and are stated as judgments ("the strongest case
+  is", "most archaeologists think"), never dressed as facts.
+- *Check.* Before saving, read the body once only for the banned shapes and
+  remove every one. Then run `node lint-prose.mjs <file>`; hard flags must be
+  zero, soft warnings are read and judged. A clean lint is necessary, not
+  sufficient.
 
 ## The routine
 
@@ -266,14 +311,13 @@ no third-party script). Never hand-edit
     "> A string starting with > is a quotation.",
     "Inline **bold** and *italic* are supported; nothing else."
   ],
-  "takeaways": ["3–5 one-sentence points to keep."],
-  "names": [{ "name": "Carl Jacobi", "note": "Optional. Who they were and why they matter here." }],
   "reading": [{ "title": "Poor Charlie's Almanack", "by": "Peter Kaufman (ed.)", "url": "optional" }]
 }
 ```
 
-`track`, `n`, `date`, `title`, `part`, `summary`, `body` and `takeaways` are
-required. `part` must match the `## ` heading of the syllabus part the entry
+`track`, `n`, `date`, `title`, `part`, `summary` and `body` are required;
+`subtitle` and `reading` are optional. `takeaways` and `names` are retired:
+do not write them, and the builder ignores them. `part` must match the `## ` heading of the syllabus part the entry
 sits in. The builder puts the day's lesson in a compact "Lesson of the day"
 band on that day's edition, gives each lesson its own page under
 `docs/<track>/`, and keeps a catalogue at `docs/<track>/index.html` grouped by
@@ -304,6 +348,7 @@ lessons/history/NNN-slug.json         one history chapter per day
 curriculum/<track>.md                 the ordered syllabus each track follows
 data/btc-weekly.json                  weekly Bitcoin closes for the chart (fetch-btc.mjs)
 data/progress.json                    lessons the reader has finished (edited on request)
+lint-prose.mjs                        flags machine-prose shapes in a lesson body (see Prose rules)
 data/audio.json                       narration manifest (written by the audio workflow)
 build.mjs                             renders everything into docs/ (zero deps)
 fetch-btc.mjs                         refreshes the price data (needs network)

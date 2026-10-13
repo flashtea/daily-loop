@@ -21,7 +21,7 @@ const INSTRUCTIONS =
 const trackLabel = (slug) => (slug === "history" ? "History of Civilization" : "Mental Models");
 
 // Turn a lesson into plain narration text: title, subtitle, body with
-// subheads spoken as short pauses, then the takeaways.
+// subheads spoken as short pauses.
 function narrationText(lesson) {
   const parts = [];
   const unit = lesson.track === "history" ? "Chapter" : "Lesson";
@@ -35,10 +35,6 @@ function narrationText(lesson) {
     else if (s.startsWith("> ")) parts.push(s.slice(2));
     else if (s.startsWith("- ")) parts.push(s.split("\n").map((l) => l.replace(/^-\s+/, "")).join(". "));
     else parts.push(s);
-  }
-  if (lesson.takeaways?.length) {
-    parts.push("\nTo keep.\n");
-    parts.push(lesson.takeaways.join(" "));
   }
   return parts
     .join("\n\n")
