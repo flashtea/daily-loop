@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-13",
+  "sections": [
+    {
+      "title": "World",
+      "items": [
+        {
+          "headline": "The EU adopted sanctions on 1,569 people and companies in Russia's military-industrial complex, its largest single package of listings",
+          "summary": "The Foreign Affairs Council listed 826 Russian companies and 743 of their chief executives, more than half of them on the production chain for ballistic missiles, under an asset freeze and travel ban; the measures cover suppliers of semiconductors, microcircuits, radar, navigation equipment and explosives, and bring total listings under the Ukraine regime to close to 4,600.",
+          "why": "The EU is now going after component suppliers rather than whole sectors, so anyone exporting electronics or dual-use parts eastward has 826 more companies to screen against.",
+          "source": "Council of the EU",
+          "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/12/russia-s-war-of-aggression-against-ukraine-eu-agrees-largest-ever-package-of-listings-targeting-almost-1600-individuals-and-entities-in-russia-s-military-industrial-complex/"
+        },
+        {
+          "headline": "Saudi Arabia extended the closure of Riyadh's King Khalid airport with no reopening date after weekend Houthi strikes killed 18",
+          "summary": "The civil aviation authority prolonged the suspension on Monday as the Houthis claimed a third consecutive day of ballistic-missile attacks on the airport and the Saudi-led coalition said it intercepted a missile over the capital; Saturday's strike alone killed 13 and wounded more than 300.",
+          "why": "A G20 capital is unreachable by air for an open-ended period; route Saudi travel through Jeddah and expect Brent to keep a Gulf-risk premium until the airport reopens.",
+          "source": "France 24",
+          "url": "https://www.france24.com/en/middle-east/20261012-live-saudi-arabia-extends-suspension-of-operations-at-riyadh-airport-after-deadly-houthi-attacks",
+          "follow_up": "2026-10-04"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-10-25", "what": "Brazil presidential runoff, Lula vs Flávio Bolsonaro" },
+        { "date": "2026-10-27", "what": "Israel Knesset election (120 seats, 3.25% threshold)" },
+        { "date": "2026-11-03", "what": "US midterm elections: all 435 House seats, 35 Senate seats, 39 governorships" },
+        { "date": "2026-11-09", "what": "COP31 opens in Antalya, Türkiye (to 20 Nov; leaders' summit 11–12 Nov)", "url": "https://www.climatechangenews.com/2026/04/14/turkiye-sets-cop31-dates-and-appoints-australian-cattle-farmer-as-youth-champion/" }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Meta released Muse Wonder at $4/$20 per million tokens and kept the stronger Muse Wonder Full inside its $50 and $200 Muse Code plans",
+          "summary": "Muse Wonder is available through the Meta Model API and the Muse Code terminal agent, while Wonder Full ships only to Muse Code's Power Usage ($50 a month) and Maximum Usage ($200) subscribers; both have a roughly 1-million-token context and no open weights. Meta's model card puts Wonder Full at 57.5 on SWE-Marathon against 46.3 for Claude Opus 5.5, and behind it on Terminal-Bench 4.0 (57.1 vs 59.6).",
+          "why": "Meta now sells a frontier coding model at the same price point as Opus 5.5 and locks its best version inside its own agent, so add Muse Code to any agent comparison before your next subscription renewal.",
+          "source": "Meta",
+          "url": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/"
+        },
+        {
+          "headline": "OpenCode 2.0 moved the 212,000-star open-source coding agent onto one shared local service and broke 1.0 plugins",
+          "summary": "The terminal, desktop and web apps now attach to a single background service, so a session begun in the terminal continues in the other clients; the release rebuilt the API, added an embeddable SDK, let subagents and shell commands run in the background, and made Code Mode (the agent writes JavaScript that calls several MCP tools in one execution) the default for MCP servers. Plugins and server integrations built for 1.0 must be updated, and upgrades are now manual via `opencode upgrade --major`.",
+          "why": "If you run OpenCode, stay on 1.x until your plugins are ported; if you do not, Code Mode is the first mainstream agent to batch MCP calls through generated code, a pattern worth copying for tool-heavy workflows.",
+          "source": "The New Stack",
+          "url": "https://thenewstack.io/opencode-2-shared-service/"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-10-14", "what": "GPT-5.5 retires from ChatGPT, ChatGPT Work and Codex on all plans (API unaffected)", "url": "https://learn.chatgpt.com/docs/changelog" },
+        { "date": "2026-10-28", "what": "GitHub Universe 2026, San Francisco (28–29 Oct)" },
+        { "date": "2026-10-29", "what": "Last day of the grandfathered 20x-Plus allowance for existing ChatGPT Pro $200 subscribers in Codex; drops to 10x from 30 Oct", "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers" },
+        { "date": "2026-11-10", "what": "AI Engineer Code Summit, San Francisco (workshops 10 Nov, talks 11–12 Nov)", "url": "https://ai.engineer/code/2026" }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [],
+      "ahead": [
+        { "date": "2026-11-12", "what": "Anthropic's updated Usage Policy takes effect", "url": "https://anthropic.com/news/2026-usage-policy-update" }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [],
+      "ahead": [
+        { "date": "2026-10-14", "what": "GitHub: new RSA SSH keys must be at least 3072 bits; ML-KEM post-quantum key exchange enabled (ssh-rsa SHA-1 brownouts 4 Nov and 9 Dec, removal 13 Jan)", "url": "https://github.blog/changelog/2026-09-22-security-improvements-for-ssh/" },
+        { "date": "2026-10-14", "what": "Next.js out-of-band security release for two critical and one high-severity upstream vulnerabilities", "url": "https://nextjs.org/blog/upcoming-nextjs-security-update-october-2026" },
+        { "date": "2026-10-28", "what": "Node.js 26 enters LTS; Node.js 27 alpha opens under the new one-release-a-year schedule" },
+        { "date": "2026-10-29", "what": "PostgreSQL 19 general availability (RC1 on 15 Oct)" }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [
+        {
+          "headline": "The Kospi fell as much as 7.4% to 5,914, its lowest since late July, after China's CXMT said it would launch next-generation server DRAM this year",
+          "summary": "Samsung Electronics dropped 7.7% and SK hynix 8.8% as foreign investors sold heavily on reports that ChangXin Memory Technologies would ship DDR5 server memory by year-end; the Korea Exchange triggered its first sell-side sidecar since 19 August. The index has fallen five sessions in a row from 7,003.74 on 2 October, and the Nikkei lost 2.5% with Tokyo Electron down 6.6% and SoftBank 8%.",
+          "why": "Korea is the most concentrated public bet on the memory-chip cycle, and a credible Chinese entrant into server DRAM is the first thing in months to dent the AI-capex trade; watch Micron and the memory names, not just Nvidia.",
+          "source": "AP (via ClickOnDetroit)",
+          "url": "https://www.clickondetroit.com/news/2026/10/13/south-koreas-kospi-index-sinks-more-than-7-on-sell-off-of-semiconductor-shares-over-ai-boom-worries/"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-10-14", "what": "US CPI for September (BLS, 08:30 ET); China September trade data (GACC) the same day", "url": "https://www.bls.gov/schedule/2026/10_sched.htm" },
+        { "date": "2026-10-23", "what": "Moody's scheduled review of France's Aa3 rating (negative outlook)" },
+        { "date": "2026-10-28", "what": "FOMC rate decision; UK Autumn Budget with OBR forecast the same day", "url": "https://www.gov.uk/government/publications/chancellor-letter-to-the-treasury-select-committee-tsc-budget-2026-date" },
+        { "date": "2026-10-29", "what": "ECB rate decision and US Q3 GDP advance estimate; Bank of Japan decides the next day with its Outlook Report", "url": "https://www.bea.gov/news/schedule" }
+      ]
+    }
+  ]
+}
