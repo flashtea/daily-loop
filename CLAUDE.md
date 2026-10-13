@@ -331,13 +331,16 @@ changes only when the reader says what they have read ("I read the map is not
 the territory but not the first tools"): then add or remove the keys, rebuild,
 and push.
 
-**Audio.** Narration is not part of the routine. A GitHub Actions workflow
-(`.github/workflows/audio.yml`) runs after each push that adds a lesson,
-generates an MP3 per new lesson with a text-to-speech API, stores the files as
-assets of the `audio` GitHub release, and commits `data/audio.json`. The
-builder reads that manifest to add a player to lesson pages and to publish a
-podcast feed at `docs/podcast.xml`. The workflow needs the `OPENAI_API_KEY`
-repository secret; without it, it skips.
+**Kindle.** The builder writes each day's paper as an EPUB to
+`docs/kindle/<date>.epub` (and `latest.epub`). Separately, the workflow
+`.github/workflows/kindle.yml` mails one lessons-only EPUB with the week's
+lessons to the reader's Send-to-Kindle address every Sunday evening, titled by
+its contents ("Daily Loop · Mental Models 7–8 · History 7–8"); run by hand
+with `mode=books` it sends one catch-up volume per track. It needs the
+`KINDLE_EMAIL`, `MAIL_FROM` and `SMTP_*` secrets described in the workflow
+file; without them it does nothing. News is never sent to the Kindle; it goes
+stale within a day and belongs on the phone. Narration (audio) was removed;
+nothing in the routine touches it.
 
 ## Repo layout and technical notes
 
@@ -349,9 +352,10 @@ curriculum/<track>.md                 the ordered syllabus each track follows
 data/btc-weekly.json                  weekly Bitcoin closes for the chart (fetch-btc.mjs)
 data/progress.json                    lessons the reader has finished (edited on request)
 lint-prose.mjs                        flags machine-prose shapes in a lesson body (see Prose rules)
-data/audio.json                       narration manifest (written by the audio workflow)
 build.mjs                             renders everything into docs/ (zero deps)
 fetch-btc.mjs                         refreshes the price data (needs network)
+kindle.mjs                            EPUB packaging (daily edition and lessons-only books)
+kindle-lessons.mjs                    weekly and catch-up lessons-only EPUBs for the Kindle workflow
 preview.mjs                           dev-only screenshots
 ```
 
