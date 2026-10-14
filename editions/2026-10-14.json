@@ -1,0 +1,171 @@
+{
+  "date": "2026-10-14",
+  "sections": [
+    {
+      "title": "World",
+      "items": [
+        {
+          "lead": true,
+          "headline": "A Houthi missile strike hit Saudi Aramco's headquarters complex in Dhahran and set an office tower on fire",
+          "summary": "The Saudi energy ministry said an Aramco administrative building in Dhahran was targeted on Tuesday evening, causing a limited fire and no injuries; a company source told Reuters a ballistic missile struck an office tower and damaged its top three floors, while the Saudi-led coalition said it intercepted missiles aimed at Riyadh and Dhahran and that debris fell on a residential area. The Houthis had named the Dhahran headquarters as a target after coalition strikes on Sanaa, in a week of attacks that closed Riyadh's airport and killed at least 18.",
+          "why": "The Houthis can now put a missile into the administrative centre of the world's largest oil exporter, so the Gulf risk premium holding Brent above $105 belongs in your base case for the quarter rather than in the list of spikes to fade.",
+          "source": "CNN",
+          "url": "https://www.cnn.com/2026/10/13/middleeast/saudi-strikes-houthi-fuel-depot-latam-intl",
+          "follow_up": "2026-10-04"
+        },
+        {
+          "headline": "Drones sank a second cargo ship in a week off Bulgaria's Black Sea coast, and Bulgaria summoned Russia's ambassador",
+          "summary": "The Guinea-Bissau-flagged HS Dignity went down off Krapets near the Romanian border with five crew rescued and 11 missing, and the Maltese-flagged, Ukrainian-owned Chelsea 3 was hit by three drones 18 nautical miles offshore at about 1:30am on Tuesday with all 15 crew rescued. Prime Minister Rumen Radev said there was no clear evidence of who was responsible but that the outcome benefits Russia, and summoned ambassador Eleonora Mitrofanova; NATO's Mark Rutte said the alliance would adjust its defences as needed and Ursula von der Leyen called the Black Sea another front of the war.",
+          "why": "Merchant ships are now being sunk inside a NATO member's economic zone every week, so Black Sea freight and war-risk cover will stay expensive and the sea is the likeliest place for the war to touch NATO directly.",
+          "source": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/13/drone-attack-sinks-ship-off-bulgarias-black-sea-coast-pm-says",
+          "follow_up": "2026-10-08"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-25",
+          "what": "Brazil presidential runoff, Lula vs Flávio Bolsonaro"
+        },
+        {
+          "date": "2026-10-27",
+          "what": "Israel Knesset election (120 seats, 3.25% threshold)"
+        },
+        {
+          "date": "2026-11-03",
+          "what": "US midterm elections: all 435 House seats, 35 Senate seats, 39 governorships"
+        },
+        {
+          "date": "2026-11-09",
+          "what": "COP31 opens in Antalya, Türkiye (to 20 Nov; leaders' summit 11–12 Nov)",
+          "url": "https://www.climatechangenews.com/2026/04/14/turkiye-sets-cop31-dates-and-appoints-australian-cattle-farmer-as-youth-champion/"
+        }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Google opened Gemini 4 Argon to all API customers at $2 per million input tokens and $10 per million output until 30 November, then $4 and $20",
+          "summary": "Two weeks after limiting Argon to its Fairwind cyber-defence programme, Google made the model available through the Gemini API and AI Studio with a 1-million-token combined input-and-output limit and cached input at 95% off, put it in Antigravity for AI Ultra subscribers and in the Gemini app for Pro and Ultra, and said it is expanding guardrail-free Fairwind access to hundreds more partners. The introductory price is half that of Claude Opus 5.5 and Meta's Muse Wonder, both at $4 and $20, until 1 December.",
+          "why": "For seven weeks Google's strongest model costs half of Opus 5.5 and Muse Wonder on the API, so run your agent benchmarks on Argon before December and decide whether it is worth its full price.",
+          "source": "Google",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+          "follow_up": "2026-10-02"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-14",
+          "what": "GPT-5.5 retires from ChatGPT, ChatGPT Work and Codex on all plans (API unaffected)",
+          "url": "https://learn.chatgpt.com/docs/changelog"
+        },
+        {
+          "date": "2026-10-28",
+          "what": "GitHub Universe 2026, San Francisco (28–29 Oct)"
+        },
+        {
+          "date": "2026-10-29",
+          "what": "Last day of the grandfathered 20x-Plus allowance for existing ChatGPT Pro $200 subscribers in Codex; drops to 10x from 30 Oct",
+          "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"
+        },
+        {
+          "date": "2026-11-10",
+          "what": "AI Engineer Code Summit, San Francisco (workshops 10 Nov, talks 11–12 Nov)",
+          "url": "https://ai.engineer/code/2026"
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Anthropic's Frontier Red Team ran a 26-billion-parameter model across 15 Android TV boxes and said small models may be months from self-replicating on consumer devices",
+          "summary": "In a paper by William Zhou and Daniel Freeman, Gemma4-26B-A4B ran sharded across 15 off-brand $55 boxes with 4 GB of RAM each at 0.39 tokens a second, and in a simplified replication test on eight emulated Android nodes with unauthenticated debug ports, GLM-5.2 was the only open-weight model that copied itself to all eight nodes, in four of five trials; full inference setup took 71 to 150 hours. The authors fitted a capability trend for models under 30 billion parameters and said they would reach the needed level by the end of the year, noted that the cyber step was deliberately trivial, and recommended ISP flow monitoring and quarantine of infected subscribers.",
+          "why": "A worm carrying an open-weight model has no server to switch off, so the defence sits with device makers and ISPs; treat an unauthenticated debug port or default password on anything you own as a live risk rather than a theoretical one.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/research/self-replicating-ai"
+        },
+        {
+          "headline": "Anthropic said new distillation defences cut the data harvested from Claude by 90 to 99% and that it has banned tens of thousands of accounts",
+          "summary": "A two-stage classifier running on Sonnet 5.5, Opus 5 and 5.5, and Fable 5 and 5.1 blocks extraction requests with a false-positive rate under 0.1%, reasoning transcripts are now visible only to the organisation whose request produced them, API accounts created since 31 August cannot edit Claude's prior context, and blocked requests have been charged since 24 September; extracted reasoning tokens fell 10 to 100 times. Anthropic said Zhipu distilled cyber capabilities while building GLM-5.3 and that Moonshot forwarded Kimi requests to Claude, and that it does not know how long the gains will last.",
+          "why": "If you build on the Claude API, reasoning visibility and context editing now depend on account age and model, and a blocked request costs money, so check your integration against the preserved-thinking rules before the next model switch.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/research/distillation-defenses",
+          "follow_up": "2026-06-26"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-11-12",
+          "what": "Anthropic's updated Usage Policy takes effect",
+          "url": "https://anthropic.com/news/2026-usage-policy-update"
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [],
+      "ahead": [
+        {
+          "date": "2026-10-14",
+          "what": "Next.js out-of-band security release for two critical and one high-severity upstream vulnerabilities",
+          "url": "https://nextjs.org/blog/upcoming-nextjs-security-update-october-2026"
+        },
+        {
+          "date": "2026-10-14",
+          "what": "GitHub: new RSA SSH keys must be at least 3072 bits; ML-KEM post-quantum key exchange enabled (ssh-rsa SHA-1 brownouts 4 Nov and 9 Dec, removal 13 Jan)",
+          "url": "https://github.blog/changelog/2026-09-22-security-improvements-for-ssh/"
+        },
+        {
+          "date": "2026-10-28",
+          "what": "Node.js 26 enters LTS; Node.js 27 alpha opens under the new one-release-a-year schedule"
+        },
+        {
+          "date": "2026-10-29",
+          "what": "PostgreSQL 19 general availability (RC1 on 15 Oct)"
+        }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [
+        {
+          "headline": "China's exports rose 36.3% in September from a year earlier against a 25.5% forecast, with integrated-circuit exports up about 136% to $45 billion",
+          "summary": "The General Administration of Customs reported exports of $447.2 billion and imports of $313.7 billion, up 31%, for a surplus of $133.5 billion against $119.1 billion in August; a Reuters poll had expected 25.5% export growth after 25% in August. Semiconductors and cars led the gain, with car exports up 62% to $20.75 billion, as the EU and other partners press Beijing to rebalance trade.",
+          "why": "China is shipping chips abroad at more than double last year's pace, which is the hard number behind this week's Korean memory sell-off and makes EU tariff and anti-dumping cases this winter more likely than a thaw.",
+          "source": "AP (via ABC News)",
+          "url": "https://abcnews.com/Business/wireStory/chinas-exports-surge-363-september-pressure-ramps-rebalance-137246052"
+        },
+        {
+          "headline": "The High Court ruled that Chinese law governs fraud victims' claims to the 61,000 bitcoin seized from Zhimin Qian, worth about $5 billion",
+          "summary": "In Director of Public Prosecutions v Qian, Mr Justice Turner held on 12 October that the claims of many thousands of Chinese investors arise from contracts formed in China, so Chinese law decides whether they own the coins and English law governs only the Proceeds of Crime Act procedure; the content of Chinese law is left to a later hearing and the victims' lawyers intend to appeal. Qian was jailed in November 2025 for laundering the proceeds of a fraud recorded in at least 128,409 investment contracts.",
+          "why": "A 61,000 BTC hoard is now more likely to end up with the UK state than with the victims, so a government sale of that size is a supply event to pencil in for 2027 rather than a hypothetical.",
+          "source": "High Court of England and Wales (King's Bench Division)",
+          "url": "https://caselaw.nationalarchives.gov.uk/ewhc/kb/2026/2509"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-14",
+          "what": "US CPI for September (BLS, 08:30 ET)",
+          "url": "https://www.bls.gov/schedule/2026/10_sched.htm"
+        },
+        {
+          "date": "2026-10-23",
+          "what": "Moody's scheduled review of France's Aa3 rating (negative outlook)"
+        },
+        {
+          "date": "2026-10-28",
+          "what": "FOMC rate decision; UK Autumn Budget with OBR forecast the same day",
+          "url": "https://www.gov.uk/government/publications/chancellor-letter-to-the-treasury-select-committee-tsc-budget-2026-date"
+        },
+        {
+          "date": "2026-10-29",
+          "what": "ECB rate decision and US Q3 GDP advance estimate; Bank of Japan decides the next day with its Outlook Report",
+          "url": "https://www.bea.gov/news/schedule"
+        }
+      ]
+    }
+  ]
+}
