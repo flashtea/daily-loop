@@ -33,6 +33,8 @@ jobs:
   send:
     runs-on: ubuntu-latest
     if: ${{ vars.KINDLE_DISABLED != 'true' }}
+    env:
+      KINDLE_EMAIL: ${{ secrets.KINDLE_EMAIL }}
     steps:
       - uses: actions/checkout@v4
 
@@ -56,11 +58,11 @@ jobs:
           echo "subject=$(cut -f1 out/list.txt | head -1 | xargs -n1 basename | sed 's/\.epub$//')" >> "$GITHUB_OUTPUT"
 
       - name: Skip (nothing to send or no Kindle address)
-        if: ${{ steps.build.outputs.has_files != 'true' || secrets.KINDLE_EMAIL == '' }}
+        if: ${{ steps.build.outputs.has_files != 'true' || env.KINDLE_EMAIL == '' }}
         run: echo "Nothing to send, or KINDLE_EMAIL is not set."
 
       - name: Mail to Kindle
-        if: ${{ steps.build.outputs.has_files == 'true' && secrets.KINDLE_EMAIL != '' }}
+        if: ${{ steps.build.outputs.has_files == 'true' && env.KINDLE_EMAIL != '' }}
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: ${{ secrets.SMTP_SERVER }}
@@ -69,7 +71,7 @@ jobs:
           username: ${{ secrets.SMTP_USERNAME }}
           password: ${{ secrets.SMTP_PASSWORD }}
           from: Daily Loop <${{ secrets.MAIL_FROM }}>
-          to: ${{ secrets.KINDLE_EMAIL }}
+          to: ${{ env.KINDLE_EMAIL }}
           subject: ${{ steps.build.outputs.subject }}
           body: Daily Loop lessons, attached as EPUB.
           attachments: out/*.epub
