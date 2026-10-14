@@ -10,8 +10,10 @@ name: Send lessons to Kindle
 #   MAIL_FROM       the sending address; it must be on Amazon's approved
 #                   personal document e-mail list, same page as above
 #   SMTP_SERVER, SMTP_PORT, SMTP_USERNAME, SMTP_PASSWORD
-#                   any SMTP account that can send as MAIL_FROM (Gmail with an
-#                   app password: smtp.gmail.com, 465)
+#                   any SMTP account that can send as MAIL_FROM. No server of
+#                   your own is needed: Brevo's free relay (smtp-relay.brevo.com,
+#                   port 587, 300 mails a day) or Gmail with an app password
+#                   (smtp.gmail.com, 465) both work.
 # Without KINDLE_EMAIL the workflow does nothing.
 
 on:
@@ -63,6 +65,7 @@ jobs:
         with:
           server_address: ${{ secrets.SMTP_SERVER }}
           server_port: ${{ secrets.SMTP_PORT }}
+          secure: ${{ secrets.SMTP_PORT == '465' }}
           username: ${{ secrets.SMTP_USERNAME }}
           password: ${{ secrets.SMTP_PASSWORD }}
           from: Daily Loop <${{ secrets.MAIL_FROM }}>
