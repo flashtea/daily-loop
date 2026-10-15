@@ -9,9 +9,8 @@ The lens: how humans captured **energy**, built **tools**, stored and moved
 **information**, organized **money and trade**, and projected **force**, and
 how each of those shaped the societies that followed. Less detail than Durant's
 *Story of Civilization*, more technology than a textbook. Names appear when a
-person really mattered (Hammurabi, Archimedes, Gutenberg, Watt) and are flagged
-in `names` so they can be remembered, but the thread is always the capability,
-not the biography. When fewer than 30 entries remain unwritten, append the
+person really mattered (Hammurabi, Archimedes, Gutenberg, Watt), but the thread
+is always the capability, not the biography. When fewer than 30 entries remain unwritten, append the
 next part in the same style.
 
 ## Part I — Before civilization (c. 3,000,000–10,000 BCE)

@@ -33,6 +33,12 @@ const HARD = [
   [/\?\s*$|\?\s+[A-Z]/, "rhetorical question"],
   [/(?:^|[.!?]\s+)(?:I|We)\b|\b(?:I'm|I've|I'd|we're|we've|our|ours)\b/, "first person"],
   [/\bHere(?:'s| is) the (?:thing|kicker|catch)\b|\bthe real (?:question|point|story) is\b|\bIt(?:'s| is) worth noting\b|\bIt(?:'s| is) important to (?:note|remember)\b|\bAt its core\b|\bIn other words\b|\bPut differently\b|\bThink of it as\b/i, "template phrase"],
+  // Marks of the daily delivery. A lesson is a chapter of a book read in any order, years later.
+  [/\b(?:tomorrow|yesterday)\b|\btoday's\b/i, "delivery-day reference (tomorrow / yesterday / today's)"],
+  [/\bthis (?:series|track|newsletter)\b|\bthe series\b(?!\s+of)|\b(?:the|this) (?:daily )?loop\b|\bdaily loop\b/i, "reference to the series or the loop"],
+  [/\b(?:previous|next|last|first|earlier|later) (?:chapter|lesson)s?\b|\b(?:chapter|lesson) (?:one|two|three|four|five|six|seven|eight|nine|ten|\d+)\b|\bchapters? (?:ahead|so far|to come)\b/i, "reference to another lesson by position (use the idea's name)"],
+  [/\bPart (?:I|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII|XIII|XIV)\b/, "reference to a syllabus part"],
+  [/\b(?:on|from) (?:a|the|the reader's|their|your) phone\b|\bover coffee\b|\bthe reader's phone\b/i, "reference to the reading device or occasion"],
 ];
 
 const countTriads = (t) => (t.match(/\b[\w'-]+, [\w'-]+,? and [\w'-]+\b/g) || []).length;
