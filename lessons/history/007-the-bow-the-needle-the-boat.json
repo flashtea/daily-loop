@@ -1,0 +1,40 @@
+{
+  "track": "history",
+  "n": 7,
+  "date": "2026-10-15",
+  "title": "The bow, the needle, the boat",
+  "subtitle": "The Upper Paleolithic toolkit and the first long-distance trade",
+  "part": "Part I — Before civilization",
+  "summary": "Between about 70,000 and 12,000 years ago the toolkit changed faster than it had in the previous two million. Three devices carry the story: the bow, which stored muscle energy and released it in a few milliseconds; the eyed needle, which turned hides into fitted clothing; and the boat, which turned coasts and islands into territory. With them came the first objects that travelled hundreds of kilometres from their source, and the first things that look like money.",
+  "body": [
+    "The hand-axe of the second chapter kept one shape for a million years. The tools of the last glacial period changed every few thousand years, and by its end a hunter in southern France carried a spear-thrower, a bow with flint points, bone needles, fish hooks, lamps, and beads of shell from a sea he might never see. Once knowledge moved through language and wide networks, as the last two chapters described, a good design no longer died with its maker.",
+    "## Storing energy in wood",
+    "A thrown spear leaves the hand at perhaps 20 metres per second, because an arm can only accelerate a projectile for the length of its own swing. The spear-thrower, a hooked stick of about 60 centimetres known from French sites of around 20,000 years ago, lengthens that swing, and a dart leaves it at 30 to 35 metres per second with roughly twice the energy.",
+    "Drawing a bow bends two limbs of wood, and the work of drawing is stored as elastic strain in the fibres, a few tens of joules for a hunting bow of 20 to 30 kilograms draw weight. The release returns that energy to a 30-gram arrow in about ten milliseconds, launching it at 50 to 60 metres per second. The archer's muscles work slowly and the arrow leaves fast, so the bow is an energy store with a trigger, the first device built to be one. It also fires from a crouch, in silence, and can be drawn again in three seconds.",
+    "The date of its invention is contested. Marlize Lombard and Laurel Phillipson argued in 2010 that small quartz points from Sibudu Cave in South Africa, around 64,000 years old, carry the impact fractures and hafting residues of arrowheads; the claim is disputed, because a point does not prove a bow. The oldest surviving arrows are pine shafts from Stellmoor in northern Germany, about 12,000 years old, and the oldest bows are two elm staves from Holmegaard in Denmark, roughly 9,000 years old, one of them 154 centimetres long and shaped so that the limbs thin toward the tips, which is still how a wooden bow is made.",
+    "## Sewing the cold out",
+    "A loose hide wrapped around the body leaks heat at every gap; a garment sewn to the body's shape, worn in layers, traps a shell of still air. Making one needs an awl to punch the hole, a needle to draw sinew thread through it, and an eye small enough that the thread does not fall out. Eyed needles of bone appear by around 40,000 years ago in Europe and Siberia, used on the fox, hare and wolverine pelts that the snares at Siberian sites were catching. The camps on the Yana river, inside the Arctic Circle by 32,000 years ago, were occupied through winters that a Neanderthal, with a loose cloak and a body built for cold, apparently could not survive at that latitude.",
+    "## Crossing water",
+    "No boat from this period survives, so the evidence is where people turned up. Australia was reached by about 65,000 years ago across gaps of open sea that never closed, the widest around 90 kilometres, and the Japanese islands and the Bismarck Archipelago by 35,000 years ago. A crossing of that length requires a craft that can hold a founding group with food and water for a day or two and some way to steer, which means at least a log raft with paddles and more likely a bark or hide boat. The crossings were probably deliberate, since the islands beyond were settled on a scale that drifting castaways do not produce. A boat also changes the economics of a coast: shellfish and sea birds are predictable where land game is not, and a band that can work the shore from the water can stay through seasons that would otherwise force a move.",
+    "## The first things that travelled",
+    "Obsidian is volcanic glass that breaks to an edge a few molecules thick, and every volcanic source has its own trace-element signature, so a flake can be matched to the flow it came from, as Colin Renfrew, Joseph Cann and Johnson Dixon showed with spectrometry in the 1960s. At Franchthi Cave in Greece, obsidian from the island of Melos, around 120 kilometres away over water, appears in layers of about 13,000 years ago. In the Rift Valley of Kenya, obsidian at sites near Olorgesailie from around 300,000 years ago came from sources 25 to 50 kilometres away, which some archaeologists read as the first exchange and others as long foraging walks.",
+    "Shells are clearer, because a marine shell at an inland site cannot have been foraged. Perforated Nassarius shells at Blombos Cave in South Africa are around 75,000 years old; at Kostenki on the Don river, shell beads from the Black Sea travelled about 500 kilometres. The shells have no use as tools. They were drilled, strung, worn and buried with the dead, and the burial of a man at Sungir near Vladimir, about 34,000 years old, contained roughly 3,000 mammoth-ivory beads, each one estimated to have taken an hour to make.",
+    "Nick Szabo has argued that these beads were the first money: scarce, durable, hard to fake, portable, and valued across the network, so that a debt between bands could be settled with them long before anything could be counted. Most archaeologists stop short of that and call them tokens of identity and alliance. The two readings may describe the same objects from different ends, since a bead given at a marriage and a bead given for a winter's shelter are both a claim on future help, and the record cannot tell them apart. What the shells do prove is the network: chains of exchange several hundred kilometres long, run by people who never saw the source.",
+    "The toolkit of this chapter was made with the help of a species that humans had already begun to shape to their own ends, and the next chapter is about the dog."
+  ],
+  "reading": [
+    {
+      "title": "The Story of Civilization, Vol. I: Our Oriental Heritage",
+      "by": "Will Durant"
+    },
+    {
+      "title": "Shelling Out: The Origins of Money",
+      "by": "Nick Szabo",
+      "url": "https://nakamotoinstitute.org/shelling-out/"
+    },
+    {
+      "title": "The Invention of Technology: Prehistory and Cognition",
+      "by": "Marlize Lombard and Laurel Phillipson (on the Sibudu points, Antiquity 84, 2010)"
+    }
+  ]
+}
