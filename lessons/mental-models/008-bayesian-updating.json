@@ -1,0 +1,45 @@
+{
+  "track": "mental-models",
+  "n": 8,
+  "date": "2026-10-16",
+  "title": "Bayesian updating",
+  "subtitle": "Priors, evidence, and changing your mind by the right amount",
+  "part": "Part I — Tools for thinking",
+  "summary": "Bayesian updating is the rule for moving a belief when a new fact arrives: start from how likely the claim was before, ask how much more likely the fact is if the claim is true than if it is false, and multiply. The middle quantity, how sharply the evidence discriminates, is the one people skip, and most bad updates come from skipping it.",
+  "body": [
+    "Bayesian updating is the rule for changing a belief by the right amount when evidence arrives. The belief before the evidence is the prior, expressed as a probability or as odds. The evidence is weighed by one ratio: how much more likely this fact would be if the claim were true than if it were false. Prior times ratio gives the posterior, and the posterior is the prior for the next fact. The rule is named for Thomas Bayes, a Presbyterian minister in Tunbridge Wells, whose essay on it was found among his papers after he died in 1761 and read to the Royal Society in 1763 by his friend Richard Price.",
+    "In odds the arithmetic is one multiplication. A claim held at three to one against, met by a fact that is four times as likely if the claim is true as if it is false, moves to four to three in favour. Evidence that would look the same whether the claim is true or false has a ratio of one and moves nothing, however loud it is.",
+    "## A positive test",
+    "Gerd Gigerenzer, at the Max Planck Institute for Human Development in Berlin, has put one problem to doctors for thirty years. A woman of fifty with no symptoms has a screening mammogram. About one in a hundred such women has breast cancer, the test catches about nine cancers in ten, and it flags about nine healthy women in a hundred. Her result is positive. In a 2007 training session with 160 gynaecologists, most answered that her chance of cancer was eighty or ninety percent.",
+    "Counting people in a thousand gives the answer. Among a thousand such women, ten have cancer and nine of them test positive. Of the 990 who do not, about eighty-nine test positive. The positives therefore number ninety-eight, and nine of them have cancer, about one in eleven. The doctors knew the prior of one percent and dropped it, and ten times a very small number is still a small number.",
+    "## Decibans at Bletchley",
+    "Alan Turing built the same arithmetic into a paper procedure in 1940 to attack the German naval Enigma. Two messages enciphered on overlapping settings share more repeated letters than two random strings do. Clerks punched each message onto long sheets of card printed in Banbury, slid one sheet along the other, and counted the coincident holes at each offset. Turing scored every coincidence as evidence for the overlap in a unit he called the ban, with the deciban as a tenth of it, a ratio of about 1.26 to one. Adding decibans down the sheet is multiplying likelihood ratios in logarithms, and the method, Banburismus, cut the rotor orders the bombes had to test from 336 to a handful. Turing's assistant Jack Good wrote the theory up after the war under the name weight of evidence.",
+    "## Wirecard",
+    "The investor's version of the problem is deciding which facts about a company discriminate. Wirecard, a Munich payments processor, joined the DAX 30 in September 2018 at a value of about 24 billion euros. From January 2019 the Financial Times published a series by Dan McCrum alleging that revenues booked through third-party partners in Asia were invented. Management denied every article and the price recovered each time, and since a fraudulent company and an honest one deny in the same words, each denial had a ratio near one. The fact with a large ratio came on 28 April 2020, when KPMG, hired by Wirecard itself, reported that it could not verify that the third-party revenues for 2016 to 2018 existed. On 18 June the auditor EY said 1.9 billion euros of cash in Philippine escrow accounts could not be confirmed, and on 25 June the company filed for insolvency. A holder who had sat through fourteen months of denials still had eight weeks to act after the one fact that discriminated.",
+    "## Where it misleads",
+    "The rule fails at the edges of the prior. A prior of zero or of one is immune to any evidence, because anything multiplied by zero stays zero, and the statistician Dennis Lindley named the warning Cromwell's rule after Oliver Cromwell's 1650 letter to the Church of Scotland asking them to consider that they might be mistaken.",
+    "The second trap is evidence that is correlated. Five news outlets carrying one wire report are one fact, and five dashboards derived from one metric are one fact, and an engineer paged at three in the morning who reads each of them as fresh confirmation will wake a team for a false alarm. The question for each new item is what it adds given the items already known.",
+    "The third trap is a hypothesis space that is wrong, since updating between two wrong maps never arrives at the territory, and the fourth is false precision, a hunch dressed as a posterior to three decimals. Over-application looks like someone who announces a numerical update after every headline and never notices that the headlines all had a ratio of one; Philip Tetlock's superforecasters updated often and in small steps, and a large move usually followed a fact of the KPMG kind.",
+    "## A habit for tomorrow",
+    "When a fact arrives that bears on something that matters, ask how likely it would be if the belief were false. If the answer is about as likely, file the fact and leave the belief alone. If the answer is much less likely, write down the belief before, the ratio, and the belief after, and compare the note with the move actually made.",
+    "The previous lesson, on probabilistic thinking, put a weight on each branch of what might happen; this one moves the weights as the facts come in. The map is not the territory supplies the warning that the branches themselves may be wrong, and circle of competence is where good priors come from, since a prior formed outside the circle is a guess with a number on it. Tomorrow's lesson, on expected value, multiplies the weights by what each branch is worth."
+  ],
+  "reading": [
+    {
+      "title": "Calculated Risks",
+      "by": "Gerd Gigerenzer, 2002"
+    },
+    {
+      "title": "The Theory of That Which Is Known as Weight of Evidence",
+      "by": "I. J. Good, 1985"
+    },
+    {
+      "title": "Money Men",
+      "by": "Dan McCrum, 2022"
+    },
+    {
+      "title": "The Theory That Would Not Die",
+      "by": "Sharon Bertsch McGrayne, 2011"
+    }
+  ]
+}
