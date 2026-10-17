@@ -1,0 +1,40 @@
+{
+  "track": "history",
+  "n": 8,
+  "date": "2026-10-17",
+  "title": "The dog and the first domestication",
+  "subtitle": "The beginning of humans engineering other species",
+  "part": "Part I — Before civilization",
+  "summary": "The first species humans changed was the wolf, and the change came before farming, pottery or any village. A dog is a wolf bred, over hundreds of generations, for willingness to live near people, and the side effects of that one selection, from floppy ears to a gut that digests starch, show what engineering a species does. The method, keep the tame and discard the rest, is the one that later produced sheep, wheat and maize.",
+  "body": [
+    "Every tool in the previous chapters was made from something dead: stone, wood, bone, hide. The dog is the first tool that was alive, and the first case of humans redirecting the evolution of another organism. It happened in the last glacial period, by the method every later domestication would use: breed from the animals that tolerate people, and let the rest go.",
+    "## What the bones say",
+    "The oldest dog that nobody disputes was found in 1914 by quarrymen in a basalt pit at Oberkassel, across the Rhine from Bonn. The grave held a man of about 40, a woman of about 25, and a dog about 27 weeks old; the bones date to 14,223 years ago, give or take 58. Luc Janssens and colleagues re-examined the dog's teeth in 2018 and found lines of thinned enamel marking illness at about 19, 21 and 23 weeks, a pattern consistent with canine distemper, which kills most untreated pups within weeks. A pup that sick survives only if someone keeps it warm and fed through a month in which it is useless for anything. The viral DNA is gone, so the diagnosis cannot be confirmed.",
+    "Older claims exist and are fought over. A skull from Goyet cave in Belgium, about 36,000 years old, and another from Razboinichya cave in the Altai, about 33,000, have the short snout and wide palate of dogs, and Mietje Germonpré and Nikolai Ovodov have argued since 2009 that they are early dogs; many archaeologists read them as wolves from a vanished population. The genetics put the split between the two camps. Anders Bergström's team sequenced 27 ancient dog genomes in 2020 and found that by 11,000 years ago there were already five distinct dog lineages, spread from Europe to Siberia to the Near East and the Americas, so the separation from wolves is older than any of them, probably more than 20,000 years. Where it happened is unresolved: Laurent Frantz proposed in 2016 that dogs were domesticated twice, in eastern Asia and in Europe, and other teams argue for a single origin in Siberia.",
+    "## How a wolf becomes a dog",
+    "The mechanism is selection on one trait, tolerance of humans, and the dispute is about who did the selecting. Raymond Coppinger argued in 2001 that no one did: wolves that scavenged at camps and fled a shorter distance when people appeared ate more and bred more, so the camp itself selected for tameness before anyone had the idea of keeping a wolf. The older account has hunters bringing pups home. Both end in the same place, since in either case the fearful animals leave the breeding population near people and the calm ones stay.",
+    "How fast that works was measured in Novosibirsk. Dmitri Belyaev began in 1959 with 130 silver foxes at the Institute of Cytology and Genetics, bred only the ones that flinched least from a gloved hand, and avoided inbreeding. Lyudmila Trut, who ran the colony after Belyaev died in 1985, reported in 1999 that 18 percent of pups in the tenth generation sought human contact like puppies and 35 percent did by the twentieth. Nobody selected for anything else, and the tame foxes came with floppy ears, piebald coats, curled tails, shorter snouts and smaller adrenal glands. Adam Wilkins, Richard Wrangham and Tecumseh Fitch proposed in 2014 that one developmental cause links all of these: the neural crest, a strip of embryonic cells that forms the adrenal medulla, pigment cells, ear cartilage and much of the facial skeleton. Selecting for a milder stress response selects for fewer or slower neural crest cells, and the ears and coats follow. The hypothesis is contested in its details, and it does account for why pigs, cattle, rabbits and mink show the same changes.",
+    "Erik Axelsson found in 2013 that dogs carry between 4 and 30 copies of the gene for pancreatic amylase, which digests starch, where wolves carry two; the ancient Arctic dogs have few copies, so that adaptation to a camp's leftovers came thousands of years after the first dogs.",
+    "## What the dog added to the band",
+    "A dog's nose carries roughly 300 million olfactory receptors against about six million in a human. A band with a dog had a sentry that worked at night, ate what the band could not, and gave warning of a bear or a stranger. In the hunt a dog tracks and holds game that a person cannot catch alone; a 2008 study by Jeremy Koster of Mayangna and Miskito hunters in Nicaragua found that most of the paca and agouti they brought home were taken with dogs.",
+    "Dogs also pulled, and the proof is on Zhokhov Island, at 76 degrees north in the East Siberian Sea, where Vladimir Pitulko's excavations of a camp about 9,500 years old produced sled runners, harness parts and the bones of dogs of 16 to 25 kilograms, the weight that fits the draught of the runners. The genome of one Zhokhov dog, published in 2020, shares most of its ancestry with modern Greenland sled dogs, so the sledging lineage is at least that old. A team of dogs moves a load across sea ice that no human could haul; it was the first energy converter the band had that was not its own muscles.",
+    "## What it forced",
+    "The lasting change was an idea: that the offspring of an animal can be chosen, and that choosing them for a few generations yields a different animal. The sheep and goats of the Zagros, around 10,500 years ago, and the grasses of the next part of this series were handled by people who already lived with a species they had shaped. Selection ran the other way as well. Miho Nagasawa's group showed in 2015 that when a dog and its owner hold each other's gaze, oxytocin rises in both, and that hand-raised wolves do not do it. Which species domesticated which is a fair question, and the record leaves it open.",
+    "The next chapter turns to marks on bone and cave walls, where the same minds that bred a wolf began to count."
+  ],
+  "reading": [
+    {
+      "title": "The Story of Civilization, Vol. I: Our Oriental Heritage",
+      "by": "Will Durant"
+    },
+    {
+      "title": "How to Tame a Fox (and Build a Dog)",
+      "by": "Lee Alan Dugatkin and Lyudmila Trut"
+    },
+    {
+      "title": "Origins and genetic legacy of prehistoric dogs (Science, 2020)",
+      "by": "Anders Bergström et al.",
+      "url": "https://www.science.org/doi/10.1126/science.aba9572"
+    }
+  ]
+}

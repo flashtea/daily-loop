@@ -1,0 +1,156 @@
+{
+  "date": "2026-10-17",
+  "sections": [
+    {
+      "title": "World",
+      "items": [
+        {
+          "headline": "Houthi missiles hit Yemen's presidential palace in Aden, killing five, in the group's first strike on the seat of the Saudi-backed government",
+          "summary": "Yemen's health minister said five people died and 16 were injured when five missiles struck the al-Maashiq palace on 15 October; Prime Minister Shaya al-Zindani was unharmed and two of his bodyguards were among the dead. The Houthis said they had targeted a Saudi military operations headquarters; the government said it will stay in Aden, and the UN Security Council condemned the attacks on Saudi Arabia and Yemen as escalatory.",
+          "why": "The Houthis can now reach the government's own capital as well as Riyadh's airport and Aramco, so treat the Yemen front of the Iran war as widening rather than winding down and keep the Red Sea risk premium in your shipping and oil assumptions.",
+          "source": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/15/houthis-target-yemens-presidential-palace-in-aden-with-missiles",
+          "follow_up": "2026-10-05"
+        },
+        {
+          "headline": "The order to slow Ukraine's Starshield service came from inside the White House, US officials told Reuters, and Ukraine said connectivity was restored",
+          "summary": "Two US officials and a Western official said Pentagon leaders were instructed from within the White House to throttle the SpaceX-run military service, which had capped moving terminals at about 160 km/h from 14 October; a senior US official denied that Trump personally requested it, and Musk wrote that speed and usage limits are decided by the US military and ultimately the president. A Ukrainian Defence Ministry source said on 15 October that connectivity had been restored.",
+          "why": "The throttle was a policy decision, reversed within two days under pressure, so the lesson stands: a single foreign vendor's configuration is now a lever of statecraft, and any dependency of yours on one supplier should be priced as political risk, not uptime risk.",
+          "source": "Kyiv Independent (Reuters)",
+          "url": "https://kyivindependent.com/order-limiting-starlink-access-for-ukraines-military-came-from-within-white-house-reuters-reports/",
+          "follow_up": "2026-10-15"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-19",
+          "what": "Alberta referendum: ten questions, including whether to start the legal process toward a binding vote on separating from Canada (non-binding)",
+          "url": "https://www.elections.ab.ca/"
+        },
+        {
+          "date": "2026-10-25",
+          "what": "Brazil presidential runoff, Lula vs Flávio Bolsonaro"
+        },
+        {
+          "date": "2026-10-27",
+          "what": "Israel Knesset election (120 seats, 3.25% threshold)"
+        },
+        {
+          "date": "2026-11-03",
+          "what": "US midterm elections: all 435 House seats, 35 Senate seats, 39 governorships"
+        }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [],
+      "ahead": [
+        {
+          "date": "2026-10-28",
+          "what": "GitHub Universe 2026, San Francisco (28–29 Oct)",
+          "url": "https://githubuniverse.com/"
+        },
+        {
+          "date": "2026-10-29",
+          "what": "Last day of the grandfathered 20x-Plus allowance for existing ChatGPT Pro $200 subscribers in Codex; drops to 10x from 30 Oct",
+          "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"
+        },
+        {
+          "date": "2026-11-10",
+          "what": "AI Engineer Code Summit, San Francisco (workshops 10 Nov, talks 11–12 Nov)",
+          "url": "https://ai.engineer/code/2026"
+        },
+        {
+          "date": "2026-11-16",
+          "what": "GitHub Copilot retires Claude Opus 4.8, Claude Opus 5 and GPT-5.6 Terra",
+          "url": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november"
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Anthropic gave six METR staff employee-level access to its systems and the right to publish findings it cannot veto",
+          "summary": "The nonprofit evaluator's team now works on Anthropic hardware, in its offices and with internal tools comparable to the company's own risk-assessment teams, under enforceable agreements; Anthropic can require redaction only of predefined categories such as customer data and model architecture, and METR can state what access it received. SecureBio is reviewing the chemical and biological chapter of the August risk report, and Anthropic described three access tiers it wants other evaluators to reach.",
+          "why": "This is the first standing outside audit of a frontier lab that the lab cannot suppress, two days after the FTC subpoenas, so when METR publishes, read it ahead of Anthropic's own risk reports before you judge the company's safety claims or its IPO.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+          "follow_up": "2026-09-20"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-11-12",
+          "what": "Anthropic's updated Usage Policy takes effect",
+          "url": "https://anthropic.com/news/2026-usage-policy-update"
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [],
+      "ahead": [
+        {
+          "date": "2026-10-28",
+          "what": "Node.js 26 enters LTS; Node.js 27 alpha opens under the new one-release-a-year schedule"
+        },
+        {
+          "date": "2026-11-04",
+          "what": "GitHub: first ssh-rsa SHA-1 brownout (second on 9 Dec, removal 13 Jan)",
+          "url": "https://github.blog/changelog/2026-09-22-security-improvements-for-ssh/"
+        },
+        {
+          "date": "2026-11-10",
+          "what": ".NET Conf 2026 (10–12 Nov, online) with the .NET 11 launch",
+          "url": "https://devblogs.microsoft.com/dotnet/dotnet-conf-2026/"
+        },
+        {
+          "date": "2026-11-19",
+          "what": "PostgreSQL 19 general availability (RC2 and Rust 1.100.0 on 12 Nov)"
+        }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [
+        {
+          "lead": true,
+          "headline": "MSCI adopted rules that make non-operating companies ineligible for its global indexes from 30 November, putting Strategy's index membership at risk; its shares fell 9.6%",
+          "summary": "The 15 October announcement implements the August proposal with minor changes: an issuer that fails a core screen for operating assets is tested on five financial ratios and becomes ineligible if flagged on four, current constituents are removed only after failing in their two most recent annual filings, and the final list comes with the 11 November index review. MSCI said in May that Strategy, Metaplanet and Yellow Cake would fail; JPMorgan had estimated about $2.8 billion of passive selling in Strategy, whose shares closed at $136.83 on Friday as the Nasdaq fell 2.1%.",
+          "why": "The largest bitcoin treasury company is about to lose its index bid and the premium that came with it, so if you hold Strategy for bitcoin exposure, compare it with the spot ETFs before 11 November rather than after.",
+          "source": "MSCI",
+          "url": "https://app2.msci.com/webapp/index_ann/DocGet?format=html&lang=en&pub_key=aq0wbkjxPgo%3D"
+        },
+        {
+          "headline": "Warsh gave no signal on an October hike in his last remarks before the Fed's blackout, and futures priced the chance at about 15%",
+          "summary": "In a fireside chat with Kristalina Georgieva at the IMF–World Bank meetings in Bangkok on 16 October, the Fed chair said he does not prejudge meetings and would not say what he might do at the two remaining this year, called September's moves by the Fed, ECB and Bank of Japan a synchronous tightening with no free riders, and said the economy had broadly conformed to the Fed's expectations since. Goldman Sachs read the remarks as a pause on 28 October with a final hike in December.",
+          "why": "After two hot inflation prints the Fed chair chose not to guide toward a hike, so the base case for 28 October is a hold at 3.75–4% with December live, which leaves the 10-year above 5% doing the tightening.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/10/16/feds-warsh-says-ai-development-path-will-be-very-bumpy-.html"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-23",
+          "what": "Moody's scheduled review of France's Aa3 rating (negative outlook)"
+        },
+        {
+          "date": "2026-10-28",
+          "what": "FOMC rate decision; UK Autumn Budget with OBR forecast the same day",
+          "url": "https://www.federalreserve.gov/newsevents/2026-october.htm"
+        },
+        {
+          "date": "2026-10-29",
+          "what": "ECB rate decision, US Q3 GDP advance estimate and September PCE inflation; Bank of Japan decides the next day",
+          "url": "https://www.bea.gov/news/schedule"
+        },
+        {
+          "date": "2026-11-11",
+          "what": "MSCI publishes the final list of non-operating companies removed at the 30 Nov close; US October CPI the day before (BLS, 08:30 ET)",
+          "url": "https://www.bls.gov/schedule/2026/11_sched_list.htm"
+        }
+      ]
+    }
+  ]
+}
