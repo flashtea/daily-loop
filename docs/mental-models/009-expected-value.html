@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Expected value — Mental Models · Daily Loop</title>
+  <meta name="description" content="Expected value is the average result of a decision if it could be run many times: each outcome&#39;s payoff weighted by its probability, then added up. It is the tool that makes small chances of large results legible, and it is most often misused where the bet cannot be repeated or the worst branch cannot be survived." />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../style.css?v=9c67d8e9" />
+</head>
+<body class="page-lesson">
+  <header class="masthead">
+    <div class="wrap">
+      <div class="hairline"></div>
+      <a class="nameplate" href="../index.html">Daily Loop</a>
+      <p class="tagline">World · AI · Software · Money — plus a daily lesson</p>
+      <nav class="nav"><a class="nav-a" href="../index.html">Today</a><a class="nav-a current" href="../mental-models/index.html"><span class="full">Mental Models</span><span class="short">Models</span></a><a class="nav-a" href="../history/index.html"><span class="full">History of Civilization</span><span class="short">History</span></a><a class="nav-a" href="../archive.html">Archive</a></nav>
+      <div class="dateline"><span>Mental Models</span><span>Lesson 9</span></div>
+      <div class="rule"></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+<article class="lesson">
+      <header class="lesson-head">
+        <p class="kicker">Mental Models · No. 9 · Tools for thinking</p>
+        <h1 class="lesson-title">Expected value</h1>
+        <p class="lesson-sub">Magnitude times probability; why rare, large outcomes dominate</p>
+        <p class="lesson-meta">18 October 2026 · <a href="../index.html">that day's edition</a> · <a href="index.html">all mental models</a></p>
+      </header>
+      <p class="lesson-summary">Expected value is the average result of a decision if it could be run many times: each outcome&#39;s payoff weighted by its probability, then added up. It is the tool that makes small chances of large results legible, and it is most often misused where the bet cannot be repeated or the worst branch cannot be survived.</p>
+      <div class="lesson-body">
+<p>Expected value is the probability-weighted average of all the outcomes a decision can produce: each payoff multiplied by the chance of it, then summed. A bet that pays 10 one time in a hundred and nothing otherwise is worth 0.10 per play, whatever any single play returns. The rule came out of letters between Blaise Pascal and Pierre de Fermat in the summer of 1654, prompted by a gambler, Antoine Gombaud, who wanted to know how to split the pot of an interrupted dice game.</p>
+<p>The arithmetic is trivial and the habit is rare, because people weigh outcomes by how vivid they are, while the rule weighs them by size times chance. The multiplication has a property that matters more than any single number: a small chance of a very large payoff can outweigh a near-certain small one, and a small chance of a very large loss can wipe out a near-certain small gain.</p>
+<h2>Where the rare outcome is the whole business</h2>
+<p>Venture capital is built on the first half of that property. Sequoia Capital put about $60 million into WhatsApp from 2011, as its only venture investor, and held stock worth roughly $3 billion when Facebook bought the company in February 2014 for $19 billion, at which point WhatsApp had about 55 employees and 450 million users. A fund that makes thirty such investments expects most of them to return nothing, and its decade is decided by whether one of the thirty is a WhatsApp. The expected value of each cheque is positive only because the tail is fat, and a partner who passes on every deal with a 95% chance of failure is passing on the whole asset class.</p>
+<p>The detail that does not fit the model is that nobody at Sequoia assigned WhatsApp a probability in 2011. What the firm knew was that the payoff, if it came, would carry a fund, and that the price of finding out was small. Expected value in practice often has that shape: a rough bound on the payoff, a rough bound on the cost, and a judgment that the ratio between them is wide enough to survive a large error in the probability.</p>
+<h2>Where the rare outcome is the whole risk</h2>
+<p>Insurance is the same multiplication run from the other side. A homeowner who pays $1,200 a year against a one-in-five-hundred chance of a $400,000 fire is paying $1,200 for an expected loss of $800, and is right to do it, because the household cannot absorb the $400,000 and can absorb the $1,200. Daniel Bernoulli made this point in St Petersburg in 1738: an extra unit of money is worth less to its owner the more the owner already has, so a loss that ruins is worth more than its face. The insurer takes the other side and comes out ahead only because it is big enough for the law of large numbers to run.</p>
+<p>The most instructive failure is a correct calculation applied to the wrong frame. In 1973 two Ford engineers sent the National Highway Traffic Safety Administration a memo on a proposed fuel-system standard. It weighed an estimated 180 burn deaths a year valued at $200,000 each, 180 serious injuries at $67,000 and 2,100 burned vehicles at $700, a total of $49.5 million, against $11 per vehicle across 12.5 million cars and light trucks, $137 million. The $200,000 was the agency&#39;s own valuation of a life. When Mother Jones printed the memo in 1977 during litigation over the Pinto&#39;s fuel tank, the expected value of the decision changed by orders of magnitude: a California jury in Grimshaw v. Ford awarded $125 million in punitive damages in 1978, later cut to $3.5 million, and the car became a byword for a company that had priced its customers&#39; deaths. Gary Schwartz&#39;s 1991 review in the Rutgers Law Review argued that the memo concerned rollover regulation for the whole industry and was never a Pinto design document, and that the Pinto&#39;s fatality rate was about average for small cars; the record is still contested. What is settled is that the engineers priced the deaths and left out the branch in which the pricing itself became public.</p>
+<h2>The failure mode</h2>
+<p>Expected value misleads in a few recognisable ways. The first is a bet that cannot be repeated: a positive-expectation gamble with a 10% chance of ruin is a bad bet for one player and a good one for a thousand, since the one who is ruined cannot play on to collect the average. The second is a probability written down to make the multiplication possible, with no base rate behind it; Pascal&#39;s own wager, with its infinite payoff, is the limiting case, since any probability above zero makes the product infinite and the argument decides nothing. Payoffs in currencies that do not convert are a third, as at Ford, where dollars, deaths and a reputation were summed as if they did, and a sum done by someone who will bear none of the losses is a fourth.</p>
+<p>Someone over-applying the model talks in expected values about decisions they will make once, quotes probabilities to two decimal places for events that have never happened, and treats many small certain costs as negligible against one large improbable benefit without asking who bears them.</p>
+<h2>A habit for tomorrow</h2>
+<p>Before a decision with an uncertain outcome, write the branches in a column, put a probability and a payoff beside each, multiply, and add. Then ask two questions the sum does not answer: whether the worst branch can be survived, and how many times this kind of bet will be made. If the answer to the first is no, the expected value is irrelevant. If the answer to the second is once, the spread of outcomes matters as much as their mean.</p>
+<p>Probabilistic thinking supplied the weights on the branches and Bayesian updating moved them; expected value multiplies each weight by what the branch is worth and so turns a forecast into a decision. Second-order thinking extends each branch one step further, which is where the Ford memo stopped short. The next lesson, margin of safety, is the engineer&#39;s answer to the first of the two questions above: how much slack to build in so that the worst branch can be survived.</p>
+      </div>
+      <aside class="box reading"><h2>Further reading</h2><ul><li><em>Exposition of a New Theory on the Measurement of Risk</em>, Daniel Bernoulli, 1738 (Econometrica translation, 1954)</li><li><em>Against the Gods: The Remarkable Story of Risk</em>, Peter L. Bernstein, 1996</li><li><em>The Myth of the Ford Pinto Case</em>, Gary T. Schwartz, Rutgers Law Review, 1991</li><li><em>Fortune&#39;s Formula</em>, William Poundstone, 2005</li></ul></aside>
+      <nav class="pager">
+        <a class="pager-a prev" href="008-bayesian-updating.html"><span class="pager-label">← Previous lesson</span><span class="pager-title">Bayesian updating</span></a>
+        <span class="pager-a next empty"></span>
+      </nav>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="rule"></div>
+      <div class="arch-row">
+        <p class="arch-label">Recent editions</p>
+        <nav class="archive"><a class="chip current" href="../index.html">18 Oct</a><a class="chip" href="../2026-10-17.html">17 Oct</a><a class="chip" href="../2026-10-16.html">16 Oct</a><a class="chip" href="../2026-10-15.html">15 Oct</a><a class="chip" href="../2026-10-14.html">14 Oct</a><a class="chip" href="../2026-10-13.html">13 Oct</a><a class="chip" href="../2026-10-12.html">12 Oct</a><a class="chip" href="../2026-10-11.html">11 Oct</a><a class="chip" href="../2026-10-08.html">08 Oct</a><a class="chip" href="../2026-10-07.html">07 Oct</a><a class="chip all" href="../archive.html">All 124 editions →</a></nav>
+      </div>
+      <p class="colophon">Curated by Claude · rendered by <code>build.mjs</code> · built 2026-10-18 04:10 UTC</p>
+    </div>
+  </footer>
+</body>
+</html>
