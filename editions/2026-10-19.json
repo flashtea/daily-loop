@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-19",
+  "sections": [
+    {
+      "title": "World",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Ukraine sent more than 1,000 drones at Russia overnight and hit the St Petersburg oil terminal and the Ruchi oil depot",
+          "summary": "Russia's Ministry of Defence said 1,015 Ukrainian drones were shot down over 15 regions, Crimea and the Black Sea on the night of 17–18 October; Leningrad governor Alexander Drozdenko counted 145 over his region alone. Fires were reported at the St Petersburg oil terminal, the Ruchi oil depot, Ozon's logistics hub and warehouses in the Kolpinsky district, VK said a drone hit its data centre without disrupting services, about 20,000 people lost power, and city governor Alexander Beglov said one person was killed and five injured.",
+          "why": "Both sides are now running energy strikes at the scale of a thousand drones a night, so plan for Russian refining losses and Ukrainian blackouts to be the winter's pattern rather than a pause, with oil staying bid on it.",
+          "source": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/18/ukrainian-drone-attack-on-russias-st-petersburg-kills-1-hits-energy-sites",
+          "follow_up": "2026-10-16"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-10-19", "what": "Alberta referendum: ten questions, the last on whether to begin the legal process toward a binding vote on separating from Canada (non-binding; counted by hand, separation question first)", "url": "https://www.alberta.ca/referendum" },
+        { "date": "2026-10-25", "what": "Brazil presidential runoff, Lula vs Flávio Bolsonaro" },
+        { "date": "2026-10-27", "what": "Israel Knesset election (120 seats, 3.25% threshold)" },
+        { "date": "2026-11-03", "what": "US midterm elections: all 435 House seats, 35 Senate seats, 39 governorships" }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Replit made OpenAI the default model provider for Replit Agent, and its CEO said the company had been a top-five Anthropic customer until recently",
+          "summary": "Amjad Masad said on stage at TechCrunch Disrupt that Replit was no longer working with Anthropic, citing cost, partnership and performance, and that OpenAI's Sol and Astra models scored higher on Replit's public benchmark for building apps from scratch; over the weekend Replit said it remains model-agnostic, that Claude is still selectable, and that OpenAI is now its preferred partner for powering the agent. A person familiar with the Anthropic partnership told TechCrunch it was still in place; Masad also said enterprise went from about 2% of revenue last year to about 15% this year.",
+          "why": "Default model choices at the big coding platforms are now set by price and benchmark score and can flip in a quarter, so keep your own agent workflows provider-agnostic and expect the model behind any hosted tool to change under you.",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-10-28", "what": "GitHub Universe 2026, San Francisco (28–29 Oct)", "url": "https://githubuniverse.com/" },
+        { "date": "2026-10-29", "what": "Last day of the grandfathered 20x-Plus allowance for existing ChatGPT Pro $200 subscribers in Codex; drops to 10x from 30 Oct" },
+        { "date": "2026-11-10", "what": "AI Engineer Code Summit, San Francisco (workshops 10 Nov, talks 11–12 Nov)" },
+        { "date": "2026-11-16", "what": "GitHub Copilot retires Claude Opus 4.8, Claude Opus 5 and GPT-5.6 Terra" }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Anthropic committed 5% of its shares to a new Public Benefit Fund, with 2 more points added for every 50% rise in the company's value above a baseline",
+          "summary": "The fund is a wholly owned LLC rather than a 501(c)(3), so it can make large grants to nonprofits or direct payments to specific populations, labour-market impacts being the stated example; the commitment needs stockholder approval, none of the equity may be used for lobbying or political giving, and the baseline and the milestone schedule will be published in the coming months. With the founders' 80% pledge and the employee donation match, Anthropic says about 20% of its shares are now dedicated to the public good.",
+          "why": "Anyone pricing the Anthropic IPO should read the cap table as carrying about a fifth of the equity in charitable hands, with more moving across at each valuation milestone, before deciding what a share is worth.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/public-benefit-fund"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-10-31", "what": "DeepSeek starts billing Search and Fetch API calls made through Claude Code, Codex and DeepSeek Harness ($0.75 per 1,000 calls, 16:00 UTC)" },
+        { "date": "2026-11-12", "what": "Anthropic's updated Usage Policy takes effect", "url": "https://www.anthropic.com/news/2026-usage-policy-update" },
+        { "date": "2026-11-16", "what": "California's expert panel on independent AI verification and an agent 'kill switch' reports to Newsom under his 18 September executive order", "url": "https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/" }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [],
+      "ahead": [
+        { "date": "2026-10-19", "what": "GitHub Actions begins moving the ubuntu-latest label from Ubuntu 24.04 to 26.04 (gradual rollout to 19 Nov; pin ubuntu-24.04 to stay)" },
+        { "date": "2026-10-28", "what": "Node.js 26 enters LTS; Node.js 27 alpha opens under the new one-release-a-year schedule" },
+        { "date": "2026-11-04", "what": "GitHub: first ssh-rsa SHA-1 brownout (second on 9 Dec, removal 13 Jan)" },
+        { "date": "2026-11-17", "what": "Chrome 158 stable removes XSLT for all users outside the origin trial and enterprise policy; PostgreSQL 19 GA two days later" }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [
+        {
+          "headline": "China's GDP grew 4.5% in the third quarter on a 29.6% jump in September exports, while property investment fell 20.6% and retail sales rose 1.1%",
+          "summary": "The National Bureau of Statistics reported growth of 4.5% year on year and 1.2% on the quarter, up from 4.3% in the second quarter and above the 4.4% expected, with the first three quarters at 4.6%; September exports rose 29.6% in yuan terms and industrial output 5.5%, while fixed-asset investment for January to September fell 7.2%, real estate investment fell 20.6%, and consumer prices rose 0.9%.",
+          "why": "China's growth is being carried almost entirely by exports while investment and consumption at home shrink, so expect more Chinese goods pressing on everyone else's manufacturers and more trade friction, and do not count on a Chinese demand boost for commodities.",
+          "source": "National Bureau of Statistics of China",
+          "url": "http://www.stats.gov.cn/english/PressRelease/202610/t20261019_1965619.html"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-10-21", "what": "UK September CPI (ONS)" },
+        { "date": "2026-10-23", "what": "Moody's scheduled review of France's Aa3 rating (negative outlook); flash PMIs and Japan CPI the same day" },
+        { "date": "2026-10-28", "what": "FOMC rate decision; UK Autumn Budget with OBR forecast the same day" },
+        { "date": "2026-10-29", "what": "ECB rate decision and US Q3 GDP advance estimate; Bank of Japan decides the next day" }
+      ]
+    }
+  ]
+}
