@@ -1,0 +1,46 @@
+{
+  "track": "mental-models",
+  "n": 10,
+  "date": "2026-10-20",
+  "title": "Margin of safety",
+  "subtitle": "Building slack into engineering, investing, and plans",
+  "part": "Part I — Tools for thinking",
+  "summary": "A margin of safety is the deliberate gap between what a thing is built to bear and what it is expected to bear, kept so that errors in the estimate do not reach the point of failure. Engineers write it into bridge codes as a factor; Benjamin Graham made it the central rule of investing. The size of the margin is a confession of how much the planner does not know.",
+  "body": [
+    "A margin of safety is the gap between what a thing is built to bear and what it is expected to bear, left on purpose so that errors in the estimate, the materials or the world run out before the structure does. The phrase comes from engineering, where factors of safety have been written into boiler and bridge rules since the nineteenth century. Benjamin Graham borrowed it for investing in *Security Analysis* in 1934 and gave it the last chapter of *The Intelligent Investor* in 1949, titled \"Margin of Safety as the Central Concept of Investment\". The rule is the same in both fields: decide which number the plan depends on, admit that it is wrong by an unknown amount, and leave room for being wrong by more than seems likely.",
+    "The logic rests on two facts: every load estimate, valuation and schedule contains an error of unknown size, and some branches cannot be survived, so an unsurvivable branch deserves more avoidance than its probability alone would buy. A margin turns \"probably fine\" into \"fine unless several things go wrong at once\".",
+    "## A bridge built six times too strong",
+    "John Roebling designed the Brooklyn Bridge in 1867 with its four main cables rated to carry six times the heaviest load he expected on them. Each cable is 15.75 inches thick and holds 5,434 parallel steel wires. In 1878, with the cables partly spun, the engineers found that the wire contractor, J. Lloyd Haigh, had been substituting rejected wire for approved coils after inspection, and that an unknown quantity of it was already inside the cables where nothing could remove it. Washington Roebling, who had taken over when his father died of tetanus in 1869, recalculated with the fraudulent wire counted against the cables and found them still about four times as strong as they needed to be. He ordered 150 extra wires added to each cable, and the bridge opened in May 1883. It went on to carry elevated trains and then trucks, loads nobody in 1867 had priced.",
+    "Modern codes keep the shape with smaller numbers. The US airworthiness rule FAR 25.303 requires a transport aircraft's structure to carry 1.5 times the limit load, the largest expected in service, without failure. That factor is small because the loads are measured in flight test and the alloys come with tight tolerances; Roebling's six covered iron of uneven quality, no theory of fatigue, and a traffic forecast he was guessing at. A margin's size is a statement about how much the designer does not know.",
+    "## Graham's version",
+    "Graham's margin is the difference between the price paid and the value estimated. His education in it was expensive: his joint account lost roughly seventy percent between 1929 and 1932, and the rules he wrote afterwards were built to survive a repeat. A stock bought at two-thirds of appraised value can absorb a one-third error in the appraisal before the buyer has overpaid.",
+    "Warren Buffett's purchase of Washington Post Company stock in 1973 is the textbook case because the numbers are on the record. Berkshire Hathaway paid about $10.6 million for its stake when the market valued the whole company at around $80 million, and Buffett has said that any of ten buyers would have paid at least $400 million for the assets. The detail the model does not predict is what happened next: the stock fell further after the purchase, and the stake stayed below its cost for about two years. The margin covered an error in the appraisal, and nothing about how long the market would take to agree.",
+    "## Slack in machines",
+    "Operations people use the same idea under other names. Google's reliability engineers provision serving capacity at N+2, enough that two datacenters can fail at the peak and the rest still carry the load. A cluster run near full utilisation has no margin at all, because the first node that fails sends its share of traffic to machines with nowhere to put it.",
+    "## When the margin misleads",
+    "The first failure is that margins get eaten. Sam Peltzman's 1975 study of US car safety regulation argued that drivers with seat belts drove faster, so the margin built into the car was spent on the road. A bridge rated for one load is quietly relicensed for a heavier one, and a buffer added to a project plan is treated by everyone as part of the schedule. Some engineers keep part of the margin undisclosed for this reason.",
+    "The second failure is over-application. A margin on price alone buys cheap bad businesses: Buffett bought control of Berkshire Hathaway's textile mills in 1965 at a discount to working capital and later called it the dumbest stock he ever bought. Graham himself made more money from one position that broke his rules than from everything else combined. Graham-Newman bought a quarter of GEICO in 1948 at a price his own tests would have rejected, and he wrote in the postscript to *The Intelligent Investor* that the profit far exceeded the sum of all the others in twenty years of operations. He did not resolve the contradiction in the book.",
+    "The third failure is stacking. If each engineer in a chain adds a factor of two to cover the person before, five layers produce a structure thirty-two times heavier than it needs to be. The over-applier shows the same symptom in any field: a margin demanded on every uncertainty, including the ones that cannot be measured, until no plan is ever good enough.",
+    "## A habit for tomorrow",
+    "Before committing to a plan, write down the single number it depends on, the amount by which that number could be wrong, and whether the plan survives the number being wrong by twice that amount. If it does not survive and more margin cannot be bought, the plan waits until it can.",
+    "This model sits on the earlier ones. Probabilistic thinking supplies the range of outcomes, and the circle of competence sets the width of the margin, since the less you know about the number, the more room you leave. Expected value says what a bet is worth, and the margin of safety says whether you are allowed to make it. The next lesson, Occam's razor, turns to the opposite discipline, cutting assumptions out of an explanation instead of building slack into a plan."
+  ],
+  "reading": [
+    {
+      "title": "The Intelligent Investor, chapter 20",
+      "by": "Benjamin Graham, 1949 (revised 1973)"
+    },
+    {
+      "title": "The Great Bridge",
+      "by": "David McCullough, 1972"
+    },
+    {
+      "title": "The Superinvestors of Graham-and-Doddsville",
+      "by": "Warren Buffett, Columbia Business School, 1984"
+    },
+    {
+      "title": "Site Reliability Engineering, chapter on load balancing and capacity",
+      "by": "Google, 2016"
+    }
+  ]
+}

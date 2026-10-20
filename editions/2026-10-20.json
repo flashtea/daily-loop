@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-20",
+  "sections": [
+    {
+      "title": "World",
+      "items": [],
+      "ahead": [
+        { "date": "2026-10-25", "what": "Brazil presidential runoff, Lula vs Flávio Bolsonaro; Bulgaria presidential election the same day (runoff if no majority on turnout above 50%)" },
+        { "date": "2026-10-27", "what": "Israel Knesset election (120 seats, 3.25% threshold)" },
+        { "date": "2026-10-29", "what": "Elections Alberta publishes the official results of the 19 October referendum (unofficial count released overnight on 20 October)", "url": "https://results.elections.ab.ca/" },
+        { "date": "2026-11-03", "what": "US midterm elections: all 435 House seats, 35 Senate seats, 39 governorships" }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [],
+      "ahead": [
+        { "date": "2026-10-28", "what": "GitHub Universe 2026, San Francisco (28–29 Oct)", "url": "https://githubuniverse.com/" },
+        { "date": "2026-10-29", "what": "Last day of the grandfathered 20x-Plus allowance for existing ChatGPT Pro $200 subscribers in Codex; drops to 10x from 30 Oct" },
+        { "date": "2026-11-10", "what": "AI Engineer Code Summit, San Francisco (workshops 10 Nov, talks 11–12 Nov)" },
+        { "date": "2026-11-16", "what": "GitHub Copilot retires Claude Opus 4.8, Claude Opus 5 and GPT-5.6 Terra" }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Inception released Mercury 3, a diffusion language model with a 1-million-token context that it says generates 1,068 tokens per second on Nvidia GPUs",
+          "summary": "The company says the model has about 40 times the parameters of Mercury 1, matches or beats GPT-6 Luna and Claude Haiku 5.5 on its benchmark table while running four to eight times faster, and is available through its API, OpenRouter, Baseten and Vercel at $0.20 per million input tokens and $0.70 output, half price at launch. All numbers are Inception's own; no independent evaluation has been published, and the model trails Haiku 5.5 on coding rows.",
+          "why": "Diffusion decoding at four-figure tokens per second is now a production option for the latency-bound steps in an agent (classification, routing, voice), so it is worth a benchmark on your own traffic before taking the quality claims on trust.",
+          "source": "Inception",
+          "url": "https://www.inceptionlabs.ai/blog/introducing-mercury-3"
+        },
+        {
+          "headline": "MiniMax released M3.1 Flash at $0.15 per million input tokens and $0.60 output, scoring 73.7% on DeepSWE v1.1 with weights promised later",
+          "summary": "The company reports 61.7 on OSWorld V2, 82% on CyberGym and median output speeds above 170 tokens per second, and says agentic tasks cost about 70% less than on its predecessor. The weights are not yet public and no license has been named.",
+          "why": "A sub-dollar model within a few points of DeepSeek's V4.1-Flash on agentic coding benchmarks is another candidate for the cheap-subagent tier, with the usual caveat that the scores are the vendor's.",
+          "source": "MiniMax",
+          "url": "https://www.minimax.io/blog/minimax-m31f"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-10-31", "what": "DeepSeek starts billing Search and Fetch API calls made through Claude Code, Codex and DeepSeek Harness ($0.75 per 1,000 calls, 16:00 UTC)" },
+        { "date": "2026-11-12", "what": "Anthropic's updated Usage Policy takes effect", "url": "https://www.anthropic.com/news/2026-usage-policy-update" },
+        { "date": "2026-11-16", "what": "California's expert panel on independent AI verification and an agent 'kill switch' reports to Newsom under his 18 September executive order", "url": "https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/" }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "lead": true,
+          "headline": "GitHub said it may temporarily require authentication for HTTPS clones and fetches of public repositories during periods of unusual traffic",
+          "summary": "The protection applies to unauthenticated Git over HTTPS on all plans and is meant to protect github.com's availability; affected operations fail with a message saying authentication is required. Authenticated HTTPS, SSH, pushes and the web and API are unaffected, and GitHub says this is not a general authentication requirement for public repositories.",
+          "why": "Any CI job, Dockerfile or script that clones a public repository anonymously can now fail intermittently, so switch it to GITHUB_TOKEN in Actions or a GitHub App token elsewhere, and treat unauthenticated clones as best-effort.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-10-19-some-git-over-https-may-temporarily-require-authentication"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-10-28", "what": "Node.js 26 enters LTS; Node.js 27 alpha opens under the new one-release-a-year schedule" },
+        { "date": "2026-11-04", "what": "GitHub: first ssh-rsa SHA-1 brownout (second on 9 Dec, removal 13 Jan)" },
+        { "date": "2026-11-17", "what": "Chrome 158 stable removes XSLT for all users outside the origin trial and enterprise policy; PostgreSQL 19 GA two days later" },
+        { "date": "2026-11-19", "what": "GitHub Actions finishes moving the ubuntu-latest label from Ubuntu 24.04 to 26.04 (rollout began 19 Oct; pin ubuntu-24.04 to stay)" }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [],
+      "ahead": [
+        { "date": "2026-10-21", "what": "UK September CPI (ONS)" },
+        { "date": "2026-10-23", "what": "Moody's scheduled review of France's Aa3 rating (negative outlook); flash PMIs and Japan CPI the same day" },
+        { "date": "2026-10-28", "what": "FOMC rate decision; UK Autumn Budget with OBR forecast the same day" },
+        { "date": "2026-10-29", "what": "ECB rate decision and US Q3 GDP advance estimate; Bank of Japan decides the next day" }
+      ]
+    }
+  ]
+}
