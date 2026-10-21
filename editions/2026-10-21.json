@@ -1,0 +1,156 @@
+{
+  "date": "2026-10-21",
+  "sections": [
+    {
+      "title": "World",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Albertans voted about 75% to 25% to remain in Canada, rejecting a path to a binding separation referendum",
+          "summary": "With more than 1.9 million ballots counted and about 91% of polls reporting on 20 October, roughly 1.47 million Albertans chose to remain a province of Canada and about 486,000 voted to start the constitutional process toward a binding separation vote; the count is unofficial until Elections Alberta certifies it on 29 October. Prime Minister Mark Carney said Albertans had made a \"clear choice\" for unity, Premier Danielle Smith said she had voted against separation, and most of the nine non-binding policy questions on immigration, residency rules and provincial powers were leading on the yes side by narrow margins while the question on opting out of federal programs was trailing.",
+          "why": "A three-to-one result closes the Alberta secession question for this political cycle, so take the Canadian break-up discount out of your view of the loonie and Canadian energy equities, and watch the narrow yes votes on immigration and residency as the live fight between Edmonton and Ottawa.",
+          "source": "Elections Alberta (unofficial results)",
+          "url": "https://results.elections.ab.ca/"
+        },
+        {
+          "headline": "France ordered army units onto the streets and night curfews in Paris and four other cities after riots on 17 October hit at least 3,000 businesses",
+          "summary": "Interior Minister Laurent Nuñez said troops from the Sentinelle force will guard fixed sites during the next nationwide protest on 24 October so police and gendarmes can be used for crowd control, after a day on which the government counted about 550,000 demonstrators, 1,800 arrests and more than 500 injured officers; Paris police imposed a 9pm to 4am curfew on the Place de la République and Les Halles districts, with partial or minors-only curfews in Bordeaux, Nice, Marseille and Lille. Prime Minister Sébastien Lecornu acknowledged intelligence failures, the government said it is considering a ban on unauthorised demonstrations, and unions have set 5 November for a further national protest.",
+          "why": "France has a Moody's rating review on 23 October, a budget to pass and a presidential election in six months, so price its political risk into OAT spreads and euro exposure rather than treating the weekend as a one-off.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/10/20/france-protests-curfews-macron-gulf-trip.html"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-25",
+          "what": "Brazil presidential runoff, Lula vs Flávio Bolsonaro; Bulgaria presidential election the same day"
+        },
+        {
+          "date": "2026-10-27",
+          "what": "Israel Knesset election (120 seats, 3.25% threshold)"
+        },
+        {
+          "date": "2026-10-29",
+          "what": "Elections Alberta certifies the official results of the 19 October referendum",
+          "url": "https://results.elections.ab.ca/"
+        },
+        {
+          "date": "2026-11-03",
+          "what": "US midterm elections: all 435 House seats, 35 Senate seats, 39 governorships"
+        }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "OpenAI published COBOL-migration and 20-language evaluations on which GPT-6.1 Sol scores 86.6% at low reasoning effort, up from 5.4% for GPT-5.6 Sol",
+          "summary": "The 19 October post introduces an evaluation that migrates COBOL programs to Python, Java and Rust and a MultiLangBench task that builds SQLite from scratch in 20 languages; OpenAI reports 97.9% COBOL-migration accuracy at high effort, a 39% cost reduction at low effort, and GPT-6 Astra averaging 87.4% across the 20 languages, with Visual Basic at 89.4%, Fortran at 83.5% and COBOL at 72.1%. The evaluation setup, test suite and per-language results are being released on GitHub; all scores are OpenAI's own, and it says production migrations still need expert review and testing.",
+          "why": "If you have a mainframe or Fortran estate you had written off as un-migratable by agents, the economics changed in one model generation, so run the released test suite on a slice of your own code before deciding again.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/low-resource-programming-languages/"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-28",
+          "what": "GitHub Universe 2026, San Francisco (28–29 Oct)",
+          "url": "https://githubuniverse.com/"
+        },
+        {
+          "date": "2026-10-29",
+          "what": "Last day of the grandfathered 20x-Plus allowance for existing ChatGPT Pro $200 subscribers in Codex; drops to 10x from 30 Oct"
+        },
+        {
+          "date": "2026-11-10",
+          "what": "AI Engineer Code Summit, San Francisco (workshops 10 Nov, talks 11–12 Nov)"
+        },
+        {
+          "date": "2026-11-16",
+          "what": "GitHub Copilot retires Claude Opus 4.8, Claude Opus 5 and GPT-5.6 Terra"
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Microsoft cancelled its contract for Nscale's 23,040-GPU Loughton data centre after the site was told it may not get grid power until the 2030s",
+          "summary": "The 50-megawatt facility in Essex, announced in September 2025 as part of Microsoft's £22 billion UK investment and due to start operating with Nvidia GB300 chips in early 2027, lost its only announced customer after UK Power Networks warned Nscale that a sufficient grid connection may not arrive until the early-to-mid 2030s because of works on the national transmission network. The Telegraph first reported the termination on 18 October; Nscale said it remains committed to the site, is looking at alternative power sources and that its other contracts are unaffected, and Microsoft confirmed the exit covers this one site.",
+          "why": "Grid connection dates, not chips or capital, are now the binding constraint on new AI capacity in Britain, so discount UK data-centre announcements that lack a confirmed transmission connection and treat Nscale's pipeline accordingly.",
+          "source": "The Register",
+          "url": "https://www.theregister.com/on-prem/2026/10/19/microsoft-abandons-uk_ai_supercomputer_as_grid_struggles_to_keep_up/5303824"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-31",
+          "what": "DeepSeek starts billing Search and Fetch API calls made through Claude Code, Codex and DeepSeek Harness ($0.75 per 1,000 calls, 16:00 UTC)"
+        },
+        {
+          "date": "2026-11-12",
+          "what": "Anthropic's updated Usage Policy takes effect",
+          "url": "https://www.anthropic.com/news/2026-usage-policy-update"
+        },
+        {
+          "date": "2026-11-16",
+          "what": "California's expert panel on independent AI verification and an agent 'kill switch' reports to Newsom under his 18 September executive order",
+          "url": "https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/"
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "GitHub opened a public preview of a package firewall that sits between Actions runners or coding agents and the npm registry",
+          "summary": "The proxy inspects package metadata requests and downloads against enterprise policy, including a configurable cooldown period for newly published versions, GitHub Advisory Database malware and vulnerability checks, and supply-chain checks such as attestation downgrades, and blocked packages can be released through an exception workflow. It is free during the preview, available to GitHub Enterprise Cloud customers including data-residency tenants, supports only npm for now, and will be billed on metered usage like Actions after general availability.",
+          "why": "A registry proxy with a cooldown on fresh versions is the single most effective defence against the npm worm pattern of the past year, so if you are on Enterprise Cloud route your CI installs through it, and if you are not, put an equivalent proxy in front of your agents' package installs.",
+          "source": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-10-20-github-package-firewall-in-public-preview/"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-28",
+          "what": "Node.js 26 enters LTS; Node.js 27 alpha opens under the new one-release-a-year schedule"
+        },
+        {
+          "date": "2026-11-04",
+          "what": "GitHub: first ssh-rsa SHA-1 brownout (second on 9 Dec, removal 13 Jan)"
+        },
+        {
+          "date": "2026-11-17",
+          "what": "Chrome 158 stable removes XSLT for all users outside the origin trial and enterprise policy; PostgreSQL 19 GA two days later"
+        },
+        {
+          "date": "2026-11-19",
+          "what": "GitHub Actions finishes moving the ubuntu-latest label from Ubuntu 24.04 to 26.04 (rollout began 19 Oct; pin ubuntu-24.04 to stay)"
+        }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [],
+      "ahead": [
+        {
+          "date": "2026-10-21",
+          "what": "UK September CPI (ONS, 06:00 UTC; consensus 3.4% from 3.1%)",
+          "url": "https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/latest"
+        },
+        {
+          "date": "2026-10-23",
+          "what": "Moody's scheduled review of France's Aa3 rating (negative outlook); flash PMIs and Japan CPI the same day"
+        },
+        {
+          "date": "2026-10-28",
+          "what": "FOMC rate decision; UK Autumn Budget with OBR forecast the same day"
+        },
+        {
+          "date": "2026-10-29",
+          "what": "ECB rate decision and US Q3 GDP advance estimate; Bank of Japan decides the next day"
+        }
+      ]
+    }
+  ]
+}
