@@ -1,0 +1,157 @@
+{
+  "date": "2026-10-23",
+  "sections": [
+    {
+      "title": "World",
+      "items": [],
+      "ahead": [
+        {
+          "date": "2026-10-25",
+          "what": "Brazil presidential runoff, Lula vs Flávio Bolsonaro; Bulgaria presidential election the same day"
+        },
+        {
+          "date": "2026-10-27",
+          "what": "Israel Knesset election (120 seats, 3.25% threshold)"
+        },
+        {
+          "date": "2026-10-29",
+          "what": "Elections Alberta certifies the official results of the 19 October referendum",
+          "url": "https://results.elections.ab.ca/"
+        },
+        {
+          "date": "2026-11-03",
+          "what": "US midterm elections: all 435 House seats, 35 Senate seats, 39 governorships"
+        }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Anthropic donated the Agent Skills standard, its GitHub organisation and the agentskills.io domain to the Agentic AI Foundation",
+          "summary": "The 22 October donation puts the SKILL.md format Anthropic published in December 2025 under the same Linux Foundation body that already holds MCP, with engineers from Anthropic, Google, OpenAI and other companies as maintainers acting as individuals and David Soria Parra and Mahesh Murag as lead maintainers; the format itself is unchanged and the proposed roadmap is versioned releases, a formal proposal process and security guidance for skill authors. Anthropic says more than 70 agent platforms, including ChatGPT, Cursor, GitHub Copilot and VS Code, have integrated the standard, with 1 million skills published and nearly 280 million installs, all vendor-reported figures.",
+          "why": "Skills you write for one agent are now governed by a neutral body rather than one vendor's roadmap, so it is safe to standardise your team's agent instructions on the SKILL.md format and to expect versioned releases you can pin to.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation"
+        },
+        {
+          "headline": "OpenAI made its Decisions API generally available at $0.10 per million input tokens, with output tokens free and up to 400 questions per request",
+          "summary": "The API, shown at DevDay on 29 September and in beta since 6 October, runs a reconfigured GPT-6 Luna that answers classification and routing questions over text, images and structured input in 100 to 180 milliseconds, against one to three seconds through the Responses API, and now adds prompt caching at $0.01 per million cached tokens, US and EU inference residency and native JSON and image inputs. Box, Datadog, Ramp and Speak tested it; OpenAI's product lead Nikunj Handa told TechCrunch the model was not trained as a decision model and that training may come later, and on the Artificial Analysis Decision Index it ranks 14th behind TypeSafe's Jev and others.",
+          "why": "The routing, triage and guardrail checks inside your agents that you have been running on a general chat model now have a dedicated tier that bills only input, so move those calls and measure latency and accuracy against Jev before committing.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/decisions-api/"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-28",
+          "what": "GitHub Universe 2026, San Francisco (28–29 Oct)",
+          "url": "https://githubuniverse.com/"
+        },
+        {
+          "date": "2026-10-29",
+          "what": "Last day of the grandfathered 20x-Plus allowance for existing ChatGPT Pro $200 subscribers in Codex; drops to 10x from 30 Oct"
+        },
+        {
+          "date": "2026-11-10",
+          "what": "AI Engineer Code Summit, San Francisco (workshops 10 Nov, talks 11–12 Nov)"
+        },
+        {
+          "date": "2026-11-16",
+          "what": "GitHub Copilot retires Claude Opus 4.8, Claude Opus 5 and GPT-5.6 Terra"
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Frontier models found the decade-old PHP memory-safety bugs behind PHP2Shell, and two teams reached unauthenticated remote code execution within days",
+          "summary": "Wiz Research says it found the first flaw on 19 August using its Atlas agent with Gemini 4 Argon and GPT-5.6 Sol, confirmed pre-authentication remote code execution against Drupal on 20 August and WordPress on 21 August, and reported to the PHP security team on 24 August; the bugs sit in PHP's handling of out-of-memory and fatal errors and go back to PHP 5.4, and Wiz credits Argon with a significant role in discovery, exploit development and patch validation. OpenAI says the red-teaming firm Calif independently reported a route to remote code execution on 11 August using GPT-5.6 Sol under its Patch the Planet programme, and coverage also names Chainguard as a separate finder.",
+          "why": "Memory-safety bugs that fuzzers and human auditors missed for a decade are now within reach of off-the-shelf models, so budget for a run of critical disclosures in every C codebase you depend on, and assume attackers are pointing the same models at your own native code.",
+          "source": "Wiz Research",
+          "url": "https://www.wiz.io/blog/php2shell-php-rce"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-31",
+          "what": "DeepSeek starts billing Search and Fetch API calls made through Claude Code, Codex and DeepSeek Harness ($0.75 per 1,000 calls, 16:00 UTC)"
+        },
+        {
+          "date": "2026-11-12",
+          "what": "Anthropic's updated Usage Policy takes effect",
+          "url": "https://www.anthropic.com/news/2026-usage-policy-update"
+        },
+        {
+          "date": "2026-11-16",
+          "what": "California's expert panel on independent AI verification and an agent 'kill switch' reports to Newsom under his 18 September executive order",
+          "url": "https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/"
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "lead": true,
+          "headline": "PHP shipped 8.5.12, 8.4.27, 8.3.36 and 8.2.35 for two unauthenticated remote-code-execution bugs, and exploit attempts began before the patches were public",
+          "summary": "The 21 October security release fixes CVE-2026-109618, in which out-of-memory handling interrupts PHP while request data is only partly initialised, and CVE-2026-109619, in which request state survives after its memory is freed and is reused by the next request on the same worker; the PHP team says the risk is highest for mod_php, where a demonstrated exploit fires before any application code runs, that there are no complete mitigations, and it published minimal source backports for the unsupported 7.4, 8.0 and 8.1 branches. Cloudflare reported thousands of exploit attempts in the ten hours before disclosure and millions within hours after, Amazon says its MadPot honeypots logged a first attempt on 17 October, government sites across Europe and the UK were taken offline while operators patched, and the PHP Foundation accused Chainguard of publishing patched builds before the agreed deadline.",
+          "why": "Every PHP process you run or host, including the WordPress marketing site and the old admin tool, needs the patched version today rather than a WAF rule, and anything still on 8.1 or older needs a vendor backport or a rebuild from the PHP team's branches.",
+          "source": "PHP security advisory",
+          "url": "https://www.php.net/archive/2026.php#2026-10-21-5"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-28",
+          "what": "Node.js 26 enters LTS; Node.js 27 alpha opens under the new one-release-a-year schedule"
+        },
+        {
+          "date": "2026-11-04",
+          "what": "GitHub: first ssh-rsa SHA-1 brownout (second on 9 Dec, removal 13 Jan)"
+        },
+        {
+          "date": "2026-11-17",
+          "what": "Chrome 158 stable removes XSLT for all users outside the origin trial and enterprise policy; PostgreSQL 19 GA two days later"
+        },
+        {
+          "date": "2026-11-19",
+          "what": "GitHub Actions finishes moving the ubuntu-latest label from Ubuntu 24.04 to 26.04 (rollout began 19 Oct; pin ubuntu-24.04 to stay)"
+        }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [
+        {
+          "headline": "France's 10-year bond yield crossed 5% for the first time since 2002, two days before Moody's scheduled review of its Aa3 rating",
+          "summary": "The 10-year OAT rose above 5% shortly before 11:30 in Paris on 21 October and its gap to German Bunds widened to the largest in about 15 years, as investors doubted that the government can pass the 2027 budget after a weekend of riots and with public debt near 120% of GDP; French yields have risen faster than other G7 bonds in the autumn sell-off. Moody's, the last of the three big agencies to keep France in the double-A band, publishes its decision on Friday evening, and Fitch and S&P already rate the country A+.",
+          "why": "A Moody's cut on Friday would leave France rated single-A by all three agencies and push index-constrained funds to sell, so treat French OATs and the euro as the live stress point into the ECB's 29 October meeting.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/10/21/france-protests-bonds-debt.html",
+          "follow_up": "2026-10-21"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-23",
+          "what": "Moody's publishes its review of France's Aa3 rating (negative outlook), Friday evening"
+        },
+        {
+          "date": "2026-10-28",
+          "what": "FOMC rate decision; Bank of Canada decision and UK Autumn Budget with OBR forecast the same day"
+        },
+        {
+          "date": "2026-10-29",
+          "what": "ECB rate decision and US Q3 GDP advance estimate; Bank of Japan decides the next day"
+        },
+        {
+          "date": "2026-11-06",
+          "what": "US October jobs report (BLS, 13:30 UTC)",
+          "url": "https://www.bls.gov/schedule/news_release/empsit.htm"
+        }
+      ]
+    }
+  ]
+}
