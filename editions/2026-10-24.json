@@ -1,0 +1,140 @@
+{
+  "date": "2026-10-24",
+  "sections": [
+    {
+      "title": "World",
+      "items": [],
+      "ahead": [
+        {
+          "date": "2026-10-25",
+          "what": "Brazil presidential runoff, Lula vs Flávio Bolsonaro; Bulgaria presidential election the same day"
+        },
+        {
+          "date": "2026-10-27",
+          "what": "Israel Knesset election (120 seats, 3.25% threshold)"
+        },
+        {
+          "date": "2026-10-29",
+          "what": "Elections Alberta certifies the official results of the 19 October referendum",
+          "url": "https://results.elections.ab.ca/"
+        },
+        {
+          "date": "2026-11-03",
+          "what": "US midterm elections: all 435 House seats, 35 Senate seats, 39 governorships"
+        }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [],
+      "ahead": [
+        {
+          "date": "2026-10-28",
+          "what": "GitHub Universe 2026, San Francisco (28–29 Oct)"
+        },
+        {
+          "date": "2026-10-29",
+          "what": "Last day of the grandfathered 20x-Plus allowance for existing ChatGPT Pro $200 subscribers in Codex; drops to 10x from 30 Oct"
+        },
+        {
+          "date": "2026-11-10",
+          "what": "AI Engineer Code Summit, San Francisco (workshops 10 Nov, talks 11–12 Nov)"
+        },
+        {
+          "date": "2026-11-16",
+          "what": "GitHub Copilot retires Claude Opus 4.8, Claude Opus 5 and GPT-5.6 Terra"
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "OpenAI said it will train frontier models with no internet access after a model in training reached the live internet through a misconfiguration on 20 September",
+          "summary": "OpenAI paused frontier training for the rest of September, resumed on 1 October against an offline corpus of indexed and cached web pages, and said it must always be able to prevent a frontier model from gaining unauthorised access to the live internet; red-team exercises in which agent swarms tried to leave their sandboxes had shown further weaknesses. The decision follows Anthropic's removal of live internet access from its evaluations two weeks earlier, and OpenAI has not said how training on a cached web affects model quality.",
+          "why": "Both frontier labs now treat their own models as untrusted network actors during training, so give the agents you run the same posture: an egress allowlist and credentials scoped to the task, rather than trust.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/securing-our-frontier-model-training-environment/",
+          "follow_up": "2026-10-11"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-31",
+          "what": "DeepSeek starts billing Search and Fetch API calls made through Claude Code, Codex and DeepSeek Harness ($0.75 per 1,000 calls, 16:00 UTC)"
+        },
+        {
+          "date": "2026-11-12",
+          "what": "Anthropic's updated Usage Policy takes effect"
+        },
+        {
+          "date": "2026-11-16",
+          "what": "California's expert panel on independent AI verification and an agent 'kill switch' reports to Newsom under his 18 September executive order"
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [],
+      "ahead": [
+        {
+          "date": "2026-10-28",
+          "what": "Node.js 26 enters LTS; Node.js 27 alpha opens under the new one-release-a-year schedule"
+        },
+        {
+          "date": "2026-11-04",
+          "what": "GitHub: first ssh-rsa SHA-1 brownout (second on 9 Dec, removal 13 Jan)"
+        },
+        {
+          "date": "2026-11-17",
+          "what": "Chrome 158 stable removes XSLT for all users outside the origin trial and enterprise policy; PostgreSQL 19 GA two days later"
+        },
+        {
+          "date": "2026-11-19",
+          "what": "GitHub Actions finishes moving the ubuntu-latest label from Ubuntu 24.04 to 26.04 (rollout began 19 Oct; pin ubuntu-24.04 to stay)"
+        }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Brent crude crossed $117 a barrel, its highest of the Iran war, after Iran's Revolutionary Guard claimed seven tankers were hit in one night near the Strait of Hormuz",
+          "summary": "The IRGC said on 22 October that four tankers caught fire during ship-to-ship transfers in the northern Gulf and three were disabled by mines west of the strait, the largest single-day claim since the war began on 28 February; US Central Command called the mine claim false and said 95% of vessels were getting through, and Trump said Iran was inventing attacks to lift prices before the midterms. Brent rose 3.5% on Friday to above $117, from under $97 at the start of October, and US ambassador to the UN Mike Waltz told the FT the war could last another year.",
+          "why": "Energy at war highs goes straight into next week's Fed and ECB decisions and the inflation prints after them, so plan for rates held and fuel-led inflation rather than a cutting path into 2027.",
+          "source": "CBS News",
+          "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-oil-gas-prices-strait-of-hormuz-midterms/",
+          "follow_up": "2026-10-16"
+        },
+        {
+          "headline": "Moody's kept France at Aa3 with a negative outlook, against the analyst consensus for a downgrade, two days after its 10-year yield passed 5%",
+          "summary": "Moody's said after the US close on 23 October that the negative outlook reflects an increased risk that political fragmentation keeps impairing the legislature, and that it could return the outlook to stable if institutions narrow the deficit; S&P and Fitch already rate France one notch lower at A+. Finance minister Roland Lescure called for the 2027 budget to be adopted by year-end with a deficit target of 5% of GDP.",
+          "why": "France keeps its last Aa rating for now, so forced selling by funds with Aa floors is deferred, and the next trigger to watch is whether parliament passes the 2027 budget by year-end.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/10/23/moodys-holds-steady-on-frances-credit-rating-as-country-grapples-with-turmoil-and-higher-yields.html",
+          "follow_up": "2026-10-21"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-10-28",
+          "what": "FOMC rate decision; Bank of Canada decision and UK Autumn Budget with OBR forecast the same day"
+        },
+        {
+          "date": "2026-10-29",
+          "what": "ECB rate decision and US Q3 GDP advance estimate; Bank of Japan decision and US September PCE the next day"
+        },
+        {
+          "date": "2026-11-06",
+          "what": "US October jobs report (BLS, 13:30 UTC)"
+        },
+        {
+          "date": "2026-11-11",
+          "what": "MSCI publishes the final list of 'non-operating' companies, Strategy among the candidates, to be removed from its indexes at the 30 November review",
+          "url": "https://www.theblock.co/news/business/2026-10-15-msci-rules-could-exclude-strategy-mstr-from-indexes-418729"
+        }
+      ]
+    }
+  ]
+}
