@@ -1,0 +1,38 @@
+{
+  "track": "mental-models",
+  "n": 12,
+  "date": "2026-10-24",
+  "title": "Hanlon's razor",
+  "subtitle": "Never attribute to malice what error or incentives explain",
+  "part": "Part I — Tools for thinking",
+  "summary": "Hanlon's razor says that when someone's behaviour has harmed you, the explanation to test first is a mistake, a gap in their knowledge, or an incentive that points their way, and deliberate malice only after those are ruled out. It is a claim about base rates: error and misaligned incentives are everywhere, intent to harm is rare and costly. It fails against adversaries who profit from being mistaken for fools.",
+  "body": [
+    "Hanlon's razor is a rule for explaining harm done by other people: before concluding that someone meant to hurt you, test whether a mistake, a missing piece of information, or an incentive that rewarded their behaviour accounts for it. The razor does not say malice never happens. It says malice is the expensive hypothesis, the one that needs the most evidence, because it requires a person to have known the effect, wanted it and chosen it, while error needs only one of the thousand ways a plan can go wrong.",
+    "The name comes from Robert Hanlon of Scranton, Pennsylvania, who sent the line to Arthur Bloch for the 1980 collection Murphy's Law Book Two. The thought is older: Goethe gave a version of it to Werther in 1774, and a character in Robert Heinlein's 1941 story Logic of Empire says, in substance, that the conditions his friend blames on villainy are the ordinary product of stupidity. No source exists for the attribution to Napoleon that circulates online.",
+    "## A base-rate argument",
+    "As a tool it is probabilistic thinking applied to other people's motives, and it works for the same reason Occam's razor works. Every event that leaves you worse off, a missed payment, a deleted server, a contract clause that cuts against you, has a large population of possible causes. Most are variants of someone being tired, rushed, misinformed or measured on the wrong number; a small minority involve a person who wanted the outcome. Before specific evidence arrives, the prior belongs where the population sits.",
+    "Incentives are the explanation most often misfiled as malice. Charlie Munger argued for decades that a person paid to do a thing will find reasons to believe the thing is right, and that an observer who ignores the pay packet will keep reaching for character instead. Wells Fargo is the clean case. Between 2011 and 2016 its branch staff opened about two million deposit and card accounts that customers had never asked for, later revised to 3.5 million, under a cross-selling target the bank called 'eight is great'. The bank fired some 5,300 employees and paid $185 million in fines in September 2016. The tellers who forged signatures were meeting a quota they would be fired for missing; most bore the customers no ill will. What does not fit the model sits at the top: in January 2020 the Office of the Comptroller of the Currency fined former chief executive John Stumpf $17.5 million and banned him from banking, finding that he had been told about the fake accounts for years and left the incentive in place. An incentive that someone designs, sees the effect of, and defends is where the razor stops shielding people.",
+    "## Two rooms where it is used",
+    "Software operations institutionalised the razor under another name. The blameless post-mortem, which John Allspaw and Etsy popularised from about 2012, assumes that the engineer who caused an outage acted reasonably given what they knew at the time. On 31 January 2017 a GitLab engineer, trying to clear replication lag, ran a delete command on the primary database directory instead of the replica, and about 300 GB of production data went with it. The company then found that five separate backup mechanisms had each silently failed, and recovered from a six-hour-old snapshot. A hunt for the person at the keyboard would have found one tired engineer at midnight and nothing that would prevent the next loss; the five dead backups were the finding.",
+    "The second room is a bunker at Serpukhov-15, south of Moscow, shortly after midnight on 26 September 1983. The Oko early-warning satellites reported one, then five, American missile launches. Lieutenant Colonel Stanislav Petrov, the duty officer, judged the report a malfunction and told his superiors so, reasoning that a real first strike would involve hundreds of missiles and that ground radar had seen nothing. The system had mistaken sunlight glancing off high clouds for rocket plumes, and Petrov had chosen the error hypothesis with the whole of his country's doctrine pushing the other way.",
+    "## When the razor cuts the wrong way",
+    "The failure mode is the adversary who knows about the razor. A person who intends harm and can make it look like clumsiness gets the benefit of every doubt, and the more generous the observer, the longer the cover lasts. Harry Markopolos handed the Securities and Exchange Commission written analyses of Bernard Madoff's returns in 2000, 2001 and 2005, the last titled as the world's largest hedge fund being a fraud. Agency staff read the anomalies as sloppy compliance and the complainant as a competitor with a grudge. The fund collapsed in December 2008 with about $65 billion in paper losses.",
+    "What separates the two cases is the direction of the errors. Honest error is unbiased: a sloppy bank overcharges some customers and undercharges others, and a buggy system fails in several directions. Incentives and malice both push one way, every time, and they leave the same signature in the data. A series of mistakes that always benefits the same party has stopped being a series of mistakes, whatever the people involved believe about themselves. Security engineers apply this when classifying traffic: one malformed request is a bug somewhere, and a thousand that each probe a different endpoint is a person. Over-application is the observer who explains the tenth overcharge with the same patience as the first; under-application is the conspiracy reflex, which treats every bad outcome as evidence of a plan and loses sight of the far more common failures of design and attention.",
+    "## The habit",
+    "The next time something goes against you, write three explanations before responding: the mistake, the incentive, and the intent. Put a rough probability on each, write down the single observation that would move weight toward the third, and go and look for it before acting. This ties to inversion, since the question becomes what would have to be true for this person to have meant it, and to second-order thinking, since the response to a presumed enemy tends to create one. A question asked plainly is nearly always the right first move: it costs little if the explanation is error and reveals something if it is anything else."
+  ],
+  "reading": [
+    {
+      "title": "Murphy's Law Book Two",
+      "by": "Arthur Bloch"
+    },
+    {
+      "title": "No One Would Listen",
+      "by": "Harry Markopolos"
+    },
+    {
+      "title": "The Field Guide to Understanding 'Human Error'",
+      "by": "Sidney Dekker"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "track": "history",
+  "n": 12,
+  "date": "2026-10-25",
+  "title": "Domesticating animals",
+  "subtitle": "Sheep, goats, cattle and pigs; milk, wool, traction, and disease",
+  "part": "Part II — The agricultural revolution",
+  "summary": "Between about 10,500 and 8,000 years ago villagers in the arc from southeastern Anatolia to the Zagros took the mouflon, the bezoar goat, the aurochs and the wild boar into their herds. A ruminant turns grass, which a human stomach cannot digest, into meat, milk, fibre and pulling power, and a herd stores that energy on the hoof. This chapter explains how archaeologists see herding in a heap of bones, what the animals became, and what milk, wool, the ox and the new diseases did to the people who kept them.",
+  "body": [
+    "Between about 10,500 and 8,000 years ago, villagers in the arc from southeastern Anatolia to the Zagros mountains took four wild herd animals into their settlements: the Asiatic mouflon, the bezoar goat, the aurochs and the wild boar. The change belongs to the energy thread. A ruminant converts grass and stubble, which a human stomach cannot digest, into meat, milk, fibre and pulling power, and a herd stores that energy on the hoof.",
+    "## The signature in the bones",
+    "Herding leaves a fingerprint before it leaves a changed animal. Melinda Zeder and Brian Hesse published the clearest case in Science in 2000, from goat bones at Ganj Dareh, a mound in western Iran about 10,000 years old. Most of the males had been killed before the age of two, while the females lived on into old age. A hunter takes what the hunt offers; a herder slaughters the surplus young males and keeps the breeding females, so the age-and-sex profile of a rubbish heap tells the two apart. The Ganj Dareh goats were still the size of wild bezoar goats, so management came first and the body changed later.",
+    "Sheep show the same pattern a little earlier at Nevalı Çori and Çayönü in the upper Tigris and Euphrates basins, around 10,500 years ago, and cattle were taken from the aurochs on the middle Euphrates at about the same time. Ruth Bollongino and colleagues estimated from mitochondrial DNA in 2012 that all Near Eastern taurine cattle descend from roughly eighty female aurochs; the figure has wide bounds, but it suggests how small the founding herds were.",
+    "## What the animal became",
+    "The wild aurochs bull stood up to 180 centimetres at the shoulder and weighed close to a tonne; the last one died in the Jaktorów forest in Poland in 1627. Early domestic cattle were about a third smaller, and sheep, goats and pigs shrank the same way within a few centuries of their first management. The animal that charges the keeper is eaten and the placid one is kept, and the pen itself favours animals that tolerate crowding and breed in confinement. Temperament decided which species could be kept at all: Jared Diamond counted 148 species of plant-eating land mammal heavier than 45 kilograms and found that fourteen had ever been domesticated, thirteen of them in Eurasia. The gazelle, which the Natufians hunted by the thousand, panics in an enclosure and breaks its neck against the wall.",
+    "## Milk",
+    "A cow digests grass because a cow is a fermentation vat on legs. The rumen, the largest of four stomach chambers, holds around a hundred litres, and the bacteria and protozoa in it break cellulose into fatty acids that pass through the rumen wall into the blood. The microbes themselves are digested further down the gut as protein. Milk is therefore a way of taxing a pasture, and a cow milked over several lactations yields several times the food energy of her carcass.",
+    "Richard Evershed and colleagues analysed fat residues in 2,225 potsherds from 23 sites and reported in Nature in 2008 that milk fats were common in vessels from the Marmara region of northwestern Anatolia by about 8,500 years ago. Perforated vessels from Kuyavia in Poland, about 7,200 years old, carry milk fat too, and Mélanie Salque's team read them in 2012 as cheese strainers. The strainers fit a genetic fact: most adult humans stop producing lactase after weaning and cannot digest the sugar in fresh milk, and the European variant that keeps the enzyme switched on was almost absent from ancient genomes until about 3,000 years ago, several thousand years after dairying was routine. The first dairy farmers were lactose intolerant and processed the milk, since fermentation into yogurt consumes most of the lactose, cheesemaking drains the rest away with the whey, and the cheese keeps for months.",
+    "## Wool and the ox",
+    "A wild sheep wears a coat of coarse kemp over a short woolly undercoat that it sheds every spring. Herders selected over thousands of years for a fleece that kept growing and stayed on. Woolly sheep appear in Iran and Mesopotamia around 6,000 years ago, visible as a shift in kill-off toward older animals kept for their fleece, and the earliest proto-cuneiform tablets of Uruk, around 3200 BCE, already count sheep and wool by the thousand. Wool took dye and could be spun in winter from a flock that had fed itself all summer.",
+    "An ox is a bull castrated as a calf. Castration removes the aggression and lengthens growth, so the animal ends up heavier than the bull and can be driven by a child. A working ox sustains about 500 watts for several hours, against roughly 75 watts for a labouring man, so a pair of oxen does the work of a dozen men. The evidence for draught is in the feet: cattle foot bones from fourth-millennium sites show the arthritis and splaying of animals that spent years pulling, and plough furrows from about 3500 BCE survive under burial mounds in Denmark.",
+    "## Disease",
+    "A village with several hundred animals in it put humans in daily contact with the herd's pathogens. Measles descends from rinderpest, the cattle plague; Ariane Düx and colleagues sequenced a measles genome from a lung preserved in Berlin in 1912 and estimated in Science in 2020 that the two viruses split around the sixth century BCE, close to the time the first cities reached the quarter of a million people measles needs to keep circulating. Earlier estimates had put the split in the medieval period and the dating is still debated. Diamond's larger claim, that Eurasia's herds gave its people the crowd diseases that later emptied the Americas, is a judgment most historians accept in outline and quarrel with in detail.",
+    "The herding described here began at the same moment, in the same hills, as a hilltop in southeastern Turkey where people who still hunted gazelle and wild cattle raised carved stone pillars weighing ten tonnes."
+  ],
+  "reading": [
+    {
+      "title": "The Story of Civilization, Vol. I: Our Oriental Heritage",
+      "by": "Will Durant"
+    },
+    {
+      "title": "Guns, Germs, and Steel",
+      "by": "Jared Diamond"
+    },
+    {
+      "title": "The Initial Domestication of Goats (Capra hircus) in the Zagros Mountains 10,000 Years Ago (Science, 2000)",
+      "by": "Melinda A. Zeder and Brian Hesse"
+    },
+    {
+      "title": "Earliest Date for Milk Use in the Near East and Southeastern Europe Linked to Cattle Herding (Nature, 2008)",
+      "by": "Richard P. Evershed et al."
+    },
+    {
+      "title": "Measles Virus and Rinderpest Virus Divergence Dated to the Sixth Century BCE (Science, 2020)",
+      "by": "Ariane Düx et al."
+    }
+  ]
+}

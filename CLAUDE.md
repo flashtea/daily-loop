@@ -1,25 +1,20 @@
 # Daily Loop — operating instructions
 
-**You (Claude) are the loop.** Each run you research the day's news, write the
-next lesson in two study tracks, rebuild the site, and push. GitHub Pages serves
+**You (Claude) are the loop.** Each run you research the day's news, rebuild
+the site, and push. GitHub Pages serves
 `docs/`. This file is the whole editorial policy; the `/daily-loop` command just
 says "follow it".
 
 ## Who reads this, and what they want from it
 
 One reader. A software developer and investor who opens the paper once a day,
-on a phone, for about ten minutes, and wants two things:
-
-1. **To know what actually changed** in the world, in AI and developer tooling,
-   and in money, without wading through everything that merely happened.
-2. **To get a little wiser every day**: one lesson a day, alternating between
-   a mental model and a chapter of the history of civilization, delivered in
-   order, so that over a few years the pieces add up to two books they have
-   actually read (or listened to).
+on a phone, for about ten minutes, and wants **to know what actually changed** in
+the world, in AI and developer tooling, and in money, without wading through
+everything that merely happened.
 
 Not a trader, not a security team, not a journalist, not a researcher who
-needs completeness. Every rule below exists to serve those two wants. When a
-rule and the wants conflict, the wants win.
+needs completeness. Every rule below exists to serve that want. When a rule
+and the want conflict, the want wins.
 
 ## Editorial principles (apply to all news)
 
@@ -30,7 +25,7 @@ rule and the wants conflict, the wants win.
   what they would do, believe, or plan differently (that sentence is the
   `why`, and it is mandatory; if it comes out as a stretch, the item is out);
   (c) **it lasts**: it will still be worth knowing in a month. For `World` the
-  bar is higher: would a future chapter of the history track mention it?
+  bar is higher: would a history of this decade mention it?
 - **No padding.** Sections hold 0–4 items. Zero is a correct result on a quiet
   day, and a thin paper is better than a filled one. Never add an item to reach
   a count. If every beat is quiet, the paper is short that day.
@@ -73,7 +68,7 @@ rule and the wants conflict, the wants win.
   sanctions regime, or trade deal signed; a disaster or epidemic measured in
   thousands; a court ruling that binds a whole country; infrastructure with
   cross-border consequences (a strait, a grid, a cable, a dam). Filter through
-  the history track's five threads: energy, tools, information, money, force.
+  five threads: energy, tools, information, money, force.
   *Out:* polls, speeches, campaign events, statements of intent, protests
   without an outcome, individual crimes, celebrity, sport, daily updates with
   no new fact. 0–3 items; zero most days. Voice here is the strictest in the
@@ -137,133 +132,6 @@ The builder adds one chart to this section: Bitcoin weekly close against its 200
   adjectives of judgment, no "critics say". Numbers precise, names spelled as
   the source spells them.
 
-## The study tracks
-
-Two books delivered **one piece per day, alternating between the tracks**,
-in order, that the reader can also browse later as a catalogue. The goal is to
-get a little wiser every day without the daily dose growing past what one
-person with little time will actually read. Lessons keep their full length;
-the pacing is what makes them sustainable.
-These are **not news**: write them from your own knowledge, following the
-syllabus. Web search is optional, for verifying a date, figure, or quotation.
-Never invent a quotation; if you cannot verify its wording, paraphrase and say
-so.
-
-**Written to be published, not posted.** Each lesson is a chapter of a book
-that will be read in any order, on any day, years from now, and the compiled
-tracks may be published as they stand. Nothing in a lesson may refer to the
-day it was written or to the machinery that delivers it: no "today",
-"yesterday" or "tomorrow"; no "this series", "this track" or "the loop"; no
-lesson or chapter numbers, no "the previous lesson" or "the next chapter", no
-"Part II"; no mention of the reader's phone, the paper, or the daily rhythm;
-no trailer for the next lesson. Other lessons are referred to only by the
-name of their idea, as a book would ("the circle of competence", "the
-hand-axe"), and only where the connection is real. The opening lesson of each
-track may describe the plan of the whole in a paragraph. `lint-prose.mjs`
-flags the common slips as hard errors.
-
-**Mental Models** (`lessons/mental-models/`, syllabus
-`curriculum/mental-models.md`): Charlie Munger's latticework, one model per
-day across thinking tools, the psychology of misjudgment, mathematics, physics,
-biology, economics, systems, engineering and decision-making. A lesson should
-leave the reader able to *use* the model, not just recognize it. Each one:
-
-- states the model plainly in the first paragraph, and briefly where it comes
-  from;
-- shows it working in at least two unrelated domains, with concrete cases;
-- names its failure mode: when it misleads, and what it looks like when
-  someone is over-applying it;
-- gives one question or habit the reader can apply at once, under a
-  subhead `## The habit`;
-- connects it, by name, to related models where the connection is real.
-
-**History of Civilization** (`lessons/history/`, syllabus
-`curriculum/history.md`): from the first tools to the present, in order. The
-model is Durant's *Story of Civilization* at a fraction of the length:
-narrative history for a general reader, written by someone who has lived with
-the sources and wants to tell what happened. The five threads (energy, tools,
-information, money, force) are the author's lens and stay mostly out of sight.
-Each chapter:
-
-- tells what happened to people, in order, and opens on a scene, a find, a
-  person or a place rather than on a definition or a law of physics;
-- explains **how the thing worked** in plain words at the point where the
-  story needs it, well enough that the reader could explain it to someone
-  else; the mechanism is a paragraph, never the chapter, and a quantity
-  appears only where one number makes the thing vivid (an ox does the work of
-  several men), never as a spec sheet;
-- says, in ordinary language, what the change made possible or forced
-  elsewhere, and never announces which "thread" is moving or audits the
-  threads that did not;
-- uses sites, dates and discoverers where they carry the story or settle a
-  dispute, a few per chapter, never as a gazetteer;
-- names a person only when they were the hinge, in the body, with the year
-  and what they did;
-- ends on its own subject, not on a trailer. A closing paragraph may look
-  forward by content ("the remedy for that, writing, was still ninety
-  thousand years off"), never by lesson.
-
-**Picking today's track and lesson.** Write exactly one lesson per day. The
-track is the one with fewer lessons written so far; on a tie, Mental Models.
-(So the tracks alternate, and a missed day never breaks the pattern.) Within
-the track, count the files in its directory; the next lesson is syllabus entry
-N+1. Keep its number and title (sharpen the title if useful). File name
-`NNN-slug.json`, zero-padded, lowercase kebab-case. When fewer than 30
-syllabus entries remain unwritten, append a new part to the curriculum file in
-the same style before writing the day's lesson. If a lesson dated today
-already exists in either track, leave it alone unless asked to revise.
-
-**Length.** 700–1000 words of body. A `## ` subhead every few paragraphs.
-Paragraph lengths vary; one may be a single sentence, another eight. No bullet
-lists in the body unless the content is a genuine list (the parts of a
-mechanism, the steps of a procedure). No takeaways list, no "names worth
-knowing" list; the lesson ends with its last paragraph, on its own subject.
-
-**Prose rules.** The lessons are written prose, read on a phone or heard as
-narration, by someone who knows the subject and is explaining it to an
-intelligent friend. The explanation is the content; nothing performs. In
-particular:
-
-- *Third person.* No "I", "we", "our", "us". "You" is allowed where the
-  reader is being handed something to do or check.
-- *Written, not spoken.* No talk cadence: no one-line declarations for
-  effect, no "here is the thing", no rhetorical questions, no questions as
-  subheads.
-- *Banned shapes.* These are the marks of machine prose whatever the words,
-  and none of them may appear: negative parallelism in any form ("not X but
-  Y", "not just X", "X was never the problem; Y was", "is not quite the
-  word"); a short sentence or fragment used as a hook or a payoff (a short
-  sentence may state a fact or a judgment, never a beat); triads and parallel
-  lists built for rhythm (count the real items; two or five is fine); a
-  paragraph or section that ends on an aphorism, a moral, a "that is why", or
-  a colon followed by an epiphany; restating the summary or the series' thesis
-  inside the body; synonym cycling (repeat the plain noun); "serves as",
-  "stands as", "represents" for "is"; significance words ("pivotal",
-  "transformative", "a testament to", "crucial"); -ing tails that attach
-  meaning to a fact ("..., highlighting the importance of").
-- *Required texture.* At least one detail per lesson that is specific past
-  the point of usefulness: a weight, a place, who found the thing and in what
-  year. Name the person or institution that did the thing when known. Where
-  the evidence is contested, say so and leave it contested; do not resolve a
-  disagreement into a tidy trade-off. Plain verbs: wrote, died, built, sold.
-  A paragraph may end flat, on the fact.
-- *Story before mechanism, mechanism before consequence.* In History the
-  reader should be able to picture the people before being asked to
-  understand the device, and should understand the device before being told
-  what it changed. The Saylor series supplies only the lens (energy, money as
-  a technology); its engineering register, its quantities for their own sake,
-  its spoken cadence and its one-line slogans do not transfer to the page.
-  In Mental Models one case per lesson is as concrete as Munger's: a named
-  company or person, a figure, a date, and the detail that does not fit the
-  model. Munger's bluntness, named cases and honest hedges transfer; his talk
-  rhythm does not.
-- *Judgments* are allowed and are stated as judgments ("the strongest case
-  is", "most archaeologists think"), never dressed as facts.
-- *Check.* Before saving, read the body once only for the banned shapes and
-  remove every one. Then run `node lint-prose.mjs <file>`; hard flags must be
-  zero, soft warnings are read and judged. A clean lint is necessary, not
-  sufficient.
-
 ## The routine
 
 1. Today's date (UTC) is the edition id, e.g. `2026-06-13`. If an edition for
@@ -271,17 +139,16 @@ particular:
 2. Read the newest three editions.
 3. Research each beat (three or more searches per beat), apply the three
    tests, and write `editions/<date>.json`.
-4. Write today's lesson (one track, see above).
-5. `node fetch-btc.mjs` refreshes `data/btc-weekly.json` for the chart. It
+4. `node fetch-btc.mjs` refreshes `data/btc-weekly.json` for the chart. It
    needs network; if it fails, the previous file is kept and the build still
    works. Commit the refreshed file with the edition.
-6. `node build.mjs` (no dependencies; regenerates all of `docs/`).
-7. Optional: `node preview.mjs` renders desktop and mobile screenshots into
+5. `node build.mjs` (no dependencies; regenerates all of `docs/`).
+6. Optional: `node preview.mjs` renders desktop and mobile screenshots into
    `preview/`. Needs `npm install` and a Chromium (`npx playwright install
    chromium`, or set `CHROMIUM_PATH` to an existing binary). The live charts
    do not render offline; that is expected.
-8. `git add -A && git commit -m "edition: <date>" && git push`.
-9. Report the section-by-section headline list and the lesson title.
+7. `git add -A && git commit -m "edition: <date>" && git push`.
+8. Report the section-by-section headline list.
 
 ## Edition JSON schema
 
@@ -317,74 +184,33 @@ the Ahead strips, follow-up markers and the Bitcoin chart (an inline SVG,
 no third-party script). Never hand-edit
 `docs/`.
 
-## Lesson JSON schema
+## Kindle
 
-```json
-{
-  "track": "mental-models",
-  "n": 12,
-  "date": "2026-10-14",
-  "title": "Inversion",
-  "subtitle": "Invert, always invert",
-  "part": "Part I — Tools for thinking",
-  "summary": "Two or three sentences: the idea in a nutshell. Shown in the catalogue and at the top of the lesson page.",
-  "body": [
-    "A paragraph. Strings are paragraphs.",
-    "## A subhead starts with two hashes",
-    "- A string starting with a dash\n- is a bullet list",
-    "> A string starting with > is a quotation.",
-    "Inline **bold** and *italic* are supported; nothing else."
-  ],
-  "reading": [{ "title": "Poor Charlie's Almanack", "by": "Peter Kaufman (ed.)", "url": "optional" }]
-}
-```
+The builder writes each day's paper as an EPUB to `docs/kindle/<date>.epub`
+(and `latest.epub`), for downloading or sideloading.
 
-`track`, `n`, `date`, `title`, `part`, `summary` and `body` are required;
-`subtitle` and `reading` are optional. `takeaways` and `names` are retired:
-do not write them, and the builder ignores them. `part` must match the `## ` heading of the syllabus part the entry
-sits in. The builder puts the day's lesson in a compact "Lesson of the day"
-band on that day's edition, gives each lesson its own page under
-`docs/<track>/`, and keeps a catalogue at `docs/<track>/index.html` grouped by
-part with progress against the syllabus and the next five titles.
+## Study tracks (paused)
 
-**Reading progress.** `data/progress.json` lists the lessons the reader has
-finished, as `"<track>/<slug>"` keys. The builder marks them in the catalogues
-(tick, read counter, a "continue" link to the first unread), and the front page
-lists what is still unread. **The daily routine never touches this file.** It
-changes only when the reader says what they have read ("I read the map is not
-the territory but not the first tools"): then add or remove the keys, rebuild,
-and push.
-
-**Kindle.** The builder writes each day's paper as an EPUB to
-`docs/kindle/<date>.epub` (and `latest.epub`). Separately, the workflow
-`.github/workflows/kindle.yml` mails one lessons-only EPUB with the week's
-lessons to the reader's Send-to-Kindle address every Sunday evening, titled by
-its contents ("Daily Loop · Mental Models 7–8 · History 7–8"); run by hand
-with `mode=books` it sends one catch-up volume per track. It needs the
-`KINDLE_EMAIL`, `MAIL_FROM` and `SMTP_*` secrets described in the workflow
-file; without them it does nothing. News is never sent to the Kindle; it goes
-stale within a day and belongs on the phone. Narration (audio) was removed;
-nothing in the routine touches it.
+The daily lessons (Mental Models and History of Civilization) are paused and
+archived in `study/`, with their syllabi, their writing policy and a script
+that builds them into books. The routine does not write lessons and the paper
+does not show them. Do not touch `study/` unless asked; `study/README.md` says
+how to resume.
 
 ## Repo layout and technical notes
 
 ```
 editions/<date>.json                  the curated news for a day
-lessons/mental-models/NNN-slug.json   one mental-model lesson per day
-lessons/history/NNN-slug.json         one history chapter per day
-curriculum/<track>.md                 the ordered syllabus each track follows
 data/btc-weekly.json                  weekly Bitcoin closes for the chart (fetch-btc.mjs)
-data/progress.json                    lessons the reader has finished (edited on request)
-lint-prose.mjs                        flags machine-prose shapes in a lesson body (see Prose rules)
 build.mjs                             renders everything into docs/ (zero deps)
 fetch-btc.mjs                         refreshes the price data (needs network)
-kindle.mjs                            EPUB packaging (daily edition and lessons-only books)
-kindle-lessons.mjs                    weekly and catch-up lessons-only EPUBs for the Kindle workflow
+kindle.mjs                            EPUB packaging for the daily edition
 preview.mjs                           dev-only screenshots
+study/                                the paused study tracks (see study/README.md)
 ```
 
 - The visual design lives entirely in the `STYLE` constant in `build.mjs`.
   Restyle there and rebuild. The layout is content-adaptive: desktop sections
   size their columns to the story count, and a lone story renders full width.
 - The stylesheet link is cache-busted with a content hash.
-- Keep every edition and lesson; they form the archive and the catalogues.
+- Keep every edition; they form the archive.

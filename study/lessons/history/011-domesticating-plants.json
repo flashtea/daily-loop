@@ -1,0 +1,49 @@
+{
+  "track": "history",
+  "n": 11,
+  "date": "2026-10-23",
+  "title": "Domesticating plants",
+  "subtitle": "Wheat, barley, rice, maize, and why some regions got lucky",
+  "part": "Part II — The agricultural revolution",
+  "summary": "Between about 11,500 and 6,000 years ago, people in at least four separate regions turned wild grasses into plants that could no longer survive without them. Nobody planned it; the arithmetic of harvesting with a sickle and sowing from the basket did the selecting over centuries. This chapter explains what changed in the plant, how fast it changed, and why the Fertile Crescent had the easiest raw material.",
+  "body": [
+    "Between about 11,500 and 6,000 years ago, people in the Fertile Crescent, the Yangtze valley, southern Mexico and several other regions turned wild grasses into plants that could no longer reproduce without a human hand. The change belongs to the energy thread. A domesticated cereal is a wild plant rebuilt to hold its seed for the harvester instead of dropping it for the next generation, and the rebuilding happened without anyone intending it.",
+    "## What changed in the plant",
+    "In wild wheat and barley the ear is held together by a rachis, the central stalk, and as the grain ripens the joints of the rachis develop a brittle layer. Each spikelet then breaks off and falls within a few days, which is how the plant sows itself. In a small fraction of plants a mutation leaves the rachis tough; in wheat the trait maps to the Br loci, in barley to two genes called btr1 and btr2. In the wild such a plant is a dead end.",
+    "Two other traits travel with the tough rachis and together make up what botanists call the domestication syndrome. Wild grasses stagger germination across years as insurance against a bad season, and a sown field favours the seeds that come up at once, so dormancy is lost. In tilled soil the larger seedling shades out its neighbours, so seed size grows; domesticated emmer grains run roughly a third heavier than wild ones.",
+    "## The arithmetic of the sickle",
+    "The selector is the method of harvest. A person who cuts ripe ears with a sickle, or pulls up whole plants, gathers the wild-type ears after many of their spikelets have already fallen, while the tough-rachis mutants arrive in the basket complete. If the next year's seed comes from that basket, the mutants are over-represented, and the share rises again the year after. Gordon Hillman and Stuart Davies worked through the numbers in 1990: with sickle harvesting at full ripeness and sowing on fresh ground each year, a stand could go from almost entirely wild to almost entirely non-shattering in twenty to two hundred years, while harvesters who beat ripe ears into a basket or cut the crop green exerted no pressure at all.",
+    "The archaeological record came out far slower than the model. Ken-ichi Tanno and George Willcox examined 804 wheat spikelet bases from four early villages in southeastern Turkey and northern Syria and published the result in Science in 2006: the oldest site had none of the domestic type, a village of about 9,250 years ago had a small share, and the domestic form reached a majority only at sites some two thousand years younger. Why the trait took so long to fix is still argued. Dorian Fuller and Robin Allaby read the slow curve as long cultivation of wild stands under weak selection, with wild seed mixed back in from the hills, while Shahal Abbo and Avi Gopher argue that domestication was quick and deliberate in a small core area and that the mixed assemblages come from later villages gathering wild grain alongside their crop.",
+    "In barley the change happened at least twice. Mohammad Pourkheirandish and colleagues showed in Cell in 2015 that either btr1 or btr2 alone makes the rachis tough, and that the btr1 form is concentrated in the southern Levant while the btr2 form lies further north and east.",
+    "## Rice and maize",
+    "Rice went through the same syndrome in the marshes of the Yangtze. The mutation that stops its grain shattering is a single-nucleotide change in a gene called sh4, identified by Changbao Li, Ailing Zhou and Tao Sang in 2006. At Tianluoshan in Zhejiang, Dorian Fuller's team sorted 2,641 spikelet bases from layers dated to between about 6,900 and 6,600 years ago; the domesticated type rose from 27 to 39 per cent over those three centuries, while rice climbed from 8 to 24 per cent of all plant remains.",
+    "Maize needed the most rebuilding of any crop. Its ancestor is teosinte, a grass of the Balsas River valley in southwestern Mexico, and a teosinte ear carries five to twelve kernels, each sealed in a stony fruitcase. A maize cob carries several hundred naked kernels on a core that never shatters, and a cob dropped in a field produces a clump of seedlings that strangle one another. John Doebley's laboratory in Wisconsin identified two of the genes that separate them: tga1, which frees the kernel from its case, and tb1, which turns a many-branched bush into a single stalk. The oldest cobs, from Guilá Naquitz cave in Oaxaca, are about 6,250 years old, and starch grains from the Xihuatoxtla shelter in the Balsas, reported by Dolores Piperno and colleagues in 2009, show maize in use about 8,700 years ago.",
+    "## Why there",
+    "Jared Diamond's argument in Guns, Germs, and Steel in 1997 is about the raw material. A climate of wet winters and dry summers selects for annual grasses with large seeds, and the geographer Mark Blumler's survey of the world's 56 heaviest-seeded wild grasses found 32 of them in the Mediterranean zone of western Eurasia, with the densest cluster in the Fertile Crescent, against four in sub-Saharan Africa, six in East Asia, five in Mesoamerica and two in Australia. Most of the Crescent's founder crops, emmer, einkorn, barley, lentil, pea, chickpea, bitter vetch and flax, also self-pollinate, so a useful mutant breeds true.",
+    "The argument explains the head start well: wheat and barley needed one change to the rachis, while teosinte needed its kernels freed and its architecture remade, and Mesoamerica waited several thousand years longer for a staple. Whether the wild grasses explain the later divergence of continents is a more contested claim; the people of eastern North America domesticated sumpweed and goosefoot from a poor local flora and abandoned both when maize reached them around 2,000 years ago.",
+    "A field of non-shattering wheat forces things in the other threads. Its seed must be sown, so its owners must stay for the growing season, and its harvest must be threshed and stored, so it is wealth that can be counted and taken."
+  ],
+  "reading": [
+    {
+      "title": "The Story of Civilization, Vol. I: Our Oriental Heritage",
+      "by": "Will Durant"
+    },
+    {
+      "title": "Guns, Germs, and Steel",
+      "by": "Jared Diamond"
+    },
+    {
+      "title": "How Fast Was Wild Wheat Domesticated? (Science, 2006)",
+      "by": "Ken-ichi Tanno and George Willcox"
+    },
+    {
+      "title": "The Domestication Process and Domestication Rate in Rice (Science, 2009)",
+      "by": "Dorian Q. Fuller et al.",
+      "url": "https://discovery-pp.ucl.ac.uk/id/eprint/108026"
+    },
+    {
+      "title": "Domestication of Plants in the Old World",
+      "by": "Daniel Zohary, Maria Hopf and Ehud Weiss"
+    }
+  ]
+}

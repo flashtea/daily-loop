@@ -1,48 +1,19 @@
 #!/usr/bin/env node
 // Daily Loop — static site builder.
-// Reads every editions/*.json and lessons/<track>/*.json and renders the site
-// into docs/. Zero dependencies; run with: node build.mjs
+// Reads every editions/*.json and renders the site into docs/. Zero dependencies; run with: node build.mjs
 
 import { readFileSync, writeFileSync, readdirSync, mkdirSync } from "node:fs";
-import { join, dirname, resolve } from "node:path";
+import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
 import { buildEpub } from "./kindle.mjs";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const EDITIONS_DIR = join(ROOT, "editions");
-const LESSONS_DIR = join(ROOT, "lessons");
-const CURRICULUM_DIR = join(ROOT, "curriculum");
 const OUT_DIR = join(ROOT, "docs");
 
 const SITE_TITLE = "Daily Loop";
-const SITE_TAGLINE = "World · AI · Software · Money — plus a daily lesson";
-
-// The two study tracks. Each has its own lessons/<slug>/ directory of daily
-// lesson files, a curriculum/<slug>.md syllabus, and a catalogue page at
-// docs/<slug>/index.html.
-const TRACKS = [
-  {
-    slug: "mental-models",
-    label: "Mental Models",
-    shortLabel: "Models",
-    kicker: "Mental models, one at a time",
-    unit: "lesson",
-    groupLabel: "Discipline",
-    blurb:
-      "A latticework of the big ideas from the big disciplines, built one model at a time in the spirit of Charlie Munger. Read in order or dip in by discipline.",
-  },
-  {
-    slug: "history",
-    label: "History of Civilization",
-    shortLabel: "History",
-    kicker: "History, one chapter at a time",
-    unit: "chapter",
-    groupLabel: "Era",
-    blurb:
-      "From the first stone tools to the present, told through five threads: energy, tools, information, money, and force. Less detail than Durant, more technology than a textbook.",
-  },
-];
+const SITE_TAGLINE = "World · AI · Software · Money";
 
 // ---------- helpers ----------
 
@@ -53,12 +24,6 @@ const escapeHtml = (s = "") =>
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
-
-// Minimal inline markup for lesson text: **bold** and *italic* only.
-const inline = (s = "") =>
-  escapeHtml(s)
-    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
-    .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, "$1<em>$2</em>");
 
 const hostOf = (url) => {
   try {
@@ -114,75 +79,11 @@ function loadEditions() {
   return editions;
 }
 
-// Parse curriculum/<slug>.md: "## Part ..." headings and "N. **Title** — scope" lines.
-function loadCurriculum(track) {
-  let text;
-  try {
-    text = readFileSync(join(CURRICULUM_DIR, `${track.slug}.md`), "utf8");
-  } catch {
-    return [];
-  }
-  const entries = [];
-  let part = "";
-  for (const line of text.split("\n")) {
-    const h = line.match(/^##\s+(.+?)\s*$/);
-    if (h) {
-      part = h[1];
-      continue;
-    }
-    const m = line.match(/^(\d+)\.\s+\*\*(.+?)\*\*\s+—\s+(.+?)\s*$/);
-    if (m) entries.push({ n: Number(m[1]), title: m[2], scope: m[3], part });
-  }
-  return entries;
-}
-
-
-// Reading progress, kept in the repo (data/progress.json) and updated when the
-// reader says what they have read: { "read": ["<track>/<slug>", ...] }.
-function loadProgress() {
-  try {
-    const d = JSON.parse(readFileSync(join(ROOT, "data", "progress.json"), "utf8"));
-    return new Set(Array.isArray(d.read) ? d.read : []);
-  } catch {
-    return new Set();
-  }
-}
-const READ = loadProgress();
-
-function loadLessons(track) {
-  const dir = join(LESSONS_DIR, track.slug);
-  let files;
-  try {
-    files = readdirSync(dir).filter((f) => f.endsWith(".json"));
-  } catch {
-    files = [];
-  }
-  const curriculum = loadCurriculum(track);
-  const lessons = files.map((f) => {
-    const data = JSON.parse(readFileSync(join(dir, f), "utf8"));
-    const slug = f.replace(/\.json$/, "");
-    data.slug = slug;
-    data.href = `${slug}.html`;
-    data.n = Number(data.n ?? parseInt(slug, 10));
-    if (!data.part) data.part = curriculum.find((c) => c.n === data.n)?.part || "";
-    data.read = READ.has(`${track.slug}/${slug}`);
-    return data;
-  });
-  lessons.sort((a, b) => a.n - b.n);
-  return { lessons, curriculum };
-}
-
 // ---------- shared page chrome ----------
 
 function masthead({ base, dateline, activeNav }) {
   const nav = [
     { href: `${base}index.html`, label: "Today", key: "today" },
-    ...TRACKS.map((t) => ({
-      href: `${base}${t.slug}/index.html`,
-      label: t.label,
-      short: t.shortLabel,
-      key: t.slug,
-    })),
     { href: `${base}archive.html`, label: "Archive", key: "archive" },
   ]
     .map(
@@ -537,231 +438,6 @@ function archiveStrip(editions, currentDate, base = "") {
     .join("");
 }
 
-// ---------- lesson pieces ----------
-
-function trackOf(slug) {
-  return TRACKS.find((t) => t.slug === slug);
-}
-
-function lessonKicker(track, lesson) {
-  const unit = track.unit === "chapter" ? "Chapter" : "No.";
-  const part = lesson.part ? ` · ${lesson.part.replace(/^Part\s+[IVXLC]+\s+—\s+/, "")}` : "";
-  return `${track.label} · ${unit} ${lesson.n}${part}`;
-}
-
-// The band on an edition page pointing to that day's lesson from each track.
-// Deliberately compact: title and subtitle only, the lesson page has the rest.
-function renderLessonCard(track, lesson) {
-  const href = `${track.slug}/${lesson.href}`;
-  return `<a class="lesson-card${lesson.read ? " is-read" : ""}" href="${href}">
-        <span class="kicker">${escapeHtml(lessonKicker(track, lesson))}${lesson.read ? ' <span class="tick">✓ read</span>' : ""}</span>
-        <span class="lesson-card-hed">${escapeHtml(lesson.title)}</span>
-        ${lesson.subtitle ? `<span class="lesson-card-sub">${inline(lesson.subtitle)}</span>` : ""}
-        <span class="more">Read the ${track.unit}</span>
-      </a>`;
-}
-
-function renderLessonBand(dayLessons, lessonsByTrack, isIndex) {
-  if (!dayLessons.length) return "";
-  const todayKeys = new Set(dayLessons.map(({ track, lesson }) => `${track.slug}/${lesson.slug}`));
-  // On the front page, list what is still unread (oldest first), so a missed
-  // day is one tap away instead of lost in the catalogue.
-  const unread = isIndex
-    ? TRACKS.flatMap((track) =>
-        (lessonsByTrack[track.slug]?.lessons || [])
-          .filter((l) => !l.read && !todayKeys.has(`${track.slug}/${l.slug}`))
-          .map((l) => ({ track, lesson: l })),
-      ).sort((a, b) => (a.lesson.date < b.lesson.date ? -1 : a.lesson.date > b.lesson.date ? 1 : 0))
-    : [];
-  const unreadHtml = unread.length
-    ? `<p class="catchup"><span class="catchup-label">Still unread</span>${unread
-        .slice(0, 6)
-        .map(
-          ({ track, lesson }) =>
-            `<a href="${track.slug}/${lesson.href}">${escapeHtml(track.unit === "chapter" ? "Ch." : "No.")} ${lesson.n} · ${escapeHtml(lesson.title)}</a>`,
-        )
-        .join("")}${unread.length > 6 ? `<span class="catchup-more">and ${unread.length - 6} more</span>` : ""}</p>`
-    : "";
-  return `<section class="study">
-      <h2 class="beat-label">${dayLessons.length === 1 ? "Lesson of the day" : "Lessons of the day"}</h2>
-      <div class="study-grid cols-${dayLessons.length}">
-${dayLessons.map(({ track, lesson }) => renderLessonCard(track, lesson)).join("\n")}
-      </div>
-      ${unreadHtml}
-    </section>`;
-}
-
-// Body paragraphs: "## " = subhead, "- " lines = list, "> " = quote, else paragraph.
-function renderBody(body = []) {
-  return body
-    .map((raw) => {
-      const s = String(raw).trim();
-      if (!s) return "";
-      if (s.startsWith("## ")) return `<h2>${inline(s.slice(3))}</h2>`;
-      if (s.startsWith("### ")) return `<h3>${inline(s.slice(4))}</h3>`;
-      if (s.startsWith("> ")) return `<blockquote><p>${inline(s.slice(2))}</p></blockquote>`;
-      if (s.startsWith("- ")) {
-        const items = s
-          .split("\n")
-          .map((l) => l.replace(/^-\s+/, "").trim())
-          .filter(Boolean)
-          .map((l) => `<li>${inline(l)}</li>`)
-          .join("");
-        return `<ul>${items}</ul>`;
-      }
-      return `<p>${inline(s)}</p>`;
-    })
-    .join("\n");
-}
-
-function renderLessonPage(track, lesson, prev, next, editions) {
-  const base = "../";
-  const reading = (lesson.reading || [])
-    .map((r) => {
-      const t = r.url
-        ? `<a href="${escapeHtml(r.url)}" target="_blank" rel="noopener">${escapeHtml(r.title)}</a>`
-        : `<em>${escapeHtml(r.title)}</em>`;
-      return `<li>${t}${r.by ? `, ${escapeHtml(r.by)}` : ""}</li>`;
-    })
-    .join("");
-  const editionHref = editions.find((e) => e.date === lesson.date)
-    ? lesson.date === editions[0]?.date
-      ? `${base}index.html`
-      : `${base}${lesson.date}.html`
-    : null;
-
-  const unitCap = track.unit === "chapter" ? "Chapter" : "Lesson";
-  const navLink = (l, cls, label) =>
-    l
-      ? `<a class="pager-a ${cls}" href="${l.href}"><span class="pager-label">${label}</span><span class="pager-title">${escapeHtml(l.title)}</span></a>`
-      : `<span class="pager-a ${cls} empty"></span>`;
-
-  const main = `<article class="lesson">
-      <header class="lesson-head">
-        <p class="kicker">${escapeHtml(lessonKicker(track, lesson))}</p>
-        <h1 class="lesson-title">${escapeHtml(lesson.title)}</h1>
-        ${lesson.subtitle ? `<p class="lesson-sub">${inline(lesson.subtitle)}</p>` : ""}
-        <p class="lesson-meta">${lesson.read ? '<span class="tick">✓ read</span> · ' : ""}${escapeHtml(mediumDate(lesson.date))}${
-          editionHref ? ` · <a href="${editionHref}">that day's edition</a>` : ""
-        } · <a href="index.html">all ${escapeHtml(track.label.toLowerCase())}</a></p>
-      </header>
-      ${lesson.summary ? `<p class="lesson-summary">${inline(lesson.summary)}</p>` : ""}
-      <div class="lesson-body">
-${renderBody(lesson.body)}
-      </div>
-      ${reading ? `<aside class="box reading"><h2>Further reading</h2><ul>${reading}</ul></aside>` : ""}
-      <nav class="pager">
-        ${navLink(prev, "prev", `← Previous ${track.unit}`)}
-        ${navLink(next, "next", `Next ${track.unit} →`)}
-      </nav>
-    </article>`;
-
-  return shell({
-    title: `${lesson.title} — ${track.label} · ${SITE_TITLE}`,
-    description: lesson.summary,
-    base,
-    bodyClass: "page-lesson",
-    head: masthead({
-      base,
-      activeNav: track.slug,
-      dateline: `<span>${escapeHtml(track.label)}</span><span>${unitCap} ${lesson.n}</span>`,
-    }),
-    main,
-    foot: footer({ base, editions, currentDate: lesson.date }),
-  });
-}
-
-function renderCatalogue(track, lessons, curriculum, editions) {
-  const base = "../";
-  const total = curriculum.length ? Math.max(curriculum.length, lessons.length) : lessons.length;
-  const written = lessons.length;
-  const readCount = lessons.filter((l) => l.read).length;
-  const pct = total ? Math.round((readCount / total) * 100) : 0;
-  const latest = lessons[lessons.length - 1];
-  const nextUnread = lessons.find((l) => !l.read);
-
-  // Group written lessons by part, preserving first-seen order.
-  const groups = new Map();
-  for (const l of lessons) {
-    const key = l.part || "Lessons";
-    if (!groups.has(key)) groups.set(key, []);
-    groups.get(key).push(l);
-  }
-  const unitCap = track.unit === "chapter" ? "Ch." : "No.";
-  const groupsHtml = [...groups.entries()]
-    .map(
-      ([part, ls]) => `<section class="cat-group">
-        <h2 class="cat-part">${escapeHtml(part)}</h2>
-        <ol class="cat-list">
-${ls
-  .map(
-    (l) => `          <li class="cat-row${l.read ? " is-read" : ""}">
-            <span class="cat-n">${unitCap} ${l.n}${l.read ? ' <span class="tick">✓</span>' : ""}</span>
-            <div class="cat-main">
-              <a class="cat-title" href="${l.href}">${escapeHtml(l.title)}</a>
-              ${l.subtitle ? `<span class="cat-sub">${inline(l.subtitle)}</span>` : ""}
-              <p class="cat-dek">${inline(l.summary || "")}</p>
-            </div>
-            <span class="cat-date">${escapeHtml(shortDate(l.date))}</span>
-          </li>`,
-  )
-  .join("\n")}
-        </ol>
-      </section>`,
-    )
-    .join("\n");
-
-  const upcoming = curriculum.filter((c) => c.n > (latest?.n || 0)).slice(0, 5);
-  const upcomingHtml = upcoming.length
-    ? `<section class="cat-group upcoming">
-        <h2 class="cat-part">Coming up</h2>
-        <ol class="cat-list">
-${upcoming
-  .map(
-    (c) => `          <li class="cat-row">
-            <span class="cat-n">${unitCap} ${c.n}</span>
-            <div class="cat-main"><span class="cat-title plain">${escapeHtml(c.title)}</span><p class="cat-dek">${inline(c.scope)}</p></div>
-            <span class="cat-date"></span>
-          </li>`,
-  )
-  .join("\n")}
-        </ol>
-      </section>`
-    : "";
-
-  const main = `<section class="cat-head">
-      <p class="kicker">${escapeHtml(track.kicker)}</p>
-      <h1 class="cat-title-big">${escapeHtml(track.label)}</h1>
-      <p class="cat-blurb">${escapeHtml(track.blurb)}</p>
-      <div class="progress" role="img" aria-label="${readCount} of ${total} read">
-        <div class="progress-bar" style="width:${pct}%"></div>
-      </div>
-      <p class="progress-label">${readCount} read · ${written} written · ${total} planned${
-        nextUnread
-          ? ` · <a class="continue" href="${nextUnread.href}">continue: ${unitCap} ${nextUnread.n}, ${escapeHtml(nextUnread.title)}</a>`
-          : latest
-            ? ` · all read, next ${track.unit} arrives with the loop`
-            : ""
-      }</p>
-    </section>
-${written ? groupsHtml : `<p class="empty-note">No ${track.unit}s yet. The next daily loop writes the first one.</p>`}
-${upcomingHtml}`;
-
-  return shell({
-    title: `${track.label} · ${SITE_TITLE}`,
-    description: track.blurb,
-    base,
-    bodyClass: "page-catalogue",
-    head: masthead({
-      base,
-      activeNav: track.slug,
-      dateline: `<span>${escapeHtml(track.label)}</span><span>${readCount} of ${written} ${track.unit}${written === 1 ? "" : "s"} read</span>`,
-    }),
-    main,
-    foot: footer({ base, editions, currentDate: null }),
-  });
-}
-
 // ---------- archive page ----------
 
 function leadOf(edition) {
@@ -833,7 +509,7 @@ ${groups}`;
 
 // ---------- edition page ----------
 
-function renderPage(edition, editions, isIndex, lessonsByTrack) {
+function renderPage(edition, editions, isIndex) {
   // Pick the lead: first item flagged { "lead": true }, else first item overall.
   const lead = leadOf(edition);
 
@@ -841,19 +517,11 @@ function renderPage(edition, editions, isIndex, lessonsByTrack) {
     (n, s) => n + (s.items || []).length,
     0,
   );
-  const dayLessons = TRACKS.flatMap((track) => {
-    const lesson = (lessonsByTrack[track.slug]?.lessons || []).find(
-      (l) => l.date === edition.date,
-    );
-    return lesson ? [{ track, lesson }] : [];
-  });
 
   const sections = (edition.sections || [])
     .map((s) => renderSection(s, lead, editions))
     .join("\n");
   const title = isIndex ? SITE_TITLE : `${SITE_TITLE} — ${shortDate(edition.date)}`;
-  const counts = [`${itemCount} stories`];
-  if (dayLessons.length) counts.push(`${dayLessons.length} lesson${dayLessons.length === 1 ? "" : "s"}`);
 
   return shell({
     title,
@@ -862,10 +530,9 @@ function renderPage(edition, editions, isIndex, lessonsByTrack) {
     head: masthead({
       base: "",
       activeNav: isIndex ? "today" : "",
-      dateline: `<span>${escapeHtml(longDate(edition.date))}</span><span>No. ${editions.length} · ${counts.join(" · ")}</span>`,
+      dateline: `<span>${escapeHtml(longDate(edition.date))}</span><span>No. ${editions.length} · ${itemCount} stories</span>`,
     }),
-    main: `${renderLessonBand(dayLessons, lessonsByTrack, isIndex)}
-${sections}`,
+    main: sections,
     foot: footer({ base: "", editions, currentDate: edition.date }),
   });
 }
@@ -1011,85 +678,11 @@ a { color: inherit; }
 .chart-note { margin: 8px 0 0; font-size: 12px; color: var(--muted); }
 @media (max-width: 720px) { .chart-wrap.wide { display: none; } .chart-wrap.narrow { display: block; } .chart .tick { font-size: 12px; } .chart .endlab { font-size: 12.5px; } }
 
-/* Lessons of the day (edition page band) */
-.study { padding: 20px 0; border-bottom: 1px solid var(--line); }
-.study .beat-label { border-bottom-color: var(--study); margin-bottom: 16px; }
-.study-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.study-grid.cols-1 { grid-template-columns: 1fr; }
-.lesson-card {
-  display: flex; flex-direction: column; gap: 4px; text-decoration: none;
-  background: #fff; border: 1px solid var(--line); border-left: 3px solid var(--study);
-  border-radius: 8px; padding: 14px 18px 12px;
-}
-.lesson-card .kicker { color: var(--study); margin-bottom: 2px; font-size: 11px; }
-.lesson-card-hed { font-family: var(--serif); font-weight: 700; font-size: 22px; line-height: 1.12; }
-.lesson-card:hover .lesson-card-hed { color: var(--study); }
-.lesson-card-sub { font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--muted); }
-.more {
-  margin-top: 6px; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-  text-decoration: none; color: var(--study);
-}
-.more::after { content: " \u2192"; }
-
-.tick { color: #2e7d32; font-weight: 700; letter-spacing: 0.06em; }
-.lesson-card.is-read { border-left-color: #2e7d32; opacity: 0.85; }
-.catchup {
-  margin: 14px 0 0; font-size: 13px; color: var(--muted);
-  display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: baseline;
-}
-.catchup-label { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--study); }
-.catchup a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
-.catchup a:hover { color: var(--study); border-bottom-color: var(--study); }
-.catchup-more { color: var(--faint); }
-.cat-row.is-read .cat-title { color: var(--muted); }
-.continue { color: var(--ink); font-weight: 700; }
-
-/* Lesson page */
-.lesson { max-width: 72ch; margin: 0 auto; padding: 26px 0 10px; }
-.lesson-head { text-align: center; padding-bottom: 22px; border-bottom: 4px double var(--line-strong); }
-.lesson-head .kicker { color: var(--study); }
-.lesson-title {
-  font-family: var(--serif); font-weight: 700; letter-spacing: -0.015em;
-  font-size: clamp(30px, 5vw, 46px); line-height: 1.05; margin: 0;
-}
-.lesson-sub { font-family: var(--serif); font-style: italic; font-size: clamp(17px, 2vw, 21px); color: var(--muted); margin: 12px 0 0; }
-.lesson-meta { margin: 14px 0 0; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-.lesson-meta a { color: var(--muted); }
-.lesson-summary {
-  font-family: var(--serif); font-size: clamp(17px, 2vw, 20px); line-height: 1.5; color: #2a2c31;
-  margin: 24px 0 8px; padding-left: 16px; border-left: 3px solid var(--study);
-}
-.lesson-body { font-family: var(--serif); font-size: 18px; line-height: 1.65; color: #1d1f24; }
-.lesson-body p { margin: 0 0 1.1em; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
-.lesson-body h2 {
-  font-family: var(--sans); font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--ink); margin: 2em 0 0.8em; padding-top: 0.8em; border-top: 1px solid var(--line);
-}
-.lesson-body h3 { font-size: 20px; margin: 1.6em 0 0.5em; }
-.lesson-body blockquote { margin: 1.2em 0; padding: 0 0 0 18px; border-left: 3px solid var(--line-strong); color: var(--muted); font-style: italic; }
-.lesson-body ul { padding-left: 1.3em; margin: 0 0 1.1em; }
-.lesson-body li { margin: 0.3em 0; }
-.box { margin: 28px 0 0; padding: 18px 22px; background: #fff; border: 1px solid var(--line); border-radius: 10px; }
-.box h2 { margin: 0 0 10px; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--study); }
-.box ul { margin: 0; padding-left: 1.2em; font-size: 15px; line-height: 1.55; color: #2c2f35; }
-.box li { margin: 6px 0; }
-.box.keep { border-top: 3px solid var(--study); }
-.pager { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 34px 0 20px; padding-top: 18px; border-top: 1px solid var(--line); }
-.pager-a { text-decoration: none; display: flex; flex-direction: column; gap: 4px; }
-.pager-a.next { text-align: right; }
-.pager-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
-.pager-title { font-family: var(--serif); font-weight: 700; font-size: 17px; line-height: 1.2; }
-.pager-a:hover .pager-title { color: var(--study); }
-
-/* Catalogue page */
+/* Archive page */
 .cat-head { text-align: center; padding: 26px 0 22px; border-bottom: 4px double var(--line-strong); }
 .cat-head .kicker { color: var(--study); }
 .cat-title-big { font-family: var(--serif); font-weight: 700; letter-spacing: -0.015em; font-size: clamp(32px, 5vw, 50px); line-height: 1.05; margin: 0; }
 .cat-blurb { font-family: var(--serif); font-size: clamp(16px, 2vw, 19px); color: #2a2c31; max-width: 62ch; margin: 14px auto 0; line-height: 1.45; }
-.progress { height: 6px; background: #e9e8e2; border-radius: 3px; max-width: 420px; margin: 22px auto 0; overflow: hidden; }
-.progress-bar { height: 100%; background: var(--study); }
-.progress-label { margin: 8px 0 0; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-.progress-label a { color: var(--ink); }
 .cat-group { padding: 26px 0 8px; border-bottom: 1px solid var(--line); }
 .cat-part { font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin: 0 0 14px; color: var(--ink); }
 .cat-list { list-style: none; margin: 0; padding: 0; }
@@ -1100,12 +693,8 @@ a { color: inherit; }
 .cat-n { font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--study); font-weight: 700; }
 .cat-title { font-family: var(--serif); font-weight: 700; font-size: 20px; line-height: 1.2; text-decoration: none; }
 .cat-title:hover { color: var(--study); }
-.cat-title.plain { color: var(--muted); }
-.cat-sub { display: block; font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--muted); margin-top: 2px; }
 .cat-dek { margin: 6px 0 0; font-size: 14.5px; color: #2c2f35; line-height: 1.5; }
 .cat-date { font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); text-align: right; }
-.upcoming .cat-row { opacity: 0.85; }
-.empty-note { font-family: var(--serif); text-align: center; color: var(--muted); padding: 40px 0; }
 
 /* Footer */
 footer { padding: 22px 0 60px; }
@@ -1141,12 +730,6 @@ footer { padding: 22px 0 60px; }
   .columns { column-rule: none; column-count: 1 !important; }
   .story.featured .hed { font-size: 25px; }
   .dek { text-align: left; }
-  .study-grid { grid-template-columns: 1fr; gap: 18px; }
-  .lesson-card-hed { font-size: 20px; }
-  .lesson-body { font-size: 17px; }
-  .lesson-body p { text-align: left; }
-  .pager { grid-template-columns: 1fr; }
-  .pager-a.next { text-align: left; }
   .cat-row { grid-template-columns: 1fr; gap: 4px; }
   .cat-date { text-align: left; }
 }
@@ -1170,26 +753,11 @@ const BTC_CHART = bitcoinChart();
 
 function build() {
   const editions = loadEditions();
-  const lessonsByTrack = Object.fromEntries(TRACKS.map((t) => [t.slug, loadLessons(t)]));
 
   mkdirSync(OUT_DIR, { recursive: true });
   writeFileSync(join(OUT_DIR, "style.css"), STYLE);
   writeFileSync(join(OUT_DIR, "favicon.svg"), FAVICON);
   writeFileSync(join(OUT_DIR, ".nojekyll"), "");
-
-  // Lesson pages and catalogues (independent of whether any edition exists).
-  for (const track of TRACKS) {
-    const { lessons, curriculum } = lessonsByTrack[track.slug];
-    const dir = join(OUT_DIR, track.slug);
-    mkdirSync(dir, { recursive: true });
-    lessons.forEach((lesson, i) => {
-      writeFileSync(
-        join(dir, lesson.href),
-        renderLessonPage(track, lesson, lessons[i - 1] || null, lessons[i + 1] || null, editions),
-      );
-    });
-    writeFileSync(join(dir, "index.html"), renderCatalogue(track, lessons, curriculum, editions));
-  }
 
   if (editions.length === 0) {
     writeFileSync(
@@ -1202,39 +770,25 @@ function build() {
 
   writeFileSync(
     join(OUT_DIR, "index.html"),
-    renderPage(editions[0], editions, true, lessonsByTrack),
+    renderPage(editions[0], editions, true),
   );
   for (const e of editions) {
     writeFileSync(
       join(OUT_DIR, `${e.date}.html`),
-      renderPage(e, editions, false, lessonsByTrack),
+      renderPage(e, editions, false),
     );
   }
   writeFileSync(join(OUT_DIR, "archive.html"), renderArchive(editions));
 
   // Kindle edition of the latest paper (docs/kindle/<date>.epub + latest.epub).
   const latest = editions[0];
-  const latestLessons = TRACKS.flatMap((track) => {
-    const lesson = (lessonsByTrack[track.slug]?.lessons || []).find((l) => l.date === latest.date);
-    return lesson ? [{ track, lesson }] : [];
-  });
   const epub = buildEpub({
     edition: latest,
-    dayLessons: latestLessons,
     outDir: join(OUT_DIR, "kindle"),
-    helpers: { escapeHtml, inline, renderBody, mediumDate, lessonKicker },
+    helpers: { escapeHtml, mediumDate },
   });
   console.log(`Kindle edition: docs/kindle/${latest.date}.epub (${epub.chapters} chapters, ${Math.round(epub.bytes / 1024)} KB)`);
-  const lessonCount = TRACKS.map(
-    (t) => `${lessonsByTrack[t.slug].lessons.length} ${t.slug}`,
-  ).join(", ");
-  console.log(
-    `Built ${editions.length} edition(s) and lessons (${lessonCount}). Latest: ${editions[0].date} → docs/index.html`,
-  );
+  console.log(`Built ${editions.length} edition(s). Latest: ${editions[0].date} → docs/index.html`);
 }
 
-// Run only when invoked directly; kindle-lessons.mjs imports the helpers below
-// without triggering a build.
-if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) build();
-
-export { TRACKS, loadLessons, escapeHtml, inline, renderBody, mediumDate, lessonKicker };
+build();

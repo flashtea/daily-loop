@@ -1,7 +1,7 @@
-// Kindle edition: packages one day's paper (both lessons in full, then the
-// news) as an EPUB 3 file, and (buildLessonsEpub) a lessons-only book for the
-// weekly Send-to-Kindle mail and the catch-up volumes. Zero dependencies: a minimal ZIP writer (stored
-// entries, CRC-32) is enough for EPUB. Called from build.mjs; the output goes
+// Kindle edition: packages one day's paper as an EPUB 3 file. Zero
+// dependencies: a minimal ZIP writer (stored entries, CRC-32) is enough for
+// EPUB. packEpub is exported for study/book.mjs, which builds the archived
+// lessons into books. Called from build.mjs; the output goes
 // to docs/kindle/<date>.epub and docs/kindle/latest.epub so it can be
 // downloaded, sideloaded, or emailed to a Send-to-Kindle address.
 
@@ -117,46 +117,11 @@ ${body}
 </html>
 `;
 
-// One lesson as an EPUB chapter. Inline markup is already escaped by the
-// helpers; XHTML needs no bare ampersands, which escapeHtml guarantees.
-function lessonChapter(track, lesson, helpers, id) {
-  const { escapeHtml, inline, renderBody, lessonKicker } = helpers;
-  const reading = (lesson.reading || [])
-    .map((r) => `<li><i>${escapeHtml(r.title)}</i>${r.by ? `, ${escapeHtml(r.by)}` : ""}</li>`)
-    .join("");
-  return {
-    id,
-    title: `${track.label}: ${lesson.title}`,
-    body: `<p class="kicker">${escapeHtml(lessonKicker(track, lesson))}</p>
-<h1>${escapeHtml(lesson.title)}</h1>
-${lesson.subtitle ? `<p class="sub">${inline(lesson.subtitle)}</p>` : ""}
-${lesson.summary ? `<p class="summary">${inline(lesson.summary)}</p>` : ""}
-${renderBody(lesson.body)}
-${reading ? `<div class="box"><h3>Further reading</h3><ul>${reading}</ul></div>` : ""}`,
-  };
-}
-
-// Lessons-only book: [{ track, lesson }] in reading order, written to outPath.
-export function buildLessonsEpub({ title, uid, date, items, outPath, helpers }) {
-  const chapters = items.map(({ track, lesson }, i) =>
-    lessonChapter(track, lesson, helpers, `${track.slug}-${String(lesson.n).padStart(3, "0")}-${i}`),
-  );
-  const epub = packEpub({ title, uid, date, chapters, escapeHtml: helpers.escapeHtml });
-  mkdirSync(dirname(outPath), { recursive: true });
-  writeFileSync(outPath, epub);
-  return { bytes: epub.length, chapters: chapters.length };
-}
-
-export function buildEpub({ edition, dayLessons, outDir, helpers }) {
+export function buildEpub({ edition, outDir, helpers }) {
   const { escapeHtml, mediumDate } = helpers;
   const date = edition.date;
   const title = `Daily Loop — ${mediumDate(date)}`;
   const chapters = [];
-
-  // Lessons, in full.
-  for (const { track, lesson } of dayLessons) {
-    chapters.push(lessonChapter(track, lesson, helpers, `lesson-${track.slug}`));
-  }
 
   // News, one chapter per section.
   for (const section of edition.sections || []) {
@@ -190,7 +155,7 @@ ${ahead ? `<p class="ahead"><b>Ahead:</b> ${ahead}</p>` : ""}`,
 }
 
 // Pack chapters into an EPUB 3 buffer.
-function packEpub({ title, uid, date, chapters, escapeHtml }) {
+export function packEpub({ title, uid, date, chapters, escapeHtml }) {
   const nav = `<nav epub:type="toc" id="toc"><h1>${escapeHtml(title)}</h1><ol>
 ${chapters.map((c) => `<li><a href="${c.id}.xhtml">${escapeHtml(c.title)}</a></li>`).join("\n")}
 </ol></nav>`;
