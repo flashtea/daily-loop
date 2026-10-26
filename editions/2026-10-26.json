@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-26",
+  "sections": [
+    {
+      "title": "World",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Lula won a fourth term as Brazil's president with 51.8% of the runoff vote, overturning Flávio Bolsonaro's first-round lead",
+          "summary": "With 100% of the vote counted, Brazil's electoral court put Luiz Inácio Lula da Silva about 4.4 million votes ahead of Senator Flávio Bolsonaro, who had led the 4 October first round 47% to 45%. Supreme Court Justice Cristiano Zanin kept polls open two extra hours after both campaigns asked for it, citing bus failures in São Paulo and Salvador and heavy rain in the south; the new term begins on 5 January 2027.",
+          "why": "Brazil's fiscal, trade and Mercosur policy stays with Lula's government through 2030 rather than swinging to the US-aligned right, so plan Latin American exposure around continuity.",
+          "source": "CBS News (AP)",
+          "url": "https://www.cbsnews.com/news/brazil-presidential-runoff-lula-flavio-bolsonaro/"
+        },
+        {
+          "headline": "Serbia's Student List defeated Aleksandar Vučić's party after 14 years in power, and Vučić conceded on election night",
+          "summary": "Vučić, who resigned the presidency in September to run for prime minister, said a sample count gave the Student List 135 to 140 of 250 seats and his Serbian Progressive Party about 105, with roughly 2.2 million votes against 1.7 million. The State Election Commission recorded turnout of 64.9% by 6pm, the highest since 1992; the list grew out of the protests that followed the Novi Sad station canopy collapse that killed 16 people in November 2024.",
+          "why": "Serbia's EU accession talks, its Russian gas contract and its Chinese investment agreements all pass to a government with no track record, so treat the terms of each as open for the next year.",
+          "source": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/25/serbia-voter-turnout-highest-in-decades-as-students-oppose-longtime-leader"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-10-27", "what": "Israel Knesset election (120 seats, 3.25% threshold); the IDF closes the West Bank for the vote" },
+        { "date": "2026-11-01", "what": "Bulgaria presidential runoff, Iliana Yotova vs Andrey Gyurov (first-round exit polls 35–36.5% to 32.2–32.5%, turnout below the 50% needed to decide it outright)" },
+        { "date": "2026-11-03", "what": "US midterm elections: all 435 House seats, 35 Senate seats, 39 governorships" },
+        { "date": "2026-11-29", "what": "Spain snap general election, both chambers, called by Royal Decree 806/2026 after Congress rejected the housing decree" }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "Wouter van Oortmerssen published Goose, a memory-safe systems language whose 30,000-line compiler was written almost entirely by Claude Fable from his design",
+          "summary": "The author of FlatBuffers and Lobster designed the language, the compiler architecture and the coding standards; the repository credits Claude Fable with the compiler implementation, the benchmarks, the samples and the documentation, and says it was produced almost entirely with AI from a human language design. Goose compiles to C with no heap allocator, garbage collector or lifetime annotations, and the authors' own sixteen benchmarks show it ahead of idiomatic C++ and safe Rust on speed and memory.",
+          "why": "A precise human-written design plus an agent now yields a working whole-program compiler with a CI test suite, so put your own hours into the specification and the tests and let the agent carry the implementation.",
+          "source": "The Goose Programming Language",
+          "url": "https://aardappel.github.io/goose/"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-10-28", "what": "GitHub Universe 2026, Fort Mason, San Francisco (28–29 Oct)" },
+        { "date": "2026-11-10", "what": "AI Engineer Code Summit, San Francisco (workshops 10 Nov, talks 11–12 Nov)" },
+        { "date": "2026-11-16", "what": "GitHub Copilot retires Claude Opus 4.8, Claude Opus 5 and GPT-5.6 Terra" },
+        { "date": "2026-11-30", "what": "Anthropic retires claude-sonnet-4-5-20250929 on the Claude API (replacement claude-sonnet-5-5); OpenAI shuts down its Evals platform, v1/prompts objects and Agent Builder the same day" }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Musk said SpaceX closed $40 billion of debt to buy Nvidia GPUs, and that debt markets have shut to companies without revenue independent of AI data centres",
+          "summary": "Musk wrote on X that the raise, mostly callable debt, rested on SpaceX's investment-grade ratings and its Starlink and launch revenue, after Reuters reported talks with banks and asset managers for a $40 billion chip purchase; he predicted that more than 200 'neocloud' GPU renters would consolidate into a few survivors and said SpaceX would buy none of them. Reuters noted it was not clear the financing had fully closed.",
+          "why": "Compute financing now runs through balance sheets with non-AI cash flow, so treat pure-play GPU renters and the lenders behind them as the weak link in the build-out.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/10/26/elon-musk-confirms-usd40-billion-spacex-debt-deal-for-ai-chips-warns-of-neocloud-shakeout"
+        },
+        {
+          "headline": "Texas sued OpenAI and Sam Altman personally, asking a court to bar minors from ChatGPT and to put new models before a court-appointed evaluator before release",
+          "summary": "Attorney General Ken Paxton filed the 67-page petition in Collin County on Friday 23 October under the Texas Deceptive Trade Practices Act and the SCOPE Act, naming six OpenAI entities and seeking civil penalties of $10,000 per violation. It follows the eight state suits filed on 16 October and is the first to ask for pre-release review of models by an outside evaluator.",
+          "why": "An injunction gating model releases on a court appointee's review would be the first binding US precedent of its kind, so watch this docket rather than Congress for the first US model rule with teeth.",
+          "source": "Courthouse News Service",
+          "url": "https://www.courthousenews.com/texas-attorney-general-sues-openai-for-lying-about-chatgpt-safety-and-safeguards/",
+          "follow_up": "2026-10-16"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-10-31", "what": "DeepSeek starts billing Search and Fetch API calls made through Claude Code, Codex and DeepSeek Harness ($0.75 per 1,000 calls per endpoint, 16:00 UTC)" },
+        { "date": "2026-11-04", "what": "Moonshot AI's own deadline for publishing Kimi K3.1 Pro's open weights" },
+        { "date": "2026-11-12", "what": "Anthropic's updated Usage Policy takes effect" },
+        { "date": "2026-11-16", "what": "California's Government Operations Agency must deliver its recommendations on an AI 'kill switch' and independent verifiers to Newsom under Executive Order N-9-26" }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [],
+      "ahead": [
+        { "date": "2026-10-28", "what": "Node.js 26 enters Active LTS; Node.js 27 alpha opens this month under the one-release-a-year schedule" },
+        { "date": "2026-11-04", "what": "GitHub: first brownout of the ssh-rsa SHA-1 signature type (second on 9 Dec, removal 13 Jan 2027)" },
+        { "date": "2026-11-10", "what": ".NET Conf launches .NET 11 (10–12 Nov); KubeCon North America in Salt Lake City 9–12 Nov; Rust 1.100 and PostgreSQL 19 RC2 on 12 Nov" },
+        { "date": "2026-11-17", "what": "Chrome 158 stable removes XSLT outside the origin trial and enterprise policy; PostgreSQL 19 GA and the end of GitHub Actions' ubuntu-latest move to Ubuntu 26.04 both on 19 Nov (pin ubuntu-24.04 to stay)" }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [],
+      "ahead": [
+        { "date": "2026-10-28", "what": "FOMC rate decision (18:00 UTC, no projections this meeting; policy rate 3.75–4.00%); Bank of Canada decision with Monetary Policy Report and UK Autumn Budget with OBR forecast the same day" },
+        { "date": "2026-10-29", "what": "ECB rate decision (deposit rate 2.5%); US Q3 GDP advance estimate and September PCE inflation the same day (BEA, 12:30 UTC); Bank of Japan decision with Outlook Report the next day" },
+        { "date": "2026-11-04", "what": "US Treasury quarterly refunding announcement; Bank of England decision with Monetary Policy Report 5 Nov; US October jobs report 6 Nov (BLS, 13:30 UTC)" },
+        { "date": "2026-11-10", "what": "US October CPI (BLS, 13:30 UTC); MSCI publishes its final 'non-operating companies' list, Strategy among the candidates, the next day" }
+      ]
+    }
+  ]
+}
