@@ -149,6 +149,19 @@ syllabus. Web search is optional, for verifying a date, figure, or quotation.
 Never invent a quotation; if you cannot verify its wording, paraphrase and say
 so.
 
+**Written to be published, not posted.** Each lesson is a chapter of a book
+that will be read in any order, on any day, years from now, and the compiled
+tracks may be published as they stand. Nothing in a lesson may refer to the
+day it was written or to the machinery that delivers it: no "today",
+"yesterday" or "tomorrow"; no "this series", "this track" or "the loop"; no
+lesson or chapter numbers, no "the previous lesson" or "the next chapter", no
+"Part II"; no mention of the reader's phone, the paper, or the daily rhythm;
+no trailer for the next lesson. Other lessons are referred to only by the
+name of their idea, as a book would ("the circle of competence", "the
+hand-axe"), and only where the connection is real. The opening lesson of each
+track may describe the plan of the whole in a paragraph. `lint-prose.mjs`
+flags the common slips as hard errors.
+
 **Mental Models** (`lessons/mental-models/`, syllabus
 `curriculum/mental-models.md`): Charlie Munger's latticework, one model per
 day across thinking tools, the psychology of misjudgment, mathematics, physics,
@@ -160,24 +173,35 @@ leave the reader able to *use* the model, not just recognize it. Each one:
 - shows it working in at least two unrelated domains, with concrete cases;
 - names its failure mode: when it misleads, and what it looks like when
   someone is over-applying it;
-- gives one question or habit the reader can apply tomorrow;
-- connects it to models already covered in the series.
+- gives one question or habit the reader can apply at once, under a
+  subhead `## The habit`;
+- connects it, by name, to related models where the connection is real.
 
 **History of Civilization** (`lessons/history/`, syllabus
-`curriculum/history.md`): from the first tools to the present, in order.
-Durant's *Story of Civilization* for scope, not length; the Saylor/Breedlove
-series for the money-and-energy lens. The thread is always the **capability**,
-never the biography. Each chapter:
+`curriculum/history.md`): from the first tools to the present, in order. The
+model is Durant's *Story of Civilization* at a fraction of the length:
+narrative history for a general reader, written by someone who has lived with
+the sources and wants to tell what happened. The five threads (energy, tools,
+information, money, force) are the author's lens and stay mostly out of sight.
+Each chapter:
 
-- says what changed in one of the five threads (energy, tools, information,
-  money, force);
-- explains **how the thing worked**: the mechanism of the plough, the bill of
-  exchange, the bombard, well enough that the reader could explain it;
-- traces what it forced in the other threads (surplus to writing to taxation
-  to armies);
+- tells what happened to people, in order, and opens on a scene, a find, a
+  person or a place rather than on a definition or a law of physics;
+- explains **how the thing worked** in plain words at the point where the
+  story needs it, well enough that the reader could explain it to someone
+  else; the mechanism is a paragraph, never the chapter, and a quantity
+  appears only where one number makes the thing vivid (an ox does the work of
+  several men), never as a spec sheet;
+- says, in ordinary language, what the change made possible or forced
+  elsewhere, and never announces which "thread" is moving or audits the
+  threads that did not;
+- uses sites, dates and discoverers where they carry the story or settle a
+  dispute, a few per chapter, never as a gazetteer;
 - names a person only when they were the hinge, in the body, with the year
   and what they did;
-- connects back to the previous chapter and sets up the next.
+- ends on its own subject, not on a trailer. A closing paragraph may look
+  forward by content ("the remedy for that, writing, was still ninety
+  thousand years off"), never by lesson.
 
 **Picking today's track and lesson.** Write exactly one lesson per day. The
 track is the one with fewer lessons written so far; on a tie, Mental Models.
@@ -193,8 +217,7 @@ already exists in either track, leave it alone unless asked to revise.
 Paragraph lengths vary; one may be a single sentence, another eight. No bullet
 lists in the body unless the content is a genuine list (the parts of a
 mechanism, the steps of a procedure). No takeaways list, no "names worth
-knowing" list; the lesson ends with its last paragraph, which may point in one
-plain sentence at the next lesson.
+knowing" list; the lesson ends with its last paragraph, on its own subject.
 
 **Prose rules.** The lessons are written prose, read on a phone or heard as
 narration, by someone who knows the subject and is explaining it to an
@@ -224,12 +247,13 @@ particular:
   the evidence is contested, say so and leave it contested; do not resolve a
   disagreement into a tidy trade-off. Plain verbs: wrote, died, built, sold.
   A paragraph may end flat, on the fact.
-- *Mechanism before consequence.* In History the physics or procedure of the
-  thing comes first, with quantities, and only then what it forced in the
-  other threads. The Saylor series supplies the lens (energy, money as a
-  technology) and the method (how did it physically work, how much, how fast);
-  its spoken cadence and one-line slogans do not transfer to the page. In
-  Mental Models one case per lesson is as concrete as Munger's: a named
+- *Story before mechanism, mechanism before consequence.* In History the
+  reader should be able to picture the people before being asked to
+  understand the device, and should understand the device before being told
+  what it changed. The Saylor series supplies only the lens (energy, money as
+  a technology); its engineering register, its quantities for their own sake,
+  its spoken cadence and its one-line slogans do not transfer to the page.
+  In Mental Models one case per lesson is as concrete as Munger's: a named
   company or person, a figure, a date, and the detail that does not fit the
   model. Munger's bluntness, named cases and honest hedges transfer; his talk
   rhythm does not.

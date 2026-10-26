@@ -170,3 +170,20 @@ Human style references
 - Written prose, never spoken cadence. Saylor supplies lens and method only; Munger supplies named cases, bluntness and honest hedges only.
 - The "Keep" (takeaways) and "Names worth knowing" sections are retired from the builder, the Kindle export, the narration script and the schema. `reading` stays.
 - All twelve lessons were rewritten under the new rules in CLAUDE.md and pass `node lint-prose.mjs --all` with no hard flags.
+
+## Decisions (2026-10-15)
+
+- The History chapters as rewritten on 2026-10-13 applied the Saylor method as
+  a template: a physics brief with quantities first, a gazetteer of sites and
+  dates, a "what it forced in the other threads" audit, and a trailer. The
+  reader did not like the result. All seven chapters were rewritten again as
+  narrative history in Durant's manner at short length (scene or find first,
+  mechanism in plain words where the story needs it, a few numbers chosen for
+  vividness, the five threads kept out of sight). CLAUDE.md now says so.
+- Both tracks carried marks of the daily delivery ("Tomorrow:", "Yesterday's
+  lesson", "A habit for tomorrow", "this series", "chapter seven", "Part II
+  will take up", "the reader's phone", "the tools of 2026"). All were removed;
+  cross-references now use the idea's name only; the habit subhead is
+  `## The habit`. CLAUDE.md has a "written to be published, not posted" rule
+  and `lint-prose.mjs` flags the slips as hard errors.
+- Mental Models 002 had two paragraphs duplicated; the duplicates were removed.
