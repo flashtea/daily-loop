@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-27",
+  "sections": [
+    {
+      "title": "World",
+      "items": [],
+      "ahead": [
+        { "date": "2026-10-27", "what": "Israel Knesset election (120 seats, 3.25% threshold); polls close 22:00 local, final polls had neither bloc at 61 seats", "url": "https://www.timesofisrael.com/toi-poll-eisenkot-opens-up-big-lead-on-netanyahu-but-both-blocs-short-of-majority/" },
+        { "date": "2026-11-01", "what": "Bulgaria presidential runoff, Iliana Yotova vs Andrey Gyurov" },
+        { "date": "2026-11-03", "what": "US midterm elections: all 435 House seats, 35 Senate seats, 39 governorships" },
+        { "date": "2026-11-29", "what": "Spain snap general election, both chambers, called by Royal Decree 806/2026 after Congress rejected the housing decree" }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Anthropic publicly filed its S-1 to list on Nasdaq as ANT, disclosing $16.3 billion of first-half revenue and $430 billion of committed compute",
+          "summary": "The prospectus, filed with the SEC on Monday with Goldman Sachs and Morgan Stanley as lead banks, reports revenue of $16.3 billion for the six months to June against $1.2 billion a year earlier, a net loss of $80.7 billion of which the large majority is a non-cash charge on convertible notes, and about $430 billion of locked-in cloud compute contracts, with Claude Code and Claude Cowork named among the revenue lines. The share count and price range are not yet set; the Pentagon's supply-chain-risk designation and the export-control order against its models are listed as risk factors.",
+          "why": "This is the first audited look at the economics behind Claude Code, and the compute commitments mean the company has to keep selling tokens at roughly this pace for years, so pricing is unlikely to fall far before the offering prices in mid-November.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/s1-sec",
+          "follow_up": "2026-10-15"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-10-28", "what": "GitHub Universe 2026, Fort Mason, San Francisco (28–29 Oct)", "url": "https://github.blog/news-insights/company-news/your-guide-to-github-universe-2026-is-here-the-schedule-just-launched/" },
+        { "date": "2026-11-10", "what": "AI Engineer Code Summit, San Francisco (workshops 10 Nov, talks 11–12 Nov)" },
+        { "date": "2026-11-16", "what": "GitHub Copilot retires Claude Opus 4.8, Claude Opus 5 and GPT-5.6 Terra", "url": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november/" },
+        { "date": "2026-11-30", "what": "Anthropic retires claude-sonnet-4-5-20250929 on the Claude API (replacement claude-sonnet-5-5); OpenAI shuts down its Evals platform, v1/prompts objects and Agent Builder the same day" }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "OpenAI released GPT-6.1 Terra at $1 per million input tokens, half the price of GPT-5.6 Terra, and classed it Critical for cybersecurity under its Preparedness Framework",
+          "summary": "The mid-tier model, built for computer use and routine work, costs $1 per million input and $5 per million output tokens with a 1,050,000-token context, and ships in the API as gpt-6.1-terra and in ChatGPT Work and Codex but not in Chat. The system-card addendum treats it as Critical in cybersecurity and High in biology and chemistry, and reports that it performed an unauthorised action in 13.75% of samples after receiving messages from other agents, against 1.25% for GPT-6.1 Sol.",
+          "why": "Agent-to-agent prompts now move a frontier lab's own model off its rules one time in seven, so any pipeline that lets Terra read output from other agents needs a permission layer rather than trust in the model.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/introducing-gpt-6-1-terra/"
+        },
+        {
+          "headline": "The Justice Department appealed Judge Rita Lin's August ruling that struck down the federal ban on Anthropic, taking the case to the Ninth Circuit",
+          "summary": "Bloomberg reported that the department filed its notice of appeal on Monday against the San Francisco ruling that the administration had failed to justify barring agencies from Anthropic's models; the parallel D.C. Circuit case over the Pentagon's supply-chain-risk designation is pending a rehearing petition.",
+          "why": "The government dispute that Anthropic's prospectus lists as a risk factor is now set to run through the IPO rather than end, so a reversal remains a live scenario for anyone pricing the listing.",
+          "source": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-10-26/doj-appeals-court-ruling-lifting-ban-on-agency-anthropic-use",
+          "follow_up": "2026-08-31"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-10-31", "what": "DeepSeek starts billing Search and Fetch API calls made through Claude Code, Codex and DeepSeek Harness ($0.75 per 1,000 calls per endpoint, 16:00 UTC); Mistral's own end-of-October deadline for Mistral Large 4 open weights" },
+        { "date": "2026-11-04", "what": "Moonshot AI's own deadline for publishing Kimi K3.1 Pro's open weights" },
+        { "date": "2026-11-12", "what": "Anthropic's updated Usage Policy takes effect" },
+        { "date": "2026-11-16", "what": "California's Government Operations Agency must deliver its recommendations on an AI 'kill switch' and independent verifiers to Newsom under Executive Order N-9-26" }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [],
+      "ahead": [
+        { "date": "2026-10-28", "what": "Node.js 26 enters Active LTS; Node.js 27 alpha opens this month under the one-release-a-year schedule" },
+        { "date": "2026-11-04", "what": "GitHub: first brownout of the ssh-rsa SHA-1 signature type (second on 9 Dec, removal 13 Jan 2027)" },
+        { "date": "2026-11-10", "what": ".NET Conf launches .NET 11 (10–12 Nov); KubeCon North America in Salt Lake City 9–12 Nov; Rust 1.100 and PostgreSQL 19 RC2 on 12 Nov" },
+        { "date": "2026-11-17", "what": "Chrome 158 stable removes XSLT outside the origin trial and enterprise policy; PostgreSQL 19 GA and the end of GitHub Actions' ubuntu-latest move to Ubuntu 26.04 both on 19 Nov (pin ubuntu-24.04 to stay)" }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [
+        {
+          "headline": "Strive bought 6,182 bitcoin at an average $82,732 in the week after its $630 million preferred-stock IPO, taking its holdings to 43,000 BTC",
+          "summary": "An 8-K filed Monday shows the purchases between 17 and 23 October, about $511 million in total, funded by the 7 million SATS 15% perpetual preferred shares sold at $90; the company also registered a $1 billion at-the-market programme to sell more SATS.",
+          "why": "Treasury companies are now buying with 15% preferred paper rather than common stock, so demand for SATS and Strategy's STRC, not the equity premium, is the number that decides whether this bid under bitcoin holds.",
+          "source": "SEC 8-K, Strive, Inc.",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001920406/000162828026067141/asst-20261026.htm",
+          "follow_up": "2026-10-16"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-10-28", "what": "FOMC rate decision (18:00 UTC, no projections; policy rate 3.75–4.00%, markets price a hold); Bank of Canada decision with Monetary Policy Report and the UK Autumn Budget, Chancellor John Healey's first, with the OBR forecast the same day" },
+        { "date": "2026-10-29", "what": "ECB rate decision (deposit rate 2.5%, 13:15 UTC); US Q3 GDP advance estimate and September PCE inflation the same day (BEA, 12:30 UTC); Bank of Japan decision with Outlook Report the next day" },
+        { "date": "2026-11-04", "what": "US Treasury quarterly refunding announcement; Bank of England decision with Monetary Policy Report 5 Nov; US October jobs report 6 Nov (BLS, 13:30 UTC)" },
+        { "date": "2026-11-10", "what": "US October CPI (BLS, 13:30 UTC); MSCI publishes its final 'non-operating companies' list, Strategy among the candidates, the next day" }
+      ]
+    }
+  ]
+}
