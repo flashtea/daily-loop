@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-28",
+  "sections": [
+    {
+      "title": "World",
+      "items": [
+        {
+          "headline": "Israel's election produced no majority: with a third of ballot boxes counted, Netanyahu's bloc held 59 seats to the opposition's 46, with the Arab lists holding the balance",
+          "summary": "Likud was the largest party at 29 seats to Gadi Eisenkot's Yashar at 20 in the Central Elections Committee's partial count at 04:51 local time, with neither the pro-Netanyahu bloc nor the opposition bloc at the 61 seats needed; turnout of 77.7% was the highest since 1999. Netanyahu called for a right-wing government and described a one-time opportunity to address Iran alongside the US, Eisenkot said he would try to form a government and called on him to step down, soldiers' votes are counted later, the final tally is expected on Friday and the official results are published on 4 November.",
+          "why": "Who governs Israel decides whether the Iran war resumes and whether Hormuz reopens, so wait for Friday's full count and the president's mandate rather than election-night claims.",
+          "source": "The Times of Israel",
+          "url": "https://www.timesofisrael.com/liveblog-october-28-2026/"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-11-01", "what": "Bulgaria presidential runoff, Iliana Yotova vs Andrey Gyurov" },
+        { "date": "2026-11-03", "what": "US midterm elections: all 435 House seats, 35 Senate seats, 39 governorships" },
+        { "date": "2026-11-04", "what": "Israel's Central Elections Committee publishes the official Knesset results; President Herzog then has seven days to hand a candidate the mandate to form a government" },
+        { "date": "2026-11-29", "what": "Spain snap general election, both chambers, called by Royal Decree 806/2026 after Congress rejected the housing decree" }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [],
+      "ahead": [
+        { "date": "2026-10-28", "what": "GitHub Universe 2026, Fort Mason, San Francisco (28–29 Oct); opening keynote streamed", "url": "https://githubuniverse.com" },
+        { "date": "2026-11-10", "what": "AI Engineer Code Summit, San Francisco (workshops 10 Nov, talks 11–12 Nov)" },
+        { "date": "2026-11-16", "what": "GitHub Copilot retires Claude Opus 4.8, Claude Opus 5 and GPT-5.6 Terra" },
+        { "date": "2026-11-30", "what": "Anthropic retires claude-sonnet-4-5-20250929 on the Claude API (replacement claude-sonnet-5-5); OpenAI shuts down its Evals platform, v1/prompts objects and Agent Builder the same day" }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "lead": true,
+          "headline": "OpenAI said its models disproved the Exponential Time Hypothesis, published the Lean proof, and handed verification to Impagliazzo, Paturi and Williams",
+          "summary": "OpenAI announced three AI-produced results on Monday: a subexponential-time, polynomial-space algorithm for counting k-SAT solutions that refutes the Exponential Time Hypothesis (natural-language disproof on 16 October, Lean formalization the next day, now in its public math repository), a proof of the local smoothing conjecture that it says resolves the Kakeya and Stein restriction conjectures in all dimensions, and an existence proof for four-dimensional Yang–Mills and QCD that a group led by David Gross is writing up before release. Russell Impagliazzo and Ramamohan Paturi, who proposed the hypothesis in 1999, and Ryan Williams of MIT are checking the ETH result, Williams told TechCrunch that OpenAI said it had checked for cryptographic breaks and found none, and Anthropic published its own ETH refutation on GitHub hours later after its mathematician Levent Alpöge said OpenAI's work built on existing research.",
+          "why": "An assumption behind hundreds of complexity papers now rests on a machine-checked proof no human has fully read, so treat frontier models as producers of real mathematics and watch the reviewers' verdict for what it says about hardness assumptions in cryptography.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities/"
+        },
+        {
+          "headline": "Axiom Math published a complete Lean formalization of the classification of finite simple groups, 43.1 million lines written by AI agents in 24 days",
+          "summary": "The 15,000-page proof, spread over more than 500 articles by about 100 mathematicians, is now checked by Lean's kernel end to end; AxiomProver's agents, run on a changing mix of models under human direction, decomposed, searched, wrote and reviewed the proof, and found that a 1986 argument in the Unbalanced Group Theorem assumed an operation stayed inside a family of groups when it could leave it, which the team closed with a new argument. The repository and an errata list are public.",
+          "why": "Formal verification at the scale of an entire field is now a job for agent swarms, and the gaps they found in published mathematics are the case for running the same machinery over the proofs and protocols you depend on.",
+          "source": "Axiom Math",
+          "url": "https://axiommath.ai/research/the-enormous-theorem-formalized/"
+        },
+        {
+          "headline": "Google DeepMind released Genie 4, a world model that generates explorable environments with native audio, as a research preview with Gemini API early access",
+          "summary": "Genie 4 generates interactive scenes in real time with ambient sound, music and dialogue, is steered in natural language with Gemini models keeping the world coherent, and watermarks all output with SynthID. It is open to trusted testers now, is coming to Google AI Ultra subscribers in Project Genie and to early-access partners of the Gemini API and AI Studio, and DeepMind lists visual drift and loss of object permanence over long sessions as known limits.",
+          "why": "Generated interactive environments are reaching the API, so if you build games, simulations or training data for agents and robots, plan on generating test worlds rather than authoring them.",
+          "source": "Google DeepMind",
+          "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
+        },
+        {
+          "headline": "Cloudflare disclosed that an SGLang bug let 155 Workers AI responses from GLM-5.3 contain other users' KV cache data",
+          "summary": "Between the model's launch on 27 August and 9 September, prompts longer than the 681,280-token prefill cache pool were rejected but not retired, so decode nodes attended over stale cache pages from earlier requests and returned them with HTTP 200; a Knostic researcher reported it through HackerOne, Cloudflare found no evidence of deliberate exploitation, the fixes are upstream in SGLang v0.5.22, and the disclosure was published on Monday.",
+          "why": "If you serve models with SGLang in disaggregated prefill/decode mode, upgrade to v0.5.22 and check that the KV pool is at least as large as the context window.",
+          "source": "Cloudflare",
+          "url": "https://blog.cloudflare.com/kv-cache-exposure-remediation/"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-10-31", "what": "DeepSeek starts billing Search and Fetch API calls made through Claude Code, Codex and DeepSeek Harness ($0.75 per 1,000 calls per endpoint, 16:00 UTC); Mistral's own end-of-October deadline for Mistral Large 4 open weights" },
+        { "date": "2026-11-04", "what": "Moonshot AI's own deadline for publishing Kimi K3.1 Pro's open weights" },
+        { "date": "2026-11-12", "what": "Anthropic's updated Usage Policy takes effect" },
+        { "date": "2026-11-16", "what": "California's Government Operations Agency must deliver its recommendations on an AI 'kill switch' and independent verifiers to Newsom under Executive Order N-9-26" }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [],
+      "ahead": [
+        { "date": "2026-10-28", "what": "Node.js 26 enters Active LTS (Node 24 moved to Maintenance on 20 Oct); Node.js 27 alpha opens this month under the one-release-a-year schedule" },
+        { "date": "2026-11-04", "what": "GitHub: first brownout of the ssh-rsa SHA-1 signature type (second on 9 Dec, removal 13 Jan 2027)" },
+        { "date": "2026-11-10", "what": ".NET Conf launches .NET 11 (10–12 Nov); KubeCon North America in Salt Lake City 9–12 Nov; Rust 1.100 and PostgreSQL 19 RC2 on 12 Nov" },
+        { "date": "2026-11-17", "what": "Chrome 158 stable removes XSLT outside the origin trial and enterprise policy; PostgreSQL 19 GA and the end of GitHub Actions' ubuntu-latest move to Ubuntu 26.04 both on 19 Nov (pin ubuntu-24.04 to stay)" }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [
+        {
+          "headline": "Brazil's Ibovespa fell almost 14% and the real 8% the day after Lula's re-election, triggering the first circuit breaker since 2020",
+          "summary": "B3 halted trading for 30 minutes on Monday after the index fell 10% at the open; it touched a 17% loss intraday and closed down almost 14%, its worst day since March 2020, while the real fell as much as 12% against the dollar before closing 8% lower. The move reversed a rally that had put the index at a record after Flávio Bolsonaro's first-round lead, prediction markets had given him over 80% odds, and he has not conceded.",
+          "why": "A repricing this violent on an election the markets had already called is the argument for sizing any emerging-market position for a surprise rather than for the quoted odds.",
+          "source": "France 24 (AFP)",
+          "url": "https://www.france24.com/en/live-news/20261026-lula-win-rattles-brazil-markets-over-spending-spree-fears",
+          "follow_up": "2026-10-26"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-10-28", "what": "FOMC rate decision (18:00 UTC, no projections; policy rate 3.75–4.00%, markets price a hold and about 75% odds of a December hike); Bank of Canada decision with Monetary Policy Report (13:45 UTC, markets lean to a hike from 2.25%) and the UK Autumn Budget, Chancellor John Healey's first, with the OBR forecast the same day" },
+        { "date": "2026-10-29", "what": "ECB rate decision (deposit rate 2.5%, 13:15 UTC); US Q3 GDP advance estimate and September PCE inflation the same day (BEA, 12:30 UTC); Bank of Japan decision with Outlook Report the next day" },
+        { "date": "2026-11-04", "what": "US Treasury quarterly refunding announcement; Bank of England decision with Monetary Policy Report 5 Nov; US October jobs report 6 Nov (BLS, 13:30 UTC)" },
+        { "date": "2026-11-10", "what": "US October CPI (BLS, 13:30 UTC); MSCI publishes its final 'non-operating companies' list, Strategy among the candidates, the next day" }
+      ]
+    }
+  ]
+}
