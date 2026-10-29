@@ -210,7 +210,7 @@ study/                                the paused study tracks (see study/README.
 ```
 
 - The visual design lives entirely in the `STYLE` constant in `build.mjs`: the
-  flashtea.dev look (IBM Plex, graphite and tea amber, light and dark). Restyle
+  flashtea.dev look (IBM Plex, graphite and tea amber, light only). Restyle
   there and rebuild. The lead story fills the dark band at the top; each section
   has its label on the left, its stories in a grid that fills the row, and its
   "Ahead" list in a right-hand column.

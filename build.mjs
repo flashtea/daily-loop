@@ -537,7 +537,7 @@ function renderPage(edition, editions, isIndex) {
 }
 
 const STYLE = `/* Daily Loop in the flashtea.dev look (flashtea-infra/site/style.css): graphite on paper, tea amber as the
-   one colour, IBM Plex. The band at the top stays dark in both themes and carries the lead story; below it each
+   one colour, IBM Plex, light only. The band at the top stays dark in both themes and carries the lead story; below it each
    section has a mono label rail on the left and its stories in a ruled grid. */
 :root {
   --paper: #f6f6f3; --surface: #ffffff; --ink: #17181a; --ink-2: #44474a; --muted: #63686d; --rule: #dcdbd4;
@@ -549,14 +549,6 @@ const STYLE = `/* Daily Loop in the flashtea.dev look (flashtea-infra/site/style
   --serif: "IBM Plex Serif", Georgia, serif;
   --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   color-scheme: light;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #131311; --surface: #1a1a17; --ink: #ecebe6; --ink-2: #c2c1ba; --muted: #8f9089; --rule: #2c2c28;
-    --accent: #e9a445; --c-price: #e9a445; --c-avg: #8fa3b8;
-    --band-bg: #1f1f1b; --band-rule: #36362f;
-    color-scheme: dark;
-  }
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; background: var(--paper); }
