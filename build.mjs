@@ -14,6 +14,8 @@ const OUT_DIR = join(ROOT, "docs");
 
 const SITE_TITLE = "Daily Loop";
 const SITE_TAGLINE = "World · AI · Software · Money";
+const JS_SWITCH = `document.addEventListener("click", (e) => document.querySelectorAll("details.switch[open]").forEach((d) => d.contains(e.target) || (d.open = false)));
+document.addEventListener("keydown", (e) => e.key === "Escape" && document.querySelectorAll("details.switch[open]").forEach((d) => (d.open = false)));`;
 const CUSTOM_DOMAIN = "paper.flashtea.dev"; // DNS: CNAME paper → flashtea.github.io, not proxied
 
 // ---------- helpers ----------
@@ -89,7 +91,7 @@ function masthead({ base, activeNav, band }) {
     .join("");
   return `<header class="top">
     <div class="wrap">
-      <a class="brand" href="${base}index.html">${SITE_TITLE}<span>${escapeHtml(SITE_TAGLINE)}</span></a>
+      <div class="brand"><a href="https://flashtea.dev/">flashtea</a><span class="sep">/</span><details class="switch"><summary>paper</summary><nav class="menu" aria-label="flashtea pages"><a href="https://today.flashtea.dev/">today<small>morning page</small></a><a href="https://monitor.flashtea.dev/">ops<small>apps and server</small></a><a href="https://paper.flashtea.dev/" aria-current="page">paper<small>Daily Loop</small></a><a class="pub" href="https://flashtea.dev/">flashtea.dev<small>public site</small></a></nav></details></div>
       <nav aria-label="Main">${nav}</nav>
     </div>
   </header>
@@ -144,6 +146,9 @@ ${main}
   </main>
 
   ${foot}
+  <script>
+${JS_SWITCH}
+  </script>
 </body>
 </html>
 `;
@@ -561,12 +566,27 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 /* header */
 .top { border-bottom: 1px solid var(--rule); }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
-.brand { display: flex; align-items: baseline; gap: 12px; font-weight: 600; font-size: 17px; letter-spacing: -.01em; text-decoration: none; white-space: nowrap; }
-.brand span { font: 400 12.5px var(--mono); color: var(--muted); letter-spacing: 0; }
-.top nav { display: flex; gap: 22px; font-size: 14.5px; }
-.top nav a { text-decoration: none; color: var(--ink-2); padding-block: 4px; border-bottom: 1px solid transparent; }
-.top nav a:hover { color: var(--ink); border-color: var(--rule); }
-.top nav a[aria-current="page"] { color: var(--ink); border-color: var(--accent); }
+/* page switcher, the same on today, ops and paper: "flashtea / <page>", the page name opens the list */
+.brand { display: flex; align-items: center; gap: 7px; font-weight: 600; white-space: nowrap; }
+.brand > a { text-decoration: none; }
+.brand .sep { color: var(--muted); font-weight: 400; }
+.switch { position: relative; }
+.switch summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 7px; color: var(--muted); font-weight: 400; }
+.switch summary::-webkit-details-marker { display: none; }
+.switch summary::after { content: ""; width: 5px; height: 5px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); }
+.switch[open] summary::after { transform: translateY(1px) rotate(-135deg); }
+.switch summary:hover, .switch[open] summary { color: var(--ink); }
+.menu { position: absolute; left: -12px; top: calc(100% + 10px); z-index: 30; min-width: 230px; padding: 4px 0; background: var(--panel, var(--surface, #fff)); border: 1px solid var(--rule); border-radius: 3px; box-shadow: 0 8px 24px rgba(23, 24, 26, .08); font-size: 14px; font-weight: 400; letter-spacing: 0; }
+.menu a { display: flex; justify-content: space-between; align-items: baseline; gap: 18px; padding: 7px 12px; color: var(--ink); text-decoration: none; }
+.menu a:hover { background: var(--paper); }
+.menu a[aria-current="page"] { font-weight: 600; box-shadow: inset 2px 0 var(--accent); }
+.menu a.pub { border-top: 1px solid var(--rule); margin-top: 4px; padding-top: 9px; }
+.menu small { font: 12px var(--mono); color: var(--muted); }
+.brand { font-size: 17px; letter-spacing: -.01em; }
+.top .wrap > nav { display: flex; gap: 22px; font-size: 14.5px; }
+.top .wrap > nav a { text-decoration: none; color: var(--ink-2); padding-block: 4px; border-bottom: 1px solid transparent; }
+.top .wrap > nav a:hover { color: var(--ink); border-color: var(--rule); }
+.top .wrap > nav a[aria-current="page"] { color: var(--ink); border-color: var(--accent); }
 
 /* band: the lead story */
 .band { background: var(--band-bg); color: var(--band-ink); }
@@ -663,7 +683,6 @@ footer { border-top: 1px solid var(--rule); margin-top: 8px; }
   .chart-wrap.wide { display: none; } .chart-wrap.narrow { display: block; }
 }
 @media (max-width: 520px) {
-  .brand span { display: none; }
   .band .wrap { padding-block: 26px 30px; }
   .stories { grid-template-columns: minmax(0, 1fr); }
   .cat-row { grid-template-columns: 56px minmax(0, 1fr); }
