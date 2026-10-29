@@ -1,0 +1,123 @@
+{
+  "date": "2026-10-29",
+  "sections": [
+    {
+      "title": "World",
+      "items": [
+        {
+          "headline": "With 93% of polling stations counted, Israel's Central Elections Committee put Netanyahu's bloc at 53 seats, Eisenkot's bloc at 48 and the Arab parties at 19",
+          "summary": "Likud held 26 seats and Yashar! 21 in the near-final tally, leaving the Netanyahu bloc eight short of the 61 needed; more than 500,000 double-envelope ballots from soldiers and voters outside their assigned stations were still to be counted. The committee has not certified the result and publishes official figures on 4 November, after which the president has seven days to hand a candidate the mandate.",
+          "why": "Neither bloc can govern without the Arab lists or defectors, so plan on a caretaker government in Israel, and on the Iran question staying open, for weeks rather than days.",
+          "source": "Ynet",
+          "url": "https://www.ynetnews.com/article/hjnatbkaml",
+          "follow_up": "2026-10-28"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-11-01", "what": "Bulgaria presidential runoff, Iliana Yotova vs Andrey Gyurov" },
+        { "date": "2026-11-03", "what": "US midterm elections: all 435 House seats, 35 Senate seats, 39 governorships" },
+        { "date": "2026-11-04", "what": "Israel's Central Elections Committee publishes the official Knesset results; President Herzog then has seven days to hand a candidate the mandate to form a government" },
+        { "date": "2026-11-29", "what": "Spain snap general election, both chambers, called by Royal Decree 806/2026 after Congress rejected the housing decree" }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "lead": true,
+          "headline": "GitHub made Copilot Fusion generally available and let Enterprise customers use every Copilot feature without a subscription, paying only for the AI credits they consume",
+          "summary": "Fusion replaces picking a model with picking an effort level (Standard, High or Max) and routes each prompt across models, billed at each model's standard rate with a 30% discount on paid plans for a limited time; GitHub said Fusion Max scored 60 on the Artificial Analysis Coding Agent Index, within two points of Claude Code with Opus 5.5 Max, at about half the API cost and 40% less time per task. The credit-only Enterprise arrangement is available through GitHub Sales now with self-serve to follow, existing Business and Enterprise plans continue, and Universe also shipped Copilot Projects for parallel multi-repo agent sessions and a code review Max tier.",
+          "why": "If your team pays for Copilot, benchmark Fusion against your pinned model while the 30% discount runs, and reprice seats against a credit budget before the next renewal.",
+          "source": "GitHub",
+          "url": "https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack/"
+        },
+        {
+          "headline": "GitHub's Octoverse report said agents started over 40% of pull requests in September, up from 17% in March, about 110 million in the month",
+          "summary": "The report counted more than 225 million developers, 34.3 billion commits and 1.3 billion merged pull requests in the trailing twelve months, with TypeScript ahead of Python as the language with the most contributors. 55% of monthly Copilot users now use agentic features, up from 35% a year earlier, and paying users drew on 47 distinct models in September with none above 25% of requests.",
+          "why": "Agent-drafted pull requests are now the main path into GitHub repositories, so size code review, CI minutes and merge policy for that volume rather than for hand-typed diffs.",
+          "source": "GitHub",
+          "url": "https://github.blog/news-insights/octoverse/octoverse-commits-pushes-reach-new-highs-in-2026-as-developers-build-with-agents/"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-11-10", "what": "AI Engineer Code Summit, San Francisco (workshops 10 Nov, talks 11–12 Nov)" },
+        { "date": "2026-11-16", "what": "GitHub Copilot retires Claude Opus 4.8, Claude Opus 5 and GPT-5.6 Terra" },
+        { "date": "2026-11-30", "what": "Anthropic retires claude-sonnet-4-5-20250929 on the Claude API (replacement claude-sonnet-5-5); OpenAI shuts down its Evals platform, v1/prompts objects and Agent Builder the same day" }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Google DeepMind announced Gemini 4 Carbon, first on the Artificial Analysis Intelligence Index at 59, and restricted it to cyber defenders through its Fairwind Program",
+          "summary": "Google quoted 88.2% on SEC-bench Pro for finding vulnerabilities and 54.8% on ExploitGym for exploiting them, said it is taking part in the US government's voluntary pre-release testing, and gave no date for developer or consumer access. Introductory pricing matches Gemini 4 Argon at $2 per million input tokens and $10 per million output tokens, rising to $4 and $20 after the introductory period.",
+          "why": "Do not plan a Carbon migration yet, and note that Google has now priced its next tier at double Argon once the introductory period ends.",
+          "source": "Google",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-10-31", "what": "DeepSeek starts billing Search and Fetch API calls made through Claude Code, Codex and DeepSeek Harness ($0.75 per 1,000 calls per endpoint, 16:00 UTC); Mistral's own end-of-October deadline for Mistral Large 4 open weights" },
+        { "date": "2026-11-04", "what": "Moonshot AI's own deadline for publishing Kimi K3.1 Pro's open weights" },
+        { "date": "2026-11-12", "what": "Anthropic's updated Usage Policy takes effect" },
+        { "date": "2026-11-16", "what": "California's Government Operations Agency must deliver its recommendations on an AI 'kill switch' and independent verifiers to Newsom under Executive Order N-9-26" }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [
+        {
+          "headline": "Node.js 26 entered Long Term Support as 26.13.0 'Lithium', with updates through April 2029",
+          "summary": "The release changes only release metadata to mark LTS status; Node.js 24 moved to Maintenance on 20 October. Official Linux binaries have linked against libatomic since Node 25, so some distributions need it installed when moving a 22 or 24 deployment to 26.",
+          "why": "Move production services and CI base images from Node 24 to 26 now, and check libatomic on minimal Linux images before you do.",
+          "source": "Node.js",
+          "url": "https://nodejs.org/en/blog/release/v26.13.0"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-11-04", "what": "GitHub: first brownout of the ssh-rsa SHA-1 signature type (second on 9 Dec, removal 13 Jan 2027)" },
+        { "date": "2026-11-10", "what": ".NET Conf launches .NET 11 (10–12 Nov); KubeCon North America in Salt Lake City 9–12 Nov; Rust 1.100 and PostgreSQL 19 RC2 on 12 Nov" },
+        { "date": "2026-11-17", "what": "Chrome 158 stable removes XSLT outside the origin trial and enterprise policy; PostgreSQL 19 GA and the end of GitHub Actions' ubuntu-latest move to Ubuntu 26.04 both on 19 Nov (pin ubuntu-24.04 to stay)" }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [
+        {
+          "headline": "The Fed held at 3.75–4.00% on a 10–2 vote, with Lisa Cook and Beth Hammack dissenting in favour of a quarter-point hike",
+          "summary": "The statement said economic activity is expanding at a strong pace, inflation remains elevated and the Committee will gather more information before deciding the stance needed for a timely return to 2%, adding that it 'will deliver price stability'. It was the first meeting since September's hike, the Fed's first increase since July 2023.",
+          "why": "Two dissents for a hike and no easing language make a December increase the base case, so price floating-rate debt and cash yields on 4%-plus policy into 2027.",
+          "source": "Federal Reserve",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+        },
+        {
+          "headline": "The Bank of Canada raised its policy rate 25 basis points to 2.5%, its first increase since July 2023, and said a further rise could be needed",
+          "summary": "The Bank cited oil prices that remain persistently high in the eighth month of the Middle East conflict, CPI inflation around 3% since April and expected to reach about 3.5% by year-end, and growth tracking about 2% in the third quarter. The next decision is on 9 December.",
+          "why": "Canada has joined the Fed and the ECB in tightening against energy-driven inflation, so treat the 2026 rate cycle across the G7 as upward until oil breaks.",
+          "source": "Bank of Canada",
+          "url": "https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/"
+        },
+        {
+          "headline": "John Healey's first Budget raised tax on UK savings and property income by a further two points from April 2027 and doubled the bank surcharge to 6% for 15 months",
+          "summary": "Savings and property income will be taxed at 24%, 44% and 49% from April 2027, on top of last year's two-point rise, while the £20,000 cash ISA limit stays and employment and dividend income are untouched; the bank surcharge rise raises £1.5 billion and ends 31 March 2028. The Treasury put headroom against the stability rule at £15 billion in 2029-30, £9 billion less than in March, funded a £100 household energy payment in 2027 and extended the electricity VAT cut to July 2027.",
+          "why": "UK bank earnings carry a 6% surcharge for the next 15 months and unwrapped UK savings income loses another two points, so ISA-wrapped holdings and non-bank exposure are the better UK positions from April.",
+          "source": "HM Treasury",
+          "url": "https://www.gov.uk/government/news/budget-2026-breathing-space-for-today-hope-for-the-future"
+        },
+        {
+          "headline": "Keystone said attackers stole the key its hardware wallets use to prove they are genuine, paused shipments and will destroy 18,835 unsold devices",
+          "summary": "The 20 October breach of its website through a third-party monitoring tool also exposed 25,964 buyer records, some kept past the company's 180-day deletion promise. Keystone said the key cannot be changed in shipped devices, that recovery phrases and private keys were not involved, that devices delivered before 20 October which pass its check are genuine, and that any call, text or letter offering a recall, refund or help moving funds is a scam.",
+          "why": "If you hold a Keystone, treat any device received after 20 October as unverified until support confirms it, and expect targeted phishing against the leaked address list.",
+          "source": "Keystone",
+          "url": "https://x.com/KeystoneWallet/status/2114719318722404578"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-10-29", "what": "ECB rate decision (deposit rate 2.5%, 13:15 UTC, a hold expected); US Q3 GDP advance estimate and September PCE inflation the same day (BEA, 12:30 UTC)" },
+        { "date": "2026-10-30", "what": "Bank of Japan decision with Outlook Report (policy rate 1.25%; economists expect a hold and a hike in December or January)" },
+        { "date": "2026-11-04", "what": "US Treasury quarterly refunding announcement; Bank of England decision with Monetary Policy Report 5 Nov; US October jobs report 6 Nov (BLS, 13:30 UTC)" },
+        { "date": "2026-11-10", "what": "US October CPI (BLS, 13:30 UTC); MSCI publishes its final 'non-operating companies' list, Strategy among the candidates, the next day" }
+      ]
+    }
+  ]
+}
