@@ -34,15 +34,13 @@ const hostOf = (url) => {
 };
 
 const longDate = (iso) =>
-  new Date(`${iso}T12:00:00Z`)
-    .toLocaleDateString("en-US", {
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-      timeZone: "UTC",
-    })
-    .toUpperCase();
+  new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-GB", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  });
 
 const shortDate = (iso) =>
   new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-GB", {
@@ -81,30 +79,22 @@ function loadEditions() {
 
 // ---------- shared page chrome ----------
 
-function masthead({ base, dateline, activeNav }) {
+function masthead({ base, activeNav, band }) {
   const nav = [
     { href: `${base}index.html`, label: "Today", key: "today" },
     { href: `${base}archive.html`, label: "Archive", key: "archive" },
   ]
-    .map(
-      (n) =>
-        `<a class="${n.key === activeNav ? "nav-a current" : "nav-a"}" href="${n.href}">${
-          n.short
-            ? `<span class="full">${escapeHtml(n.label)}</span><span class="short">${escapeHtml(n.short)}</span>`
-            : escapeHtml(n.label)
-        }</a>`,
-    )
+    .map((n) => `<a href="${n.href}"${n.key === activeNav ? ' aria-current="page"' : ""}>${escapeHtml(n.label)}</a>`)
     .join("");
-  return `<header class="masthead">
+  return `<header class="top">
     <div class="wrap">
-      <div class="hairline"></div>
-      <a class="nameplate" href="${base}index.html">${SITE_TITLE}</a>
-      <p class="tagline">${escapeHtml(SITE_TAGLINE)}</p>
-      <nav class="nav">${nav}</nav>
-      <div class="dateline">${dateline}</div>
-      <div class="rule"></div>
+      <a class="brand" href="${base}index.html">${SITE_TITLE}<span>${escapeHtml(SITE_TAGLINE)}</span></a>
+      <nav aria-label="Main">${nav}</nav>
     </div>
-  </header>`;
+  </header>
+  <section class="band">
+    <div class="wrap">${band}</div>
+  </section>`;
 }
 
 const RECENT_IN_FOOTER = 10;
@@ -114,7 +104,6 @@ function footer({ base, editions, currentDate }) {
   const more = editions.length - recent.length;
   return `<footer>
     <div class="wrap">
-      <div class="rule"></div>
       <div class="arch-row">
         <p class="arch-label">Recent editions</p>
         <nav class="archive">${archiveStrip(recent, currentDate, base)}${
@@ -123,10 +112,10 @@ function footer({ base, editions, currentDate }) {
             : ""
         }</nav>
       </div>
-      <p class="colophon">Curated by Claude · rendered by <code>build.mjs</code> · built ${new Date()
+      <p class="colophon"><span>Curated by Claude · built ${new Date()
         .toISOString()
         .slice(0, 16)
-        .replace("T", " ")} UTC</p>
+        .replace("T", " ")} UTC</span><a href="https://flashtea.dev">flashtea.dev</a></p>
     </div>
   </footer>`;
 }
@@ -139,7 +128,11 @@ function shell({ title, description, base, bodyClass, head, main, foot }) {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(description || SITE_TAGLINE)}" />
+  <meta name="theme-color" content="#17181a" />
   <link rel="icon" href="${base}favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" />
   <link rel="stylesheet" href="${base}style.css?v=${STYLE_HASH}" />
 </head>
 <body class="${bodyClass || ""}">
@@ -167,7 +160,7 @@ function sourceTag(item) {
 
 function whyBlock(item) {
   return item.why
-    ? `<p class="why"><span>Why it matters —</span> ${escapeHtml(item.why)}</p>`
+    ? `<p class="why"><span>why it matters</span>${escapeHtml(item.why)}</p>`
     : "";
 }
 
@@ -206,14 +199,14 @@ function aheadLine(section) {
     .slice()
     .sort((a, b) => String(a.date || "").localeCompare(String(b.date || "")))
     .map((a) => {
-      const when = a.date ? `<b>${escapeHtml(/^\d{4}-\d{2}-\d{2}$/.test(a.date) ? shortDate(a.date) : a.date)}</b> ` : "";
+      const when = a.date ? escapeHtml(/^\d{4}-\d{2}-\d{2}$/.test(a.date) ? shortDate(a.date) : a.date) : "";
       const what = a.url
         ? `<a href="${escapeHtml(a.url)}" target="_blank" rel="noopener">${escapeHtml(a.what)}</a>`
         : escapeHtml(a.what);
-      return `<span class="ahead-item">${when}${what}</span>`;
+      return `<li><span class="when">${when}</span><span>${what}</span></li>`;
     })
     .join("");
-  return `<p class="ahead"><span class="ahead-label">Ahead</span>${parts}</p>`;
+  return `<div class="ahead"><h3>Ahead</h3><ul>${parts}</ul></div>`;
 }
 
 // ---------- Bitcoin chart: weekly close vs 200-week moving average ----------
@@ -224,8 +217,8 @@ function aheadLine(section) {
 
 const CHART_YEARS = 8;
 const WMA_WEEKS = 200;
-const CHART_PRICE = "#c0151d"; // masthead red
-const CHART_WMA = "#2b6cb0"; // validated against the red for CVD separation
+const CHART_PRICE = "var(--c-price)"; // tea amber, as on flashtea.dev
+const CHART_WMA = "var(--c-avg)"; // slate; differs from the amber in lightness too
 
 function loadBtcWeekly() {
   try {
@@ -330,7 +323,7 @@ function bitcoinChartSvg(data, W, H) {
     yW = priceAbove ? mid + 7 : mid - 7;
   }
   const endLabel = (cx, cy, ly, color, text) =>
-    `<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="4" fill="${color}" stroke="#fff" stroke-width="2"/>
+    `<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="4" fill="${color}" stroke="var(--paper)" stroke-width="2"/>
      <text x="${(padL + plotW + 8).toFixed(1)}" y="${(ly + 4).toFixed(1)}" class="endlab">${text}</text>`;
   const series = idx.map((i) => [weeks[i][0], weeks[i][1], Math.round(wma[i])]);
 
@@ -343,8 +336,8 @@ function bitcoinChartSvg(data, W, H) {
             ${endLabel(x(asOf), y(lastWma), yW, CHART_WMA, fmtUsd(lastWma))}
             <g class="hover" style="display:none">
               <line class="xhair" y1="${padT}" y2="${padT + plotH}"/>
-              <circle r="4" fill="${CHART_PRICE}" stroke="#fff" stroke-width="2"/>
-              <circle r="4" fill="${CHART_WMA}" stroke="#fff" stroke-width="2"/>
+              <circle r="4" fill="${CHART_PRICE}" stroke="var(--paper)" stroke-width="2"/>
+              <circle r="4" fill="${CHART_WMA}" stroke="var(--paper)" stroke-width="2"/>
             </g>
           </svg>`;
   return { svg, asOf, lastPrice, lastWma };
@@ -404,27 +397,19 @@ function renderSection(section, lead, editions) {
   const hasLead = all.includes(lead);
   // The lead story runs full-width at the top of its own section; the rest
   // flow in columns beneath it.
-  const featured = hasLead ? renderStory(lead, editions, true) : "";
   const visible = all.filter((it) => it !== lead);
   const items = visible.map((it) => renderStory(it, editions)).join("\n");
   const chart = /^(bitcoin|money)$/i.test(section.title.trim()) ? BTC_CHART : "";
   const ahead = aheadLine(section);
-  if (!featured && !items.trim() && !chart && !ahead) return "";
-  // Match the column count to the number of stories so short sections fill the
-  // row instead of leaving empty column tracks (capped at 4 for readability).
-  const cols = Math.min(Math.max(visible.length, 1), 4);
-  const cls = cols === 1 ? "columns single" : "columns";
-  const columns = items.trim()
-    ? `<div class="${cls}" style="column-count:${cols}">
-${items}
-      </div>`
-    : "";
-  return `<section class="beat${hasLead ? " has-lead" : ""}">
-      <h2 class="beat-label">${escapeHtml(section.title)}</h2>
-      ${featured}
-      ${columns}
-      ${chart}
-      ${ahead}
+  if (!items.trim() && !chart && !ahead) return "";
+  const n = visible.length + (hasLead ? 1 : 0);
+  return `<section class="beat">
+      <h2 class="label">${escapeHtml(section.title)}<span>${n} ${n === 1 ? "story" : "stories"}${hasLead ? ", lead above" : ""}</span></h2>
+      <div class="beat-body${ahead ? "" : " solo"}">
+        ${items.trim() ? `<div class="stories">\n${items}\n        </div>` : "<div></div>"}
+        ${ahead}
+        ${chart}
+      </div>
     </section>`;
 }
 
@@ -462,8 +447,8 @@ function renderArchive(editions) {
     });
   const groups = [...months.entries()]
     .map(
-      ([ym, es]) => `<section class="cat-group">
-        <h2 class="cat-part">${escapeHtml(monthLabel(ym))}</h2>
+      ([ym, es]) => `<section class="beat">
+        <h2 class="label">${escapeHtml(monthLabel(ym))}<span>${es.length} editions</span></h2>
         <ol class="cat-list">
 ${es
   .map((e) => {
@@ -485,12 +470,7 @@ ${es
     )
     .join("\n");
 
-  const main = `<section class="cat-head">
-      <p class="kicker">Every edition since the first</p>
-      <h1 class="cat-title-big">Archive</h1>
-      <p class="cat-blurb">${editions.length} editions, newest first, each listed by its lead story.</p>
-    </section>
-${groups}`;
+  const main = groups;
 
   return shell({
     title: `Archive · ${SITE_TITLE}`,
@@ -500,7 +480,7 @@ ${groups}`;
     head: masthead({
       base: "",
       activeNav: "archive",
-      dateline: `<span>Archive</span><span>${editions.length} editions</span>`,
+      band: `<p class="meta">Every edition since the first</p><h1 class="solo">Archive</h1><p class="dek">${editions.length} editions, newest first, each listed by its lead story.</p>`,
     }),
     main,
     foot: footer({ base: "", editions, currentDate: null }),
@@ -508,6 +488,25 @@ ${groups}`;
 }
 
 // ---------- edition page ----------
+
+function leadBand(edition, lead, editions, itemCount) {
+  const no = editions.length - editions.findIndex((e) => e.date === edition.date);
+  const section = (edition.sections || []).find((s) => (s.items || []).includes(lead));
+  const meta = `<p class="meta">No. ${no} · ${escapeHtml(longDate(edition.date))} · ${itemCount} stories</p>`;
+  if (!lead) return meta;
+  return `${meta}
+      <div class="lead">
+        <div>
+          ${section ? `<p class="kicker">${escapeHtml(section.title)}</p>` : ""}
+          <h1>${headlineLink(lead, "hed-a")}</h1>
+        </div>
+        <div>
+          <p class="dek">${escapeHtml(lead.summary || "")}</p>
+          ${whyBlock(lead)}
+          <p class="byline">${sourceTag(lead)}${followUpTag(lead, editions)}</p>
+        </div>
+      </div>`;
+}
 
 function renderPage(edition, editions, isIndex) {
   // Pick the lead: first item flagged { "lead": true }, else first item overall.
@@ -530,208 +529,152 @@ function renderPage(edition, editions, isIndex) {
     head: masthead({
       base: "",
       activeNav: isIndex ? "today" : "",
-      dateline: `<span>${escapeHtml(longDate(edition.date))}</span><span>No. ${editions.length} · ${itemCount} stories</span>`,
+      band: leadBand(edition, lead, editions, itemCount),
     }),
     main: sections,
     foot: footer({ base: "", editions, currentDate: edition.date }),
   });
 }
 
-const STYLE = `:root {
-  --bg: #faf9f6;
-  --ink: #16181d;
-  --muted: #5c5f66;
-  --faint: #8a8d94;
-  --line: #d9d8d1;
-  --line-strong: #16181d;
-  --accent: #c0151d;
-  --study: #1f4e79;
+const STYLE = `/* Daily Loop in the flashtea.dev look (flashtea-infra/site/style.css): graphite on paper, tea amber as the
+   one colour, IBM Plex. The band at the top stays dark in both themes and carries the lead story; below it each
+   section has a mono label rail on the left and its stories in a ruled grid. */
+:root {
+  --paper: #f6f6f3; --surface: #ffffff; --ink: #17181a; --ink-2: #44474a; --muted: #63686d; --rule: #dcdbd4;
+  --accent: #9a560b; --c-price: #c47a12; --c-avg: #5f6b78;
+  --band-bg: #17181a; --band-ink: #f0efe9; --band-muted: #a3a49d; --band-rule: #2f302c; --band-accent: #e9a445;
   --maxw: 1180px;
-  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
-  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --display: "IBM Plex Sans Condensed", "Arial Narrow", sans-serif;
+  --body: "IBM Plex Sans", -apple-system, "Segoe UI", system-ui, sans-serif;
+  --serif: "IBM Plex Serif", Georgia, serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #131311; --surface: #1a1a17; --ink: #ecebe6; --ink-2: #c2c1ba; --muted: #8f9089; --rule: #2c2c28;
+    --accent: #e9a445; --c-price: #e9a445; --c-avg: #8fa3b8;
+    --band-bg: #1f1f1b; --band-rule: #36362f;
+    color-scheme: dark;
+  }
 }
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--ink);
-  font-family: var(--sans);
-  line-height: 1.55;
-  -webkit-font-smoothing: antialiased;
-}
+html { -webkit-text-size-adjust: 100%; background: var(--paper); }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 var(--body); -webkit-font-smoothing: antialiased; }
 a { color: inherit; }
-.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
-.rule { height: 3px; background: var(--line-strong); margin: 14px 0 0; }
-.hairline { height: 1px; background: var(--line); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+.wrap { max-width: var(--maxw); margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
 
-/* Masthead */
-.masthead { padding-top: 18px; }
-.nameplate {
-  display: block; text-align: center; text-decoration: none;
-  font-family: var(--serif); font-weight: 700;
-  font-size: clamp(40px, 9vw, 84px); line-height: 1; letter-spacing: -0.02em;
-  margin: 14px 0 18px;
-}
-.tagline {
-  text-align: center; margin: 0; color: var(--muted);
-  font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase;
-}
-.nav {
-  display: flex; justify-content: center; flex-wrap: wrap; gap: 4px 26px;
-  margin-top: 14px;
-}
-.nav-a {
-  text-decoration: none; color: var(--muted);
-  font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
-  padding: 4px 0; border-bottom: 2px solid transparent;
-}
-.nav-a:hover { color: var(--ink); }
-.nav-a.current { color: var(--ink); border-bottom-color: var(--accent); }
-.nav-a .short { display: none; }
-.dateline {
-  display: flex; justify-content: space-between; gap: 12px;
-  margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line);
-  font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
-}
+/* header */
+.top { border-bottom: 1px solid var(--rule); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
+.brand { display: flex; align-items: baseline; gap: 12px; font-weight: 600; font-size: 17px; letter-spacing: -.01em; text-decoration: none; white-space: nowrap; }
+.brand span { font: 400 12.5px var(--mono); color: var(--muted); letter-spacing: 0; }
+.top nav { display: flex; gap: 22px; font-size: 14.5px; }
+.top nav a { text-decoration: none; color: var(--ink-2); padding-block: 4px; border-bottom: 1px solid transparent; }
+.top nav a:hover { color: var(--ink); border-color: var(--rule); }
+.top nav a[aria-current="page"] { color: var(--ink); border-color: var(--accent); }
 
-/* Featured (lead) story: full width at the top of its section */
-.story.featured { padding: 0 0 22px; margin: 0 0 22px; border-top: 0; border-bottom: 1px solid var(--line); }
-.story.featured .hed { font-size: clamp(24px, 3.2vw, 34px); line-height: 1.1; letter-spacing: -0.01em; margin-bottom: 12px; }
-.story.featured .dek { font-family: var(--serif); font-size: clamp(15px, 1.4vw, 17px); line-height: 1.5; }
-.kicker {
-  margin: 0 0 12px; color: var(--accent);
-  font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
-}
+/* band: the lead story */
+.band { background: var(--band-bg); color: var(--band-ink); }
+.band .wrap { padding-block: 34px 40px; }
+.band .meta { margin: 0 0 22px; font: 12.5px var(--mono); color: var(--band-muted); }
+.lead { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 48px; align-items: start; }
+.band .kicker { margin: 0 0 10px; font: 12.5px var(--mono); color: var(--band-accent); }
+.band h1 { font-family: var(--display); font-weight: 600; font-size: clamp(26px, 3.2vw, 38px); line-height: 1.12; letter-spacing: -.01em; margin: 0; text-wrap: balance; }
+.band h1.solo { font-size: clamp(32px, 4.4vw, 50px); }
+.band h1 a { text-decoration: none; }
+.band h1 a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.band .dek { font-family: var(--serif); font-size: 16.5px; line-height: 1.6; color: var(--band-ink); margin: 2px 0 0; }
+.band .meta + .solo + .dek { color: var(--band-muted); font-family: var(--body); margin-top: 12px; }
+.band .why { color: var(--band-muted); }
+.band .why span { color: var(--band-accent); }
+.band .byline .src { color: var(--band-accent); }
+.band .byline .followup { color: var(--band-muted); }
 
-/* Sections */
-.beat { padding: 28px 0; border-bottom: 1px solid var(--line); }
-.beat-label {
-  font-family: var(--sans); font-weight: 700; font-size: 13px;
-  letter-spacing: 0.18em; text-transform: uppercase; text-align: center;
-  margin: 0 0 20px; padding-bottom: 12px; border-bottom: 2px solid var(--line-strong);
-}
-.columns { column-count: 4; column-gap: 34px; column-rule: 1px solid var(--line); }
-.columns.single { column-count: 1; }
+/* sections */
+.beat { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 32px; padding-block: 30px; border-top: 1px solid var(--rule); }
+main > .beat:first-child { border-top: 0; }
+.label { margin: 0; padding-top: 18px; font: 400 13px/1.6 var(--mono); color: var(--ink); }
+.label span { display: block; color: var(--muted); margin-top: 2px; }
+.beat-body { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 0 40px; align-items: start; }
+.beat-body.solo { grid-template-columns: minmax(0, 1fr); }
+.beat-body .chart { grid-column: 1 / -1; }
+.stories { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0 36px; }
+.story { padding: 18px 0 22px; border-top: 1px solid var(--rule); }
+.hed { font-family: var(--display); font-weight: 600; font-size: 20px; line-height: 1.22; letter-spacing: -.005em; margin: 0 0 8px; text-wrap: pretty; }
+.hed-a { text-decoration: none; }
+a.hed-a:hover { color: var(--accent); }
+.dek { font-family: var(--serif); font-size: 15.5px; line-height: 1.6; color: var(--ink-2); margin: 0 0 10px; }
+.why { font-size: 14px; line-height: 1.5; color: var(--muted); margin: 14px 0 10px; }
+.why span { display: block; font: 12px var(--mono); color: var(--accent); margin-bottom: 2px; }
+.byline { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 0; font: 12px var(--mono); }
+.src { color: var(--accent); text-decoration: none; }
+a.src:hover { text-decoration: underline; }
+.followup { color: var(--muted); text-decoration: none; }
+a.followup:hover { color: var(--ink); }
 
-.story {
-  break-inside: avoid; -webkit-column-break-inside: avoid;
-  padding-top: 18px; margin-bottom: 30px; border-top: 1px solid var(--line);
-}
-.story:first-child { padding-top: 0; border-top: 0; }
-.story:last-child { margin-bottom: 0; }
-.hed { font-family: var(--serif); font-weight: 700; font-size: 19px; line-height: 1.18; margin: 0 0 10px; }
-.hed .hed-a { text-decoration: none; }
-.hed .hed-a:hover { color: var(--accent); }
-.dek {
-  margin: 0 0 12px; font-size: 14.5px; color: #2c2f35;
-  text-align: justify; hyphens: auto; -webkit-hyphens: auto;
-}
-.why {
-  margin: 16px 0 14px; font-size: 13px; line-height: 1.6; color: var(--muted);
-  border-left: 2px solid var(--accent); padding: 3px 0 3px 13px;
-}
-.why span { color: var(--accent); font-weight: 700; display: inline-block; margin-bottom: 1px; }
-.byline { margin: 0; }
-.src {
-  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600;
-  color: var(--faint); text-decoration: none;
-}
-.src:hover { color: var(--accent); }
-.src::after { content: " ↗"; }
-.followup {
-  margin-left: 12px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600;
-  color: var(--study); text-decoration: none;
-}
-.followup:hover { text-decoration: underline; }
-.ahead {
-  margin: 22px 0 0; padding-top: 12px; border-top: 1px dashed var(--line);
-  font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 22px; align-items: baseline;
-}
-.ahead-label { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); }
-.ahead-item b { color: var(--ink); font-weight: 700; }
-.ahead-item a { color: inherit; }
+/* ahead: dated events, as a ruled list */
+.ahead h3 { font: 400 12.5px var(--mono); color: var(--muted); margin: 0; padding: 18px 0 6px; border-top: 1px solid var(--rule); }
+.ahead ul { list-style: none; margin: 0; padding: 0; }
+.ahead li { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 12px; padding: 7px 0; border-top: 1px solid var(--rule); font-size: 14px; line-height: 1.5; color: var(--ink-2); }
+.ahead li:first-child { border-top: 0; }
+.ahead .when { font: 12.5px/1.9 var(--mono); color: var(--ink); font-variant-numeric: tabular-nums; }
+.ahead a { text-underline-offset: 3px; }
 
-/* Bitcoin chart */
-.chart { margin: 24px 0 0; border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px 10px; background: #fff; }
-.chart figcaption {
-  display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
-  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--muted); margin-bottom: 6px; font-weight: 600;
-}
-.chart .legend { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
-.chart .key { display: inline-block; width: 14px; height: 3px; border-radius: 2px; margin-left: 10px; }
-.chart .legend .key:first-child { margin-left: 0; }
-.chart-wrap { position: relative; }
+/* bitcoin chart */
+.chart { margin: 18px 0 8px; padding-top: 16px; border-top: 1px solid var(--rule); }
+.chart figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 20px; font: 12.5px var(--mono); color: var(--muted); }
+.legend { display: inline-flex; align-items: center; gap: 6px; }
+.key { display: inline-block; width: 12px; height: 3px; margin-left: 10px; }
+.key:first-child { margin-left: 0; }
+.chart-wrap { position: relative; margin-top: 10px; }
+.chart-wrap svg { display: block; width: 100%; height: auto; overflow: visible; }
 .chart-wrap.narrow { display: none; }
-.chart svg { display: block; width: 100%; height: auto; }
-.chart .grid { stroke: #ebeae4; stroke-width: 1; vector-effect: non-scaling-stroke; }
-.chart .tick { font-family: var(--sans); font-size: 11px; fill: var(--faint); font-variant-numeric: tabular-nums; }
+.chart .grid { stroke: var(--rule); stroke-width: 1; }
+.chart .tick { font: 11px var(--mono); fill: var(--muted); }
 .chart .tick.mid { text-anchor: middle; }
-.chart .endlab { font-family: var(--sans); font-size: 11.5px; font-weight: 700; fill: var(--ink); font-variant-numeric: tabular-nums; }
-.chart .xhair { stroke: var(--line-strong); stroke-width: 1; vector-effect: non-scaling-stroke; opacity: 0.5; }
-.chart .tip {
-  position: absolute; top: 10px; pointer-events: none; background: var(--ink); color: #fff;
-  font-size: 12px; line-height: 1.4; padding: 6px 9px; border-radius: 6px; white-space: nowrap;
-  font-variant-numeric: tabular-nums;
-}
-.chart-note { margin: 8px 0 0; font-size: 12px; color: var(--muted); }
-@media (max-width: 720px) { .chart-wrap.wide { display: none; } .chart-wrap.narrow { display: block; } .chart .tick { font-size: 12px; } .chart .endlab { font-size: 12.5px; } }
+.chart .endlab { font: 500 11.5px var(--mono); fill: var(--ink); }
+.chart .xhair { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 2 3; }
+.tip { position: absolute; top: 8px; pointer-events: none; background: var(--surface); border: 1px solid var(--rule); border-radius: 2px; padding: 6px 9px; font: 12px/1.5 var(--mono); color: var(--ink-2); white-space: nowrap; }
+.tip b { color: var(--ink); font-weight: 500; }
+.chart-note { margin: 8px 0 0; font-size: 13.5px; color: var(--muted); }
 
-/* Archive page */
-.cat-head { text-align: center; padding: 26px 0 22px; border-bottom: 4px double var(--line-strong); }
-.cat-head .kicker { color: var(--study); }
-.cat-title-big { font-family: var(--serif); font-weight: 700; letter-spacing: -0.015em; font-size: clamp(32px, 5vw, 50px); line-height: 1.05; margin: 0; }
-.cat-blurb { font-family: var(--serif); font-size: clamp(16px, 2vw, 19px); color: #2a2c31; max-width: 62ch; margin: 14px auto 0; line-height: 1.45; }
-.cat-group { padding: 26px 0 8px; border-bottom: 1px solid var(--line); }
-.cat-part { font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin: 0 0 14px; color: var(--ink); }
+/* archive */
 .cat-list { list-style: none; margin: 0; padding: 0; }
-.cat-row {
-  display: grid; grid-template-columns: 80px 1fr 64px; gap: 16px; align-items: baseline;
-  padding: 14px 0; border-top: 1px solid var(--line);
-}
-.cat-n { font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--study); font-weight: 700; }
-.cat-title { font-family: var(--serif); font-weight: 700; font-size: 20px; line-height: 1.2; text-decoration: none; }
-.cat-title:hover { color: var(--study); }
-.cat-dek { margin: 6px 0 0; font-size: 14.5px; color: #2c2f35; line-height: 1.5; }
-.cat-date { font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); text-align: right; }
+.cat-row { display: grid; grid-template-columns: 70px minmax(0, 1fr) auto; gap: 18px; align-items: baseline; padding: 14px 0; border-top: 1px solid var(--rule); }
+.cat-row:first-child { padding-top: 18px; }
+.cat-n, .cat-date { font: 12.5px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.cat-title { font-family: var(--display); font-weight: 600; font-size: 19px; line-height: 1.25; text-decoration: none; }
+.cat-title:hover { color: var(--accent); }
+.cat-dek { margin: 4px 0 0; font-size: 14.5px; color: var(--ink-2); }
 
-/* Footer */
-footer { padding: 22px 0 60px; }
-.arch-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
-.arch-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0; white-space: nowrap; }
-.archive { display: flex; flex-wrap: wrap; gap: 7px; }
-.chip.all { border-style: dashed; color: var(--ink); }
-.chip {
-  font-size: 12px; text-decoration: none; color: var(--muted);
-  border: 1px solid var(--line); border-radius: 4px; padding: 4px 10px; background: #fff;
-}
-.chip:hover { border-color: var(--accent); color: var(--accent); }
-.chip.current { background: var(--ink); color: #fff; border-color: var(--ink); }
-.colophon { margin: 18px 0 0; font-size: 12px; color: var(--faint); }
-.colophon code { font-family: ui-monospace, Menlo, Consolas, monospace; background: #efeee9; padding: 1px 5px; border-radius: 4px; }
+/* footer */
+footer { border-top: 1px solid var(--rule); margin-top: 8px; }
+.arch-row { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 32px; padding-block: 22px 8px; }
+.arch-label { margin: 0; font: 13px var(--mono); }
+.archive { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font: 12.5px var(--mono); color: var(--ink-2); text-decoration: none; padding: 3px 9px; border: 1px solid var(--rule); border-radius: 2px; font-variant-numeric: tabular-nums; }
+.chip:hover { border-color: var(--accent); color: var(--ink); }
+.chip.current { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.chip.all { border-color: transparent; color: var(--accent); }
+.colophon { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; margin: 0; padding-block: 18px 40px; font: 12.5px var(--mono); color: var(--muted); }
+.colophon a { text-decoration: none; } .colophon a:hover { color: var(--accent); }
 
-@media (min-width: 721px) {
-  .story.featured .dek { column-count: 2; column-gap: 38px; column-rule: 1px solid var(--line); }
-  .story.featured .why { max-width: 70ch; }
-  /* A lone story (e.g. its section's other item became the page lead) becomes a
-     full-width feature: headline spans, body flows in two columns to fill the row. */
-  .columns.single .hed { font-size: 21px; }
-  .columns.single .dek { column-count: 2; column-gap: 38px; column-rule: 1px solid var(--line); }
-  .columns.single .why { max-width: 64ch; }
+@media (max-width: 860px) {
+  .lead { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .beat-body { grid-template-columns: minmax(0, 1fr); }
+  .beat, .arch-row { grid-template-columns: minmax(0, 1fr); gap: 4px; padding-block: 24px; }
+  .label { padding-top: 0; }
+  .label span { display: inline; margin-left: 8px; }
+  .chart-wrap.wide { display: none; } .chart-wrap.narrow { display: block; }
 }
-
-@media (max-width: 720px) {
-  .dateline { font-size: 10px; flex-direction: column; gap: 2px; }
-  .nav { gap: 2px 18px; }
-  .nav-a { font-size: 11px; }
-  .nav-a .full { display: none; }
-  .nav-a .short { display: inline; }
-  .columns { column-rule: none; column-count: 1 !important; }
-  .story.featured .hed { font-size: 25px; }
-  .dek { text-align: left; }
-  .cat-row { grid-template-columns: 1fr; gap: 4px; }
-  .cat-date { text-align: left; }
+@media (max-width: 520px) {
+  .brand span { display: none; }
+  .band .wrap { padding-block: 26px 30px; }
+  .stories { grid-template-columns: minmax(0, 1fr); }
+  .cat-row { grid-template-columns: 56px minmax(0, 1fr); }
+  .cat-date { display: none; }
 }
 `;
 
@@ -739,11 +682,10 @@ footer { padding: 22px 0 60px; }
 // the GitHub Pages CDN fetch the new file whenever the styles change.
 const STYLE_HASH = createHash("sha1").update(STYLE).digest("hex").slice(0, 8);
 
-// Favicon — a "loop" target mark in the masthead red on dark ink. Crisp at any size.
-const FAVICON = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#16181d"/>
-  <circle cx="32" cy="32" r="17" fill="none" stroke="#c0151d" stroke-width="6"/>
-  <circle cx="32" cy="32" r="6" fill="#faf9f6"/>
+// Favicon: an amber "d" on graphite, the same family as flashtea.dev's "f".
+const FAVICON = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="4" fill="#17181a"/>
+  <text x="16" y="23.5" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-weight="700" font-size="22" fill="#e9a445">d</text>
 </svg>
 `;
 
@@ -762,7 +704,7 @@ function build() {
   if (editions.length === 0) {
     writeFileSync(
       join(OUT_DIR, "index.html"),
-      `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${SITE_TITLE}</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"></head><body><header class="masthead"><div class="wrap"><span class="nameplate">${SITE_TITLE}</span><p class="tagline">No editions yet — run the daily loop.</p></div></header></body></html>`,
+      `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${SITE_TITLE}</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"></head><body><header class="top"><div class="wrap"><span class="brand">${SITE_TITLE}</span></div></header><main class="wrap"><p>No editions yet — run the daily loop.</p></main></body></html>`,
     );
     console.log("No editions found — wrote placeholder index.");
     return;

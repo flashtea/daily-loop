@@ -209,8 +209,10 @@ preview.mjs                           dev-only screenshots
 study/                                the paused study tracks (see study/README.md)
 ```
 
-- The visual design lives entirely in the `STYLE` constant in `build.mjs`.
-  Restyle there and rebuild. The layout is content-adaptive: desktop sections
-  size their columns to the story count, and a lone story renders full width.
+- The visual design lives entirely in the `STYLE` constant in `build.mjs`: the
+  flashtea.dev look (IBM Plex, graphite and tea amber, light and dark). Restyle
+  there and rebuild. The lead story fills the dark band at the top; each section
+  has its label on the left, its stories in a grid that fills the row, and its
+  "Ahead" list in a right-hand column.
 - The stylesheet link is cache-busted with a content hash.
 - Keep every edition; they form the archive.
