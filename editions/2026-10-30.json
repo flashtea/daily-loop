@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-30",
+  "sections": [
+    {
+      "title": "World",
+      "ahead": [
+        { "date": "2026-11-01", "what": "Bulgaria presidential runoff, Iliana Yotova vs Andrey Gyurov" },
+        { "date": "2026-11-03", "what": "US midterm elections: all 435 House seats, 35 Senate seats, 39 governorships" },
+        { "date": "2026-11-04", "what": "Israel's Central Elections Committee publishes the official Knesset results (final count: Netanyahu bloc 53, Eisenkot bloc 48, Arab parties 19); President Herzog then has seven days to hand a candidate the mandate to form a government" },
+        { "date": "2026-11-29", "what": "Spain snap general election, both chambers, called by Royal Decree 806/2026 after Congress rejected the housing decree" }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "OpenAI doubled the Codex allowance on ChatGPT Pro 100 and Pro 500 and cancelled the Pro 200 cut it had announced for 30 October",
+          "summary": "OpenAI's release notes for 29 October say Pro 100 and Pro 500 now carry twice their previous Work and Codex allowance, that the Pro 200 reduction announced by email on 29 September is cancelled, and that Pro 200 subscribers who had already been moved to the lower allowance are doubled back up to the same limit; prices are unchanged. The same day Codex CLI 0.166 added GPT-6.1 Terra to the bundled, Vertex AI and Bedrock model catalogues.",
+          "why": "If you planned to downgrade or leave Pro 200 before tomorrow's cut, you can stay, and a Pro 100 seat now buys twice the Codex work it did yesterday.",
+          "source": "OpenAI",
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-11-10", "what": "AI Engineer Code Summit, San Francisco (workshops 10 Nov, talks 11–12 Nov)" },
+        { "date": "2026-11-16", "what": "GitHub Copilot retires Claude Opus 4.8, Claude Opus 5 and GPT-5.6 Terra" },
+        { "date": "2026-11-30", "what": "Anthropic retires claude-sonnet-4-5-20250929 on the Claude API (replacement claude-sonnet-5-5); OpenAI shuts down its Evals platform, v1/prompts objects and Agent Builder the same day" }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [
+        {
+          "headline": "Mistral published the weights of Mistral Large 4, a 1-trillion-parameter model, under a modified MIT licence that excludes model-as-a-service providers",
+          "summary": "The checkpoint (mistralai/Mistral-Large-4-1T-A52B on Hugging Face, 52 billion active parameters) includes further reinforcement learning since the 6 October API preview; Mistral quoted 48% on the Artificial Analysis Coding Agent Index, tied with GLM-5.3 while using 47% fewer tokens per task, and 41% on Terminal-Bench 4.0. The Mistral Ecosystem Open-Weight licence allows commercial use and fine-tuning but requires businesses that run a model-as-a-service offering to buy a separate licence, a step back from the Apache 2.0 terms of Mistral Large 3; API pricing is $0.70 per million input tokens and $2.10 per million output.",
+          "why": "A GLM-5.3-class open coding model is now available from a European vendor, but read the licence before serving it to others, because the MaaS carve-out means it is not open source in the OSI sense.",
+          "source": "Mistral AI",
+          "url": "https://mistral.ai/news/mistral-large-4-oss/",
+          "follow_up": "2026-10-07"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-10-31", "what": "DeepSeek starts billing Search and Fetch API calls made through Claude Code, Codex and DeepSeek Harness ($0.75 per 1,000 calls per endpoint, 16:00 UTC)" },
+        { "date": "2026-11-04", "what": "Moonshot AI's own deadline for publishing Kimi K3.1 Pro's open weights" },
+        { "date": "2026-11-12", "what": "Anthropic's updated Usage Policy takes effect" },
+        { "date": "2026-11-16", "what": "California's Government Operations Agency must deliver its recommendations on an AI 'kill switch' and independent verifiers to Newsom under Executive Order N-9-26" }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "ahead": [
+        { "date": "2026-11-04", "what": "GitHub: first brownout of the ssh-rsa SHA-1 signature type (second on 9 Dec, removal 13 Jan 2027)" },
+        { "date": "2026-11-10", "what": ".NET Conf launches .NET 11 (10–12 Nov); KubeCon North America in Salt Lake City 9–12 Nov; Rust 1.100 and PostgreSQL 19 RC2 on 12 Nov" },
+        { "date": "2026-11-17", "what": "Chrome 158 stable removes XSLT outside the origin trial and enterprise policy; PostgreSQL 19 GA and the end of GitHub Actions' ubuntu-latest move to Ubuntu 26.04 both on 19 Nov (pin ubuntu-24.04 to stay)" }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Binance lost about $6.3 billion to an attacker who reached a service container through a DevOps engineer's laptop, the largest crypto theft on record",
+          "summary": "The withdrawals began at 20:05 UTC on 29 October and drained hot wallets on ten chains, including 18,270 BTC and about $3.8 billion of assets on Ethereum; Binance suspended deposits and withdrawals, said no private key leaked, pledged to cover all losses from its SAFU fund and company money, and reported about $3 billion frozen on-chain, with Tether and Circle alone freezing more than $2.5 billion of stablecoins. TRM Labs put the theft at $6.36 billion, four times the 2025 Bybit hack, and attributed it with high confidence to North Korea's TraderTraitor unit; bitcoin fell below $77,000 on the news.",
+          "why": "Move anything you hold on Binance to self-custody once withdrawals reopen, and treat any exchange balance as an unsecured claim on a company whose hot wallets were emptied in twenty minutes.",
+          "source": "Binance",
+          "url": "https://www.binance.com/en/support/announcement/detail/c5a8729a97ac486d963784d96c5642d7"
+        },
+        {
+          "headline": "The Bank of Japan held at 1.25% on an 8–1 vote and, for the first time since adopting the 2% target in 2013, judged underlying inflation generally consistent with it",
+          "summary": "Hajime Takata dissented in favour of 1.5%, arguing the bank had entered a new phase and should move faster toward neutral; the board also raised its fiscal 2027 inflation forecast to 2.6% from 2.4% and voted unanimously to raise the pace of ETF sales from about 330 billion yen to about 860 billion yen a year at book value from January 2027. Markets priced about an 80% chance of a hike in December before the meeting.",
+          "why": "The BoJ has declared its inflation job done, so plan for Japanese rates to keep rising into 2027 and for yen funding to keep getting dearer.",
+          "source": "Bank of Japan",
+          "url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k261030a.pdf"
+        },
+        {
+          "headline": "The ECB held its deposit rate at 2.5% and said Christine Lagarde will leave on 7 February 2027, eight months before her term ends",
+          "summary": "The Governing Council kept the deposit, refinancing and marginal lending rates at 2.50%, 2.65% and 2.90%, said rising energy prices tilt inflation risks up and growth risks down, and Lagarde said the council debated a hike before voting unanimously to hold. The ECB separately announced that she had told the council and European Council President António Costa she will step down early; the European Council picks a successor under Article 283, with Executive Board member Isabel Schnabel also leaving early in 2027 for the IMF.",
+          "why": "Expect a December hike debate to continue, and watch the November and December EU summits, because the ECB's president, an Executive Board member and its chief economist all change within six months.",
+          "source": "European Central Bank",
+          "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr261029~abbb6dc64b.en.html"
+        },
+        {
+          "headline": "US GDP grew at a 3.4% annual rate in the third quarter while the PCE price index slowed to 2.1% from 5.0%",
+          "summary": "The BEA's advance estimate put growth up from 2.2% in the second quarter on investment, consumer and government spending, with core PCE at 2.5% against 3.3% before; the second estimate is due on 25 November. The print came a day after the Fed held at 3.75–4.00% with two dissents for a hike.",
+          "why": "Growth above 3% with quarterly inflation back near target weakens the case for the December hike that two FOMC members voted for this week, so do not position for one yet.",
+          "source": "Bureau of Economic Analysis",
+          "url": "https://www.bea.gov/news/2026/gdp-advance-estimate-3rd-quarter-2026"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-11-04", "what": "US Treasury quarterly refunding announcement; Bank of England decision with Monetary Policy Report 5 Nov; US October jobs report 6 Nov (BLS, 13:30 UTC)" },
+        { "date": "2026-11-10", "what": "US October CPI (BLS, 13:30 UTC); MSCI publishes its final 'non-operating companies' list, Strategy among the candidates, the next day" },
+        { "date": "2026-11-25", "what": "US Q3 GDP second estimate with corporate profits (BEA, 13:30 UTC)" },
+        { "date": "2026-12-09", "what": "FOMC rate decision with Summary of Economic Projections (19:00 UTC)" }
+      ]
+    }
+  ]
+}
