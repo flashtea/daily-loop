@@ -1,0 +1,100 @@
+{
+  "date": "2026-11-01",
+  "sections": [
+    {
+      "title": "World",
+      "items": [
+        {
+          "headline": "A parliament-elected judge suspended the president of Poland's Constitutional Tribunal, riot police sealed the court and President Nawrocki entered it overnight calling the move a forcible takeover",
+          "summary": "On the evening of 30 October Judge Anna Korwin-Piotrowska, one of the judges elected by parliament this year whom Karol Nawrocki has refused to swear in, announced the suspension of Tribunal president Bogdan Święczkowski and vice-president Bartłomiej Sochański and said she had assumed the role of acting head; Justice Minister Waldemar Żurek asked for both men's immunity to be lifted, the Tribunal's own account called the move a coup d'état, and police arrested three people outside the building. Nawrocki turned his plane back from a state visit to Senegal, entered the court at about 1 a.m., and on Saturday held consultations with party leaders that Donald Tusk's Civic Coalition did not attend, while the European Commission urged him to accept the new judges.",
+          "why": "Poland's constitutional court now has two leaderships each calling the other unlawful, so expect its rulings to be contested whichever side issues them and Polish political risk to stay elevated until the dispute is settled.",
+          "source": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/11/1/polish-president-holds-crisis-talks-in-court-standoff"
+        },
+        {
+          "headline": "DR Congo's Ebola death toll passed 5,000, with 5,026 deaths among 10,351 cases, as Saudi Arabia suspended travel to and from Kenya",
+          "summary": "Congolese Ministry of Health data published on Friday put the Bundibugyo outbreak, declared in May, at 5,026 deaths and 10,351 infections across eight of the country's 26 provinces, with cases also recorded in Uganda, Kenya and Nigeria; it is the second-largest Ebola outbreak on record and there is still no approved vaccine or treatment for this species. Deaths have risen by about 900 since 4 October.",
+          "why": "The toll is still climbing at over 200 a week with no vaccine shown to work, so plan for travel screening and entry bans around East Africa to widen through the end of the year rather than lift.",
+          "source": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/31/ebola-death-toll-in-dr-congo-passes-5000",
+          "follow_up": "2026-10-07"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-11-01", "what": "Bulgaria presidential runoff, Iliana Yotova vs Andrey Gyurov (first round 34.8% to 32.0% on a record-low 23% turnout)" },
+        { "date": "2026-11-03", "what": "US midterm elections: all 435 House seats, 35 Senate seats, 39 governorships" },
+        { "date": "2026-11-04", "what": "Israel's Central Elections Committee publishes the official Knesset results (final count: Netanyahu bloc 53, Eisenkot bloc 48, Arab parties 19); President Herzog then has seven days to hand a candidate the mandate to form a government" },
+        { "date": "2026-11-29", "what": "Spain snap general election, both chambers, called by Royal Decree 806/2026 after Congress rejected the housing decree" }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "lead": true,
+          "headline": "A tampered Claude Code extension carrying an SSH backdoor was served from Cursor's marketplace for eleven hours; Anthropic said its own systems were not breached",
+          "summary": "Cursor said versions 2.1.312 and 2.1.313 of Anthropic.claude-code for Windows and macOS, available from its extension marketplace between 02:27 and 13:35 Pacific time on 29 October, sent hostname, username, Git email and public IP to an attacker's server, tried to add an SSH key and open a reverse tunnel, and installed a LaunchAgent or scheduled task that survives uninstalling the extension; Cursor shut the marketplace, rotated its keys, rebuilt it and had the attacker's server taken offline. Anthropic's Felix Rieseberg said an attacker used access to Cursor's marketplace to publish the copy and that the VS Code and Open VSX builds were unaffected; neither company has said how the attacker obtained publishing access.",
+          "why": "If Cursor installed or updated Claude Code for you on 29 October, check authorized_keys for the svc-telemetry key and rotate credentials from a clean machine, and treat every IDE extension marketplace as a supply chain you pin and verify rather than trust by name.",
+          "source": "Cursor",
+          "url": "https://cursor.com/blog/claude-code-extension-security-notice"
+        },
+        {
+          "headline": "Anthropic renamed Max 20x to Ultra and removed the five-hour usage limit for verified Ultra accounts, keeping the $200 price",
+          "summary": "The $100 Max 5x plan is now called Max and keeps its five-hour and weekly caps at five times Pro; Ultra keeps a weekly cap of ten times Pro but no longer has a rolling five-hour window once the account is verified, a step Anthropic says guards against fraud and abuse. Prices and existing subscriptions are unchanged.",
+          "why": "Heavy Claude Code users who kept hitting the five-hour wall mid-session can now run long agent sessions without interruption at the same price, leaving the weekly cap as the only budget to manage.",
+          "source": "Anthropic",
+          "url": "https://claude.com/pricing"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-11-10", "what": "AI Engineer Code Summit, San Francisco (workshops 10 Nov, talks 11–12 Nov)" },
+        { "date": "2026-11-16", "what": "GitHub Copilot retires Claude Opus 4.8, Claude Opus 5 and GPT-5.6 Terra" },
+        { "date": "2026-11-30", "what": "Anthropic retires claude-sonnet-4-5-20250929 on the Claude API (replacement claude-sonnet-5-5) and fast mode for Claude Opus 4.8; OpenAI shuts down its Evals platform, v1/prompts objects and Agent Builder the same day" }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [],
+      "ahead": [
+        { "date": "2026-11-04", "what": "Moonshot AI's own deadline for publishing Kimi K3.1 Pro's open weights" },
+        { "date": "2026-11-12", "what": "Anthropic's updated Usage Policy takes effect" },
+        { "date": "2026-11-16", "what": "California's Government Operations Agency must deliver its recommendations on an AI 'kill switch' and independent verifiers to Newsom under Executive Order N-9-26" }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [],
+      "ahead": [
+        { "date": "2026-11-04", "what": "GitHub: first brownout of the ssh-rsa SHA-1 signature type (second on 9 Dec, removal 13 Jan 2027)" },
+        { "date": "2026-11-10", "what": ".NET Conf launches .NET 11 (10–12 Nov); KubeCon North America in Salt Lake City 9–12 Nov; Rust 1.100 and PostgreSQL 19 RC2 on 12 Nov" },
+        { "date": "2026-11-17", "what": "Chrome 158 stable removes XSLT outside the origin trial and enterprise policy; PostgreSQL 19 GA and the end of GitHub Actions' ubuntu-latest move to Ubuntu 26.04 both on 19 Nov (pin ubuntu-24.04 to stay)" }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [
+        {
+          "headline": "The FBI attributed the $6 billion Binance theft to North Korea's TraderTraitor group as Binance said it had replaced 90% of the stolen assets ahead of reopening withdrawals",
+          "summary": "The FBI's alert said North Korea was responsible for the theft of more than $6 billion in virtual assets from Binance on or about 29 October, that the actors are converting the funds mainly into ether, and asked exchanges, DeFi services, node operators and analytics firms to block the addresses it listed. Binance said it had replenished 90% of the stolen assets from its corporate treasury, its futures insurance fund and a partial draw on its SAFU fund, planned to reopen withdrawals in phases on 1 November, and expects its full proof of reserves by 3 November.",
+          "why": "Attribution to a state actor means the funds will be laundered rather than recovered, so the open question is whether Binance's 3 November proof shows full backing; keep balances you cannot afford to freeze off the exchange until it does.",
+          "source": "FBI",
+          "url": "https://www.fbi.gov/investigate/cyber/alerts/2026/north-korea-responsible-for-6-billion-binance-attack",
+          "follow_up": "2026-10-30"
+        },
+        {
+          "headline": "Fitch cut France's rating outlook to negative and affirmed A+, citing weaker growth, higher borrowing costs and a larger deficit than at its August review",
+          "summary": "In Friday's review Fitch said persistent political fragmentation and a difficult social climate complicate lasting fiscal consolidation, that recent budget debates had not significantly increased its confidence in deficit reduction, and that it expects the 2027 budget to pass through constitutional mechanisms despite the lack of a parliamentary majority; Insee data show GDP fell 0.1% in the third quarter after stagnating in the second. Finance Minister Roland Lescure said he took note of the decision and is targeting a deficit of 5% of GDP or less.",
+          "why": "A negative outlook from the agency that already cut France to A+ makes a further downgrade before the April 2027 presidential election the base case, so stop treating French government bonds as a core euro-area safe asset.",
+          "source": "Euronews (AFP)",
+          "url": "https://www.euronews.com/2026/10/31/france-pushes-responsible-2027-budget-as-fitch-cuts-debt-outlook-to-negative"
+        }
+      ],
+      "ahead": [
+        { "date": "2026-11-04", "what": "Eurostat flash estimate of October euro-area inflation (10:00 UTC; September was 3.8%) and the US Treasury quarterly refunding announcement; Bank of England decision with Monetary Policy Report 5 Nov; US October jobs report 6 Nov (BLS, 13:30 UTC)" },
+        { "date": "2026-11-10", "what": "US October CPI (BLS, 13:30 UTC); MSCI publishes its final 'non-operating companies' list, Strategy among the candidates, the next day" },
+        { "date": "2026-11-25", "what": "US Q3 GDP second estimate with corporate profits (BEA, 13:30 UTC)" },
+        { "date": "2026-12-09", "what": "FOMC rate decision with Summary of Economic Projections (19:00 UTC)" }
+      ]
+    }
+  ]
+}
