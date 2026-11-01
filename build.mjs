@@ -91,7 +91,7 @@ function masthead({ base, activeNav, band }) {
     .join("");
   return `<header class="top">
     <div class="wrap">
-      <div class="brand"><a href="https://flashtea.dev/">flashtea</a><span class="sep">/</span><details class="switch"><summary>paper</summary><nav class="menu" aria-label="flashtea pages"><a href="https://today.flashtea.dev/">today<small>morning page</small></a><a href="https://monitor.flashtea.dev/">ops<small>apps and server</small></a><a href="https://paper.flashtea.dev/" aria-current="page">paper<small>Daily Loop</small></a><a class="pub" href="https://flashtea.dev/">flashtea.dev<small>public site</small></a></nav></details></div>
+      <div class="brand"><a href="https://flashtea.dev/">flashtea</a><span class="sep">/</span><details class="switch"><summary>paper</summary><nav class="menu" aria-label="flashtea pages"><a href="https://today.flashtea.dev/">today<small>morning page</small></a><a href="https://monitor.flashtea.dev/">ops<small>apps and server</small></a><a href="https://monitor.flashtea.dev/map.html">map<small>how the box works</small></a><a href="https://db.flashtea.dev/">db<small>databases, pgweb</small></a><a href="https://paper.flashtea.dev/" aria-current="page">paper<small>Daily Loop</small></a><a class="pub" href="https://flashtea.dev/">flashtea.dev<small>public site</small></a></nav></details></div>
       <nav aria-label="Main">${nav}</nav>
     </div>
   </header>
