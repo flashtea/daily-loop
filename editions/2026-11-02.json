@@ -1,0 +1,142 @@
+{
+  "date": "2026-11-02",
+  "sections": [
+    {
+      "title": "World",
+      "items": [
+        {
+          "lead": true,
+          "headline": "The UN mission in Western Sahara ended after 35 years when Russia vetoed its renewal and the Security Council adopted nothing in its place",
+          "summary": "A US draft extending MINURSO failed on 30 October by 11 votes to 1, Russia's veto, with China, Pakistan and Somalia abstaining; a Russian text extending the mandate to October 2027 drew three votes. The mandate expired at midnight on 31 October and the UN began liquidating the mission on 1 November, with Secretary-General Guterres urging Morocco and the Polisario Front to show maximum restraint.",
+          "why": "The 1991 ceasefire between Morocco and the Polisario Front now has no UN observers behind it, and the Council has shown it cannot renew even a 35-year-old mission when Washington and Moscow disagree.",
+          "source": "United Nations",
+          "url": "https://news.un.org/en/story/2026/11/1168717"
+        },
+        {
+          "headline": "Iliana Yotova won Bulgaria's presidential runoff with about 58% of the vote on parallel counts, and Andrey Gyurov accepted the result",
+          "summary": "Polling agencies' full parallel counts put the acting president at 57.4–58.2% against 38.6–39.6% for the pro-Western former interim prime minister, on turnout of about 29%; official results follow on Monday. Yotova, who has been acting president since Rumen Radev resigned in January, favours dialogue with Moscow and opposes military aid to Ukraine.",
+          "why": "A NATO and euro-area member on the Black Sea now has an elected head of state who opposes arming Ukraine, so expect Bulgaria to be a brake rather than a driver on EU support for Kyiv.",
+          "source": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/11/1/bulgarian-president-yotova-leads-runoff-exit-polls-show"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-11-03",
+          "what": "US midterm elections: all 435 House seats, 35 Senate seats, 39 governorships"
+        },
+        {
+          "date": "2026-11-04",
+          "what": "Israel's Central Elections Committee presents the official Knesset results to President Herzog, who begins consultations with the factions the same day and must hand someone the mandate by 11 November; the Knesset is sworn in on 10 November",
+          "url": "https://www.aljazeera.com/news/2026/11/1/israel-election-when-will-government-be-formed-who-will-lead-it"
+        },
+        {
+          "date": "2026-11-29",
+          "what": "Spain snap general election, both chambers, called by Royal Decree 806/2026 after Congress rejected the housing decree"
+        }
+      ]
+    },
+    {
+      "title": "AI for Software Development",
+      "items": [
+        {
+          "headline": "OpenAI told subscribers that ChatGPT and Codex will draw from one shared usage allowance, with Unlimited Instant chat excluded",
+          "summary": "An updated help article and emails to paying users say that in the coming weeks use of ChatGPT and Codex on plans including Plus and Pro will count against a single allowance, visible with its reset time under Settings → Usage, while Instant-model chat stays outside it. OpenAI has not published the size of the allowance for any plan.",
+          "why": "If you run Codex on a ChatGPT subscription, heavy agent sessions will now eat your chat budget too, so check the combined meter before leaning on both or move agent work to the API.",
+          "source": "OpenAI",
+          "url": "https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits",
+          "follow_up": "2026-10-30"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-11-10",
+          "what": "AI Engineer Code Summit, San Francisco (workshops 10 Nov, talks 11–12 Nov)"
+        },
+        {
+          "date": "2026-11-16",
+          "what": "GitHub Copilot retires Claude Opus 4.8, Claude Opus 5 and GPT-5.6 Terra",
+          "url": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november/"
+        },
+        {
+          "date": "2026-11-30",
+          "what": "Anthropic retires claude-sonnet-4-5-20250929 on the Claude API (replacement claude-sonnet-5-5) and fast mode for Claude Opus 4.8; OpenAI shuts down its Evals platform, v1/prompts objects and Agent Builder the same day"
+        }
+      ]
+    },
+    {
+      "title": "AI Research & Models",
+      "items": [],
+      "ahead": [
+        {
+          "date": "2026-11-04",
+          "what": "Moonshot AI's own deadline for publishing Kimi K3.1 Pro's open weights; none were on Hugging Face as of 1 November"
+        },
+        {
+          "date": "2026-11-12",
+          "what": "Anthropic's updated Usage Policy takes effect"
+        },
+        {
+          "date": "2026-11-16",
+          "what": "California's Government Operations Agency must deliver its recommendations on an AI 'kill switch' and independent verifiers to Newsom under Executive Order N-9-26"
+        },
+        {
+          "date": "2026-11-30",
+          "what": "Google's introductory pricing for Gemini 4 Argon ends: $2 input / $10 output per million tokens becomes $4 / $20",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/"
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools & Releases",
+      "items": [],
+      "ahead": [
+        {
+          "date": "2026-11-04",
+          "what": "GitHub: first brownout of the ssh-rsa SHA-1 signature type (second on 9 Dec, removal 13 Jan 2027)",
+          "url": "https://github.blog/changelog/2026-09-22-security-improvements-for-ssh/"
+        },
+        {
+          "date": "2026-11-10",
+          "what": ".NET Conf launches .NET 11 (10–12 Nov); KubeCon North America in Salt Lake City 9–12 Nov; Rust 1.100 and PostgreSQL 19 RC2 on 12 Nov"
+        },
+        {
+          "date": "2026-11-17",
+          "what": "Chrome 158 stable removes XSLT outside the origin trial and enterprise policy; PostgreSQL 19 GA and the end of GitHub Actions' ubuntu-latest move to Ubuntu 26.04 both on 19 Nov (pin ubuntu-24.04 to stay)"
+        }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [
+        {
+          "headline": "Binance reopened withdrawals for Bitcoin and 15 other networks two days after the $6.3 billion theft, saying it had replaced 95% of the stolen assets",
+          "summary": "The first phase ran from 06:00 UTC on 1 November and covered bitcoin, ether, USDT, USDC, BNB and XRP among others; Binance said further networks follow once each passes security and stability checks and gave no timetable. The FBI's alert listed 608 Ethereum, 19 Bitcoin and one Solana address for node operators and exchanges to block, and an on-chain analyst counted about $242 million laundered off Tron in two days.",
+          "why": "Funds on Binance are moving again, but anything you hold there on a network outside the first phase is still locked with no date, and the laundering is outrunning the freezes.",
+          "source": "CoinDesk",
+          "url": "https://www.coindesk.com/markets/2026/11/01/binance-opens-crypto-withdrawals-in-phases-starting-with-bitcoin-following-usd6-3-billion-hack",
+          "follow_up": "2026-10-30"
+        }
+      ],
+      "ahead": [
+        {
+          "date": "2026-11-03",
+          "what": "Reserve Bank of Australia decision (03:30 UTC) with the Statement on Monetary Policy; all four major banks expect a fifth hike this year, to 4.85%, the highest since 2008",
+          "url": "https://www.rba.gov.au/schedules-events/"
+        },
+        {
+          "date": "2026-11-04",
+          "what": "Eurostat flash estimate of October euro-area inflation (10:00 UTC; September was 3.8%) and the US Treasury quarterly refunding announcement; Bank of England decision with Monetary Policy Report 5 Nov (12:00 UTC); US October jobs report 6 Nov (BLS, 13:30 UTC)"
+        },
+        {
+          "date": "2026-11-10",
+          "what": "US October CPI (BLS, 13:30 UTC); MSCI publishes its final 'non-operating companies' list, Strategy among the candidates, the next day"
+        },
+        {
+          "date": "2026-12-09",
+          "what": "FOMC rate decision with Summary of Economic Projections (19:00 UTC)"
+        }
+      ]
+    }
+  ]
+}
