@@ -409,6 +409,8 @@ function renderSection(section, lead, editions) {
   const items = visible.map((it) => renderStory(it, editions)).join("\n");
   const chart = /^(bitcoin|money)$/i.test(section.title.trim()) ? BTC_CHART : "";
   const ahead = aheadLine(section);
+  // Only the lead (already shown in the band) and nothing else: no empty row.
+  if (!items.trim() && !chart && !ahead) return "";
   const n = visible.length + (hasLead ? 1 : 0);
   return `<section class="beat">
       <h2 class="label">${escapeHtml(section.title)}<span>${n} ${n === 1 ? "story" : "stories"}${hasLead ? ", lead above" : ""}</span></h2>
@@ -468,7 +470,7 @@ ${es
               <a class="cat-title" href="${href}">${escapeHtml(lead?.headline || "Edition")}</a>
               ${e.intro ? `<p class="cat-dek">${escapeHtml(e.intro)}</p>` : ""}
             </div>
-            <span class="cat-date">${count} stories</span>
+            <span class="cat-date">${count} ${count === 1 ? "story" : "stories"}</span>
           </li>`;
   })
   .join("\n")}
@@ -499,7 +501,7 @@ ${es
 function leadBand(edition, lead, editions, itemCount) {
   const no = editions.length - editions.findIndex((e) => e.date === edition.date);
   const section = (edition.sections || []).find((s) => (s.items || []).includes(lead));
-  const meta = `<p class="meta">No. ${no} · ${escapeHtml(longDate(edition.date))} · ${itemCount} stories</p>`;
+  const meta = `<p class="meta">No. ${no} · ${escapeHtml(longDate(edition.date))} · ${itemCount} ${itemCount === 1 ? "story" : "stories"}</p>`;
   if (!lead) return meta;
   return `${meta}
       <div class="lead">
@@ -524,9 +526,24 @@ function renderPage(edition, editions, isIndex) {
     0,
   );
 
-  const sections = (edition.sections || [])
+  let sections = (edition.sections || [])
     .map((s) => renderSection(s, lead, editions))
     .join("\n");
+  // The Bitcoin chart runs every day: inside Money when Money has stories,
+  // otherwise as its own block at the bottom of the page.
+  const moneyShown = (edition.sections || []).some(
+    (s) => /^(bitcoin|money)$/i.test((s.title || "").trim()) && (s.items || []).length,
+  );
+  if (!moneyShown && BTC_CHART) {
+    sections += `
+    <section class="beat">
+      <h2 class="label">Bitcoin<span>chart</span></h2>
+      <div class="beat-body solo">
+        <div></div>
+        ${BTC_CHART}
+      </div>
+    </section>`;
+  }
   const title = isIndex ? SITE_TITLE : `${SITE_TITLE} — ${shortDate(edition.date)}`;
 
   return shell({

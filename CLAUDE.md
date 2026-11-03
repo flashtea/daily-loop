@@ -131,7 +131,7 @@ and the want conflict, the want wins.
   regional news. `ahead`: national elections and dates when such changes take
   effect.
 
-The builder adds one chart to the `Money` section: Bitcoin weekly close against its 200-week moving average, log scale, last eight years, drawn from `data/btc-weekly.json`. Do not add chart data to the edition.
+The builder adds one chart every day, inside `Money` when it has stories and otherwise as its own block at the bottom: Bitcoin weekly close against its 200-week moving average, log scale, last eight years, drawn from `data/btc-weekly.json`. Do not add chart data to the edition.
 
 ## Writing an item
 
