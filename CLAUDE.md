@@ -30,6 +30,10 @@ and the want conflict, the want wins.
 - Macro means the Fed / US and the euro area. Australia, China's rate plumbing,
   single-country ratings outlooks: out.
 - A running story is covered once, then only on a decisive turn.
+- Stories that swing back and forth (the Iran war's escalation-then-peace
+  signals, and the oil moves they cause) are noise until something decisive
+  happens: a signed deal, strikes resuming, the Strait of Hormuz closing or
+  reopening. A big price move on "signals" alone does not count.
 - A paper with one to three items on a quiet day is correct.
 
 ## Editorial principles (apply to all news)
