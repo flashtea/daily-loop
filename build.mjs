@@ -534,6 +534,18 @@ function renderPage(edition, editions, isIndex) {
   const moneyShown = (edition.sections || []).some(
     (s) => /^(bitcoin|money)$/i.test((s.title || "").trim()) && (s.items || []).length,
   );
+  // The paper-wide Ahead list: edition.ahead, shown every day at the bottom.
+  const bigAhead = aheadLine({ ahead: edition.ahead });
+  if (bigAhead) {
+    const n = edition.ahead.filter((x) => x && x.what).length;
+    sections += `
+    <section class="beat">
+      <h2 class="label">Ahead<span>${n} ${n === 1 ? "date" : "dates"}</span></h2>
+      <div class="beat-body solo">
+        ${bigAhead.replace("<h3>Ahead</h3>", "")}
+      </div>
+    </section>`;
+  }
   if (!moneyShown && BTC_CHART) {
     sections += `
     <section class="beat">

@@ -17,7 +17,8 @@ In short:
    Tools, Money (Fed/US, ECB/euro area, Bitcoin), Austria. Apply the three
    tests (it happened, it matters to this reader, it lasts) and the reader's
    "only the big ones, no noise" rule. 0–4 items per section; zero is normal,
-   and a section with no items is omitted (no `ahead`-only sections).
+   and a section with no items is omitted. The top-level `ahead` list (big
+   dates only) appears every day: carry it forward, drop past dates, verify new ones.
    Mandatory one-sentence `why`. Primary sources. Exactly one `lead`.
 4. `node fetch-btc.mjs` (tolerates failure), then `node build.mjs`.
 5. Commit as `edition: <today>` and push to `main`.

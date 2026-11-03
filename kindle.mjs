@@ -147,6 +147,16 @@ ${ahead ? `<p class="ahead"><b>Ahead:</b> ${ahead}</p>` : ""}`,
     });
   }
 
+  const bigAhead = (edition.ahead || []).filter((a) => a && a.what);
+  if (bigAhead.length) {
+    chapters.push({
+      id: "ahead",
+      title: "Ahead",
+      body: `<h1>Ahead</h1>
+<ul>${bigAhead.map((a) => `<li>${a.date ? `<b>${escapeHtml(a.date)}</b> ` : ""}${escapeHtml(a.what)}</li>`).join("\n")}</ul>`,
+    });
+  }
+
   const epub = packEpub({ title, uid: `urn:daily-loop:${date}`, date, chapters, escapeHtml });
   mkdirSync(outDir, { recursive: true });
   writeFileSync(join(outDir, `${date}.epub`), epub);

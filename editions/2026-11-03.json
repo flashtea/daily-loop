@@ -15,5 +15,33 @@
         }
       ]
     }
+  ],
+  "ahead": [
+    {
+      "date": "2026-11-03",
+      "what": "US midterm elections: all 435 House seats, 35 Senate seats; results overnight into 4 November"
+    },
+    {
+      "date": "2026-11-04",
+      "what": "Eurostat flash estimate of October euro-area inflation (10:00 UTC; September was 3.8%)"
+    },
+    {
+      "date": "2026-11-06",
+      "what": "US October jobs report (BLS, 13:30 UTC)"
+    },
+    {
+      "date": "2026-11-10",
+      "what": "US October CPI (BLS, 13:30 UTC)",
+      "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+    },
+    {
+      "date": "2026-12-09",
+      "what": "FOMC rate decision with new projections (19:00 UTC); two members voted to hike in October",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+    },
+    {
+      "date": "2026-12-17",
+      "what": "ECB rate decision with new staff projections; markets price a possible hike from 2.50%"
+    }
   ]
 }

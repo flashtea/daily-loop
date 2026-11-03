@@ -63,11 +63,17 @@ and the want conflict, the want wins.
   aggregators (Yahoo Finance, FXStreet, Investing.com, Blockhead, The Decoder,
   SiliconANGLE, TechTimes, Bitcoin.com News, BankInfoSecurity) may not be the
   cited source: find what they cite or drop the item.
-- **Ahead, only the big dates.** Dated, verified upcoming events that pass the
-  same "only the big ones" bar (FOMC, ECB, US CPI, a US election, a launch the
-  reader will use) go in a section's `ahead` array, up to three, within about
-  six weeks. **A section with no stories is left out entirely**, its `ahead`
-  list with it: never keep a section alive with upcoming events alone.
+- **Ahead, every day, only the big dates.** The edition's top-level `ahead`
+  array is one list shown at the bottom of every paper, whatever the news.
+  Up to six dated, verified events within about six weeks that pass the "only
+  the big ones" bar: Fed and ECB decisions, US CPI and jobs, euro-area flash
+  inflation, US presidential and midterm elections, decisive EU votes, big
+  Bitcoin dates, launches or deadlines from Anthropic or OpenAI that change
+  what the reader can do, and Austrian dates that change their life or money.
+  No conferences, no model retirements, no other countries' central banks.
+  Carry the list forward from the previous edition, drop past dates, verify
+  new ones. Do not use per-section `ahead`. **A section with no stories is
+  left out entirely.**
 - **Never fabricate.** Only things you actually found. Verify the date before
   citing. No invented quotations anywhere in the paper.
 - **Search properly.** At least three distinct searches per beat before you
@@ -86,8 +92,7 @@ and the want conflict, the want wins.
   binds them)? A regional war, a coup, a court fight or an election in another
   country fails unless it hits oil, markets or Europe directly, and then it
   usually belongs in `Money` through its effect. Zero items is the normal day.
-  `ahead`: only US presidential and midterm elections, decisive EU-level votes,
-  and summits whose outcome could reach the reader. Voice: no framing, no
+  Voice: no framing, no
   "critics say", no adjectives of judgment.
 - **`AI`** — one section for everything AI. *In:* what changes for someone
   building software with state-of-the-art agents (Claude Code and Anthropic,
@@ -100,9 +105,7 @@ and the want conflict, the want wins.
   *Out:* Copilot and tools the reader does not use, point releases, changelog
   items, betas of small API features, "model X now in product Y", model
   retirements and deprecations, institutional housekeeping, funding rounds,
-  surveys, "plans to", partnerships without a product. `ahead`: only dated
-  launches or deadlines from Anthropic or OpenAI that change what the reader
-  can do; no conferences, no retirements.
+  surveys, "plans to", partnerships without a product. 
 - **`Dev Tools`** — only the big ones. *In:* a security crisis on the day it
   breaks: an actively exploited vulnerability or supply-chain compromise in
   something a large share of developers run (a top language runtime like the
@@ -122,14 +125,12 @@ and the want conflict, the want wins.
   (Strategy, index-inclusion decisions). *Out:* other central banks (RBA, BoC,
   PBoC plumbing; BoJ and BoE only if they move global markets), ratings
   outlooks for single countries, daily recaps, analyst forecasts, altcoins,
-  exchange incidents after their first day unless decisive. `ahead`: FOMC,
-  ECB, US CPI and jobs, euro-area flash inflation, and big Bitcoin dates.
+  exchange incidents after their first day unless decisive. 
 - **`Austria`** — a small section, usually empty: only what changes the
   reader's life or money in Austria (a tax or pension change, a law that
   applies to them, a government falling, an election result, energy prices or
   a regulation they will feel). *Out:* party politics, polls, scandals,
-  regional news. `ahead`: national elections and dates when such changes take
-  effect.
+  regional news. 
 
 The builder adds one chart every day, inside `Money` when it has stories and otherwise as its own block at the bottom: Bitcoin weekly close against its 200-week moving average, log scale, last eight years, drawn from `data/btc-weekly.json`. Do not add chart data to the edition.
 
@@ -187,19 +188,19 @@ The builder adds one chart every day, inside `Money` when it has stories and oth
           "url": "https://example.com/post",
           "follow_up": "2026-06-11"
         }
-      ],
-      "ahead": [
-        { "date": "2026-06-24", "what": "FOMC rate decision", "url": "https://optional.example" }
       ]
     }
+  ],
+  "ahead": [
+    { "date": "2026-06-24", "what": "FOMC rate decision", "url": "https://optional.example" }
   ]
 }
 ```
 
 Section `title` values match the five beats above (older editions use the earlier titles; leave them); omit a section that has no
-items (the builder drops it anyway, `ahead` and chart included). `lead`, `follow_up` and `ahead` are optional;
+items (the builder drops it anyway). `lead`, `follow_up` and `ahead` are optional;
 everything else is required. `build.mjs` handles all HTML, the featured lead,
-the Ahead strips, follow-up markers and the Bitcoin chart (an inline SVG,
+the Ahead list, follow-up markers and the Bitcoin chart (an inline SVG,
 no third-party script). Never hand-edit
 `docs/`.
 
@@ -231,7 +232,8 @@ study/                                the paused study tracks (see study/README.
 - The visual design lives entirely in the `STYLE` constant in `build.mjs`: the
   flashtea.dev look (IBM Plex, graphite and tea amber, light only). Restyle
   there and rebuild. The lead story fills the dark band at the top; each section
-  has its label on the left, its stories in a grid that fills the row, and its
-  "Ahead" list in a right-hand column.
+  has its label on the left and its stories in a grid that fills the row; the
+  paper-wide "Ahead" list and the Bitcoin chart (when Money is absent) close
+  the page.
 - The stylesheet link is cache-busted with a content hash.
 - Keep every edition; they form the archive.
