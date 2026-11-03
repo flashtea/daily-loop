@@ -137,7 +137,7 @@ ${it.why ? `<p class="why"><b>Why it matters —</b> ${escapeHtml(it.why)}</p>` 
       .filter((a) => a && a.what)
       .map((a) => `${a.date ? `<b>${escapeHtml(a.date)}</b> ` : ""}${escapeHtml(a.what)}`)
       .join(" · ");
-    if (!items && !ahead) continue;
+    if (!items) continue; // no stories, no chapter (its Ahead list is dropped too)
     chapters.push({
       id: `news-${section.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
       title: section.title,

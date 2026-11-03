@@ -13,12 +13,12 @@ In short:
 1. Today's date (UTC) is the edition id; refresh rather than duplicate.
 2. Read the newest three editions so nothing is repeated without a new
    development.
-3. Research all five beats (three or more searches each): World, AI for
-   Software Development, AI Research & Models, Dev Tools & Releases, Money
-   (macro and Bitcoin together). Apply the three tests (it happened, it matters to
-   this reader, it lasts). 0–4 items per section; zero is fine. Mandatory
-   one-sentence `why`. Primary sources. `ahead` entries for verified upcoming
-   events. Exactly one `lead`.
+3. Research all five beats (three or more searches each): World, AI, Dev
+   Tools, Money (Fed/US, ECB/euro area, Bitcoin), Austria. Apply the three
+   tests (it happened, it matters to this reader, it lasts) and the reader's
+   "only the big ones, no noise" rule. 0–4 items per section; zero is normal,
+   and a section with no items is omitted (no `ahead`-only sections).
+   Mandatory one-sentence `why`. Primary sources. Exactly one `lead`.
 4. `node fetch-btc.mjs` (tolerates failure), then `node build.mjs`.
 5. Commit as `edition: <today>` and push to `main`.
 6. Report the section-by-section headline list.

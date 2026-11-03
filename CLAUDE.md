@@ -7,14 +7,30 @@ says "follow it".
 
 ## Who reads this, and what they want from it
 
-One reader. A software developer and investor who opens the paper once a day,
-on a phone, for about ten minutes, and wants **to know what actually changed** in
-the world, in AI and developer tooling, and in money, without wading through
-everything that merely happened.
+One reader. A software developer and investor in Austria who opens the paper once a day,
+on a phone, for about ten minutes, and wants **to know what actually changed**
+for them: in AI and the tools they build with, in money (US and euro-area macro,
+Bitcoin), and in the rare world event that reaches them, without wading
+through everything that merely happened.
 
 Not a trader, not a security team, not a journalist, not a researcher who
 needs completeness. Every rule below exists to serve that want. When a rule
 and the want conflict, the want wins.
+
+**The reader's own words, from an interview (Nov 2026), are the tiebreaker:**
+- Global media makes it look as if something dramatic happens every day, but
+  most of it does not affect an individual at all. However important it is to
+  those affected, for this reader it is noise. World news gets in only if it
+  reaches them, or if it truly changes the world (a cure for cancer).
+- "Only the big ones, no noise" applies to every beat: CVEs, open-weight
+  models, safety and regulation, Bitcoin, the calendar.
+- Tools that matter are the state of the art, mostly Claude Code / Anthropic
+  and OpenAI. Copilot and other tools they do not use are noise.
+- No model retirements or deprecation notices.
+- Macro means the Fed / US and the euro area. Australia, China's rate plumbing,
+  single-country ratings outlooks: out.
+- A running story is covered once, then only on a decisive turn.
+- A paper with one to three items on a quiet day is correct.
 
 ## Editorial principles (apply to all news)
 
@@ -47,11 +63,11 @@ and the want conflict, the want wins.
   aggregators (Yahoo Finance, FXStreet, Investing.com, Blockhead, The Decoder,
   SiliconANGLE, TechTimes, Bitcoin.com News, BankInfoSecurity) may not be the
   cited source: find what they cite or drop the item.
-- **Ahead beats news.** Dated, verified upcoming events (a rate decision, a
-  data release, an election, a court date, a launch, a protocol activation) go
-  in a section's `ahead` array, up to four, within about six weeks. They are
-  the highest-value, lowest-noise thing in the paper. Money should nearly
-  always have one.
+- **Ahead, only the big dates.** Dated, verified upcoming events that pass the
+  same "only the big ones" bar (FOMC, ECB, US CPI, a US election, a launch the
+  reader will use) go in a section's `ahead` array, up to three, within about
+  six weeks. **A section with no stories is left out entirely**, its `ahead`
+  list with it: never keep a section alive with upcoming events alone.
 - **Never fabricate.** Only things you actually found. Verify the date before
   citing. No invented quotations anywhere in the paper.
 - **Search properly.** At least three distinct searches per beat before you
@@ -62,57 +78,60 @@ and the want conflict, the want wins.
 
 ## The beats (section titles, in this order)
 
-- **`World`** — events that change the state of the world: a war starting,
-  ending, or escalating in a new way (new front, new belligerent, major
-  deployment); a government falling or a decisive election result; a treaty,
-  sanctions regime, or trade deal signed; a disaster or epidemic measured in
-  thousands; a court ruling that binds a whole country; infrastructure with
-  cross-border consequences (a strait, a grid, a cable, a dam). Filter through
-  five threads: energy, tools, information, money, force.
-  *Out:* polls, speeches, campaign events, statements of intent, protests
-  without an outcome, individual crimes, celebrity, sport, daily updates with
-  no new fact. 0–3 items; zero most days. Voice here is the strictest in the
-  paper: no framing, no "critics say", no adjectives of judgment.
-- **`AI for Software Development`** — what changed for someone who builds
-  software with agents: Claude Code, Codex, Cursor, Devin, Gemini CLI and
-  their peers; model launches from the frontier labs insofar as they change
-  coding; pricing and capability shifts; real production numbers (revenue,
-  usage) when they signal where the tools are going. *Out:* point releases and
-  changelog entries, "model X now available in product Y", and GitHub Copilot
-  unless it is a genuine product or pricing shift.
-- **`AI Research & Models`** — frontier or notable open-weight model releases;
-  results that move a frontier (a benchmark jump, a model producing a real
-  scientific or mathematical result); safety incidents and regulation with
-  teeth (a subpoena, a law, a binding rule); compute deals large enough to
-  change capacity. *Out:* institutional housekeeping (journal and arXiv
-  policies, conference logistics, org charts, hiring), funding rounds without
-  a shipped thing, surveys and opinion polls, "plans to", partnerships without
-  a product.
-- **`Dev Tools & Releases`** — language, framework, runtime and major library
-  releases that change what a developer can do (a new capability, a breaking
-  change, a major version); GitHub and infrastructure changes with the same
-  property; genuinely notable new open-source projects. *Out:* point releases,
-  changelog items, and vulnerabilities, unless a CVE is actively exploited
-  *and* in tooling most developers run daily (npm, Git, Docker, a top-five
-  runtime, GitHub itself).
-- **`Money`** — macro and Bitcoin in one section, because both are thin on
-  real news most days and neither should be padded. *In:* central-bank
-  decisions and explicit signals (Fed, ECB, BoJ, BoE, PBoC); inflation, jobs
-  and GDP prints **when they change the expected path** (a surprise, a
-  revision that matters), not every print; energy, commodity, currency and
-  sovereign-debt shocks; fiscal and trade policy with teeth; banking stress.
-  Bitcoin protocol and L2 developments, mining, regulation and legal rulings,
-  ETF and treasury-company moves of real size, notable on-chain events, hacks
-  that matter. Primary sources first: the bank's statement, the statistics
-  office (BLS, BEA, Eurostat, ONS), the ministry, the filing. *Out:* daily
-  market recaps ("yields rose", "stocks fell", "BTC holds near"), analyst
-  forecasts and price targets, altcoins. A price or yield move is a story only
-  when exceptional (a multi-decade high, a 7%+ day, an all-time high, a
-  liquidation cascade) or caused by a specific event, and then the cause is
-  the headline. The calendar belongs in `ahead`, which this section should
-  nearly always have.
+- **`World`** — only what reaches this reader or truly changes the world. The
+  test: does it plausibly change their money, prices, energy bills, travel,
+  tools, rights or safety, or would every history of the century record it (a
+  war between major powers, a cure for cancer, a pandemic that reaches Europe,
+  the US presidency changing hands, US–China export controls, an EU law that
+  binds them)? A regional war, a coup, a court fight or an election in another
+  country fails unless it hits oil, markets or Europe directly, and then it
+  usually belongs in `Money` through its effect. Zero items is the normal day.
+  `ahead`: only US presidential and midterm elections, decisive EU-level votes,
+  and summits whose outcome could reach the reader. Voice: no framing, no
+  "critics say", no adjectives of judgment.
+- **`AI`** — one section for everything AI. *In:* what changes for someone
+  building software with state-of-the-art agents (Claude Code and Anthropic,
+  Codex and OpenAI first; Cursor or Gemini CLI only for a genuine shift):
+  launches, pricing and limit changes, capability jumps, real production
+  numbers. Frontier model launches from the top labs. Open-weight releases only
+  when they reach the frontier. Safety and regulation only when big and binding
+  (a law, a ruling, a filing like a lab saying it has hit its own risk
+  threshold). Compute deals only when they change who can build what.
+  *Out:* Copilot and tools the reader does not use, point releases, changelog
+  items, betas of small API features, "model X now in product Y", model
+  retirements and deprecations, institutional housekeeping, funding rounds,
+  surveys, "plans to", partnerships without a product. `ahead`: only dated
+  launches or deadlines from Anthropic or OpenAI that change what the reader
+  can do; no conferences, no retirements.
+- **`Dev Tools`** — only the big ones. *In:* a security crisis on the day it
+  breaks: an actively exploited vulnerability or supply-chain compromise in
+  something a large share of developers run (a top language runtime like the
+  big PHP one, npm, PyPI, Git, Docker, GitHub, a major editor or agent). Major
+  versions of top languages and runtimes that change what developers can do.
+  GitHub changes that break workflows. *Out:* the steady stream of CVEs,
+  point releases, conferences, brownouts and small GitHub changelog items.
+  Most days this section is absent.
+- **`Money`** — the Fed and US data, the ECB and euro-area data, and Bitcoin.
+  *In:* Fed and ECB decisions and explicit signals; US and euro-area CPI, jobs
+  and GDP when they change the expected path; a genuine shock in energy, the
+  dollar, the euro or US/euro-area sovereign debt; US or EU fiscal and trade
+  policy with teeth; banking stress in the US or Europe. Bitcoin, big ones
+  only: an all-time high, a crash or liquidation cascade (with the cause as
+  the headline), protocol changes and soft-fork activations that matter, US/EU
+  regulation and rulings, ETF flows or treasury-company moves of real size
+  (Strategy, index-inclusion decisions). *Out:* other central banks (RBA, BoC,
+  PBoC plumbing; BoJ and BoE only if they move global markets), ratings
+  outlooks for single countries, daily recaps, analyst forecasts, altcoins,
+  exchange incidents after their first day unless decisive. `ahead`: FOMC,
+  ECB, US CPI and jobs, euro-area flash inflation, and big Bitcoin dates.
+- **`Austria`** — a small section, usually empty: only what changes the
+  reader's life or money in Austria (a tax or pension change, a law that
+  applies to them, a government falling, an election result, energy prices or
+  a regulation they will feel). *Out:* party politics, polls, scandals,
+  regional news. `ahead`: national elections and dates when such changes take
+  effect.
 
-The builder adds one chart to this section: Bitcoin weekly close against its 200-week moving average, log scale, last eight years, drawn from `data/btc-weekly.json`. Do not add chart data to the edition.
+The builder adds one chart to the `Money` section: Bitcoin weekly close against its 200-week moving average, log scale, last eight years, drawn from `data/btc-weekly.json`. Do not add chart data to the edition.
 
 ## Writing an item
 
@@ -157,7 +176,7 @@ The builder adds one chart to this section: Bitcoin weekly close against its 200
   "date": "2026-06-13",
   "sections": [
     {
-      "title": "AI for Software Development",
+      "title": "AI",
       "items": [
         {
           "lead": true,
@@ -177,8 +196,8 @@ The builder adds one chart to this section: Bitcoin weekly close against its 200
 }
 ```
 
-Section `title` values match the five beats above; omit a section that has no
-items and no `ahead` entries. `lead`, `follow_up` and `ahead` are optional;
+Section `title` values match the five beats above (older editions use the earlier titles; leave them); omit a section that has no
+items (the builder drops it anyway, `ahead` and chart included). `lead`, `follow_up` and `ahead` are optional;
 everything else is required. `build.mjs` handles all HTML, the featured lead,
 the Ahead strips, follow-up markers and the Bitcoin chart (an inline SVG,
 no third-party script). Never hand-edit

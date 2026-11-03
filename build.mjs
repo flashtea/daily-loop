@@ -404,10 +404,11 @@ function renderSection(section, lead, editions) {
   // The lead story runs full-width at the top of its own section; the rest
   // flow in columns beneath it.
   const visible = all.filter((it) => it !== lead);
+  // A section without stories is left out entirely, Ahead list and chart included.
+  if (!all.length) return "";
   const items = visible.map((it) => renderStory(it, editions)).join("\n");
   const chart = /^(bitcoin|money)$/i.test(section.title.trim()) ? BTC_CHART : "";
   const ahead = aheadLine(section);
-  if (!items.trim() && !chart && !ahead) return "";
   const n = visible.length + (hasLead ? 1 : 0);
   return `<section class="beat">
       <h2 class="label">${escapeHtml(section.title)}<span>${n} ${n === 1 ? "story" : "stories"}${hasLead ? ", lead above" : ""}</span></h2>
