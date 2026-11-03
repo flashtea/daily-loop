@@ -4,8 +4,12 @@
 // Run before `node build.mjs`. Needs network; if every source fails the
 // existing file is kept and the build still works with older data.
 //
-// Sources, in order: blockchain.com (daily market price since 2009),
-// Kraken (weekly OHLC since 2013). Both are free and keyless.
+// Sources: blockchain.com (daily market price since 2009) for the long
+// history, topped up with Kraken's daily OHLC (last ~720 days) because
+// blockchain.com's series sometimes stops updating for days at a time.
+// Kraken's weekly OHLC is the fallback if blockchain.com fails entirely.
+// All free and keyless. A result whose last point is more than MAX_STALE_DAYS
+// old is written but reported loudly, so a stalled feed cannot go unnoticed.
 
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { join, dirname } from "node:path";
@@ -15,6 +19,7 @@ const ROOT = dirname(fileURLToPath(import.meta.url));
 const OUT = join(ROOT, "data", "btc-weekly.json");
 const DAY = 86400;
 const WEEK = 7 * DAY;
+const MAX_STALE_DAYS = 2;
 
 const isoDay = (sec) => new Date(sec * 1000).toISOString().slice(0, 10);
 
@@ -43,7 +48,32 @@ async function fromBlockchain() {
   const d = await r.json();
   const points = d.values.map((v) => [v.x, v.y]);
   if (points.length < 1000) throw new Error("blockchain.com: too few points");
-  return { source: "blockchain.com", weeks: weeklyFromDaily(points), asOf: isoDay(points[points.length - 1][0]) };
+  // Append Kraken daily closes for any days after blockchain.com's last point.
+  let source = "blockchain.com";
+  try {
+    const recent = await krakenDaily();
+    const lastSec = points[points.length - 1][0];
+    const extra = recent.filter(([sec]) => sec > lastSec);
+    if (extra.length) {
+      points.push(...extra);
+      source = "blockchain.com + Kraken";
+    }
+  } catch (err) {
+    console.error(`  kraken daily top-up: ${err.message}`);
+  }
+  return { source, weeks: weeklyFromDaily(points), asOf: isoDay(points[points.length - 1][0]) };
+}
+
+// Daily closes for roughly the last 720 days; the last row is today so far.
+async function krakenDaily() {
+  const r = await fetch("https://api.kraken.com/0/public/OHLC?pair=XBTUSD&interval=1440", {
+    signal: AbortSignal.timeout(30000),
+  });
+  if (!r.ok) throw new Error(`kraken ${r.status}`);
+  const d = await r.json();
+  const key = Object.keys(d.result || {}).find((k) => k !== "last");
+  if (!key) throw new Error("kraken: no data");
+  return d.result[key].map((row) => [Number(row[0]), Number(row[4])]);
 }
 
 async function fromKraken() {
@@ -80,6 +110,10 @@ async function main() {
     }
   }
   const last = data.weeks[data.weeks.length - 1];
+  const staleDays = Math.floor((Date.now() / 1000 - Date.parse(`${data.asOf || last[0]}T00:00:00Z`) / 1000) / DAY);
+  if (staleDays > MAX_STALE_DAYS) {
+    console.error(`  WARNING: newest price is ${staleDays} days old (${data.asOf}); every source looks stalled.`);
+  }
   const out = {
     source: data.source,
     asOf: data.asOf || last[0],
