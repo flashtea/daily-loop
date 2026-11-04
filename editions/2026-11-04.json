@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-04",
+  "sections": [
+    {
+      "title": "World",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Democrats won the House in the US midterms with at least 235 seats projected and flipped Senate seats in North Carolina, South Carolina and Texas, leaving Senate control undecided",
+          "summary": "By 23:00 Eastern on 3 November the CNBC Election Desk projected Democrats to win at least 235 of 435 House seats and Republicans at least 160, ending the Republican House majority from January, when Hakeem Jeffries is expected to be elected Speaker. In the Senate, Democrats Roy Cooper, Annie Andrews and James Talarico took Republican-held seats in North Carolina, South Carolina and Texas, Darline Graham conceded, and Republican Ashley Moody held Florida; Democrats need one more flip and a hold in Michigan for a majority, with Maine, Michigan, Ohio, Kansas and Alaska uncalled.",
+          "why": "From January no US tax, spending or tariff legislation passes without Democratic votes in the House, so plan for two years of divided government, continuing resolutions and oversight of the administration rather than new fiscal packages.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/11/03/midterm-elections-2026-live-updates.html"
+        }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [
+        {
+          "headline": "Binance published a zero-knowledge proof of reserves showing its ten largest user assets fully backed, four days after the $6.3 billion theft",
+          "summary": "The proof, generated from the 31 October snapshot, covers BTC, ETH, USDT, BNB, SOL, USDC, XRP, USD1, RLUSD and ZEC and lets users verify that customer balances in those assets are backed at least 1:1; co-CEO Richard Teng said the exchange has replaced about 95% of the stolen assets from its own funds and is still acquiring the remaining 5%, which are less liquid tokens. Binance said it would restore withdrawals for further networks from 3 November and take another reserves snapshot on 4 November; DefiLlama put 24-hour net outflows at about $3.3 billion, down from a peak near $7 billion.",
+          "why": "The solvency question left open since the theft is now answered for the ten biggest assets, so what remains of the reason to keep funds off Binance is the exchange's operational security, not whether your bitcoin is there.",
+          "source": "The Block",
+          "url": "https://www.theblock.co/news/business/2026-11-02-binance-zero-knowledge-proof-of-reserves-snapshot-hack-recovery-432321",
+          "follow_up": "2026-10-30"
+        }
+      ]
+    }
+  ],
+  "ahead": [
+    {
+      "date": "2026-11-04",
+      "what": "Eurostat flash estimate of October euro-area inflation (10:00 UTC; September was 3.8%)"
+    },
+    {
+      "date": "2026-11-06",
+      "what": "US October jobs report (BLS, 13:30 UTC)"
+    },
+    {
+      "date": "2026-11-10",
+      "what": "US October CPI (BLS, 13:30 UTC)",
+      "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+    },
+    {
+      "date": "2026-12-01",
+      "what": "Eurostat flash estimate of November euro-area inflation, the last before the ECB's December decision",
+      "url": "https://www.ecb.europa.eu/press/calendars/statscal/ges/html/sthicp.en.html"
+    },
+    {
+      "date": "2026-12-09",
+      "what": "FOMC rate decision with new projections (19:00 UTC); two members voted to hike in October",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+    },
+    {
+      "date": "2026-12-17",
+      "what": "ECB rate decision with new staff projections; markets price a possible hike from 2.50%"
+    }
+  ]
+}
