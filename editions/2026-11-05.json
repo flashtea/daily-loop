@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-05",
+  "sections": [
+    {
+      "title": "World",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Democrats won the Senate too, flipping seven Republican seats, and will control both chambers of Congress from January",
+          "summary": "By late 4 November Democrats had taken Republican-held Senate seats in Kansas, Texas, Iowa, South Carolina, Ohio, Maine and North Carolina while Republicans flipped none, giving them a majority with Alaska and Mississippi still uncalled; in the House they had flipped at least 24 districts with nine seats outstanding. Democrats also won five governorships, including Texas, Georgia, Ohio and Iowa, for a majority of governors for the first time since 2010, and took up to twelve state legislative chambers.",
+          "why": "Trump now faces a Congress he does not control for his last two years, so expect the veto, not legislation, to set US fiscal and trade policy, and hearings rather than new tax or tariff packages.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/11/04/democrats-2026-midterm-election-results.html",
+          "follow_up": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [
+        {
+          "headline": "Euro-area inflation rose to 4.0% in October on a 20.8% jump in energy prices, Eurostat's flash estimate showed",
+          "summary": "The rate was up from 3.8% in September; energy accelerated from 18.9%, services rose to 3.3%, and core inflation excluding energy, food, alcohol and tobacco stayed at 2.5%. Austria's rate eased to 3.5% from 3.6%. The ECB held its deposit rate at 2.50% on 29 October after a hike in September and decides next on 17 December.",
+          "why": "Headline inflation at twice the target with a flat core makes a December ECB hike more likely than not, so do not count on cheaper euro borrowing before spring, and expect your Austrian energy bills to keep rising until the oil shock fades.",
+          "source": "Eurostat",
+          "url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-04112026-ap"
+        }
+      ]
+    }
+  ],
+  "ahead": [
+    {
+      "date": "2026-11-06",
+      "what": "US October jobs report (BLS, 13:30 UTC)"
+    },
+    {
+      "date": "2026-11-10",
+      "what": "US October CPI (BLS, 13:30 UTC)",
+      "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+    },
+    {
+      "date": "2026-11-11",
+      "what": "MSCI publishes the final list of companies its 'non-operating company' rules remove from its global indexes; Strategy, with 848,517 bitcoin, is the main candidate",
+      "url": "https://www.theblock.co/news/business/2026-10-15-msci-rules-could-exclude-strategy-mstr-from-indexes-418729"
+    },
+    {
+      "date": "2026-12-01",
+      "what": "Eurostat flash estimate of November euro-area inflation, the last before the ECB's December decision",
+      "url": "https://www.ecb.europa.eu/press/calendars/statscal/ges/html/sthicp.en.html"
+    },
+    {
+      "date": "2026-12-09",
+      "what": "FOMC rate decision with new projections (19:00 UTC); two members voted to hike in October",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+    },
+    {
+      "date": "2026-12-17",
+      "what": "ECB rate decision with new staff projections; October inflation was 4.0% and markets price a possible hike from 2.50%"
+    }
+  ]
+}
