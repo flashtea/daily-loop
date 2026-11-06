@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-06",
+  "sections": [
+    {
+      "title": "AI",
+      "items": [
+        {
+          "headline": "Moonshot AI published the weights of Kimi K3.1 Pro, a 2.8-trillion-parameter model that scores 65.7 on Terminal-Bench 4.0 against Claude Opus 5.5's 66.4, under an MIT-style licence",
+          "summary": "The weights went up on Hugging Face on 4 November, as promised when the model launched in late October: 2.8 trillion total and 104 billion active parameters, a 1-million-token context, MXFP4 weights from quantization-aware training, about 1.56 TB in 96 shards. The Kimi K3.1-Pro License follows the MIT text and adds two conditions that only bind large operators: model-as-a-service businesses with over $20 million of revenue in 12 months need a separate agreement, and products with over 100 million monthly users or $20 million of monthly revenue must display the model's name.",
+          "why": "A coding-agent model within a point of Opus 5.5 on its own benchmarks can now be served by any inference provider or run in your own cluster, so expect agentic coding tokens to get cheaper and your dependence on one lab's API to loosen.",
+          "source": "Moonshot AI (Hugging Face)",
+          "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+          "follow_up": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [
+        {
+          "lead": true,
+          "headline": "The Nasdaq fell 5.5% into a correction and the S&P 500 4.4% on 5 November, the worst day for US stocks since April 2025, as chip stocks sold off on fears of a data-centre slowdown",
+          "summary": "The S&P 500 closed at 7,353.73, the Nasdaq Composite at 24,315.00, more than 10% below last month's record, and the Dow lost 1,833 points to 51,523.06. The iShares Semiconductor ETF had its worst day since March 2020 with Nvidia down 9% and AMD and Micron 15%, as investors tied the Democratic sweep of Congress and governorships to tighter regulation of AI infrastructure. Bitcoin fell 6% to about $75,700, its lowest since mid-September, with nearly $1.1 billion of leveraged positions liquidated in 24 hours.",
+          "why": "The AI trade, not the election itself, is now what moves your portfolio and your bitcoin, so treat the midterm rally of 4 November as gone and watch Nvidia's earnings on 17 November as the next test of whether data-centre spending holds.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/11/04/stock-market-today-live-updates.html"
+        }
+      ]
+    }
+  ],
+  "ahead": [
+    {
+      "date": "2026-11-06",
+      "what": "US October jobs report (BLS, 13:30 UTC)"
+    },
+    {
+      "date": "2026-11-10",
+      "what": "US October CPI (BLS, 13:30 UTC)",
+      "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+    },
+    {
+      "date": "2026-11-11",
+      "what": "MSCI publishes the final list of companies its 'non-operating company' rules remove from its global indexes; Strategy, with 849,327 bitcoin, is the main candidate",
+      "url": "https://www.theblock.co/news/business/2026-10-15-msci-rules-could-exclude-strategy-mstr-from-indexes-418729"
+    },
+    {
+      "date": "2026-12-01",
+      "what": "Eurostat flash estimate of November euro-area inflation, the last before the ECB's December decision",
+      "url": "https://www.ecb.europa.eu/press/calendars/statscal/ges/html/sthicp.en.html"
+    },
+    {
+      "date": "2026-12-09",
+      "what": "FOMC rate decision with new projections (19:00 UTC); two members voted to hike in October",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+    },
+    {
+      "date": "2026-12-17",
+      "what": "ECB rate decision with new staff projections; October inflation was 4.0% and markets price a possible hike from 2.50%"
+    }
+  ]
+}
