@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-07",
+  "sections": [
+    {
+      "title": "AI",
+      "items": [
+        {
+          "headline": "METR's independent assessment found Anthropic improving model capabilities at about twice its 2024–25 rate, with roughly 80% of the acceleration attributed to AI",
+          "summary": "The evaluator's report, commissioned by Anthropic and covering 12 August to 29 October, put benchmark acceleration at 1.9x (95% interval 1.5–2.8x) since October 2025, found no convincing bottleneck over the next twelve months and said the speed-up was not driven by faster growth in training compute. Anthropic held redaction rights and removed most of the evidence METR found most informative, and METR said its conclusions therefore rest heavily on its own judgment.",
+          "why": "Plan on Claude models improving at roughly twice the pace you saw through 2025, not plateauing, when you decide what to build yourself and what to leave to the next model.",
+          "source": "METR",
+          "url": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/",
+          "follow_up": "2026-11-03"
+        }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [
+        {
+          "lead": true,
+          "headline": "US employers added 165,000 jobs in October, more than double the forecast, and unemployment fell to 4.1%",
+          "summary": "The Bureau of Labor Statistics report also revised August and September up by a combined 84,000 and put average hourly earnings 3.1% higher than a year earlier. Futures priced about an 80% chance of a quarter-point Fed hike at the 9 December meeting after the release, up from about 75% before it, according to Reuters.",
+          "why": "Treat a December Fed hike to 4.00–4.25% as the base case for dollar rates, mortgage pricing and risk assets, not a tail risk.",
+          "source": "Bureau of Labor Statistics",
+          "url": "https://www.bls.gov/news.release/empsit.nr0.htm"
+        }
+      ]
+    }
+  ],
+  "ahead": [
+    { "date": "2026-11-10", "what": "US October CPI (BLS, 13:30 UTC)", "url": "https://www.bls.gov/schedule/news_release/cpi.htm" },
+    { "date": "2026-11-11", "what": "MSCI publishes the final list of companies its 'non-operating company' rules remove from its global indexes; Strategy, with 849,327 bitcoin, is the main candidate", "url": "https://www.theblock.co/news/business/2026-10-15-msci-rules-could-exclude-strategy-mstr-from-indexes-418729" },
+    { "date": "2026-12-01", "what": "Eurostat flash estimate of November euro-area inflation, the last before the ECB's December decision", "url": "https://www.ecb.europa.eu/press/calendars/statscal/ges/html/sthicp.en.html" },
+    { "date": "2026-12-09", "what": "FOMC rate decision with new projections (19:00 UTC); futures price about an 80% chance of a quarter-point hike after the October jobs report", "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" },
+    { "date": "2026-12-17", "what": "ECB rate decision with new staff projections; October inflation was 4.0% and Lagarde said incoming data will decide whether a hike from 2.50% is needed" }
+  ]
+}
