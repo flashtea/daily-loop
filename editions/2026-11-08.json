@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-08",
+  "sections": [
+    {
+      "title": "AI",
+      "items": [
+        {
+          "lead": true,
+          "headline": "A Claude Code user reported that the tool wrote their account email address into the User-Agent header of web requests it made; Anthropic's 2.1.317 release added a check before any call sends the email",
+          "summary": "The report, filed on 5 November against version 2.1.318 and one of the most-reacted issues in the anthropics/claude-code repository, says the address reached third-party sites during web searches and was followed by dozens of scam emails a day. Anthropic's changelog for 2.1.317, released on 3 November, added a check that asks before a web or shell tool call sends the account email to the network, and a contributor on the thread said it ships as a built-in plugin, on by default, that can be disabled from /plugins; the thread does not confirm that every path is covered.",
+          "why": "Update Claude Code to 2.1.317 or later, leave the privacy check on, and assume that sites you had the agent fetch while signed in may hold the email on your Anthropic account.",
+          "source": "GitHub (anthropics/claude-code)",
+          "url": "https://github.com/anthropics/claude-code/issues/107757"
+        }
+      ]
+    }
+  ],
+  "ahead": [
+    { "date": "2026-11-10", "what": "US October CPI (BLS, 13:30 UTC)", "url": "https://www.bls.gov/schedule/news_release/cpi.htm" },
+    { "date": "2026-11-11", "what": "MSCI publishes the final list of companies its 'non-operating company' rules remove from its global indexes; Strategy, with 849,327 bitcoin, is the main candidate", "url": "https://www.theblock.co/news/business/2026-10-15-msci-rules-could-exclude-strategy-mstr-from-indexes-418729" },
+    { "date": "2026-12-01", "what": "Eurostat flash estimate of November euro-area inflation, the last before the ECB's December decision", "url": "https://www.ecb.europa.eu/press/calendars/statscal/ges/html/sthicp.en.html" },
+    { "date": "2026-12-09", "what": "FOMC rate decision with new projections (19:00 UTC); futures price about an 80% chance of a quarter-point hike after the October jobs report", "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" },
+    { "date": "2026-12-17", "what": "ECB rate decision with new staff projections; October inflation was 4.0% and Lagarde said incoming data will decide whether a hike from 2.50% is needed" }
+  ]
+}
