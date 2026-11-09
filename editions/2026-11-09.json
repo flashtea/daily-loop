@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-09",
+  "sections": [
+    {
+      "title": "AI",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Apiiro found 1,379 secrets in 1,122 public copies of Claude Code's settings.local.json, the file where 'Yes, and don't ask again' saves approved shell commands word for word",
+          "summary": "The security firm scanned 104,185 public copies of .claude/settings.local.json on GitHub and found that 1,122 of them, about 1.1%, hold at least one credential, including 379 database passwords, 43 SSH logins to public servers, 42 GitHub, GitLab and npm tokens and 23 AWS keys; with git history, committed settings.json files and forks included, it counted 2,539 secrets across 1,994 repositories. Claude Code excludes the file only in the machine's global git excludes, not the project's .gitignore, so other clones and teammates are unprotected, and Gitleaks and TruffleHog both missed 215 of the files because the passwords sit inside commands such as PGPASSWORD= and sshpass -p; Apiiro says the four related bug reports since August 2025 were all closed by a bot without a reply.",
+          "why": "Search every repository you have used Claude Code in for a committed .claude/settings.local.json or settings.json, including history, rotate anything found there before deleting it, and approve command patterns rather than one-off commands that carry a credential.",
+          "source": "Apiiro",
+          "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again"
+        }
+      ]
+    }
+  ],
+  "ahead": [
+    { "date": "2026-11-10", "what": "US October CPI (BLS, 13:30 UTC)", "url": "https://www.bls.gov/schedule/news_release/cpi.htm" },
+    { "date": "2026-11-11", "what": "MSCI publishes the final list of companies its 'non-operating company' rules remove from its global indexes; Strategy, with 849,327 bitcoin, is the main candidate", "url": "https://www.theblock.co/news/business/2026-10-15-msci-rules-could-exclude-strategy-mstr-from-indexes-418729" },
+    { "date": "2026-12-01", "what": "Eurostat flash estimate of November euro-area inflation, the last before the ECB's December decision", "url": "https://www.ecb.europa.eu/press/calendars/statscal/ges/html/sthicp.en.html" },
+    { "date": "2026-12-09", "what": "FOMC rate decision with new projections (19:00 UTC); futures price about an 80% chance of a quarter-point hike after the October jobs report", "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" },
+    { "date": "2026-12-17", "what": "ECB rate decision with new staff projections; October inflation was 4.0% and Lagarde said incoming data will decide whether a hike from 2.50% is needed" }
+  ]
+}
