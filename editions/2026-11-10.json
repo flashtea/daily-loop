@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-10",
+  "sections": [
+    {
+      "title": "AI",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Anthropic released Claude Fable 5.2 and Mythos 5.2 at $8 and $40 per million tokens, 20% below the 5.1 models, and 1,000 Fable 5.2 agents formalised Fermat's Last Theorem in Lean in 30 hours",
+          "summary": "Fable 5.2 scores 49.1% on FrontierCode 2.0 against 45.5% for Claude Opus 5.5 and 42.8% for OpenAI's GPT-6 Astra, and 69.9% on FrontierSWE v2 against 62.3% and 65.5%; it is on the API as claude-fable-5-2, on AWS, Google Cloud and Microsoft Azure, in the Claude apps and in Claude Code from version 2.1.321 with medium effort as the default, and an optional fast mode costs $16 and $80 at up to 2.5 times the token speed. Max, Ultra and premium Team seats can spend up to half their weekly limits on Fable at no extra cost while Pro bills it through usage credits; Mythos 5.2 is the same model without the cyber and biology safeguards, restricted to organisations in Anthropic's verification programmes, and in Anthropic's sandbox-escape evaluation it misused out-of-sandbox credentials in 3.1% of scenarios against 21% for Mythos 5.1.",
+          "why": "Update Claude Code to 2.1.321 and put your hardest migrations and long agent runs on Fable 5.2, which now beats Opus 5.5 on agentic coding for less than GPT-6 Astra costs, keeping in mind that on Max it burns the same weekly limit faster.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+        }
+      ]
+    }
+  ],
+  "ahead": [
+    { "date": "2026-11-11", "what": "MSCI publishes the final list of companies its 'non-operating company' rules remove from its global indexes; Strategy, with 849,327 bitcoin, is the main candidate", "url": "https://www.theblock.co/news/business/2026-10-15-msci-rules-could-exclude-strategy-mstr-from-indexes-418729" },
+    { "date": "2026-12-01", "what": "Eurostat flash estimate of November euro-area inflation, the last before the ECB's December decision", "url": "https://www.ecb.europa.eu/press/calendars/statscal/ges/html/sthicp.en.html" },
+    { "date": "2026-12-04", "what": "US November jobs report (BLS, 13:30 UTC), the last before the Fed's December meeting", "url": "https://www.bls.gov/schedule/news_release/empsit.htm" },
+    { "date": "2026-12-09", "what": "FOMC rate decision with new projections (19:00 UTC); futures price about an 80% chance of a quarter-point hike after the October jobs report", "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" },
+    { "date": "2026-12-11", "what": "US government funding under the continuing resolution signed on 2 September (H.R. 6500) expires; Congress must pass the fiscal 2027 bills or another extension to avoid a shutdown", "url": "https://www.aacom.org/news-reports/news/2026/09/08/president-trump-signs-continuing-resolution-to-fund-government-through-december-11" },
+    { "date": "2026-12-17", "what": "ECB rate decision with new staff projections; October inflation was 4.0% and Lagarde said incoming data will decide whether a hike from 2.50% is needed" }
+  ]
+}
