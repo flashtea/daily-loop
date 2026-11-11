@@ -5,9 +5,6 @@
 //
 // Setup (once):  npm install  &&  npx playwright install chromium
 // Usage:         node preview.mjs [page]   (page defaults to index.html)
-//
-// Live Bitcoin charts (TradingView) need network and won't render here — that's
-// expected; this is for layout, not the widgets.
 
 import { execSync } from "node:child_process";
 import { mkdirSync } from "node:fs";
@@ -44,7 +41,7 @@ async function main() {
       });
       const p = await ctx.newPage();
       await p.goto(url, { waitUntil: "load" });
-      // Settle layout; skip waiting on the external chart widgets.
+      // Settle layout.
       await p.waitForTimeout(400);
       const file = join(OUT, `${page.replace(/\.html$/, "")}-${vp.name}.png`);
       await p.screenshot({ path: file, fullPage: true });

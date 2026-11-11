@@ -215,209 +215,24 @@ function aheadLine(section) {
   return `<div class="ahead"><h3>Ahead</h3><ul>${parts}</ul></div>`;
 }
 
-// ---------- Bitcoin chart: weekly close vs 200-week moving average ----------
-// Data comes from data/btc-weekly.json (written by fetch-btc.mjs). The chart
-// is a static inline SVG on a log scale, with a small hover layer; no
-// third-party script. Deliberately long-horizon: this is not for watching
-// the price.
-
-const CHART_YEARS = 8;
-const WMA_WEEKS = 200;
-const CHART_PRICE = "var(--c-price)"; // tea amber, as on flashtea.dev
-const CHART_WMA = "var(--c-avg)"; // slate; differs from the amber in lightness too
-
-function loadBtcWeekly() {
-  try {
-    const d = JSON.parse(readFileSync(join(ROOT, "data", "btc-weekly.json"), "utf8"));
-    if (!Array.isArray(d.weeks) || d.weeks.length < WMA_WEEKS + 52) return null;
-    return d;
-  } catch {
-    return null;
-  }
-}
-
-const fmtUsd = (v) =>
-  v >= 1000
-    ? "$" + Math.round(v).toLocaleString("en-US")
-    : "$" + v.toLocaleString("en-US", { maximumFractionDigits: 2 });
-
-function logTicks(lo, hi) {
-  const series = [
-    [1, 2, 5],
-    [1, 3],
-    [1],
-  ];
-  for (const mult of series) {
-    const ticks = [];
-    for (let e = Math.floor(Math.log10(lo)); e <= Math.ceil(Math.log10(hi)); e++) {
-      for (const m of mult) {
-        const v = m * 10 ** e;
-        if (v >= lo && v <= hi) ticks.push(v);
-      }
-    }
-    if (ticks.length <= 6) return ticks;
-  }
-  return [];
-}
-
-// Builds the SVG for one viewport size. Two are emitted (desktop and phone
-// proportions) and CSS shows one, so text is never stretched.
-function bitcoinChartSvg(data, W, H) {
-  const weeks = data.weeks;
-  // 200-week simple moving average of weekly closes.
-  const wma = new Array(weeks.length).fill(null);
-  let sum = 0;
-  for (let i = 0; i < weeks.length; i++) {
-    sum += weeks[i][1];
-    if (i >= WMA_WEEKS) sum -= weeks[i - WMA_WEEKS][1];
-    if (i >= WMA_WEEKS - 1) wma[i] = sum / WMA_WEEKS;
-  }
-  const asOf = data.asOf || weeks[weeks.length - 1][0];
-  const start = new Date(`${asOf}T00:00:00Z`);
-  start.setUTCFullYear(start.getUTCFullYear() - CHART_YEARS);
-  const startIso = start.toISOString().slice(0, 10);
-  const idx = [];
-  for (let i = 0; i < weeks.length; i++) if (weeks[i][0] >= startIso && wma[i]) idx.push(i);
-  if (idx.length < 52) return null;
-
-  const narrow = W < 600;
-  const padL = 8, padR = narrow ? 58 : 64, padT = 14, padB = 26;
-  const plotW = W - padL - padR, plotH = H - padT - padB;
-  const t0 = Date.parse(weeks[idx[0]][0]);
-  const t1 = Date.parse(asOf);
-  let lo = Infinity, hi = 0;
-  for (const i of idx) {
-    lo = Math.min(lo, weeks[i][1], wma[i]);
-    hi = Math.max(hi, weeks[i][1], wma[i]);
-  }
-  lo = lo / 1.15; hi = hi * 1.15;
-  const x = (iso) => padL + ((Date.parse(iso) - t0) / (t1 - t0)) * plotW;
-  const y = (v) => padT + plotH - ((Math.log10(v) - Math.log10(lo)) / (Math.log10(hi) - Math.log10(lo))) * plotH;
-  const pts = (get) => idx.map((i) => `${x(weeks[i][0]).toFixed(1)},${y(get(i)).toFixed(1)}`).join(" ");
-
-  const last = idx[idx.length - 1];
-  const lastPrice = weeks[last][1], lastWma = wma[last];
-  let ticks = logTicks(lo, hi);
-  if (narrow && ticks.length > 4) ticks = ticks.filter((_, k) => k % 2 === 0);
-  // Gridline for every tick; label only where it won't sit under an end label.
-  const nearEnd = (v) => Math.abs(y(v) - y(lastPrice)) < 13 || Math.abs(y(v) - y(lastWma)) < 13;
-  const yTicks = ticks
-    .map(
-      (v) => `<line x1="${padL}" x2="${padL + plotW}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" class="grid"/>${
-        nearEnd(v) ? "" : `<text x="${padL + plotW + 8}" y="${(y(v) + 4).toFixed(1)}" class="tick">${fmtUsd(v)}</text>`
-      }`,
-    )
-    .join("");
-  const xTicks = [];
-  const yearStep = narrow ? 2 : 1;
-  for (let yr = new Date(t0).getUTCFullYear() + 1; yr <= new Date(t1).getUTCFullYear(); yr++) {
-    const iso = `${yr}-01-01`;
-    if (Date.parse(iso) < t0) continue;
-    const labeled = (yr - new Date(t1).getUTCFullYear()) % yearStep === 0;
-    xTicks.push(
-      `<line x1="${x(iso).toFixed(1)}" x2="${x(iso).toFixed(1)}" y1="${padT}" y2="${padT + plotH}" class="grid"/>${
-        labeled ? `<text x="${x(iso).toFixed(1)}" y="${H - 8}" class="tick mid">${yr}</text>` : ""
-      }`,
-    );
-  }
-
-  let yP = y(lastPrice), yW = y(lastWma);
-  if (Math.abs(yP - yW) < 14) {
-    const mid = (yP + yW) / 2;
-    const priceAbove = yP <= yW;
-    yP = priceAbove ? mid - 7 : mid + 7;
-    yW = priceAbove ? mid + 7 : mid - 7;
-  }
-  const endLabel = (cx, cy, ly, color, text) =>
-    `<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="4" fill="${color}" stroke="var(--paper)" stroke-width="2"/>
-     <text x="${(padL + plotW + 8).toFixed(1)}" y="${(ly + 4).toFixed(1)}" class="endlab">${text}</text>`;
-  const series = idx.map((i) => [weeks[i][0], weeks[i][1], Math.round(wma[i])]);
-
-  const svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Bitcoin weekly price and ${WMA_WEEKS}-week moving average, log scale" data-series='${escapeHtml(JSON.stringify(series))}' data-pad="${padL},${padR},${padT},${padB}">
-            ${yTicks}
-            ${xTicks.join("")}
-            <polyline points="${pts((i) => weeks[i][1])}" fill="none" stroke="${CHART_PRICE}" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
-            <polyline points="${pts((i) => wma[i])}" fill="none" stroke="${CHART_WMA}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
-            ${endLabel(x(asOf), y(lastPrice), yP, CHART_PRICE, fmtUsd(lastPrice))}
-            ${endLabel(x(asOf), y(lastWma), yW, CHART_WMA, fmtUsd(lastWma))}
-            <g class="hover" style="display:none">
-              <line class="xhair" y1="${padT}" y2="${padT + plotH}"/>
-              <circle r="4" fill="${CHART_PRICE}" stroke="var(--paper)" stroke-width="2"/>
-              <circle r="4" fill="${CHART_WMA}" stroke="var(--paper)" stroke-width="2"/>
-            </g>
-          </svg>`;
-  return { svg, asOf, lastPrice, lastWma };
-}
-
-function bitcoinChart() {
-  const data = loadBtcWeekly();
-  if (!data) return "";
-  const wide = bitcoinChartSvg(data, 960, 300);
-  const narrow = bitcoinChartSvg(data, 400, 260);
-  if (!wide || !narrow) return "";
-  const ratio = wide.lastPrice / wide.lastWma;
-
-  return `<figure class="chart btc">
-        <figcaption>
-          <span class="chart-title">Bitcoin · weekly close vs ${WMA_WEEKS}-week moving average · log scale · last ${CHART_YEARS} years</span>
-          <span class="legend"><span class="key" style="background:${CHART_PRICE}"></span>Price<span class="key" style="background:${CHART_WMA}"></span>${WMA_WEEKS}-week average</span>
-        </figcaption>
-        <div class="chart-wrap wide">${wide.svg}<div class="tip" style="display:none"></div></div>
-        <div class="chart-wrap narrow">${narrow.svg}<div class="tip" style="display:none"></div></div>
-        <p class="chart-note">Price is ${ratio.toFixed(2)}× the ${WMA_WEEKS}-week average. Weekly closes, USD, as of ${escapeHtml(mediumDate(wide.asOf))} · data ${escapeHtml(data.source || "")}.</p>
-      </figure>
-      <script>
-      (function(){
-        var fig=document.currentScript.previousElementSibling; if(!fig) return;
-        var fmt=function(v){return '$'+Math.round(v).toLocaleString('en-US');};
-        fig.querySelectorAll('.chart-wrap').forEach(function(wrap){
-          var svg=wrap.querySelector('svg'), tip=wrap.querySelector('.tip'), hov=svg.querySelector('.hover');
-          var series=JSON.parse(svg.getAttribute('data-series')), pad=svg.getAttribute('data-pad').split(',').map(Number);
-          var vb=svg.viewBox.baseVal, plotW=vb.width-pad[0]-pad[1];
-          function show(ev){
-            var r=svg.getBoundingClientRect(), fx=(ev.clientX-r.left)/r.width*vb.width;
-            var k=Math.round((fx-pad[0])/plotW*(series.length-1)); k=Math.max(0,Math.min(series.length-1,k));
-            var d=series[k], xs=pad[0]+k/(series.length-1)*plotW;
-            var pts=svg.querySelectorAll('polyline');
-            var yP=pts[0].points.getItem(k).y, yW=pts[1].points.getItem(k).y;
-            var l=hov.querySelector('line'), c=hov.querySelectorAll('circle');
-            l.setAttribute('x1',xs); l.setAttribute('x2',xs);
-            c[0].setAttribute('cx',xs); c[0].setAttribute('cy',yP); c[1].setAttribute('cx',xs); c[1].setAttribute('cy',yW);
-            hov.style.display='';
-            tip.innerHTML='<b>'+d[0]+'</b><br>Price '+fmt(d[1])+'<br>Average '+fmt(d[2]);
-            tip.style.display='';
-            var px=xs/vb.width*r.width; tip.style.left=(px>r.width*0.65?px-tip.offsetWidth-12:px+12)+'px';
-          }
-          function hide(){hov.style.display='none'; tip.style.display='none';}
-          svg.addEventListener('mousemove',show); svg.addEventListener('mouseleave',hide);
-          svg.addEventListener('touchstart',function(e){show(e.touches[0]);},{passive:true});
-          svg.addEventListener('touchmove',function(e){show(e.touches[0]);},{passive:true});
-          svg.addEventListener('touchend',hide);
-        });
-      })();
-      </script>`;
-}
-
 function renderSection(section, lead, editions) {
   const all = section.items || [];
   const hasLead = all.includes(lead);
   // The lead story runs full-width at the top of its own section; the rest
   // flow in columns beneath it.
   const visible = all.filter((it) => it !== lead);
-  // A section without stories is left out entirely, Ahead list and chart included.
+  // A section without stories is left out entirely, Ahead list included.
   if (!all.length) return "";
   const items = visible.map((it) => renderStory(it, editions)).join("\n");
-  const chart = /^(bitcoin|money)$/i.test(section.title.trim()) ? BTC_CHART : "";
   const ahead = aheadLine(section);
   // Only the lead (already shown in the band) and nothing else: no empty row.
-  if (!items.trim() && !chart && !ahead) return "";
+  if (!items.trim() && !ahead) return "";
   const n = visible.length + (hasLead ? 1 : 0);
   return `<section class="beat">
       <h2 class="label">${escapeHtml(section.title)}<span>${n} ${n === 1 ? "story" : "stories"}${hasLead ? ", lead above" : ""}</span></h2>
       <div class="beat-body${ahead ? "" : " solo"}">
         ${items.trim() ? `<div class="stories">\n${items}\n        </div>` : "<div></div>"}
         ${ahead}
-        ${chart}
       </div>
     </section>`;
 }
@@ -529,11 +344,6 @@ function renderPage(edition, editions, isIndex) {
   let sections = (edition.sections || [])
     .map((s) => renderSection(s, lead, editions))
     .join("\n");
-  // The Bitcoin chart runs every day: inside Money when Money has stories,
-  // otherwise as its own block at the bottom of the page.
-  const moneyShown = (edition.sections || []).some(
-    (s) => /^(bitcoin|money)$/i.test((s.title || "").trim()) && (s.items || []).length,
-  );
   // The paper-wide Ahead list: edition.ahead, shown every day at the bottom.
   const bigAhead = aheadLine({ ahead: edition.ahead });
   if (bigAhead) {
@@ -543,16 +353,6 @@ function renderPage(edition, editions, isIndex) {
       <h2 class="label">Ahead<span>${n} ${n === 1 ? "date" : "dates"}</span></h2>
       <div class="beat-body solo">
         ${bigAhead.replace("<h3>Ahead</h3>", "")}
-      </div>
-    </section>`;
-  }
-  if (!moneyShown && BTC_CHART) {
-    sections += `
-    <section class="beat">
-      <h2 class="label">Bitcoin<span>chart</span></h2>
-      <div class="beat-body solo">
-        <div></div>
-        ${BTC_CHART}
       </div>
     </section>`;
   }
@@ -577,7 +377,7 @@ const STYLE = `/* Daily Loop in the flashtea.dev look (flashtea-infra/site/style
    section has a mono label rail on the left and its stories in a ruled grid. */
 :root {
   --paper: #f6f6f3; --surface: #ffffff; --ink: #17181a; --ink-2: #44474a; --muted: #63686d; --rule: #dcdbd4;
-  --accent: #9a560b; --c-price: #c47a12; --c-avg: #5f6b78;
+  --accent: #9a560b;
   --band-bg: #17181a; --band-ink: #f0efe9; --band-muted: #a3a49d; --band-rule: #2f302c; --band-accent: #e9a445;
   --maxw: 1180px;
   --display: "IBM Plex Sans Condensed", "Arial Narrow", sans-serif;
@@ -642,7 +442,6 @@ main > .beat:first-child { border-top: 0; }
 .label span { display: block; color: var(--muted); margin-top: 2px; }
 .beat-body { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 0 40px; align-items: start; }
 .beat-body.solo { grid-template-columns: minmax(0, 1fr); }
-.beat-body .chart { grid-column: 1 / -1; }
 .stories { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px 36px; }
 .story { padding: 0; }
 .hed { font-family: var(--display); font-weight: 600; font-size: 20px; line-height: 1.22; letter-spacing: -.005em; margin: 0 0 8px; text-wrap: pretty; }
@@ -664,24 +463,6 @@ a.followup:hover { color: var(--ink); }
 .ahead li:first-child { border-top: 0; }
 .ahead .when { font: 12.5px/1.9 var(--mono); color: var(--ink); font-variant-numeric: tabular-nums; }
 .ahead a { text-underline-offset: 3px; }
-
-/* bitcoin chart */
-.chart { margin: 34px 0 0; }
-.chart figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 20px; font: 12.5px var(--mono); color: var(--muted); }
-.legend { display: inline-flex; align-items: center; gap: 6px; }
-.key { display: inline-block; width: 12px; height: 3px; margin-left: 10px; }
-.key:first-child { margin-left: 0; }
-.chart-wrap { position: relative; margin-top: 10px; }
-.chart-wrap svg { display: block; width: 100%; height: auto; overflow: visible; }
-.chart-wrap.narrow { display: none; }
-.chart .grid { stroke: var(--rule); stroke-width: 1; }
-.chart .tick { font: 11px var(--mono); fill: var(--muted); }
-.chart .tick.mid { text-anchor: middle; }
-.chart .endlab { font: 500 11.5px var(--mono); fill: var(--ink); }
-.chart .xhair { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 2 3; }
-.tip { position: absolute; top: 8px; pointer-events: none; background: var(--surface); border: 1px solid var(--rule); border-radius: 2px; padding: 6px 9px; font: 12px/1.5 var(--mono); color: var(--ink-2); white-space: nowrap; }
-.tip b { color: var(--ink); font-weight: 500; }
-.chart-note { margin: 8px 0 0; font-size: 13.5px; color: var(--muted); }
 
 /* archive */
 .cat-list { list-style: none; margin: 0; padding: 0; }
@@ -710,7 +491,6 @@ footer { border-top: 1px solid var(--rule); margin-top: 8px; }
   .beat, .arch-row { grid-template-columns: minmax(0, 1fr); gap: 4px; padding-block: 24px; }
   .label { padding-top: 0; }
   .label span { display: inline; margin-left: 8px; }
-  .chart-wrap.wide { display: none; } .chart-wrap.narrow { display: block; }
 }
 @media (max-width: 520px) {
   .band .wrap { padding-block: 26px 30px; }
@@ -732,8 +512,6 @@ const FAVICON = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 `;
 
 // ---------- main ----------
-
-const BTC_CHART = bitcoinChart();
 
 function build() {
   const editions = loadEditions();

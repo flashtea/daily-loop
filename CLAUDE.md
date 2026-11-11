@@ -136,8 +136,6 @@ and the want conflict, the want wins.
   a regulation they will feel). *Out:* party politics, polls, scandals,
   regional news. 
 
-The builder adds one chart every day, inside `Money` when it has stories and otherwise as its own block at the bottom: Bitcoin weekly close against its 200-week moving average, log scale, last eight years, drawn from `data/btc-weekly.json`. Do not add chart data to the edition.
-
 ## Writing an item
 
 - `headline`: the fact, with the actor and the key number or name. Past
@@ -163,16 +161,12 @@ The builder adds one chart every day, inside `Money` when it has stories and oth
 2. Read the newest three editions.
 3. Research each beat (three or more searches per beat), apply the three
    tests, and write `editions/<date>.json`.
-4. `node fetch-btc.mjs` refreshes `data/btc-weekly.json` for the chart. It
-   needs network; if it fails, the previous file is kept and the build still
-   works. Commit the refreshed file with the edition.
-5. `node build.mjs` (no dependencies; regenerates all of `docs/`).
-6. Optional: `node preview.mjs` renders desktop and mobile screenshots into
+4. `node build.mjs` (no dependencies; regenerates all of `docs/`).
+5. Optional: `node preview.mjs` renders desktop and mobile screenshots into
    `preview/`. Needs `npm install` and a Chromium (`npx playwright install
-   chromium`, or set `CHROMIUM_PATH` to an existing binary). The live charts
-   do not render offline; that is expected.
-7. `git add -A && git commit -m "edition: <date>" && git push`.
-8. Report the section-by-section headline list.
+   chromium`, or set `CHROMIUM_PATH` to an existing binary).
+6. `git add -A && git commit -m "edition: <date>" && git push`.
+7. Report the section-by-section headline list.
 
 ## Edition JSON schema
 
@@ -204,8 +198,7 @@ The builder adds one chart every day, inside `Money` when it has stories and oth
 Section `title` values match the five beats above (older editions use the earlier titles; leave them); omit a section that has no
 items (the builder drops it anyway). `lead`, `follow_up` and `ahead` are optional;
 everything else is required. `build.mjs` handles all HTML, the featured lead,
-the Ahead list, follow-up markers and the Bitcoin chart (an inline SVG,
-no third-party script). Never hand-edit
+the Ahead list and follow-up markers. Never hand-edit
 `docs/`.
 
 ## Kindle
@@ -225,9 +218,7 @@ how to resume.
 
 ```
 editions/<date>.json                  the curated news for a day
-data/btc-weekly.json                  weekly Bitcoin closes for the chart (fetch-btc.mjs)
 build.mjs                             renders everything into docs/ (zero deps)
-fetch-btc.mjs                         refreshes the price data (needs network)
 kindle.mjs                            EPUB packaging for the daily edition
 preview.mjs                           dev-only screenshots
 study/                                the paused study tracks (see study/README.md)
@@ -237,7 +228,7 @@ study/                                the paused study tracks (see study/README.
   flashtea.dev look (IBM Plex, graphite and tea amber, light only). Restyle
   there and rebuild. The lead story fills the dark band at the top; each section
   has its label on the left and its stories in a grid that fills the row; the
-  paper-wide "Ahead" list and the Bitcoin chart (when Money is absent) close
-  the page.
+  paper-wide "Ahead" list closes the page. There is no price chart: Bitcoin's
+  chart lives on the private today page (today.flashtea.dev) since 2026-11-11.
 - The stylesheet link is cache-busted with a content hash.
 - Keep every edition; they form the archive.

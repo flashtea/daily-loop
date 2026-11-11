@@ -3,7 +3,7 @@
    section has a mono label rail on the left and its stories in a ruled grid. */
 :root {
   --paper: #f6f6f3; --surface: #ffffff; --ink: #17181a; --ink-2: #44474a; --muted: #63686d; --rule: #dcdbd4;
-  --accent: #9a560b; --c-price: #c47a12; --c-avg: #5f6b78;
+  --accent: #9a560b;
   --band-bg: #17181a; --band-ink: #f0efe9; --band-muted: #a3a49d; --band-rule: #2f302c; --band-accent: #e9a445;
   --maxw: 1180px;
   --display: "IBM Plex Sans Condensed", "Arial Narrow", sans-serif;
@@ -68,7 +68,6 @@ main > .beat:first-child { border-top: 0; }
 .label span { display: block; color: var(--muted); margin-top: 2px; }
 .beat-body { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 0 40px; align-items: start; }
 .beat-body.solo { grid-template-columns: minmax(0, 1fr); }
-.beat-body .chart { grid-column: 1 / -1; }
 .stories { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px 36px; }
 .story { padding: 0; }
 .hed { font-family: var(--display); font-weight: 600; font-size: 20px; line-height: 1.22; letter-spacing: -.005em; margin: 0 0 8px; text-wrap: pretty; }
@@ -90,24 +89,6 @@ a.followup:hover { color: var(--ink); }
 .ahead li:first-child { border-top: 0; }
 .ahead .when { font: 12.5px/1.9 var(--mono); color: var(--ink); font-variant-numeric: tabular-nums; }
 .ahead a { text-underline-offset: 3px; }
-
-/* bitcoin chart */
-.chart { margin: 34px 0 0; }
-.chart figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 20px; font: 12.5px var(--mono); color: var(--muted); }
-.legend { display: inline-flex; align-items: center; gap: 6px; }
-.key { display: inline-block; width: 12px; height: 3px; margin-left: 10px; }
-.key:first-child { margin-left: 0; }
-.chart-wrap { position: relative; margin-top: 10px; }
-.chart-wrap svg { display: block; width: 100%; height: auto; overflow: visible; }
-.chart-wrap.narrow { display: none; }
-.chart .grid { stroke: var(--rule); stroke-width: 1; }
-.chart .tick { font: 11px var(--mono); fill: var(--muted); }
-.chart .tick.mid { text-anchor: middle; }
-.chart .endlab { font: 500 11.5px var(--mono); fill: var(--ink); }
-.chart .xhair { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 2 3; }
-.tip { position: absolute; top: 8px; pointer-events: none; background: var(--surface); border: 1px solid var(--rule); border-radius: 2px; padding: 6px 9px; font: 12px/1.5 var(--mono); color: var(--ink-2); white-space: nowrap; }
-.tip b { color: var(--ink); font-weight: 500; }
-.chart-note { margin: 8px 0 0; font-size: 13.5px; color: var(--muted); }
 
 /* archive */
 .cat-list { list-style: none; margin: 0; padding: 0; }
@@ -136,7 +117,6 @@ footer { border-top: 1px solid var(--rule); margin-top: 8px; }
   .beat, .arch-row { grid-template-columns: minmax(0, 1fr); gap: 4px; padding-block: 24px; }
   .label { padding-top: 0; }
   .label span { display: inline; margin-left: 8px; }
-  .chart-wrap.wide { display: none; } .chart-wrap.narrow { display: block; }
 }
 @media (max-width: 520px) {
   .band .wrap { padding-block: 26px 30px; }
