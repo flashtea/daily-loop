@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-12",
+  "sections": [
+    {
+      "title": "AI",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Anthropic told the SEC it has met its Responsible Scaling Policy's threshold for AI-accelerated AI development, eight days after saying it may imminently do so",
+          "summary": "The second amended S-1, filed on 10 November with the $70 to $78 IPO price range, says the company made a determination that it has met the threshold, based on what it expects from future models and its overall rate of progress rather than on any current model; the policy defines the threshold as roughly a doubling of the pace of AI progress attributable to AI, and crossing it calls for additional safeguards, not a pause. Anthropic repeats that it does not expect to be able to safely let Claude build successive frontier models without meaningful human oversight, says it is considering policy changes to keep humans in control, and warns that as it relies more on Claude it may lose visibility across certain processes; the independent evaluator METR estimates Anthropic's models have improved nearly twice as fast since October 2025.",
+          "why": "The company behind your main coding tool now states, in a filing it is liable for, that it has crossed the line it drew for AI driving its own development, so expect the next Claude releases to come with new safeguards or tighter release rules rather than the pace of the last two months.",
+          "source": "Anthropic (SEC filing)",
+          "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm",
+          "follow_up": "2026-11-03"
+        }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [
+        {
+          "headline": "MSCI deleted Strategy from the MSCI USA Index, effective at the close on 30 November, the first removal under its non-operating company rule",
+          "summary": "The November index review published in Geneva on 11 November lists Strategy A among 24 deletions from the MSCI USA Index, which also drops it from the MSCI World and ACWI indexes; Metaplanet leaves the MSCI Japan Small Cap Index on the same date. Strategy told MSCI in August that funds tracking the indexes hold about 13 million of its shares, 3.1% of basic shares outstanding, and its stock fell 2.6% after hours to $119.06; it holds 850,364 bitcoin bought at an average $75,456, against a price near $73,700 on Wednesday, and nothing in the rule requires it to sell any.",
+          "why": "If you hold Strategy for bitcoin exposure, the index selling lands on 30 November and the stock now trades below the cost of its bitcoin, so compare it with a spot ETF before then rather than after.",
+          "source": "MSCI",
+          "url": "https://www.msci.com/eqb/gimi/stdindex/MSCI_Nov26_STPublicList.pdf",
+          "follow_up": "2026-10-17"
+        }
+      ]
+    }
+  ],
+  "ahead": [
+    {
+      "date": "2026-11-19",
+      "what": "Anthropic's IPO is expected to price on 18 November and start trading on Nasdaq as ANT the next day, according to people familiar with the deal cited by CNBC",
+      "url": "https://www.cnbc.com/2026/11/10/anthropic-sets-price-range-of-70-to-78-in-upcoming-ipo.html"
+    },
+    {
+      "date": "2026-12-01",
+      "what": "Eurostat flash estimate of November euro-area inflation, the last before the ECB's December decision",
+      "url": "https://www.ecb.europa.eu/press/calendars/statscal/ges/html/sthicp.en.html"
+    },
+    {
+      "date": "2026-12-04",
+      "what": "US November jobs report (BLS, 13:30 UTC), the last before the Fed's December meeting",
+      "url": "https://www.bls.gov/schedule/news_release/empsit.htm"
+    },
+    {
+      "date": "2026-12-09",
+      "what": "FOMC rate decision with new projections (19:00 UTC); a quarter-point hike is fully priced after the October CPI and Waller said a half point should be considered",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+    },
+    {
+      "date": "2026-12-11",
+      "what": "US government funding under the continuing resolution signed on 2 September (H.R. 6500) expires; Congress must pass the fiscal 2027 bills or another extension to avoid a shutdown",
+      "url": "https://www.aacom.org/news-reports/news/2026/09/08/president-trump-signs-continuing-resolution-to-fund-government-through-december-11"
+    },
+    {
+      "date": "2026-12-17",
+      "what": "ECB rate decision with new staff projections; October inflation was 4.0% and Lagarde said incoming data will decide whether a hike from 2.50% is needed"
+    }
+  ]
+}

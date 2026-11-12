@@ -20,50 +20,36 @@
     </div>
   </header>
   <section class="band">
-    <div class="wrap"><p class="meta">No. 147 · Wednesday, 11 November 2026 · 3 stories</p>
+    <div class="wrap"><p class="meta">No. 148 · Thursday, 12 November 2026 · 2 stories</p>
       <div class="lead">
         <div>
-          <p class="kicker">Money</p>
-          <h1><a class="hed-a" href="https://www.bls.gov/news.release/cpi.nr0.htm" target="_blank" rel="noopener">US consumer prices rose 0.4% in October, more than forecast, and Fed governor Waller said a half-point hike should be considered in December</a></h1>
+          <p class="kicker">AI</p>
+          <h1><a class="hed-a" href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm" target="_blank" rel="noopener">Anthropic told the SEC it has met its Responsible Scaling Policy&#39;s threshold for AI-accelerated AI development, eight days after saying it may imminently do so</a></h1>
         </div>
         <div>
-          <p class="dek">The BLS reported a 0.4% monthly rise against a 0.3% consensus, with core prices up 0.3% for the third month and shelter accounting for over 30% of the gain; there is no 12-month rate because last year&#39;s shutdown left no October 2025 data. Hours earlier in London, Waller said he leans toward a 25-basis-point increase at the 8-9 December meeting from the current 3.75% to 4% range and that a hot October print means &#39;a 50 basis point hike in the policy rate should be considered&#39;, while Dallas Fed president Logan said two more quarter-point increases may be needed at a quicker pace; futures now fully price a quarter-point hike and put about 14% on a half point.</p>
-          <p class="why"><span>why it matters</span>Plan on US rates rising in December rather than holding, which means higher dollar yields and a heavier weight on long-duration tech and Bitcoin into year end.</p>
-          <p class="byline"><a class="src" href="https://www.bls.gov/news.release/cpi.nr0.htm" target="_blank" rel="noopener">Bureau of Labor Statistics</a><a class="followup" href="2026-11-07.html">Follow-up · since 07 Nov</a></p>
+          <p class="dek">The second amended S-1, filed on 10 November with the $70 to $78 IPO price range, says the company made a determination that it has met the threshold, based on what it expects from future models and its overall rate of progress rather than on any current model; the policy defines the threshold as roughly a doubling of the pace of AI progress attributable to AI, and crossing it calls for additional safeguards, not a pause. Anthropic repeats that it does not expect to be able to safely let Claude build successive frontier models without meaningful human oversight, says it is considering policy changes to keep humans in control, and warns that as it relies more on Claude it may lose visibility across certain processes; the independent evaluator METR estimates Anthropic&#39;s models have improved nearly twice as fast since October 2025.</p>
+          <p class="why"><span>why it matters</span>The company behind your main coding tool now states, in a filing it is liable for, that it has crossed the line it drew for AI driving its own development, so expect the next Claude releases to come with new safeguards or tighter release rules rather than the pace of the last two months.</p>
+          <p class="byline"><a class="src" href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm" target="_blank" rel="noopener">Anthropic (SEC filing)</a><a class="followup" href="2026-11-03.html">Follow-up · since 03 Nov</a></p>
         </div>
       </div></div>
   </section>
 
   <main class="wrap">
-<section class="beat">
-      <h2 class="label">AI<span>1 story</span></h2>
-      <div class="beat-body solo">
-        <div class="stories">
-<article class="story">
-        <h3 class="hed"><a class="hed-a" href="https://www.anthropic.com/news/roadshow-launch" target="_blank" rel="noopener">Anthropic set a $70 to $78 price range for its IPO of 825 million shares, valuing it at up to $1.4 trillion, with trading on Nasdaq as ANT expected on 19 November</a></h3>
-        <p class="dek">The roadshow began on 10 November; Anthropic sells 801,351,354 Class A shares and existing holders 23,648,646, with a 30-day option on 123,750,000 more, which would raise up to $64.4 billion at the top of the range. CNBC reported, citing people familiar with the deal, that the offering prices on 18 November and trades the next day, that about 20% of the shares are set aside for retail investors against a typical 5% to 10%, and that AMD, Broadcom, Google, Micron, Microsoft, Nvidia and TSMC will buy $26 billion of stock at the IPO price in a private placement.</p>
-        <p class="why"><span>why it matters</span>If you want to own Anthropic shares, the first chance is next Thursday at a price inside the $70 to $78 range, and the fully diluted valuation of about $1.4 trillion is the number to weigh against its $81 billion revenue run rate.</p>
-        <p class="byline"><a class="src" href="https://www.anthropic.com/news/roadshow-launch" target="_blank" rel="noopener">Anthropic</a><a class="followup" href="2026-10-27.html">Follow-up · since 27 Oct</a></p>
-      </article>
-        </div>
-        
-      </div>
-    </section>
-<section class="beat">
-      <h2 class="label">Dev Tools<span>1 story</span></h2>
-      <div class="beat-body solo">
-        <div class="stories">
-<article class="story">
-        <h3 class="hed"><a class="hed-a" href="https://www.openssh.org/releasenotes.html" target="_blank" rel="noopener">CISA listed the OpenSSH password-bypass bug CVE-2026-123158 as actively exploited; it lets anyone log in to password-less accounts on musl-based Linux such as Alpine</a></h3>
-        <p class="dek">On systems where OpenSSH is linked against musl libc with PAM disabled, Alpine&#39;s default, a failed password hash returns the same &#39;*&#39; value that marks accounts with no password, so a password longer than 256 bytes opens any such account; OpenSSH 10.6p2 on 5 November added a workaround, root logins on an Alpine honeypot were recorded within nine hours of the CVE, and CISA added it to its Known Exploited Vulnerabilities catalogue on 9 November. glibc distributions, systems that check passwords through PAM and accounts with real password hashes are not affected.</p>
-        <p class="why"><span>why it matters</span>If any Alpine-based server or container runs sshd, upgrade OpenSSH to 10.6p2 and restart the daemon today, and grep /var/log/messages for &#39;Accepted password&#39; on accounts that have no password before trusting the machine.</p>
-        <p class="byline"><a class="src" href="https://www.openssh.org/releasenotes.html" target="_blank" rel="noopener">OpenSSH release notes</a></p>
-      </article>
-        </div>
-        
-      </div>
-    </section>
 
+<section class="beat">
+      <h2 class="label">Money<span>1 story</span></h2>
+      <div class="beat-body solo">
+        <div class="stories">
+<article class="story">
+        <h3 class="hed"><a class="hed-a" href="https://www.msci.com/eqb/gimi/stdindex/MSCI_Nov26_STPublicList.pdf" target="_blank" rel="noopener">MSCI deleted Strategy from the MSCI USA Index, effective at the close on 30 November, the first removal under its non-operating company rule</a></h3>
+        <p class="dek">The November index review published in Geneva on 11 November lists Strategy A among 24 deletions from the MSCI USA Index, which also drops it from the MSCI World and ACWI indexes; Metaplanet leaves the MSCI Japan Small Cap Index on the same date. Strategy told MSCI in August that funds tracking the indexes hold about 13 million of its shares, 3.1% of basic shares outstanding, and its stock fell 2.6% after hours to $119.06; it holds 850,364 bitcoin bought at an average $75,456, against a price near $73,700 on Wednesday, and nothing in the rule requires it to sell any.</p>
+        <p class="why"><span>why it matters</span>If you hold Strategy for bitcoin exposure, the index selling lands on 30 November and the stock now trades below the cost of its bitcoin, so compare it with a spot ETF before then rather than after.</p>
+        <p class="byline"><a class="src" href="https://www.msci.com/eqb/gimi/stdindex/MSCI_Nov26_STPublicList.pdf" target="_blank" rel="noopener">MSCI</a><a class="followup" href="2026-10-17.html">Follow-up · since 17 Oct</a></p>
+      </article>
+        </div>
+        
+      </div>
+    </section>
     <section class="beat">
       <h2 class="label">Ahead<span>6 dates</span></h2>
       <div class="beat-body solo">
@@ -76,9 +62,9 @@
     <div class="wrap">
       <div class="arch-row">
         <p class="arch-label">Recent editions</p>
-        <nav class="archive"><a class="chip current" href="index.html">11 Nov</a><a class="chip" href="2026-11-10.html">10 Nov</a><a class="chip" href="2026-11-09.html">09 Nov</a><a class="chip" href="2026-11-08.html">08 Nov</a><a class="chip" href="2026-11-07.html">07 Nov</a><a class="chip" href="2026-11-06.html">06 Nov</a><a class="chip" href="2026-11-05.html">05 Nov</a><a class="chip" href="2026-11-04.html">04 Nov</a><a class="chip" href="2026-11-03.html">03 Nov</a><a class="chip" href="2026-11-02.html">02 Nov</a><a class="chip all" href="archive.html">All 147 editions →</a></nav>
+        <nav class="archive"><a class="chip current" href="index.html">12 Nov</a><a class="chip" href="2026-11-11.html">11 Nov</a><a class="chip" href="2026-11-10.html">10 Nov</a><a class="chip" href="2026-11-09.html">09 Nov</a><a class="chip" href="2026-11-08.html">08 Nov</a><a class="chip" href="2026-11-07.html">07 Nov</a><a class="chip" href="2026-11-06.html">06 Nov</a><a class="chip" href="2026-11-05.html">05 Nov</a><a class="chip" href="2026-11-04.html">04 Nov</a><a class="chip" href="2026-11-03.html">03 Nov</a><a class="chip all" href="archive.html">All 148 editions →</a></nav>
       </div>
-      <p class="colophon"><span>Curated by Claude · built 2026-11-11 06:48 UTC</span><a href="https://flashtea.dev">flashtea.dev</a></p>
+      <p class="colophon"><span>Curated by Claude · built 2026-11-12 04:05 UTC</span><a href="https://flashtea.dev">flashtea.dev</a></p>
     </div>
   </footer>
   <script>
