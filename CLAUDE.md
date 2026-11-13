@@ -135,6 +135,29 @@ and the want conflict, the want wins.
   applies to them, a government falling, an election result, energy prices or
   a regulation they will feel). *Out:* party politics, polls, scandals,
   regional news. 
+- **`Optimism`** — a small corner of real progress, last on the page. The
+  reader asked for it (Nov 2026): some positivity in the day, but "not that
+  one dolphin". *In:* measured progress at scale in health and medicine,
+  climate and the environment, energy, science and human development: a
+  phase 2 or 3 trial result or a regulator's approval (FDA, EMA) for a
+  treatment of a serious disease; a first-in-human result that works; a cure
+  or vaccine reaching patients; a disease eliminated in a country (WHO
+  certification); measured recovery of the ozone layer, a fishery, a species
+  or a forest; a cleanup, reforestation or clean-energy project that is
+  deployed and running at real scale (The Ocean Cleanup's systems, a large
+  grid battery or reactor coming online), or a record that marks a turn (solar
+  overtaking coal somewhere big, a child-mortality or extreme-poverty low).
+  *Out:* single animals and feel-good human-interest stories, mouse and petri
+  dish studies, "could one day", pledges, targets and plans, funding rounds,
+  prototypes, awards, and anything sourced only to a company's marketing.
+  The three tests apply with two changes: the `why` says what this changes
+  for the world, in numbers (how many people, how much, how soon), and "fresh"
+  stretches to about seven days, because good news is reported slowly.
+  Primary sources: the journal paper (NEJM, The Lancet, Nature, Science), the
+  regulator, WHO, WMO, NOAA, Copernicus, IEA, or the project's own measured
+  data. One or two items; on a day with nothing that passes, leave it out
+  rather than lower the bar. Never the `lead` unless it truly is the biggest
+  story of the day (a cure for cancer).
 
 ## Writing an item
 
@@ -195,7 +218,7 @@ and the want conflict, the want wins.
 }
 ```
 
-Section `title` values match the five beats above (older editions use the earlier titles; leave them); omit a section that has no
+Section `title` values match the six beats above (older editions use the earlier titles; leave them); omit a section that has no
 items (the builder drops it anyway). `lead`, `follow_up` and `ahead` are optional;
 everything else is required. `build.mjs` handles all HTML, the featured lead,
 the Ahead list and follow-up markers. Never hand-edit
