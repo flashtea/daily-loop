@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-13",
+  "sections": [
+    {
+      "title": "AI",
+      "items": [
+        {
+          "headline": "Claude Code 2.1.323 stopped saving 'don't ask again' rules that look like secrets or would land in a git-tracked settings.local.json",
+          "summary": "The release notes for 12 November say an allow rule that appears to hold a secret, or that would be written to a settings.local.json tracked by git, now lasts for the session only; the same release adds an experimental Code Mode in which Claude writes JavaScript to call its tools, and assumes a 1M-token context window for model IDs it does not recognise. The change follows Apiiro's finding of 1,379 secrets in 1,122 public copies of the file.",
+          "why": "Update Claude Code and then clean the secrets already sitting in your settings.local.json files by hand, because the new rule stops future leaks but does not touch what was saved before.",
+          "source": "Claude Code changelog",
+          "url": "https://code.claude.com/docs/en/changelog",
+          "follow_up": "2026-11-09"
+        }
+      ]
+    },
+    {
+      "title": "Dev Tools",
+      "items": [
+        {
+          "headline": "Attackers used 4,837 hijacked GitHub accounts to plant a CI secret stealer in at least 1,835 repositories, deleting the workflow logs within a minute",
+          "summary": "Aikido reported on 12 November that since 10 November stolen GitHub credentials were used to open a probe pull request titled 'docs: dependency audit notes' in 61,764 repositories, then push a 1,500-line shell script into an existing workflow, an npm postinstall hook or a throwaway branch, revert it and delete the run; it collects Actions secrets, the GITHUB_TOKEN, AWS, Azure, GCP, Docker, Kubernetes, npm, PyPI, SSH and AI-provider credentials, creates new IAM keys and federated identities to persist, and posts to two exfiltration servers. At least 50 of the compromised users publish packages on npm, Go, Packagist, PyPI or crates, and malicious versions of Packagist's digitalelvis/neuronai-studio 3.14.3 and Go's github.com/onuragtas/docker-env v1.0.278 and v1.0.280 are confirmed.",
+          "why": "Check every repository you can write to for that pull request title, 'wfx-docs' or 'chore/' branches and gaps in the workflow run numbers, and if the script ran, rotate every secret and cloud role the workflows could reach and look for IAM keys and Azure federated credentials named wfx-ci-* that you did not create.",
+          "source": "Aikido Security",
+          "url": "https://www.aikido.dev/blog/compromised-github-accounts-push-ci-secret-stealer-to-tens-of-thousands-of-repositories"
+        }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Jensen Huang resigned as Nvidia's chief executive and director with immediate effect; CFO Colette Kress is interim CEO and the shares fell 4.3%",
+          "summary": "Nvidia said on 12 November that Huang, who founded the company in 1993, stepped down as president, CEO and board member, that Kress keeps her CFO role while serving as interim CEO until a permanent successor is found among internal and external candidates, and that former Synopsys CEO Harvey C. Jones becomes the board's first chair; the release gives no reason, while the Washington Post and CNBC reported that the board acted after reports of a second affair, one involving a woman suspected of being a Chinese spy. Nvidia said operations, customer commitments and the product roadmap continue without interruption and that it reports third-quarter results as scheduled on 17 November; the stock closed down 4.34%.",
+          "why": "The largest position in every world and US index fund you own now has an interim chief executive five days before its earnings, so treat Nvidia's weight in your portfolio as a decision to make rather than a default, and read the 17 November results for any change in guidance rather than in the person presenting them.",
+          "source": "Nvidia",
+          "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-CEO-Transition/"
+        }
+      ]
+    }
+  ],
+  "ahead": [
+    {
+      "date": "2026-11-19",
+      "what": "Anthropic's IPO is expected to price on 18 November and start trading on Nasdaq as ANT the next day, according to people familiar with the deal cited by CNBC",
+      "url": "https://www.cnbc.com/2026/11/10/anthropic-sets-price-range-of-70-to-78-in-upcoming-ipo.html"
+    },
+    {
+      "date": "2026-12-01",
+      "what": "Eurostat flash estimate of November euro-area inflation, the last before the ECB's December decision",
+      "url": "https://www.ecb.europa.eu/press/calendars/statscal/ges/html/sthicp.en.html"
+    },
+    {
+      "date": "2026-12-04",
+      "what": "US November jobs report (BLS, 13:30 UTC), the last before the Fed's December meeting",
+      "url": "https://www.bls.gov/schedule/news_release/empsit.htm"
+    },
+    {
+      "date": "2026-12-09",
+      "what": "FOMC rate decision with new projections (19:00 UTC); a quarter-point hike is fully priced after the October CPI and Waller said a half point should be considered",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+    },
+    {
+      "date": "2026-12-11",
+      "what": "US government funding under the continuing resolution signed on 2 September (H.R. 6500) expires; Congress must pass the fiscal 2027 bills or another extension to avoid a shutdown",
+      "url": "https://www.aacom.org/news-reports/news/2026/09/08/president-trump-signs-continuing-resolution-to-fund-government-through-december-11"
+    },
+    {
+      "date": "2026-12-17",
+      "what": "ECB rate decision with new staff projections; October inflation was 4.0% and Lagarde said incoming data will decide whether a hike from 2.50% is needed"
+    }
+  ]
+}
