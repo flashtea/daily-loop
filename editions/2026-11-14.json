@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-14",
+  "sections": [
+    {
+      "title": "AI",
+      "items": [
+        {
+          "headline": "Claude Code 2.1.325 fixed Bash allow rules that could run a different program than the one they name, and compound commands that ran without a prompt",
+          "summary": "The release, published on 13 November, also fixed deny and ask rules that missed certain Bash commands, a security issue in decoding zstd-compressed responses, and made sandboxed Bash follow the normal permission flow unless sandbox.autoAllowBashIfSandboxed is set; read-only git commands now ask first in untrusted repositories. The check that stops the tool sending the account email now also covers scripts, file writes, web fetches and MCP calls.",
+          "why": "Update now, and expect more permission prompts, especially in sandboxed Bash, because rules you approved earlier no longer run a command silently when it does not match them exactly.",
+          "source": "Claude Code changelog",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+          "follow_up": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "title": "Money",
+      "items": [
+        {
+          "lead": true,
+          "headline": "Bitcoin fell below $70,000 for the first time since August as $1.64 billion of leveraged positions were liquidated on bets of a December Fed hike",
+          "summary": "The price reached about $67,770 on 13 November, its lowest since 19 August, with longs making up 88.7% of the 24-hour liquidations counted by CoinGlass; CME FedWatch put an 88% chance on a quarter-point hike on 9 December and the dollar index rose above 103, its highest since April 2025. US spot Bitcoin ETFs have now taken in less than they paid out in 2026, with net outflows of about $1.56 billion for the year on SoSoValue data.",
+          "why": "The late-summer rally is gone and the Fed's path, not crypto news, is setting the price, so the 9 December decision is the next date that moves your position.",
+          "source": "CoinDesk (CoinGlass data)",
+          "url": "https://www.coindesk.com/markets/2026/11/13/bitcoin-hits-12-week-low-as-dollar-rallies-on-interest-rate-outlook-liquidations-top-usd1-6-billion",
+          "follow_up": "2026-10-16"
+        }
+      ]
+    },
+    {
+      "title": "Optimism",
+      "items": [
+        {
+          "headline": "The NEJM published the phase 3 trial in which an individualized mRNA therapy cut melanoma recurrence or death by 42% in 1,137 patients",
+          "summary": "Intismeran autogene, made for each patient from their tumour's mutations, plus pembrolizumab gave a two-year recurrence-free rate of 82.2% against 70.0% for pembrolizumab alone after complete resection of stage IIB to IV melanoma (hazard ratio 0.58), and reduced distant metastasis (hazard ratio 0.62); overall survival data are not yet mature. The paper by Long and colleagues appeared online on 11 November.",
+          "why": "About 12 of every 100 high-risk melanoma patients who would have relapsed within two years do not, and this is the first individualized mRNA cancer treatment to succeed in a phase 3 trial, so the same approach now goes to regulators and into trials for other cancers.",
+          "source": "The New England Journal of Medicine",
+          "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2609762"
+        }
+      ]
+    }
+  ],
+  "ahead": [
+    { "date": "2026-11-19", "what": "Anthropic's IPO is expected to price on 18 November and start trading on Nasdaq as ANT the next day, according to people familiar with the deal cited by CNBC", "url": "https://www.cnbc.com/2026/11/10/anthropic-sets-price-range-of-70-to-78-in-upcoming-ipo.html" },
+    { "date": "2026-12-01", "what": "Eurostat flash estimate of November euro-area inflation, the last before the ECB's December decision", "url": "https://www.ecb.europa.eu/press/calendars/statscal/ges/html/sthicp.en.html" },
+    { "date": "2026-12-04", "what": "US November jobs report (BLS, 13:30 UTC), the last before the Fed's December meeting", "url": "https://www.bls.gov/schedule/news_release/empsit.htm" },
+    { "date": "2026-12-09", "what": "FOMC rate decision with new projections (19:00 UTC); a quarter-point hike is fully priced after the October CPI and Waller said a half point should be considered", "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" },
+    { "date": "2026-12-11", "what": "US government funding under the continuing resolution signed on 2 September (H.R. 6500) expires; Congress must pass the fiscal 2027 bills or another extension to avoid a shutdown", "url": "https://www.aacom.org/news-reports/news/2026/09/08/president-trump-signs-continuing-resolution-to-fund-government-through-december-11" },
+    { "date": "2026-12-17", "what": "ECB rate decision with new staff projections; October inflation was 4.0% and Lagarde said incoming data will decide whether a hike from 2.50% is needed" }
+  ]
+}

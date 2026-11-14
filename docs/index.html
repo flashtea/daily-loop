@@ -20,16 +20,16 @@
     </div>
   </header>
   <section class="band">
-    <div class="wrap"><p class="meta">No. 149 · Friday, 13 November 2026 · 3 stories</p>
+    <div class="wrap"><p class="meta">No. 150 · Saturday, 14 November 2026 · 3 stories</p>
       <div class="lead">
         <div>
           <p class="kicker">Money</p>
-          <h1><a class="hed-a" href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-CEO-Transition/" target="_blank" rel="noopener">Jensen Huang resigned as Nvidia&#39;s chief executive and director with immediate effect; CFO Colette Kress is interim CEO and the shares fell 4.3%</a></h1>
+          <h1><a class="hed-a" href="https://www.coindesk.com/markets/2026/11/13/bitcoin-hits-12-week-low-as-dollar-rallies-on-interest-rate-outlook-liquidations-top-usd1-6-billion" target="_blank" rel="noopener">Bitcoin fell below $70,000 for the first time since August as $1.64 billion of leveraged positions were liquidated on bets of a December Fed hike</a></h1>
         </div>
         <div>
-          <p class="dek">Nvidia said on 12 November that Huang, who founded the company in 1993, stepped down as president, CEO and board member, that Kress keeps her CFO role while serving as interim CEO until a permanent successor is found among internal and external candidates, and that former Synopsys CEO Harvey C. Jones becomes the board&#39;s first chair; the release gives no reason, while the Washington Post and CNBC reported that the board acted after reports of a second affair, one involving a woman suspected of being a Chinese spy. Nvidia said operations, customer commitments and the product roadmap continue without interruption and that it reports third-quarter results as scheduled on 17 November; the stock closed down 4.34%.</p>
-          <p class="why"><span>why it matters</span>The largest position in every world and US index fund you own now has an interim chief executive five days before its earnings, so treat Nvidia&#39;s weight in your portfolio as a decision to make rather than a default, and read the 17 November results for any change in guidance rather than in the person presenting them.</p>
-          <p class="byline"><a class="src" href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-CEO-Transition/" target="_blank" rel="noopener">Nvidia</a></p>
+          <p class="dek">The price reached about $67,770 on 13 November, its lowest since 19 August, with longs making up 88.7% of the 24-hour liquidations counted by CoinGlass; CME FedWatch put an 88% chance on a quarter-point hike on 9 December and the dollar index rose above 103, its highest since April 2025. US spot Bitcoin ETFs have now taken in less than they paid out in 2026, with net outflows of about $1.56 billion for the year on SoSoValue data.</p>
+          <p class="why"><span>why it matters</span>The late-summer rally is gone and the Fed&#39;s path, not crypto news, is setting the price, so the 9 December decision is the next date that moves your position.</p>
+          <p class="byline"><a class="src" href="https://www.coindesk.com/markets/2026/11/13/bitcoin-hits-12-week-low-as-dollar-rallies-on-interest-rate-outlook-liquidations-top-usd1-6-billion" target="_blank" rel="noopener">CoinDesk (CoinGlass data)</a><a class="followup" href="2026-10-16.html">Follow-up · since 16 Oct</a></p>
         </div>
       </div></div>
   </section>
@@ -40,30 +40,30 @@
       <div class="beat-body solo">
         <div class="stories">
 <article class="story">
-        <h3 class="hed"><a class="hed-a" href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Claude Code 2.1.323 stopped saving &#39;don&#39;t ask again&#39; rules that look like secrets or would land in a git-tracked settings.local.json</a></h3>
-        <p class="dek">The release notes for 12 November say an allow rule that appears to hold a secret, or that would be written to a settings.local.json tracked by git, now lasts for the session only; the same release adds an experimental Code Mode in which Claude writes JavaScript to call its tools, and assumes a 1M-token context window for model IDs it does not recognise. The change follows Apiiro&#39;s finding of 1,379 secrets in 1,122 public copies of the file.</p>
-        <p class="why"><span>why it matters</span>Update Claude Code and then clean the secrets already sitting in your settings.local.json files by hand, because the new rule stops future leaks but does not touch what was saved before.</p>
-        <p class="byline"><a class="src" href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Claude Code changelog</a><a class="followup" href="2026-11-09.html">Follow-up · since 09 Nov</a></p>
-      </article>
-        </div>
-        
-      </div>
-    </section>
-<section class="beat">
-      <h2 class="label">Dev Tools<span>1 story</span></h2>
-      <div class="beat-body solo">
-        <div class="stories">
-<article class="story">
-        <h3 class="hed"><a class="hed-a" href="https://www.aikido.dev/blog/compromised-github-accounts-push-ci-secret-stealer-to-tens-of-thousands-of-repositories" target="_blank" rel="noopener">Attackers used 4,837 hijacked GitHub accounts to plant a CI secret stealer in at least 1,835 repositories, deleting the workflow logs within a minute</a></h3>
-        <p class="dek">Aikido reported on 12 November that since 10 November stolen GitHub credentials were used to open a probe pull request titled &#39;docs: dependency audit notes&#39; in 61,764 repositories, then push a 1,500-line shell script into an existing workflow, an npm postinstall hook or a throwaway branch, revert it and delete the run; it collects Actions secrets, the GITHUB_TOKEN, AWS, Azure, GCP, Docker, Kubernetes, npm, PyPI, SSH and AI-provider credentials, creates new IAM keys and federated identities to persist, and posts to two exfiltration servers. At least 50 of the compromised users publish packages on npm, Go, Packagist, PyPI or crates, and malicious versions of Packagist&#39;s digitalelvis/neuronai-studio 3.14.3 and Go&#39;s github.com/onuragtas/docker-env v1.0.278 and v1.0.280 are confirmed.</p>
-        <p class="why"><span>why it matters</span>Check every repository you can write to for that pull request title, &#39;wfx-docs&#39; or &#39;chore/&#39; branches and gaps in the workflow run numbers, and if the script ran, rotate every secret and cloud role the workflows could reach and look for IAM keys and Azure federated credentials named wfx-ci-* that you did not create.</p>
-        <p class="byline"><a class="src" href="https://www.aikido.dev/blog/compromised-github-accounts-push-ci-secret-stealer-to-tens-of-thousands-of-repositories" target="_blank" rel="noopener">Aikido Security</a></p>
+        <h3 class="hed"><a class="hed-a" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.325" target="_blank" rel="noopener">Claude Code 2.1.325 fixed Bash allow rules that could run a different program than the one they name, and compound commands that ran without a prompt</a></h3>
+        <p class="dek">The release, published on 13 November, also fixed deny and ask rules that missed certain Bash commands, a security issue in decoding zstd-compressed responses, and made sandboxed Bash follow the normal permission flow unless sandbox.autoAllowBashIfSandboxed is set; read-only git commands now ask first in untrusted repositories. The check that stops the tool sending the account email now also covers scripts, file writes, web fetches and MCP calls.</p>
+        <p class="why"><span>why it matters</span>Update now, and expect more permission prompts, especially in sandboxed Bash, because rules you approved earlier no longer run a command silently when it does not match them exactly.</p>
+        <p class="byline"><a class="src" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.325" target="_blank" rel="noopener">Claude Code changelog</a><a class="followup" href="2026-11-13.html">Follow-up · since 13 Nov</a></p>
       </article>
         </div>
         
       </div>
     </section>
 
+<section class="beat">
+      <h2 class="label">Optimism<span>1 story</span></h2>
+      <div class="beat-body solo">
+        <div class="stories">
+<article class="story">
+        <h3 class="hed"><a class="hed-a" href="https://www.nejm.org/doi/full/10.1056/NEJMoa2609762" target="_blank" rel="noopener">The NEJM published the phase 3 trial in which an individualized mRNA therapy cut melanoma recurrence or death by 42% in 1,137 patients</a></h3>
+        <p class="dek">Intismeran autogene, made for each patient from their tumour&#39;s mutations, plus pembrolizumab gave a two-year recurrence-free rate of 82.2% against 70.0% for pembrolizumab alone after complete resection of stage IIB to IV melanoma (hazard ratio 0.58), and reduced distant metastasis (hazard ratio 0.62); overall survival data are not yet mature. The paper by Long and colleagues appeared online on 11 November.</p>
+        <p class="why"><span>why it matters</span>About 12 of every 100 high-risk melanoma patients who would have relapsed within two years do not, and this is the first individualized mRNA cancer treatment to succeed in a phase 3 trial, so the same approach now goes to regulators and into trials for other cancers.</p>
+        <p class="byline"><a class="src" href="https://www.nejm.org/doi/full/10.1056/NEJMoa2609762" target="_blank" rel="noopener">The New England Journal of Medicine</a></p>
+      </article>
+        </div>
+        
+      </div>
+    </section>
     <section class="beat">
       <h2 class="label">Ahead<span>6 dates</span></h2>
       <div class="beat-body solo">
@@ -76,9 +76,9 @@
     <div class="wrap">
       <div class="arch-row">
         <p class="arch-label">Recent editions</p>
-        <nav class="archive"><a class="chip current" href="index.html">13 Nov</a><a class="chip" href="2026-11-12.html">12 Nov</a><a class="chip" href="2026-11-11.html">11 Nov</a><a class="chip" href="2026-11-10.html">10 Nov</a><a class="chip" href="2026-11-09.html">09 Nov</a><a class="chip" href="2026-11-08.html">08 Nov</a><a class="chip" href="2026-11-07.html">07 Nov</a><a class="chip" href="2026-11-06.html">06 Nov</a><a class="chip" href="2026-11-05.html">05 Nov</a><a class="chip" href="2026-11-04.html">04 Nov</a><a class="chip all" href="archive.html">All 149 editions →</a></nav>
+        <nav class="archive"><a class="chip current" href="index.html">14 Nov</a><a class="chip" href="2026-11-13.html">13 Nov</a><a class="chip" href="2026-11-12.html">12 Nov</a><a class="chip" href="2026-11-11.html">11 Nov</a><a class="chip" href="2026-11-10.html">10 Nov</a><a class="chip" href="2026-11-09.html">09 Nov</a><a class="chip" href="2026-11-08.html">08 Nov</a><a class="chip" href="2026-11-07.html">07 Nov</a><a class="chip" href="2026-11-06.html">06 Nov</a><a class="chip" href="2026-11-05.html">05 Nov</a><a class="chip all" href="archive.html">All 150 editions →</a></nav>
       </div>
-      <p class="colophon"><span>Curated by Claude · built 2026-11-13 04:04 UTC</span><a href="https://flashtea.dev">flashtea.dev</a></p>
+      <p class="colophon"><span>Curated by Claude · built 2026-11-14 04:06 UTC</span><a href="https://flashtea.dev">flashtea.dev</a></p>
     </div>
   </footer>
   <script>
